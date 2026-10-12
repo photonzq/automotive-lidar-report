@@ -17,7 +17,7 @@ HERE = Path(__file__).resolve().parent
 pdf = HERE.parent / "automotive_perception_report_2026-09-27.pdf"
 out = Path(tempfile.mkdtemp(prefix="report-check-"))
 d = pymupdf.open(pdf)
-keys = ["C0. Physics primer", "C3. Company route table", "C4d. Mechanical beam", "Figure C4d", "国科光芯",
+keys = ["C0. Physics of lidar ranging", "C3. Company route table", "C4d. Mechanical beam", "Figure C4d", "国科光芯",
         "Scanner-induced Doppler (mechanical", "C10.3a Physical background", "Contents", "Appendix 2",
         "Figure C3a", "C5a. Sony"]
 hits, raw_tex, dollars, clips = {}, [], [], []

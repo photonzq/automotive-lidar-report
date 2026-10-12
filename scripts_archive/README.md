@@ -5,6 +5,7 @@ Working scripts behind the edits and numbers in `automotive_perception_report_20
 - Paths that pointed to temporary working folders are now relative to this folder. Scripts that read or write the live report still use its absolute path.
 - Report snapshots and downloaded data are not kept here.
 - The build scripts and the installed figure models live in `../build/`.
+- Section and equation numbers in this index are those of the report when each script ran. §C0 was restructured on 12 Oct 2026; the table in the section on `c0_restructure_2026-10/` maps its old subsections to the new ones.
 
 Status:
 - **current**: still the source of numbers in the report.
@@ -243,7 +244,8 @@ The report folder, except `refs/`, is published as a repository with a web versi
 | `add_disclaimer.py` | Hash-guarded insertion of the disclaimer as a fenced div after the subtitle; `build/build_pdf.py` places it on the title page. | historical |
 | `publish_texts.py`, `publish_edits.json` | Seven edits applied with `../gapfill_2026-10/edits_partB_definitive.py --texts publish_texts --name publish`: no "read in full" remarks, no `refs/` pointers, DOI links for the ISSCC 2021 and *Nature* 2026 papers, and the Appendix 2 heading "Press articles (paywalled)". | historical |
 | `add_press_links.py`, `press_links.json` | Links 28 of the 45 press titles in Appendix 2 to the publishers' pages (found by search and checked by title and date; three are medium-confidence matches whose author, date and facts agree). The other titles stay as plain citations. | historical |
-| `make_web_html.py` | Turns the print HTML kept by `build/build_pdf.py` (`KEEP_HTML=1`) into `index.html`: figures linked from `automotive_perception_report_figures/` instead of embedded, a screen-only stylesheet, and a link to the PDF under the disclaimer. | current |
+| `make_web_html.py` | Turns the print HTML kept by `build/build_pdf.py` (`KEEP_HTML=1`) into `index.html`: figures linked from `automotive_perception_report_figures/` instead of embedded, a screen-only stylesheet with screen-sized headings, a floating link back to the contents, and a link to the PDF under the disclaimer. Source links are made clickable in the build (`autolink_bare_uris` in `build/build_pdf.py`). | current |
+| `link_audit.py` | Read-only check of the links in `index.html`: kinds of link, relative links to unpublished files, anchors without a target, malformed URLs and URLs left as plain text. | current |
 
 ## Neutral-tone revision and source checks (2026-10-10 and 11), `tone_2026-10/`
 
@@ -261,3 +263,37 @@ The decision lists and the generated pairs are not archived here: they quote the
 | `validate_report.py` | Compares an edited report with the original: equation tags, equation and section references, `$` parity and spacing on changed lines, changed headings. | current |
 | `apply_pairs.py` | Applies a pair list to a file: expected hash, unique matches, a backup first and a re-hash just before writing. | current |
 | `research/html2txt_grep.py`, `research/fr_page_locator.py`, `research/render_pdf_pages.py` | Source-check helpers: keyword-in-context search of saved HTML, Federal Register page numbers for matches, and PDF pages rendered to PNG with their text. | historical |
+
+## Restructured physics chapter (§C0, 2026-10-12), `c0_restructure_2026-10/`
+
+§C0 was reorganized as a textbook chapter in six parts, following the measurement chain: measuring one point (1.1–1.4), from points to images (2.1), how much light comes back (3.1–3.3), how much light is needed (4.1–4.3), range and its limits and robustness (5.1–5.5), and testing the model (6.1–6.2), with a closing table of where each relation is used. Every table, derivation and number was carried over from the previous text by exact copy between anchors; the new text is the connective prose, the merged passages (one photon budget, one set of detection statistics under the per-point rule, one treatment of weather) and the renumbered references. The duplicate single-speckle law was merged (old Eq. (35) into Eq. (46)), equations were renumbered in document order, and Figures C0.10a–d became Figures C0.1–C0.4. The old subsections map to the new ones as follows:
+
+| Old (before 12 Oct 2026) | New |
+|---|---|
+| 1. Pulsed direct time of flight | 1.1 (timing); 3.1 (photon budget of one pulse); 5.2 (range scaling) |
+| 2. FMCW coherent ranging | 1.3 |
+| 3. Beams, pixels and sampling | 2.1 |
+| 4. Velocity | 1.4 |
+| 5. Eye safety and sunlight | 4.2 (solar background); 5.3 (eye safety) |
+| 6. Detector gain and excess noise | 4.1 |
+| 7. Detection and false alarms | 4.3 |
+| 8. Weather | 3.3 (extinction); 5.4 (reach in fog and rain) |
+| 9. Amplitude-modulated (phase) ranging | 1.2 |
+| 10.1 Model, assumptions and symbols | assumptions at the start of 3; symbols in 3.1–3.3 |
+| 10.2 Link loss | 3.1 (direct), 3.2 (coherent) |
+| 10.3 Detection statistics | 4.2 (background of the model), 4.3 |
+| 10.4 Detection level and maximum range | 5.1 |
+| 10.5 Range scaling | 5.2 |
+| 10.6 Margin at short range | 5.4 |
+| 10.7 Dynamic range | 5.5 |
+| 10.8 Benchmark | 6.1 |
+| 10.9 What the model leaves out | 6.2 |
+
+| File | Purpose | Status |
+|---|---|---|
+| `c0_lib.py` | Assembler: a plan of new text and exact copies of old lines between anchors, with counted replacements, table-column removal and indentation changes. | historical |
+| `c0_plan_a.py`, `c0_plan_b.py`, `c0_plan_c.py` | The plan of the new §C0: opening and parts 1–2; parts 3–4; parts 5–6 and the closing table. | historical |
+| `c0_build.py` | Builds a working copy: assembles §C0, lists the old lines not carried over, remaps the 110 references to §C0 subsections elsewhere in the report (with per-line overrides where an old subsection split), updates the reader's guide, renames the figures and checks every internal reference. | historical |
+| `make_renumber_copy.py` | Points a copy of `readability_2026-10-03/renumber_equations.py` at the working copy; it was run with `--allow-reorder --redirect 35=46`. | historical |
+| `check_c0.py` | Checks the new §C0: unbalanced `$`, doubled spaces, untagged displays, the tag range and the heading list. | historical |
+| `c0_install.py` | Installs the working copy into the report (hash-guarded) and updates the files that refer to §C0. | historical |

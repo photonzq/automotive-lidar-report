@@ -495,7 +495,7 @@ def fig_scaling(out_stem: Path, lines: list) -> None:
 R_DESIGN = 200.0  # every design below reaches 200 m on a 10% target in clear air
 TOF_STYLE = dict(color=COLORS["warm_accent"], ls=DASH, zorder=4)  # ToF: the reference, warm and dashed, drawn on top
 MARGIN_DESIGNS = [
-    # label, kind, aperture D (m), colour, drawn in Figure C0.10d (the others are table rows only)
+    # label, kind, aperture D (m), colour, drawn in Figure C0.4 (the others are table rows only)
     ("SPAD ToF, 940 nm, $D=25$ mm lens", "dd", 25e-3, COLORS["warm_accent"], True),
     ("FMCW, 1,550 nm, $D=25$ mm", "coh", 25e-3, COLORS["primary"], True),
     ("FMCW, $D=22$ mm (best for 200 m)", "coh", float(np.sqrt(1550e-9 * R_DESIGN / np.pi) / W0_OVER_D),

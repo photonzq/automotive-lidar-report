@@ -1,5 +1,7 @@
 # Readability review of the scientific sections, 2026-10-03
 
+*Section, subsection and equation numbers below are those of the report as reviewed. §C0 was restructured on 12 Oct 2026; `scripts_archive/README.md` maps its old subsections to the new ones.*
+
 **Scope.** Eleven reviewers each read one block of the scientific sections of `automotive_perception_report_2026-09-27.md` (about 1 MB, ≈62% of the report) against the house style: derivations shown as equation, inputs, substitution and result; symbols and acronyms defined where used; full sentences and readable structure; arithmetic spot-checks; cross-section consistency; evidence tags and conventions. Each block report lists at most 40 findings, most severe first, with an exact quote and a proposed rewrite. They read the report at sha256 dfe616eb…/c39153b3…; line numbers in the block reports refer to that text.
 
 **Applied on 2026-10-03** (report sha256 after the batch: 9c6d35ce…). 59 exact-substring edits from `scripts_archive/readability_2026-10-03/apply_readability_high.py`, covering the high-severity findings that were clear-cut and outside the lines being edited in parallel:

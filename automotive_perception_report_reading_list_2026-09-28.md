@@ -46,9 +46,9 @@ Bibliographic details were checked against Crossref, arXiv and the VLSI 2025 pro
 | 23 | S. Sun, A. P. Petropulu, H. V. Poor, "MIMO radar for advanced driver-assistance systems and autonomous driving," IEEE SPM 37(4), 98–117, 2020 | 10.1109/MSP.2020.2978507 | G: virtual-array basis of 4D radar | §E2 |
 | 24 | L. Fan et al., "4D mmWave radar for autonomous driving perception: a comprehensive survey," IEEE T-IV 9(4), 4606–4620, 2024 | 10.1109/TIV.2024.3380244 | G: 4D radar survey | §E2 |
 | 25 | ★ I. Bilik (GM), "Comparative analysis of radar and lidar technologies for automotive applications," IEEE ITS Mag. 15(1), 244–269, 2023 | 10.1109/MITS.2022.3162886 | G/J: radar vs lidar | §E2, §E4 |
-| 26 | ★ R. Lange, P. Seitz, "Solid-state time-of-flight range camera," IEEE JQE 37(3), 390–397, 2001 | 10.1109/3.910448 | H: early iToF range-camera paper | §C0 subsection 9 |
-| 27 | C. S. Bamji et al. (Microsoft), "1Mpixel 65nm BSI 320MHz demodulated TOF image sensor with 3µm global shutter pixels and analog binning," ISSCC 2018, 94–96 | 10.1109/ISSCC.2018.8310200 | H: 320 MHz iToF | §C0 subsection 9, §B8 |
-| 28 | ★ C. Bamji et al. (Microsoft), "A review of indirect time-of-flight technologies," IEEE TED 69(6), 2779–2793, 2022 | 10.1109/TED.2022.3145762 | H: iToF review | §C0 subsection 9 |
+| 26 | ★ R. Lange, P. Seitz, "Solid-state time-of-flight range camera," IEEE JQE 37(3), 390–397, 2001 | 10.1109/3.910448 | H: early iToF range-camera paper | §C0 subsection 1.2 |
+| 27 | C. S. Bamji et al. (Microsoft), "1Mpixel 65nm BSI 320MHz demodulated TOF image sensor with 3µm global shutter pixels and analog binning," ISSCC 2018, 94–96 | 10.1109/ISSCC.2018.8310200 | H: 320 MHz iToF | §C0 subsection 1.2, §B8 |
+| 28 | ★ C. Bamji et al. (Microsoft), "A review of indirect time-of-flight technologies," IEEE TED 69(6), 2779–2793, 2022 | 10.1109/TED.2022.3145762 | H: iToF review | §C0 subsection 1.2 |
 | 29 | P. F. McManamon, *LiDAR Technologies and Systems*, SPIE Press, 2019 | 10.1117/3.2518254 | J: link budgets and architectures | §C0 |
 | 30 | R. Roriz, J. Cabral, T. Gomes, "Automotive LiDAR technology: a survey," IEEE T-ITS 23(7), 6282–6297, 2022 | 10.1109/TITS.2021.3086804 | J: commercial survey | §C1 |
 | 31 | J. Hecht, "Lidar for self-driving cars," Opt. Photonics News 29(1), 26, 2018 (the web edition may be free) | 10.1364/OPN.29.1.000026 | J: industry overview | §C3c |
