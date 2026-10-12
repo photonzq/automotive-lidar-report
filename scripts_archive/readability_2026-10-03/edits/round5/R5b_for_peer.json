@@ -1,0 +1,139 @@
+{
+ "block": "R5b_for_peer",
+ "edits": [
+  {
+   "id": "R5b-L572",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "**Denominator caution.** Yole's 3.7 M global figure counts **supplier shipments into passenger-vehicle programs**; the 3.21 M China figure below counts **vehicle installations**. Their difference, about 0.5 M ($3.7-3.21=0.49$), is not a measured count of lidars in cars sold outside China: shipment timing, inventory, mounting-position scope and geography can differ.",
+   "new": "**Denominator caution.** Yole's 3.7 M global figure counts **supplier shipments into passenger-vehicle programmes**; the 3.21 M China figure below counts **vehicle installations**. Their difference, about 0.5 M ($3.7-3.21=0.49$), is not a measured count of lidars in cars sold outside China: shipment timing, inventory, mounting-position scope and geography can differ.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L598",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "## B2. Western passenger-car programs: status in September 2026",
+   "new": "## B2. Western passenger-car programmes: status in September 2026",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L606-608",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "**Early L3 and lidar programs: dropped, paused or never scaled**\n\n| OEM / program | Lidar (supplier) | Status | Stated reason / notes |\n|---|---|---|---|",
+   "new": "**Early L3 and lidar programmes: dropped, paused or never scaled**\n\n| OEM / programme | Lidar (supplier) | Status | Stated reason / notes |\n|---|---|---|---|",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L624",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "3. **BMW and Stellantis.** BMW's Joachim Post explained the BMW decision: \"Demand … was not at a stage where we could be profitable\". After shelving its L3, Stellantis also shelved its internal rules-based program (hand-written driving logic) and chose Wayve's \"AI driver\", a learned driving model, for its brands from 2028. The consumer version uses 10 cameras and 5 radars, with no lidar mentioned; lidar appears only on the Wayve-based robotaxis Stellantis and Nissan are developing [T, WSJ, 28 Jun 2026].",
+   "new": "3. **BMW and Stellantis.** BMW's Joachim Post explained the BMW decision: \"Demand … was not at a stage where we could be profitable\". After shelving its L3, Stellantis also shelved its internal rules-based programme (hand-written driving logic) and chose Wayve's \"AI driver\", a learned driving model, for its brands from 2028. The consumer version uses 10 cameras and 5 radars, with no lidar mentioned; lidar appears only on the Wayve-based robotaxis Stellantis and Nissan are developing [T, WSJ, 28 Jun 2026].",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L630",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "**Programs in production or announced (with and without lidar)**\n\n| OEM / program | Lidar (supplier) | Status | Stated reason / notes |\n|---|---|---|---|",
+   "new": "**Programs in production or announced (with and without lidar)**\n\n| OEM / programme | Lidar (supplier) | Status | Stated reason / notes |\n|---|---|---|---|",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L673-674",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "1. **Luminar.** In the bankruptcy, the semiconductor unit went to Quantum Computing Inc. for \\$110 M. The stated rationale for 1550 nm was about 16–17× the eye-safe photon flux of 905 nm (16.4× from the 9.6 mW long-exposure limit, 17.1× from its rounded 10 mW table entry; derived in §C4 from the IEC 60825-1 laser-safety standard). Luminar failed mainly on OEM program economics and execution, with its 1550 nm cost structure contributing; raw sensor performance was not the problem (§G3).\n2. **Innoviz.** Each VW ID. Buzz AD (driven by Mobileye Drive) carries 9 InnovizTwo units, and a program life of about 150k units is claimed; Innoviz also supplies short-range units to Daimler Truck/Torc. Authority for a 1:5–1:20 reverse split (combining shares to raise the price per share) was approved on 16 Sep 2026, and the deadline for meeting Nasdaq's minimum bid-price requirement was extended to 22 Mar 2027.",
+   "new": "1. **Luminar.** In the bankruptcy, the semiconductor unit went to Quantum Computing Inc. for \\$110 M. The stated rationale for 1550 nm was about 16–17× the eye-safe photon flux of 905 nm (16.4× from the 9.6 mW long-exposure limit, 17.1× from its rounded 10 mW table entry; derived in §C4 from the IEC 60825-1 laser-safety standard). Luminar failed mainly on OEM programme economics and execution, with its 1550 nm cost structure contributing; raw sensor performance was not the problem (§G3).\n2. **Innoviz.** Each VW ID. Buzz AD (driven by Mobileye Drive) carries 9 InnovizTwo units, and a programme life of about 150k units is claimed; Innoviz also supplies short-range units to Daimler Truck/Torc. Authority for a 1:5–1:20 reverse split (combining shares to raise the price per share) was approved on 16 Sep 2026, and the deadline for meeting Nasdaq's minimum bid-price requirement was extended to 22 Mar 2027.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L747",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "**Other merchant-supplier agreements (program and date matter).**",
+   "new": "**Other merchant-supplier agreements (programme and date matter).**",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L988",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "**Short answer.** The pressure appears strong for Western brands competing in Chinese new-energy vehicles (NEVs: battery-electric, plug-in hybrid and range-extended cars) priced above about ¥150k (¥ is the Chinese yuan, RMB). Several JVs, the Chinese joint ventures through which foreign carmakers build cars in China, have announced Chinese ADAS (driver-assistance) and lidar sourcing. Their **announced order books** could make them large lidar buyers for China-built cars, even while some home-market programs retreat (§B2). Model-level installation and option take rates (the share of buyers choosing the lidar version) are needed to establish the realized volume.",
+   "new": "**Short answer.** The pressure appears strong for Western brands competing in Chinese new-energy vehicles (NEVs: battery-electric, plug-in hybrid and range-extended cars) priced above about ¥150k (¥ is the Chinese yuan, RMB). Several JVs, the Chinese joint ventures through which foreign carmakers build cars in China, have announced Chinese ADAS (driver-assistance) and lidar sourcing. Their **announced order books** could make them large lidar buyers for China-built cars, even while some home-market programmes retreat (§B2). Model-level installation and option take rates (the share of buyers choosing the lidar version) are needed to establish the realized volume.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L1034",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "| **Ford** | — | No lidar program found | — | — | Ford's China passenger presence is small | — |",
+   "new": "| **Ford** | — | No lidar programme found | — | — | Ford's China passenger presence is small | — |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L1065",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "  2. **The potential volume paradox.** Western brands' largest *announced lidar orders* are in China (Hesai's 1 M+ ATX order; RoboSense's Toyota and Nissan JV orders). Their home-market programs, by contrast, were cut (§B2). These are program orders, not delivered units.",
+   "new": "  2. **The potential volume paradox.** Western brands' largest *announced lidar orders* are in China (Hesai's 1 M+ ATX order; RoboSense's Toyota and Nissan JV orders). Their home-market programmes, by contrast, were cut (§B2). These are programme orders, not delivered units.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L1068",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "  5. **Know-how flows back.** China programs teach Western carmakers lidar integration at scale. Mercedes then picked Hesai for its next global L3, and China-built JV EVs such as the bZ3X have been spotted testing in right-hand-drive form overseas [T]. That is a possible export route for lidar-equipped Western-brand cars.",
+   "new": "  5. **Know-how flows back.** China programmes teach Western carmakers lidar integration at scale. Mercedes then picked Hesai for its next global L3, and China-built JV EVs such as the bZ3X have been spotted testing in right-hand-drive form overseas [T]. That is a possible export route for lidar-equipped Western-brand cars.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L1260",
+   "finding": "reference form §X subsection N",
+   "old": "| **Sidewalk delivery robots** (§B4a, subsection 4) | Serve: one Ouster lidar per robot under a multi-year agreement [P]. Avride: lidar to about 60 m [P]. RoboSense lists Coco Robotics among its digital-lidar customers [P]. Starship, Cartken and Woowa's Dilly carry no lidar product; they use cameras (Starship's include ToF cameras), radar and ultrasonics [P/T] | Serve more than 2,000 robots; Starship more than 3,000 [T]. Delivery lidar outside China is ≈1–5k units a year [E] | ToF cameras compete from below at ≤10 m (§C0 subsection 9) |",
+   "new": "| **Sidewalk delivery robots** (§B4a subsection 4) | Serve: one Ouster lidar per robot under a multi-year agreement [P]. Avride: lidar to about 60 m [P]. RoboSense lists Coco Robotics among its digital-lidar customers [P]. Starship, Cartken and Woowa's Dilly carry no lidar product; they use cameras (Starship's include ToF cameras), radar and ultrasonics [P/T] | Serve more than 2,000 robots; Starship more than 3,000 [T]. Delivery lidar outside China is ≈1–5k units a year [E] | ToF cameras compete from below at ≤10 m (§C0 subsection 9) |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L1272",
+   "finding": "reference form §X subsection N",
+   "old": "- **Delivery-van lidars** are the fleet times the lidars per van. About 47,000 vans ran in Q1 2026, carrying 1 lidar (Neolix X3, Cainiao GT Pro) to 4 (Zelos Z5). The installed base is therefore $47{,}000\\times1=47{,}000$, or ≈50k, to $47{,}000\\times4=188{,}000$, or ≈190k, lidars (§B4a, subsection 2).",
+   "new": "- **Delivery-van lidars** are the fleet times the lidars per van. About 47,000 vans ran in Q1 2026, carrying 1 lidar (Neolix X3, Cainiao GT Pro) to 4 (Zelos Z5). The installed base is therefore $47{,}000\\times1=47{,}000$, or ≈50k, to $47{,}000\\times4=188{,}000$, or ≈190k, lidars (§B4a subsection 2).",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L1441",
+   "finding": "reference form §X subsection N",
+   "old": "   - ToF cameras cover about 0.1–10 m cheaply, which suits sidewalk delivery robots (§B4a, subsection 4), AMRs (autonomous mobile robots: factory and warehouse robots that find their own way) and vacuums.",
+   "new": "   - ToF cameras cover about 0.1–10 m cheaply, which suits sidewalk delivery robots (§B4a subsection 4), AMRs (autonomous mobile robots: factory and warehouse robots that find their own way) and vacuums.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L1483",
+   "finding": "reference form §X subsection N",
+   "old": "| **Sidewalk delivery robots** | Outdoors, ≈1–10 m at walking pace | Starship: ToF cameras and radar; Serve and Avride: lidar (§B4a, subsection 4) | Yes |",
+   "new": "| **Sidewalk delivery robots** | Outdoors, ≈1–10 m at walking pace | Starship: ToF cameras and radar; Serve and Avride: lidar (§B4a subsection 4) | Yes |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9492",
+   "finding": "reference form §X subsection N",
+   "old": "- **What the failed companies bet on.** Parts of the failed companies' technology bets are undisclosed (§C3a, subsection 3): which designs Strobe's and OURS's shipped hardware used (patents show a two-axis MEMS mirror at 1,530–1,560 nm for Strobe, and, for OURS, switched coherent pixels with wavelength-tuned fine steering, at a wavelength no document states); the slow-axis mechanism of Baraja's Spectrum HD (its 2021 white paper describes a rotating diffractive element, a later patent application counter-rotating prisms) and the outcome of Baraja's 2025 IP sale (no transfer out of Baraja had been recorded at the USPTO by 3 Oct 2026); Scantinel's channel count (256 in one trade summary, not confirmed by a primary source), laser and tuning range; Bosch's architecture; and Ibeo's SPAD supplier. Without them, §C3a cannot say which technical choices, if any, contributed to each failure.",
+   "new": "- **What the failed companies bet on.** Parts of the failed companies' technology bets are undisclosed (§C3a subsection 3): which designs Strobe's and OURS's shipped hardware used (patents show a two-axis MEMS mirror at 1,530–1,560 nm for Strobe, and, for OURS, switched coherent pixels with wavelength-tuned fine steering, at a wavelength no document states); the slow-axis mechanism of Baraja's Spectrum HD (its 2021 white paper describes a rotating diffractive element, a later patent application counter-rotating prisms) and the outcome of Baraja's 2025 IP sale (no transfer out of Baraja had been recorded at the USPTO by 3 Oct 2026); Scantinel's channel count (256 in one trade summary, not confirmed by a primary source), laser and tuning range; Bosch's architecture; and Ibeo's SPAD supplier. Without them, §C3a cannot say which technical choices, if any, contributed to each failure.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9497",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "- **Aeva's European OEM.** No source names it. Aeva describes it as a \"global Top 10\" European OEM that already has a limited L3 system with ToF lidar on the road, and its 10-K (Mar 2026) says no definitive volume production agreement had been signed [P]. Hesai's May 2026 Mercedes L3 contract for Europe and China makes Mercedes unlikely though not impossible, and BMW fits the descriptors [E, low confidence]. Knowing it would show how large the first passenger-car FMCW program could be (§F3, §F6).",
+   "new": "- **Aeva's European OEM.** No source names it. Aeva describes it as a \"global Top 10\" European OEM that already has a limited L3 system with ToF lidar on the road, and its 10-K (Mar 2026) says no definitive volume production agreement had been signed [P]. Hesai's May 2026 Mercedes L3 contract for Europe and China makes Mercedes unlikely though not impossible, and BMW fits the descriptors [E, low confidence]. Knowing it would show how large the first passenger-car FMCW programme could be (§F3, §F6).",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9503",
+   "finding": "reference form §X subsection N",
+   "old": "- **Delivery robots outside China (§B4a, subsection 4).** Serve's one Ouster lidar per robot is confirmed [P]. Unknown: Gatik's current lidar supplier (a search summary names Luminar and Hesai [S]); Japan's count of notified delivery robots (no national tally found); Japan's parcel volume for fiscal 2025 (fiscal 2024: 5.03 B, MLIT, Japan's transport ministry); and whether today's Hakobo still carries its 2020 pair of 3D and 2D lidar, and which lidar DeliRo uses. The first three would size this market outside China.",
+   "new": "- **Delivery robots outside China (§B4a subsection 4).** Serve's one Ouster lidar per robot is confirmed [P]. Unknown: Gatik's current lidar supplier (a search summary names Luminar and Hesai [S]); Japan's count of notified delivery robots (no national tally found); Japan's parcel volume for fiscal 2025 (fiscal 2024: 5.03 B, MLIT, Japan's transport ministry); and whether today's Hakobo still carries its 2020 pair of 3D and 2D lidar, and which lidar DeliRo uses. The first three would size this market outside China.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9520",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "These gaps matter for two reasons. The Western pipeline in §F3 and the robotaxi and truck counts in §F4 multiply vehicles by lidars per vehicle. And a program's supplier decides whether a US ban on Chinese lidar would touch it (§F3, swing factor 1).",
+   "new": "These gaps matter for two reasons. The Western pipeline in §F3 and the robotaxi and truck counts in §F4 multiply vehicles by lidars per vehicle. And a programme's supplier decides whether a US ban on Chinese lidar would touch it (§F3, swing factor 1).",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  }
+ ],
+ "skipped": []
+}

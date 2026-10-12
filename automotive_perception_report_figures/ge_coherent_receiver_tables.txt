@@ -1,0 +1,14 @@
+Dark current per diode vs temperature, starting from I_d(25 C) = 50 nA
+  E_a = 0.35 eV: -40 C 0.000536 uA, +25 C 0.05 uA, +85 C 0.849 uA, +105 C 1.82 uA, +125 C 3.65 uA
+  E_a = 0.50 eV: -40 C 0.000105 uA, +25 C 0.05 uA, +85 C 2.26 uA, +105 C 6.26 uA, +125 C 15.8 uA
+TIA noise 3 pA/rtHz is equivalent to a shot-noise current of 28.1 uA
+
+Shot-noise efficiency (balanced pair, R = 0.9 A/W, TIA 3 pA/rtHz)
+  P_LO 0.1 mW:  25 C (I_d 0.05 uA) 0.762  105 C (I_d 6.3 uA) 0.689  125 C (I_d 16 uA) 0.601
+  P_LO 0.3 mW:  25 C (I_d 0.05 uA) 0.905  105 C (I_d 6.3 uA) 0.869  125 C (I_d 16 uA) 0.819
+  P_LO 1.0 mW:  25 C (I_d 0.05 uA) 0.970  105 C (I_d 6.3 uA) 0.957  125 C (I_d 16 uA) 0.938
+
+Ge direct-gap edge (nm) vs temperature
+  strain 0.00 %: -40 C 1493, +25 C 1546, +85 C 1603, +105 C 1624, +125 C 1646
+  strain 0.20 %: -40 C 1534, +25 C 1590, +85 C 1650, +105 C 1673, +125 C 1696
+  strain 0.25 %: -40 C 1544, +25 C 1601, +85 C 1663, +105 C 1685, +125 C 1709

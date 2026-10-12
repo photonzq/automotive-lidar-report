@@ -1,0 +1,557 @@
+{
+ "block": "01_A3-A6_E2-E5",
+ "edits": [
+  {
+   "id": "01_A3-A6_E2-E5-001",
+   "finding": "report #40",
+   "old": "Silica absorbs strongly near 9–10 µm, because the Si–O bonds of glass vibrate at those frequencies and soak up the radiation (Si–O vibrational absorption).",
+   "new": "Silica-based glass absorbs throughout 8–14 µm. The Si–O stretching vibration absorbs strongly near 9–10 µm and a second Si–O–Si vibration near 12.5 µm, and the broad wings of these bands, together with multiphonon absorption, fill the rest of the band, so a windshield several millimetres thick transmits essentially nothing there.",
+   "why": "The heading claims opacity across 8–14 µm but the bullet explained only 9–10 µm and repeated itself in brackets."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-002",
+   "finding": "report §3 flag (f-number and IFOV notation)",
+   "old": "Its instantaneous field of view (IFOV), the angle seen by one pixel,",
+   "new": "Its instantaneous field of view (IFOV, written $\\theta_{\\rm pix}$ in §C0), the angle seen by one pixel,",
+   "why": "Links Part A's IFOV to the primer's symbol for the same quantity."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-003",
+   "finding": "symbol scheme (pedestrian 0.5 m × 1.7 m); report #6",
+   "old": "$d_c=\\sqrt{1.8\\times0.5}\\approx0.95$ m. Here 1.8 m is the assumed height and 0.5 m the assumed width,",
+   "new": "$d_c=\\sqrt{1.7\\times0.5}\\approx0.92$ m. Here 1.7 m is the assumed height and 0.5 m the assumed width (the pedestrian size used throughout this report),",
+   "why": "Shared input: the pedestrian is 0.5 m × 1.7 m everywhere; sqrt(0.85) = 0.92 m."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-004",
+   "finding": "symbol scheme (pedestrian 0.5 m × 1.7 m); report #6",
+   "old": "\\frac{0.95}{1.5\\times1.31\\times10^{-3}}\\approx480\\ \\text{m},\\qquad R_\\text{rec}\\approx\\frac{0.95}{6\\times1.31\\times10^{-3}}\\approx120\\ \\text{m} \\tag{3}$$\n\n- These are **angular-sampling ceilings** (roughly 480 m for detection, 120 m for recognition)",
+   "new": "\\frac{0.92}{1.5\\times1.31\\times10^{-3}}\\approx470\\ \\text{m},\\qquad R_\\text{rec}\\approx\\frac{0.92}{6\\times1.31\\times10^{-3}}\\approx120\\ \\text{m} \\tag{3}$$\n\n- These are **angular-sampling ceilings** (roughly 470 m for detection, 120 m for recognition)",
+   "why": "Recomputed with d_c = 0.92 m: 0.92/(1.5×1.31e-3) = 468 ≈ 470 m; 0.92/(6×1.31e-3) = 117 ≈ 120 m (two significant figures, as before)."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-005",
+   "finding": "report #17; report §3 flag (spelling); report §1 Problem 3 (tags)",
+   "old": "Valeo + Teledyne FLIR ASIL-B program (first contract late 2023). ASIL (automotive safety integrity level) is the ISO 26262 functional-safety rating, from A (lowest) to D (highest), that a part must carry before a safety function such as braking may rely on it.\n- Thermal cameras built on uncooled microbolometers (the usual thermal sensor, an array of tiny resistors warmed by the absorbed infrared) are dual-use controlled, i.e. export-controlled because they also have military uses, when they run faster than 9 Hz (US export classification ECCN 6A003.b.4.b; the bare detector array is ECCN 6A002.a.3.f at any frame rate) [P]. Note 3.c to 6A003.b.4.b releases cameras specially designed for civilian passenger vehicles under 4,500 kg gross vehicle weight, placed solely to assist the driver, and built to stop working when removed from their vehicle. Such cameras are ECCN 6A993.a, controlled for anti-terrorism reasons only, at any frame rate. Teledyne FLIR classifies its Tura (640 × 512, up to 60 Hz) as 6A993.a with its authentication feature and 6A003.b.4.b without it [P].",
+   "new": "Valeo + Teledyne FLIR ASIL-B programme (first contract late 2023) [P]. ASIL (automotive safety integrity level) is the ISO 26262 functional-safety rating, from A (lowest) to D (highest), that a part must carry before a safety function such as braking may rely on it.\n- **Export controls.** In the US, a thermal camera built on an uncooled microbolometer (the usual thermal sensor, an array of tiny resistors warmed by the absorbed infrared) is a dual-use item, one with military as well as civil uses, and falls under the stricter of two export-control entries if it runs faster than 9 Hz: its Export Control Classification Number (ECCN) is then 6A003.b.4.b; the bare detector array is ECCN 6A002.a.3.f at any frame rate [P].\n  - Note 3.c to 6A003.b.4.b excludes from that entry cameras specially designed for civilian passenger vehicles under 4,500 kg gross vehicle weight, placed solely to assist the driver and built to stop working when removed from their vehicle. Such cameras fall under ECCN 6A993.a, which is controlled for anti-terrorism reasons only, at any frame rate [P].\n  - Teledyne FLIR, for example, classifies its Tura camera (640 × 512 pixels, up to 60 Hz) as 6A993.a with its authentication feature, which ties the camera to its vehicle, and as 6A003.b.4.b without it [P].\n  - An automotive thermal camera that runs faster than 9 Hz therefore needs this vehicle lock to escape the stricter control, a design and validation item that a visible-light camera does not need [E].",
+   "why": "Splits a five-sentence bullet, expands ECCN, replaces jargon and states why export control weighs on thermal; [P] from the Valeo release in Appendix 2."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-006",
+   "finding": "report §3 flag (to verify, line 305)",
+   "old": "The 73 km/h operating threshold is therefore not a tested avoidance speed under lower beams.",
+   "new": "The 73 km/h operating threshold is therefore not a tested avoidance speed in any of the night runs, with either beam.",
+   "why": "The speed caps quoted cover all listed night runs, upper and lower beam, not only lower beams."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-007",
+   "finding": "report §1 Problem 3 (tags); report §3 flag (spelling)",
+   "old": "broadens crash-avoidance scenarios and includes low-light testing. Euro NCAP and C-NCAP are the European and Chinese new-car assessment programs, which award consumer safety stars. Euro NCAP's official 2026 announcement does **not** establish a new general rain/fog test for pedestrian AEB.\n- **C-NCAP 2027** explicitly adds adverse-weather (rain/fog) simulations and a night two-wheeler scenario.",
+   "new": "broadens crash-avoidance scenarios and includes low-light testing [P]. Euro NCAP and C-NCAP are the European and Chinese new-car assessment programmes, which award consumer safety stars. Euro NCAP's official 2026 announcement does **not** establish a new general rain/fog test for pedestrian AEB [P].\n- **C-NCAP 2027** explicitly adds adverse-weather (rain/fog) simulations and a night two-wheeler scenario [P].",
+   "why": "Untagged facts sourced to the official Euro NCAP and C-NCAP pages listed in the text and Appendix 2; British spelling."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-008",
+   "finding": "report #39; report §3 flag (f-number and IFOV notation)",
+   "old": "- **Thermal as an AEB input rather than a display:** Zeekr 9X (Raytron); Valeo + Teledyne FLIR ASIL-B (\"leading global OEM\", late 2023; ASIL-B is the second of the four ISO 26262 safety-integrity levels); Magna fifth generation (late 2025, shrinking from golf-ball to sugar-cube size).\n- **Cheaper Chinese sensors and optics:** Raytron, Guide, 8 µm pixels. Smaller pixels shrink the lens, and the optics are expensive (§A3, item 6). At fixed IFOV (the angle seen by one pixel) and fixed f-number, lens area scales with pixel pitch as $p^2$, where $p$ is the pixel pitch (centre-to-centre spacing). The argument has three steps:\n  - a fixed IFOV $=p/f$ forces the focal length $f$ to scale as $f\\propto p$;\n  - the aperture diameter $D=f/N$ at a fixed f-number $N$ (focal length divided by aperture diameter)",
+   "new": "- **Thermal as an AEB input rather than a display.** The Zeekr 9X uses a Raytron thermal camera (640×512) as an input to automatic emergency braking, claimed as the \"world's first thermal AEB\" [P] (§A1). In late 2023 Valeo and Teledyne FLIR announced a first contract to supply an ASIL-B thermal camera to a \"leading global OEM\", an unnamed carmaker [P]; ASIL-B is the second-lowest of the four ISO 26262 levels (§A3, item 6). Magna's fifth generation (late 2025) shrinks the camera from golf-ball to sugar-cube size.\n- **Cheaper Chinese sensors and optics.** Chinese makers such as Raytron and Guide (Wuhan Guide Infrared) offer cheaper sensors and optics, and pixel pitch has fallen to 8 µm. Smaller pixels shrink the lens, and the optics are expensive (§A3, item 6). At fixed IFOV (the angle seen by one pixel) and fixed f-number, lens area scales with pixel pitch as $p^2$, where $p$ is the pixel pitch (centre-to-centre spacing). The argument has three steps:\n  - a fixed IFOV $=p/f$ forces the focal length $f$ to scale as $f\\propto p$;\n  - the aperture diameter $D=f/F_\\#$ at a fixed f-number $F_\\#$ (focal length divided by aperture diameter)",
+   "why": "Telegraphic notes become sentences; OEM and 'second' clarified; [P] from the Raytron and Valeo releases in Appendix 2; f-number symbol as in §C0."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-009",
+   "finding": "report #19",
+   "old": "while thermal does not see colour at all.",
+   "new": "whereas thermal is insensitive to clothing colour, because it senses emitted heat rather than reflected light.",
+   "why": "'Does not see colour' read as a weakness; the point is insensitivity to clothing colour."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-010",
+   "finding": "symbol scheme (pedestrian 0.5 m × 1.7 m; δθ for point spacing); report #6; report #18",
+   "old": "a 0.5×1.8 m pedestrian gets about **30 points at 100 m and about 7 at 200 m**. At 0.05°, it gets about 118 and 30 points [E]. The count is the target area divided by the area of one grid cell:\n\n$$N_{\\rm pts}\\approx\\frac{w_{\\rm ped}\\,h_{\\rm ped}}{(R\\theta)^2} \\tag{4}$$\n\n  Here $N_{\\rm pts}$ is the number of lidar points on the pedestrian, $w_{\\rm ped}=0.5$ m and $h_{\\rm ped}=1.8$ m are the pedestrian's assumed width and height (area 0.9 m²), $R$ is the range in metres and $\\theta$ the angular step of the sampling grid in radians, so that $R\\theta$ is the side of one grid cell at range $R$. The equation assumes a uniform square grid, small angles, and a return from every grid direction that falls on the body (no dropouts or occlusion).\n- At 0.1° ($\\theta=1.745\\times10^{-3}$ rad) and 100 m a cell is 0.175 m on a side, so $N_{\\rm pts}\\approx0.9\\ {\\rm m^2}/(0.175\\ {\\rm m})^2\\approx30$; at 200 m, $N_{\\rm pts}\\approx0.9/0.349^2\\approx7$. Halving the angle quadruples the count: $4\\times29.5\\approx118$ at 100 m and $4\\times7.4\\approx30$ at 200 m. At 200 m and 0.1°, then, a pedestrian is only a handful of points.",
+   "new": "a 0.5×1.7 m pedestrian gets about **28 points at 100 m and about 7 at 200 m**. At 0.05°, it gets about 112 and 28 points [E]. The count is the target area divided by the area of one grid cell:\n\n$$N_{\\rm pts}\\approx\\frac{w_{\\rm ped}\\,h_{\\rm ped}}{(R\\,\\delta\\theta)^2} \\tag{4}$$\n\n  Here $N_{\\rm pts}$ is the number of lidar points on the pedestrian, $w_{\\rm ped}=0.5$ m and $h_{\\rm ped}=1.7$ m are the pedestrian's assumed width and height (area 0.85 m²; the size used throughout this report), $R$ is the range in metres and $\\delta\\theta$ the angular step of the sampling grid in radians, so that $R\\,\\delta\\theta$ is the side of one grid cell at range $R$. The equation assumes a uniform square grid, small angles, and a return from every grid direction that falls on the body (no dropouts or occlusion).\n- At 0.1° ($\\delta\\theta=1.745\\times10^{-3}$ rad) and 100 m a cell is $100\\times1.745\\times10^{-3}\\approx0.1745$ m on a side, so $N_{\\rm pts}\\approx0.85\\ {\\rm m^2}/(0.1745\\ {\\rm m})^2\\approx27.9$, about 28; at 200 m the cell is 0.349 m and $N_{\\rm pts}\\approx0.85/0.349^2\\approx7.0$. Halving the angle quadruples the count: $4\\times27.9\\approx112$ at 100 m and $4\\times7.0\\approx28$ at 200 m. At 200 m and 0.1°, then, a pedestrian is only a handful of points.\n- For comparison, the 320×240 thermal camera of §A3 (IFOV 1.31 mrad, Eq. (1)) has a pixel footprint of $R\\cdot\\text{IFOV}=100\\times1.31\\times10^{-3}\\approx0.131$ m at 100 m and 0.262 m at 200 m. Eq. (4) with the IFOV in place of $\\delta\\theta$ then puts the pedestrian on about $0.85/0.131^2\\approx50$ pixels at 100 m and $0.85/0.262^2\\approx12$ at 200 m [E]. A 640×512 sensor over the same 24° horizontal field halves the IFOV and so quadruples these counts. Even a low-resolution thermal camera therefore samples the pedestrian more densely than a 0.1° lidar (28 and 7 points).",
+   "why": "Counts recomputed for 0.85 m² (27.9, 7.0, 112, 28); grid step written δθ; adds the thermal pixel count the item heading promises (50 and 12 pixels)."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-011",
+   "finding": "symbol scheme (R_max); report §3 flags (dark-clothing reflectance; pointers to add)",
+   "old": "setting $P_{\\rm rx}$ equal to the threshold gives $R_\\text{max}\\propto\\sqrt{\\rho}$, where $R_\\text{max}$ is the maximum detection range.\n- Going from white ($\\rho\\approx0.8$) to dark ($\\rho\\approx0.1$) cuts range to about $0.35\\times$: at a fixed detection threshold, $R_\\text{max}\\propto\\sqrt{\\rho}$ gives $\\sqrt{0.1/0.8}=\\sqrt{0.125}\\approx0.35$. Dark clothing therefore costs a lidar about two-thirds of its white-target range.\n- The scaling holds only under the assumptions of Eq. (5). Glossy surfaces and retroreflectors are not Lambertian and send far more or far less light back toward the sensor, depending on angle. A target smaller than the beam footprint returns power that falls faster than $1/R^2$, which changes the scaling.",
+   "new": "setting $P_{\\rm rx}$ equal to the threshold gives $R_{\\max}\\propto\\sqrt{\\rho}$, where $R_{\\max}$ is the maximum detection range. Eq. (5) is the proportional form of the full photon budget, Eq. (23) in §C0 subsection 1.\n- At the lidar's near-infrared wavelength, going from white ($\\rho\\approx0.8$) to dark clothing ($\\rho\\approx0.1$) cuts range to about $0.35\\times$: at a fixed detection threshold, $R_{\\max}\\propto\\sqrt{\\rho}$ gives $\\sqrt{0.1/0.8}=\\sqrt{0.125}\\approx0.35$. Dark clothing therefore costs a lidar about two-thirds of its white-target range.\n- The scaling holds only under the assumptions of Eq. (5). Glossy surfaces and retroreflectors are not Lambertian and send far more or far less light back toward the sensor, depending on angle. A target smaller than the beam footprint returns power that falls as $1/R^4$ rather than $1/R^2$ (§C0 subsection 1, after Eq. (23)), which changes the scaling.",
+   "why": "R_max written as elsewhere in the report; reflectance tied to its wavelength; Eq. (5) and the small-target case point to §C0."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-012",
+   "finding": "report #20",
+   "old": "Mie theory, the exact theory of light scattering by a sphere, gives $Q_\\text{ext}$ as a function of $x$.\n  - At 905 nm, fine fog droplets ($r\\approx2$ µm) give $x=2\\pi\\times2/0.905\\approx14$ and $Q_\\text{ext}\\approx2$ (the large-particle limit of Mie extinction).\n  - At 10 µm, $x=2\\pi\\times2/10\\approx1.3$, well below the extinction peak.",
+   "new": "Mie theory, the exact theory of light scattering by a sphere, gives $Q_\\text{ext}$ as a function of $x$ and of the droplet's complex refractive index $n+i\\kappa$, whose real part $n$ is the ordinary refractive index and whose imaginary part $\\kappa$, the extinction index, sets absorption.\n  - At 905 nm, fine fog droplets ($r\\approx2$ µm) give $x=2\\pi\\times2/0.905\\approx14$ and $Q_\\text{ext}\\approx2$, the large-particle limit of Mie extinction; a full Mie calculation for water gives ≈2.25 at this size [E].\n  - At 10 µm, $x=2\\pi\\times2/10\\approx1.3$, well below the extinction peak. A Mie calculation with the tabulated $n+i\\kappa\\approx1.22+0.05i$ of liquid water at 10 µm gives $Q_\\text{ext}\\approx0.26$ [E].\n  - A fog of $N_{\\rm d}$ droplets per cubic metre, all of radius $r$, has $\\alpha=N_{\\rm d}\\,\\pi r^2Q_\\text{ext}$. In the same fine-droplet fog, $\\alpha$ is therefore about nine times smaller at 10 µm than at 905 nm ($2.25/0.26\\approx8.7$) [E].\n  - For large droplets ($r=10$ µm), $x=2\\pi\\times10/10\\approx6.3$ at 10 µm and $Q_\\text{ext}\\approx2.6$, no smaller than the ≈2 at 905 nm, so the advantage disappears [E].",
+   "why": "Quantifies the 10 µm case and links Q_ext to alpha; values checked with an independent Bohren-Huffman Mie calculation (0.26, 2.25, 2.55-2.58)."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-013",
+   "finding": "report #21",
+   "old": "- **A water film** on the thermal window is opaque: the absorption length at 10 µm is about 10–20 µm. The absorption length $1/\\alpha_{\\rm w}$ is the depth over which the intensity falls by a factor $e$. Here $\\alpha_{\\rm w}=4\\pi\\kappa/\\lambda$ is the intensity absorption coefficient of liquid water, and $\\kappa$ is the extinction index, the imaginary part of water's complex refractive index $n+i\\kappa$ (whose real part $n$ is the ordinary refractive index) [E: the absorption length is $1/\\alpha_{\\rm w}=\\lambda/(4\\pi\\kappa)$. Assuming the tabulated imaginary refractive index of liquid water, $\\kappa\\approx0.05$ at 10 µm, $1/\\alpha_{\\rm w}\\approx10^{-5}\\ {\\rm m}/(4\\pi\\times0.05)\\approx1.6\\times10^{-5}$ m, about 16 µm; $\\kappa\\approx0.04$–0.1 across 9–11 µm gives about 9–18 µm]. Because this length is so short, even a thin film of water blinds the camera.",
+   "new": "- **A water film** on the thermal window is opaque. The intensity absorption coefficient of liquid water is $\\alpha_{\\rm w}=4\\pi\\kappa/\\lambda$, with $\\kappa$ the extinction index defined above, and its inverse, the absorption length $1/\\alpha_{\\rm w}$, is the depth over which the intensity falls by a factor $e$. With the tabulated $\\kappa\\approx0.05$ at 10 µm, $1/\\alpha_{\\rm w}=\\lambda/(4\\pi\\kappa)=10^{-5}\\ {\\rm m}/(4\\pi\\times0.05)\\approx1.6\\times10^{-5}$ m, about 16 µm; across 9–11 µm, where $\\kappa\\approx0.04$–0.1, it is about 9–18 µm [E]. A 50 µm film therefore transmits only about $e^{-50/16}\\approx4\\%$ at 10 µm [E], so even a thin film of water blinds the camera.",
+   "why": "Derivation moved out of the tag and stated before its use; the result (16 µm, 9–18 µm) replaces the mismatched 10–20 µm; adds the film transmission."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-014",
+   "finding": "report #7; report #16; report §3 flag (spelling)",
+   "old": "so the 50–100 m figures below are representative, not a universal limit. \"Better headlights\" help in three ways:\n1. getting real-world low beams closer to that ceiling (pattern, aim, leveling, curve lighting);\n2. **delivering high-beam-level light more of the time without relying on the driver**, through automatic high beam (which switches between low and high beam by itself) and adaptive driving beam (ADB, which keeps the high beam on but darkens the parts of it that would dazzle other road users);\n3. aiming light at hazards that sensors have already detected (marking or spot lights).\n\nLever 2 has a large photometric opportunity",
+   "new": "so the figures below (the cutoff meets the road 50–100 m ahead, depending on aim, and the usable reach for dark targets is about 50–80 m) are representative, not a universal limit. \"Better headlights\" help through three levers:\n- lever (a), getting real-world low beams closer to their glare-limited ceiling (pattern, aim, levelling, curve lighting);\n- lever (b), **delivering high-beam-level light more of the time without relying on the driver**, through automatic high beam (which switches between low and high beam by itself) and adaptive driving beam (ADB, which keeps the high beam on but darkens the parts of it that would dazzle other road users);\n- lever (c), aiming light at hazards that sensors have already detected (marking or spot lights).\n\nLever (b) has a large photometric opportunity",
+   "why": "Separates cutoff distance (50–100 m) from usable reach (50–80 m); lettered levers no longer clash with §A6.3's numbered items."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-015",
+   "finding": "report §3 flag (evidence tags, B50L)",
+   "old": "must stay within 50–350 cd [T].",
+   "new": "must stay within 50–350 cd [S, via *Scientific Reports* 2026, which gives it for ECE R123].",
+   "why": "Appendix 2's source is a journal paper quoting the regulation, which the legend tags [S], not trade press."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-016",
+   "finding": "report #11; report §1 Problem 3 (table lead-in)",
+   "old": "which means that the extended cutoff plane has passed below the road surface.\n\nFor $h=0.65$ m:",
+   "new": "which means that the extended cutoff plane has passed below the road surface. Eqs. (6)–(7) and the table below describe the flat, oncoming-side part of the cutoff. On the kerb side the 15° rise lifts the cutoff, so for a pedestrian at the kerb-side road edge the reach is set mainly by the beam's intensity in that direction (Eq. (8) and the photometry table below) rather than by this geometry.\n\nFor a lamp mounted at $h=0.65$ m, Eq. (6) gives the distances below at which the cutoff meets the road:",
+   "why": "Says which part of the cutoff the geometry describes, and gives the aim table a lead-in sentence."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-017",
+   "finding": "report #11",
+   "old": "- Beyond $d$, a standing pedestrian's whole body lies above the cutoff",
+   "new": "- Beyond $d$, a standing pedestrian in the flat part of the pattern lies wholly above the cutoff",
+   "why": "Restricts the claim to the flat part of the cutoff that Eqs. (6)–(7) describe."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-018",
+   "finding": "report #38; report §3 flag (dark-clothing reflectance)",
+   "old": "- A dark pedestrian ($\\rho\\approx0.05$–0.1) at 5 lux has $L=\\rho E/\\pi\\approx0.08$–0.16 cd/m² ($0.05\\times5/\\pi\\approx0.08$ and $0.1\\times5/\\pi\\approx0.16$), which is mesopic vision. Mesopic vision is the twilight regime in which both the eye's rods and cones work, and contrast sensitivity, acuity and colour vision are reduced.\n- In the glare-limited zone the illuminance at 50 m is $E=350\\ {\\rm cd}/(50\\ {\\rm m})^2=0.14$ lux, so $L\\approx0.05\\times0.14/\\pi\\approx0.002$ to $0.1\\times0.14/\\pi\\approx0.004$ cd/m², effectively invisible.",
+   "new": "- A dark pedestrian ($\\rho\\approx0.05$–0.1 in visible light) at 5 lux has $L=\\rho E/\\pi\\approx0.08$–0.16 cd/m² ($0.05\\times5/\\pi\\approx0.08$ and $0.1\\times5/\\pi\\approx0.16$), which lies in the mesopic range of luminance (roughly 0.005–5 cd/m² [U]). Mesopic vision is the twilight regime in which both the eye's rods and cones work, and contrast sensitivity, acuity and colour vision are reduced.\n- In the glare-limited zone the illuminance at 50 m is $E=350\\ {\\rm cd}/(50\\ {\\rm m})^2=0.14$ lux, so $L\\approx0.05\\times0.14/\\pi\\approx0.002$ to $0.1\\times0.14/\\pi\\approx0.004$ cd/m². That is below the lower edge of the mesopic range and, to an eye adapted to the road lit by the driver's own low beam, effectively invisible.",
+   "why": "A luminance is not 'vision'; ties both values to the mesopic range and states the reflectance's wavelength."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-019",
+   "finding": "symbol scheme (shared inputs: 0.7 g against 5–6 m/s²)",
+   "old": "a firm stop on a dry, level road, with no allowance for the brakes to build up.",
+   "new": "a firm stop on a dry, level road, with no allowance for the brakes to build up. Part E uses a gentler 5–6 m/s², down to the 5 m/s² that UN R157 assumes for planning (§E2).",
+   "why": "Keeps the two decelerations apart and says why they differ."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-020",
+   "finding": "report #12",
+   "old": "light). Setting Eq. (11) equal to the reach $d_{\\rm reach}$, i.e. $v\\,t_r+v^2/(2a_{\\rm b})=d_{\\rm reach}$, with $t_r=1.5$ s and $a_{\\rm b}=0.7g$, and solving for $v$, stopping distance reaches 50 m at about 64 km/h, 65 m at about 77 km/h and 80 m at about 88 km/h [E].",
+   "new": "light).\n- These speeds follow from setting Eq. (11) equal to a reach $d_{\\rm reach}$, $v\\,t_r+v^2/(2a_{\\rm b})=d_{\\rm reach}$, and solving this quadratic for the speed: $v=a_{\\rm b}\\left[\\sqrt{t_r^2+2d_{\\rm reach}/a_{\\rm b}}-t_r\\right]$, with $t_r=1.5$ s and $a_{\\rm b}=6.87$ m/s². For $d_{\\rm reach}=50$ m, $v=6.87\\times(\\sqrt{2.25+14.56}-1.5)\\approx17.9$ m/s $\\approx64$ km/h. For 65 m, $v=6.87\\times(\\sqrt{2.25+18.92}-1.5)\\approx21.3$ m/s $\\approx77$ km/h, and for 80 m, $v=6.87\\times(\\sqrt{2.25+23.29}-1.5)\\approx24.4$ m/s $\\approx88$ km/h [E].",
+   "why": "Splits a 55-word sentence into its own bullet and shows the quadratic solution with substitutions."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-021",
+   "finding": "report #10; report §3 flags (pointers to add; evidence tags, J599; spelling)",
+   "old": "This is the same $Z^2/h$ geometry as monocular camera depth: a camera at height $h$ that judges the distance $Z$ to a point on the road from its angle below the horizon has an error that grows as $Z^2/h$ times its angle error. For example, at the 0.57° aim ($d\\approx65$ m), an aim error of 0.1° ($1.75\\times10^{-3}$ rad) moves the cutoff by about $65^2\\times1.75\\times10^{-3}/0.65\\approx11$ m [E].\n- SAE J599 (the SAE recommended practice for headlamp-aim inspection) allows a vertical aim of 0 ± 0.76° (below 90 cm mounting height) [P, via IIHS].\n- IIHS measured factory aims on new cars between about −0.5° and +0.4° [I].\n- IIHS notes that a 0.25° downward aim already drops the cutoff below its 25 cm sensor beyond 100 m. With the 0.65 m lamp height above, Eq. (7) gives a cutoff height at 100 m of $0.65-100\\times\\tan0.25^\\circ\\approx0.21$ m, and the cutoff crosses 25 cm at $(0.65-0.25)/\\tan0.25^\\circ\\approx92$ m [E].\n- Production aim, load and pitch leveling are therefore first-order variables, not details.",
+   "new": "This is the same $Z^2/h$ geometry as monocular camera depth (§E2, Eq. (153)): a camera at height $h$ that judges the distance $Z$ to a point on the road from its angle below the horizon has an error that grows as $Z^2/h$ times its angle error. For example, at the 0.57° aim ($d\\approx65$ m), an aim error of 0.1° ($1.75\\times10^{-3}$ rad) moves the cutoff by about $65^2\\times1.75\\times10^{-3}/0.65\\approx11$ m [E].\n- SAE J599 (the SAE recommended practice for headlamp-aim inspection) allows a vertical aim of 0 ± 0.76° (below 90 cm mounting height) [S, via IIHS].\n- IIHS measured factory aims on new cars between about −0.5° and +0.4° [I].\n- IIHS notes that a 0.25° downward aim already drops the cutoff below the 25 cm height at which it measures illuminance (Photometry, above) beyond 100 m. With the 0.65 m lamp height above, Eq. (7) gives a cutoff height at 100 m of $0.65\\ {\\rm m}-100\\ {\\rm m}\\times\\tan0.25^\\circ\\approx0.21$ m, and the cutoff falls to the 0.25 m measurement height at $(0.65\\ {\\rm m}-0.25\\ {\\rm m})/\\tan0.25^\\circ\\approx92$ m [E].\n- Production aim, load and pitch levelling are therefore first-order variables, not details.",
+   "why": "Units separate the 0.25 m height from the 0.25° angle; the 25 cm point is IIHS's measurement height; pointer to Eq. (153); J599 value via IIHS is [S]."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-022",
+   "finding": "report §3 flag (spelling)",
+   "old": "- **Aim and leveling:** tighter factory aim; automatic and dynamic leveling,",
+   "new": "- **Aim and levelling:** tighter factory aim; automatic and dynamic levelling,",
+   "why": "British spelling, as elsewhere in the report."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-023",
+   "finding": "report #13; report #16",
+   "old": "not a controlled estimate of ADB's effect. The rating also gives credit for automatic high-beam switching, so part of the observed benefit may reflect lever 2.",
+   "new": "not a controlled estimate of what better low beams alone achieve. The rating also gives credit for automatic high-beam switching, so part of the observed benefit may reflect lever (b).",
+   "why": "The IIHS evidence concerns headlight ratings, not ADB; lever label follows the short answer."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-024",
+   "finding": "report #14",
+   "old": "- So the binding constraint is **behavioural and social** (drivers dip their lights to avoid dazzling others), not photometric.",
+   "new": "- So the binding constraint is **behavioural**, not photometric: drivers leave high beams off even when there is no one to dazzle (on unlit rural roads with no other traffic they used them for only 25.4% of the distance), as well as dipping them for other traffic.",
+   "why": "The bracketed explanation contradicted the 25.4% use on empty roads just quoted."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-025",
+   "finding": "report #16; report §1 Problem 3 (tags)",
+   "old": "**The engineering answers are automation, not persuasion:**\n1. **Automatic high-beam switching.** A camera detects other vehicles' lamps and toggles the beam, removing the behavioural part.\n2. **Adaptive driving beam (ADB, matrix or pixel \"glare-free high beam\").** The beam is divided into many individually switched LED segments or pixels. It keeps high-beam intensity everywhere except dark \"tunnels\" around detected vehicles, removing most of the glare constraint.\n   - **Europe and China:** widespread since about 2013 (Audi Matrix LED, Mercedes Multibeam and Digital Light, BMW Selective Beam, and many Chinese makers).\n   - **United States:** legalized by NHTSA (the National Highway Traffic Safety Administration) in **Feb 2022** (FMVSS 108 amendment), but the vehicle-level track test is stricter than global practice.\n     - It requires a 1° transition zone, against about 4° elsewhere.\n     - Component minimums conflict with track-test maximums in right curves: a lamp that meets its component-level minimum intensities can exceed the glare maxima of the vehicle-level track test there.\n     - NHTSA **denied all 12 petitions for reconsideration** on 30 Dec 2024 [P].\n     - As of 2025, **Rivian was the only automaker offering fully compliant ADB in the US** [T].\n     - In practice, most US cars still switch between low and high beam.\n3. **Sensor-directed marking or spot light.** Light is aimed at detected pedestrians or animals: BMW Dynamic Light Spot (with thermal), Audi marker lights, and pixel or digital-micromirror (DMD, the chip of tiny tilting mirrors used in video projectors) headlights that can also project lane markings.",
+   "new": "**The engineering answers are automation, not persuasion.** The first two below deliver lever (b) of the short answer, and the third is lever (c):\n- **Automatic high-beam switching.** A camera detects other vehicles' lamps and toggles the beam, removing the behavioural part.\n- **Adaptive driving beam (ADB, matrix or pixel \"glare-free high beam\").** The beam is divided into many individually switched LED segments or pixels. It keeps high-beam intensity everywhere except dark \"tunnels\" around detected vehicles, removing most of the glare constraint.\n  - **Europe and China:** widespread since about 2013 (Audi Matrix LED, Mercedes Multibeam and Digital Light, BMW Selective Beam, and many Chinese makers).\n  - **United States:** legalized by NHTSA (the National Highway Traffic Safety Administration) in **Feb 2022** (FMVSS 108 amendment) [P], but the vehicle-level track test is stricter than global practice.\n    - It requires a 1° transition zone, against about 4° elsewhere.\n    - Component minimums conflict with track-test maximums in right curves: a lamp that meets its component-level minimum intensities can exceed the glare maxima of the vehicle-level track test there.\n    - NHTSA **denied all 12 petitions for reconsideration** on 30 Dec 2024 [P].\n    - As of 2025, **Rivian was the only automaker offering fully compliant ADB in the US** [T].\n    - In practice, most US cars still switch between low and high beam.\n- **Sensor-directed marking or spot light.** Light is aimed at detected pedestrians or animals: BMW Dynamic Light Spot (with thermal), Audi marker lights, and pixel or digital-micromirror (DMD, the chip of tiny tilting mirrors used in video projectors) headlights that can also project lane markings.",
+   "why": "Numbered items 1–3 no longer collide with the levers; maps them to levers (b) and (c); [P] from the NHTSA ADB rule in Appendix 2."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-026",
+   "finding": "report §3 flag (dark-clothing reflectance)",
+   "old": "(dark clothing ≈ 5%)",
+   "new": "(dark clothing ≈ 5–10% in visible light, §A6.1)",
+   "why": "States the wavelength and matches §A6.1's 0.05–0.1."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-027",
+   "finding": "report §3 flag (evidence tags, IIHS glare analysis)",
+   "old": "found crashes have not increased because of glare [T].",
+   "new": "found crashes have not increased because of glare [T, Repairer Driven News, Oct 2025].",
+   "why": "Names the trade-press relay (Appendix 2), which is why this IIHS result is [T] while IIHS's own studies are [I]."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-028",
+   "finding": "report #35",
+   "old": "(though lidar, like cameras, degrades in fog, §A5.3)",
+   "new": "(though lidar, like cameras, degrades in fog; §A5, item 3)",
+   "why": "There is no §A5.3; the fog discussion is §A5, item 3."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-029",
+   "finding": "report #30 (signpost part)",
+   "old": "each calculation below states the idealized geometry it assumes.",
+   "new": "each calculation below states the idealized geometry it assumes. A sideline at the end of the section gives automotive radar volumes, suppliers, deployments and prices, for comparison with the lidar market of Part B.",
+   "why": "Readers navigating by headings learn that the market sideline exists (the move itself is structural, Round 3)."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-030",
+   "finding": "report §3 flag (N_px two meanings; field-of-view notation)",
+   "old": "with $N_{\\rm px}$ pixels across a horizontal field of view HFOV,\n\n  $$f=\\frac{N_{\\rm px}/2}{\\tan(\\mathrm{HFOV}/2)} \\tag{151}$$",
+   "new": "with $N_{\\rm col}$ pixel columns across a horizontal field of view $\\text{FOV}_{\\rm h}$ (the symbols of §A3, Eq. (1)),\n\n  $$f=\\frac{N_{\\rm col}/2}{\\tan(\\text{FOV}_{\\rm h}/2)} \\tag{151}$$",
+   "why": "N_px means pixels across the target in Eq. (2); the field quantities take Eq. (1)'s names."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-031",
+   "finding": "report #31",
+   "old": "- Wide baselines move the problem to calibration: about 35 µrad of relative orientation between the two cameras must stay stable across a flexing body (NODAR's core IP, i.e. intellectual property; NODAR is a wide-baseline stereo company). A relative rotation of the cameras shifts every disparity directly, so it eats into the same error budget as matching noise. That is the 0.25 px disparity budget of the 3840 px / 30° camera: one pixel subtends $1/f=1/7{,}166$ rad $\\approx140$ µrad (its IFOV, the instantaneous field of view of a single pixel), and $0.25\\times140\\approx35$ µrad.",
+   "new": "- Wide baselines move the problem to calibration. A relative rotation of the two cameras shifts every disparity directly, so it eats into the same error budget as matching noise. For the 3840 px / 30° camera one pixel subtends $1/f=1/7{,}166$ rad $\\approx140$ µrad (its IFOV, the instantaneous field of view of a single pixel), so the 0.25 px disparity budget is $0.25\\times140\\approx35$ µrad: the cameras' relative orientation must stay stable to about 35 µrad while the body flexes. Holding it there is the core intellectual property (IP) claimed by NODAR, a wide-baseline stereo company [P].",
+   "why": "Derivation before the number, company aside after the physics, unclear antecedent removed; NODAR claim tagged as a vendor claim, as elsewhere in the report."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-032",
+   "finding": "report §3 flag (pointers to add)",
+   "old": "which shifts every depression angle by the same amount.",
+   "new": "which shifts every depression angle by the same amount; the same geometry sets the headlamp-aim sensitivity of §A6.1, Eq. (12).",
+   "why": "Eq. (12) and Eq. (153) describe the same Z²/h geometry and now point to each other."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-033",
+   "finding": "report #34",
+   "old": "(see the tapering note under the lines table below)",
+   "new": "(see the tapering note after Eq. (156) below)",
+   "why": "The tapering note comes before the lines table, right after Eq. (156)."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-034",
+   "finding": "report #5 (remaining part)",
+   "old": "- The best 4D radars reach about 0.5–1°.",
+   "new": "- The best 4D radars (which also measure elevation and radial velocity; see below) reach about 0.5–1°.",
+   "why": "'4D' was used before its definition further down the section."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-035",
+   "finding": "symbol scheme (δθ for point spacing; pedestrian 0.5 m × 1.7 m); report #6",
+   "old": "A 0.05° step ($0.873\\times10^{-3}$ rad) spans $R\\,\\Delta\\theta=200\\times0.873\\times10^{-3}\\approx0.175$ m at 200 m, so a 0.5 m × 1.7 m pedestrian (as in §C10.6(a)) covers",
+   "new": "A 0.05° step, $\\delta\\theta=0.873\\times10^{-3}$ rad, spans $R\\,\\delta\\theta=200\\times0.873\\times10^{-3}\\approx0.175$ m at 200 m, so a 0.5 m × 1.7 m pedestrian (the size used in §A3, §A5 and §C10.6(a)) covers",
+   "why": "Lidar point spacing written δθ (Δθ is the radar resolution of Eq. (154)); one pedestrian size across Parts A, C and E."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-036",
+   "finding": "report #32",
+   "old": "has about $(120/0.1)\\times(25/0.2)=1{,}200\\times125=150{,}000$, consistent with the ≈110,000–120,000 lidar points per frame in the same dataset [E].",
+   "new": "has about $(120/0.1)\\times(25/0.2)=1{,}200\\times125=150{,}000$ angular cells. That is of the same order as the ≈110,000–120,000 points per frame that the dataset's own lidar records, whose grid is not given here; directions with no return, such as the sky, also lower a lidar's point count [E].",
+   "why": "'Consistent' overstated an order-of-magnitude match, and the grid is illustrative, not the dataset's lidar."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-037",
+   "finding": "report §1 Problem 3 (table lead-in)",
+   "old": "| Sensor | Azimuth cells × lines | Angular cells |",
+   "new": "The table below compares the angular cells, azimuth cells times lines (Eq. (155)), of current radars, of a practical radar ceiling and of four lidars.\n\n| Sensor | Azimuth cells × lines | Angular cells |",
+   "why": "The table had no sentence introducing it."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-038",
+   "finding": "report #36",
+   "old": "\\approx231\\times51\\approx11{,}900$",
+   "new": "\\approx231\\times51\\approx11{,}800$",
+   "why": "231 × 51 = 11,781 and the unrounded product is 11,834, so ≈11,800."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-039",
+   "finding": "report #23",
+   "old": "  - *Super-resolution* locates an isolated bright scatterer to about beamwidth ÷ $\\sqrt{2\\,{\\rm SNR}}$, where SNR is that scatterer's signal-to-noise power ratio. That is one-fourteenth of a beam at 20 dB (SNR = 100, and $\\sqrt{2\\times100}\\approx14$). It sharpens *where* a single point is, but it neither splits a dense surface into pixels nor creates returns from panels that reflect the signal away.",
+   "new": "  - *Sub-beamwidth angle estimation* (sometimes loosely called super-resolution) locates an isolated bright scatterer to about beamwidth ÷ $\\sqrt{2\\,{\\rm SNR}}$, where SNR is that scatterer's signal-to-noise power ratio. That is one-fourteenth of a beam at 20 dB (SNR = 100, and $\\sqrt{2\\times100}\\approx14$). It sharpens *where* a single point is, but it does not separate two scatterers inside one beam, split a dense surface into pixels, or create returns from panels that reflect the signal away.",
+   "why": "In radar usage super-resolution means separating two targets in one beam; this is single-target angle precision, and the rewrite says it cannot separate two."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-040",
+   "finding": "report #22",
+   "old": "about 3,000–6,000 angular cells. That matches a 2014 16-line lidar vertically, is 2–3× coarser horizontally (0.4–0.5° steps against the VLP-16's 0.2°), and has 25–200 times fewer cells than current automotive lidar ($150{,}000/6{,}000=25$ for the AT128 against the ceiling, up to $600{,}000/3{,}000=200$ for the ATX against a Mobileye-class radar), and only strong reflectors return within those cells.",
+   "new": "about 3,000–6,000 angular cells, and only strong reflectors return within those cells. Vertically that matches a 2014 16-line lidar; horizontally it is 2–3× coarser (0.4–0.5° steps against the VLP-16's 0.2°). In total it has 25–200 times fewer cells than current automotive lidar: $150{,}000/6{,}000=25$ for the AT128 against the practical ceiling, and $600{,}000/3{,}000=200$ for the ATX against a Mobileye-class radar.",
+   "why": "Splits the section's key result, a 60-word sentence with four claims, into three sentences."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-041",
+   "finding": "report #9; symbol scheme (a_b for braking deceleration; shared inputs)",
+   "old": "At constant deceleration $a$ (m/s²), a car at speed $v$ (m/s) stops within\n\n  $$d_{\\rm brake}=\\frac{v^2}{2a} \\tag{159}$$\n\n  once the brakes are applied. At 130 km/h ($v=36.1$ m/s), braking alone takes $v^2/(2a)=36.1^2/(2\\times6)\\approx109$ m at 6 m/s² and $36.1^2/(2\\times5)\\approx130$ m at 5 m/s².",
+   "new": "At constant braking deceleration $a_{\\rm b}$ (m/s²), a car at speed $v$ (m/s) stops within\n\n  $$d_{\\rm brake}=\\frac{v^2}{2a_{\\rm b}} \\tag{159}$$\n\n  once the brakes are applied. At 130 km/h ($v=36.1$ m/s), braking alone takes $v^2/(2a_{\\rm b})=36.1^2/(2\\times6)\\approx109$ m at an assumed 6 m/s² and $36.1^2/(2\\times5)\\approx130$ m at the 5 m/s² that UN R157 (the UN regulation for automated lane keeping) assumes for its detection-range table (§C10.6(g) and (k)). Both are gentler than the 0.7 $g$ (6.87 m/s²) of §A6.1, Eq. (11), which would give $36.1^2/(2\\times6.87)\\approx95$ m: 0.7 $g$ describes a firm stop on a dry road, whereas 5 m/s² is a regulation's planning value.",
+   "why": "a_b per the symbol scheme (a is the aim angle in Part A); says where 5 m/s² comes from and why it differs from §A6's 0.7 g."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-042",
+   "finding": "report #33",
+   "old": "at 150 m a 0.1° lidar (0.1° $=1.745\\times10^{-3}$ rad) puts about 26 cm per pixel on the car ($150\\times1.745\\times10^{-3}\\approx0.26$ m) and separates it from both the gantry and the road.",
+   "new": "at 150 m a lidar with 0.1–0.2° vertical steps (0.1° $=1.745\\times10^{-3}$ rad) puts a scan line every 26–52 cm on the car ($150\\times1.745\\times10^{-3}\\approx0.26$ m and $150\\times3.49\\times10^{-3}\\approx0.52$ m), enough to separate it from both the gantry, about 4 m higher, and the road.",
+   "why": "The point is about elevation, where this section's lidars step 0.2°; 'pixel' was a camera term."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-043",
+   "finding": "report #29",
+   "old": "**Scale and suppliers** [P, Yole press release, 12 Nov 2025, unless tagged]:",
+   "new": "**Scale and suppliers** [MR, Yole press release, 12 Nov 2025, unless tagged]:",
+   "why": "The tag legend puts Yole estimates under [MR]."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-044",
+   "finding": "report #8",
+   "old": "Elevation-capable \"4D\" radars were about 40% of 2024 shipments.",
+   "new": "Elevation-capable \"4D\" radars were about 40% of 2024 shipments. Under Yole's broad definition of 4D (above) that is about 66 M units ($0.40\\times166\\ {\\rm M}\\approx66$ M) [E]. The 2.74 M Chinese 4D installations for 2024 below cannot be compared with it: they cover one country's passenger cars, count installations rather than shipments and may use a narrower definition of 4D [E].",
+   "why": "40% of 166 M is 66 M, far above the 2.74 M Chinese 4D figure; says why the two differ."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-045",
+   "finding": "report #29",
+   "old": "- **China's 4D ramp** [T, ResearchInChina, Dec 2025]:",
+   "new": "- **China's 4D ramp** [MR, ResearchInChina, Dec 2025]:",
+   "why": "The tag legend puts ResearchInChina estimates under [MR]."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-046",
+   "finding": "report #4 (tag and currency part); report §3 flag (currency)",
+   "old": "fell from RMB 500–1,000 in early 2024 to RMB 200–400 in 2025, about \\$28–56 at an assumed exchange rate of RMB 7.1 per dollar (200 ÷ 7.1 ≈ 28 and 400 ÷ 7.1 ≈ 56), as dual-chip cascades replaced quad-chip designs. The same source puts it at 1/5–1/10 of a lidar's price and expects it to fall below \\$100 [T, ResearchInChina; not independently corroborated].",
+   "new": "fell from ¥500–1,000 in early 2024 to ¥200–400 in 2025, about \\$28–56 at an assumed exchange rate of ¥7.1 per dollar (200 ÷ 7.1 ≈ 28 and 400 ÷ 7.1 ≈ 56), as dual-chip cascades replaced quad-chip designs. The same source puts this radar at 1/5–1/10 of a lidar's price and expects it to fall below \\$100 [MR, ResearchInChina; not independently corroborated].",
+   "why": "Chinese prices are written in ¥ (How to read) and ResearchInChina is [MR]; the \\$100 clause awaits its source."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-047",
+   "finding": "report #28",
+   "old": "It weights mAP by one half and averages it with five error measures (translation, size, orientation, velocity and attribute), each converted to a 0–1 score.",
+   "new": "It is $\\text{NDS}=\\frac{1}{10}\\left[5\\,\\text{mAP}+\\sum_{k=1}^{5}\\left(1-\\min(1,\\text{mTP}_k)\\right)\\right]$, reported ×100: half the weight is on mAP (0–1 scale) and a tenth on each of five true-positive error measures $\\text{mTP}_k$ (translation, size, orientation, velocity and attribute), each turned into a 0–1 score by $1-\\min(1,\\text{mTP}_k)$.",
+   "why": "'Weights by one half and averages it with' was ambiguous for the section's headline metric."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-048",
+   "finding": "report §3 flag (spelling); report §1 Problem 3 (tags)",
+   "old": "(≤50 m, center-distance matching; NDS = nuScenes detection score). nuScenes is a public driving dataset with camera, lidar and radar recordings; its \"test\" split is scored only by the organizers' server. Center-distance matching counts a detection as correct when its centre lies within a set ground-plane distance of the true object's centre, rather than requiring box overlap, which is more forgiving of small position errors. This is a landscape comparison across methods and publication years, not a controlled sensor ablation. The method names (RoPETR, LION, SparseLIF) are published detectors:\n- best camera-only NDS about **70.9** (RoPETR, 2025);\n- lidar-only 73.9 (LION, 2024);\n- fusion 77.0 (SparseLIF, 2024).",
+   "new": "(≤50 m, centre-distance matching; NDS = nuScenes detection score). nuScenes is a public driving dataset with camera, lidar and radar recordings; its \"test\" split is scored only by the organizers' server. Centre-distance matching counts a detection as correct when its centre lies within a set ground-plane distance of the true object's centre, rather than requiring box overlap, which is more forgiving of small position errors. This is a landscape comparison across methods and publication years, not a controlled sensor ablation. The method names (RoPETR, LION, SparseLIF) are published detectors:\n- best camera-only NDS about **70.9** (RoPETR, 2025) [I];\n- lidar-only 73.9 (LION, 2024) [I];\n- fusion 77.0 (SparseLIF, 2024) [I].",
+   "why": "British 'centre' as elsewhere; published benchmark results are [I] (academic papers)."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-049",
+   "finding": "report #26 (wording part)",
+   "old": "the camera matches: **camera error is almost purely depth**",
+   "new": "the camera's AP rises to about the lidar's: **camera error is almost purely depth**",
+   "why": "Says what the camera matches; the supporting values are listed as needs_source."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-050",
+   "finding": "report §3 flag (metric scales); report §1 Problem 3 (tags)",
+   "old": "camera Far3D 0.316 mAP vs lidar LION 0.415 (mAP on a 0–1 scale); camera translation error is 1.5–1.7× worse. Argoverse 2 is a public dataset whose detection benchmark scores objects out to 150 m, three times the nuScenes limit.\n\n**End-to-end planning (NAVSIM):** camera-only 83.8 vs camera+lidar 84.0 PDMS.",
+   "new": "camera Far3D 31.6 mAP vs lidar LION 41.5 (reported as 0.316 and 0.415 on a 0–1 scale) [I]; camera translation error is 1.5–1.7× worse. Argoverse 2 is a public dataset whose detection benchmark scores objects out to 150 m, three times the nuScenes limit.\n\n**End-to-end planning (NAVSIM):** camera-only 83.8 vs camera+lidar 84.0 PDMS [I].",
+   "why": "Puts Argoverse 2 on the 0–100 scale used elsewhere in the section; benchmark papers are [I]."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-051",
+   "finding": "report §3 flag (lidar reach in fog and the definition of V)",
+   "old": "In the table, V is the visibility distance (the range at which a human can still see a dark object in the fog).",
+   "new": "In the table, V is the meteorological visibility, the distance at which a large dark object can still be seen by eye (§A5, item 3; §C0 subsection 8 defines it by a 2% contrast threshold).",
+   "why": "One definition of V, with pointers to §A5 and §C0."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-052",
+   "finding": "report §3 flag (metric names)",
+   "old": "| Heavy snow / sleet (K-Radar AP3D) |",
+   "new": "| Heavy snow / sleet (K-Radar 3D AP) |",
+   "why": "'3D AP' as in §E2 and §E3."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-053",
+   "finding": "report §3 flags (metric names; lidar reach in fog)",
+   "old": "*Reading the table.* The snow row gives K-Radar's 3D average precision (AP3D, 0–100; higher is better) for detectors using only that sensor, with the normal-weather value in brackets.",
+   "new": "*Reading the table.* The snow / sleet row gives K-Radar's 3D average precision (3D AP, 0–100; higher is better; §E3) for detectors using only that sensor: each cell gives the heavy-snow value, then the sleet value, with the normal-weather value in parentheses. For the lidar's 0.6–1 V in dense fog, compare the measured ≈0.6 V of §A5, item 3 and the model of §C0 subsection 8, which gives about 0.5–0.7 V at 20–50 m visibility but only 0.13–0.3 V in lighter fog (200–1,000 m visibility).",
+   "why": "Explains the x / y pairs, uses the table's actual parentheses, and ties the fog entry to §A5 and §C0."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-054",
+   "finding": "report #27",
+   "old": "The answers are that miles alone cannot prove a fatality rate, and redundancy helps only if channels fail independently.",
+   "new": "The answers are that road miles can bound a fatality rate only after hundreds of millions of failure-free miles on one system version, and that redundancy helps only if channels fail independently.",
+   "why": "Eq. (160) shows that 275 M failure-free miles do bound the rate; the old wording overstated the result."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-055",
+   "finding": "report #27; report §3 flag (pointers to add)",
+   "old": "- Waymo's 271 M **cumulative rider-only** miles (driven with no one in the driver's seat) are near that numerical threshold. This does not satisfy RAND's *failure-free* demonstration premise or establish safety across all operating domains.\n- Tesla's 1 M unsupervised miles imply",
+   "new": "- Waymo's 271 M **cumulative rider-only** miles (driven with no one in the driver's seat; to Jun 2026, §E1) are near that numerical threshold. They still do not satisfy RAND's *failure-free* demonstration premise, which needs one unchanging system, with the constant fatality rate that Eq. (160) assumes, to drive all those miles without a fatality; Waymo's system was modified along the way (the recalls listed in §E1). Nor do they establish safety across all operating domains.\n- Tesla's 1 M unsupervised miles (to 3 Sep 2026, §E1) imply",
+   "why": "Adds the §E1 sources of both mileage figures and says which part of RAND's premise the fleet miles miss."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-056",
+   "finding": "report #24; report §1 Problem 3 (table lead-in)",
+   "old": "The model assumes two identical channels, $p\\ll1$, and that two independent failures in the same hour are not detected and recovered from in between; that last assumption is what lets the square of a per-hour probability be read again as a per-hour figure.",
+   "new": "The model assumes two identical channels and $p\\ll1$. Its second term is the probability that both channels fail independently within the same hour, so it treats a failed channel as staying failed, unnoticed, for the rest of that hour. If failures are detected and the car reaches a safe state sooner, that term shrinks in proportion to the time a failure goes unnoticed. For $p=10^{-4}$/h, Eq. (161) gives these system failure rates:",
+   "why": "Plain statement of the model's key assumption, plus a lead-in for the β table."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-057",
+   "finding": "report #37",
+   "old": "- Different physics lowers $\\beta$, because a condition that blinds one sensor leaves the other working: camera vs radar for weather, camera vs lidar for darkness and geometry.",
+   "new": "- Different physics lowers the environmental part of $\\beta$, because a condition that blinds one sensor leaves the other working: camera vs radar for weather, camera vs lidar for darkness and geometry. Shared software, fusion logic, power and mounting remain common causes that sensor diversity does not remove.",
+   "why": "Sensor diversity does not remove the shared software or mounting causes listed in the model's definition."
+  },
+  {
+   "id": "01_A3-A6_E2-E5-058",
+   "finding": "report #25 (Uber part); report §1 Problem 3 (tags)",
+   "old": "but classification, prediction and design failed (NTSB HAR-19/03, the National Transportation Safety Board's accident report).",
+   "new": "but the developmental system's classification, path prediction, emergency response and safety process failed (§E8) [I, NTSB HAR-19/03, the National Transportation Safety Board's accident report].",
+   "why": "'Design failed' was vague; §E8 states the failed elements; NTSB is an independent source."
+  }
+ ],
+ "skipped": [
+  {
+   "finding": "report #1",
+   "kind": "already_fixed",
+   "location": "§E5, 'A system target of $10^{-8}$/h (the order of the ISO 26262 ASIL D target…'",
+   "detail": "The live text already carries the proposed rewrite: the independent term uses the whole target at p = 1e-4/h, the p = 1e-5/h example and the validation caveat."
+  },
+  {
+   "finding": "report #3",
+   "kind": "already_fixed",
+   "location": "§E2 sideline, 'That is about 100 radars for every passenger-car lidar shipped in the same year'",
+   "detail": "The same-year ratio (166/1.6 ≈ 104) is already in the live text."
+  },
+  {
+   "finding": "report #5 (lane-width part)",
+   "kind": "already_fixed",
+   "location": "§E2, 'spans **one to two lane widths**. Two objects in adjacent lanes…'",
+   "detail": "The lane-width rewrite is already in the live text; the remaining part (defining 4D at first use) is an edit."
+  },
+  {
+   "finding": "report #2",
+   "kind": "needs_source",
+   "location": "§A6.5, 'IIHS night pedestrian-AEB ratings fell from superior to advanced with high beams, and to basic with low beams (§E6).' and 'The cited small IIHS track sample did not establish…'",
+   "detail": "No section of the report supplies these grades (§E6 has none), so the '(§E6)' pointer cannot be repaired from the report. Needed: the IIHS source (vehicle or vehicles, test year, the condition that earned 'superior', sample size), an [I] tag, an Appendix 2 entry, and the sample size for the 'small IIHS track sample' sentence."
+  },
+  {
+   "finding": "report #4 (the \\$100 clause)",
+   "kind": "needs_source",
+   "location": "§E2 Prices, 'expects it to fall below \\$100 [MR, ResearchInChina; not independently corroborated]'",
+   "detail": "The basic Chinese 4D radar is already \\$28–56, so the \\$100 must refer to another product (perhaps a higher-end 4D imaging radar). Name it from the ResearchInChina source, or delete the clause."
+  },
+  {
+   "finding": "report #9 (§E6 part); symbol scheme (a_b)",
+   "kind": "cross_section",
+   "location": "§E6, How the numbers are derived, 'brakes at constant deceleration $a$ (m/s²) stops within'",
+   "detail": "Replace 'then brakes at constant deceleration $a$ (m/s²) stops within\n\n  $$d=v\\,t_{\\rm r}+\\frac{v^2}{2a} \\tag{162}$$' with 'then brakes at constant deceleration $a_{\\rm b}$ (m/s²) stops within\n\n  $$d=v\\,t_{\\rm r}+\\frac{v^2}{2a_{\\rm b}} \\tag{162}$$'. No review block covers §E6; §E2 Eq. (159) uses $a_{\\rm b}$ after this block's report #9 edit."
+  },
+  {
+   "finding": "report #10 (line 463 part)",
+   "kind": "needs_source",
+   "location": "§A6.1 Aim sensitivity, 'IIHS measured factory aims on new cars between about −0.5° and +0.4° [I].'",
+   "detail": "The aim table counts downward aim as positive. Check IIHS's sign convention in the headlight rating rationale (Appendix 2), then write 'between about 0.5° below and 0.4° above the horizontal', or the reverse."
+  },
+  {
+   "finding": "report #15",
+   "kind": "needs_source",
+   "location": "§A6.3, 'It requires a 1° transition zone, against about 4° elsewhere.'; §A6.4, 'with some latency and transition zones'",
+   "detail": "Needed: the definition of an ADB transition zone, which rule or practice allows about 4° (UN R48/R149, SAE J3069 or another), and what the 1° rule means for the beam, from the NHTSA ADB final rule (Feb 2022, Appendix 2) and its counterpart. Then add '(transition zones, see §A6.3)' at §A6.4."
+  },
+  {
+   "finding": "report #25 (Cruise part)",
+   "kind": "needs_source",
+   "location": "§E5, '**Cruise (GM's robotaxi subsidiary), 2023:** its system discarded correct lidar data (Cummings).'",
+   "detail": "Needed: the incident (date, one-clause description), what the discarded lidar data showed, the Cummings reference (year, title) for Appendix 2, and a tag."
+  },
+  {
+   "finding": "report #26 (values)",
+   "kind": "needs_source",
+   "location": "§E3 Waymo Open, 'the camera's AP rises to about the lidar's: **camera error is almost purely depth**'",
+   "detail": "Give the longitudinal-error-tolerant AP values, or the distance bands, from the LET-3D-AP paper (Appendix 2, arXiv 2206.07705) that support 'almost purely depth'."
+  },
+  {
+   "finding": "report #27 (fatal-crash status)",
+   "kind": "needs_source",
+   "location": "§E5 What current fleets show, Waymo bullet",
+   "detail": "State whether any fatal crash attributable to the system occurred within the 271 M rider-only miles to Jun 2026. This completes the explanation of RAND's failure-free premise; the §E1 pointer and the constant-rate reason are already in an edit."
+  },
+  {
+   "finding": "report #30",
+   "kind": "structural",
+   "location": "§E2, '**Sideline: the automotive mmWave radar market, deployments and prices.**'",
+   "detail": "Move the sideline into its own subsection (e.g. §E2a) or to Part B. The signpost sentence that an edit adds to the §E2 introduction must then point to the new location."
+  },
+  {
+   "finding": "report #32 (lidar model)",
+   "kind": "needs_source",
+   "location": "§E2 Too few angular cells, 'the ≈110,000–120,000 points per frame that the dataset's own lidar records'",
+   "detail": "Name the Dual Radar dataset's lidar and its angular grid (Zhang et al., Sci. Data 2025), so that the cell count can be compared like for like."
+  },
+  {
+   "finding": "report #39 (tags)",
+   "kind": "needs_source",
+   "location": "§A4 Market and technology, 'Magna's fifth generation (late 2025) shrinks the camera from golf-ball to sugar-cube size.' and 'Chinese makers such as Raytron and Guide (Wuhan Guide Infrared) offer cheaper sensors and optics, and pixel pitch has fallen to 8 µm.'",
+   "detail": "Appendix 2 has no source for either: its Magna entry is a 2024 blog, and nothing covers Raytron or Guide pixel pitch. Add the sources and tags. The Zeekr and Valeo/Teledyne FLIR claims are tagged [P] in an edit, from their Appendix 2 releases."
+  },
+  {
+   "finding": "report §1 Problem 3 (untagged factual bullets)",
+   "kind": "needs_source",
+   "location": "§A3, §A4, §A6.1, §A6.3",
+   "detail": "No source in the report for: §A3 'Thermal is therefore valuable on unlit rural roads and highways, where many night pedestrian deaths occur.'; §A3 'Cadillac cited limited usefulness in urban and suburban driving when it dropped the option.' (perhaps the §A1 Autoweek article, [T]); §A3 'The option cost \\$2–3k, with expensive optics.' (§A1 gives only Cadillac's \\$2,250); §A4 'The Alliance (…) appealed; the case is held in abeyance'; §A4 'Chinese Ge metal exports in Jan–Sep fell from 36,656 kg (2023)…'; §A4 'Chinese thermal makers buy optics domestically; Western ones face permit friction…'; §A6.1 'Just below the cutoff sits the \"hotspot\"… typically tens of thousands of cd.'; §A6.3 'Europe and China: widespread since about 2013 (Audi Matrix LED…)'. Tags that Appendix 2 supports are set in the edits (Euro NCAP, C-NCAP, NHTSA ADB rule, Valeo, Raytron, benchmark papers, NTSB)."
+  },
+  {
+   "finding": "report §3 flag (evidence tags, B50L)",
+   "kind": "needs_source",
+   "location": "§A6.1 Design goal, 'the ECE glare point B50L must stay within 50–350 cd'",
+   "detail": "An edit retags [T] as [S], because Appendix 2's source is a 2026 Scientific Reports paper that gives the range for ECE R123, while the text names UN R112/R149. Check the range in R112/R149 themselves; it can then be tagged [P] with the regulation cited."
+  },
+  {
+   "finding": "report #29 (§A2 part); report §3 flag (evidence tags, Yole)",
+   "kind": "cross_section",
+   "location": "§A2, 'against automotive lidar at about **\\$3.56–3.8 B** [T].'",
+   "detail": "Replace '**\\$3.56–3.8 B** [T].' with '**\\$3.56–3.8 B** [MR, Yole via optics.org].' (Appendix 2: optics.org, thermal \\$7 B / automotive \\$285 M)."
+  },
+  {
+   "finding": "report #29 (§B1 part); report §3 flag (evidence tags, Yole)",
+   "kind": "cross_section",
+   "location": "§B1, '**Global (Yole)** [T]'",
+   "detail": "Replace '**Global (Yole)** [T]' with '**Global (Yole)** [MR, via optics.org and Hesai]' (Appendix 2: optics.org Yole 2024 and forecast cut; Hesai/Yole 2025 shares)."
+  },
+  {
+   "finding": "report §3 flag (to verify, line 326)",
+   "kind": "needs_source",
+   "location": "§A4 Headwind, 'e.g. LightPath \"BlackDiamond\", Ge-free'",
+   "detail": "The reviewer believes BD2 contains germanium and the germanium-free grade is BD6. Name the grade from LightPath's datasheet."
+  },
+  {
+   "finding": "report §3 flag (to verify, line 410)",
+   "kind": "needs_source",
+   "location": "§A6.1 Photometry, '3 lux is a common criterion for low-contrast objects [P, IIHS]'",
+   "detail": "Check in the IIHS protocol (Appendix 2) whether IIHS uses 5 lux for low beams and 3 lux for high beams, rather than 3 lux for low-contrast objects."
+  },
+  {
+   "finding": "report §3 flag (to verify, line 305)",
+   "kind": "needs_source",
+   "location": "§A4 Regulation, 'below **73 km/h** (45.3 mph)'",
+   "detail": "73 km/h is 45.36 mph. Keep 45.3 only if it is FMVSS 127's own conversion (govinfo text cited in §A4); otherwise write 45.4 mph. The 'under lower beams' part is fixed in an edit."
+  },
+  {
+   "finding": "report §3 flag (citations, Wood et al.)",
+   "kind": "needs_source",
+   "location": "§A3 item 3 '(Wood et al., §A6.1) [I]'; §A6.1 '(Wood et al.) [I]'; §A6.3 '(Wood/Tyrrell studies) [I]'; §A6.4 'in Wood et al., older drivers…'",
+   "detail": "Appendix 2 lists Wood, Tyrrell & Carberry 2005 and a second paper ('Pedestrian visibility at night: effects of pedestrian clothing, driver age and headlamp beam setting'). Confirm which study gave each figure (40%/5% recognition, 59 → 94 m, 3.5×, 0 m) and add author–year citations."
+  },
+  {
+   "finding": "report §3 flag (spelling, program/programme)",
+   "kind": "needs_decision",
+   "location": "whole report",
+   "detail": "The report mixes 'programme(s)' (about 120) and 'program(s)' (about 87) in the same sense. The edits use 'programme' inside this block (§A3 item 6, §A4). A report-wide choice is needed."
+  },
+  {
+   "finding": "symbol scheme (δθ for point spacing)",
+   "kind": "needs_decision",
+   "location": "§E2 Monocular ground-plane depth, '$\\delta\\theta$ (rad) is an error in the assumed camera pitch'",
+   "detail": "With the scheme's $\\delta\\theta$ for the lidar point spacing in the §E2 Lidar paragraph (edit), §E2 uses δθ for two quantities ten lines apart. Consider renaming the pitch error in Eq. (153), e.g. $\\delta\\theta_{\\rm p}$; the scheme does not cover it."
+  }
+ ]
+}

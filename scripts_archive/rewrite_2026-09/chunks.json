@@ -1,0 +1,87 @@
+{
+ "01": {
+  "start_line": 1,
+  "end_line": 443,
+  "bytes": 53501
+ },
+ "02": {
+  "start_line": 444,
+  "end_line": 974,
+  "bytes": 101857
+ },
+ "03": {
+  "start_line": 975,
+  "end_line": 1198,
+  "bytes": 37483
+ },
+ "04": {
+  "start_line": 1199,
+  "end_line": 1660,
+  "bytes": 59321
+ },
+ "05": {
+  "start_line": 1661,
+  "end_line": 2114,
+  "bytes": 96798
+ },
+ "06": {
+  "start_line": 2115,
+  "end_line": 2425,
+  "bytes": 74320
+ },
+ "07": {
+  "start_line": 2426,
+  "end_line": 2869,
+  "bytes": 79749
+ },
+ "08": {
+  "start_line": 2870,
+  "end_line": 3262,
+  "bytes": 57220
+ },
+ "09": {
+  "start_line": 3263,
+  "end_line": 3575,
+  "bytes": 46096
+ },
+ "10": {
+  "start_line": 3576,
+  "end_line": 4065,
+  "bytes": 57760
+ },
+ "11": {
+  "start_line": 4066,
+  "end_line": 4522,
+  "bytes": 70687
+ },
+ "12": {
+  "start_line": 4523,
+  "end_line": 5190,
+  "bytes": 80346
+ },
+ "13": {
+  "start_line": 5191,
+  "end_line": 5653,
+  "bytes": 61740
+ },
+ "14": {
+  "start_line": 5654,
+  "end_line": 6153,
+  "bytes": 69495
+ },
+ "15": {
+  "start_line": 6154,
+  "end_line": 6490,
+  "bytes": 45353
+ },
+ "16": {
+  "start_line": 6491,
+  "end_line": 7182,
+  "bytes": 84445
+ },
+ "TAIL": {
+  "start_line": 7183,
+  "end_line": 7500,
+  "bytes": 40163
+ }
+}

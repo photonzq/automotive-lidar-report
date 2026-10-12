@@ -1,0 +1,20 @@
+# Not published: paywalled press copies and papers kept for reference
+refs/
+
+# Intermediate build output (index.html is made from it)
+automotive_perception_report_2026-09-27.html
+
+# Python caches
+__pycache__/
+*.pyc
+
+# OS / editor cruft
+Thumbs.db
+desktop.ini
+.DS_Store
+*~
+*.swp
+
+# Conflict and duplicate copies made by file-sync tools
+*(1).*
+* - Copy.*

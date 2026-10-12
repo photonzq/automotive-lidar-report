@@ -1,0 +1,510 @@
+{
+ "block": "06_C5_C5a_C6",
+ "edits": [
+  {
+   "id": "06_C5_C5a_C6-001",
+   "finding": "report #14",
+   "old": "ranging pixel), so it is a first test for a Sony part (details in §C5a).",
+   "new": "ranging pixel). Sony's two automotive parts bin to 192 and 520 lines, so a product with exactly one of these counts is a first suspect for a Sony part (details in §C5a).",
+   "why": "Says why line count is a test: Sony's parts bin to 192 and 520 lines."
+  },
+  {
+   "id": "06_C5_C5a_C6-002",
+   "finding": "report #23",
+   "old": "(90 nm SPAD / 40 nm logic in the ISSCC 2021 design), PDE 24% at 905 nm. Binned: about **192** lines [P].\n- **Sony IMX479:** 105×1,568 SPADs, 10.08 µm, **520 dToF pixels** at 0.05° vertical, PDE 37% at 940 nm, 3 GHz equivalent-time sampling, about 98% on-chip data reduction, 25 Mpts/s [P].",
+   "new": "(a 90 nm SPAD process [I] and, per trade press only, 40 nm logic [T]; §C5a), PDE (photon detection efficiency, the share of arriving photons that are counted) 24% at 905 nm [P]. Binned: about **192** lines [P].\n- **Sony IMX479:** 105×1,568 SPADs, 10.08 µm, **520 dToF pixels** at 0.05° vertical, PDE 37% at 940 nm, about 98% on-chip data reduction and 25 Mpts/s [P]; 3 GHz equivalent-time sampling [I, §C5a].",
+   "why": "Tags the 90 nm [I] and 40 nm [T] nodes separately and expands PDE at first use in §C5. Tags 3 GHz equivalent-time sampling [I] as in §C5a, since the papers do not name the part."
+  },
+  {
+   "id": "06_C5_C5a_C6-003",
+   "finding": "report #36",
+   "old": "| Product | Verified | Inferred / unknown |",
+   "new": "The table lists, for each Chinese lidar or receiver chip, what teardowns or vendor documents establish and what is only inferred; Hesai's two SiPM-based units, AT128 and ATX, are included for contrast.\n\n| Product | Documented (teardown or vendor) | Inferred / unknown |",
+   "why": "Adds a table lead-in, says why the SiPM units are there, and renames the 'Verified' column."
+  },
+  {
+   "id": "06_C5_C5a_C6-004",
+   "finding": "report #28",
+   "old": "TechInsights: 0.20 MP at 10.0 µm [I] |",
+   "new": "TechInsights: 0.20 MP at 10.0 µm [I], against 0.16 MP active for IMX479 ($105\\times1{,}568=164{,}640$ SPADs); the difference may be dummy or margin pixels counted in the teardown [U] |",
+   "why": "Notes the teardown's 0.20 MP against IMX479's 0.16 MP active."
+  },
+  {
+   "id": "06_C5_C5a_C6-005",
+   "finding": "report #15",
+   "old": "Hesai's SPAD IP (intellectual property, here mainly patents) comes from this spin-off of EPFL (the Swiss federal technology institute in Lausanne) and TU Delft (Delft University of Technology), bought in late 2023.",
+   "new": "Part of Hesai's SPAD IP (intellectual property, here mainly patents) comes from this spin-off of EPFL (the Swiss federal technology institute in Lausanne) and TU Delft (Delft University of Technology), bought in late 2023; Hesai says it had also researched SPADs itself since 2016.",
+   "why": "Stops overstating: only part of Hesai's SPAD IP came from Fastree3D."
+  },
+  {
+   "id": "06_C5_C5a_C6-006",
+   "finding": "report §3 flag 12; report #7 (partial) and #40",
+   "old": "Scantinel's assets went for \\$0.4 M after a €10 M round, and Ibeo went for ≈€20 M out of insolvency (§C3a).\n- **Per share, a soft landing rather than a win.** About CHF 6.7 M over 429,444 shares is ≈CHF 15–16 per share, below every 2016–20 conversion price (CHF 27–48). Hesai's filings show no contingent consideration, later acquisition payments or goodwill, so no material earn-out (a later payment that depends on performance) was made [P/E]. Unless liquidation preferences (terms that repay some investors first in a sale) changed the split (not public), money invested from 2016 lost value while founders' shares at par (bought at nominal value) and the earliest money gained [U on terms].",
+   "new": "Scantinel's assets went for \\$0.4 M, plus a \\$1.8 M operating advance, after a €10 M round, and Ibeo went for ≈€20 M out of insolvency (§C3a).\n- **Per share, a soft landing rather than a win.** The \\$7.67 M price is about CHF 6.7 M. Taking the CHF 429,444 of capital as 429,444 shares of CHF 1 nominal [U], that is $6.7\\times10^{6}/429{,}444\\approx15.6$ CHF per share, below every 2016–20 conversion price (CHF 27–48). Hesai's filings show no contingent consideration, later acquisition payments or goodwill, so no material earn-out (a later payment that depends on performance) was made [P/E]. Liquidation preferences (terms that repay some investors first in a sale) could change how the proceeds were split, but their terms are not public [U]. Without them, money invested from 2016 lost value, while the founders' shares, bought at par (nominal value), and the earliest money gained.",
+   "why": "Aligns the Scantinel price with §C3a (\\$0.4 M plus a \\$1.8 M operating advance). Shows the per-share division, flags the CHF 1 nominal assumption [U], and splits the 40-word sentence."
+  },
+  {
+   "id": "06_C5_C5a_C6-007",
+   "finding": "report #40; report §3 flag 15",
+   "old": "World-class European SPAD and TDC know-how (the lineage from Canesta to Kinect, EPFL AQUA, TU Delft) could not reach automotive scale on about \\$6 M, but it did not die: a Chinese maker with volume bought it as a going concern (a functioning company, not a liquidation) at roughly the capital invested. The disclosed IP lineage supports treating Hesai's FTX and Picasso as **distinct designs**, though public information does not expose die or wafer provenance.\n- It mirrors the wider pattern in Parts B and D,",
+   "new": "World-class European SPAD and TDC know-how, from Canesta and Kinect to EPFL's AQUA lab and TU Delft, could not reach automotive scale on about \\$6 M. It did not die, however: a Chinese maker with volume bought it as a going concern, a functioning company rather than a liquidation, at roughly the capital invested. The disclosed IP lineage supports treating Hesai's FTX and Picasso as **distinct designs**, though public information does not expose die or wafer provenance.\n- It mirrors the wider pattern described in §B3, §C3a and §G2,",
+   "why": "Splits the 54-word Reading sentence and removes the nested parentheticals. Points to where the MicroVision consolidation is actually described (§B3, §C3a, §G2), not Part D."
+  },
+  {
+   "id": "06_C5_C5a_C6-008",
+   "finding": "report §3 flag 14",
+   "old": "joint development with Adaps ran from 2020 until early 2023",
+   "new": "joint development with Adaps ran from 2019 or 2020 (sources differ) until early 2023",
+   "why": "Matches the table row: sources differ on whether the Adaps work began in 2019 or 2020."
+  },
+  {
+   "id": "06_C5_C5a_C6-009",
+   "finding": "report #13",
+   "old": "the page figure is probably the active macro-pixel count; extra rows may be monitor or margin rows [E] |\n| Pitch | 10.08 µm | 10.08 µm |\n| dToF pixel | 3×3 (or 6×6) macro-pixels → **192 lines** |",
+   "new": "the page figure is probably the number of SPADs spanned by the 520 active macro-pixels along the long axis; the other 8 may be monitor or margin SPADs [E] |\n| Pitch | 10.08 µm | 10.08 µm |\n| dToF pixel | 3×3 macro-pixels → **192 lines**; 6×6 (the 300 m mode) → about 96 lines [E] |",
+   "why": "1,560 is a SPAD count (3 per macro-pixel), not a macro-pixel count. 6 x 6 (the 300 m mode) gives about 96 lines, not 192."
+  },
+  {
+   "id": "06_C5_C5a_C6-010",
+   "finding": "report #8 and symbol scheme",
+   "old": "**Range per time bin** is $c\\,\\Delta t/2$, where $c$ is the speed of light and $\\Delta t$ the bin width;",
+   "new": "**Range per time bin** is $c\\,\\Delta t_{\\rm bin}/2$ (§C0, subsection 1), where $c$ is the speed of light and $\\Delta t_{\\rm bin}$ the bin width;",
+   "why": "Bin width is Delta t_bin as in §C0 subsection 1."
+  },
+  {
+   "id": "06_C5_C5a_C6-011",
+   "finding": "report #24 (partial) and §3 flag 4",
+   "old": "- dead time 15 ns typical at 99% accumulation;",
+   "new": "- dead time 15 ns typical at 99% accumulation, longer than the 6 ns measured on the ISSCC 2021 development chip behind IMX459 (specification table above), possibly because of a different definition or operating point [U];",
+   "why": "Reconciles the IMX560's 15 ns with the 6 ns used elsewhere for the same array."
+  },
+  {
+   "id": "06_C5_C5a_C6-012",
+   "finding": "report #33",
+   "old": "true photon arrival rate $n$ (s⁻¹) and dead time $\\tau_d$ (s), the recorded count rate $m$ (s⁻¹) is\n\n    $$m=n\\,e^{-n\\tau_d} \\tag{76}$$\n\n  - [E] Eq. (76) peaks at $n=1/\\tau_d$",
+   "new": "true photon arrival rate $r$ (s⁻¹, per SPAD, the symbol used in §C6(d)) and dead time $\\tau_d$ (s), the recorded count rate $m$ (s⁻¹) is\n\n    $$m=r\\,e^{-r\\tau_d} \\tag{76}$$\n\n  - [E] Eq. (76) peaks at $r=1/\\tau_d$",
+   "why": "Writes Eq. (76) with r, the per-SPAD rate used in §C6(d) Eq. (82), instead of n."
+  },
+  {
+   "id": "06_C5_C5a_C6-013",
+   "finding": "report §3 flag 9",
+   "old": "Bright sunlight adds ≈10⁴ background counts per point (§C6(d)), which dwarfs them.",
+   "new": "Bright sunlight adds thousands of background counts per point (≈5,960 in the central case of §C0 subsection 10.3, built from the rates of §C6(d)), which dwarfs them.",
+   "why": "§C6(d) gives only rates; the per-point count (5,960) is in §C0 subsection 10.3."
+  },
+  {
+   "id": "06_C5_C5a_C6-014",
+   "finding": "report #20; report §3 flag 11",
+   "old": "times the ISSCC 2021 chip, so Sony's research is roughly level with the 45% claimed for RoboSense's 2026 chip.\n- **Why automotive pitch stays near 10 µm while research reaches 2.5 µm** (IEDM 2022). There are two reasons.\n  - NIR absorption in silicon needs several micrometres of depth (§C4)",
+   "new": "times the ISSCC 2021 chip. Sony's research is therefore roughly level with the 45% claimed for RoboSense's 2026 chip, whose wavelength is not stated: slightly behind it if that figure is at 940 nm, and ahead if it is at 905 nm, where the table below lists an unconfirmed 51.0% for Sony's pixel.\n- **Why automotive pitch stays near 10 µm while research reaches 2.5 µm** (IEDM 2022). There are two reasons.\n  - NIR absorption in silicon needs tens of micrometres of path (absorption length $1/\\alpha\\approx35$ µm at 905 nm and ≈55 µm at 940 nm, §C4)",
+   "why": "RoboSense's 45% has no wavelength; the comparison depends on it, and Sony's 905 nm figure is unconfirmed. §C4 gives absorption lengths of 35 and 55 µm, not several micrometres."
+  },
+  {
+   "id": "06_C5_C5a_C6-015",
+   "finding": "symbol scheme",
+   "old": "$$N_{\\rm die}=\\frac{\\pi d^2}{4S}-\\frac{\\pi d}{\\sqrt{2S}} \\tag{77}$$\n\n  where $d$ is the wafer diameter (mm) and $S$ the die area (mm²).",
+   "new": "$$N_{\\rm die}=\\frac{\\pi d^2}{4A_{\\rm die}}-\\frac{\\pi d}{\\sqrt{2A_{\\rm die}}} \\tag{77}$$\n\n  where $d$ is the wafer diameter (mm) and $A_{\\rm die}$ the die area (mm²).",
+   "why": "S is reserved for the sweep rate report-wide; the die area becomes A_die."
+  },
+  {
+   "id": "06_C5_C5a_C6-016",
+   "finding": "report #31",
+   "old": "The smaller IMX459 (≈54 mm² logic die) is ≈\\$3–9 in silicon.",
+   "new": "The smaller IMX459 is ≈\\$3–9 in silicon, taking its die as the footprint of the ISSCC 2021 development chip, $6.9\\times7.8\\approx54$ mm² [E].",
+   "why": "Gives the basis of the 54 mm^2 (the ISSCC development chip's 6.9 x 7.8 mm die) and drops 'logic die'."
+  },
+  {
+   "id": "06_C5_C5a_C6-017",
+   "finding": "report #20 (consistency)",
+   "old": "| 2025 | VLSI | 10 µm | 42.5% (51.0% at 905 nm) | Metal reflector; 92.9% trigger probability |",
+   "new": "| 2025 | VLSI | 10 µm | 42.5% (51.0% at 905 nm [U]) | Metal reflector [U]; 92.9% trigger probability |",
+   "why": "Tags the 905 nm figure and the metal reflector [U], as the PDE-ladder bullet already does."
+  },
+  {
+   "id": "06_C5_C5a_C6-018",
+   "finding": "report #16",
+   "old": "- Sony has built exactly this: the AS-DT1, a 40 m sensor that keeps only 576 points.",
+   "new": "- Sony has built a product of this kind: the AS-DT1, a 40 m industrial module that reports only 576 points. Its SPAD sensor is not named; the estimates below assume an IMX611-class array [U].",
+   "why": "'Exactly this' asserted what the text later calls unknown (the AS-DT1's sensor)."
+  },
+  {
+   "id": "06_C5_C5a_C6-019",
+   "finding": "report #32",
+   "old": "30 fps in the 20 m and 30 m modes, 15 fps in the 30 m and 40 m modes [P, spec sheet]",
+   "new": "four mode settings: 20 m and 30 m at 30 fps, and 30 m and 40 m at 15 fps [P, spec sheet]",
+   "why": "Makes explicit that the 30 m range appears at both frame rates (four mode settings)."
+  },
+  {
+   "id": "06_C5_C5a_C6-020",
+   "finding": "report #39",
+   "old": "Modes to 20, 30 and 40 m from 0.3 m. Press: 40 m indoors and 20 m outdoors at 50% reflectivity, to 100 klx [T]; the spec sheet tabulates outdoor figures out to 40 m in its 40 m mode, ambient level unstated [P]. At 10 m: accuracy +10/−25 mm (20 m mode) to +45/−55 mm (40 m mode) indoors, up to +100/−120 mm outdoors; precision 5 mm indoors and 20–40 mm outdoors; output step 0.25 mm [P]. The \"±5 mm\" in some press is the indoor precision |",
+   "new": "Modes to 20, 30 and 40 m from 0.3 m. Press: 40 m indoors and 20 m outdoors at 50% reflectivity, to 100 klx [T]; spec-sheet accuracy and outdoor figures below the table [P] |",
+   "why": "Shortens the 100-word Range cell; its spec-sheet detail moves below the table."
+  },
+  {
+   "id": "06_C5_C5a_C6-021",
+   "finding": "report #39",
+   "old": "the *output step* is only the numerical resolution of the reported value.",
+   "new": "the *output step* is only the numerical resolution of the reported value.\n\n**AS-DT1 range details from the spec sheet** [P]. At 10 m, accuracy is +10/−25 mm (20 m mode) to +45/−55 mm (40 m mode) indoors and up to +100/−120 mm outdoors; precision is 5 mm indoors and 20–40 mm outdoors; the output step is 0.25 mm. The \"±5 mm\" in some press is the indoor precision. In its 40 m mode the sheet also tabulates outdoor figures out to 40 m, with the ambient level unstated.",
+   "why": "Receives the spec-sheet accuracy, precision and outdoor figures from the Range cell."
+  },
+  {
+   "id": "06_C5_C5a_C6-022",
+   "finding": "report #33 and symbol scheme",
+   "old": "Each point then receives $E_{\\rm frame}/N_{\\rm points}$, whether",
+   "new": "Each point then receives $E_{\\rm pt}=E_{\\rm frame}/N_{\\rm points}$, the optical energy per point, whether",
+   "why": "Names the energy per point E_pt, the symbol of Eqs. (79)-(80)."
+  },
+  {
+   "id": "06_C5_C5a_C6-023",
+   "finding": "report #33",
+   "old": "  Four times fewer points thus doubles the range. Anchored on Sony's 40 m",
+   "new": "  This is §C0 Eq. (42), $R_{\\max}\\propto\\sqrt{A_{\\rm rx}E_{\\rm pt}}$ with $A_{\\rm rx}$ the receive-aperture area, at a fixed aperture; at a fixed frame rate it is also the constant range-weighted point rate (points/s × $R^2$) of §C3b Eq. (62). Four times fewer points thus doubles the range. Anchored on Sony's 40 m",
+   "why": "Introduces Eq. (78) as §C0 Eq. (42) and §C3b Eq. (62) in this section's notation."
+  },
+  {
+   "id": "06_C5_C5a_C6-024",
+   "finding": "report #12",
+   "old": "**Why about 6 × 6 SPADs per point** [E]. Four separate constraints point to the same block size:",
+   "new": "**Why several SPADs per point, about 6 × 6 to 6 × 7** [E]. Four constraints favour blocks of several SPADs; the first and third also point to roughly this size:",
+   "why": "Only items 1 and 3 point to a size; item 1 gives 6 x 7, not 6 x 6."
+  },
+  {
+   "id": "06_C5_C5a_C6-025",
+   "finding": "report #38",
+   "old": "Its range resolution is $\\Delta R=c/2B$,",
+   "new": "Its range resolution is $\\Delta R=c/(2B)$,",
+   "why": "c/2B reads as (c/2)B; §C7a writes c/(2B)."
+  },
+  {
+   "id": "06_C5_C5a_C6-026",
+   "finding": "report #17",
+   "old": "By this measure a Livox Mid-360 delivers about 300× the AS-DT1's points/s × $R^2$, and a Hesai AT128 or ATX automotive lidar about 10⁵×.",
+   "new": "By this measure (§C3b table), a Livox Mid-360 delivers $3.2\\times10^{8}$ m²/s, about $3.2\\times10^{8}/(1.0\\times10^{6})\\approx300$ times the AS-DT1's ≈$1.0\\times10^{6}$ m²/s (8,640 pts/s at ≈11 m outdoors on a 10% target). A Hesai AT128 or ATX automotive lidar delivers $6.8\\times10^{10}$ to $2.0\\times10^{11}$ m²/s, $7\\times10^{4}$ to $2\\times10^{5}$ times the AS-DT1's.",
+   "why": "Shows the inputs and division behind 300x and 10^5x, citing the §C3b table."
+  },
+  {
+   "id": "06_C5_C5a_C6-027",
+   "finding": "report #22 and §3 flag 3",
+   "old": "| Huawei 192-line uses IMX459 | Geometry match (189 × 600) plus Chinese \"industry analysis\" [T]; no public teardown |",
+   "new": "| Huawei 192-line uses IMX459 | TechInsights' teardown found the 189 × 600 array and says this \"suggests\" Sony [I] (§C5); Chinese \"industry analysis\" names IMX459 [T]; no public teardown names the part |",
+   "why": "'No public teardown' contradicted §C5's TechInsights teardown; no teardown names the part."
+  },
+  {
+   "id": "06_C5_C5a_C6-028",
+   "finding": "report §3 flag 20",
+   "old": "2. **A peer-reviewed PDE roadmap that products follow within 2–4 years.** Examples: 36.5% in 2023 research became 37% in the 2025 product; 42.5% at 940 nm was reached in 2025 research.",
+   "new": "2. **A peer-reviewed PDE roadmap that products have so far followed within about two years.** The one clear example: 36.5% at 940 nm in 2023 research, on a 6 µm pixel, became 37% in the 2025 product, on a 10 µm pixel. Research reached 42.5% at 940 nm in 2025.",
+   "why": "'2-4 years' rested on one two-year example that also changes pixel size."
+  },
+  {
+   "id": "06_C5_C5a_C6-029",
+   "finding": "report #21",
+   "old": "\"Line mode only\" and a ≈6 ns dead time tie IMX479 to one-axis scanned architectures.",
+   "new": "\"Line mode only\" ties IMX479 to one-axis scanned architectures. Its ≈6 ns dead time also leaves each SPAD blind for about a third of the time in bright sun at 940 nm behind a 10 nm filter (29–33%, §C6(d)).",
+   "why": "Line mode, not dead time, ties IMX479 to scanning; says what the dead time does, hedged for paralyzability."
+  },
+  {
+   "id": "06_C5_C5a_C6-030",
+   "finding": "report #37",
+   "old": "Sony's 37% for IMX479 is a **product PDE** at ≈3 V excess bias.",
+   "new": "Sony's 37% for IMX479 is a **product PDE**, at ≈3 V excess bias if the 3.3 V $V_{\\rm EX}$ supply is the excess bias (§C5a) [E].",
+   "why": "The ~3 V excess bias is inferred from the 3.3 V V_EX supply, not disclosed."
+  },
+  {
+   "id": "06_C5_C5a_C6-031",
+   "finding": "symbol scheme",
+   "old": "$R=c\\Delta t/2$, where $R$ is the range, $c$ the speed of light and $\\Delta t$ the round-trip delay: a target 100 m away returns after about $\\Delta t=2R/c",
+   "new": "$R=c\\tau/2$, where $R$ is the range, $c$ the speed of light and $\\tau$ the round-trip delay: a target 100 m away returns after about $\\tau=2R/c",
+   "why": "Round-trip delay is tau = 2R/c."
+  },
+  {
+   "id": "06_C5_C5a_C6-032",
+   "finding": "report #9",
+   "old": "- Effective lines went from 128 to 520 to 2,160 per chip; a 4,320-line system uses two chips. \"Lines\" may involve binning (pooling SPADs into one output) or interleaving (combining samples taken at offset positions), so they are not automatically independent physical detector channels.\n- Point rates: 25–41 Mpts/s (millions of points per second).",
+   "new": "- Effective lines per chip went from 192 (Sony IMX459, 2021) to 520 (IMX479, 2025) to 2,160 (Hesai Picasso, 2026); the 4,320-line Hesai ETX uses two chips. \"Lines\" may involve binning (pooling SPADs into one output) or interleaving (combining samples taken at offset positions), so they are not automatically independent physical detector channels.\n- Point rates reach 25 Mpts/s (millions of points per second) for IMX479 (§C5a) and 41 Mpts/s for the 2,160-beam RoboSense EM4 (§C7a).",
+   "why": "Names the devices and years; 128 matched no SPAD-SoC, and 41 Mpts/s is the 2,160-beam EM4."
+  },
+  {
+   "id": "06_C5_C5a_C6-033",
+   "finding": "report #30",
+   "old": "Seven factors, (a) to (g), limit how far the approach can go. Sunlight, item (d), is the dominant daytime limit; the étendue discussion further below ranks the binding constraints for a wide-field staring receiver.",
+   "new": "Six factors limit how far the approach can go: (a) die size; (b) the photon budget, worked through in the link budget (c); (d) sunlight, with the mitigations of (d′); (e) histogram memory; (f) avalanche power; and (g) cost. Sunlight is the dominant daytime limit. For a wide-field staring receiver, the étendue discussion further below ranks four constraints as binding: aperture, silicon area, histogram memory and avalanche power.",
+   "why": "(c) is the worked budget of (b) and (d') the mitigations of (d): six limits, matching the four binding ones of the opener."
+  },
+  {
+   "id": "06_C5_C5a_C6-034",
+   "finding": "report #33",
+   "old": "- Quadrupling the point count halves the 10%-target range, because Eq. (79) gives",
+   "new": "- Eq. (79) is §C0 Eq. (42) with $E_{\\rm pt}=P_{\\rm opt}/\\dot N_{\\rm pts}$; at fixed $P_{\\rm opt}$ it keeps $\\dot N_{\\rm pts}R_{\\max}^2$ constant, the range-weighted point rate of §C3b Eq. (62). Quadrupling the point count halves the 10%-target range, because Eq. (79) gives",
+   "why": "Introduces Eq. (79) as §C0 Eq. (42) and §C3b Eq. (62) in this section's notation."
+  },
+  {
+   "id": "06_C5_C5a_C6-035",
+   "finding": "report §3 flag 19",
+   "old": "which strains 8–13 W electrical envelopes (the total electrical power budget of a lidar unit).",
+   "new": "which strains the 8–13.5 W electrical envelopes (the total electrical power budget of a lidar unit) of the Hesai ATX and AT128 (§C3b).",
+   "why": "Ties the envelope to §C3b's automotive units (ATX 8 W, AT128 13.5 W)."
+  },
+  {
+   "id": "06_C5_C5a_C6-036",
+   "finding": "report §3 flag 18",
+   "old": "| 905 nm, 20 nm filter, ρ = 0.9 scene | about 2.2×10⁹ | **77%** |",
+   "new": "| 905 nm, 20 nm filter (VCSEL-type), ρ = 0.9 scene | about 2.2×10⁹ | **77%** |",
+   "why": "Labels the laser type; Layer 1 gives VCSELs 10-20 nm filters and EELs 40-50 nm."
+  },
+  {
+   "id": "06_C5_C5a_C6-037",
+   "finding": "report #11 and §3 flag 5",
+   "old": "and the 940 nm, 10 nm case gives $\\approx5.9\\times10^{8}$ s⁻¹.",
+   "new": "and the 940 nm, 10 nm case gives $5.93\\times10^{8}$ s⁻¹.",
+   "why": "States the 940 nm value to the precision (d') and §C0 use (5.93e8)."
+  },
+  {
+   "id": "06_C5_C5a_C6-038",
+   "finding": "report #34",
+   "old": "Sony's passively recharged SPADs behave paralyzably (§C5a): a photon that arrives while the SPAD recovers restarts its recovery",
+   "new": "Sony's SPADs, if passively recharged as the ISSCC 2021 chip appears to be (§C5a), behave paralyzably: a photon that arrives while the SPAD recovers restarts its recovery",
+   "why": "§C5a leaves passive vs active recharge open; the paralyzable model is conditional."
+  },
+  {
+   "id": "06_C5_C5a_C6-039",
+   "finding": "report #33 and #34",
+   "old": "  with $\\tau_d=6$ ns. The table uses the paralyzable form.",
+   "new": "  with $\\tau_d=6$ ns. The paralyzable form is §C4b Eq. (65). The table uses it, the reading that §C5a's measured count-rate ceiling favours.",
+   "why": "Names §C4b Eq. (65) as the paralyzable form and says why the table uses it."
+  },
+  {
+   "id": "06_C5_C5a_C6-040",
+   "finding": "report §3 flag 10",
+   "old": "for the model's central case of half that background.",
+   "new": "for the model's central case of half that background (a sunlit scene of reflectance ≈0.45, or a pixel only half filled by bright surfaces; §C0 subsection 10.3).",
+   "why": "Gives the reason for the central case's halving, which appeared only in §C0."
+  },
+  {
+   "id": "06_C5_C5a_C6-041",
+   "finding": "paralyzable hedge (task note) with report #34",
+   "old": "cut effective PDE by a third at 940 nm behind a 10 nm filter and by three-quarters or more at 905 nm behind 20–40 nm filters,",
+   "new": "cut effective PDE by 29–33% at 940 nm behind a 10 nm filter and by 59–95% at 905 nm behind 20–40 nm filters (the ranges span the non-paralyzable and paralyzable forms of Eq. (82)),",
+   "why": "Quotes both dead-time forms, since paralyzability is not established (§C5a)."
+  },
+  {
+   "id": "06_C5_C5a_C6-042",
+   "finding": "report #33",
+   "old": "This is Eq. (81) written as a proportionality.",
+   "new": "This is Eq. (81) written as a proportionality; the Layer 1 mitigations below each act on one of its factors.",
+   "why": "Says where Eq. (83) is used."
+  },
+  {
+   "id": "06_C5_C5a_C6-043",
+   "finding": "report #19 and §3 flag 16",
+   "old": "with about 0.45–0.55× the solar irradiance of 905 nm. The ratio varies with humidity and passband: the ASTM G173 values of §C4c give $0.303/0.693=0.44$ for ±10 nm band averages and $0.472/0.817=0.58$ at the exact wavelengths. At 1550 nm the reference value is about 0.35× ($0.27/0.82=0.33$ to $0.27/0.69=0.39$), with a larger permitted average power under the particular Class 1 comparison in §C4.",
+   "new": "with about 0.44–0.58× the solar irradiance of 905 nm. The ratio varies with humidity and passband: the ASTM G173 values of §C4c give $0.303/0.693=0.44$ for ±10 nm band averages and $0.472/0.817=0.58$ at the exact wavelengths. At 1,550 nm the reference value is 0.33–0.39× ($0.270/0.817=0.33$ against the exact 905 nm value, $0.270/0.693=0.39$ against the band average), with a larger permitted average power under the particular Class 1 comparison of §C4c, subsection 1.",
+   "why": "States the computed 0.44-0.58 range and both 1,550 nm bases; the Class 1 comparison is in §C4c."
+  },
+  {
+   "id": "06_C5_C5a_C6-044",
+   "finding": "report #11 and §3 flag 5",
+   "old": "| 940 nm, 20 nm filter, ρ = 0.1 ($1.35\\times10^8$/s) | $1.5\\times10^7$/s | $1.35\\times10^8$ | $1.6\\times10^7$ | $8.5\\times10^5$ (**160×** lower) | $2.6\\times10^4$ |\n| 940 nm, 10 nm filter, ρ = 0.9 ($6.1\\times10^8$/s) | $6.8\\times10^7$/s | $6.1\\times10^8$ | $3.3\\times10^8$ | $7.9\\times10^7$ (8×) | $1.1\\times10^7$ (58×) |",
+   "new": "| 940 nm, 20 nm filter, ρ = 0.1 ($1.32\\times10^8$/s) | $1.46\\times10^7$/s | $1.32\\times10^8$ | $1.5\\times10^7$ | $7.8\\times10^5$ (**≈170×** lower) | $2.3\\times10^4$ |\n| 940 nm, 10 nm filter, ρ = 0.9 ($5.93\\times10^8$/s) | $6.59\\times10^7$/s | $5.93\\times10^8$ | $3.1\\times10^8$ | $7.2\\times10^7$ (8×) | $9.5\\times10^6$ (62×) |",
+   "why": "Uses the (d) background 5.93e8 s^-1 instead of 6.1e8 and recomputes both rows."
+  },
+  {
+   "id": "06_C5_C5a_C6-045",
+   "finding": "report #11",
+   "old": "for example $1.35\\times10^{8}/9=1.5\\times10^{7}$ s⁻¹. The first row's background is the 940 nm, 10 nm, ρ = 0.9 value scaled by twice the filter width and one ninth of the reflectance: $6.1\\times10^{8}\\times2\\times(0.1/0.9)=1.35\\times10^{8}$ s⁻¹.\n- **Singles** (events with no coincidence requirement) are the macro-pixel rate, $N_{\\rm mp}r=r_{\\rm bg}$.\n- **$n_{\\rm th}$-fold accidentals** use Eq. (84), $\\binom{N_{\\rm mp}}{n_{\\rm th}}\\,n_{\\rm th}\\,r^{n_{\\rm th}}\\tau_c^{\\,n_{\\rm th}-1}$, with $\\tau_c=10^{-9}$ s and $\\binom{9}{2}=36$, $\\binom{9}{3}=84$, $\\binom{9}{4}=126$. First row: 2-fold $36\\times2\\times(1.5\\times10^{7})^2\\times10^{-9}=1.6\\times10^{7}$; 3-fold $84\\times3\\times(1.5\\times10^{7})^3\\times10^{-18}=8.5\\times10^{5}$, which is $1.35\\times10^{8}/(8.5\\times10^{5})\\approx160$ times below the singles; 4-fold $126\\times4\\times(1.5\\times10^{7})^4\\times10^{-27}=2.6\\times10^{4}$. The second row, with $r=6.8\\times10^{7}$ s⁻¹, gives $3.3\\times10^{8}$, $7.9\\times10^{7}$ (a factor $6.1\\times10^{8}/(7.9\\times10^{7})\\approx8$ below the singles) and $1.1\\times10^{7}$ (about 57–58×).",
+   "new": "for example $1.32\\times10^{8}/9=1.46\\times10^{7}$ s⁻¹. The first row's background is the 940 nm, 10 nm, ρ = 0.9 value of (d), $5.93\\times10^{8}$ s⁻¹, scaled by twice the filter width and one ninth of the reflectance: $5.93\\times10^{8}\\times2\\times(0.1/0.9)=1.32\\times10^{8}$ s⁻¹.\n- **Singles** (events with no coincidence requirement) are the macro-pixel rate, $N_{\\rm mp}r=r_{\\rm bg}$.\n- **$n_{\\rm th}$-fold accidentals** use Eq. (84), $\\binom{N_{\\rm mp}}{n_{\\rm th}}\\,n_{\\rm th}\\,r^{n_{\\rm th}}\\tau_c^{\\,n_{\\rm th}-1}$, with $\\tau_c=10^{-9}$ s and $\\binom{9}{2}=36$, $\\binom{9}{3}=84$, $\\binom{9}{4}=126$. First row: 2-fold $36\\times2\\times(1.46\\times10^{7})^2\\times10^{-9}=1.5\\times10^{7}$; 3-fold $84\\times3\\times(1.46\\times10^{7})^3\\times10^{-18}=7.8\\times10^{5}$, which is $1.32\\times10^{8}/(7.8\\times10^{5})\\approx170$ times below the singles; 4-fold $126\\times4\\times(1.46\\times10^{7})^4\\times10^{-27}=2.3\\times10^{4}$. The second row, with $r=5.93\\times10^{8}/9=6.59\\times10^{7}$ s⁻¹, gives $3.1\\times10^{8}$, $7.2\\times10^{7}$ (a factor $5.93\\times10^{8}/(7.2\\times10^{7})\\approx8$ below the singles) and $9.5\\times10^{6}$ (a factor $5.93\\times10^{8}/(9.5\\times10^{6})\\approx62$).",
+   "why": "Recomputes the derivations from 5.93e8 s^-1, with the substitutions shown."
+  },
+  {
+   "id": "06_C5_C5a_C6-046",
+   "finding": "report #27",
+   "old": "Let $\\bar n$ be the mean number of detected signal photons per shot. With Poisson photon statistics, the probability of detecting at least three is one minus the probability of detecting zero, one or two: $P(\\ge3)=1-e^{-\\bar n}(1+\\bar n+\\bar n^2/2)$. A mean of $\\bar n=5$ detected photons per shot gives $1-e^{-5}\\times18.5=0.88$; a mean of 2 gives only $1-e^{-2}\\times5=0.32$.",
+   "new": "Let $\\bar n$ be the mean number of detected signal photons per shot (the per-pulse count $N_{s,1}$ of §C0 Eq. (23)). With Poisson photon statistics, the probability of detecting at least $n_{\\rm th}=3$ is one minus the probability of detecting zero, one or two: $P(\\ge3)=1-e^{-\\bar n}(1+\\bar n+\\bar n^2/2)$. A mean of $\\bar n=5$ detected photons per shot gives $1-e^{-5}\\times18.5=0.88$; a mean of 2 gives only $1-e^{-2}\\times5=0.32$. At 200 m on a 10% target, (c) gives ≈21–33 photons per point, i.e. $\\bar n\\approx2.1$–3.3 per shot over the ≈10 shots of a point, so a 3-fold requirement would catch only $1-e^{-2.1}\\times5.305=0.35$ to $1-e^{-3.3}\\times9.745=0.64$ of the shots.",
+   "why": "Makes n_th = 3 explicit and ties Lesson 2 to the (c) link budget."
+  },
+  {
+   "id": "06_C5_C5a_C6-047",
+   "finding": "report #11 and §3 flag 5",
+   "old": "In the bright 940 nm/10 nm case ($r=6.1\\times10^{8}/9=6.8\\times10^{7}$ s⁻¹ per SPAD) a passively recharged SPAD with Sony's 6 ns is dead $1-e^{-0.41}=34\\%$ of the time. With active recharge it is dead 29% at 6 ns ($0.41/1.41$), 17% at 3 ns ($0.20/1.20$) and 58% at 20 ns ($r\\tau_d=1.36$, and $1.36/2.36=0.58$).",
+   "new": "In the bright 940 nm/10 nm case ($r=5.93\\times10^{8}/9=6.59\\times10^{7}$ s⁻¹ per SPAD, so $r\\tau_d=0.40$ at 6 ns) a passively recharged SPAD with Sony's 6 ns is dead $1-e^{-0.40}=33\\%$ of the time, as in (d). With active recharge it is dead 29% at 6 ns ($0.40/1.40$), 17% at 3 ns ($0.20/1.20$) and 57% at 20 ns ($r\\tau_d=1.32$, and $1.32/2.32=0.57$).",
+   "why": "Uses 5.93e8 s^-1: 33% passive (as in (d)), 29/17/57% active."
+  },
+  {
+   "id": "06_C5_C5a_C6-048",
+   "finding": "report #25",
+   "old": "- **Multi-shot time-correlated single-photon counting (TCSPC) histograms**, i.e. accumulating photon arrival times over many shots, with matched filtering (correlating the histogram with the expected pulse shape) and constant-false-alarm-rate (CFAR) peak detection, which sets the detection threshold from the measured noise floor so that false alarms stay at a fixed rate. Background forms a flat floor that averages down as $\\sqrt{N_{\\rm shots}}$, where $N_{\\rm shots}$ is the number of laser shots accumulated into one histogram.",
+   "new": "- **Multi-shot time-correlated single-photon counting (TCSPC) histograms** accumulate photon arrival times over many shots. Matched filtering correlates the histogram with the expected pulse shape. Constant-false-alarm-rate (CFAR) peak detection sets the detection threshold from the measured noise floor, so that false alarms stay at a fixed rate. The background forms a flat floor that grows in proportion to $N_{\\rm shots}$, the number of laser shots accumulated into one histogram, while its relative fluctuation falls as $1/\\sqrt{N_{\\rm shots}}$; the signal-to-noise ratio of the return therefore grows as $\\sqrt{N_{\\rm shots}}$.",
+   "why": "The floor grows with N_shots; its relative fluctuation falls as 1/sqrt(N_shots). Splits the 50-word sentence."
+  },
+  {
+   "id": "06_C5_C5a_C6-049",
+   "finding": "report #38",
+   "old": "two computer-vision conferences) [U: check the references].",
+   "new": "two computer-vision conferences) [U].",
+   "why": "Replaces the editor's note with the standard [U] tag."
+  },
+  {
+   "id": "06_C5_C5a_C6-050",
+   "finding": "report #19",
+   "old": "- **1550 nm ToF:** about 10× the eye-safe average power and about 3× less sunlight, at 2–3× the cost. The factor 3 is in solar irradiance ($0.27/0.82\\approx0.33$). Counted in photons per nm, which is what sets the background count, 1,550 nm has 0.67× the background of 905 nm (§C4c), about 1.5× less, because each 1,550 nm photon carries less energy.",
+   "new": "- **1550 nm ToF:** about 10× the eye-safe average power and 2.6–3× less solar irradiance, at 2–3× the cost. On the ±10 nm band averages of §C4c, 1,550 nm has $0.270/0.693=0.39$ of the 905 nm solar irradiance (≈2.6× less). Counted in photons per nm, which is what sets the background count, that is $0.39\\times1{,}550/905=0.67$ of the 905 nm value (≈1.5× less), because each 1,550 nm photon carries less energy. At the exact wavelengths the two ratios are $0.270/0.817=0.33$ (3× less) and $0.33\\times1{,}550/905=0.57$.",
+   "why": "Puts irradiance and photon ratios on one basis (band averages), with the exact-wavelength values alongside."
+  },
+  {
+   "id": "06_C5_C5a_C6-051",
+   "finding": "report #35",
+   "old": "Sony's ISSCC 2021 receiver gives 150 m @10% at 117 klx [P] (§C5a).",
+   "new": "Sony's ISSCC 2021 receiver gives 150 m on a 10% target and 200 m on a 95% target under 117 klx [P] (§C5a).",
+   "why": "Matches §C5a: 150 m on 10% and 200 m on 95% under 117 klx, from the paper read in full [P]."
+  },
+  {
+   "id": "06_C5_C5a_C6-052",
+   "finding": "report #18 (partial)",
+   "old": "- In sunlight a scanned column dissipates about 0.2–0.55 W; a staring VGA (640 × 480) SPAD array about **5–12 W**. The avalanche power is $P_{\\rm av}=N_{\\rm pix}\\,r_{\\rm av}\\,E_{\\rm av}$, where $N_{\\rm pix}$ is the number of active pixels, $r_{\\rm av}$ the avalanche rate per pixel (s⁻¹) and $E_{\\rm av}$ the energy per avalanche (J).\n  - The column figure corresponds to about $2.5\\times10^{8}$ avalanches/s in each of 520 macro-pixels: $520\\times2.5\\times10^{8}\\ {\\rm s^{-1}}\\times1.6\\ {\\rm pJ}=0.21$ W, and 0.51 W at 3.9 pJ.",
+   "new": "- In sunlight a scanned column dissipates about 0.2–0.5 W; a staring VGA (640 × 480) SPAD array about **5–12 W**. The avalanche power is $P_{\\rm av}=N_{\\rm pix}\\,r_{\\rm av}\\,E_{\\rm av}$, where $N_{\\rm pix}$ is the number of active pixels, $r_{\\rm av}$ the avalanche rate per pixel (s⁻¹) and $E_{\\rm av}$ the energy per avalanche (J).\n  - Roughly, only photons that find a SPAD armed trigger a full avalanche, so the avalanche rate is close to the recorded count rate (Eq. (76) for paralyzable SPADs) rather than the incident photon rate. The column figure assumes about $2.5\\times10^{8}$ avalanches/s in each of 520 macro-pixels, near the $3.66\\times10^{8}\\times0.784=2.9\\times10^{8}$ s⁻¹ recorded in the model's central case of (d) [E]: $520\\times2.5\\times10^{8}\\ {\\rm s^{-1}}\\times1.6\\ {\\rm pJ}=0.21$ W, and 0.51 W at 3.9 pJ.",
+   "why": "Headline matches the derived 0.21-0.51 W; ties 2.5e8 s^-1 to the recorded (not incident) rate of the central case."
+  },
+  {
+   "id": "06_C5_C5a_C6-053",
+   "finding": "report #26",
+   "old": "- NE Times: SPAD-SoC beats SiPM above about 200 lines.\n- RoboSense claims about 50% cost reduction for its monolithic Phoenix (SPAD array and processing on one stacked chip rather than separate parts).\n- The SPAD layer stays on mature nodes (older, cheaper process generations); the logic layer advances to finer nodes for SRAM and DSP.",
+   "new": "- NE Times reports that SPAD-SoC receivers become cheaper than SiPM receivers above about 200 lines [T].\n- RoboSense claims about 50% cost reduction for its Phoenix, which puts the SPAD array and processing on one stacked chip rather than in separate parts [P].\n- The SPAD wafer stays on mature (older, cheaper) process nodes, while the logic wafer moves to finer nodes for SRAM and DSP [E].",
+   "why": "Full sentences with evidence tags; drops 'monolithic', which contradicted 'one stacked chip'."
+  }
+ ],
+ "skipped": [
+  {
+   "finding": "report #1",
+   "kind": "already_fixed",
+   "location": "§C5a, Geopolitical note: \"Huawei's newer units with in-house SPAD-SoCs (§D1a) remove that lever for those products\"",
+   "detail": "The live text already separates the in-house units from the 192-line L306/D3, which it calls very likely built on Sony's IMX459 (§C5)."
+  },
+  {
+   "finding": "report #2",
+   "kind": "already_fixed",
+   "location": "§C5, Bottom line, third bullet: \"No public evidence shows a Sony die marked or sold as the lidar maker's own design\"",
+   "detail": "Already rewritten as proposed, including the distinction from pattern (a) and the remark that Sony is not known to sell SPAD pixel wafers."
+  },
+  {
+   "finding": "report #3",
+   "kind": "already_fixed",
+   "location": "§C5: \"**Bottom line.** Some Chinese \"in-house\" SPAD-SoCs are Sony parts (pattern (a)), made in Sony's own fabs.\"",
+   "detail": "Already rewritten as proposed; it now answers the question first and no longer contradicts the Foundry check."
+  },
+  {
+   "finding": "report #4 and §3 flag 1–2 (ATX as 'digital')",
+   "kind": "already_fixed",
+   "location": "§C6 étendue list: \"**Industry evidence:** every long-range SPAD-SoC (\"digital\") product shipping or announced keeps one moving axis\"; §C6 opener: \"SPAD-based (\"digital\") or SiPM-based, still keeps one moving axis\"",
+   "detail": "Both places already list the SiPM-based ATX and the Huawei 896-line (detector undisclosed) separately from the SPAD-SoC products."
+  },
+  {
+   "finding": "report #5",
+   "kind": "already_fixed",
+   "location": "§C6(c): \"The detected signal photons per point, summed over all the shots that make up the point, are then\"",
+   "detail": "Already per point, with the link to §C0 Eq. (23) and the ≈2–3 photons per shot over ≈10 shots stated after the numbers."
+  },
+  {
+   "finding": "report #6",
+   "kind": "already_fixed",
+   "location": "§C6(d′) Layer 3: \"IMX479's pixel-level threshold control is a different mechanism\"",
+   "detail": "Already rewritten as proposed, consistent with §C5a."
+  },
+  {
+   "finding": "report #35 (§C5a part)",
+   "kind": "already_fixed",
+   "location": "§C5a, Measured: \"and 168 × 63 points at 20 fps: 150 m on a 10% target and 200 m on a 95% target under 117 klx.\"",
+   "detail": "§C5a already explains 168 × 63 as points per frame, gives the 95% reflectance for 200 m and cites the paper read in full [P]; the undefined \"Response 5–7 ns\" is no longer in the text. The §C6 sentence is aligned by an edit."
+  },
+  {
+   "finding": "report §3 flag 8",
+   "kind": "already_fixed",
+   "location": "§C6(c): \"(Eq. (80) is §C0 Eq. (23) with $T_{\\rm atm}=1$ and the energy per point in place of the pulse energy)\"",
+   "detail": "The duplicated example (§C0: 100 nJ per pulse, ≈22 photons; §C6(c): 0.1 µJ per point, ≈21 photons) is already tied explicitly to §C0 Eq. (23); merging the two examples would be structural and is not needed."
+  },
+  {
+   "finding": "report #7",
+   "kind": "needs_source",
+   "location": "§C5 Fastree3D timeline, row 2013–2020: \"rising to **CHF 429,444** by Aug 2020, mostly through six conversions of loans into shares totalling ≈CHF 3.3 M\"; and the 'Per share' bullet of \"Was it a success?\"",
+   "detail": "The edit shows the division and flags the CHF 1 nominal assumption [U]. Still needed from the Vaud commercial register (or SOGC notices): (1) the nominal value per share, to confirm that CHF 429,444 of capital is 429,444 shares; (2) all six loan-to-equity conversions with date, CHF converted and shares (or nominal capital) created. Only four implied prices are given, and at CHF 1 nominal, CHF 3.3 M converted at CHF 27–48 creates only ≈69k–122k shares against a 329,444 increase described as 'mostly through six conversions', so the row does not close; (3) the CHF/USD rate used to turn the \\$7.67 M price into CHF 6.7 M (the figures imply ≈0.87 CHF per dollar, December 2023), so the conversion can be shown with its substitution."
+  },
+  {
+   "finding": "report #10",
+   "kind": "needs_decision",
+   "location": "§C6(d) Assumptions: \"a 25 mm receive aperture, a 0.1°×0.05° field per macro-pixel, PDE 0.3\"",
+   "detail": "The IMX479 check sizes a 3 × 3 macro-pixel at 0.05° × 0.05° (0.05° per line; 120°/2,400 columns = 0.05° across), and the report gives no basis for 0.1° across the scan. Options: (i) the author states the reason for the 0.1° receive field across the scan, tagged [E]; or (ii) use 0.05° × 0.05° ($\\Omega_{\\rm pix}=7.62\\times10^{-7}$ sr), which halves $r_{\\rm bg}$ (940 nm, 10 nm: ≈2.96×10⁸ s⁻¹) and every derived rate and dead fraction in (d), (d′), §C0 subsection 10.3 and the §C7a model (central case 3.66×10⁸ → 1.83×10⁸ s⁻¹, live fraction and the 0.145 signal efficiency). Option (ii) changes the receiver energy of the ToF model and belongs to Round 2."
+  },
+  {
+   "finding": "report #18 (VGA part)",
+   "kind": "needs_decision",
+   "location": "§C6(f): \"The VGA figure corresponds to about $10^{7}$ avalanches/s in each of $640\\times480=3.1\\times10^{5}$ pixels\"",
+   "detail": "No basis is given for ≈10⁷ avalanches/s per staring VGA pixel. One route from the report's own equations: the per-pixel étendue is $\\pi p^2/(4N^2)$; for a 10 µm single-SPAD pixel at f/1.2 it is 5.5×10⁻¹¹ m² sr, 0.073 of the (d) macro-pixel's 7.5×10⁻¹⁰, giving ≈4.3×10⁷ s⁻¹ incident and ≈3.3×10⁷ s⁻¹ recorded (940 nm, 10 nm, ρ = 0.9, PDE 0.3, 6 ns, paralyzable), about 3× the 10⁷ used; ≈10⁷ corresponds to roughly f/2. The author should choose the staring pixel's pitch, f-number, filter and field and state them [E]. The column figure and the 0.2–0.5 W headline are fixed by an edit."
+  },
+  {
+   "finding": "report #24 (part) and §3 flag 4",
+   "kind": "needs_source",
+   "location": "§C5a, IMX560 list: \"**3.5 kcps typical, 6 Mcps maximum, per SPAD**\" and \"dead time 15 ns typical at 99% accumulation\"",
+   "detail": "Check the IMX560-AAMV flyer: whether the 6 Mcps maximum (1,700× the typical value) is the worst SPAD of the array or a kcps/Mcps slip, and what \"at 99% accumulation\" means; then gloss both. The 15 ns versus 6 ns reconciliation is applied as an edit."
+  },
+  {
+   "finding": "report #32 (verification)",
+   "kind": "needs_source",
+   "location": "§C5a AS-DT1 table, Depth output: \"four mode settings: 20 m and 30 m at 30 fps, and 30 m and 40 m at 15 fps [P, spec sheet]\" (text after the edit)",
+   "detail": "The edit states the four settings that the existing sentence implies. Confirm against the AS-DT1 spec sheet that a 30 m range exists at both 30 fps and 15 fps; if not, correct the duplicated 30 m."
+  },
+  {
+   "finding": "report #36 (V-series sentence)",
+   "kind": "needs_source",
+   "location": "§C5 table, Hesai FTX / ETX row: \"**No Hesai \"V-series\" chip name exists**; the generations are the 4th-gen ASIC, Fermi C500 and Picasso\"",
+   "detail": "The sentence rebuts a label the reader never sees, and the report does not say where \"V-series\" appears. Name the article or secondary source that uses it, then write that Hesai's own documents use no such name and that its generations are the 4th-gen ASIC, Fermi C500 and Picasso. The table lead-in and the column rename are applied as edits."
+  },
+  {
+   "finding": "report §3 flag 2 (ATX channel count)",
+   "kind": "needs_source",
+   "location": "§C5 table: \"| Hesai ATX | SiPM (17 dies / 64 channels), TI, 3peak and Infineon parts [I] |\"",
+   "detail": "§C4b and two later tables give \"17 SiPM dies × 4 channels\" (= 68), while §C4b also says \"The ATX uses 64 physical channels\". Check the TechInsights ATX teardown (DDT-2505-806, paywalled) for the die and channel counts (for example 16 receiving dies × 4 = 64 plus one other die) and align all places."
+  },
+  {
+   "finding": "report §3 flag 13 (Fastree3D founding and seat)",
+   "kind": "needs_source",
+   "location": "§C5 Fastree3D timeline: \"| Sep 2013 / 2014 | Fastree3D SA incorporated in Lausanne (EPFL Innovation Park; office in Delft)\"; \"statutes 1 Jul 2013, seat Ecublens\"; \"**Fastree3D SA** (Switzerland, Sep 2013, capital CHF 429,444)\"; \"the registered address moves to the EPFL Innovation Park (the legal seat stays Ecublens)\"",
+   "detail": "The founding date (statutes 1 Jul 2013, Sep 2013, and \"/ 2014\") and the 2013 address (EPFL Innovation Park versus seat Ecublens, with the address moving to the Innovation Park only in 2024) disagree. Check the Vaud register (statutes date versus registration date, and the 2013 address) and the company 'About' page, then make the three rows consistent."
+  },
+  {
+   "finding": "report §3 flag 17 (EM4 field of view)",
+   "kind": "needs_source",
+   "location": "§C6 R²·FOV table: \"| RoboSense EM4 (1 scan axis) | 120°×27° |\", against IMX479's \"over 120° × 26°\" in the §C5a table",
+   "detail": "EM4-520 is 'most likely IMX479' (§C5), whose stated coverage is 120° × 26°, while the EM4 row (and §C10) use 27°. Confirm EM4's vertical field on RoboSense's product page; if 27° is right, add a short note that the lens, not the chip, sets the product's field."
+  },
+  {
+   "finding": "report #29 (Fastree3D history)",
+   "kind": "structural",
+   "location": "§C5: \"**Fastree3D: the European SPAD lineage now inside Hesai.**\" with its timeline, term list and \"Was it a success?\"",
+   "detail": "Move the timeline, its term list and the success assessment to §C3a with a pointer. Keep three sentences in §C5: bought in December 2023 for \\$7.67 M; patents booked at RMB 59.35 M; no public evidence yet of Fastree3D circuits in a shipping chip."
+  },
+  {
+   "finding": "report #29 (radar comparison)",
+   "kind": "structural",
+   "location": "§C5a: \"**Against imaging radar** (§E2).\" and its six bullets",
+   "detail": "Move the AS-DT1-versus-imaging-radar comparison to §B8 or §E2 with a pointer; keep the \"Points cost range\" result in §C5a."
+  },
+  {
+   "finding": "report §3 flag 6, consequence of report #11, and paralyzable hedge",
+   "kind": "cross_section",
+   "location": "§C4b, Sunlight and pile-up: \"A 3×3 SPAD macro-pixel with the same field can be dead **9–77% of the time** in bright sun (§C6(d))\"",
+   "detail": "§C6(d′) row 1 is recomputed from the (d) value 5.93×10⁸ s⁻¹ ($r_{\\rm bg}=1.32\\times10^{8}$ s⁻¹, $r=1.46\\times10^{7}$ s⁻¹). Replace (1) \"can be dead **9–77% of the time** in bright sun (§C6(d))\" with \"can be dead **8–77% of the time** in bright sun (§C6(d) and (d′))\"; (2) \"those cases run from $r=1.35\\times10^{8}/9=1.5\\times10^{7}\\ {\\rm s^{-1}}$ (940 nm, 20 nm filter, 10% scene), giving $1-e^{-0.09}\\approx9\\%$\" with \"those cases run from $r=1.32\\times10^{8}/9=1.46\\times10^{7}\\ {\\rm s^{-1}}$ (940 nm, 20 nm filter, 10% scene), giving $1-e^{-0.088}\\approx8\\%$\"; (3) \"of the time, 8–59% (§C6(d)).\" with \"of the time, 8–59% (§C6(d) and (d′)).\"; and (4), to hedge as §C5a does, \"A passively recharged SPAD such as Sony's is paralyzable: a photon that arrives while it recovers restarts the recovery (§C5a)\" with \"A passively recharged SPAD, as Sony's ISSCC 2021 chip appears to be (§C5a), is paralyzable: a photon that arrives while it recovers restarts the recovery\"."
+  },
+  {
+   "finding": "paralyzable hedge (task note)",
+   "kind": "cross_section",
+   "location": "§C0 subsection 10.3: \"Eq. (82) gives the dead fraction. Sony's passively recharged SPADs behave paralyzably (§C5a): a SPAD is live only if no photon arrived during the last $\\tau_d$.\"",
+   "detail": "To match §C5a, which leaves passive versus active recharge open, replace \"Sony's passively recharged SPADs behave paralyzably (§C5a):\" with \"Sony's SPADs, if passively recharged as the ISSCC 2021 chip appears to be (§C5a), behave paralyzably:\"."
+  },
+  {
+   "finding": "report §3 flag 12 (Scantinel price)",
+   "kind": "cross_section",
+   "location": "§C10.4: \"The company became insolvent in August 2025; MicroVision bought the assets for about \\$2.2 M [P, MicroVision 10-Q].\"",
+   "detail": "Replace with \"The company became insolvent in August 2025; MicroVision bought the assets for \\$0.4 M plus a \\$1.8 M operating advance, about \\$2.2 M in all (§C3a) [P, MicroVision 10-Q].\" This matches §C3a and the §C5 wording."
+  }
+ ]
+}

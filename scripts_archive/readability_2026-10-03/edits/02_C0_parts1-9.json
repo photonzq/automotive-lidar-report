@@ -1,0 +1,594 @@
+{
+ "block": "02_C0_parts1-9",
+ "edits": [
+  {
+   "id": "02_C0_parts1-9-001",
+   "finding": "report #28; follow-up #7",
+   "old": "Later sections apply them without re-deriving them; the \"Used in\" column of each table points to those sections.",
+   "new": "Later sections apply them, some restating them in their own notation and numbering. The \"Used in\" column of the tables in subsections 1–3, and the § pointers in the text of subsections 4–9, show where.",
+   "why": "Only the tables of subsections 1-3 have a Used-in column, and some later sections restate the relations in their own notation."
+  },
+  {
+   "id": "02_C0_parts1-9-002",
+   "finding": "symbol scheme (tau = 2R/c for the round-trip delay); report #3 (R missing from the symbol list)",
+   "old": "- $\\Delta t$ is the measured round-trip delay (s).",
+   "new": "- $R$ is the range to the target (m), and $\\tau=2R/c$ the measured round-trip delay (s).",
+   "why": "Round-trip delay takes the scheme symbol tau; R is defined where the table uses it."
+  },
+  {
+   "id": "02_C0_parts1-9-003",
+   "finding": "report #2; report #3; symbol scheme (N_s per point)",
+   "old": "- $N_s$ is the number of detected signal photons averaged into one range estimate.",
+   "new": "- $N_s$ is the number of detected signal photons averaged into one range estimate (one point), summed over all the pulses fired at that point.\n- $\\Delta R$ is the two-target range resolution (m), $\\sigma_R$ the rms error of one range estimate (m), and $R_{\\rm amb}$ the unambiguous range (m), with the same meaning in subsection 9. Elsewhere in the report $R_{\\max}$ means the maximum detection range.",
+   "why": "States that N_s is per point, summed over its pulses, and defines Delta R, sigma_R and R_amb, which the table uses but the list omitted."
+  },
+  {
+   "id": "02_C0_parts1-9-004",
+   "finding": "symbol scheme (tau); follow-up #3, #4, #5; report #3 (PRF_ch); report #34 (Hesai AT128)",
+   "old": "| Range from delay | $R=c\\,\\Delta t/2$ | 6.67 ns of round trip per metre; 1.33 µs to 200 m | throughout |\n| Two-target range resolution | $\\Delta R\\approx c\\,\\tau_p/2$ for pulse length $\\tau_p$ | 5 ns → 0.75 m; 1 ns → 15 cm | §C3b |\n| Histogram quantization | $c\\,\\Delta t_{\\rm bin}/2$ | 297 ps bins (Adaps ADS6311) → 4.5 cm | §C5 |\n| Single-target precision | $\\sigma_R\\approx(c/2)\\,\\sigma_t/\\sqrt{N_s}$: timing spread $\\sigma_t$ (pulse, detector jitter, TDC) averaged over $N_s$ detected signal photons | $\\sigma_t=100$ ps and $N_s=20$ → ≈0.3 cm (ideal; amplitude walk and background add) | §C4b |\n| Unambiguous range per channel | $R_{\\rm amb}=c/(2\\,\\text{PRF})$ | 750 kHz ↔ 200 m; 300 kHz ↔ 500 m | §C4d |\n| Point rate | $\\dot N=N_{\\rm ch}\\times\\text{PRF}_{\\rm ch}$ (per return) | 128 channels × 12 kHz ≈ 1.5 Mpts/s (AT128) | §C4d |",
+   "new": "| Range from delay | $R=c\\,\\tau/2$ | 6.67 ns of round trip per metre; 1.33 µs to 200 m | throughout |\n| Two-target range resolution | $\\Delta R\\approx c\\,\\tau_p/2$ for pulse length $\\tau_p$ | 5 ns → 0.75 m; 1 ns → 15 cm | — |\n| Histogram quantization | $c\\,\\Delta t_{\\rm bin}/2$ | 297 ps bins (Adaps ADS6311 [P]) → 4.5 cm; 3 GHz equivalent-time sampling (Sony IMX479 [P]), i.e. 333 ps bins → 5.0 cm | §C5a; the 297 ps example is from §C5 |\n| Single-target precision | $\\sigma_R\\approx(c/2)\\,\\sigma_t/\\sqrt{N_s}$: timing spread $\\sigma_t$ (pulse, detector jitter, TDC) averaged over $N_s$ detected signal photons | $\\sigma_t=100$ ps and $N_s=20$ → ≈0.3 cm (ideal; amplitude walk and background add) | subsection 9; measured precisions in §C5a |\n| Unambiguous range per channel | $R_{\\rm amb}=c/(2\\,\\text{PRF}_{\\rm ch})$ | 750 kHz ↔ 200 m; 300 kHz ↔ 500 m | §C4d |\n| Point rate | $\\dot N=N_{\\rm ch}\\times\\text{PRF}_{\\rm ch}$ (per return) | 128 channels × 12 kHz ≈ 1.5 Mpts/s (Hesai AT128) | §C4d |",
+   "why": "Delay symbol tau; Used-in pointers made true (no later section applies c tau_p/2; precision is measured in §C5a; §C5a applies the bin relation); PRF_ch per the symbol list; maker named."
+  },
+  {
+   "id": "02_C0_parts1-9-005",
+   "finding": "follow-up #3",
+   "old": "The precision row divides by $\\sqrt{N_s}$ because averaging $N_s$ independent photon arrival times reduces their scatter by that factor.",
+   "new": "The precision row divides by $\\sqrt{N_s}$ because averaging $N_s$ independent photon arrival times reduces their scatter by that factor. The gain assumes that every detected photon is time-stamped independently. A macro-pixel of 3×3 single-photon avalanche diodes (SPADs, subsection 6), read out as one pixel, registers at most nine photons per shot, and only ≈8 of 20 (§C4b, Eq. (64)), so $N_s=20$ must be accumulated over several shots.",
+   "why": "The sqrt(N_s) gain needs independently time-stamped photons; a 3x3 macro-pixel fires only about 8 of 9 cells for 20 photons (§C4b Eq. (64))."
+  },
+  {
+   "id": "02_C0_parts1-9-006",
+   "finding": "symbol scheme (tau)",
+   "old": "inverting $R=c\\,\\Delta t/2$ gives $\\Delta t=2R/c$.",
+   "new": "inverting $R=c\\,\\tau/2$ gives $\\tau=2R/c$.",
+   "why": "Delay symbol tau, as in the table."
+  },
+  {
+   "id": "02_C0_parts1-9-007",
+   "finding": "follow-up #5",
+   "old": "- **Histogram quantization:** one 297 ps bin spans $3.0\\times10^8\\times297\\times10^{-12}/2=0.0446$ m of range, shown as 4.5 cm.",
+   "new": "- **Histogram quantization:** one 297 ps bin spans $3.0\\times10^8\\times297\\times10^{-12}/2=0.0446$ m of range, shown as 4.5 cm. Equivalent-time sampling at 3 GHz gives bins of $1/(3\\times10^9\\ {\\rm s^{-1}})=333$ ps, which span $3.0\\times10^8\\times333\\times10^{-12}/2=0.050$ m.",
+   "why": "Derivation for the IMX479 entry added to the table row."
+  },
+  {
+   "id": "02_C0_parts1-9-008",
+   "finding": "report #3 (PRF_ch); removing repetition",
+   "old": "- **Unambiguous range:** $R_{\\rm amb}=c/(2\\,\\text{PRF})=3.0\\times10^8/(2\\times750\\times10^3)=200$ m at 750 kHz, and $3.0\\times10^8/(2\\times300\\times10^3)=500$ m at 300 kHz. $R_{\\rm amb}$ is the farthest range whose echo returns before the next pulse leaves (subsection 9 uses the same symbol); elsewhere $R_{\\max}$ means the maximum detection range.",
+   "new": "- **Unambiguous range:** $R_{\\rm amb}=c/(2\\,\\text{PRF}_{\\rm ch})=3.0\\times10^8/(2\\times750\\times10^3)=200$ m at 750 kHz, and $3.0\\times10^8/(2\\times300\\times10^3)=500$ m at 300 kHz.",
+   "why": "Relation uses the per-channel PRF of the symbol list; the R_amb definition sits in the symbol list and the paragraph under the table."
+  },
+  {
+   "id": "02_C0_parts1-9-009",
+   "finding": "report #40",
+   "old": "**Link budget for an extended Lambertian target**",
+   "new": "**Photon budget for an extended Lambertian target**",
+   "why": "Lines 1510 and 1899 call this the photon budget; Link budget is subsection 10's title."
+  },
+  {
+   "id": "02_C0_parts1-9-010",
+   "finding": "symbol scheme (N_{s,1} per pulse in Eq. (23), E_p for one pulse, E_pt per point); report #2",
+   "old": "$$N_s=\\frac{E_p}{E_{\\rm ph}}\\,\\rho\\,\\frac{A_{\\rm rx}}{\\pi R^2}\\,\\eta_{\\rm opt}\\,\\text{PDE}\\,T_{\\rm atm}^2 \\tag{23}$$\n\nwhere:\n- $N_s$ is the mean number of signal photons detected per pulse (dimensionless);\n- $E_p$ is the optical energy of one transmitted pulse (J);\n- $E_{\\rm ph}=h\\nu=hc/\\lambda$ is the energy of one photon (J), with $h=6.63\\times10^{-34}$ J s Planck's constant, $\\nu$ the optical frequency and $\\lambda$ the wavelength, so $E_p/E_{\\rm ph}$ is the number of photons in the pulse;",
+   "new": "$$N_{s,1}=\\frac{E_{\\rm p}}{E_{\\rm ph}}\\,\\rho\\,\\frac{A_{\\rm rx}}{\\pi R^2}\\,\\eta_{\\rm opt}\\,\\text{PDE}\\,T_{\\rm atm}^2 \\tag{23}$$\n\nwhere:\n- $N_{s,1}$ is the mean number of signal photons detected per pulse (dimensionless). Summed over the $N_{\\rm pulse}$ pulses fired at one point, it gives the $N_s=N_{\\rm pulse}N_{s,1}$ of the precision row; equivalently, Eq. (23) with the energy per point $E_{\\rm pt}=N_{\\rm pulse}E_{\\rm p}$ in place of $E_{\\rm p}$ gives $N_s$ directly (§C6, Eq. (80));\n- $E_{\\rm p}$ is the optical energy of one transmitted pulse (J);\n- $E_{\\rm ph}=h\\nu=hc/\\lambda$ is the energy of one photon (J), with $h=6.63\\times10^{-34}$ J s Planck's constant, $\\nu$ the optical frequency and $\\lambda$ the wavelength, so $E_{\\rm p}/E_{\\rm ph}$ is the number of photons in the pulse;",
+   "why": "Eq. (23) counts one pulse, so its result is N_{s,1}; the link to the per-point N_s and to §C6 Eq. (80) is stated."
+  },
+  {
+   "id": "02_C0_parts1-9-011",
+   "finding": "report #40; report #23; symbol scheme (N_{s,1}, E_p); consistency flag (Eq. (23) restates Part A Eq. (5))",
+   "old": "Eq. (23) assumes a Lambertian target at normal incidence that fills the beam. Glossy paint or a retroreflector is not Lambertian and can return far more or far less toward the sensor, depending on angle.\n- **Example:** $E_p=100$ nJ at 905 nm ($4.6\\times10^{11}$ photons, of the order of the Class 1 single-pulse limit, §C4c), $\\rho=0.1$, a 25 mm aperture ($A_{\\rm rx}=4.9$ cm²), $R=200$ m, $\\eta_{\\rm opt}=0.5$ and PDE 0.25 give **≈22 photons** before atmospheric loss. Several pulses are usually accumulated per point.\n  - *Substitution.* One 905 nm photon carries $E_{\\rm ph}=h\\nu=hc/\\lambda=6.63\\times10^{-34}\\times3.0\\times10^8/(905\\times10^{-9})=2.20\\times10^{-19}$ J, so 100 nJ is $10^{-7}/(2.20\\times10^{-19})=4.6\\times10^{11}$ photons. A 25 mm aperture has $A_{\\rm rx}=\\pi\\times(1.25\\ {\\rm cm})^2=4.9$ cm², so the collected fraction of the Lambertian return is $A_{\\rm rx}/(\\pi R^2)=4.9\\times10^{-4}/(\\pi\\times200^2)=3.9\\times10^{-9}$. Then $N_s=4.6\\times10^{11}\\times0.1\\times3.9\\times10^{-9}\\times0.5\\times0.25\\approx22$ photons.",
+   "new": "Eq. (23) assumes a Lambertian target at normal incidence that fills the beam, and a receiver whose field of view covers the whole lit spot. It is Part A's Eq. (5) with the constants written out and the energy counted in photons. Glossy paint or a retroreflector is not Lambertian and can return far more or far less toward the sensor, depending on angle.\n- **Example:** $E_{\\rm p}=100$ nJ at 905 nm ($4.6\\times10^{11}$ photons; between the 905 nm Class 1 limits of 198 nJ for an isolated pulse and 79 nJ per pulse in long trains, subsection 5 and §C4c), $\\rho=0.1$, a 25 mm aperture ($A_{\\rm rx}=4.9$ cm²), $R=200$ m, $\\eta_{\\rm opt}=0.5$ and PDE 0.25 give **$N_{s,1}\\approx22$ photons** per pulse before atmospheric loss. Several pulses are usually accumulated per point.\n  - *Substitution.* One 905 nm photon carries $E_{\\rm ph}=h\\nu=hc/\\lambda=6.63\\times10^{-34}\\times3.0\\times10^8/(905\\times10^{-9})=2.20\\times10^{-19}$ J, so 100 nJ is $10^{-7}/(2.20\\times10^{-19})=4.6\\times10^{11}$ photons. A 25 mm aperture has $A_{\\rm rx}=\\pi\\times(1.25\\ {\\rm cm})^2=4.9$ cm², so the collected fraction of the Lambertian return is $A_{\\rm rx}/(\\pi R^2)=4.9\\times10^{-4}/(\\pi\\times200^2)=3.9\\times10^{-9}$. Then $N_{s,1}=4.6\\times10^{11}\\times0.1\\times3.9\\times10^{-9}\\times0.5\\times0.25\\approx22$ photons.",
+   "why": "States the field-of-view assumption, says which Class 1 limits bracket 100 nJ, and points to Part A Eq. (5)."
+  },
+  {
+   "id": "02_C0_parts1-9-012",
+   "finding": "report #22; report #12 (first §C10.3a mention); follow-up #2; symbol scheme (E_p)",
+   "old": "- **Scaling.** Signal-limited range goes as $R\\propto\\sqrt{E_pA_{\\rm rx}\\rho}$, because holding $N_s\\propto E_pA_{\\rm rx}\\rho/R^2$ fixed makes $R^2$ proportional to $E_pA_{\\rm rx}\\rho$. When background noise dominates and also grows with $A_{\\rm rx}$ ($N_b\\propto A_{\\rm rx}$, where $N_b$ is the mean number of background counts, mostly from sunlight, in the bins that hold the echo), the signal-to-noise ratio is SNR $\\approx N_s/\\sqrt{N_b}\\propto(A_{\\rm rx}/R^2)/\\sqrt{A_{\\rm rx}}=\\sqrt{A_{\\rm rx}}/R^2$. Holding the SNR fixed then gives $R^2\\propto\\sqrt{A_{\\rm rx}}$, i.e. $R\\propto A_{\\rm rx}^{1/4}$ (§C4d, §C10.3a). In daylight, doubling the lens diameter therefore buys far less range than it does at night.\n- **Small targets.** A target smaller than the beam (debris, a tyre) intercepts a fraction of it that falls as $1/R^2$, so its return falls as $1/R^4$ (§E12).\n- **Photon-counting SNR** in the return's histogram bins is $\\text{SNR}\\approx N_s/\\sqrt{N_s+N_b}$, with $N_s$ the signal counts and $N_b$ the background counts in the same bins. Both are Poisson-distributed, so the noise is the square root of the total count. Sunlight sets $N_b$ (§C4c, §C6). Dead time (the interval after each detection during which a photon-counting pixel is blind) and pile-up (the resulting bias toward early photons) distort the histogram at high count rates (§C4b, §C6).",
+   "new": "- **Photon-counting SNR** in the return's histogram bins is $\\text{SNR}\\approx N_s/\\sqrt{N_s+N_b}$, with $N_s$ the signal counts and $N_b$ the background counts in the same bins, both summed over the pulses of one point. Both are Poisson-distributed, so the noise is the square root of the total count. Sunlight sets $N_b$ (§C4c, §C6). Dead time (the interval after each detection during which a photon-counting pixel is blind) and pile-up (the resulting bias toward early photons) distort the histogram at high count rates (§C4b, §C6).\n- **Scaling.** Signal-limited range goes as $R\\propto\\sqrt{E_{\\rm p}A_{\\rm rx}\\rho}$, because holding $N_s\\propto E_{\\rm p}A_{\\rm rx}\\rho/R^2$ fixed (at a fixed number of pulses per point) makes $R^2$ proportional to $E_{\\rm p}A_{\\rm rx}\\rho$. When background noise dominates ($N_b\\gg N_s$) and also grows with $A_{\\rm rx}$ ($N_b\\propto A_{\\rm rx}$), the SNR above becomes $N_s/\\sqrt{N_b}\\propto(A_{\\rm rx}/R^2)/\\sqrt{A_{\\rm rx}}=\\sqrt{A_{\\rm rx}}/R^2$. Holding the SNR fixed then gives $R^2\\propto\\sqrt{A_{\\rm rx}}$, i.e. $R\\propto A_{\\rm rx}^{1/4}$ (§C4d, and §C10.3a, which contrasts one spatial mode with an integrating pixel). In daylight, doubling the lens diameter (4× the area) therefore buys a factor $4^{1/4}=1.41$ in range instead of 2 at night. When the sunlit target itself supplies the background, $N_b\\propto\\rho$ too, and range scales as $\\rho^{1/4}$ rather than $\\rho^{1/2}$ (§C0 subsection 10.8).\n- **Small targets.** A target smaller than the beam (debris, a tyre) intercepts a fraction of it that falls as $1/R^2$, so its return falls as $1/R^4$ (§E11.3, Eq. (169)).",
+   "why": "Defines the photon-counting SNR before Scaling uses it, quantifies the daylight aperture gain, adds the sunlit-target rho^(1/4) case and points the 1/R^4 law to its derivation (§E11.3 Eq. (169))."
+  },
+  {
+   "id": "02_C0_parts1-9-013",
+   "finding": "report #26",
+   "old": "in a chirp time $T$ (s). The sweep speed is the chirp rate $\\kappa=B/T$, in Hz/s.",
+   "new": "in one ramp of duration $T$ (s); a triangular chirp is a rising (up) ramp followed by a falling (down) ramp. The sweep speed is the chirp rate $\\kappa=B/T$, in Hz/s.",
+   "why": "Names the up- and down-ramps and their common duration T once, so ramp is used throughout."
+  },
+  {
+   "id": "02_C0_parts1-9-014",
+   "finding": "report #2; report #26; symbol scheme (N_mode with n-bar = eta N_mode)",
+   "old": "- $f_{\\rm up}$, $f_{\\rm down}$: the measured beat frequencies during the rising (up) and falling (down) segments of a triangular chirp, which last $T_{\\rm up}$ and $T_{\\rm down}$;\n- $\\Delta R$: range resolution (the smallest separation at which two targets appear as two peaks); $\\sigma_R$: range precision (rms error for one target); $\\Delta v$: velocity resolution;\n- SNR: the signal-to-noise ratio of the beat tone after the Fourier transform (FFT, fast Fourier transform) over one chirp;\n- $\\Delta\\nu$: the laser's linewidth (Hz), the full width at half maximum of its optical spectrum, taken as Lorentzian; $L_c$: the resulting coherence length (m), the path difference over which the LO and the echo stay phase-correlated;\n- $\\varepsilon$: the fractional error in the chirp rate;\n- $T_{\\rm dwell}$: the time spent per point, and $N_{\\rm ch}$ the number of parallel coherent channels;\n- $N_s$: the number of signal photons in the LO's spatial mode during the chirp, and $\\eta$ the overall detection efficiency, the fraction of those photons converted into signal photoelectrons.",
+   "new": "- $f_{\\rm up}$, $f_{\\rm down}$: the measured beat frequencies during the up- and down-ramps, each of duration $T$;\n- $\\Delta R$: range resolution (the smallest separation at which two targets appear as two peaks); $\\sigma_R$: range precision (rms error for one target); $\\Delta v$: velocity resolution;\n- SNR: the signal-to-noise ratio of the beat tone after the Fourier transform (FFT, fast Fourier transform) over one ramp;\n- $\\Delta\\nu$: the laser's linewidth (Hz), the full width at half maximum of its optical spectrum, taken as Lorentzian; $L_c$: the resulting coherence length (m), the path difference over which the LO and the echo stay phase-correlated;\n- $\\varepsilon$: the fractional error in the chirp rate;\n- $T_{\\rm dwell}$: the time spent per point (s), $2T$ for one up- and one down-ramp, and $N_{\\rm ch}$ the number of parallel coherent channels. Only the last $T-\\tau$ of each ramp yields a clean beat, because the echo arrives $\\tau$ after the ramp starts; §C7b subsection 2(g) writes the same dwell as $T_{\\rm dwell}=2(T_u+\\tau)$, with $T_u=T-\\tau$ the useful part of each ramp;\n- $N_{\\rm mode}$: the number of signal photons that arrive in the LO's spatial mode and polarization during one ramp, and $\\eta$ the overall detection efficiency, the fraction of those photons converted into signal photoelectrons. Then $\\bar n=\\eta N_{\\rm mode}$ is the number of signal photoelectrons; subsection 10 uses $\\bar n$ for the total over both ramps of a point.",
+   "why": "T_up = T_down = T made explicit, T_dwell given a unit and the round-trip caveat of §C7b, and N_s renamed N_mode with the link to n-bar."
+  },
+  {
+   "id": "02_C0_parts1-9-015",
+   "finding": "report #26; report #35; report #6",
+   "old": "| Range resolution | $\\Delta R=c/(2B)$. It is set by the sweep bandwidth, not the chirp duration: the FFT bin $1/T$ maps to $c/2B$ | 1 GHz → 15 cm; 4 GHz → 3.75 cm | §C7 |\n| Range precision | $\\sigma_R\\approx\\Delta R/\\sqrt{\\rm SNR}$, within a factor of order one (frequency estimation of a tone in noise) | 15 cm resolution at 20 dB SNR → ≈1 cm | §C7a |",
+   "new": "| Range resolution | $\\Delta R=c/(2B)$. It is set by the sweep bandwidth, not the ramp duration: the FFT bin $1/T$ maps to $c/(2B)$ | 1 GHz → 15 cm; 4 GHz → 3.75 cm | §C7 |\n| Range precision | $\\sigma_R\\approx\\Delta R/\\sqrt{\\rm SNR}$, within a factor of order one (frequency estimation of a tone in noise) | 15 cm resolution at 20 dB SNR → 1.5 cm by this relation; 0.6–0.8 cm at the Cramér–Rao bound | §C7a |",
+   "why": "Ramp wording; c/(2B) bracketed; the precision cell gives what the relation yields (1.5 cm) and the Cramer-Rao value instead of an unexplained 1 cm."
+  },
+  {
+   "id": "02_C0_parts1-9-016",
+   "finding": "report #26; report #35; report #34 (I/Q); report #11",
+   "old": "| Separating range and velocity | Up and down chirps give $f_{\\rm up}=f_b-f_D$ and $f_{\\rm down}=f_b+f_D$ (approaching target); then $R=cT(f_{\\rm up}+f_{\\rm down})/(4B)$ and $v_r=\\lambda(f_{\\rm down}-f_{\\rm up})/4$ | An unseparated 10 m/s would shift range by $cf_D/2\\kappa\\approx19$ m | §C7 |\n| Velocity resolution | $\\Delta v\\approx\\lambda/(2T)$ per chirp segment | 10 µs → 7.8 cm/s; 2 µs → 39 cm/s | §C7a |\n| Receiver bandwidth | $f_b+\\lvert f_D\\rvert$ must fit the digitizer: at least that sample rate with complex (I/Q) sampling, twice it with real sampling | 300 m and ±50 m/s → 265 MHz | §C7a |\n| Coherence | Coherent share of the beat power $\\eta_{\\rm coh}=e^{-2\\pi\\Delta\\nu\\cdot2R/c}$; Lorentzian coherence length $L_c=c/(\\pi\\Delta\\nu)$ | 100 kHz: $L_c\\approx950$ m, yet only 28% of the beat stays coherent at 300 m (43% at 200 m) | §C7, §C7b |",
+   "new": "| Separating range and velocity | Up and down ramps give $f_{\\rm up}=f_b-f_D$ and $f_{\\rm down}=f_b+f_D$ (approaching target); then $R=cT(f_{\\rm up}+f_{\\rm down})/(4B)$ and $v_r=\\lambda(f_{\\rm down}-f_{\\rm up})/4$ | An unseparated 10 m/s would shift range by $c f_D/(2\\kappa)\\approx19$ m | §C7 |\n| Velocity resolution | $\\Delta v\\approx\\lambda/(2T)$ per ramp | 10 µs → 7.8 cm/s; 2 µs → 39 cm/s | §C7a |\n| Receiver bandwidth | $f_b+\\lvert f_D\\rvert$ must fit the digitizer: at least that sample rate with complex in-phase/quadrature (I/Q) sampling, twice it with real sampling | 300 m and ±50 m/s → 265 MHz | §C7a |\n| Coherence | Coherent share of the beat power $\\eta_{\\rm coh}=e^{-2\\pi\\Delta\\nu\\cdot2R/c}$; Lorentzian coherence length $L_c=c/(\\pi\\Delta\\nu)$ | 100 kHz: $L_c\\approx950$ m, but $\\eta_{\\rm coh}=e^{-4R/L_c}$ is only 28% at 300 m (43% at 200 m) | §C7, §C7b |",
+   "why": "Ramp wording, bracketed fraction, I/Q expanded, and the coherence cell states the relation that links L_c to the coherent share."
+  },
+  {
+   "id": "02_C0_parts1-9-017",
+   "finding": "report #26; report #2; report #7; report #12",
+   "old": "| Dwell and point rate | One point per channel per $\\approx T_{\\rm up}+T_{\\rm down}$, so $\\dot N\\approx N_{\\rm ch}/T_{\\rm dwell}$ | 20 µs dwell → 50 kpts/s per channel | §C7, §C7a |\n| Shot-noise-limited SNR | With a strong LO, $\\text{SNR}\\approx\\eta N_s$, where $N_s$ counts signal photons in the LO's spatial mode during $T$ | A few photons suffice in principle; speckle fading, the search over thousands of bins and a peak needed in both chirp ramps raise the practical need to ≈90 (four looks) to ≈260 (one look) per point (subsection 10.3) | §C7, §C10.3a |",
+   "new": "| Dwell and point rate | One point per channel per up–down ramp pair, $T_{\\rm dwell}=2T$, so $\\dot N\\approx N_{\\rm ch}/T_{\\rm dwell}$ | 20 µs dwell → 50 kpts/s per channel | §C7, §C7a |\n| Shot-noise-limited SNR | With a strong LO, the SNR of one ramp is $\\text{SNR}\\approx\\bar n=\\eta N_{\\rm mode}$, the signal photoelectrons collected in that ramp | A few signal photoelectrons per ramp suffice in principle. Speckle fading, the search over thousands of bins and a peak needed in both ramps raise the practical need to ≈260 photoelectrons per point with one look and ≈90 with four looks, counted over both ramps and all looks (§C0 subsection 10.3) | §C7, §C10.3a |",
+   "why": "Dwell written as 2T; the SNR row uses N_mode and n-bar, and the 90/260 figures are labelled as photoelectrons per point over both ramps and all looks, with the §C0 prefix."
+  },
+  {
+   "id": "02_C0_parts1-9-018",
+   "finding": "consistency flag (chirp parameters differ from §C7a and §C0 subsection 10.3)",
+   "old": "- *How the numbers are derived* [E], for 1,550 nm, $B=1$ GHz and $T=10$ µs, so that $\\kappa=B/T=10^{14}$ Hz/s:",
+   "new": "- *How the numbers are derived* [E], for 1,550 nm, $B=1$ GHz and $T=10$ µs, so that $\\kappa=B/T=10^{14}$ Hz/s. These are illustrative values, as in §C7 Eq. (85); the §C7a model and §C0 subsection 10.3 use 5 µs ramps:",
+   "why": "Says that the 1 GHz / 10 us values are illustrative and that the model uses 5 us ramps."
+  },
+  {
+   "id": "02_C0_parts1-9-019",
+   "finding": "report #6",
+   "old": "  - **Range precision:** 20 dB is an SNR of 100, so $\\Delta R/\\sqrt{\\rm SNR}=15\\ {\\rm cm}/10=1.5$ cm. The Cramér–Rao bound for the frequency of a tone, $\\sigma_f=a/(T\\sqrt{\\rm SNR})$, has a prefactor $a$ between $\\sqrt6/(2\\pi)\\approx0.39$ (complex I/Q samples) and $\\sqrt{12}/(2\\pi)\\approx0.55$ (real samples), which gives 0.6–0.8 cm. The table's ≈1 cm lies within this 0.6–1.5 cm span.",
+   "new": "  - **Range precision:** 20 dB is an SNR of 100, so $\\Delta R/\\sqrt{\\rm SNR}=15\\ {\\rm cm}/10=1.5$ cm. The Cramér–Rao bound, the smallest rms error any unbiased estimator can reach, gives for the frequency of a tone $\\sigma_f=a/(T\\sqrt{\\rm SNR})$, with $a=\\sqrt6/(2\\pi)\\approx0.39$ for complex I/Q samples or $\\sqrt{12}/(2\\pi)\\approx0.55$ for real samples. Since $R=c\\,f_b/(2\\kappa)$, a beat-frequency error $\\sigma_f$ is a range error $\\sigma_R=c\\,\\sigma_f/(2\\kappa)=a\\,c/(2\\kappa T\\sqrt{\\rm SNR})=a\\,\\Delta R/\\sqrt{\\rm SNR}$, using $\\kappa T=B$ and $\\Delta R=c/(2B)$. That is $0.39\\times1.5=0.59$ cm to $0.55\\times1.5=0.83$ cm, i.e. 0.6–0.8 cm.",
+   "why": "Explains the Cramer-Rao bound and adds the skipped step from the frequency bound to the range error, with substitution."
+  },
+  {
+   "id": "02_C0_parts1-9-020",
+   "finding": "report #26",
+   "old": "for a 10 µs segment",
+   "new": "for a 10 µs ramp",
+   "why": "Ramp wording."
+  },
+  {
+   "id": "02_C0_parts1-9-021",
+   "finding": "report #11",
+   "old": "  - **Coherence length:** $L_c=c/(\\pi\\Delta\\nu)=3.0\\times10^8/(\\pi\\times10^5)\\approx955$ m for a 100 kHz linewidth, shown as ≈950 m. **Coherent share:** $2\\pi\\times10^{5}\\times2.0\\times10^{-6}=1.26$, so $e^{-1.26}=0.28$ at 300 m; $2\\pi\\times10^{5}\\times1.33\\times10^{-6}=0.84$, so $e^{-0.84}=0.43$ at 200 m (§C7b subsection 2(e)).",
+   "new": "  - **Coherence length:** $L_c=c/(\\pi\\Delta\\nu)=3.0\\times10^8/(\\pi\\times10^5)\\approx955$ m for a 100 kHz linewidth, shown as ≈950 m. **Coherent share:** $2\\pi\\times10^{5}\\times2.0\\times10^{-6}=1.26$, so $e^{-1.26}=0.28$ at 300 m; $2\\pi\\times10^{5}\\times1.33\\times10^{-6}=0.84$, so $e^{-0.84}=0.43$ at 200 m. Here $2.0\\times10^{-6}$ s and $1.33\\times10^{-6}$ s are the round-trip delays $\\tau=2R/c$ at 300 and 200 m. The two relations are linked: since $\\pi\\Delta\\nu=c/L_c$, $\\eta_{\\rm coh}=e^{-2\\pi\\Delta\\nu(2R/c)}=e^{-4R/L_c}$, so the coherent share falls to $1/e$ already at $R=L_c/4\\approx240$ m, and the rule of thumb $L_c\\ge2R$ keeps only $e^{-2}=14\\%$ at its limit (§C7b subsection 2(e)).",
+   "why": "Names the delays and states the link e^(-4R/L_c), so the 28% at L_c = 950 m is no longer a puzzle."
+  },
+  {
+   "id": "02_C0_parts1-9-022",
+   "finding": "report #26; report #35 (pts/s)",
+   "old": "  - **Dwell:** one point per 20 µs is $1/(20\\times10^{-6}\\ {\\rm s})=5\\times10^4$ points/s per channel.",
+   "new": "  - **Dwell:** $T_{\\rm dwell}=2T=2\\times10\\ \\mu{\\rm s}=20\\ \\mu{\\rm s}$, so one channel delivers $1/(20\\times10^{-6}\\ {\\rm s})=5\\times10^4$ pts/s.",
+   "why": "Dwell derived from T, with substitution; unit standardized."
+  },
+  {
+   "id": "02_C0_parts1-9-023",
+   "finding": "report #25; symbol scheme (scan rate theta-dot, Delta f_scan)",
+   "old": "- **Mechanical scanning adds two coherent-specific errors** (§C7, §C10.3a, §C4d). Here $\\Omega$ is the optical angular scan rate in rad/s (a rate, not a solid angle) and $D$ the beam diameter on the scanner.\n  - *Walk-off*, $\\Delta\\theta=2R\\Omega/c$: during the round trip $2R/c$ the scanner turns, so the echo comes back at an angle $\\Delta\\theta$ away from the LO's direction.\n  - *Scanner-induced Doppler*, $\\Delta f\\approx\\Omega D/\\lambda$: the moving mirror spreads the return's optical frequency by about $\\Delta f$.",
+   "new": "- **Mechanical scanning adds two coherent-specific errors** (§C7, §C10.3a, §C4d). Here $\\dot\\theta$ is the optical scan rate, the angular speed of the beam (rad/s), and $D$ the beam diameter on the scanner.\n  - *Walk-off*, $\\Delta\\theta=2R\\dot\\theta/c$: during the round trip $\\tau=2R/c$ the beam direction moves on, so the echo comes back at an angle $\\Delta\\theta$ away from the LO's direction. For example [E], a polygon sweeping 45,600°/s (796 rad/s) gives $\\Delta\\theta=2\\times200\\times796/(3.0\\times10^8)=1.06\\times10^{-3}$ rad (0.061°) at 200 m (§C4d, Eq. (71)), about 3.4 times the divergence $\\lambda/D=0.31$ mrad of a 5 mm beam at 1,550 nm.\n  - *Scanner-induced Doppler*, $\\Delta f_{\\rm scan}\\approx\\dot\\theta D/\\lambda$ (Eq. (86) of §C7): the moving mirror spreads the return's optical frequency by about $\\Delta f_{\\rm scan}$. The same polygon with a 5 mm beam gives $796\\times5\\times10^{-3}/(1.55\\times10^{-6})=2.6$ MHz, about 26 FFT bins of a 10 µs ramp (§C7).",
+   "why": "Scan rate no longer shares Omega with solid angle, the spread no longer shares Delta f with the bandwidth of Eq. (26), walk-off no longer shares Delta theta with point spacing, and both errors get a number."
+  },
+  {
+   "id": "02_C0_parts1-9-024",
+   "finding": "follow-up #8; follow-up #9; symbol scheme (delta theta for point spacing); report #39 (N_par)",
+   "old": "- $R\\,\\theta$ is the width of the footprint, the patch a beam or pixel of angular width $\\theta$ covers at range $R$.\n- $\\Theta_h$, $\\Theta_v$ are the horizontal and vertical fields of view, and $\\Delta\\theta_h$, $\\Delta\\theta_v$ the angular spacing of points along each.\n- $S$ is the mechanical sweep rate: the number of times per second the scanner must sweep the beam across the field.\n- $N_{\\rm lines}$ is the number of scan lines per frame, $f_{\\rm frame}$ the frame rate (frames per second), and $N_{\\rm par}$ the number of lines read in parallel (parallel channels).",
+   "new": "- $R\\,\\theta$ is the width of the footprint, the patch a beam or pixel of angular width $\\theta$ covers at range $R$; likewise $R\\,\\delta\\theta$ is the spacing at range $R$ of points an angular step $\\delta\\theta$ apart.\n- $\\Theta_H$, $\\Theta_V$ are the horizontal and vertical fields of view, and $\\delta\\theta_H$, $\\delta\\theta_V$ the angular spacing of points along each (degrees), as in §C3b Eq. (61).\n- $S$ is the mechanical sweep rate: the number of times per second the scanner must sweep the beam across the field.\n- $N_{\\rm lines}$ is the number of scan lines per frame, $f_{\\rm frame}$ the frame rate (frames per second), and $N_{\\rm par}$ the number of lines read in parallel (parallel channels; $N_{\\rm par}=N_{\\rm ch}$ of subsection 1 when each channel draws its own line).",
+   "why": "Adopts the delta-theta notation of §C3b Eq. (61) with units, extends the footprint symbol to point spacing, and ties N_par to N_ch."
+  },
+  {
+   "id": "02_C0_parts1-9-025",
+   "finding": "follow-up #9; follow-up #10; follow-up #8; report #17; report #39",
+   "old": "| Footprint at range | $R\\,\\theta$ | 0.1° at 200 m → 35 cm; 0.05° → 17 cm | §E12 |\n| Points per frame | $(\\Theta_h/\\Delta\\theta_h)(\\Theta_v/\\Delta\\theta_v)$ | 120°/0.1° × 25°/0.2° = 150,000; at 10 Hz, 1.5 Mpts/s | §C3b |\n| Mechanical sweep rate | $S=N_{\\rm lines}f_{\\rm frame}/N_{\\rm par}$; a bidirectional resonant mirror needs $f_{\\rm mirror}=S/2$ | 128 lines at 10 Hz: 10 sweeps/s with 128 channels, 1,280 with one | §C4d |\n| Étendue (optical invariant) | $A\\,\\Omega$ is conserved through passive optics. At a fixed f-number, a smaller pixel pitch at the same pixel angle therefore means a smaller aperture, while a smaller pixel angle at the same pitch means a larger one | §C6 worked example | §C6, §C10.3a |",
+   "new": "| Footprint or point spacing at range | $R\\,\\theta$ for a beam or pixel of width $\\theta$; $R\\,\\delta\\theta$ for points $\\delta\\theta$ apart | 0.1° at 200 m → 35 cm; 0.05° → 17 cm | §E11.3, §E12 (Eqs. (179), (180)) |\n| Points per frame | $(\\Theta_H/\\delta\\theta_H)(\\Theta_V/\\delta\\theta_V)$; times $f_{\\rm frame}$ this is the point rate, Eq. (61) | 1,200 × 128 = 153,600 (the Hesai AT128 grid, 0.1° × ≈0.2° over 120° × 25.4°, §C3b); at 10 Hz, 1.536 Mpts/s, the point rate of subsection 1 | §C3b (Eq. (61)) |\n| Mechanical sweep rate | $S=N_{\\rm lines}f_{\\rm frame}/N_{\\rm par}$; a bidirectional resonant mirror needs $f_{\\rm mirror}=S/2$ | 128 lines at 10 Hz: 10 sweeps/s with 128 channels, 1,280 with one | §C4d (Eq. (69)) |\n| Étendue (optical invariant) | $A\\,\\Omega$ is conserved through passive optics. With $\\theta_{\\rm pix}=p/f$ and $D=f/F_\\#$, a pixel fixes $D\\,\\theta_{\\rm pix}=p/F_\\#$. At a fixed f-number a smaller pitch at the same pixel angle therefore means a smaller aperture, and a smaller pixel angle at the same pitch a larger one | $p/F_\\#=30\\ \\mu{\\rm m}/1.2=25\\ \\mu{\\rm m}$; at 0.88 mrad, $D=25\\ \\mu{\\rm m}/0.88\\ {\\rm mrad}=28$ mm | §C6, §C10.3a |",
+   "why": "Footprint row covers point spacing as §E11.3 and §E12 use it; points-per-frame row uses the real AT128 grid and Eq. (61); the etendue row shows the D theta = p/F# step with numbers."
+  },
+  {
+   "id": "02_C0_parts1-9-026",
+   "finding": "follow-up #10",
+   "old": "- **Points per frame:** $(120^\\circ/0.1^\\circ)\\times(25^\\circ/0.2^\\circ)=1{,}200\\times125=150{,}000$; at 10 frames/s that is $1.5\\times10^6$ pts/s.",
+   "new": "- **Points per frame:** for the Hesai AT128 grid, $\\delta\\theta_V=25.4^\\circ/128=0.198^\\circ$, so $(\\Theta_H/\\delta\\theta_H)(\\Theta_V/\\delta\\theta_V)=(120^\\circ/0.1^\\circ)\\times(25.4^\\circ/0.198^\\circ)=1{,}200\\times128=153{,}600$; at 10 frames/s that is $1.536\\times10^6$ pts/s.",
+   "why": "Derivation matches the AT128 grid used in the table and in subsection 1."
+  },
+  {
+   "id": "02_C0_parts1-9-027",
+   "finding": "report #38",
+   "old": "- **Sweep rate:** $S=N_{\\rm lines}f_{\\rm frame}/N_{\\rm par}=128\\times10\\ {\\rm s^{-1}}/128=10$ sweeps/s with 128 parallel channels, and $128\\times10/1=1{,}280$ with one. A bidirectional resonant mirror would then run at $f_{\\rm mirror}=S/2$, i.e. 5 Hz or 640 Hz.",
+   "new": "- **Sweep rate:** $S=N_{\\rm lines}f_{\\rm frame}/N_{\\rm par}=128\\times10\\ {\\rm s^{-1}}/128=10$ sweeps/s with 128 parallel channels, and $128\\times10/1=1{,}280$ with one. With 128 channels, 10 sweeps/s is one facet per frame of the Hesai AT128's three-facet mirror turning at 200 rpm (§C4d); with one channel, a bidirectional resonant mirror would run at $f_{\\rm mirror}=S/2=1{,}280/2=640$ Hz.",
+   "why": "No resonant mirror runs at 5 Hz; the AT128 uses one facet of a three-facet mirror per frame (§C4d)."
+  },
+  {
+   "id": "02_C0_parts1-9-028",
+   "finding": "report #29",
+   "old": "The practical consequence is that parallel channels relieve the scanner: with 128 channels a slow, robust mirror suffices, while a single beam needs a mirror more than a hundred times faster (§C4d).",
+   "new": "The practical consequence is that parallel channels relieve the scanner: with 128 channels a slow, robust mirror suffices, while a single beam needs a mirror more than a hundred times faster (§C4d). Taken together, the relations of this subsection set the trade-off named at its start. Halving the point spacing on both axes quadruples the points per frame, so it either quarters the frame rate at a fixed point rate or, at a fixed frame rate, needs four times the point rate, for example four times the channels. At a fixed average laser power it also leaves a quarter of the energy per point, which halves the signal-limited range, since that range scales as the square root of the energy per point (subsection 1). At a fixed pitch and f-number, a finer pixel angle also needs a longer focal length and so a larger aperture, which means larger optics and, for the same field, a larger sensor (§C6).",
+   "why": "States the resolution-range-scan-speed trade-off that the subsection's opening promises."
+  },
+  {
+   "id": "02_C0_parts1-9-029",
+   "finding": "report #13",
+   "old": "- **FMCW** measures each point's radial velocity from its Doppler shift, with the resolution in subsection 2.\n- **ToF** infers velocity by tracking across frames: $\\sigma_v\\approx\\sqrt2\\,\\sigma_R/\\Delta t_{\\rm frame}$. Here $\\sigma_v$ is the rms velocity error, $\\sigma_R$ the range precision of one measurement and $\\Delta t_{\\rm frame}=1/f_{\\rm frame}$ the time between frames. The factor $\\sqrt2$ appears because the velocity is the difference of two independent range measurements, each with error $\\sigma_R$. At 3 cm precision and 10 Hz ($\\Delta t_{\\rm frame}=0.1$ s) that is $\\sqrt2\\times0.03\\ {\\rm m}/0.1\\ {\\rm s}\\approx0.42$ m/s, i.e. ≈0.4 m/s from two frames, and it needs points to be associated between frames. Tracking over more frames lowers the noise but adds latency.",
+   "new": "- **FMCW** measures each point's radial velocity from its Doppler shift in one look. Its resolution is $\\Delta v=\\lambda/(2T)=7.8$ cm/s for a 10 µs ramp (subsection 2), and its precision is finer, of order $\\Delta v/\\sqrt{\\rm SNR}=7.8/10\\approx0.8$ cm/s at 20 dB SNR [E].\n- **ToF** infers velocity by tracking across frames: $\\sigma_v\\approx\\sqrt2\\,\\sigma_R/\\Delta t_{\\rm frame}$. Here $\\sigma_v$ is the rms velocity error, $\\sigma_R$ the range precision of one measurement and $\\Delta t_{\\rm frame}=1/f_{\\rm frame}$ the time between frames. The factor $\\sqrt2$ appears because the velocity is the difference of two independent range measurements, each with error $\\sigma_R$. Take an assumed range precision of 3 cm [E], ten times the ideal 0.3 cm of subsection 1 to allow for amplitude walk and background, and comparable with the 2–4 cm the Sony AS-DT1 measures outdoors at 10 m (§C5a). At 10 Hz ($\\Delta t_{\\rm frame}=0.1$ s) that gives $\\sqrt2\\times0.03\\ {\\rm m}/0.1\\ {\\rm s}\\approx0.42$ m/s, i.e. ≈0.4 m/s from two frames, about fifty times FMCW's single-look precision. It also needs points to be associated between frames. Tracking over more frames lowers the noise but adds latency.",
+   "why": "Compares precision with precision (FMCW 0.8 cm/s against ToF 0.42 m/s) and tags and explains the assumed 3 cm."
+  },
+  {
+   "id": "02_C0_parts1-9-030",
+   "finding": "report #34 (IEC); report #36 (Class 1 limits untagged)",
+   "old": "- **Class 1 (IEC 60825-1:2014).** Class 1 is the least hazardous class of the laser-safety standard, defined by limits on the emission accessible under the standard's measurement conditions; automotive lidars are designed to it. At 905/940 nm the limits are ≈198/233 nJ per isolated small-source pulse and ≈79/93 nJ per pulse in long trains. At 1,550 nm the long-exposure limit is ≈10 mW, against ≈1 mW at 905 nm, because the front of the eye absorbs 1,550 nm light before it can be focused onto the retina. The classification must hold under reasonably foreseeable single faults, including a stalled scanner (§C4d).",
+   "new": "- **Class 1 (IEC 60825-1:2014).** IEC 60825-1 is the laser-safety standard of the International Electrotechnical Commission (IEC), and Class 1 is its least hazardous class, defined by limits on the emission accessible under the standard's measurement conditions; automotive lidars are designed to it. At 905/940 nm the limits are ≈198/233 nJ per isolated small-source pulse and ≈79/93 nJ per pulse in long trains [P, IEC 60825-1:2014; §C4c]. At 1,550 nm the long-exposure limit is ≈10 mW, against ≈1 mW at 905 nm [P/E, IEC 60825-1:2014; §C4], because the front of the eye absorbs 1,550 nm light before it can be focused onto the retina. The classification must hold under reasonably foreseeable single faults, including a stalled scanner (§C4d).",
+   "why": "Expands IEC and tags the Class 1 limits with the standard and the section that derives them."
+  },
+  {
+   "id": "02_C0_parts1-9-031",
+   "finding": "report #14",
+   "old": "  $$r_{\\rm bg}\\propto E_\\odot(\\lambda)\\,\\Delta\\lambda\\,(\\rho/\\pi)\\,\\Omega_{\\rm pix}\\,A_{\\rm rx}\\,\\eta_{\\rm opt}\\,\\text{PDE} \\tag{24}$$",
+   "new": "  $$r_{\\rm bg}=\\frac{E_\\odot(\\lambda)\\,\\Delta\\lambda}{E_{\\rm ph}}\\,\\frac{\\rho_{\\rm scene}}{\\pi}\\,\\Omega_{\\rm pix}\\,A_{\\rm rx}\\,\\eta_{\\rm opt}\\,\\text{PDE} \\tag{24}$$",
+   "why": "The one missing factor (1/E_ph) is named, so Eq. (24) is written as the equality of §C6 Eq. (81), with the scene reflectance rho_scene."
+  },
+  {
+   "id": "02_C0_parts1-9-032",
+   "finding": "report #14",
+   "old": "  - $\\rho/\\pi$ turns that irradiance into the radiance of a Lambertian scene of reflectance $\\rho$ (per steradian);",
+   "new": "  - $E_{\\rm ph}=hc/\\lambda$ is the photon energy (J), which converts the in-band solar power into a photon rate;\n  - $\\rho_{\\rm scene}/\\pi$ turns the solar irradiance into the radiance of a Lambertian scene (per steradian), where $\\rho_{\\rm scene}$ is the reflectance of the sunlit scene in the pixel's view, not the target reflectance $\\rho$ of Eq. (23);",
+   "why": "Defines E_ph and rho_scene, and separates the scene reflectance from the target reflectance of Eq. (23)."
+  },
+  {
+   "id": "02_C0_parts1-9-033",
+   "finding": "report #14",
+   "old": "  The proportionality absorbs the conversion from collected power to photon rate, a factor $1/E_{\\rm ph}=\\lambda/(hc)$.",
+   "new": "  Eq. (24) is the relation §C6 uses as Eq. (81). *Example* [E, inputs of §C6(d)]: at 905 nm, $E_\\odot\\approx0.75$ W m⁻² nm⁻¹ and $E_{\\rm ph}=2.20\\times10^{-19}$ J, so $E_\\odot/E_{\\rm ph}=3.4\\times10^{18}$ photons s⁻¹ m⁻² nm⁻¹. With a 20 nm filter, $\\rho_{\\rm scene}=0.9$, a 0.1° × 0.05° pixel ($\\Omega_{\\rm pix}=1.52\\times10^{-6}$ sr), a 25 mm aperture ($A_{\\rm rx}=4.91\\times10^{-4}$ m²), $\\eta_{\\rm opt}=0.5$ and PDE 0.3, $r_{\\rm bg}=3.4\\times10^{18}\\times20\\times(0.9/\\pi)\\times1.52\\times10^{-6}\\times4.91\\times10^{-4}\\times0.5\\times0.3\\approx2.2\\times10^9$ counts/s.",
+   "why": "Replaces the proportionality remark with the link to §C6 Eq. (81) and a worked number with substitution."
+  },
+  {
+   "id": "02_C0_parts1-9-034",
+   "finding": "report #34 (APD, SPAD before expansion)",
+   "old": "either by a controlled avalanche (a linear APD) or by a runaway one (a Geiger-mode SPAD).",
+   "new": "either by a controlled avalanche (a linear avalanche photodiode, APD) or by a runaway one (a single-photon avalanche diode, SPAD, in Geiger mode).",
+   "why": "Expands APD and SPAD at first use."
+  },
+  {
+   "id": "02_C0_parts1-9-035",
+   "finding": "report #34 (expansion moved to first use); report #35 (photoelectron)",
+   "old": "An avalanche photodiode (APD) is a photodiode biased just below breakdown. Each photo-electron",
+   "new": "An APD is a photodiode biased just below breakdown. Each photoelectron",
+   "why": "APD is expanded at first use above; spelling standardized."
+  },
+  {
+   "id": "02_C0_parts1-9-036",
+   "finding": "report #5; spec (definition of k)",
+   "old": "  for electron-initiated multiplication. Here $F(M)$ is the excess-noise factor, the factor by which the gain's randomness raises the shot-noise power above that of a noiseless amplifier with the same mean gain ($F=1$ would be noiseless). $k$ is the ratio of the hole to the electron ionization coefficient, i.e. how readily holes, rather than electrons, trigger further ionization; a small $k$ means an avalanche driven by one carrier type, which is quieter.",
+   "new": "  for multiplication started by the more strongly ionizing carrier. Here $F(M)$ is the excess-noise factor, the factor by which the gain's randomness raises the shot-noise power above that of a noiseless amplifier with the same mean gain ($F=1$ would be noiseless). $k$ is the ionization coefficient (ionizations per unit length) of the weaker-ionizing carrier divided by that of the stronger one: holes over electrons in silicon, where electrons start the avalanche, and electrons over holes in the InP multiplication layer of an InGaAs/InP APD, where holes start it. A small $k$ means an avalanche driven by one carrier type, which is quieter.",
+   "why": "k is the weaker-ionizing over the stronger-ionizing carrier's coefficient (hole/electron in Si, electron/hole in InP), and Eq. (25) holds when the stronger one starts the avalanche."
+  },
+  {
+   "id": "02_C0_parts1-9-037",
+   "finding": "report #15",
+   "old": "- **Consequence.** Gain helps until the multiplied shot noise overtakes the noise of the amplifier that follows the detector (a transimpedance amplifier, TIA, which converts current into voltage); beyond that, more gain lowers the SNR. The useful gain therefore ends where $F$ starts to climb. Substituting the $k$ of each material into Eq. (25) gives:",
+   "new": "- **Consequence.** Gain helps only until the multiplied shot noise $2qI_{\\rm ph}M^2F(M)\\,\\Delta f$ of Eq. (26) grows to match the noise of the amplifier that follows the detector (a transimpedance amplifier, TIA, which converts current into voltage). That is roughly the best gain; beyond it, more gain lowers the SNR. Because $F$ rises with slope $k$ ($F\\approx kM+2(1-k)$ for $M\\gg1$), a material with a large $k$ reaches that point at a much lower $M$. Substituting the $k$ of each material into Eq. (25) gives:",
+   "why": "F climbs from M=1, so it marks no point; the optimum is where multiplied shot noise reaches the amplifier noise."
+  },
+  {
+   "id": "02_C0_parts1-9-038",
+   "finding": "report #36 (k values untagged; practical gain tagged inconsistently)",
+   "old": "| Silicon APD (905/940 nm) | ≈0.02 | 2.9 at $M=50$; 4.0 at $M=100$ | ≈50–200 [U] |\n| InGaAs/InP APD (1,550 nm) | ≈0.4–0.5 | 5.5 at $M=10$; 10 at $M=20$ | ≈10–20 (§C4) |",
+   "new": "| Silicon APD (905/940 nm) | ≈0.02 [U] | 2.9 at $M=50$; 4.0 at $M=100$ | ≈50–200 [U] |\n| InGaAs/InP APD (1,550 nm) | ≈0.4–0.5 [U] (§C4) | 5.5 at $M=10$; 10 at $M=20$ | ≈10–20 [U] (§C4) |",
+   "why": "Same tag form in both rows; no source for k or the practical gain is cited in the report, so both are [U] (source request in skipped)."
+  },
+  {
+   "id": "02_C0_parts1-9-039",
+   "finding": "report #4; report #34 (SPAD expanded above); report #16",
+   "old": "- **What the table means.** Silicon's small $k$ keeps $F$ near 3–4 even at a gain of 100, whereas InGaAs/InP reaches the same excess noise at a gain of about 10. A 1,550 nm linear APD receiver therefore gets far less useful gain, and needs more signal photons per point.\n- **Geiger mode (SPAD, SiPM).** A single-photon avalanche diode (SPAD) is biased above breakdown; a silicon photomultiplier (SiPM) is an array of SPAD cells whose outputs are summed. Each detected photon produces a saturated, digital avalanche with a gain of order $10^5$–$10^6$, so the count carries no analog excess noise. The costs move elsewhere: the photon detection efficiency (PDE), dead time and pile-up, afterpulsing (false counts from charge trapped in an earlier avalanche) and, in SiPMs, optical crosstalk between cells (§C4b, §C5a, §C6).\n- **Coherent receivers need no avalanche gain.** The LO supplies it: the beat signal scales with the square root of the LO power. A balanced PIN pair (two ordinary unity-gain photodiodes whose outputs are subtracted, cancelling the LO's own intensity noise) becomes shot-noise-limited once the LO's shot noise exceeds the TIA's thermal noise, which for Ge photodiodes takes about 0.3–1 mW of LO (§C4c).",
+   "new": "- **What the table means.** Silicon's small $k$ keeps $F$ near 3–4 even at a gain of 100, whereas InGaAs/InP with $k=0.45$ already reaches $F=4$ at $M\\approx6.6$ and $F=5.5$ at $M=10$ [E: setting $F=4$ in Eq. (25) gives $0.45M+0.55(2-1/M)=4$, i.e. $0.45M^2-2.9M-0.55=0$, so $M=(2.9+\\sqrt{2.9^2+4\\times0.45\\times0.55})/(2\\times0.45)=6.6$]. A 1,550 nm linear APD receiver therefore gets far less useful gain, and needs more signal photons per point.\n- **Geiger mode (SPAD, SiPM).** A SPAD is biased above breakdown; a silicon photomultiplier (SiPM) is an array of SPAD cells whose outputs are summed. Each detected photon produces a saturated, digital avalanche with a gain of order $10^5$–$10^6$, so the count carries no analog excess noise. The costs move elsewhere: the photon detection efficiency (PDE), dead time and pile-up, afterpulsing (false counts from charge trapped in an earlier avalanche) and, in SiPMs, optical crosstalk between cells (§C4b, §C5a, §C6).\n- **Coherent receivers need no avalanche gain.** The LO supplies it: the beat signal scales with the square root of the LO power. A balanced pair of PIN photodiodes (ordinary p–i–n diodes with unity gain, whose outputs are subtracted to cancel the LO's own intensity noise) becomes shot-noise-limited once the LO's shot noise exceeds the TIA's input noise. With a TIA of input noise $i_{\\rm th}=3\\ {\\rm pA\\,Hz^{-1/2}}$, parity ($2qI_{\\rm LO}=i_{\\rm th}^2$) needs an LO photocurrent $I_{\\rm LO}=i_{\\rm th}^2/(2q)=(3\\times10^{-12})^2/(2\\times1.60\\times10^{-19})=28\\ \\mu{\\rm A}$, about 30 µW of LO light. A balanced Ge pair with 0.3–1 mW of LO stays at 82–94% of the shot-noise limit even at 125 °C, and Rogers et al. (2021) reached parity at 5 µW of LO per pixel with a TIA integrated on the same chip (§C4c).",
+   "why": "InGaAs reaches F=4 already at M=6.6 (solved with substitution), not at M=10; the LO power is set by the TIA noise, with the §C4c numbers."
+  },
+  {
+   "id": "02_C0_parts1-9-040",
+   "finding": "report #8",
+   "old": "A return counts as detected when it crosses a threshold set above the noise. The threshold trades detection probability $P_D$ (the chance that a real echo crosses it) against false-alarm probability $P_{FA}$ (the chance that noise alone crosses it), and both depend on how many range cells are tested. That is why a stated range means little without its $P_D$ and false-alarm definition (§C3b). This subsection shows how many signal photons a detection needs, first for photon counting and then for coherent detection of a speckled target.\n- **Photon counting (SPAD histograms).** A SPAD receiver builds a histogram of photon arrival times over many pulses, one bin per range cell. Background counts per bin are Poisson-distributed with mean $b$. Write $P(N\\ge n\\mid\\mu)$ for the probability that a Poisson count $N$ of mean $\\mu$ is at least $n$. For a threshold of $n_{\\rm th}$ counts, the per-bin false-alarm probability is then $P(N\\ge n_{\\rm th}\\mid b)$, and across $N_{\\rm bins}$ bins in the range window the chance of a false point is about $N_{\\rm bins}$ times that. With a mean signal of $s$ counts in the echo's bin, $P_D=P(N\\ge n_{\\rm th}\\mid s+b)$. Worked cases for 1,000 bins and at most $10^{-3}$ false points per measurement, i.e. $10^{-6}$ per bin [E]:",
+   "new": "A return counts as detected when it crosses a threshold set above the noise. The threshold trades detection probability $P_D$ (the chance that a real echo crosses it) against the false-alarm probability $p$ of each range cell (the chance that noise alone crosses it there). Noise can cross in any of the cells searched, so the chance of a false point, $P_{FA,{\\rm pt}}$, grows with their number, and so does the threshold needed for a given false-point rate. That is why a stated range means little without its $P_D$ and false-alarm definition (§C3b). This subsection shows how many signal photons a detection needs, first for photon counting and then for coherent detection of a speckled target.\n- **Photon counting (SPAD histograms).** A SPAD receiver builds a histogram of photon arrival times over many pulses, one bin per range cell. Background counts per bin are Poisson-distributed with mean $b$. Write $P(N\\ge n\\mid\\mu)$ for the probability that a Poisson count $N$ of mean $\\mu$ is at least $n$. For a threshold of $n_{\\rm th}$ counts, the per-bin false-alarm probability is then $p=P(N\\ge n_{\\rm th}\\mid b)$, and across $N_{\\rm bins}$ bins in the range window the chance of a false point is $P_{FA,{\\rm pt}}\\approx N_{\\rm bins}\\,p$. With a mean signal of $s$ counts in the echo's bin (the $N_s$ of subsection 1 and the $\\bar n$ of subsection 10), $P_D=P(N\\ge n_{\\rm th}\\mid s+b)$. Worked cases for $N_{\\rm bins}=1{,}000$ bins (2 ns each, over 0–300 m) and at most $P_{FA,{\\rm pt}}=10^{-3}$ false points per point, i.e. $p=10^{-6}$ per bin [E]. The daylight background $b=1$ is illustrative; §C0 subsection 10.3 uses 2,000 bins of 1 ns and the bright-sun $b=2.87$ of the §C7a model, which raises the daylight requirement from ≈13 to ≈17 counts:",
+   "why": "Only the threshold depends on the number of cells; per-bin p and per-point P_FA,pt named as in §C0 subsection 10.3; the worked cases state bin width, illustrative b and how they differ from 10.3; s linked to N_s and n-bar (report #2)."
+  },
+  {
+   "id": "02_C0_parts1-9-041",
+   "finding": "report #8; follow-up #12",
+   "old": "  - daylight at $10^{-6}$ false points per measurement: the threshold rises to 12 counts and the signal needed to ≈16. The per-bin budget becomes $10^{-6}/1{,}000=10^{-9}$; $P(N\\ge11\\mid1)=1.0\\times10^{-8}$ exceeds it and $P(N\\ge12\\mid1)=8.3\\times10^{-10}$ meets it, and $P(N\\ge12\\mid s+b)=0.9$ at $s+b\\approx16.6$, so $s\\approx16$.\n- **Why automotive thresholds are strict.** At 1.5 Mpts/s and 1,000 bins, a per-bin $P_{FA}$ of $10^{-6}$ still gives ≈1,500 false points a second, 150 per 10 Hz frame [E: $1.5\\times10^6\\ {\\rm s^{-1}}\\times1{,}000\\times10^{-6}=1{,}500\\ {\\rm s^{-1}}$, and $1{,}500/10=150$]. Products therefore add multi-pulse or neighbour-consistency checks before a point is output.\n- **Vendors define the terms differently.** InnovizOne's range table uses 90% true positives and a 5% false-alarm rate *per pixel* at 20 klx; Seyond's Falcon K1 uses >90% detection probability at 100 klx [P]. (klx is thousands of lux of ambient illuminance; 100 klx corresponds to bright direct sunlight.)",
+   "new": "  - daylight at $P_{FA,{\\rm pt}}=10^{-6}$ false points per point: the threshold rises to 12 counts and the signal needed to ≈16. The per-bin budget becomes $p=10^{-6}/1{,}000=10^{-9}$; $P(N\\ge11\\mid1)=1.0\\times10^{-8}$ exceeds it and $P(N\\ge12\\mid1)=8.3\\times10^{-10}$ meets it, and $P(N\\ge12\\mid s+b)=0.9$ at $s+b\\approx16.6$, so $s\\approx16$.\n- **Why automotive thresholds are strict.** At 1.5 Mpts/s and 1,000 bins, a per-bin $p$ of $10^{-6}$ still gives ≈1,500 false points a second, 150 per 10 Hz frame [E: $1.5\\times10^6\\ {\\rm s^{-1}}\\times1{,}000\\times10^{-6}=1{,}500\\ {\\rm s^{-1}}$, and $1{,}500/10=150$]. Products therefore add multi-pulse or neighbour-consistency checks before a point is output.\n- **Vendors define the terms differently.** InnovizOne's range table uses 90% true positives and a 5% false-alarm rate *per pixel* at 20 klx [P], and InnovizTwo's datasheet 90% true and 1% false positives per pixel at 100 klx (§C3b); Seyond's Falcon K1 uses >90% detection probability at 100 klx [P]. (klx is thousands of lux of ambient illuminance; 100 klx corresponds to bright direct sunlight.)",
+   "why": "Per-point and per-bin symbols as in 10.3; InnovizTwo's terms, which §C3b documents, are named next to InnovizOne's."
+  },
+  {
+   "id": "02_C0_parts1-9-042",
+   "finding": "report #8; report #12",
+   "old": "  $$P_D=P_{FA}^{1/(1+\\overline{\\rm SNR})} \\tag{27}$$\n\n  where $\\overline{\\rm SNR}$ is the mean signal-to-noise ratio, averaged over the speckle fading. This is the Swerling I case of radar theory. It assumes exponentially distributed intensity (Rayleigh amplitude fading) that stays constant during the look and changes independently from one look to the next.\n  - $P_D=0.9$ at $P_{FA}=10^{-6}$ then needs a mean SNR of ≈130 (21 dB). A steady, non-fading target needs ≈20 (13 dB, Albersheim's approximation) [E].\n    - *Swerling I:* taking logarithms of Eq. (27), $1+\\overline{\\rm SNR}=\\ln P_{FA}/\\ln P_D=\\ln(10^{-6})/\\ln(0.9)=(-13.82)/(-0.1054)=131$, so $\\overline{\\rm SNR}\\approx130$, and $10\\log_{10}130=21.1$ dB.\n    - *Steady target:* Albersheim's empirical approximation for a non-fading target is ${\\rm SNR_{dB}}=(6.2+4.54/\\sqrt{1.44})\\log_{10}(\\mathcal{A}+0.12\\mathcal{A}\\mathcal{B}+1.7\\mathcal{B})$, with $\\mathcal{A}=\\ln(0.62/P_{FA})=13.34$ and $\\mathcal{B}=\\ln[P_D/(1-P_D)]=\\ln9=2.20$. The constants 6.2, 4.54, 0.12, 1.7 and 0.62 are Albersheim's fitted coefficients. The general form, for $N_p$ pulses integrated incoherently, contains $\\sqrt{N_p+0.44}$, which is $\\sqrt{1.44}$ for the single pulse here. ($\\mathcal{A}$ and $\\mathcal{B}$ are auxiliary numbers, not an area or a bandwidth.) That gives $9.98\\times\\log_{10}(20.6)=13.1$ dB, an SNR of ≈20.\n  - In a shot-noise-limited coherent receiver SNR ≈ detected photons, so a single look needs ≈130 photoelectrons at $10^{-6}$ per bin. A full FMCW point is held to the stricter per-point rule of §C0 subsection 10.3 (at most $10^{-3}$ false points over a 0–300 m search, with the echo's peak found in both chirp ramps). With one look it then needs ≈259 photoelectrons, twice the single-bin ≈130; four independent looks bring the total, summed over both ramps and all looks, down to ≈88. Polarization, wavelength or spatial diversity recovers much of the fading penalty. Subsection 10.3 plots these cases against photon counting (Figure C0.10b).",
+   "new": "  $$P_D=p^{1/(1+\\overline{\\rm SNR})} \\tag{27}$$\n\n  where $p$ is the false-alarm probability of the bin tested and $\\overline{\\rm SNR}$ the mean signal-to-noise ratio, averaged over the speckle fading. This is the Swerling I case of radar theory. It assumes exponentially distributed intensity (Rayleigh amplitude fading) that stays constant during the look and changes independently from one look to the next.\n  - $P_D=0.9$ at $p=10^{-6}$ then needs a mean SNR of ≈130 (21 dB). A steady, non-fading target needs ≈20 (13 dB, Albersheim's approximation) [E].\n    - *Swerling I:* taking logarithms of Eq. (27), $1+\\overline{\\rm SNR}=\\ln p/\\ln P_D=\\ln(10^{-6})/\\ln(0.9)=(-13.82)/(-0.1054)=131$, so $\\overline{\\rm SNR}\\approx130$, and $10\\log_{10}130=21.1$ dB.\n    - *Steady target:* Albersheim's empirical approximation for a non-fading target is ${\\rm SNR_{dB}}=(6.2+4.54/\\sqrt{1.44})\\log_{10}(\\mathcal{A}+0.12\\mathcal{A}\\mathcal{B}+1.7\\mathcal{B})$, with $\\mathcal{A}=\\ln(0.62/p)=13.34$ and $\\mathcal{B}=\\ln[P_D/(1-P_D)]=\\ln9=2.20$. The constants 6.2, 4.54, 0.12, 1.7 and 0.62 are Albersheim's fitted coefficients. The general form, for $N_p$ pulses integrated incoherently, contains $\\sqrt{N_p+0.44}$, which is $\\sqrt{1.44}$ for the single pulse here. ($\\mathcal{A}$ and $\\mathcal{B}$ are auxiliary numbers, not an area or a bandwidth.) That gives $9.98\\times\\log_{10}(20.6)=13.1$ dB, an SNR of ≈20.\n  - In a shot-noise-limited coherent receiver SNR ≈ detected photons, so a single look needs ≈130 photoelectrons at $10^{-6}$ per bin. A full FMCW point is held to the stricter per-point rule of §C0 subsection 10.3 (at most $10^{-3}$ false points over a 0–300 m search, with the echo's peak found in both chirp ramps). With one look it then needs ≈259 photoelectrons, twice the single-bin ≈130; four independent looks bring the total, summed over both ramps and all looks, down to ≈88. Polarization, wavelength or spatial diversity recovers much of the fading penalty. §C0 subsection 10.3 plots these cases against photon counting (Figure C0.10b).",
+   "why": "Per-bin probability written p, as in Eq. (38) of §C0 subsection 10.3, which cites Eq. (27); §C0 prefix on subsection 10.3."
+  },
+  {
+   "id": "02_C0_parts1-9-043",
+   "finding": "report #10",
+   "old": "and why fog costs 905 nm and 1,550 nm about the same.",
+   "new": "and why dense fog costs 905 nm and 1,550 nm about the same.",
+   "why": "Wavelength independence holds for dense fog only."
+  },
+  {
+   "id": "02_C0_parts1-9-044",
+   "finding": "report #30; report #10; report #36",
+   "old": "- **Fog.** Kim's model scales $\\alpha$ as $(\\lambda/550\\ {\\rm nm})^{-q_{\\rm K}}$, with an exponent $q_{\\rm K}$ that describes the droplet size distribution: it falls from 1.6 in clear air to 0 below 500 m visibility. When $q_{\\rm K}=0$, $\\alpha$ no longer depends on wavelength, because fog droplets are much larger than the wavelength. Fog therefore attenuates 905 and 1,550 nm about equally [T, free-space-optics literature], consistent with the <10% difference measured by Duthon et al. (§C4c). A signal-limited lidar with 200 m clear-air range at 10% reflectance reaches the range where $R^2e^{2\\alpha R}$ equals its clear-air value [E]:",
+   "new": "- **Fog.** Kim's model scales $\\alpha$ as $(\\lambda/550\\ {\\rm nm})^{-q_{\\rm K}}$, with an exponent $q_{\\rm K}$ that describes the droplet size distribution: it is 1.6 above 50 km visibility, 1.3 for 6–50 km (the \"clear air\" of subsection 10.1), and falls to 0 below 500 m visibility. When $q_{\\rm K}=0$, $\\alpha$ no longer depends on wavelength, because fog droplets are much larger than the wavelength. Dense fog (visibility below 500 m, where $q_{\\rm K}=0$) therefore attenuates 905 and 1,550 nm about equally [I, Kim, McArthur and Korevaar 2001], consistent with the <10% difference measured by Duthon et al. (§C4c). In light fog the model still favours 1,550 nm slightly: at 1 km visibility $\\alpha=3.05$ /km at 905 nm against 2.33 /km at 1,550 nm. A signal-limited lidar with 200 m clear-air range at 10% reflectance reaches the range where $R^2e^{2\\alpha R}$ equals its clear-air value [E]:",
+   "why": "Kim's exponent per visibility band (1.3 is the clear air of 10.1), the equal-attenuation claim limited to dense fog, the light-fog difference given, and an [I] tag for the peer-reviewed model source (listed in the sources of §C0 subsection 10.9)."
+  },
+  {
+   "id": "02_C0_parts1-9-045",
+   "finding": "report #10; report #37",
+   "old": "| Visibility $V$ | $\\alpha$ | Two-way loss at 50 m | Reach of a 200 m (clear-air) lidar | Reach / $V$ |\n|---|---|---|---|---|\n| 1,000 m (light fog; $q_{\\rm K}=0.5$) | 3.0 /km | 1.3 dB | ≈133 m | 0.13 |\n| 200 m (fog) | 19.6 /km | 8.5 dB | ≈61 m | 0.30 |\n| 50 m (dense fog) | 78 /km | 34 dB | ≈26 m | 0.52 |\n| 20 m (very dense fog) | 196 /km | 85 dB | ≈14 m | 0.69 |",
+   "new": "| Visibility $V$ | $\\alpha$ at 905 nm | Two-way loss at 50 m | Reach of a 200 m (clear-air) lidar | Reach / $V$ |\n|---|---|---|---|---|\n| 1,000 m (light fog; $q_{\\rm K}=0.5$) | 3.0 /km | 1.3 dB | ≈133 m | 0.13 |\n| 200 m (fog) | 19.6 /km | 8.5 dB | ≈61 m | 0.30 |\n| 50 m (dense fog) | 78 /km | 34 dB | ≈26 m | 0.52 |\n| 20 m (very dense fog) | 196 /km | 85 dB | ≈13.7 m | 0.69 |",
+   "why": "The 1 km row is computed at 905 nm; the 20 m reach shown to the precision its ratio uses."
+  },
+  {
+   "id": "02_C0_parts1-9-046",
+   "finding": "report #10; report #35 (/km); report #37",
+   "old": "  - **Extinction:** Kim's model gives $\\alpha=(3.912/V)\\,(\\lambda/550\\ {\\rm nm})^{-q_{\\rm K}}$, evaluated here at 905 nm. Between 0.5 and 1 km visibility the model sets $q_{\\rm K}=V-0.5$ (with $V$ in km), which is 0.5 at 1 km. For $V=1{,}000$ m with $q_{\\rm K}=0.5$, $\\alpha=3.912\\ {\\rm km^{-1}}\\times(905/550)^{-0.5}=3.912\\times0.78=3.05$ /km. Below 500 m visibility $q_{\\rm K}=0$, so $\\alpha=3.912/V$: 19.6 /km at 200 m, 78 /km at 50 m and 196 /km at 20 m.\n  - **Two-way loss at 50 m:** $10\\log_{10}e^{2\\alpha R}=4.343\\times2\\alpha R$ dB, where $4.343=10/\\ln10=10\\log_{10}e$ converts natural-log units into decibels. For 200 m visibility this is $4.343\\times2\\times0.0196\\ {\\rm m^{-1}}\\times50\\ {\\rm m}=8.5$ dB; the other rows scale with $\\alpha$ (1.3, 34 and 85 dB).\n  - **Reach:** a signal-limited lidar still detects while $e^{-2\\alpha R}/R^2$ is at least its clear-air value at 200 m, $1/(200\\ {\\rm m})^2$. The reach is therefore the root of $R^2e^{2\\alpha R}=(200\\ {\\rm m})^2$, found numerically. For 200 m visibility, $R=61$ m gives $61^2\\times e^{2\\times0.0196\\times61}=3{,}721\\times10.9\\approx4.0\\times10^4$ m², as required.",
+   "new": "  - **Extinction:** Kim's model gives $\\alpha=(3.912/V)\\,(\\lambda/550\\ {\\rm nm})^{-q_{\\rm K}}$, evaluated here at 905 nm. Between 0.5 and 1 km visibility the model sets $q_{\\rm K}=V-0.5$ (with $V$ in km), which is 0.5 at 1 km. For $V=1{,}000$ m with $q_{\\rm K}=0.5$, $\\alpha=(3.912/{\\rm km})\\times(905/550)^{-0.5}=3.912\\times0.78=3.05$ /km at 905 nm, and $3.912\\times(1{,}550/550)^{-0.5}=3.912\\times0.596=2.33$ /km at 1,550 nm. Below 500 m visibility $q_{\\rm K}=0$, so $\\alpha=3.912/V$: 19.6 /km at 200 m, 78 /km at 50 m and 196 /km at 20 m.\n  - **Two-way loss at 50 m:** $10\\log_{10}e^{2\\alpha R}=4.343\\times2\\alpha R$ dB, where $4.343=10/\\ln10=10\\log_{10}e$ converts natural-log units into decibels. For 200 m visibility this is $4.343\\times2\\times0.0196\\ {\\rm m^{-1}}\\times50\\ {\\rm m}=8.5$ dB; the other rows scale with $\\alpha$ (1.3, 34 and 85 dB).\n  - **Reach:** a signal-limited lidar still detects while $e^{-2\\alpha R}/R^2$ is at least its clear-air value at 200 m, $1/(200\\ {\\rm m})^2$. The reach is therefore the root of $R^2e^{2\\alpha R}=(200\\ {\\rm m})^2$, found numerically. For 200 m visibility, $R=61$ m gives $61^2\\times e^{2\\times0.0196\\times61}=3{,}721\\times10.93=4.07\\times10^4$ m², within 2% of $(200\\ {\\rm m})^2=4.0\\times10^4$ m², as required (61 m is the root rounded from 60.8 m).",
+   "why": "Adds the 1,550 nm light-fog value with substitution, one unit form, and the exact check value."
+  },
+  {
+   "id": "02_C0_parts1-9-047",
+   "finding": "report #9",
+   "old": "- **Reach relative to visibility rises as fog thickens,** so the \"≈0.6–1 V\" of §E4 describes the dense end. The reason is that at a shorter reach the $1/R^2$ spreading loss is smaller, so the lidar can afford a larger fog optical depth $\\alpha R$; and below 500 m visibility, where $\\alpha=3.912/V$, reach divided by visibility is just that optical depth divided by 3.912.",
+   "new": "- **Reach relative to visibility rises as fog thickens:** about 0.5–0.7 V for visibilities of 20–50 m in this model. The \"≈0.6–1 V\" of §E4 therefore applies only below about 30 m visibility, and reach equals V only near 4 m visibility, where $\\alpha R=3.912$ [E: with $q_{\\rm K}=0$ the reach solves $R^2e^{2\\alpha R}=(200\\ {\\rm m})^2$, i.e. $R=200\\ {\\rm m}\\times e^{-\\alpha R}$; a reach of 0.6 V means $\\alpha R=0.6\\times3.912=2.35$, so $R=200\\ {\\rm m}\\times e^{-2.35}=19$ m and $V=19/0.6=32$ m, while a reach of 1 V gives $R=200\\ {\\rm m}\\times e^{-3.912}=4.0$ m]. The ratio rises because at a shorter reach the $1/R^2$ spreading loss is smaller, so the lidar can afford a larger fog optical depth $\\alpha R$. Below 500 m visibility, where $\\alpha=3.912/V$, reach divided by visibility is that optical depth divided by 3.912.",
+   "why": "The model gives 0.5-0.7 V at 20-50 m visibility, so §E4's 0.6-1 V holds only below about 30 m; the long sentence is split and the claim derived."
+  },
+  {
+   "id": "02_C0_parts1-9-048",
+   "finding": "report #36 (rain tag); report #34 (ITU-R); consistency flag (rain: §C4c reports a 2x difference)",
+   "old": "- **Rain.** The empirical free-space-optics law $\\gamma_{\\rm rain}\\approx1.076\\,R_r^{0.67}$ dB/km gives the specific attenuation $\\gamma_{\\rm rain}$, the loss per kilometre of path, for a rain rate $R_r$ in mm/h; 1.076 and 0.67 are Carbonneau's fitted coefficients, as used with ITU-R P.1814. The law yields 3.2, 9.3 and 23.5 dB/km at 5, 25 and 100 mm/h (for example, $1.076\\times5^{0.67}=1.076\\times2.94=3.2$ dB/km). At 200 m range the light travels 0.4 km out and back, so the loss is only $3.2\\times0.4=1.3$, $9.3\\times0.4=3.7$ and $23.5\\times0.4=9.4$ dB [T/E]. Raindrops are far larger than the wavelength, so this loss barely depends on it. In practice rain hurts more through:",
+   "new": "- **Rain.** The empirical free-space-optics law $\\gamma_{\\rm rain}\\approx1.076\\,R_r^{0.67}$ dB/km gives the specific attenuation $\\gamma_{\\rm rain}$, the loss per kilometre of path, for a rain rate $R_r$ in mm/h; 1.076 and 0.67 are Carbonneau's fitted coefficients, as used with ITU-R P.1814, a recommendation of the International Telecommunication Union's radiocommunication sector (ITU-R). The law yields 3.2, 9.3 and 23.5 dB/km at 5, 25 and 100 mm/h (for example, $1.076\\times5^{0.67}=1.076\\times2.94=3.2$ dB/km). At 200 m range the light travels 0.4 km out and back, so the loss is only $3.2\\times0.4=1.3$, $9.3\\times0.4=3.7$ and $23.5\\times0.4=9.4$ dB [P, ITU-R P.1814; E for the 200 m losses]. Raindrops are far larger than the wavelength, so in this law the loss barely depends on it; one comparison cited in §C4c nevertheless found 905 nm reaching ≈2× farther than 1,550 nm at 25 mm/h [S, Wojtanowski et al. 2014, relayed by a survey]. In practice rain hurts more through:",
+   "why": "Expands ITU-R, tags the law to the recommendation with [E] for the 200 m losses, and points to the §C4c comparison that shows a wavelength difference."
+  },
+  {
+   "id": "02_C0_parts1-9-049",
+   "finding": "report #24",
+   "old": "lidar 3D detection fell from 52.3 to 29.7 AP (average precision, a 0–100 score of object-detection accuracy) while radar held 44.5 (§E4).",
+   "new": "lidar-only 3D detection fell from 52.3 to 29.7 AP (average precision, a 0–100 score of object-detection accuracy), while radar-only detection fell only from 49.9 to 44.5 [I, K-Radar, NeurIPS 2022; §E4].",
+   "why": "Radar fell from 49.9 to 44.5 (§E4), it did not hold; evidence tag added for the K-Radar paper (NeurIPS 2022, in the report's sources)."
+  },
+  {
+   "id": "02_C0_parts1-9-050",
+   "finding": "report #34 (iToF before expansion)",
+   "old": "phase ranging (iToF) suits the cabin",
+   "new": "phase ranging (indirect ToF, iToF) suits the cabin",
+   "why": "Expands iToF at first use."
+  },
+  {
+   "id": "02_C0_parts1-9-051",
+   "finding": "report #39",
+   "old": "Here $R_{\\rm amb}$ is the ambiguity range,",
+   "new": "Here $R_{\\rm amb}$ is the unambiguous range,",
+   "why": "One name for R_amb throughout."
+  },
+  {
+   "id": "02_C0_parts1-9-052",
+   "finding": "report #31; report #34 (TI)",
+   "old": "TI's ToF design guide gives $\\sigma_R\\propto c\\sqrt{n_e+n_T^2}/(n_m f_m C_d)$ [P, TI SBAU219D]. Here:",
+   "new": "Texas Instruments' ToF design guide gives $\\sigma_R\\propto c\\sqrt{n_e+n_T^2}/(n_m f_m C_d)$ [P, TI SBAU219D], i.e. by Eq. (28) a phase noise $\\sigma_\\varphi\\propto\\sqrt{n_e+n_T^2}/(C_d\\,n_m)$. Here:",
+   "why": "Ties TI's scaling to Eq. (28) as a phase noise and expands TI."
+  },
+  {
+   "id": "02_C0_parts1-9-053",
+   "finding": "report #31",
+   "old": "The table evaluates Eq. (28) for typical modulation frequencies, at an assumed phase noise of 0.02 rad.",
+   "new": "The table evaluates Eq. (28) for typical modulation frequencies, at an assumed phase noise of 0.02 rad [E], i.e. a phase signal-to-noise ratio of $1/0.02=50$.",
+   "why": "Tags the assumed phase noise and says what it means."
+  },
+  {
+   "id": "02_C0_parts1-9-054",
+   "finding": "report #39",
+   "old": "(implied by Z+F's 365 m ambiguity interval)",
+   "new": "(implied by Z+F's 365 m unambiguous range)",
+   "why": "One name for R_amb throughout."
+  },
+  {
+   "id": "02_C0_parts1-9-055",
+   "finding": "report #39",
+   "old": "- **Ambiguity range:** $R_{\\rm amb}=c/(2f_m)$, e.g. $3.0\\times10^8/(2\\times100\\times10^6)=1.5$ m at 100 MHz; the same gives 0.3 m at 500 MHz, 7.5 m at 20 MHz and 50 m at 3 MHz.\n- **Range per radian:** $c/(4\\pi f_m)$, e.g. $3.0\\times10^8/(4\\pi\\times100\\times10^6)=0.24$ m/rad at 100 MHz, and likewise 0.048, 1.2 and 8.0 m/rad at 500, 20 and 3 MHz.\n- **Precision:** $\\sigma_R=[c/(4\\pi f_m)]\\,\\sigma_\\varphi$ with an assumed phase noise of $\\sigma_\\varphi=0.02$ rad, e.g. $0.24\\ {\\rm m/rad}\\times0.02\\ {\\rm rad}=4.8$ mm ≈ 5 mm at 100 MHz; the other rows give $0.048\\times0.02=0.96$ mm, $1.2\\times0.02=2.4$ cm and $8.0\\times0.02=0.16$ m.\n- **Z+F's lowest frequency:** setting $R_{\\rm amb}=365$ m in $R_{\\rm amb}=c/(2f_m)$ gives $f_m=3.0\\times10^8/(2\\times365)\\ {\\rm Hz}=0.41$ MHz, and $c/(4\\pi f_m)=R_{\\rm amb}/(2\\pi)=365/(2\\pi)=58$ m/rad.",
+   "new": "- **Unambiguous range:** $R_{\\rm amb}=c/(2f_m)$, e.g. $3.0\\times10^8/(2\\times100\\times10^6)=1.5$ m at 100 MHz; the same gives 0.3 m at 500 MHz, 7.5 m at 20 MHz and 50 m at 3 MHz.\n- **Range per radian:** $c/(4\\pi f_m)$, e.g. $3.0\\times10^8/(4\\pi\\times100\\times10^6)=0.24$ m/rad at 100 MHz, and likewise 0.048, 1.2 and 8.0 m/rad at 500, 20 and 3 MHz.\n- **Precision:** $\\sigma_R=[c/(4\\pi f_m)]\\,\\sigma_\\varphi$ with an assumed phase noise of $\\sigma_\\varphi=0.02$ rad, e.g. $0.24\\ {\\rm m/rad}\\times0.02\\ {\\rm rad}=4.8$ mm ≈ 5 mm at 100 MHz; the other rows give $0.048\\times0.02=0.96$ mm, $1.2\\times0.02=2.4$ cm and $8.0\\times0.02=0.16$ m.\n- **Z+F's lowest frequency:** Z+F's datasheet calls its 365 m unambiguous range the \"ambiguity interval\". Setting $R_{\\rm amb}=365$ m in $R_{\\rm amb}=c/(2f_m)$ gives $f_m=3.0\\times10^8/(2\\times365)\\ {\\rm Hz}=0.41$ MHz, and $c/(4\\pi f_m)=R_{\\rm amb}/(2\\pi)=365/(2\\pi)=58$ m/rad.",
+   "why": "One name for R_amb; Z+F's own term kept once, attributed."
+  },
+  {
+   "id": "02_C0_parts1-9-056",
+   "finding": "report #32; report #36 (Wikipedia is [S]); report #34 (AGA)",
+   "old": "**One principle, three kinds of product.** Phase ranging is the oldest optical ranging method.\n- **Geodimeter.** Erik Bergstrand invented it in 1947 to measure the speed of light: a Kerr-cell shutter chopped a light beam at megahertz rates. AGA commercialized it in 1953 [T, Wikipedia]. A baseline measurement gave $c = 299{,}793.1 \\pm 0.2$ km/s [S].\n- **Surveying and building trades today.** Electronic distance meters, handheld rangefinders and phase-based terrestrial laser scanners all still use it.",
+   "new": "**One principle, three kinds of product.** Phase ranging was the first method of electronic distance measurement [S].\n- **Geodimeter.** Erik Bergstrand developed the Geodimeter in 1947 to measure the speed of light: a Kerr-cell shutter chopped a light beam at megahertz rates. The Swedish company AGA (AB Gasaccumulator) commercialized it in 1953 [S, Wikipedia]. A baseline measurement gave $c = 299{,}793.1 \\pm 0.2$ km/s [S].\n- **Surveying and building trades today.** Electronic distance meters, handheld rangefinders and phase-based terrestrial laser scanners all still use it.\n\nThe table compares the three kinds of product that use phase ranging today: surveying rangefinders (electronic distance meters, EDMs), phase-based laser scanners and iToF cameras.",
+   "why": "Triangulation is older, so the claim is narrowed to electronic distance measurement; 'invented it' made unambiguous; the table gets a lead-in sentence."
+  },
+  {
+   "id": "02_C0_parts1-9-057",
+   "finding": "report #33; report #39; report #35 (Mpts/s)",
+   "old": "| **Modulation** | Leica: \"200 million waves\" for millimetres, lower frequencies for metres [S]. Mekometer: 460–510 MHz on a 633 nm HeNe laser, tuned to a phase null [S] | Several frequencies; 365 m ambiguity interval (Z+F) [P] | About 10–200 MHz: MLX75023 up to 40 MHz; ST VD55H1 200 MHz at >85% contrast [T] |\n| **Time per point** | Roughly 0.1–1 s [U] | ≈1–7 µs: up to 1.094 M pts/s, noise specified at 136,719 pts/s (Z+F) [P] | Every pixel at once, over a frame exposure of ms |",
+   "new": "| **Modulation** | Leica: a fine-ranging frequency its FAQ calls \"200 million waves\" (per second, i.e. about 200 MHz [U]) for millimetres, lower frequencies for metres [S]. Mekometer: 460–510 MHz on a 633 nm HeNe laser, tuned to a phase null [S] | Several frequencies; 365 m unambiguous range (Z+F) [P] | About 10–200 MHz: MLX75023 up to 40 MHz; ST VD55H1 200 MHz at >85% contrast [T] |\n| **Time per point** | Roughly 0.1–1 s [U] | ≈1–7 µs: up to 1.094 Mpts/s, noise specified at 136,719 pts/s (Z+F) [P] | Every pixel at once, over a frame exposure of ms |",
+   "why": "Says what '200 million waves' means, uses one name for the unambiguous range and one unit form."
+  },
+  {
+   "id": "02_C0_parts1-9-058",
+   "finding": "report #18",
+   "old": "Why can one scanner reach 365 m with millimetre noise while a ToF camera stops near 10 m?",
+   "new": "Why can a phase scanner range to 365 m, with 0.3–3.7 mm noise at 50–100 m, while a ToF camera stops near 10 m?",
+   "why": "365 m is the Z+F's unambiguous range; its millimetre noise is specified at 50-100 m."
+  },
+  {
+   "id": "02_C0_parts1-9-059",
+   "finding": "report #27; symbol scheme (E_pt)",
+   "old": "1. **Ambient light per unit signal.** Take a scanner at 10 mW average that dwells 7.3 µs per point (the inverse of Z+F's 136,719 pts/s) with a matched field of view of 0.6 mrad (full angle, twice the Z+F beam's 0.3 mrad half-angle, so $\\Omega=\\pi\\times(0.3\\times10^{-3})^2\\approx2.8\\times10^{-7}$ sr): that is $10^{-2}\\ {\\rm W}\\times7.3\\times10^{-6}\\ {\\rm s}=73$ nJ per point. Take a VGA camera flooding 70° × 55° with 1 W for a 10 ms exposure: that is $1\\ {\\rm W}\\times0.01\\ {\\rm s}/307{,}200=33$ nJ per pixel, with $\\Omega\\approx(1.222\\times0.960)/307{,}200\\approx3.8\\times10^{-6}$ sr per pixel. Here 70° and 55° are 1.222 and 0.960 rad; the exact solid angle of a 70° × 55° rectangular field, 1.07 sr rather than 1.17 sr, would give $3.5\\times10^{-6}$ sr and lower the ratio below by about 9%.\n   - The laser energy per point is similar.\n   - Ambient light collected per unit signal scales as $\\Omega\\,T_{\\rm exp}/E_{\\rm point}$. Here $\\Omega$ is the solid angle one detector or pixel sees (sr), $T_{\\rm exp}$ the time it integrates light for that point (the dwell of the scanner or the exposure of the camera; s), and $E_{\\rm point}$ the laser energy spent on that point (J). That is $3.8\\times10^{-6}\\times0.01/(33\\times10^{-9})\\approx1.2$ sr·s/J for the camera against $2.8\\times10^{-7}\\times7.3\\times10^{-6}/(73\\times10^{-9})\\approx2.8\\times10^{-5}$ for the scanner, so the camera collects about **$4\\times10^4$ times more sunlight per unit signal** ($1.17/(2.83\\times10^{-5})\\approx4.1\\times10^4$).",
+   "new": "1. **Ambient light per unit signal.** Let $\\Omega$ be the solid angle one detector or pixel sees (sr). Take a scanner at 10 mW average power that dwells 7.3 µs per point, the inverse of Z+F's 136,719 pts/s: $10^{-2}\\ {\\rm W}\\times7.3\\times10^{-6}\\ {\\rm s}=73$ nJ per point. Its detector sees a matched 0.6 mrad full angle, twice the Z+F beam's 0.3 mrad half-angle, so $\\Omega=\\pi\\times(0.3\\times10^{-3})^2\\approx2.8\\times10^{-7}$ sr. Take a VGA camera flooding 70° × 55° with 1 W for a 10 ms exposure: $1\\ {\\rm W}\\times0.01\\ {\\rm s}/307{,}200=33$ nJ per pixel, with $\\Omega\\approx(1.222\\times0.960)/307{,}200\\approx3.8\\times10^{-6}$ sr per pixel. Here 70° and 55° are 1.222 and 0.960 rad, and their product, 1.17 sr, approximates the field's solid angle; the exact solid angle of a 70° × 55° rectangular field, 1.07 sr, would give $3.5\\times10^{-6}$ sr and lower the ratio below by about 9%.\n   - The laser energy per point is similar.\n   - Ambient light collected per unit signal scales as $\\Omega\\,T_{\\rm exp}/E_{\\rm pt}$, where $T_{\\rm exp}$ is the time the detector integrates light for that point (the dwell of the scanner or the exposure of the camera; s) and $E_{\\rm pt}$ the laser energy spent on that point (J). That is $3.8\\times10^{-6}\\times0.01/(33\\times10^{-9})\\approx1.2$ sr·s/J for the camera against $2.8\\times10^{-7}\\times7.3\\times10^{-6}/(73\\times10^{-9})\\approx2.8\\times10^{-5}$ sr·s/J for the scanner. $T_{\\rm exp}$ cancels, because $E_{\\rm pt}$ is the laser power times $T_{\\rm exp}$ (shared among the pixels, for the camera), so each figure is the solid angle over which the laser's power is spread, divided by that power: $1.17\\ {\\rm sr}/1\\ {\\rm W}=1.17$ sr·s/J for the camera and $2.83\\times10^{-7}\\ {\\rm sr}/0.01\\ {\\rm W}=2.83\\times10^{-5}$ sr·s/J for the scanner. The camera therefore collects about **$4\\times10^4$ times more sunlight per unit signal** ($1.17/(2.83\\times10^{-5})\\approx4.1\\times10^4$).",
+   "why": "Splits the 51-word sentence, defines Omega before use, gives both figures one unit, and shows why T_exp cancels."
+  },
+  {
+   "id": "02_C0_parts1-9-060",
+   "finding": "report #21",
+   "old": "**Where long range goes.** Pulsed dToF (subsection 1) gates out ambient light the way a scanner's short dwell does. Its precision is set by pulse width and jitter rather than range, and a histogram separates multiple returns.",
+   "new": "**Why long-range sensing uses pulses.** Pulsed dToF (subsection 1) gates out ambient light the way a scanner's short dwell does. Its precision is set by the pulse width and timing jitter, averaged over the detected photons, rather than by a modulation frequency that also fixes the unambiguous range. A histogram also separates multiple returns.",
+   "why": "Precision does depend on range through N_s; the intended contrast is with a modulation frequency that also fixes the unambiguous range. Clearer lead-in."
+  },
+  {
+   "id": "02_C0_parts1-9-061",
+   "finding": "report #34 (SRAM)",
+   "old": "histogram SRAM and peak finding",
+   "new": "histogram SRAM (static on-chip memory) and peak finding",
+   "why": "Expands SRAM."
+  },
+  {
+   "id": "02_C0_parts1-9-062",
+   "finding": "report #35; report #39",
+   "old": "| **Ambiguity** | $c/2f_m$ (0.75 m at 200 MHz); fixed with a second frequency | $c/2f_{\\rm rep}$;",
+   "new": "| **Unambiguous range** | $c/(2f_m)$ (0.75 m at 200 MHz); fixed with a second frequency | $c/(2\\,\\text{PRF})$;",
+   "why": "Bracketed fractions, PRF as in subsection 1, one name for the unambiguous range."
+  },
+  {
+   "id": "02_C0_parts1-9-063",
+   "finding": "report #39",
+   "old": "- **iToF ambiguity** is $c/(2f_m)=3.0\\times10^8/(2\\times200\\times10^6)=0.75$ m at 200 MHz. The dToF entry $c/2f_{\\rm rep}$ is the same rule for pulses, with $f_{\\rm rep}$ the laser's pulse repetition rate (the PRF of subsection 1).",
+   "new": "- **iToF unambiguous range** is $c/(2f_m)=3.0\\times10^8/(2\\times200\\times10^6)=0.75$ m at 200 MHz. The dToF entry $c/(2\\,\\text{PRF})$ is the same rule for pulses, with PRF the pulse repetition frequency of subsection 1.",
+   "why": "One name for the repetition rate (PRF) and for the unambiguous range."
+  },
+  {
+   "id": "02_C0_parts1-9-064",
+   "finding": "report #35 (frames/s)",
+   "old": "≈5 m at full resolution, 120 fps,",
+   "new": "≈5 m at full resolution, 120 frames/s,",
+   "why": "One unit form."
+  },
+  {
+   "id": "02_C0_parts1-9-065",
+   "finding": "report #19",
+   "old": "Lidar statistics exclude ToF cameras and sensors, including Hesai's and RoboSense's reported units and Yole's lidar figures.",
+   "new": "Lidar statistics, including Hesai's and RoboSense's reported unit counts and Yole's lidar figures, exclude ToF cameras and ToF sensors.",
+   "why": "The 'including' clause attached to ToF cameras, as if Hesai's and RoboSense's units were ToF cameras."
+  }
+ ],
+ "skipped": [
+  {
+   "finding": "report #1",
+   "kind": "already_fixed",
+   "location": "§C0 subsection 7, 'A full FMCW point is held to the stricter per-point rule'",
+   "detail": "The live text already says the full point is held to the stricter per-point rule, needs ≈259 photoelectrons with one look and ≈88 summed over both ramps and all looks with four. Only the second bare 'Subsection 10.3' in that bullet remained, which an edit in this list prefixes with §C0 (report #12)."
+  },
+  {
+   "finding": "report #20",
+   "kind": "structural",
+   "location": "§C0 subsection 9, '### 9. Amplitude-modulated (phase) ranging: ToF cameras, surveying rangers and what counts as lidar'",
+   "detail": "Keep in §C0: the opening paragraph, the Principle paragraph with Eq. (28), the four bullets after it, the f_m table with its derivation, 'Same physics, different photon budgets' (items 1-3 and the closing paragraph) and 'Why long-range sensing uses pulses' with its two bullets. Move to §B8 or §C1, leaving a one-line pointer in §C0: 'One principle, three kinds of product' with its lead-in, table, term note and derivation; 'iToF and dToF chips: two pixel architectures' with both tables and the derivation; 'Same makers, both architectures' with its table and bullets; 'The line is blurring'; 'What counts as lidar' including 'Counting'; the companion-report pointer; and the matching part of the Sources line. Then retitle the subsection '### 9. Amplitude-modulated (phase) ranging'. The wording fixes in this list are made in place, so the blocks move as fixed text."
+  },
+  {
+   "finding": "consistency flag (rho versus rho_scene; Eq. (24) duplicates §C6)",
+   "kind": "structural",
+   "location": "§C0 subsection 5, Eq. (24); §C6(d) Eq. (81) and §C6(d') Eq. (83)",
+   "detail": "After this round Eq. (24) is the same equality as §C6 Eq. (81), and Eq. (83) is Eq. (81) written as a proportionality; no other section cites Eq. (24). Merging the three (for example, §C6 citing Eq. (24) instead of restating it) is a merge of duplicated equations."
+  },
+  {
+   "finding": "consistency flags (Eq. (23) restates Part A Eq. (5); the Lambertian collection argument is written out four times)",
+   "kind": "structural",
+   "location": "Part A Eq. (5); §C0 subsection 1 Eq. (23); §C3b 'Why the weight is $R^2$'; §C0 subsection 10.2 Eq. (30)",
+   "detail": "This round only adds a pointer from Eq. (23) to Part A's Eq. (5). Reducing the four derivations of the fraction $\\rho A_{\\rm rx}/(\\pi R^2)$ to one, cited by the others, merges duplicated derivations."
+  },
+  {
+   "finding": "follow-up #1",
+   "kind": "cross_section",
+   "location": "§C3b 'Range-weighted point rate', bullet 'Why the weight is $R^2$', Eq. (62)",
+   "detail": "Replace «If the sensor emits average optical power $P$ and shares it among $\\dot N$ points per second, each point gets energy $P/\\dot N$, and the number of signal photoelectrons detected per point is» with «This is §C0 Eq. (23) in clear air, with the energy per point in place of the pulse energy: a sensor that emits average optical power $P$ and shares it among $\\dot N$ points per second gives each point $E_{\\rm pt}=P/\\dot N$, and a point then yields $N_s=\\frac{E_{\\rm pt}}{E_{\\rm ph}}\\frac{\\rho A_{\\rm rx}}{\\pi R^2}\\eta_{\\rm opt}\\,{\\rm PDE}$ detected signal photoelectrons (§C6, Eq. (80)). Setting $N_s$ equal to the number a detection needs, $n_{\\rm req}$ (§C0 subsection 10), gives». Replace the display «  $$N_s=\\frac{P}{\\dot N\\,E_{\\rm ph}}\\cdot\\frac{\\rho\\,A_{\\rm rx}}{\\pi R^2}\\,\\eta_{\\rm opt}\\,\\eta_{\\rm det}\\quad\\Longrightarrow\\quad \\dot N R^2=\\frac{P\\,\\rho\\,A_{\\rm rx}\\,\\eta_{\\rm opt}\\,\\eta_{\\rm det}}{\\pi\\,E_{\\rm ph}\\,N_s} \\tag{62}$$» with «  $$\\dot N R^2=\\frac{P\\,\\rho\\,A_{\\rm rx}\\,\\eta_{\\rm opt}\\,{\\rm PDE}}{\\pi\\,E_{\\rm ph}\\,n_{\\rm req}} \\tag{62}$$». In the following line replace «where $N_s$ is the number of signal photoelectrons a point needs to be detected,» with «where $n_{\\rm req}$ is the number of signal photoelectrons a point needs to be detected,» and «and $\\eta_{\\rm det}$ the detector's photon detection efficiency.» with «and PDE the detector's photon detection efficiency.» (symbol scheme: $n_{\\rm req}$, $E_{\\rm pt}$; PDE as in §C0 and §C6)."
+  },
+  {
+   "finding": "follow-up #2",
+   "kind": "cross_section",
+   "location": "§C0 subsection 10.9 'Small objects'; §C3b 'When the weight is not $R^2$'; §E12 subsection 3, 'What this means', point 5",
+   "detail": "The $1/R^4$ law is derived in §E11.3 Eq. (169), not in §E12 (§C0 subsection 1 is fixed in this list). In §C0 10.9 replace «(subsection 1; §E12)» with «(subsection 1; §E11.3, Eq. (169))». In §C3b replace «so the return falls as $1/R^4$ (§E12).» with «so the return falls as $1/R^4$ (§E11.3, Eq. (169)).». Optional, so that §E12 also earns a pointer: append to §E12 point 5, after «No sensor solves it well at that range.», the sentence «Each such point is also weak: an object of size $s$ smaller than the beam footprint $R\\theta_b$ returns about $(s/R\\theta_b)^2$ of an extended target's signal, so its return falls as $1/R^4$ (§C0 subsection 1; Eq. (169)).»"
+  },
+  {
+   "finding": "follow-up #3",
+   "kind": "cross_section",
+   "location": "§C4b 'Other dimensions' table, Timing row",
+   "detail": "Replace «Ranging precision is cm-class in both» with «Ranging precision is cm-class in both, against the ideal ≈0.3 cm of $\\sigma_R\\approx(c/2)\\sigma_t/\\sqrt{N_s}$ for 100 ps and 20 photons (§C0 subsection 1)». If adopted, §C4b can be added to the 'Used in' cell of the single-target precision row in §C0 subsection 1."
+  },
+  {
+   "finding": "follow-up #4",
+   "kind": "cross_section",
+   "location": "§C3b 'Robotics, industrial and security sensors', opening paragraph",
+   "detail": "This list sets the 'Used in' cell of the §C0 two-target resolution row to '—', because no later section applies $c\\,\\tau_p/2$. To make §C3b use it, insert after «The traps are dual-return rates (two echoes reported per laser shot, which doubles the point count without more shots), range quoted in a low-rate mode, narrow ROIs and figures mixed from different variants.» the sentence «A second echo is reported separately only if it lies at least about $c\\,\\tau_p/2$ behind the first, with $\\tau_p$ the pulse length: 0.75 m for a 5 ns pulse (§C0 subsection 1).» and then change that §C0 'Used in' cell from '—' to '§C3b'."
+  },
+  {
+   "finding": "follow-up #5",
+   "kind": "cross_section",
+   "location": "§C5, terms note under the in-house SPAD-SoC table",
+   "detail": "Replace «and \"297 ps bins\" is the width of the timing histogram's bins.» with «and \"297 ps bins\" is the width of the timing histogram's bins, $c\\,\\Delta t_{\\rm bin}/2=4.5$ cm of range per bin (§C0 subsection 1).» (§C5a already applies the relation to 1 ns bins and 3 GHz sampling; its bin width is written $\\Delta t$ there, which the symbol scheme makes $\\Delta t_{\\rm bin}$.)"
+  },
+  {
+   "finding": "follow-up #6",
+   "kind": "cross_section",
+   "location": "§C4b 'Saturation', Eq. (64), its symbol line and the example",
+   "detail": "§C4b's $\\bar n$ is the photons detected per pulse, which the symbol scheme calls $N_{s,1}$ (the follow-up suggested $\\bar n_1$; $\\bar n$ is the per-point count in §C0 subsection 10). Replace «$$N_{\\rm fired}=N_c\\left(1-e^{-\\bar n/N_c}\\right) \\tag{64}$$» with «$$N_{\\rm fired}=N_c\\left(1-e^{-N_{s,1}/N_c}\\right) \\tag{64}$$»; in the next paragraph replace «$\\bar n$ the mean number of photons the channel would detect in the pulse if no cell were already fired (photons after PDE)» with «$N_{s,1}$ the mean number of photons the channel would detect in the pulse if no cell were already fired (photons after PDE; the $N_{s,1}$ of §C0 Eq. (23))», and every other $\\bar n$ of the Saturation passage (the «mean $\\bar n/N_c$» before Eq. (64) and the three in the sentence on the linear and saturated limits) with $N_{s,1}$. Replace «Example [E] of Eq. (64), with $\\bar n=20$ detected photons in a pulse:» with «Example [E] of Eq. (64), with $N_{s,1}=20$ detected photons in a pulse, close to the ≈22 that §C0 Eq. (23) gives for a 10% target at 200 m with a 25 mm lens and 100 nJ:», and write $N_{s,1}$ for $\\bar n$ in the two example bullets."
+  },
+  {
+   "finding": "follow-up #7; follow-up #8",
+   "kind": "cross_section",
+   "location": "§C3b 'The triplet check' after Eq. (61); §E12 'Lidar points on the car' (Eq. (179)) and 'Radar cross-range cell' (Eq. (180)); §E11.3 'BEV voxelization' bullet",
+   "detail": "§C3b: after «and $f_{\\rm frame}$ is the frame rate (complete fields per second, in Hz or fps).» add «Eq. (61) is the points-per-frame relation of §C0 subsection 3, times the frame rate.» §E12 (symbol scheme: $\\delta\\theta$ for point spacing): replace «A lidar with angular step $\\theta_{\\rm step}$ (in radians) in both directions places points $R\\,\\theta_{\\rm step}$ apart at range $R$,» with «A lidar with angular step $\\delta\\theta$ (in radians) in both directions places points $R\\,\\delta\\theta$ apart at range $R$ (the point-spacing relation of §C0 subsection 3),», write $\\delta\\theta$ for $\\theta_{\\rm step}$ in Eq. (179) and in point 5, and after «cannot tell apart objects closer together across the road than its cross-range cell,» add «the footprint relation $R\\theta$ of §C0 subsection 3:» in place of the comma. §E11.3: replace «is $R\\,\\Delta\\theta$, where $\\Delta\\theta$ is the angular step in radians.» with «is $R\\,\\delta\\theta$, where $\\delta\\theta$ is the angular step in radians (§C0 subsection 3).»"
+  },
+  {
+   "finding": "follow-up #11",
+   "kind": "cross_section",
+   "location": "§C3b 'Range-weighted point rate', bullets 'The metric' and 'Sunlight-limited detection'",
+   "detail": "Both scalings are derived in the 'Scaling' bullet of §C0 subsection 1; §C5a only applies them. Replace «$N_{\\rm points}R^2$ is roughly constant (§C5a).» with «$N_{\\rm points}R^2$ is roughly constant (§C0 subsection 1; §C5a applies it to the AS-DT1).», and «as points are added (§C5a).» with «as points are added (§C0 subsection 1; §C5a applies it to the AS-DT1).»"
+  },
+  {
+   "finding": "follow-up #13",
+   "kind": "cross_section",
+   "location": "§C6(d) 'Dead fraction' bullet, Eq. (82)",
+   "detail": "Keep Eq. (65) of §C4b and introduce §C6's Eq. (82) as partly a repeat: replace «The fraction of time a SPAD is dead is therefore» with «The fraction of time a SPAD is dead is therefore as follows; the paralyzable form repeats Eq. (65) of §C4b, and the non-paralyzable form appears only here:»"
+  },
+  {
+   "finding": "report #8 (consistency flag: subsection 7 versus 10.3)",
+   "kind": "cross_section",
+   "location": "§C0 subsection 10.3, bullet 'Why per point, not per bin'",
+   "detail": "Replace «Subsection 7 uses the same per-point budget.» with «Subsection 7 uses the same per-point budget in its worked cases, with 1,000 bins of 2 ns and an illustrative daylight $b=1$ instead of the 2,000 bins and $b=2.87$ used here.»"
+  },
+  {
+   "finding": "report #5 (consistency flag: InP k inverted)",
+   "kind": "cross_section",
+   "location": "§C4, '2. ... InGaAs' item: «The InP multiplier's ionization-coefficient ratio»",
+   "detail": "Replace «The InP multiplier's ionization-coefficient ratio (the ratio of hole to electron impact-ionization rates) is» with «The InP multiplier's ionization-coefficient ratio $k$, the impact-ionization coefficient of the weaker-ionizing carrier divided by that of the stronger one (electrons over holes in InP, holes over electrons in Si), is». Optionally, in §C7b(a) replace «The ionization-coefficient ratio, the ratio of the two carriers' impact-ionization rates, is $k=0.45$;» with «The ionization-coefficient ratio, the weaker-ionizing carrier's impact-ionization coefficient over the stronger one's (electrons over holes in InP), is $k=0.45$;»."
+  },
+  {
+   "finding": "report #9 (consistency flag: §E4 fog reach)",
+   "kind": "cross_section",
+   "location": "§E4 weather table, Dense fog row",
+   "detail": "The §C0 subsection 8 model gives 0.52 V at 50 m and 0.69 V at 20 m visibility; 1 V needs about 4 m. Replace «Reach ≈ 0.6–1 V, plus near clutter» with «Reach ≈ 0.5–0.7 V at 20–50 m visibility (§C0 subsection 8), plus near clutter». If adopted, shorten the §C0 subsection 8 sentence «The \"≈0.6–1 V\" of §E4 therefore applies only below about 30 m visibility, and reach equals V only near 4 m visibility,» (as set by this list) to «A reach of 0.6 V needs visibility below about 30 m, and reach equals V only near 4 m visibility,»."
+  },
+  {
+   "finding": "follow-up consistency flag (§C3b AT128 entry internally off)",
+   "kind": "cross_section",
+   "location": "§C3b automotive table, Hesai AT128 row",
+   "detail": "128 rows × 0.2° = 25.6°, against the stated 25.4° field. Replace «120° × 25.4°, 0.1° × 0.2°, 13.5 W [P]» with «120° × 25.4°, 0.1° × ≈0.2° (25.4°/128 = 0.198°), 13.5 W [P]»."
+  },
+  {
+   "finding": "follow-up consistency flag (assumed lidar range precision differs by section)",
+   "kind": "cross_section",
+   "location": "§E12 subsection 3, assumptions list: «*Lidar:* angular grid of 0.1° or 0.05° in both directions, range noise ≈5 cm.»",
+   "detail": "§C0 subsection 1 gives an ideal ≈0.3 cm, §C0 subsection 4 assumes 3 cm (now explained there), §C4b says cm-class and §C5a reports 2–4 cm measured outdoors for the Sony AS-DT1. Replace «range noise ≈5 cm.» with «range noise ≈5 cm, an assumed value [E] above the ideal ≈0.3 cm of §C0 subsection 1 and the 2–4 cm measured outdoors for the AS-DT1 (§C5a).»"
+  },
+  {
+   "finding": "report #36 (k values have no source tag)",
+   "kind": "needs_source",
+   "location": "§C0 subsection 6 table: «≈0.02» (silicon) and «≈0.4–0.5» (InGaAs/InP), and the practical gains «≈50–200» and «≈10–20»",
+   "detail": "No source for these values is cited anywhere in the report (§C4 states the InP value without a tag), so this list tags them [U]. A textbook or review reference for $k$ and practical APD gain would let them be tagged [I]."
+  },
+  {
+   "finding": "consistency flag (VL53L5 resolution)",
+   "kind": "needs_source",
+   "location": "§C0 subsection 9: «VL53L5 14 × 10 macro-pixels [I]» (chip table), «VL53L5/L8: 8 × 8 zones» (makers table), «4 × 4 SPADs on the VL53L5»; also §B8",
+   "detail": "The three descriptions are not reconciled: how the 14 × 10 macro-pixels (of 4 × 4 SPADs) are binned into the 8 × 8 output zones needs a source (ST datasheet or a teardown)."
+  },
+  {
+   "finding": "consistency flag (pulse-rate symbol in §C4d)",
+   "kind": "needs_decision",
+   "location": "§C4d Eq. (70): «$$f_p\\le\\frac{c}{2R_{\\max}} \\tag{70}$$»",
+   "detail": "§C0 subsection 1 writes the per-channel pulse rate $\\text{PRF}_{\\rm ch}$ (and subsection 9 now writes $c/(2\\,\\text{PRF})$), while §C4d writes $f_p$. The symbol scheme does not cover this quantity; the author should decide whether §C4d adopts $\\text{PRF}_{\\rm ch}$."
+  },
+  {
+   "finding": "consistency flag (reference form '(§B4a, subsection 4)')",
+   "kind": "needs_decision",
+   "location": "§C0 subsection 9, 'Counting': «(§B4a, subsection 4)»",
+   "detail": "The review asks for '§B4a subsection 4' to match '§C0 subsection 10.3', but the report writes '(§B4a, subsection 4)' in four other places (§B8 twice, the §B8 table and the open-questions list). Left as is pending a report-wide choice of one form."
+  }
+ ]
+}

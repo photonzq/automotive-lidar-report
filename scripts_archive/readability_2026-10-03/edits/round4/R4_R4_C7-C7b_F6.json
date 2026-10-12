@@ -1,0 +1,111 @@
+{
+ "block": "R4_R4_C7-C7b_F6",
+ "edits": [
+  {
+   "id": "R4_R4_C7-C7b_F6-01a",
+   "finding": "Round 4 source research, R4_C7-C7b_F6-01",
+   "old": "The check uses one receiver's $A_{\\rm mode}$, so it assumes that all 50 photoelectrons, and all four of Waymo's speckles, arrive through one receiver. With four separate receivers, as in the §C7a design, the same 50 photoelectrons would need $1.35/4\\approx0.34$ µJ, below Waymo's range, so the agreement holds only if Waymo's four speckles come from within one receiver.",
+   "new": "One receiver is the right basis for the check, because Waymo takes all four speckles through one single-mode receiver: it sums the FFT spectra of successive acquisitions, between which the scanning beam has moved enough to decorrelate the speckle, and its 50 is the total over the four acquisitions [P, Piggott et al. 2025, §3.2 and Fig. 8(b)]. The §C7a design takes its four looks through four receivers at once instead, which divides the energy for the same 50 photoelectrons by four, to $1.35/4\\approx0.34$ µJ.",
+   "why": "Source found by the R4_C7-C7b_F6 research agent; see sources/R4_C7-C7b_F6_findings.md, R4_C7-C7b_F6-01."
+  },
+  {
+   "id": "R4_R4_C7-C7b_F6-01b",
+   "finding": "Round 4 source research, R4_C7-C7b_F6-01",
+   "old": "Eq. (93) for one receiver with $A_{\\rm mode}=74.5$ mm² (a 20 mm aperture at 250 m) and $\\eta=0.25$ gives $50\\times1.28\\times10^{-19}\\times\\pi\\times250^2/(0.05\\times7.45\\times10^{-5}\\times0.25)=1.35$ µJ, inside that range.",
+   "new": "Eq. (93) for one receiver with $A_{\\rm mode}=74.5$ mm² (a 20 mm aperture at 250 m) and $\\eta=0.25$ gives $50\\times1.28\\times10^{-19}\\times\\pi\\times250^2/(0.05\\times7.45\\times10^{-5}\\times0.25)=1.35$ µJ for one ramp. Waymo's energy per point pays for two chirps of 50 photons each: its ideal 0.52 µJ is $2\\times50\\times1.28\\times10^{-19}\\ {\\rm J}/(2.45\\times10^{-11})$, through a −106.1 dB worst-case link [P, Piggott et al. 2025, Table 1]. The like-for-like value is therefore $2\\times1.35=2.7$ µJ at $\\eta=0.25$, 1.6–3.3× Waymo's range, or 1.35 µJ at $\\eta=0.5$, the efficiency of Waymo's 3 dB case, which lies inside it [E].",
+   "why": "Source found by the R4_C7-C7b_F6 research agent; see sources/R4_C7-C7b_F6_findings.md, R4_C7-C7b_F6-01."
+  },
+  {
+   "id": "R4_R4_C7-C7b_F6-02",
+   "finding": "Round 4 source research, R4_C7-C7b_F6-02",
+   "old": "Integrated alternatives are SiN self-injection-locked lasers (42 kHz, 0.65% nonlinearity) and thin-film lithium niobate (TFLN) E-DBR lasers (378 kHz, 1.5%) [P, Bianconi et al. 2025]. Read as peak frequency deviations over a 1 GHz sweep, the reading applied to Waymo's figure above, those nonlinearities are 6.5 and 15 MHz, ≈100–240× the 62.5 kHz that Eq. (108) allows at 300 m. Read as fractional chirp-rate errors, they are still 13–30× above the $5\\times10^{-4}$ that 15 cm at 300 m tolerates. Either way they need pre-distortion or resampling [E].",
+   "new": "Integrated alternatives are SiN self-injection-locked lasers (42 kHz linewidth over 1 ms, 0.65% nonlinearity) and TFLN E-DBR lasers (378 kHz over 1 ms, 1.5%) [I, Bianconi et al. 2025]. Bianconi et al. define the nonlinearity $\\sigma$ as the RMS deviation of the laser frequency from a least-squares straight ramp, divided by the sweep excursion $B$ [I, Bianconi et al. 2025, Supplementary Eq. (4)]. The 0.65% belongs to an unpackaged self-injection-locked chip swept over 500 MHz, which reached 0.08% over 210 MHz once packaged [I, Voloshin et al. 2025]; the 1.5% was measured over a 10.5 GHz sweep [I, Siddharth et al. 2025]. For the parabolic bow of Eq. (108) the peak deviation from the chord is $3\\sqrt5/2\\approx3.35$ times the RMS deviation, so $\\delta\\nu_{\\max}=3.35\\,\\sigma B$ and $\\varepsilon=8\\delta\\nu_{\\max}/B=12\\sqrt5\\,\\sigma\\approx27\\sigma$. If the same fractions hold over a 1 GHz sweep, 0.65% and 1.5% give $\\delta\\nu_{\\max}\\approx22$ and 50 MHz, or $\\varepsilon\\approx0.17$ and 0.40: about 350× and 800× the 62.5 kHz (equivalently the $5\\times10^{-4}$) that Eq. (108) allows for 15 cm at 300 m. The packaged 0.08% is still about 43× too large. They need pre-distortion or resampling [E].",
+   "why": "Source found by the R4_C7-C7b_F6 research agent; see sources/R4_C7-C7b_F6_findings.md, R4_C7-C7b_F6-02."
+  },
+  {
+   "id": "R4_R4_C7-C7b_F6-03a",
+   "finding": "Round 4 source research, R4_C7-C7b_F6-03",
+   "old": "claims more than 1 km for its Eyeonic Vista [P/T] (§B8); Honda has invested in it.",
+   "new": "claims more than 1 km for its Eyeonic Vista [P/T] (§B8). Honda invested in it through its venture arm, Honda Xcelerator Ventures, in September 2024, for an undisclosed amount [P].",
+   "why": "Source found by the R4_C7-C7b_F6 research agent; see sources/R4_C7-C7b_F6_findings.md, R4_C7-C7b_F6-03."
+  },
+  {
+   "id": "R4_R4_C7-C7b_F6-03b",
+   "finding": "Round 4 source research, R4_C7-C7b_F6-03",
+   "old": "has an automated line at the contract manufacturer Jabil with a capacity of about 100k units per year, and the Daimler launch is planned for 2027.",
+   "new": "began production in 2026 on a fully automated final-assembly line at the contract manufacturer Jabil in North America, which it expects to reach 100,000 systems a year [P, Aeva earnings calls of 26 Feb and 12 Aug 2026], and the program plans Daimler Truck's production ramp for 2027 [P, Aeva–Daimler Truck release, 9 Jan 2024].",
+   "why": "Source found by the R4_C7-C7b_F6 research agent; see sources/R4_C7-C7b_F6_findings.md, R4_C7-C7b_F6-03."
+  },
+  {
+   "id": "R4_R4_C7-C7b_F6-03c",
+   "finding": "Round 4 source research, R4_C7-C7b_F6-03",
+   "old": "builds its Lark lidar on silicon photonics made by the foundry Tower Semiconductor, with what it calls",
+   "new": "builds its Lark lidar on the silicon-photonics foundry platform of Tower Semiconductor [P, Tower Semiconductor, 5 Jan 2026], with what it calls",
+   "why": "Source found by the R4_C7-C7b_F6 research agent; see sources/R4_C7-C7b_F6_findings.md, R4_C7-C7b_F6-03."
+  },
+  {
+   "id": "R4_R4_C7-C7b_F6-03d",
+   "finding": "Round 4 source research, R4_C7-C7b_F6-03",
+   "old": "with more than 10 GHz of FM bandwidth, i.e. optical frequency sweep. Its July 2025 heavy-truck nomination (selection for a truck program) names no product, customer or start of production, and does not say FMCW (§D7).",
+   "new": "with more than 10 GHz of FM bandwidth, i.e. optical frequency sweep [P, LuminWave, 10 Sep 2024]. Its heavy-truck nomination of 8 July 2025 (selection for a truck program) names no product, customer or start of production, and does not say FMCW [P, LuminWave, 8 Jul 2025] (§D7).",
+   "why": "Source found by the R4_C7-C7b_F6 research agent; see sources/R4_C7-C7b_F6_findings.md, R4_C7-C7b_F6-03."
+  },
+  {
+   "id": "R4_R4_C7-C7b_F6-04",
+   "finding": "Round 4 source research, R4_C7-C7b_F6-04",
+   "old": "Commercial distributed-feedback lasers (DFBs) reach tens of kHz. At 300 m the SiN self-injection-locked laser below (42 kHz) loses 2.3 dB and the TFLN E-DBR laser (378 kHz) 21 dB [E].",
+   "new": "Narrow-linewidth grades of commercial distributed-feedback lasers (DFBs) reach tens of kHz: AeroDIODE specifies its 20 mW and 40 mW 1550 nm butterfly DFBs at <50 kHz, measured by the phase-noise method at 1 MHz [P, AeroDIODE datasheets PN_A75 and PN_A79, 2026], and Waymo notes that several vendors offer DFBs with linewidths in the low tens of kHz [P, Piggott et al. 2025]. A standard commercial DFB measured by Bianconi et al. showed 802 kHz over 1 ms [I]. The integrated lasers below are quoted with linewidths over 1 ms, which slow frequency noise dominates. The SiN self-injection-locked laser (42 kHz over 1 ms) has a 3 Hz intrinsic linewidth [I, Voloshin et al. 2025], and the TFLN extended distributed Bragg reflector (E-DBR) laser (378 kHz over 1 ms) one of 2.8 kHz [I, Siddharth et al. 2025]. Taken as Lorentzian widths in Eq. (110), the 1 ms values would cost 2.3 dB and 21 dB at 300 m, but the lasers' measured frequency-noise spectra in Eq. (109) give less than 0.01 dB and about 0.2–0.4 dB (up to ≈0.9 dB for a 16 µs useful window) [E].",
+   "why": "Source found by the R4_C7-C7b_F6 research agent; see sources/R4_C7-C7b_F6_findings.md, R4_C7-C7b_F6-04."
+  },
+  {
+   "id": "R4_R4_C7-C7b_F6-05",
+   "finding": "Round 4 source research, R4_C7-C7b_F6-05",
+   "old": "This is why the Chinese race went 192 → 520 → 896 → 2,160 → 4,320 lines in five years.",
+   "new": "This is why the Chinese race went 192 → 520 → 896 → 2,160 → 4,320 lines in under two and a half years, from Huawei's 192-line D3, launched on 26 Dec 2023 [T], to Hesai's ETX with up to 4,320 channels, shown on 17 Apr 2026 [P].",
+   "why": "Source found by the R4_C7-C7b_F6 research agent; see sources/R4_C7-C7b_F6_findings.md, R4_C7-C7b_F6-05."
+  },
+  {
+   "id": "R4_R4_C7-C7b_F6-06",
+   "finding": "Round 4 source research, R4_C7-C7b_F6-06",
+   "old": "Aurora had about 25 driverless trucks in mid-2026 across all generations (no count in the investor-day release below; one trade report says about 20 [T, single source]). It targets 200 by year-end 2026 [P], for about \\$80 M annualized revenue.",
+   "new": "Aurora ran 10 driverless trucks in December 2025 and reduced that fleet in early 2026 to prepare a second-generation fleet [P, Q4 2025 shareholder letter]. It launched that fleet in late July 2026 and expected 20–25 second-generation driverless trucks by the end of September [P, Q2 2026 shareholder letter]; CNBC reported 20 on the road on 22 Sep 2026 [T]. It targets more than 200 by year-end 2026, which it says translates to a revenue run-rate of about \\$80 M a year for its Transportation-as-a-Service business [P, Q2 2026 shareholder letter].",
+   "why": "Source found by the R4_C7-C7b_F6 research agent; see sources/R4_C7-C7b_F6_findings.md, R4_C7-C7b_F6-06."
+  },
+  {
+   "id": "R4_R4_C7-C7b_F6-07a",
+   "finding": "Round 4 source research, R4_C7-C7b_F6-07",
+   "old": "42 kHz (SiN self-injection-locked laser): 0.528, $\\eta_{\\rm coh}=0.59$ (−2.3 dB), energy ×1.7;",
+   "new": "42 kHz, taken as a Lorentzian width (the SiN self-injection-locked laser's linewidth over 1 ms; its measured frequency noise gives less than 0.01 dB, §C7a(f)): 0.528, $\\eta_{\\rm coh}=0.59$ (−2.3 dB), energy ×1.7;",
+   "why": "Source found by the R4_C7-C7b_F6 research agent; see sources/R4_C7-C7b_F6_findings.md, R4_C7-C7b_F6-07."
+  },
+  {
+   "id": "R4_R4_C7-C7b_F6-07b",
+   "finding": "Round 4 source research, R4_C7-C7b_F6-07",
+   "old": "378 kHz (TFLN E-DBR laser): 4.75, $\\eta_{\\rm coh}=0.0087$ (−21 dB), energy ×116: unusable at 300 m.",
+   "new": "378 kHz, taken as a Lorentzian width (the TFLN E-DBR laser's linewidth over 1 ms): 4.75, $\\eta_{\\rm coh}=0.0087$ (−21 dB), energy ×116. The laser itself does far better: its measured frequency noise, a 2.8 kHz white floor plus slower thermal noise, gives about 0.2–0.4 dB at 300 m through Eq. (109) (§C7a(f)) [E].",
+   "why": "Source found by the R4_C7-C7b_F6 research agent; see sources/R4_C7-C7b_F6_findings.md, R4_C7-C7b_F6-07."
+  },
+  {
+   "id": "R4_R4_C7-C7b_F6-A2-12",
+   "finding": "Round 4 source research, Appendix 2 (FMCW and beam steering)",
+   "old": "- Yole on FMCW timing: https://www.edge-ai-vision.com/2024/06/automotive-lidar-deployment-ramps-up-in-2024/",
+   "new": "- Yole on FMCW timing: https://www.edge-ai-vision.com/2024/06/automotive-lidar-deployment-ramps-up-in-2024/\n- Bianconi, Ribes-Pleguezuelo & Silvestri, requirements for integrated FMCW lidar laser sources (1 ms linewidths, RMS chirp nonlinearity), *Nat. Commun.* 16, 6739 (2025), with Author Correction (2026): https://doi.org/10.1038/s41467-025-62027-y\n- Siddharth et al., Pockels extended-DBR (E-DBR) laser on thin-film LN, *Nat. Photonics* 19, 709 (2025) (preprint): https://arxiv.org/abs/2408.01743\n- Voloshin et al., piezo-tunable SiN self-injection-locked laser (3 Hz intrinsic linewidth), *Optica* (2025) (preprint): https://arxiv.org/abs/2411.19264\n- Honda Xcelerator Ventures, investment in SiLC (10 Sep 2024): https://xcelerator.hondainnovations.com/honda-xcelerator-ventures-is-excited-to-announce-our-new-partnership-with-silc-technologies/\n- Aeva Q4 2025 earnings call, automated final-assembly line for 100,000 systems a year (transcript, 26 Feb 2026): https://www.fool.com/earnings/call-transcripts/2026/02/26/aeva-aeva-q4-2025-earnings-call-transcript/\n- Aeva Q2 2026 earnings call, production started on the Jabil North America line (transcript, 12 Aug 2026): https://www.fool.com/earnings/call-transcripts/2026/08/12/aeva-aeva-q2-2026-earnings-call-transcript/\n- Aeva–Daimler Truck series-production selection, Daimler ramp by 2027 (9 Jan 2024): https://www.aeva.com/press/daimler-truck-and-torc-robotics-select-aeva-to-supply-advanced-4d-lidar-technology-for-series-production-autonomous-trucks/\n- Tower Semiconductor–LightIC silicon-photonics collaboration (5 Jan 2026): https://towersemi.com/2026/01/05/01052026/\n- LuminWave heavy-truck L2+ series nomination (8 Jul 2025): https://luminwave.com.cn/heavy-duty-truck-autonomous-driving-project/\n- AeroDIODE 1550LD-5/-6 narrow-linewidth DFB datasheets (<50 kHz by the phase-noise method at 1 MHz; PN_A75, PN_A79, rev. 04/26): https://shop.laserdiodesource.com/wp-content/uploads/2025/04/1550-nm-laser-diode-Model-5-20-mW-Datasheet.pdf ; https://shop.laserdiodesource.com/wp-content/uploads/2025/04/1550-nm-laser-diode-Model-6-40-mW-Datasheet.pdf",
+   "why": "Sources read by the R4_C7-C7b_F6 research agent, added to the group 'FMCW and beam steering'."
+  },
+  {
+   "id": "R4_R4_C7-C7b_F6-A2-13",
+   "finding": "Round 4 source research, Appendix 2 (Technology routes and SPAD)",
+   "old": "- Seyond Falcon K2 datasheet: https://www.seyond.cn/wp-content/uploads/2025/03/Seyond_Falcon-K2-LiDAR_Datasheet_EN_Public_V2.2.0.pdf",
+   "new": "- Seyond Falcon K2 datasheet: https://www.seyond.cn/wp-content/uploads/2025/03/Seyond_Falcon-K2-LiDAR_Datasheet_EN_Public_V2.2.0.pdf\n- 汽车之心 (Autobit), Huawei 192-line lidar D3 launched 26 Dec 2023 (21 Jun 2024): https://www.autobit.xyz/news/3986.html",
+   "why": "Sources read by the R4_C7-C7b_F6 research agent, added to the group 'Technology routes and SPAD'."
+  },
+  {
+   "id": "R4_R4_C7-C7b_F6-A2-14",
+   "finding": "Round 4 source research, Appendix 2 (Robotaxi and trucks)",
+   "old": "- Zoox paid service: https://techcrunch.com/2026/07/30/zoox-clears-final-federal-hurdle-to-launch-paid-robotaxi-service/",
+   "new": "- Zoox paid service: https://techcrunch.com/2026/07/30/zoox-clears-final-federal-hurdle-to-launch-paid-robotaxi-service/\n- Aurora Q4 2025 shareholder letter, 10 driverless trucks in December 2025 (8-K, 11 Feb 2026): https://www.sec.gov/Archives/edgar/data/1828108/000182810826000014/finalaurora25q4sharehold.htm\n- CNBC, Aurora driverless ride and fleet of 20 trucks (22 Sep 2026): https://www.cnbc.com/2026/09/22/aurora-autonomous-semi-ride.html",
+   "why": "Sources read by the R4_C7-C7b_F6 research agent, added to the group 'Robotaxi and trucks'."
+  }
+ ],
+ "skipped": []
+}

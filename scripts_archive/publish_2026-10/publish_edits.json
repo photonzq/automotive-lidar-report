@@ -1,0 +1,37 @@
+[
+ {
+  "id": "isscc-7-3",
+  "old": "- **Measured** [P, ISSCC 2021 paper 7.3, read in full; curve values E]:",
+  "new": "- **Measured** [P, [ISSCC 2021 paper 7.3](https://doi.org/10.1109/ISSCC42613.2021.9365961); curve values E]:"
+ },
+ {
+  "id": "park-predecessor",
+  "old": "- **The device class**, from the group's open-access predecessor, read in full [P; E. Park et al., \"A Back-Illuminated SPAD Fabricated With 40 nm CMOS Image Sensor Technology Achieving Near 40% PDP at 940 nm,\" *IEEE JSTQE* 30(1), 3800207 (2024), [doi:10.1109/JSTQE.2023.3272777](https://doi.org/10.1109/JSTQE.2023.3272777)]:",
+  "new": "- **The device class**, from the group's open-access predecessor [P; E. Park et al., \"A Back-Illuminated SPAD Fabricated With 40 nm CMOS Image Sensor Technology Achieving Near 40% PDP at 940 nm,\" *IEEE JSTQE* 30(1), 3800207 (2024), [doi:10.1109/JSTQE.2023.3272777](https://doi.org/10.1109/JSTQE.2023.3272777)]:"
+ },
+ {
+  "id": "saha-case-study",
+  "old": "**Case study: the \"photonic ski-jump\"** [P: M. Saha, Y. H. Wen, A. S. Greenspon, M. Zimmermann et al. (MITRE, MIT, Sandia and others), \"Nanophotonic waveguide chip-to-world beam scanning\", *Nature* 651, 356–362 (12 Mar 2026), open access; read in full; copy in `refs/`].",
+  "new": "**Case study: the \"photonic ski-jump\"** [P: M. Saha, Y. H. Wen, A. S. Greenspon, M. Zimmermann et al. (MITRE, MIT, Sandia and others), \"Nanophotonic waveguide chip-to-world beam scanning\", *Nature* 651, 356–362 (12 Mar 2026), open access, https://doi.org/10.1038/s41586-025-10038-6]."
+ },
+ {
+  "id": "saha-sources",
+  "old": "Sources: https://doi.org/10.1038/s41586-025-10038-6 (copy: `refs/2026-03-12_Nature_Saha-et-al_Nanophotonic-waveguide-chip-to-world-beam-scanning.pdf`) ; https://pmc.ncbi.nlm.nih.gov/articles/PMC12979198/ ; https://www.analogphotonics.com/wp-content/uploads/2025/07/LiDAR-FS-4S-RevA.pdf ; https://luminwave.com.cn/long-distance-fmcw-series/ ; https://www.hesaitech.com/product/atx/ ; https://www.hesaitech.com/product/at128/ ; https://www.nature.com/articles/s41467-025-62027-y ; https://github.com/bmurmann/ADC-survey ; https://arxiv.org/pdf/2502.09736",
+  "new": "Sources: https://doi.org/10.1038/s41586-025-10038-6 ; https://pmc.ncbi.nlm.nih.gov/articles/PMC12979198/ ; https://www.analogphotonics.com/wp-content/uploads/2025/07/LiDAR-FS-4S-RevA.pdf ; https://luminwave.com.cn/long-distance-fmcw-series/ ; https://www.hesaitech.com/product/atx/ ; https://www.hesaitech.com/product/at128/ ; https://www.nature.com/articles/s41467-025-62027-y ; https://github.com/bmurmann/ADC-survey ; https://arxiv.org/pdf/2502.09736"
+ },
+ {
+  "id": "g7-sample",
+  "old": "These judgements come from reading the 43 press printouts in `refs/INDEX.md` in date order (FT, WSJ, NYT, The Economist, Nikkei Asia, The Washington Post). The report's owner and searches chose the sample, so it is a convenience sample (whatever was at hand, not a random or complete one) and the rates below are indicative. Each follows the format of G1–G3: meaning, evidence for, evidence against, and a fair statement with a confidence level.",
+  "new": "These judgements come from 43 press articles taken in date order (FT, WSJ, NYT, The Economist, Nikkei Asia, The Washington Post), listed with links in Appendix 2. The report's owner and searches chose the sample, so it is a convenience sample (whatever was at hand, not a random or complete one) and the rates below are indicative. Each follows the format of G1–G3: meaning, evidence for, evidence against, and a fair statement with a confidence level."
+ },
+ {
+  "id": "appx1-sony-yonsei",
+  "old": "- **Sony and Yonsei papers:** Sony's ISSCC 2021 paper 7.3 is read in full (§C5a). The VLSI 2025 T1-2 and C27-2 papers, the JSSC 2026 paper and Yonsei's VLSI 2025 T5-4 are closed access and were read only as abstracts. The T1-2 full text would show whether a 905 nm figure or a reflector accompanies its 42.5% at 940 nm, and the JSSC paper probably holds the IMX479's power.",
+  "new": "- **Sony and Yonsei papers:** Sony's ISSCC 2021 paper 7.3 is covered in §C5a. The VLSI 2025 T1-2 and C27-2 papers, the JSSC 2026 paper and Yonsei's VLSI 2025 T5-4 are closed access, and only their abstracts are public. The T1-2 full text would show whether a 905 nm figure or a reflector accompanies its 42.5% at 940 nm, and the JSSC paper probably holds the IMX479's power."
+ },
+ {
+  "id": "appx2-press-heading",
+  "old": "**Paywalled press read in full (printouts supplied by the report's owner).** The PDFs are in `refs/`, with `refs/INDEX.md` mapping each file to the sections that cite it.",
+  "new": "**Press articles (paywalled).** Each title links to the publisher's page."
+ }
+]

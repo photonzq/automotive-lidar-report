@@ -1,0 +1,27 @@
+Round 3 equation renumbering, 2026-10-05 (renumber_equations.py --allow-reorder, report sha 93cba01f51d6 -> 2736ac959c1b)
+
+Duplicated displays merged into references (old tag -> kept tag, old numbering):
+  162, 170, 184 -> 11 (stopping distance, §A6.1)
+  97 -> 93 (energy per point, §C7a)
+  101 -> 33, 146 -> 33, 140 -> 33 (mode-equivalent area / link loss, §C0 10.2)
+  102 -> 34 (beam radius), 103 -> 35 (best-aperture envelope)
+  135 -> 38 (single-speckle detection law, §C0 10.3)
+  177 -> 153 (mono ground-plane error, §E2), 178 -> 150 (stereo error, §E2)
+  186 -> 85 (beat frequency, §C7), 185 -> 56 (coherence length, §C3a)
+New display: 990 (temporary) -> 116, the expanded P_elec of §C7b subsection 3a(a).
+Moves that reorder tags: §C7b items 2(h)-(i) (old 118-120) now follow subsection 3 (old 121); the identity old 147
+now sits in §C10.3a item 4, before old 145.
+
+Map (old -> new) for every number that changed; tags 1-96 are unchanged:
+97->93, 98->97, 99->98, 100->99, 101->33, 102->34, 103->35, 104->100, 105->101, 106->102, 107->103, 108->104,
+109->105, 110->106, 111->107, 112->108, 113->109, 114->110, 115->111, 116->112, 117->113, 118->115, 119->117,
+120->118, 121->114, 122->119, 123->120, 124->121, 125->122, 126->123, 127->124, 128->125, 129->126, 130->127,
+131->128, 132->129, 133->130, 134->131, 135->38, 136->132, 137->133, 138->134, 139->135, 140->33, 141->136,
+142->137, 143->138, 144->139, 145->141, 146->33, 147->140, 148->142, 149->143, 150->144, 151->145, 152->146,
+153->147, 154->148, 155->149, 156->150, 157->151, 158->152, 159->153, 160->154, 161->155, 162->11, 163->156,
+164->157, 165->158, 166->159, 167->160, 168->161, 169->162, 170->11, 171->163, 172->164, 173->165, 174->166,
+175->167, 176->168, 177->147, 178->144, 179->169, 180->170, 181->171, 182->172, 183->173, 184->11, 185->56,
+186->85, 187->174, 188->175, 990->116
+
+Equation numbers quoted outside the report and updated by hand: build/figures/fmcw_tof_system_budget.py
+(Eq. (107) -> Eq. (103), twice); build/figures/truck_long_range_sensing.py (Eq. (170) -> Eq. (11), §A6.1).

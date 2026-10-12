@@ -1,0 +1,244 @@
+{
+ "block": "R4_R3_C4d-C9_C5-C6",
+ "edits": [
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-01",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-01",
+   "old": "About 3.2–3.3 M lidar units were installed in 2025 (3.21 M in §B1; ≈3.32 M per NE Times in §B7.1), at roughly 1.3–1.6 units per car (§F2). Lidar cars are therefore probably only a few percent of China's car fleet in 2026 [E]: 2025's installations correspond to $3.21\\ {\\rm M}/1.6\\approx2.0$ M to $3.32\\ {\\rm M}/1.3\\approx2.6$ M lidar cars. Adding 2024 (1.53 M units, §B1) and 2026 (985k units in Q1, §B1, and an assumed 4–5 M for the whole year) gives $1.53+3.21+4\\approx8.7$ M to $1.53+3.32+5\\approx9.9$ M units installed in 2024–2026, i.e. $8.7/1.6\\approx5.5$ M to $9.9/1.3\\approx7.6$ M lidar cars. Installations before 2024, not quantified here, add to this, so the stock is roughly 6–8 M lidar cars by end-2026. That is about 2% ($7\\ {\\rm M}/350\\ {\\rm M}$) of a Chinese car fleet assumed at ≈350 M [U].",
+   "new": "About 3.2–3.3 M lidar units were installed in 2025 (3.21 M in §B1; ≈3.32 M per NE Times in §B7.1). GGAI (高工智能汽车研究院), which counts cars as well as units, puts 2025 at 3.25 M units on 2.56 M new cars, i.e. $324.84/256.28\\approx1.27$ units per car, below the 1.3–1.6 assumed in §F2 [MR/E]. Earlier years add little: GGAI counts 0.11 M lidar cars in 2022 and 0.44 M in 2023 (0.13 M and 0.57 M units), about 4,000 in 2021 and 1.37 M in 2024 [MR/E], so about $0.004+0.112+0.440+1.374+2.563\\approx4.5$ M lidar cars were on China's roads at end-2025 [E]. Adding 2026 (985k units in Q1, §B1, and an assumed 4–5 M for the whole year) at 1.27 units per car gives $4.5+4/1.27\\approx7.6$ M to $4.5+5/1.27\\approx8.4$ M lidar cars by end-2026 [E]. That is about 2% ($7.6/371\\approx2.0\\%$ to $8.4/371\\approx2.3\\%$) of the 371 M automobiles registered in China at 30 June 2026, a count that includes trucks and buses [P, Ministry of Public Security], so lidar cars remain only a few percent of the fleet [E].",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-01."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-02",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-02",
+   "old": "are short (about 100–200 µm) but draw about 0.1–25 mW per $\\pi$ of phase shift each. Heaters with trenches or undercuts reach 0.14 mW/π but respond in 200–300 µs, while the thermal shifters of MIT's 50-element array need 13 mW/π (§C10.2b); the 25 mW/π upper end is unverified [U].",
+   "new": "are short (about 60–200 µm) but draw about 0.1–25 mW per $\\pi$ of phase shift each. Heaters with trenches or undercuts reach 0.14 mW/π but respond in 200–300 µs, while the thermal shifters of MIT's 50-element array need 13 mW/π (§C10.2b). The upper end is a compact, fast heater without thermal isolation: a 61.6 µm doped-silicon heater in a standard oxide-clad CMOS process needs 24.77 mW/π at a 130 kHz modulation bandwidth [I, Harris *et al.*, *Opt. Express* 22, 10487 (2014)].",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-02."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-03",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-03",
+   "old": "InnovizOne: native 10% range 110 m inside its 20° × 8° ROI (140 m with pixel summation), 60/75 m outside, at 20 klx [P]",
+   "new": "InnovizOne (Eagle configuration): native 10% range 110 m inside its 20° × 8° ROI (140 m with pixel summation) and 60 m native (75 m with summation) outside it, at 20 klx with detection defined as 90% true positives and 5% false alarms per pixel [P]",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-03."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-04a",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-04",
+   "old": "ATX: **17 SiPM dies × 4 channels** [T]",
+   "new": "ATX: **17 SiPM dies** [T, teardown relayed by MyDrivers] for **64 physical channels** [T, NE Times]; how the channels map onto the dies is not public [U]",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-04."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-04b",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-04",
+   "old": "**ATX (17 SiPM dies × 4 channels)**",
+   "new": "**ATX (17 SiPM dies, 64 physical channels)**",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-04."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-04c",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-04",
+   "old": "**ATX: 17 SiPM dies × 4 channels, vendor not public** (in paywalled TechInsights DDT-2505-806)",
+   "new": "**ATX: 17 SiPM dies for 64 physical channels, vendor not public** (die-level detail in paywalled TechInsights DDT-2505-806)",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-04."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-05",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-05",
+   "old": "The Feb 2026 manual calls it a \"1-D rotating mirror (hybrid solid-state)\", refers to more than one mirror surface and lists 10 Hz [P, manual A07].",
+   "new": "The ATX S01 user manual (A07, May 2026, §E9) calls it a \"1-D rotating mirror (hybrid solid-state)\", refers to more than one mirror surface and lists 10 Hz [P].",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-05."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-06a",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-06",
+   "old": "RoboSense M1 (125 lines at 15 Hz [P]): each of its five modules carries one laser (a teardown confirms one laser per module [I]) and scans every line of its own horizontal tile, so that $N_{\\rm par}=1$ per tile in Eq. (69), the mirror makes $S=125\\times15/1=1{,}875$ sweeps/s, a resonant fast axis near $f_{\\rm mirror}=S/2=0.94$ kHz.",
+   "new": "RoboSense M1 (125 lines at 10 Hz [P, user guide]; RoboSense's January 2020 launch release gave 15 Hz for the pre-series unit): each of its five modules carries one laser (a teardown confirms one laser per module [I]) and scans every line of its own horizontal tile, so that $N_{\\rm par}=1$ per tile in Eq. (69), the mirror makes $S=125\\times10/1=1{,}250$ sweeps/s, a resonant fast axis near $f_{\\rm mirror}=S/2=0.63$ kHz. The point rate fits: $750{,}000/(125\\times10)=600$ points per line, one every 0.2° over 120° [P/E].",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-06."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-06b",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-06",
+   "old": "1,875 sweeps/s for the RoboSense M1",
+   "new": "1,250 sweeps/s for the RoboSense M1",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-06."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-06c",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-06",
+   "old": "$1{,}875/10\\approx190$ for the M1",
+   "new": "$1{,}250/10=125$ for the M1",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-06."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-06d",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-06",
+   "old": "which gives 0.3–0.94 kHz for the products above. For the M1 that is 0.94 kHz, while the maker of its module mirror rates the fast axis at 1.2–1.3 kHz [I].",
+   "new": "which gives 0.30–0.63 kHz for the products above. For the M1 that is 0.63 kHz at its 10 Hz frame rate, about half the 1.2–1.3 kHz at which the maker of its module mirror rates the fast axis [I]; that rating matches the 20 Hz to which the M1's GAZE function can switch ($125\\times20/2=1{,}250$ Hz) [P/E].",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-06."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-07a",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-07",
+   "old": "| 2013–2020 | **Capital, from the Vaud commercial register:** CHF 100 k at founding (statutes 1 Jul 2013, seat Ecublens; board Charbon, Florin and André Borowski, whose 2011 SPAD-imager patents the company later held), rising to **CHF 429,444** by Aug 2020, mostly through six conversions of loans into shares totalling ≈CHF 3.3 M. Implied conversion prices: ≈CHF 27 per share (2016), ≈44 (2018), 48 (2019) and ≈29.8 (Aug 2020, a down-round) | [P, register; E arithmetic] |",
+   "new": "| 2013–2020 | **Capital, from the Vaud commercial register and its SOGC notices:** CHF 100,000 in 100,000 registered shares of CHF 1 at founding (statutes 1 Jul 2013, seat Ecublens; board Charbon, Florin and André Borowski, whose 2011 SPAD-imager patents the company later held), rising to **CHF 429,444, i.e. 429,444 shares,** by Aug 2020. Six conversions of loans into shares turned CHF 3.46 M of claims into 141,087 shares: 34,000 at CHF 5 (Oct 2014), 16,400 at CHF 5 (Nov 2015), 14,818 at CHF 27 (Nov 2016), 19,891 at CHF 44 (Apr 2018), 14,528 at CHF 48 (Aug 2019) and 41,450 at ≈CHF 29.8 (Aug 2020, a down-round). The other 188,357 new shares came from rights exercised under the conditional capital (71,164) and from increases with no set-off stated (117,193), at prices not published | [P, register and SOGC; E arithmetic] |",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-07."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-07b",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-07",
+   "old": "largely as convertible loans (≈CHF 3.3 M converted by 2020 [P, register])",
+   "new": "largely as convertible loans (≈CHF 3.46 M of claims converted by 2020 [P, register and SOGC])",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-07."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-07c",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-07",
+   "old": "The \\$7.67 M price is about CHF 6.7 M. Taking the CHF 429,444 of capital as 429,444 shares of CHF 1 nominal [U], that is $6.7\\times10^{6}/429{,}444\\approx15.6$ CHF per share, below every 2016–20 conversion price (CHF 27–48).",
+   "new": "The \\$7.67 M price is about CHF 6.7 M: $7.67\\ {\\rm M}\\times0.8688\\ {\\rm CHF/\\$}=6.66$ M at the Federal Reserve's H.10 rate for the closing date, 15 Dec 2023 [P, H.10; E]. The CHF 429,444 of capital is 429,444 registered shares of CHF 1 [P, register], so that is $6.66\\times10^{6}/429{,}444\\approx15.5$ CHF per share, below every conversion price from 2016 to 2020 (CHF 27–48) but three times the CHF 5 of the 2014–15 conversions [E].",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-07."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-08a",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-08",
+   "old": "dark count rate (DCR, the rate of spurious counts in total darkness, caused by thermally generated and tunnelling carriers) **3.5 kcps typical, 6 Mcps maximum, per SPAD** (kcps and Mcps are thousands and millions of counts per second; temperature not stated; values marked \"reference\");",
+   "new": "dark count rate (DCR, the rate of spurious counts in total darkness, caused by thermally generated and tunnelling carriers) **3.5 kcps typical and 6 Mcps maximum, both as the average over the SPADs** (kcps and Mcps are thousands and millions of counts per second; temperature not stated). Only the typical value is marked \"for reference only\". The maximum, about $6\\times10^{6}/3.5\\times10^{3}\\approx1{,}700$ times the typical value and the same in the 2024 and 2026 versions of the flyer, is a loose limit on the array average rather than the worst SPAD [P; reading E];",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-08."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-08b",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-08",
+   "old": "dead time 15 ns typical at 99% accumulation, longer than the 6 ns measured on the ISSCC 2021 development chip behind IMX459 (specification table above), possibly because of a different definition or operating point [U];",
+   "new": "dead time, defined as the width of the SPAD's output pulse and again averaged over the SPADs, given two ways: 15 ns typical (20 ns maximum) for the width that 99% of pulses do not exceed (the flyer's \"accumulation 99 %\"), and 9 ns typical (11.5 ns maximum) for the most frequent width [P; reading of \"accumulation\" E]. The most frequent width is the one to compare with the 6 ns measured on the ISSCC 2021 development chip behind IMX459 (specification table above); the remaining 3 ns may reflect a different definition or operating point [U];",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-08."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-09a",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-09",
+   "old": "four mode settings: 20 m and 30 m at 30 fps, and 30 m and 40 m at 15 fps [P, spec sheet]",
+   "new": "five mode settings: 20 m at 30 fps; 30 m at 30 fps (the standard mode), at 15 fps, and at 30 fps with 288 points; and 40 m at 15 fps [P, spec sheet and user's guide]",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-09."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-09b",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-09",
+   "old": "In its 40 m mode the sheet also tabulates outdoor figures out to 40 m, with the ambient level unstated.",
+   "new": "In its 40 m mode the sheet also tabulates outdoor figures out to 40 m; Sony's user's guide gives the test conditions as 1,000 lx indoors and 40,000 lx outdoors [P].",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-09."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-09c",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-09",
+   "old": "Industrial (drones, AMRs, service robots); Class 1 under IEC 60825-1:2014; operating 0–40 °C [P]",
+   "new": "Industrial (drones, AMRs, service robots); Class 1 under IEC 60825-1:2014; performance guaranteed at 0–40 °C, operation from −5 to +45 °C [P]",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-09."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-10",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-10",
+   "old": "**No Hesai \"V-series\" chip name exists**; the generations are the 4th-gen ASIC, Fermi C500 and Picasso",
+   "new": "Hesai's 2023 prospectus and a 2023 Hesai slide number its in-house ASICs v1.0, v1.5, V2.0, V3.0 and a planned V4.0 [P], relayed as \"V1.0 ... V4.0\" chip architectures by ResearchInChina (Oct 2023) [MR]; these are version numbers, not a chip family. Its later releases name the 4th-generation platform (ATX, 2024–25), whose Fermi C500 controller (Nov 2025) completes it, and the 5th-generation Picasso SPAD-SoC [P]",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-10."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-11a",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-11",
+   "old": "| Hesai ATX | SiPM (17 dies / 64 channels), TI, 3peak and Infineon parts [I] |",
+   "new": "| Hesai ATX | SiPM: 17 dies [T] for 64 physical channels [T], which Hesai's ATX_S01 manual lists as 64 \"normal\" plus 52 \"super-resolution\" output channels [P]; TI, 3peak and Infineon parts [I] |",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-11."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-11b",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-11",
+   "old": "The ATX uses 64 physical channels and multiplies effective lines by laser addressing",
+   "new": "The ATX uses 64 physical channels [T]; its ATX_S01 configuration outputs 116 channels, 64 \"normal\" and 52 \"super-resolution\", by a scheme Hesai has not described [P]",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-11."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-11c",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-11",
+   "old": "AT128 128 channels, ATX 256 [P], whose laser-addressed lines share 64 physical receive channels (§C4b)",
+   "new": "AT128 128 channels; ATX 116 in its ATX_S01 configuration (64 \"normal\" and 52 \"super-resolution\" channels on 64 physical receive channels, §C4b) and 256 in the flagship configuration of the version delivered from April 2026 [P]",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-11."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-11d",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-11",
+   "old": "The ATX's 256 lines share 64 physical receive channels (§C4b), so each receive channel handles $3.84\\times10^{6}/64=60$ kpts/s, still about a tenth of the limit.",
+   "new": "The ATX_S01 configuration spreads $1.74\\times10^{6}$ pts/s over 64 physical receive channels (§C4b), $1.74\\times10^{6}/64\\approx27$ kpts/s each; if the 256-line version kept 64 channels, each would handle $3.84\\times10^{6}/64=60$ kpts/s, still about a tenth of the limit [P/T/E].",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-11."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-12a",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-12",
+   "old": "| Sep 2013 / 2014 | Fastree3D SA incorporated in Lausanne (EPFL Innovation Park; office in Delft) as an **EPFL + TU Delft spin-off**. Florin is CEO, Charbon CSO, Lucio Carrara CTO. It starts with more than 15 patents from about 20 years of academic work | [P, company \"About\"; T] |",
+   "new": "| Jul 2013 | Fastree3D SA founded: statutes of 1 Jul 2013, entered in the Vaud register on 9 Jul 2013 and published on 12 Jul 2013, with its legal seat in Ecublens and its address in the EPFL science park (Parc Scientifique EPFL, PSE-C, 1015 Lausanne), renamed EPFL Innovation Park in 2014. The company calls itself a 2014 **EPFL + TU Delft spin-off**, with an office in Delft. Florin is CEO, Charbon CSO, Lucio Carrara CTO. It starts with more than 15 patents from about 20 years of academic work | [P, register and SOGC; EPFL; company \"About\"; T] |",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-12."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-12b",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-12",
+   "old": "Its 2025 annual report lists **Fastree3D SA** (Switzerland, Sep 2013, capital CHF 429,444) as a 100% subsidiary for \"Development of LiDAR\".",
+   "new": "Its 2025 annual report lists **Fastree3D SA** (Switzerland, capital CHF 429,444) as a 100% subsidiary for \"Development of LiDAR\"; Hesai dates it to September 2013, also in its Hong Kong listing document, two months after the July 2013 of the commercial register.",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-12."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-12c",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-12",
+   "old": "and the registered address moves to the EPFL Innovation Park (the legal seat stays Ecublens)",
+   "new": "and the registered address returns to the EPFL Innovation Park (Building E, 1015 Lausanne) after seven years at an Ecublens street address (the legal seat stays Ecublens)",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-12."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-13a",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-13",
+   "old": "| RoboSense EM4 (1 scan axis) | 120°×27° |",
+   "new": "| RoboSense EM4 (1 scan axis) | 120°×27° [P]; the lens, not the IMX479-class chip, sets this field (Sony's 120° × 26° is its own test system at 0.05°) |",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-13."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-13b",
+   "finding": "Round 4 source research, R3_C4d-C9_C5-C6-13",
+   "old": "over 120° × 26° |",
+   "new": "over 120° × 26°, the field of Sony's own lidar system at 0.05° in both axes rather than a property of the chip [I, JSSC 2026 abstract] |",
+   "why": "Source found by the R3_C4d-C9_C5-C6 research agent; see sources/R3_C4d-C9_C5-C6_findings.md, R3_C4d-C9_C5-C6-13."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-A2-29",
+   "finding": "Round 4 source research, Appendix 2 (Lidar market and Western programs)",
+   "old": "- Hesai, ATX \"best-selling long-range lidar in the ADAS segment\" and the Yole 43% share (May 2026): https://www.prnewswire.com/news-releases/hesai-secures-design-win-from-another-top-european-oem-adding-1-million-unit-order-302777712.html",
+   "new": "- Hesai, ATX \"best-selling long-range lidar in the ADAS segment\" and the Yole 43% share (May 2026): https://www.prnewswire.com/news-releases/hesai-secures-design-win-from-another-top-european-oem-adding-1-million-unit-order-302777712.html\n- GGAI (高工智能汽车研究院), passenger-car lidar fitment in cars and units, 2022–2025: https://www.sohu.com/a/650045051_121136454 ; https://www.sohu.com/a/773626453_121136454 ; https://www.sohu.com/a/872160040_121136454 ; https://news.qq.com/rain/a/20260317A0627W00 ; https://k.sina.com.cn/article_7857141524_1d452771401902a7gg.html\n- ResearchInChina (佐思汽研), 2022–2024 lidar installations (1.529 M in 2024, 6.0%): https://www.eefocus.com/article/1819136.html\n- Ministry of Public Security, vehicle fleet at end-2024, end-2025 and 30 Jun 2026 (via gov.cn and Xinhua): https://www.gov.cn/lianbo/bumen/202501/content_6999762.htm ; https://www.gov.cn/lianbo/202601/content_7056115.htm ; https://www.news.cn/politics/20260714/6dc71608fee14901a0b25a9351078267/c.html",
+   "why": "Sources read by the R3_C4d-C9_C5-C6 research agent, added to the group 'Lidar market and Western programs'."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-A2-30",
+   "finding": "Round 4 source research, Appendix 2 (OPA devices, reviews and receive-side analysis)",
+   "old": "- Goodman, *Speckle Phenomena in Optics: Theory and Applications* (Roberts & Company, 2007), §4.6.1, mean and variance of integrated speckle (degrees of freedom of an aperture-integrated speckle field); second edition, SPIE Press 2020: https://doi.org/10.1117/3.2548484",
+   "new": "- Goodman, *Speckle Phenomena in Optics: Theory and Applications* (Roberts & Company, 2007), §4.6.1, mean and variance of integrated speckle (degrees of freedom of an aperture-integrated speckle field); second edition, SPIE Press 2020: https://doi.org/10.1117/3.2548484\n- Harris *et al.*, compact thermo-optic Si phase shifter (61.6 µm, 24.77 mW/π, 130 kHz), *Opt. Express* 22, 10487 (2014): https://doi.org/10.1364/OE.22.010487 (open access; arXiv: https://arxiv.org/abs/1410.3616)",
+   "why": "Sources read by the R3_C4d-C9_C5-C6 research agent, added to the group 'OPA devices, reviews and receive-side analysis'."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-A2-31",
+   "finding": "Round 4 source research, Appendix 2 (Additional verification sources)",
+   "old": "- FLIR/Veoneer night-vision milestones: https://oem.flir.com/about/news/flir-technology-used-in-new-night-vision-system-from-veoneer/",
+   "new": "- FLIR/Veoneer night-vision milestones: https://oem.flir.com/about/news/flir-technology-used-in-new-night-vision-system-from-veoneer/\n- InnovizOne series-production datasheet (Apr 2023; Eagle and Falcon configurations, native and pixel-summation ranges at 20 klx): https://levelfivesupplies.com/wp-content/uploads/2023/08/InnovizOne-Series-Production-Datasheet-18.04.2023.pdf",
+   "why": "Sources read by the R3_C4d-C9_C5-C6 research agent, added to the group 'Additional verification sources'."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-A2-32",
+   "finding": "Round 4 source research, Appendix 2 (Technology routes and SPAD)",
+   "old": "- RoboSense M3 at CES 2024 (940 nm, 50–70% cheaper than 1,550 nm): https://en.prnasia.com/releases/global/robosense-announces-new-m-platform-lidar-sensors-at-ces-2024-433294.shtml",
+   "new": "- RoboSense M3 at CES 2024 (940 nm, 50–70% cheaper than 1,550 nm): https://en.prnasia.com/releases/global/robosense-announces-new-m-platform-lidar-sensors-at-ces-2024-433294.shtml\n- Hesai ATX_S01 user manual A07 (20 May 2026; 116 channels = 64 normal + 52 super-resolution; 1-D rotating mirror; 10 Hz): https://www.hesaitech.com/wp-content/uploads/2026/05/ATX_S01_User_Manual_A07-en-260520.pdf\n- Hesai, Fermi C500 and 256-line ATX (24 Nov 2025; flagship configuration, deliveries from April 2026): https://www.hesaitech.com/cn/news/1384\n- TechInsights, partial ATX teardown (Electronics360, 29 Aug 2025): https://electronics360.globalspec.com/article/22673/techinsights-teardown-hesai-atx-lidar\n- RoboSense RS-LiDAR-M1 user guide (rev. 1.7, Dec 2021; 10 Hz, ≈750,000 pts/s): https://cdn.robosense.cn/20211220200638_20760.pdf\n- RoboSense M1 launch release (2 Jan 2020; 125 beams, 15 Hz for the pre-series unit): http://www.thomas-pr.com/robosense/robosensem1releaseces2020.html\n- RoboSense GAZE release (29 Jun 2021; 10 Hz to 20 Hz, ROI 0.2° to 0.1°): https://www.businesswire.com/news/home/20210629005665/en/\n- RoboSense M1 Plus store page (10 Hz; 787,500 pts/s): https://store.robosense.ai/products/m1-plus\n- Sony IMX560-AAMV flyer Ver. 1.1 (Apr 2026; DCR and dead time \"average per SPAD\"): https://www.sony-semicon.com/files/62/flyer_industry/IMX560-AAMV_Flyer.pdf\n- Sony AS-DT1 spec sheet (Feb–Apr 2026, via Aegis Electronic Group; five modes): https://aegis-elec.com/mwdownloads/download/link/id/7568\n- Sony AS-DT1 User's Guide (tentative, Oct 2025–Jan 2026; mode descriptions; 1,000 lx indoor and 40,000 lx outdoor test conditions): https://aegis-elec.com/mwdownloads/download/link/id/7523\n- Hesai F-1/A (2 Feb 2023; v1.0/v1.5 ASICs in production, v2.0/v3.0 in development, v4.0 planned): https://www.sec.gov/Archives/edgar/data/1861737/000110465923009861/tm2120356-22_f1a.htm\n- ResearchInChina, Automotive LiDAR Industry Report 2023, free excerpt (Hesai V1.0–V4.0 chip slide, p. 6): http://www.researchinchina.com/UpLoads/ArticleFreePartPath/20231103150900.pdf\n- Hesai ATX launch (22 Apr 2024; 4th-generation platform): https://www.hesaitech.com/hesai-launches-new-ultra-wide-fov-long-range-atx-lidar/\n- Hesai ATX product page (\"256 (Highest Supported Channels)\", 230 m, 3.84 Mpts/s, 8 W): https://www.hesaitech.com/product/atx/",
+   "why": "Sources read by the R3_C4d-C9_C5-C6 research agent, added to the group 'Technology routes and SPAD'."
+  },
+  {
+   "id": "R4_R3_C4d-C9_C5-C6-A2-33",
+   "finding": "Round 4 source research, Appendix 2 (Fastree3D history (§C3a subsection 2; §C5))",
+   "old": "- Knowmade, Hesai lidar patent landscape (Nov 2025): https://www.knowmade.com/technology-news/semiconductor-news/sensing-imaging-news/from-competitor-to-leader-hesai-in-lidar-patent-landscape/",
+   "new": "- Knowmade, Hesai lidar patent landscape (Nov 2025): https://www.knowmade.com/technology-news/semiconductor-news/sensing-imaging-news/from-competitor-to-leader-hesai-in-lidar-patent-landscape/\n- SOGC (FOSC) notices for Fastree3D SA, 2013–2024 (founding 12 Jul 2013; six set-offs of claims, 2014–20; addresses 2017 and 2024): https://www.shab.ch/shabforms/servlet/Search?EID=7&DOCID=974895 ; full texts from 2016 in the Zefix record: https://www.zefix.admin.ch/ZefixREST/api/v1/firm/1146596.json\n- Federal Reserve H.10, daily rates 11–15 Dec 2023 (CHF 0.8688, CNY 7.1179 per US\\$ on 15 Dec) and 25–29 Dec 2023: https://www.federalreserve.gov/releases/h10/20231218/ ; https://www.federalreserve.gov/releases/h10/20240102/\n- EPFL, the science park renamed EPFL Innovation Park in 2014 (29 Aug 2018): https://actu.epfl.ch/news/epfl-fostering-innovation-for-25-years\n- Hesai Hong Kong listing document, accountants' report (Sep 2025; subsidiary table, Fastree3D SA \"September 2013\"): https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0916/11842018/sehk25083100407.pdf",
+   "why": "Sources read by the R3_C4d-C9_C5-C6 research agent, added to the group 'Fastree3D history (§C3a subsection 2; §C5)'."
+  }
+ ],
+ "skipped": []
+}

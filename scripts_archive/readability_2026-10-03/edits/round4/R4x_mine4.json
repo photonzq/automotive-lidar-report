@@ -1,0 +1,13 @@
+{
+ "block": "R4x_mine4",
+ "edits": [
+  {
+   "id": "R4x_mine4-001",
+   "finding": "Post-merge check (check_eq_sections.py) after Round 4: a section pointer read as the equation's location",
+   "old": "gives about 0.2–0.4 dB at 300 m through Eq. (109) (§C7a(f)) [E].",
+   "new": "gives about 0.2–0.4 dB at 300 m through Eq. (109), with the noise data of §C7a(f) [E].",
+   "why": "Eq. (109) is in §C7b subsection 2(e), a few lines above; \"(§C7a(f))\" named the source of the measured frequency noise, but read as the place of the equation."
+  }
+ ],
+ "skipped": []
+}

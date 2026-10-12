@@ -1,0 +1,774 @@
+{
+ "block": "03_C0_part10",
+ "edits": [
+  {
+   "id": "03_C0_part10-001",
+   "finding": "report #6",
+   "old": "- **Direct detection loses signal as $D^2/R^2$ at every range** (10.2). A coherent (FMCW) receiver collects only the light in one spatial mode, so its loss is flat out to the beam's Rayleigh range and falls beyond it.",
+   "new": "- **Direct detection collects a fraction proportional to $D^2/R^2$ at every range** (10.2), with $D$ the aperture diameter and $R$ the range. A coherent (FMCW) receiver collects only the light in one spatial mode, so its collected fraction is flat out to the beam's Rayleigh range and falls beyond it.",
+   "why": "What scales as D^2/R^2 is the collected fraction; 'loss ... falls' had the wrong direction."
+  },
+  {
+   "id": "03_C0_part10-002",
+   "finding": "report #7",
+   "old": "the ToF design must span 56–82 dB of optical signal, twice that in its electronics. The best FMCW design must span about 45 dB, and field detection keeps that figure electrically.",
+   "new": "the ToF design must span 56–82 dB of optical signal; a linear ToF receiver, whose photocurrent is proportional to optical power, would see twice that in dB at its amplifier. The best FMCW design must span about 45 dB, and because its beat current is proportional to the optical field, the square root of power, the electrical span stays 45 dB.",
+   "why": "The SPAD design has no linear amplifier, and 'field detection' was used before being explained."
+  },
+  {
+   "id": "03_C0_part10-003",
+   "finding": "report #38",
+   "old": "Atmospheric turbulence would distort the wavefront and lower heterodyne efficiency at long range (Frehlich and Kavaya 1991).",
+   "new": "Atmospheric turbulence would distort the wavefront and lower heterodyne efficiency at long range (Frehlich and Kavaya 1991) [I].",
+   "why": "Evidence tag missing on the citation."
+  },
+  {
+   "id": "03_C0_part10-004",
+   "finding": "symbol scheme",
+   "old": "- $E_{\\rm tx}$: optical energy transmitted per point, summed over all shots",
+   "new": "- $E_{\\rm pt}$: optical energy transmitted toward one point, summed over all shots",
+   "why": "Symbol scheme: E_pt for the optical energy toward one point."
+  },
+  {
+   "id": "03_C0_part10-005",
+   "finding": "report #40",
+   "old": "63 mm² against the 491 mm² of a 25 mm aperture at 200 m.",
+   "new": "63 mm² at 1,550 nm against the 491 mm² of a 25 mm aperture at 200 m.",
+   "why": "A_mode depends on wavelength; state it."
+  },
+  {
+   "id": "03_C0_part10-006",
+   "finding": "report #38",
+   "old": "**The FMCW value, 0.25, is a design value about 1.5× above the best coherent chain measured so far.** Waymo's lab chain measured 0.112 end to end, or 0.168 without its Hann window (Piggott et al. 2025, App. A), and Pointcloud's integrated array 0.057 once its amplifier noise is counted (Settembrini et al. 2026).",
+   "new": "**The FMCW value, 0.25, is a design value about 1.5× above the best coherent chain measured so far.** Waymo's lab chain measured 0.112 end to end, or 0.168 without its Hann window (Piggott et al. 2025, App. A) [P], and Pointcloud's integrated array 0.057 once its amplifier noise is counted (Settembrini et al. 2026) [P].",
+   "why": "Evidence tags missing on both measured efficiencies."
+  },
+  {
+   "id": "03_C0_part10-007",
+   "finding": "symbol scheme; report #2",
+   "old": "$$\\bar n=\\frac{\\eta\\,E_{\\rm tx}}{E_{\\rm ph}}\\,\\mathcal{L}(R), \\tag{29}$$\nwhere $E_{\\rm tx}/E_{\\rm ph}$ is the number of photons transmitted per point, $\\mathcal{L}(R)$ the share of them the receiver can use and $\\eta$ the share of those that become photoelectrons. The link loss in dB is $-10\\log_{10}\\mathcal{L}$, so a larger number of dB means less light.",
+   "new": "$$\\bar n=\\frac{\\eta\\,E_{\\rm pt}}{E_{\\rm ph}}\\,\\mathcal{L}(R), \\tag{29}$$\nwhere $E_{\\rm pt}/E_{\\rm ph}$ is the number of photons transmitted per point, $\\mathcal{L}(R)$ the share of them the receiver can use and $\\eta$ the share of those that become photoelectrons. The link loss in dB is $-10\\log_{10}\\mathcal{L}$, so a larger number of dB means less light. Where the text says that a loss rises or falls, it means this dB value.",
+   "why": "E_pt per the scheme; fix the verb convention for 'link loss' once, since L itself is a fraction."
+  },
+  {
+   "id": "03_C0_part10-008",
+   "finding": "symbol scheme",
+   "old": "radiates $\\rho E_{\\rm tx}/\\pi$ per steradian toward the sensor.",
+   "new": "radiates $\\rho E_{\\rm pt}/\\pi$ per steradian toward the sensor.",
+   "why": "Symbol scheme: E_pt."
+  },
+  {
+   "id": "03_C0_part10-009",
+   "finding": "report #40",
+   "old": "i.e. 94.1 dB. Clear air adds 0.15 dB, for 94.2 dB.",
+   "new": "i.e. 94.1 dB. Clear air at 940 nm adds 0.15 dB, for 94.2 dB.",
+   "why": "The 0.15 dB is the 940 nm value."
+  },
+  {
+   "id": "03_C0_part10-010",
+   "finding": "report #27",
+   "old": "\\,d^2r . \\tag{32}$$\nIn a monostatic system (one aperture shared by transmitter and receiver)",
+   "new": "\\,d^2r . \\tag{32}$$\n\n**Why the beam is launched with $w_0=0.45D$.** A Gaussian beam launched through a circular aperture of radius $a=D/2$ faces a trade-off. A wide beam fills the aperture and diffracts least, but its edges are clipped; a narrow beam passes whole but spreads faster. The standard way to settle this is to maximize the far-field on-axis intensity at a fixed launched power. The launched field is $E_0e^{-r^2/w_0^2}$, where $r$ is the distance from the beam axis and $E_0\\propto\\sqrt{P}/w_0$ for a beam of power $P$. The far-field on-axis amplitude is the integral of this field over the aperture: $\\int_0^aE_0e^{-r^2/w_0^2}\\,2\\pi r\\,dr=\\pi w_0^2E_0\\,(1-e^{-a^2/w_0^2})$. At fixed $P$ it therefore scales as $w_0\\,(1-e^{-a^2/w_0^2})$. Setting its derivative with respect to $w_0$ to zero gives $e^{x^2}=1+2x^2$ with $x=a/w_0$. The solution is $a/w_0=1.12$, i.e. $w_0=0.89a\\approx0.45D$. At the optimum the aperture passes $1-e^{-2(a/w_0)^2}\\approx92\\%$ of the power, or 91.5% ($t=0.915$) at exactly $0.45D$. By reciprocity the same choice maximizes the on-axis response of the matched single-mode receiver, so one value serves transmit and receive.\n\nIn a monostatic system (one aperture shared by transmitter and receiver)",
+   "why": "Put the w0 = 0.45D derivation before t and 0.45 are first used (paragraph moved, text unchanged)."
+  },
+  {
+   "id": "03_C0_part10-011",
+   "finding": "follow-up #4; report #38",
+   "old": "written as an area; the report's scripts use it throughout (§C10.3b).\n- **What it assumes** (see the assumptions in 10.1): perfect alignment and mode matching, truncation treated to first order as a power factor on each pass, no atmospheric turbulence (which reduces heterodyne efficiency at long range; Frehlich and Kavaya 1991), and a fully depolarizing Lambertian target.",
+   "new": "written as an area. §C7b (Eq. (101)) and §C10.3b (Eq. (146)) restate it, and the report's scripts use it throughout.\n- **What it assumes** (see the assumptions in 10.1): perfect alignment and mode matching, truncation treated to first order as a power factor on each pass, no atmospheric turbulence (which reduces heterodyne efficiency at long range; Frehlich and Kavaya 1991 [I]), and a fully depolarizing Lambertian target.",
+   "why": "The pointer did not say that Eqs. (101) and (146) are the same relation; missing [I] tag."
+  },
+  {
+   "id": "03_C0_part10-012",
+   "finding": "report #27; report #33",
+   "old": "\n\n**Why the beam is launched with $w_0=0.45D$.** A Gaussian beam launched through a circular aperture of radius $a=D/2$ faces a trade-off. A wide beam fills the aperture and diffracts least, but its edges are clipped; a narrow beam passes whole but spreads faster. The standard way to settle this is to maximize the far-field on-axis intensity at a fixed launched power. The launched field is $E_0e^{-r^2/w_0^2}$, where $r$ is the distance from the beam axis and $E_0\\propto\\sqrt{P}/w_0$ for a beam of power $P$. The far-field on-axis amplitude is the integral of this field over the aperture: $\\int_0^aE_0e^{-r^2/w_0^2}\\,2\\pi r\\,dr=\\pi w_0^2E_0\\,(1-e^{-a^2/w_0^2})$. At fixed $P$ it therefore scales as $w_0\\,(1-e^{-a^2/w_0^2})$. Setting its derivative with respect to $w_0$ to zero gives $e^{x^2}=1+2x^2$ with $x=a/w_0$. The solution is $a/w_0=1.12$, i.e. $w_0=0.89a\\approx0.45D$. At the optimum the aperture passes $1-e^{-2(a/w_0)^2}\\approx92\\%$ of the power, or 91.5% ($t=0.915$) at exactly $0.45D$. By reciprocity the same choice maximizes the on-axis response of the matched single-mode receiver, so one value serves transmit and receive.\n\n**Worked numbers at 1,550 nm, $D=25$ mm:**\n- $w_0=0.45\\times25\\ {\\rm mm}=11.25$ mm and $z_R=\\pi(0.01125)^2/1.55\\times10^{-6}=257$ m. The factor 0.838 below is $t^2=0.915^2$.",
+   "new": "\n\n**Worked numbers at 1,550 nm, $D=25$ mm:**\n- $w_0=0.45\\times25\\ {\\rm mm}=11.25$ mm and $z_R=\\pi(0.01125)^2/1.55\\times10^{-6}=257$ m. The factor 0.838 below is $t^2=0.9153^2$.",
+   "why": "Remove the paragraph from its old place (moved above); t^2 = 0.9153^2 = 0.838 (0.915^2 = 0.837)."
+  },
+  {
+   "id": "03_C0_part10-013",
+   "finding": "report §3 flag 14",
+   "old": "a larger number of dB means less light. The shaded band is 200–300 m.",
+   "new": "a larger number of dB means less light. The shaded band marks 200–300 m, the long-range window that §C7a examines.",
+   "why": "The shaded band was unexplained."
+  },
+  {
+   "id": "03_C0_part10-014",
+   "finding": "report §3 flag 5",
+   "old": "A common per-bin false-alarm probability would give them different false-point rates. Subsection 7 uses the same per-point budget.",
+   "new": "A common per-bin false-alarm probability would give them different false-point rates. Subsection 7 uses the same per-point budget, but with 1,000 bins (so $10^{-6}$ per bin) and a daylight background of one count per bin, for which an ideal counter needs ≈13 signal counts. The 2,000 bins and the 2.87 background counts per bin of the §C7a model raise this to 17.3 here.",
+   "why": "Readers would otherwise compare subsection 7's 13 counts with the 17.3 here."
+  },
+  {
+   "id": "03_C0_part10-015",
+   "finding": "follow-up #3; report #20; report #21; symbol scheme",
+   "old": "  - Eq. (82) gives the dead fraction. Sony's passively recharged SPADs behave paralyzably (§C5a): a SPAD is live only if no photon arrived during the last $\\tau_d$. Each of the nine SPADs counts $r=3.66\\times10^{8}/9=4.06\\times10^{7}$ s⁻¹, so $r\\tau_d=0.244$ for $\\tau_d=6$ ns, the live fraction is $e^{-0.244}=0.784$ and $f_{\\rm dead}=0.216$.\n  - Eq. (98) of §C7b, multiplied by the live fraction $1-f_{\\rm dead}$, gives the counts in one 1 ns bin summed over the $N_{\\rm shots}=10$ shots of a point: $b=r_{\\rm bg}\\,t_{\\rm bin}\\,N_{\\rm shots}\\,(1-f_{\\rm dead})=3.66\\times10^{8}\\times10^{-9}\\times10\\times0.784=2.87$.\n  - Over the 20.8 µs a point listens, the same rate gives $3.66\\times10^{8}\\times20.8\\times10^{-6}\\times0.784\\approx5{,}960$ background events, the event count of the §C7a electronics budget.\n  - The dead time blinds the SPADs to signal photons as well: only the live fraction 0.784 of the echo can be counted, so the §C7a model multiplies the SPAD's signal efficiency by it, $0.5\\times0.37\\times0.784=0.145$.",
+   "new": "  - Eq. (82) gives the dead fraction. The model treats Sony's SPADs as paralyzable [E]. The development chip's measured ceiling of 60 Mcps matches the $1/(e\\tau_d)=61$ Mcps of a paralyzable counter with a 6 ns dead time ($e$ is Euler's number), the behaviour of passive recharge; the IMX459 press release, however, says active recharge, and the product may differ from the development chip (§C5a). A paralyzable SPAD is live only if no photon arrived during the last $\\tau_d$, its dead time. Each of the macro-pixel's nine SPADs (a 3×3 group, §C5a) counts $r=3.66\\times10^{8}/9=4.06\\times10^{7}$ s⁻¹, so $r\\tau_d=0.244$ for $\\tau_d=6$ ns, the live fraction is $e^{-0.244}=0.784$ and $f_{\\rm dead}=0.216$. A non-paralyzable SPAD would instead be dead a fraction $0.244/1.244=0.196$ of the time (the other form of Eq. (82)). That would raise $b$ to 2.94 and the threshold to 16 counts, so an ideal counter would need 18.4 signal counts rather than 17.3, and the energy per point would change by a few per cent.\n  - Eq. (98) of §C7b, multiplied by the live fraction $1-f_{\\rm dead}$, gives the counts in one bin of width $\\Delta t_{\\rm bin}=1$ ns, summed over the $N_{\\rm shots}=10$ shots of a point: $b=r_{\\rm bg}\\,\\Delta t_{\\rm bin}\\,N_{\\rm shots}\\,(1-f_{\\rm dead})=3.66\\times10^{8}\\times10^{-9}\\times10\\times0.784=2.87$.\n  - A macro-pixel listens 20.8 µs per point, the column period of a scan of 2,400 columns at 20 frames per second (Sony's IMX479, §C6). That leaves time for about ten shots of 2.08 µs, each longer than the 2 µs round trip to 300 m (§C6, §C7a). Over those 20.8 µs the same rate gives $3.66\\times10^{8}\\times20.8\\times10^{-6}\\times0.784\\approx5{,}960$ background events, the event count of the §C7a electronics budget.\n  - The dead time blinds the SPADs to signal photons as well: only the live fraction 0.784 of the echo can be counted, so the §C7a model multiplies the SPAD's signal efficiency by it: optics transmission 0.5 × PDE 0.37 × live fraction 0.784, i.e. $0.5\\times0.37\\times0.784=0.145$.",
+   "why": "Keep the §C5a hedges on paralyzable behaviour and show the non-paralyzable effect; source the 20.8 µs; explain the 0.5; define the 3x3 group; bin width as Δt_bin."
+  },
+  {
+   "id": "03_C0_part10-016",
+   "finding": "report #28",
+   "old": "the echo's peak is found in both, at $f_{\\rm up}=f_b-f_D$ and $f_{\\rm down}=f_b+f_D$.",
+   "new": "the echo's peak is found in both, at $f_{\\rm up}=f_b-f_D$ and $f_{\\rm down}=f_b+f_D$, where $f_b$ is the beat frequency set by range and $f_D$ the Doppler shift (subsection 2).",
+   "why": "f_b and f_D undefined at first use in this part."
+  },
+  {
+   "id": "03_C0_part10-017",
+   "finding": "report #29; symbol scheme",
+   "old": "Equivalently $N_b=R_{\\max}/\\Delta R+f_{D,\\max}T_u=2{,}000+450$; Eq. (94) of §C7a samples these bins five times over, $N_{\\rm samp}=5N_b\\approx12{,}300$.",
+   "new": "Equivalently $N_b=(300\\ {\\rm m})/\\Delta R+f_{D,\\max}T_u=2{,}000+450$, where $\\Delta R=c/(2B)=0.15$ m is the range resolution of the chirp's bandwidth $B=1$ GHz. §C7a's digitizer takes 2.5 samples per bin in each ramp, so its Eq. (94) counts $N_{\\rm samp}=5N_b\\approx12{,}300$ samples per point.",
+   "why": "R_max here was the 300 m search range, not the maximum detection range; Delta R was undefined; the N_samp sentence was cryptic."
+  },
+  {
+   "id": "03_C0_part10-018",
+   "finding": "symbol scheme; report #36",
+   "old": "$$P_{FA,{\\rm pt}}\\approx N_b\\,p_1\\,N_w\\,p_2,\\qquad P_D=\\int_0^\\infty\\left[Q_{N_{\\rm sp}}\\!\\left(\\sqrt{\\bar nS/N_{\\rm sp}},\\,\\sqrt{2x}\\right)\\right]^2\\frac{S^{N_{\\rm sp}-1}e^{-S}}{\\Gamma(N_{\\rm sp})}\\,dS . \\tag{40}$$",
+   "new": "$$\\begin{aligned}P_{FA,{\\rm pt}}&\\approx N_b\\,p_1\\,N_w\\,p_2,\\\\ P_D&=\\int_0^\\infty\\left[Q_{N_{\\rm sp}}\\!\\left(\\sqrt{\\bar nG/N_{\\rm sp}},\\,\\sqrt{2x}\\right)\\right]^2\\frac{G^{N_{\\rm sp}-1}e^{-G}}{\\Gamma(N_{\\rm sp})}\\,dG .\\end{aligned} \\tag{40}$$",
+   "why": "Speckle gain G (S is the sweep rate); split the wide equation into one relation per line, same tag."
+  },
+  {
+   "id": "03_C0_part10-019",
+   "finding": "symbol scheme; report #19",
+   "old": "  - **Symbols.** $S$ is the speckle power gain summed over the $N_{\\rm sp}$ looks, each look's gain being exponential with unit mean; the sum is Gamma-distributed with the density shown, which for one look is $e^{-S}$. Each ramp then holds a signal power $\\bar nS/(2N_{\\rm sp})$ spread over its $N_{\\rm sp}$ looks. $Q_M(a,b)$ is the generalized Marcum Q function: the probability that the summed power of $M$ bins of unit-mean noise, carrying a total signal power $a^2/2$, exceeds $b^2/2$. For $M=1$ it is the $Q_1$ of Eq. (37).",
+   "new": "  - **Symbols.** $G$ is the speckle power gain summed over the $N_{\\rm sp}$ looks, each look's gain being exponential with unit mean; the sum is Gamma-distributed with the density shown, which for one look is $e^{-G}$. Each ramp then holds a signal power $\\bar nG/(2N_{\\rm sp})$ spread over its $N_{\\rm sp}$ looks. $Q_N(a,b)$ is the generalized Marcum Q function: the probability that the summed power of $N$ bins of unit-mean noise, carrying a total signal power $a^2/2$, exceeds $b^2/2$. Eq. (40) uses it with $N=N_{\\rm sp}$, one bin per look; for $N=1$ it is the $Q_1$ of Eq. (37).",
+   "why": "Symbol scheme: G for the speckle gain, Q_N for the Marcum function (M is the APD gain and the margin)."
+  },
+  {
+   "id": "03_C0_part10-020",
+   "finding": "report #33",
+   "old": "$s=17.3$ puts the total mean at $s+b=20.1$, and a Poisson count of mean 20.1 reaches 15 with probability 0.90.",
+   "new": "$s=17.26$ puts the total mean at $s+b=17.26+2.87=20.13$, and a Poisson count of mean 20.13 reaches 15 with probability 0.90.",
+   "why": "17.3 + 2.87 = 20.17; the exact solution is s = 17.26, s + b = 20.13."
+  },
+  {
+   "id": "03_C0_part10-021",
+   "finding": "report #13",
+   "old": "matches one ramp searched in full, which needs 47.3 by the rule here.",
+   "new": "matches one ramp searched in full, which needs 47.3 under the rule here ($10^{-3}$ false points over 2,450 bins, i.e. $4.1\\times10^{-7}$ per bin) and 44.9 at Waymo's own $10^{-6}$ per bin (10.8).",
+   "why": "Reconcile 47.3 here with the ≈45 of 10.8 by stating both per-bin rules."
+  },
+  {
+   "id": "03_C0_part10-022",
+   "finding": "report #30",
+   "old": "but reaching 90% costs up to 7× the median.",
+   "new": "but reaching 90% costs up to 7× the median (259 against 38.2 with one look). At the median more looks do not help: two looks need 36.2 and four need 39.0, against 38.2 for one, because the summed noise of four looks needs a higher threshold (18.2 against 11.1), which offsets their narrower fading.",
+   "why": "The non-monotonic P_D = 0.5 column was unexplained."
+  },
+  {
+   "id": "03_C0_part10-023",
+   "finding": "symbol scheme",
+   "old": "{\\eta\\,E_{\\rm tx}}, \\tag{41}$$\nand the maximum range $R_{\\max}$ solves $\\mathcal{L}(R_{\\max})=\\mathcal{L}_{\\rm det}$. \"Largest loss\" means the smallest usable fraction: a link with $\\mathcal{L}$ below $\\mathcal{L}_{\\rm det}$ delivers fewer than $n_{\\rm req}$ photoelectrons. The level moves by 10 dB for every factor of 10 in $E_{\\rm tx}$. The table gives it for the three receivers compared in this report; these are the dashed lines of Figure C0.10a.\n\n| Receiver | $\\lambda$ | $n_{\\rm req}$ | $\\eta$ | $E_{\\rm tx}$ per point |",
+   "new": "{\\eta\\,E_{\\rm pt}}, \\tag{41}$$\nand the maximum range $R_{\\max}$ solves $\\mathcal{L}(R_{\\max})=\\mathcal{L}_{\\rm det}$. \"Largest loss\" means the smallest usable fraction: a link with $\\mathcal{L}$ below $\\mathcal{L}_{\\rm det}$ delivers fewer than $n_{\\rm req}$ photoelectrons. The level moves by 10 dB for every factor of 10 in $E_{\\rm pt}$. The table gives it for the three receivers compared in this report; these are the dashed lines of Figure C0.10a.\n\n| Receiver | $\\lambda$ | $n_{\\rm req}$ | $\\eta$ | $E_{\\rm pt}$ |",
+   "why": "Symbol scheme: E_pt."
+  },
+  {
+   "id": "03_C0_part10-024",
+   "finding": "report #36; follow-up flag f",
+   "old": "(6 ns paralyzable dead time, 10.3);\n  - APD: optics 0.5 × quantum efficiency 0.8;",
+   "new": "(6 ns dead time, modelled as paralyzable, 10.3);\n  - APD: optics 0.5 × quantum efficiency (QE) 0.8;",
+   "why": "Define QE before its first acronym use in 10.8; keep the paralyzable assumption marked as a model choice."
+  },
+  {
+   "id": "03_C0_part10-025",
+   "finding": "report #33",
+   "old": "$30\\times1.28\\times10^{-19}/(0.25\\times3\\times10^{-7})=5.13\\times10^{-11}$",
+   "new": "$30\\times1.282\\times10^{-19}/(0.25\\times3\\times10^{-7})=5.13\\times10^{-11}$",
+   "why": "As displayed, 30 x 1.28e-19 / 7.5e-8 = 5.12e-11; the 5.13e-11 used later needs E_ph = 1.282e-19 J."
+  },
+  {
+   "id": "03_C0_part10-026",
+   "finding": "report #34",
+   "old": "Its near field is $10\\log_{10}(1310/1550)^2=-1.5$ dB weaker, at 102.4 dB, and its 18% more energetic photons lower the budget to 102.2 dB.",
+   "new": "Its near-field level is 1.5 dB weaker ($10\\log_{10}(1310/1550)^2=-1.5$ dB), at 102.4 dB, and its photons, $1550/1310=1.18$ times more energetic, lower the budget by $10\\log_{10}1.18=0.7$ dB, to 102.2 dB.",
+   "why": "Double negative ('-1.5 dB weaker'); show the 0.7 dB photon-energy step."
+  },
+  {
+   "id": "03_C0_part10-027",
+   "finding": "report #26; report §3 flag 9",
+   "old": "cuts the 25 mm range to **54 m**.",
+   "new": "cuts the 25 mm range to $257\\times\\sqrt{8.06/(1.5\\times5.13)-1}=56$ m, or **53 m** with clear air.",
+   "why": "Recomputed: 56 m without and 53 m with clear-air loss for a factor 45/30 = 1.5; show the substitution."
+  },
+  {
+   "id": "03_C0_part10-028",
+   "finding": "report #16",
+   "old": "A bigger collimated aperture helps only beyond its own Rayleigh range; at 500 m the optimum is 35 mm.",
+   "new": "An aperture larger than $D_{\\rm opt}(R)$ collects less at $R$ itself; it pays only at longer ranges, where it becomes the optimum: at 500 m the optimum is 35 mm.",
+   "why": "Contradicted the 103 m crossover of 10 and 25 mm, which lies inside 25 mm's Rayleigh range."
+  },
+  {
+   "id": "03_C0_part10-029",
+   "finding": "symbol scheme",
+   "old": "Solve $\\mathcal{L}(R_{\\max})=\\mathcal{L}_{\\rm det}(E_{\\rm tx})$",
+   "new": "Solve $\\mathcal{L}(R_{\\max})=\\mathcal{L}_{\\rm det}(E_{\\rm pt})$",
+   "why": "Symbol scheme: E_pt."
+  },
+  {
+   "id": "03_C0_part10-030",
+   "finding": "symbol scheme",
+   "old": "\\sqrt{\\frac{\\rho\\,\\eta\\,E_{\\rm tx}}{n_{\\rm req}\\,E_{\\rm ph}}}\\ \\propto\\sqrt{A_{\\rm rx}E_{\\rm tx}} . \\tag{42}$$",
+   "new": "\\sqrt{\\frac{\\rho\\,\\eta\\,E_{\\rm pt}}{n_{\\rm req}\\,E_{\\rm ph}}}\\ \\propto\\sqrt{A_{\\rm rx}E_{\\rm pt}} . \\tag{42}$$",
+   "why": "Symbol scheme: E_pt."
+  },
+  {
+   "id": "03_C0_part10-031",
+   "finding": "symbol scheme; follow-up #2",
+   "old": "the point rate is $\\dot N=P_{\\rm opt}/E_{\\rm tx}$ points per second. So $\\dot N R_{\\max}^2=\\rho\\,\\eta\\,D^2P_{\\rm opt}/(4n_{\\rm req}E_{\\rm ph})$ is constant: this is the range-weighted point-rate figure of merit of §C3b. A lidar can trade points per second for range, but not raise both, without more power or a larger lens.",
+   "new": "the point rate is $\\dot N=P_{\\rm opt}/E_{\\rm pt}$ points per second. So $\\dot N R_{\\max}^2=\\rho\\,\\eta\\,D^2P_{\\rm opt}/(4n_{\\rm req}E_{\\rm ph})$ is constant as long as $n_{\\rm req}$ is: this is Eq. (62), the range-weighted point-rate figure of merit of §C3b, which assumes signal-limited detection. A lidar can then trade points per second for range, but not raise both, without more power or a larger lens. In bright sun, however, $n_{\\rm req}$ grows with the background that a point collects. If the energy per point is changed through the number of shots, the ideal counter of 10.3 needs 14.0, 17.3 and 22.5 counts for 5, 10 and 20 shots ($b=1.43$, 2.87 and 5.73) [E]. The product $\\dot N R_{\\max}^2$ then shifts by about 25% per factor of two in point rate, part of the way toward the $\\dot N R^4$ of sunlight-limited detection (§C3b).",
+   "why": "§C3b's Eq. (62) holds only for signal-limited detection; the bright-sun n_req used here depends on the shots per point."
+  },
+  {
+   "id": "03_C0_part10-032",
+   "finding": "symbol scheme",
+   "old": "$R_{\\max}=z_R\\sqrt{E_{\\rm tx}/E_{\\min}-1}$, which becomes the $\\sqrt{E_{\\rm tx}}$ law",
+   "new": "$R_{\\max}=z_R\\sqrt{E_{\\rm pt}/E_{\\min}-1}$, which becomes the $\\sqrt{E_{\\rm pt}}$ law",
+   "why": "Symbol scheme: E_pt."
+  },
+  {
+   "id": "03_C0_part10-033",
+   "finding": "symbol scheme",
+   "old": "$$R_{\\max}=\\frac{\\rho\\,t^2\\lambda\\,\\eta\\,E_{\\rm tx}}{4\\pi\\,n_{\\rm req}E_{\\rm ph}}\\ \\propto E_{\\rm tx},\\qquad \\dot N\\,R_{\\max}=\\text{const}. \\tag{44}$$",
+   "new": "$$R_{\\max}=\\frac{\\rho\\,t^2\\lambda\\,\\eta\\,E_{\\rm pt}}{4\\pi\\,n_{\\rm req}E_{\\rm ph}}\\ \\propto E_{\\rm pt},\\qquad \\dot N\\,R_{\\max}=\\text{const}. \\tag{44}$$",
+   "why": "Symbol scheme: E_pt."
+  },
+  {
+   "id": "03_C0_part10-034",
+   "finding": "report #17; follow-up #5; symbol scheme",
+   "old": "  - Doubling the energy doubles the range, but only if the aperture grows as $\\sqrt R$, while the footprint's share of a fixed angular cell shrinks as $1/R$ (§C10.3a).",
+   "new": "  - Doubling the energy doubles the range, but only if the aperture grows as $\\sqrt R$. The footprint area then grows only as $R$ ($\\pi w^2=2\\lambda R$ at the optimum, 10.2), while a cell of fixed angular pitch $\\theta_{\\rm cell}$ grows as $R^2$. The beam therefore covers a share $\\pi w^2/(R\\theta_{\\rm cell})^2=2\\lambda/(R\\theta_{\\rm cell}^2)$ of the cell, which shrinks as $1/R$: 4.1% at 100 m for a 0.05° cell (§C10.3a, item 3).",
+   "why": "Cryptic at first appearance; give the footprint and cell areas and the explicit share from §C10.3a item 3; theta_cell per the scheme."
+  },
+  {
+   "id": "03_C0_part10-035",
+   "finding": "report #25",
+   "old": "the ratio of the energies per sample needed by FMCW and SPAD ToF",
+   "new": "the ratio of the energies per point needed by FMCW and SPAD ToF",
+   "why": "E_pt is defined per point; 'per sample' appeared only here."
+  },
+  {
+   "id": "03_C0_part10-036",
+   "finding": "report #33",
+   "old": "  - With clear-air loss the ratio is 2.4 at 100–500 m.",
+   "new": "  - With clear-air loss the ratio is 2.4–2.5 (2.47 at 100 m, 2.39 at 500 m), because clear air costs slightly more at 940 nm than at 1,550 nm.",
+   "why": "The ratio is 2.47 at 100 m and 2.39 at 500 m (tables file), not a flat 2.4."
+  },
+  {
+   "id": "03_C0_part10-037",
+   "finding": "report #25",
+   "old": "the gap per sample closes as $1/R$",
+   "new": "the gap per point closes as $1/R$",
+   "why": "Same term as E_pt's definition."
+  },
+  {
+   "id": "03_C0_part10-038",
+   "finding": "symbol scheme",
+   "old": "points per second per watt of light, $1/E_{\\rm tx}$",
+   "new": "points per second per watt of light, $1/E_{\\rm pt}$",
+   "why": "Symbol scheme: E_pt."
+  },
+  {
+   "id": "03_C0_part10-039",
+   "finding": "report §3 flag 14",
+   "old": "- The dotted lines mark 200 and 300 m.\n\n#### 10.6 Margin at short range",
+   "new": "- The dotted lines mark 200 and 300 m.\n\n**Reading Figure C0.10c** [E]:\n- **Direct-detection range grows as $\\sqrt{E_{\\rm pt}}$** (Eq. (42)): a factor of $\\sqrt{10}=3.2$ per decade of energy, and doubling the lens diameter doubles the range. The linear APD with a 25 mm lens runs just below the 10 mm SPAD, because with the same lens it needs 7.8 times the SPAD's energy (10.5), slightly more than the factor $2.5^2=6.25$ between the 10 and 25 mm SPAD lenses.\n- **Each fixed coherent aperture starts at its minimum energy** $E_{\\min}$ (Eq. (43)): 0.031, 0.19 and 0.76 µJ for 10, 25 and 50 mm. Its range climbs steeply through the near field and then follows the same $\\sqrt{E_{\\rm pt}}$ law beyond its Rayleigh range.\n- **The best collimated aperture's range grows as $E_{\\rm pt}$** (Eq. (44)), and touches each fixed-aperture curve at the range equal to that aperture's Rayleigh range.\n- **Against the 25 mm SPAD reference** the FMCW energy gap closes as $1/R$ (10.5), from 3.1× at 200 m to 1.2× at 500 m, so the two lines cross at about $500\\times1.2=600$ m, near 1 µJ per point.\n\n#### 10.6 Margin at short range",
+   "why": "Figure C0.10c was the only figure without a reading paragraph."
+  },
+  {
+   "id": "03_C0_part10-040",
+   "finding": "symbol scheme",
+   "old": "By Eq. (41) that energy is $E_{\\rm tx}=n_{\\rm req}E_{\\rm ph}/[\\eta\\,\\mathcal{L}(R_0)]$",
+   "new": "By Eq. (41) that energy is $E_{\\rm pt}=n_{\\rm req}E_{\\rm ph}/[\\eta\\,\\mathcal{L}(R_0)]$",
+   "why": "Symbol scheme: E_pt."
+  },
+  {
+   "id": "03_C0_part10-041",
+   "finding": "symbol scheme; report #19; report #36",
+   "old": "**Margin.** The margin $M(R)$ of a design at range $R$ is the extra loss, in dB, that it can absorb there and still detect the target:\n$$M(R)=10\\log_{10}\\frac{\\mathcal{L}(R)}{\\mathcal{L}_{\\rm det}},\\qquad M_{\\rm DD}(R)=20\\log_{10}\\frac{R_0}{R},\\qquad M_{\\rm coh}(R)=10\\log_{10}\\frac{1+(R_0/z_R)^2}{1+(R/z_R)^2} . \\tag{46}$$",
+   "new": "**Margin.** The margin $\\mathcal{M}(R)$ of a design at range $R$ is the extra loss, in dB, that it can absorb there and still detect the target:\n$$\\begin{aligned}\\mathcal{M}(R)&=10\\log_{10}\\frac{\\mathcal{L}(R)}{\\mathcal{L}_{\\rm det}},\\\\ \\mathcal{M}_{\\rm DD}(R)&=20\\log_{10}\\frac{R_0}{R},\\\\ \\mathcal{M}_{\\rm coh}(R)&=10\\log_{10}\\frac{1+(R_0/z_R)^2}{1+(R/z_R)^2} .\\end{aligned} \\tag{46}$$",
+   "why": "Margin symbol per the scheme (M is the APD gain); split the wide equation, same tag."
+  },
+  {
+   "id": "03_C0_part10-042",
+   "finding": "symbol scheme",
+   "old": "As $R\\to0$, $M_{\\rm coh}$ rises only to the *plateau margin* $M_0=10\\log_{10}[1+(R_0/z_R)^2]$, because the near-field loss is flat. For the best aperture $z_R=R_0$, so $M_0=10\\log_{10}2=3.0$ dB: at 10 m the design receives only twice the light it needs. For 25 mm, $z_R=257$ m and $M_0=10\\log_{10}[1+(200/257)^2]=2.1$ dB.",
+   "new": "As $R\\to0$, $\\mathcal{M}_{\\rm coh}$ rises only to the *plateau margin* $\\mathcal{M}_0=10\\log_{10}[1+(R_0/z_R)^2]$, because the near-field loss is flat. For the best aperture $z_R=R_0$, so $\\mathcal{M}_0=10\\log_{10}2=3.0$ dB: at 10 m the design receives only twice the light it needs. For 25 mm, $z_R=257$ m and $\\mathcal{M}_0=10\\log_{10}[1+(200/257)^2]=2.1$ dB.",
+   "why": "Margin symbol per the scheme."
+  },
+  {
+   "id": "03_C0_part10-043",
+   "finding": "report §3 flag 8",
+   "old": "so a 0.2 mm film costs $0.2\\times9.4=1.9$ dB.",
+   "new": "so a 0.2 mm film costs $0.2\\times9.4=1.88\\approx1.9$ dB.",
+   "why": "Show the rounding: the rain table uses the exact 1.88 dB."
+  },
+  {
+   "id": "03_C0_part10-044",
+   "finding": "symbol scheme",
+   "old": "A target is still detected wherever $M(R)\\ge X$. Solving Eq. (46) for the range gives the maximum range with the extra loss:\n$$R_{\\max,{\\rm DD}}(X)=R_0\\,10^{-X/20},\\qquad R_{\\max,{\\rm coh}}(X)=z_R\\sqrt{\\left[1+(R_0/z_R)^2\\right]10^{-X/10}-1}\\quad\\text{for }X<M_0 . \\tag{47}$$",
+   "new": "A target is still detected wherever $\\mathcal{M}(R)\\ge X$. Solving Eq. (46) for the range gives the maximum range with the extra loss:\n$$R_{\\max,{\\rm DD}}(X)=R_0\\,10^{-X/20},\\qquad R_{\\max,{\\rm coh}}(X)=z_R\\sqrt{\\left[1+(R_0/z_R)^2\\right]10^{-X/10}-1}\\quad\\text{for }X<\\mathcal{M}_0 . \\tag{47}$$",
+   "why": "Margin symbol per the scheme."
+  },
+  {
+   "id": "03_C0_part10-045",
+   "finding": "symbol scheme",
+   "old": "- **A coherent design falls off a cliff at $X=M_0$.** Beyond it the square root has no real value: the design detects nothing *at any range*, because even its near-field plateau no longer reaches the detection level. The best-aperture design reaches 110 m behind a 0.2 mm water film ($X=1.9$ dB), 27 m with $X=3$ dB and nothing beyond 3.1 dB. The 25 mm design reaches 58 m behind the film and nothing beyond 2.1 dB.\n- **The darkest target detectable at any range** follows from $X=M_0$.",
+   "new": "- **A coherent design falls off a cliff at $X=\\mathcal{M}_0$.** Beyond it the square root has no real value: the design detects nothing *at any range*, because even its near-field plateau no longer reaches the detection level. The best-aperture design reaches 110 m behind a 0.2 mm water film ($X=1.9$ dB), 27 m with $X=3$ dB and nothing beyond 3.1 dB. The 25 mm design reaches 58 m behind the film and nothing beyond 2.1 dB.\n- **The darkest target detectable at any range** follows from $X=\\mathcal{M}_0$.",
+   "why": "Margin symbol per the scheme."
+  },
+  {
+   "id": "03_C0_part10-046",
+   "finding": "symbol scheme",
+   "old": "The best aperture has $u=1$, so relative to it\n$$\\frac{E_{\\rm tx}}{E_{\\rm opt}}=\\frac12\\left(u+\\frac1u\\right),\\qquad M_0=10\\log_{10}\\left(1+\\frac1{u^2}\\right),\\quad\\text{i.e.}\\quad u=\\left(10^{M_0/10}-1\\right)^{-1/2} . \\tag{48}$$\n- Plateau margins of 6.7, 9.7, 13.9 and 20.0 dB (apertures of 16, 13, 10 and 7 mm) cost 1.21, 1.61, 2.54 and 5.02 times the energy.\n- For large margins $E_{\\rm tx}/E_{\\rm opt}\\approx\\tfrac12\\,10^{M_0/20}$",
+   "new": "The best aperture has $u=1$, so relative to its energy per point $E_{\\rm opt}$\n$$\\frac{E_{\\rm pt}}{E_{\\rm opt}}=\\frac12\\left(u+\\frac1u\\right),\\qquad \\mathcal{M}_0=10\\log_{10}\\left(1+\\frac1{u^2}\\right),\\quad\\text{i.e.}\\quad u=\\left(10^{\\mathcal{M}_0/10}-1\\right)^{-1/2} . \\tag{48}$$\n- Plateau margins of 6.7, 9.7, 13.9 and 20.0 dB (apertures of 16, 13, 10 and 7 mm) cost 1.21, 1.61, 2.54 and 5.02 times the energy.\n- For large margins $E_{\\rm pt}/E_{\\rm opt}\\approx\\tfrac12\\,10^{\\mathcal{M}_0/20}$",
+   "why": "E_pt and the margin symbol per the scheme; define E_opt where it is introduced."
+  },
+  {
+   "id": "03_C0_part10-047",
+   "finding": "report #39; report #2",
+   "old": "| 19.1 dB | 0.10% | 141 m | 99 m | 61 m |\n\n**Fog.** Fog multiplies the link loss by $e^{-2\\alpha R}$,",
+   "new": "| 19.1 dB | 0.10% | 141 m | 99 m | 61 m |\n\nThe margins at 10 m in the table differ slightly from the plateau margins $\\mathcal{M}_0$ given above (3.0, 6.7, 9.7, 13.9 and 20.0 dB). Each design is sized against the clear-air loss at 200 m, little of which remains at 10 m; at 1,550 nm that adds about 0.07 dB, which lifts the best design to 3.1 dB. For the 10 and 7 mm designs, 10 m is also a sizeable fraction of the Rayleigh range (41 and 20 m), which costs $10\\log_{10}[1+(10/41)^2]=0.25$ dB and $10\\log_{10}[1+(10/20)^2]=0.97$ dB, hence 13.8 and 19.1 dB.\n\n**Fog.** Fog multiplies $\\mathcal{L}$ by $e^{-2\\alpha R}$,",
+   "why": "Explain why the table's 10 m margins differ from the plateau margins; 'multiplies the link loss' read as the dB loss."
+  },
+  {
+   "id": "03_C0_part10-048",
+   "finding": "symbol scheme; report #23",
+   "old": "$$M(R_{\\max})=8.686\\,\\alpha\\,R_{\\max}\\quad({\\rm dB}) . \\tag{49}$$\n- **For direct detection** this is the condition $R^2e^{2\\alpha R}=R_0^2$ of subsection 8.\n- **For a coherent design** the left side never exceeds $M_0$, so the reach can never exceed $M_0/(8.686\\,\\alpha)$. In fog of 200 m visibility ($\\alpha=19.6$ /km) the best-aperture design is limited to $3.1/(8.686\\times0.0196\\ {\\rm m^{-1}})=18$ m, which is the reach the script finds.\n\n| Design | $V=5$ km |",
+   "new": "$$\\mathcal{M}(R_{\\max})=8.686\\,\\alpha\\,R_{\\max}\\quad({\\rm dB}) . \\tag{49}$$\n- **For direct detection** this is the condition $R^2e^{2\\alpha R}=R_0^2$ of subsection 8.\n- **For a coherent design** the left side never exceeds $\\mathcal{M}_0$, so the reach can never exceed $\\mathcal{M}_0/(8.686\\,\\alpha)$. In fog of 200 m visibility ($\\alpha=19.6$ /km) the best-aperture design is limited to $3.1/(8.686\\times0.0196\\ {\\rm m^{-1}})=18$ m, which is the reach the script finds.\n\nThe table gives each design's maximum range on a 10% target from Eq. (49), against meteorological visibility $V$, with the extinction of the Kim model at 940 nm for ToF and at 1,550 nm for FMCW.\n\n| Design | $V=5$ km |",
+   "why": "Margin symbol per the scheme; the fog table had no lead-in sentence."
+  },
+  {
+   "id": "03_C0_part10-049",
+   "finding": "report #22",
+   "old": "- **In fog** (below 500 m visibility), where extinction no longer depends on wavelength,",
+   "new": "- **Below 500 m visibility**, where the Kim exponent $q_{\\rm K}$ is zero and extinction no longer depends on wavelength,",
+   "why": "'Fog' is defined as below 1 km in the caption; name the regime by its visibility instead."
+  },
+  {
+   "id": "03_C0_part10-050",
+   "finding": "report #23",
+   "old": "which adds a fixed loss (Eq. (47)) at 1,550 nm only.\n\n| Design | 5 mm/h |",
+   "new": "which adds a fixed loss (Eq. (47)) at 1,550 nm only.\n\nThe table gives each design's maximum range in rain from Eq. (49), with $8.686\\,\\alpha R$ replaced by $2\\gamma_{\\rm rain}R$: with a clean window, and behind a water film of 0.1 or 0.2 mm, which costs $0.1\\times9.4=0.94$ or $0.2\\times9.4=1.88$ dB at 1,550 nm and nothing at 940 nm.\n\n| Design | 5 mm/h |",
+   "why": "The rain table had no lead-in sentence."
+  },
+  {
+   "id": "03_C0_part10-051",
+   "finding": "report #18; report #38",
+   "old": "by the lidar ratio $S=\\alpha/\\beta$, here 18 sr;",
+   "new": "by the lidar ratio $S_{\\rm L}=\\alpha/\\beta$, here 18 sr [E];",
+   "why": "S is the sweep rate; lidar ratio S_L per the scheme; untagged model value."
+  },
+  {
+   "id": "03_C0_part10-052",
+   "finding": "report #36; report #23",
+   "old": "$$\\frac{P_{\\rm fog}(r)}{P_{\\rm tgt}(R_t)}=\\frac{\\pi\\beta\\,\\Delta R}{\\rho}\\left(\\frac{R_t}{r}\\right)^2e^{2\\alpha(R_t-r)}\\ \\ \\text{(DD)},\\qquad \\frac{2\\pi\\beta\\,\\Delta R}{\\rho}\\,\\frac{w(R_t)^2}{w(r)^2}\\,e^{2\\alpha(R_t-r)}\\ \\ \\text{(coherent)}, \\tag{51}$$\n  where the exponential is the extra extinction on the target's longer path. The direct-detection form assumes that the receiver sees the whole beam from $r$ onward (full overlap); a biaxial design, with separate transmit and receive apertures, sees less of the first metres.\n\n| Fog in the bin at |",
+   "new": "$$\\frac{P_{\\rm fog}(r)}{P_{\\rm tgt}(R_t)}=\\begin{cases}\\dfrac{\\pi\\beta\\,\\Delta R}{\\rho}\\left(\\dfrac{R_t}{r}\\right)^2e^{2\\alpha(R_t-r)} & \\text{direct detection},\\\\ \\dfrac{2\\pi\\beta\\,\\Delta R}{\\rho}\\,\\dfrac{w(R_t)^2}{w(r)^2}\\,e^{2\\alpha(R_t-r)} & \\text{coherent},\\end{cases} \\tag{51}$$\n  where the exponential is the extra extinction on the target's longer path. The direct-detection form assumes that the receiver sees the whole beam from $r$ onward (full overlap); a biaxial design, with separate transmit and receive apertures, sees less of the first metres.\n\nThe table gives the fog return in one bin relative to the echo of a 10% target at 50 m, in fog of 200 m visibility, from Eq. (51). The reach in each column heading is that design's maximum range in this fog, from the fog table above; the 13 and 25 mm designs would not detect the 50 m target at all.\n\n| Fog in the bin at |",
+   "why": "Split the wide equation into one case per line (same tag); move the table's description above it as a lead-in."
+  },
+  {
+   "id": "03_C0_part10-053",
+   "finding": "report #23",
+   "old": "*The table* gives the fog return in one bin relative to the echo of a 10% target at 50 m, in fog of 200 m visibility, from Eq. (51). The reach in each column heading is that design's maximum range in this fog, from the fog table above; the 13 and 25 mm designs would not detect the 50 m target at all. Worked examples [E]:",
+   "new": "*How the numbers are derived* [E], worked for the bin at 2 m:",
+   "why": "These two sentences now introduce the table above it."
+  },
+  {
+   "id": "03_C0_part10-054",
+   "finding": "report #31",
+   "old": "so the fog adds a weak noise floor in the near-range bins and nothing at the target's frequency.",
+   "new": "so the fog adds a weak noise floor in the near-range bins and, at the target's frequency, only the in-bin fog return of Eq. (50) (−19.9 dB at 200 m visibility).",
+   "why": "Eq. (50) gives -19.9 dB of fog in the target's own bin, so 'nothing' was too strong."
+  },
+  {
+   "id": "03_C0_part10-055",
+   "finding": "report #36",
+   "old": "WMO notes that there is no agreed international definition.",
+   "new": "the World Meteorological Organization (WMO) notes that there is no agreed international definition.",
+   "why": "Acronym not expanded."
+  },
+  {
+   "id": "03_C0_part10-056",
+   "finding": "symbol scheme; report #2",
+   "old": "Each FMCW curve drops to zero at its plateau margin $M_0$: 2.1 dB for 25 mm, 3.1 dB for 22 mm and 9.7 dB for 13 mm.\n- **Only the 7 mm design follows the ToF curve.** Its Rayleigh range (20 m) is far below 200 m, so over most of the range it is in its far field, where its loss falls as $1/R^2$ like direct detection.\n- **Panel (b)** shows the same ordering in fog, where the loss grows with range.",
+   "new": "Each FMCW curve drops to zero at its plateau margin $\\mathcal{M}_0$: 2.1 dB for 25 mm, 3.1 dB for 22 mm and 9.7 dB for 13 mm.\n- **Only the 7 mm design follows the ToF curve.** Its Rayleigh range (20 m) is far below 200 m, so over most of the range it is in its far field, where the fraction it collects falls as $1/R^2$ (its loss rises 20 dB per decade), as for direct detection.\n- **Panel (b)** shows the same ordering in fog, whose extinction adds a loss that grows with range.",
+   "why": "Margin symbol; 'its loss falls as 1/R^2' had the wrong direction for the dB loss."
+  },
+  {
+   "id": "03_C0_part10-057",
+   "finding": "symbol scheme",
+   "old": "+M(R_{\\min}) . \\tag{52}$$\nHere $\\rho_{\\max}$ is the effective reflectance of the strongest target, $R_{\\min}$ the shortest range at which it must be measured, $\\rho_0=10\\%$ the reflectance the design is sized for, and $M$ the margin of Eq. (46).",
+   "new": "+\\mathcal{M}(R_{\\min}) . \\tag{52}$$\nHere $\\rho_{\\max}$ is the effective reflectance of the strongest target, $R_{\\min}$ the shortest range at which it must be measured, $\\rho_0=10\\%$ the reflectance the design is sized for, and $\\mathcal{M}$ the margin of Eq. (46).",
+   "why": "Margin symbol per the scheme."
+  },
+  {
+   "id": "03_C0_part10-058",
+   "finding": "report #9",
+   "old": "By Eq. (53) that is $\\rho_{\\rm eq}=0.5\\times10^{3.18}\\approx760$, i.e. $R_A\\approx240$, close to Type III sheeting.",
+   "new": "By Eq. (53), treating the retroreflector as depolarizing like the reference target, that is $\\rho_{\\rm eq}=0.5\\times10^{3.18}\\approx760$, i.e. $R_A=760/\\pi\\approx240$, close to Type III sheeting. If it preserves polarization, it appears up to 3 dB stronger in a single-polarization coherent receiver (see \"Polarization\" below the table), and $R_A$ may then be as low as ≈120.",
+   "why": "The single-polarization coherent measurement may overstate a polarization-preserving retroreflector by up to 3 dB."
+  },
+  {
+   "id": "03_C0_part10-059",
+   "finding": "report #23",
+   "old": "42.0 dB above a 10% target.\n\n| Strongest return, relative to the weakest detectable return |",
+   "new": "42.0 dB above a 10% target.\n\nThe table evaluates Eq. (52) for four of the designs of 10.6, in dB above each design's weakest detectable return.\n\n| Strongest return, relative to the weakest detectable return |",
+   "why": "The span table had no lead-in sentence."
+  },
+  {
+   "id": "03_C0_part10-060",
+   "finding": "report #7",
+   "old": "- **Direct detection.** A photocurrent proportional to optical power doubles the dB span. The ToF design's 74 dB for a sign at 5 m becomes 148 dB at the amplifier input.",
+   "new": "- **Direct detection.** In a linear (APD or PIN) receiver, a photocurrent proportional to optical power doubles the dB span: facing the ToF design's 74 dB for a sign at 5 m, such a receiver would see 148 dB at its amplifier input. The SPAD design has no linear amplifier; its limit is the count ceiling described below.",
+   "why": "The ToF design is a SPAD counter without a linear amplifier; the doubling applies to APD or PIN receivers."
+  },
+  {
+   "id": "03_C0_part10-061",
+   "finding": "report #38",
+   "old": "- **Photons, FMCW.** The same sign sends about 49 nW into the best FMCW design's mode, against a local oscillator of about a milliwatt, so its photodiodes stay linear [E, 30 mW transmitted].",
+   "new": "- **Photons, FMCW.** For 30 mW transmitted, the same sign sends about 49 nW into the best FMCW design's mode, against a local oscillator of about a milliwatt, so its photodiodes stay linear [E].",
+   "why": "Non-standard tag; move the assumption into the sentence."
+  },
+  {
+   "id": "03_C0_part10-062",
+   "finding": "report #20",
+   "old": "so a macro-pixel registers at most nine counts per shot [P; §C6].",
+   "new": "so a macro-pixel registers at most nine counts from one echo [P; §C6].",
+   "why": "A 2 µs shot allows many counts per SPAD; the dead-time ceiling applies to one echo."
+  },
+  {
+   "id": "03_C0_part10-063",
+   "finding": "report #33",
+   "old": "against 49 nA rms of noise [P].\n    - That is a linear range of about 63 dB in current,",
+   "new": "against 49 nA of root-mean-square (rms) noise [P].\n    - That is a linear range of $20\\log_{10}(75\\ \\mu{\\rm A}/49\\ {\\rm nA})=64$ dB in current,",
+   "why": "20 log10(75 µA / 49 nA) = 63.7 dB; show it; expand rms."
+  },
+  {
+   "id": "03_C0_part10-064",
+   "finding": "report #36",
+   "old": "Gump et al. (CVPR 2026) model this as a glare spread function; on a commercial SPAD sensor they cut the depth error on a stop sign from 0.52 to 0.11 m RMS [I].",
+   "new": "Gump et al. (Conference on Computer Vision and Pattern Recognition, CVPR 2026) model this as a glare spread function; on a commercial SPAD sensor they cut the depth error on a stop sign from 0.52 to 0.11 m rms [I].",
+   "why": "Acronym not expanded; rms as defined above."
+  },
+  {
+   "id": "03_C0_part10-065",
+   "finding": "report #32",
+   "old": "That is $\\varepsilon<-74$ dB for the ToF design and a sign at 5 m, more suppression than lens and window scattering usually provide.",
+   "new": "That is $10\\log_{10}\\varepsilon<-74$ dB for the ToF design and a sign at 5 m, more suppression than lens and window scattering usually provide [U].",
+   "why": "A linear epsilon was compared with dB; the scattering claim had no tag."
+  },
+  {
+   "id": "03_C0_part10-066",
+   "finding": "report #38",
+   "old": "and a test for trailing points. Secondary summaries give the false-point limit as 0.1% or 1%, and none lists a blooming or dynamic-range test [P/T].",
+   "new": "and a test for trailing points [P]. Secondary summaries give the false-point limit as 0.1% or 1%, and none lists a blooming or dynamic-range test [T].",
+   "why": "[P/T] is not a legend tag; tag each claim by its source type."
+  },
+  {
+   "id": "03_C0_part10-067",
+   "finding": "report #36",
+   "old": "ISO/FDIS 13228 names ghost points in its scope [I].",
+   "new": "ISO/FDIS 13228, a final draft international standard (FDIS), names ghost points in its scope [I].",
+   "why": "Acronym not expanded."
+  },
+  {
+   "id": "03_C0_part10-068",
+   "finding": "report #7; report #10; report §3 flag 13",
+   "old": "- **A smaller span, compressed again by field detection.** From the table and Eq. (54), the best FMCW design handles 45 dB where the ToF design faces 148 dB at its amplifier.\n- **The time-domain signal stays small** [E].\n  - Suppose the weakest return has a per-bin SNR of about 15 dB.\n  - The sign is then about 60 dB above the noise in its FFT bin.\n  - An FFT over 10 µs sampled at 1 GS/s gains about 40 dB, so before the FFT the sign's tone is only about 20 dB above the noise, which does not stress the ADC.",
+   "new": "- **A smaller span, which field detection does not double.** From the table and Eq. (54), the best FMCW design handles 45 dB, optically and electrically, where a linear receiver facing the ToF design's 74 dB would see 148 dB at its amplifier.\n- **The time-domain signal stays small** [E].\n  - The weakest detectable return carries 15 photoelectrons per look in each ramp (the 120 of 10.3 spread over four looks and two ramps), a per-bin SNR of $10\\log_{10}15=11.8$ dB.\n  - The sign, 45 dB stronger, then sits about 57 dB above the noise in its FFT bin.\n  - An FFT over one 5 µs ramp sampled at ≈1.23 GS/s (§C7a) has about 6,100 samples and gains $10\\log_{10}6{,}100\\approx38$ dB, so before the FFT the sign's tone is only about 19 dB above the noise, which does not stress the ADC.",
+   "why": "Tie the time-domain estimate to the model (15 photoelectrons per look per ramp, 5 µs ramps at 1.23 GS/s); the ToF design has no linear amplifier."
+  },
+  {
+   "id": "03_C0_part10-069",
+   "finding": "report #8; report §3 flag 11",
+   "old": "The receiver cannot stay linear over 70–80 dB of optical span (140–160 dB electrical),",
+   "new": "The receiver cannot stay linear over 56–82 dB of optical span (111–164 dB electrical in a linear receiver),",
+   "why": "Match the span table (55.7-82.1 dB) and the opening bullet."
+  },
+  {
+   "id": "03_C0_part10-070",
+   "finding": "report #8",
+   "old": "  - Its burden is 25–30 dB smaller for the large-aperture designs, and electrically halved.",
+   "new": "  - For a retroreflective sign at 2–5 m, the best design's optical span is 29–37 dB smaller than the ToF design's (45 against 74–82 dB). Electrically the gap is larger still (45 against 148–164 dB in a linear receiver), because field detection does not double the span.",
+   "why": "The table gives 29-37 dB for the sign at 2-5 m; 'electrically halved' was ambiguous."
+  },
+  {
+   "id": "03_C0_part10-071",
+   "finding": "report #13; report #14",
+   "old": "| Link loss −106.2 dB (Eqs. (33)–(34)); 49 photons per chirp; $P_D=0.895$ at $10^{-6}$ per bin with four looks (Eq. (39)) | −106.1 dB; 50 photons;",
+   "new": "| Link loss 106.2 dB (Eqs. (33)–(34)); 49 photons per chirp (44 photoelectrons at QE 0.9); $P_D=0.895$ at $10^{-6}$ per bin with four looks (Eq. (39)) | 106.1 dB; 50 photons;",
+   "why": "10.2 defines the dB loss as a positive number; give the model's photoelectrons next to its photons."
+  },
+  {
+   "id": "03_C0_part10-072",
+   "finding": "report #37",
+   "old": "178 µW per pixel; 32 µs chirps (11.4 nJ per point);",
+   "new": "178 µW per pixel; two 32 µs chirps per point (11.4 nJ);",
+   "why": "11.4 nJ = 178 µW x 64 µs: two chirps per point."
+  },
+  {
+   "id": "03_C0_part10-073",
+   "finding": "report #37",
+   "old": "| Flat to $z_R$, then −1.8, −4.8 and −9.6 dB at 50, 100 and 200 m | Flat from 1 to 20 m, then −3.1, −8.1 and −16.1 dB | Plateau ✓; falls 1–6 dB faster beyond $z_R$ |",
+   "new": "| Within 0.4 dB of the plateau to 20 m, then falls by 1.8, 4.8 and 9.6 dB at 50, 100 and 200 m | Flat from 1 to 20 m, then −3.1, −8.1 and −16.1 dB | Plateau ✓; falls 1.3–6.5 dB faster at 50–200 m |",
+   "why": "50 m lies inside z_R = 70 m, so 'flat to z_R' contradicted the -1.8 dB there."
+  },
+  {
+   "id": "03_C0_part10-074",
+   "finding": "report #36; report #37",
+   "old": "| Wang et al. 2025 (RoboSense and SUSTech) | 1,550 nm; 100 kHz laser; 7 mm waist diameter (56.8 mm at 200 m); 1.5 m board of 10%; four dual-polarization receivers; SNR ≥ 10 dB to 200 m; transmit power not published | 20 → 200 m: −16.0 dB of beam spreading and −3.3 dB of coherence loss, −19.3 dB in all | −15 to −15.5 dB | Falls 3–4 dB more gently; matches a 5 mm waist |",
+   "new": "| Wang et al. 2025 (RoboSense and the Southern University of Science and Technology, SUSTech) | 1,550 nm; laser of 100 kHz linewidth; 7 mm waist diameter (56.8 mm at 200 m); 1.5 m board of 10%; four dual-polarization receivers; SNR ≥ 10 dB to 200 m; transmit power not published | 20 → 200 m: −16.0 dB of beam spreading and −3.3 dB of coherence loss, −19.3 dB in all | −15 to −15.5 dB | Falls 3.8–4.3 dB more gently; matches a waist radius of 5 mm |",
+   "why": "Expand SUSTech; 100 kHz is a linewidth; the 5 mm is a radius; 19.3 - (15 to 15.5) = 3.8-4.3 dB."
+  },
+  {
+   "id": "03_C0_part10-075",
+   "finding": "report #14",
+   "old": "=2.4\\times10^{-11}$, i.e. −106.2 dB.",
+   "new": "=2.4\\times10^{-11}$, i.e. 106.2 dB.",
+   "why": "dB loss is positive as defined in 10.2."
+  },
+  {
+   "id": "03_C0_part10-076",
+   "finding": "report #37",
+   "old": "  - With $\\eta=\\eta_p$, Eq. (33) gives $P_{\\rm RX}/P_{\\rm TX}=0.23\\times0.5\\times(1.31\\ \\mu{\\rm m})^2/(2\\pi^2\\times(1.80\\ {\\rm mm})^2)=3.1\\times10^{-9}$ for the 50% target.\n  - In one 32 µs chirp that is $0.95\\ {\\rm A/W}\\times178\\ \\mu{\\rm W}\\times3.1\\times10^{-9}\\times32\\ \\mu{\\rm s}/q=104$ photoelectrons.\n  - The measured amplifier noise leaves 28% of that SNR (their $\\kappa=0.62$, i.e. $1/(1+1/\\kappa^2)$), i.e. 28.8, or 57.6 in their convention, against 74.7 measured.",
+   "new": "  - With their stated efficiency $\\eta_p=0.23$ as $\\eta$, no truncation ($t=1$) and $\\rho=0.5$, Eq. (33) gives the received fraction $\\eta\\mathcal{L}_{\\rm coh}=0.23\\times0.5\\times(1.31\\ \\mu{\\rm m})^2/(2\\pi^2\\times(1.80\\ {\\rm mm})^2)=3.1\\times10^{-9}$ for the 50% target.\n  - In one 32 µs chirp that is $0.95\\ {\\rm A/W}\\times178\\ \\mu{\\rm W}\\times3.1\\times10^{-9}\\times32\\ \\mu{\\rm s}/q=104$ photoelectrons, where $q$ is the elementary charge.\n  - The measured amplifier noise leaves 28% of that SNR. Their $\\kappa=0.62$ puts the total noise at $1+1/\\kappa^2=3.6$ times the shot noise (the 5.6 dB above the shot-noise limit in the table), so the SNR keeps $1/(1+1/\\kappa^2)=0.28$ of its shot-noise value: 28.8, or 57.6 in their convention, against 74.7 measured.",
+   "why": "P_RX/P_TX was new notation for eta*L; q and kappa were undefined."
+  },
+  {
+   "id": "03_C0_part10-077",
+   "finding": "report #37; report #11",
+   "old": "  - The measured fall of 15–15.5 dB fits a 5 mm waist ($z_R\\approx50$ m), not the 3.5 mm stated; the paper does not allow the cause to be identified.\n  - With transmit power unpublished, only an estimate is possible. Their 1–2 mW local oscillator makes the receiver shot-noise limited, so 10 dB at 200 m implies $P_{\\rm TX}\\eta\\approx$ 5–11 mW, i.e. 18–36 mW transmitted at $\\eta=0.3$.",
+   "new": "  - The measured fall of 15–15.5 dB fits a waist radius of 5 mm ($z_R\\approx50$ m), not the 3.5 mm radius (7 mm diameter) stated; the paper does not allow the cause to be identified.\n  - With transmit power unpublished, only an estimate is possible. Their 1–2 mW local oscillator makes the receiver shot-noise limited, so its SNR is the number of signal photoelectrons per measurement, $\\eta P_{\\rm tx}T\\,\\mathcal{L}_{\\rm coh}\\,e^{-4\\pi\\Delta\\nu R/c}/E_{\\rm ph}$, with $T$ the integration time. At 200 m, Eq. (33) with $t=1$ gives $\\mathcal{L}_{\\rm coh}=0.1\\times(1.55\\ \\mu{\\rm m})^2/(2\\pi^2\\times(28.4\\ {\\rm mm})^2)=1.5\\times10^{-11}$, and the coherence factor is $e^{-0.84}=0.43$. An SNR of 10 then needs $\\eta P_{\\rm tx}T=10\\times1.28\\times10^{-19}/(1.5\\times10^{-11}\\times0.43)\\approx2\\times10^{-7}$ J. For an assumed $T$ of 18–40 µs [E] that is $\\eta P_{\\rm tx}\\approx$ 5–11 mW, i.e. 20–44 mW transmitted at the report's $\\eta=0.25$.",
+   "why": "The waist was a radius; the power estimate skipped its derivation and used eta = 0.3 against the report's 0.25."
+  },
+  {
+   "id": "03_C0_part10-078",
+   "finding": "symbol scheme",
+   "old": "{\\rho\\,E_{\\rm tx}} . \\tag{55}$$\nHere $E_{\\rm tx}$ is the energy per point,",
+   "new": "{\\rho\\,E_{\\rm pt}} . \\tag{55}$$\nHere $E_{\\rm pt}$ is the energy per point,",
+   "why": "Symbol scheme: E_pt."
+  },
+  {
+   "id": "03_C0_part10-079",
+   "finding": "report #36",
+   "old": "| Sony, Kumagai et al. (ISSCC 2021) | 905 nm, 45 W × 4.5 ns pulses every 3.04 µs, each lighting a vertical line of 63 macro-pixels; 168×63 points at 20 fps; PDE 22%, 6 ns dead time; 150 m on 10% at 117 klux |",
+   "new": "| Sony, Kumagai et al. (International Solid-State Circuits Conference, ISSCC 2021) | 905 nm, 45 W × 4.5 ns pulses every 3.04 µs, each lighting a vertical line of 63 macro-pixels; 168×63 points at 20 fps; PDE 22%, 6 ns dead time; 150 m on 10% at 117 klx |",
+   "why": "First use of ISSCC in the report; klx as in subsection 7."
+  },
+  {
+   "id": "03_C0_part10-080",
+   "finding": "report #36",
+   "old": "200 m on 10% at 70 klux (92.7% success)",
+   "new": "200 m on 10% at 70 klx (92.7% success)",
+   "why": "Unit as in subsection 7."
+  },
+  {
+   "id": "03_C0_part10-081",
+   "finding": "report #36",
+   "old": "100 m on 9% at 70 klux",
+   "new": "100 m on 9% at 70 klx",
+   "why": "Unit as in subsection 7."
+  },
+  {
+   "id": "03_C0_part10-082",
+   "finding": "report #33",
+   "old": "so a point receives $89\\times202/63\\approx290$ nJ.\n- **Sony's lens.** Eq. (55) then asks for $25\\times2.20\\times10^{-19}\\times\\pi\\times150^2/(0.1\\times2.9\\times10^{-7})=1.4\\times10^{-5}$ m².",
+   "new": "so a point receives $89\\times202/63\\approx285$ nJ.\n- **Sony's lens.** Eq. (55) then asks for $25\\times2.20\\times10^{-19}\\times\\pi\\times150^2/(0.1\\times2.85\\times10^{-7})=1.36\\times10^{-5}$ m².",
+   "why": "89 x 202 / 63 = 285 nJ; with 2.9e-7 the displayed substitution gave 1.34e-5, not 1.4e-5."
+  },
+  {
+   "id": "03_C0_part10-083",
+   "finding": "report #38",
+   "old": "is not public and is likely below 37%)",
+   "new": "is not public and is likely below 37% [E])",
+   "why": "Untagged inference."
+  },
+  {
+   "id": "03_C0_part10-084",
+   "finding": "report #36; report #14",
+   "old": "with a beam of at most 0.04° × 0.02° FWHM.\n  - That beam means waists of only 0.83 × 1.66 mm, so 200 m lies deep in the far field, with a link loss of −117.6 dB.",
+   "new": "with a beam of at most 0.04° × 0.02° full width at half maximum (FWHM).\n  - That beam means waists of only 0.83 × 1.66 mm, so 200 m lies deep in the far field, with a link loss of 117.6 dB.",
+   "why": "Expand FWHM; dB loss positive as in 10.2."
+  },
+  {
+   "id": "03_C0_part10-085",
+   "finding": "report #12",
+   "old": "given f/1-class lenses of 10–30 mm and PDEs of 5–22%.",
+   "new": "given f/1-class lenses of 10–30 mm and overall receive efficiencies $\\eta$ of 0.05–0.12 (Sony's PDE is 22%; Toshiba and Toyota publish none).",
+   "why": "The 5-10% values are overall efficiencies, not PDEs."
+  },
+  {
+   "id": "03_C0_part10-086",
+   "finding": "report #35",
+   "old": "  - 0.8–1.8 W for a small-aperture FMCW phased array at 200 m;\n  - and, for SPAD sensors in full sun, range scaling with reflectance closer to $\\rho^{1/4}$ than the $\\rho^{1/2}$ the model assumes.",
+   "new": "  - 0.8–1.8 W for a small-aperture FMCW phased array at 200 m.\n- **Reflectance scaling.** Ouster's claims suggest that, for SPAD sensors in full sun, range scales with reflectance closer to $\\rho^{1/4}$ than the model's $\\rho^{1/2}$.",
+   "why": "Reflectance scaling is not a power and was filed under undisclosed powers."
+  },
+  {
+   "id": "03_C0_part10-087",
+   "finding": "follow-up #1; report #15; symbol scheme",
+   "old": "- **Small objects.** An object smaller than the footprint intercepts a fraction of the light that falls as $1/R^2$, so its loss grows as $R^{-4}$ (subsection 1; §E12). A narrow coherent beam is filled by smaller objects, but it must hit them (§C10.3a).",
+   "new": "- **Small objects.** An object smaller than the footprint intercepts a fraction of the light that falls as $1/R^2$, so the fraction it returns falls as $1/R^4$ (its loss rises 40 dB per decade) and range grows only as $E_{\\rm pt}^{1/4}$ (subsection 1; §E11.3, Eq. (169)). A narrow coherent beam is filled by smaller objects, but it must hit them (§C10.3a, item 3; §C10.3b, Result 4). At 200–300 m a 15–30 cm object gets at most about one point on a 0.1° grid, whatever the receiver (§E12, subsection 3, item 5).",
+   "why": "The returned fraction falls as 1/R^4; §E12 has no R^-4 law (it is §E11.3, Eq. (169)); point to the specific items."
+  },
+  {
+   "id": "03_C0_part10-088",
+   "finding": "symbol scheme",
+   "old": "**Eye safety** caps $E_{\\rm tx}$ per direction",
+   "new": "**Eye safety** caps $E_{\\rm pt}$ per direction",
+   "why": "Symbol scheme: E_pt."
+  },
+  {
+   "id": "03_C0_part10-089",
+   "finding": "report #15; report #38",
+   "old": "- **Turbulence, misalignment and non-Lambertian targets** lower $\\mathcal{L}_{\\rm coh}$ further (Frehlich and Kavaya 1991).",
+   "new": "- **Turbulence and misalignment** lower $\\mathcal{L}_{\\rm coh}$ further (Frehlich and Kavaya 1991) [I]. **Non-Lambertian targets** change it either way: glossy paint and retroreflectors return far more or far less toward the sensor, depending on angle (10.1).",
+   "why": "Retroreflectors raise L_coh; missing [I] tag."
+  }
+ ],
+ "skipped": [
+  {
+   "finding": "report #1",
+   "kind": "already_fixed",
+   "location": "10.2, Reading Figure C0.10a: \"rising 20 dB per decade of range for every lens\"",
+   "detail": "All four places already read rising/rises: the straight-line bullet, 'Coherent detection is flat, then rises', 'Its loss rises only 10 dB per decade' and, in 10.4, 'Coherent collection is flat, then falls (its loss is flat, then rises)'."
+  },
+  {
+   "finding": "report #2 and report #6 (the 10.4 bullet)",
+   "kind": "already_fixed",
+   "location": "10.4, Reading Figure C0.10a: \"Direct detection collects a fraction proportional to $D^2/R^2$ at every range.\"",
+   "detail": "That bullet is already reworded; the other places of both findings are in the edit list."
+  },
+  {
+   "finding": "report #3",
+   "kind": "already_fixed",
+   "location": "Main results: \"needs five times the energy of the best FMCW design: 1.5 µJ per point against 303 nJ, or sixteen times the 96 nJ of the 25 mm ToF design\"",
+   "detail": "The 2.5x/3.2x clarification is in the live text."
+  },
+  {
+   "finding": "report #4; report §3 flag 1",
+   "kind": "already_fixed",
+   "location": "Main results: \"When each of the FMCW receiver's two apertures (its four looks are two polarizations on each of two spatial modes, §C7a)\"",
+   "detail": "Already says energy per point, the two apertures, and 3.1 at 200 m against the fixed 25 mm ToF lens (the ≈3.2× of §C7a, §C7b, §C10)."
+  },
+  {
+   "finding": "report #5; report §3 flag 2",
+   "kind": "already_fixed",
+   "location": "10.3: \"The model's four looks are two polarizations on each of two spatial modes, received through two equal apertures\"",
+   "detail": "The four-looks sentence is in the live text; 10.4 and 10.5 already say that each look collects the full L_coh."
+  },
+  {
+   "finding": "report #9 (second part); report §3 flag 10",
+   "kind": "needs_source",
+   "location": "10.7, What coherent detection changes, Evidence: \"although the retroreflector was 37.7 dB brighter [P]\"",
+   "detail": "Settembrini et al. (2026): state whether the 37.7 dB (retroreflector against the 5% target at 7.2 m) and the 31.8 dB in 'Measured at a lidar wavelength' (against the 50% target) come from different measurements or ranges. As written they disagree by 4 dB: 31.8 dB above a 50% target is 41.8 dB above a 5% target."
+  },
+  {
+   "finding": "report #11 (part)",
+   "kind": "needs_source",
+   "location": "10.8, How the numbers are derived, Wang: \"For an assumed $T$ of 18–40 µs [E]\"",
+   "detail": "Wang et al. 2025: the integration time T of one measurement (chirp duration). The edit shows the estimate (an SNR of 10 at 200 m needs eta*P_tx*T of about 2e-7 J) and states the 18-40 µs that reproduces the 5-11 mW previously quoted; if the paper gives T, use eta*P_tx = 2e-7 J / T and redo the transmitted power at eta = 0.25."
+  },
+  {
+   "finding": "report #13 (unit of Waymo's 50); report §3 flag 3",
+   "kind": "needs_source",
+   "location": "10.8 coherent table, Waymo design point, published cell: \"50 photons; $P_D=0.9$\"; 10.3: \"Waymo's 50 photoelectrons for 90% detection\"; §C7a(a): \"Waymo's analysis uses **50 photoelectrons for 90% detection**\"",
+   "detail": "Check Piggott et al. 2025 (Table 1 and the detection discussion): are Waymo's 50 photons or photoelectrons? The model gives 49 photons per chirp, i.e. 44 photoelectrons at QE 0.9, against 44.9 needed at 1e-6 per bin with four looks, which fits '50 photons' better. If they are photons, change 10.3 and §C7a(a) to '50 photons (45 photoelectrons at QE 0.9)'; if photoelectrons, change this cell to '50 photoelectrons'."
+  },
+  {
+   "finding": "report #22 (subsection 8 labels); report §3 flag 4",
+   "kind": "cross_section",
+   "location": "§C0 subsection 8, fog table: \"| 1,000 m (light fog; $q_{\\rm K}=0.5$) |\", \"| 50 m (dense fog) |\", \"| 20 m (very dense fog) |\"",
+   "detail": "Align with the classes of Figure C0.10d(b) and its caption (fog 0.2-1 km, thick fog 50-200 m, haze above 1 km): \"| 1,000 m (fog, at the haze boundary; $q_{\\rm K}=0.5$) |\", \"| 200 m (fog) |\" unchanged, \"| 50 m (thick fog) |\", \"| 20 m (very thick fog) |\"."
+  },
+  {
+   "finding": "report #24",
+   "kind": "structural",
+   "location": "10.7 Dynamic range: \"**How strong returns fail in ToF lidars**\" and \"**Tests and evidence.**\"",
+   "detail": "Move the survey ('How strong returns fail in ToF lidars', 'Tests and evidence', and the vendor and patent items of 'What does not go away') to a receiver section such as §C4b, leaving a § pointer, and put 'What this means' directly after the span table."
+  },
+  {
+   "finding": "report #29 (second part)",
+   "kind": "structural",
+   "location": "10.3: \"**Where $b=2.87$ comes from** [E]\" against §C7b subsection 1, \"**Per bin:** these events are spread over the ≈2,080 histogram bins\"",
+   "detail": "The b = 2.87 derivation is duplicated across sections. §C0 comes first in reading order and holds the full derivation, so the merge would shorten the §C7b copy to a pointer to §C0 subsection 10.3 rather than shorten §C0."
+  },
+  {
+   "finding": "report §3 flag 6",
+   "kind": "needs_decision",
+   "location": "§C0 subsection 10: $\\gamma(n,x)$ (10.3) and $\\gamma_{\\rm rain}$ (10.6); per-bin $p$ against the pixel pitch $p$ of subsection 3; $u$ (integration variable, $Q_1(u,v)$, and $u=z_R/R_0$ in Eq. (48)); $x$ (threshold, and $x=a/w_0$ in the 0.45D derivation); $R_A$ and $R_r$ against range $R$; $\\mathcal{D}$ against $D$",
+   "detail": "Not covered by the symbol scheme. Each is defined where used and distinguishable by subscript or context; if the author wants no reuse, rename $u=z_R/R_0$ (Eq. (48)) and $x=a/w_0$ (0.45D derivation)."
+  },
+  {
+   "finding": "report §3 flag 7; follow-up flag e",
+   "kind": "structural",
+   "location": "Eq. (33) restated as Eq. (101) in §C7b and Eq. (146) in §C10.3b; Eqs. (34)/(35) as Eqs. (102)/(103); Eq. (55) as Eqs. (93)/(97) in §C7a/§C7b",
+   "detail": "Merge the duplicated equations into references to Eqs. (33)-(35) and (55) when equations are renumbered."
+  },
+  {
+   "finding": "report §3 flag 8",
+   "kind": "needs_decision",
+   "location": "10.6: \"The best-aperture design reaches 110 m behind a 0.2 mm water film ($X=1.9$ dB)\" and \"The 25 mm design reaches 58 m behind the film\"",
+   "detail": "These film-only ranges use the rounded 1.9 dB (link_budget_scaling_tables.txt: '1.9 dB 110 m', '1.9 dB 58 m'), while the rain table uses the exact 0.94 and 1.88 dB; this round only shows the rounding (0.2 x 9.4 = 1.88, about 1.9 dB). To use 1.88 dB here too, change the script's extra-loss list from 1.9 to 1.88 dB and the text to 111 m (best aperture) and 61 m (25 mm); the 25 mm value moves by 3 m because it sits just below its 2.1 dB cliff."
+  },
+  {
+   "finding": "report §3 flag 12",
+   "kind": "needs_decision",
+   "location": "Main results (\"measured coherent chains reach 0.06–0.17\"), 10.1 (\"The FMCW value, 0.25, is a design value\"), 10.8 (\"**Efficiency.** It is the weakest input\") and 10.8 (\"**Efficiency is the weak input.**\")",
+   "detail": "The efficiency caveat appears four times in the subsection (and again in §C7a and §C7b); the numbers agree. Decide whether the 10.8 'What the coherent comparison shows' bullet should become a pointer to 10.1."
+  },
+  {
+   "finding": "report §3 flag 14 (figure labels); symbol scheme",
+   "kind": "cross_section",
+   "location": "build/figures/link_budget_scaling.py, Figures C0.10a and C0.10c",
+   "detail": "Figure C0.10a panel (a) is titled 'Direct detection: the lens collects the whole cell'; the text says 'whole spot', so retitle it '... the whole spot'. Both figures label the energy per point $E_{\\rm tx}$ (detection-level labels, x-axes, the top axes '1/E_tx', and the annotations 'R_max ∝ sqrt(A E_tx)' and 'best D: R_max ∝ E_tx'); relabel as $E_{\\rm pt}$ to match the text. Figure C0.10a's level labels write $\\bar n$ = 25, 890 and 30 for what 10.4 calls $n_{\\rm req}$. Needs a figure rebuild."
+  },
+  {
+   "finding": "follow-up flag a",
+   "kind": "model_round2",
+   "location": "§C10.3a item 7: ToF optics 0.5 × PDE 0.35 = 0.175, and FMCW QE 0.8 × 1 dB each way ≈ 0.50, concluding 'about 2–6×'",
+   "detail": "Efficiency basis in §C10.2-§C10.3b is Round 2. With §C0 subsection 10's values (0.145 and 0.25) the per-look area ratio is about 3.5-10x (71 mm2 against 7.2, 15.9 and 20.5 mm2)."
+  },
+  {
+   "finding": "follow-up flag b",
+   "kind": "cross_section",
+   "location": "§C10.3a item 3 table, column 'Optimal $w_0$ (diameter)', and item 7 'Confocal optimum (≈14 mm at 100 m, ≈22 mm at 250 m)'",
+   "detail": "These are beam diameters $2w_0$, while §C0 10.2/10.4 and §C10.3b quote the aperture $D_{\\rm opt}=w_0/0.45$ (16 mm at 100 m, 22 mm at 200 m, 35 mm at 500 m). Proposed: 'Confocal optimum: beam diameter $2w_0\\approx14$ mm at 100 m (aperture $D_{\\rm opt}=w_0/0.45\\approx16$ mm) and ≈22 mm at 250 m (aperture ≈25 mm)', and head the column 'Optimal $w_0$ (beam diameter $2w_0$)'."
+  },
+  {
+   "finding": "follow-up flag c",
+   "kind": "cross_section",
+   "location": "§C10.3a item 2 (\"one coherent mixer uses of order $1/N_{\\rm sp}$ of the aperture power\") and §C10.3b Result 1 (\"Goodman's numerical speckle count $N_{\\rm sp}$\")",
+   "detail": "§C0 subsection 10 uses $N_{\\rm sp}$ for the number of looks summed. Give the per-aperture speckle count its own symbol there (e.g. $N_{\\rm spk}$) and add: 'A single-mode receiver still fades like one look, however many speckles fall across its aperture.'"
+  },
+  {
+   "finding": "follow-up flag d",
+   "kind": "cross_section",
+   "location": "§C10.3b Result 2: \"so $t^2=0.837$\"; §C10.3a and §C10.3b: \"$t^2=0.84$\"; §C10.3b: \"the ratio 0.45 is a model choice, the same as in §C0 subsection 10.2\"",
+   "detail": "Use $t^2=0.838$ ($0.9153^2$, as in §C0 10.2 and the tables file, t^2 = 0.8379), and replace 'a model choice' by 'the far-field optimum derived in §C0 subsection 10.2'."
+  },
+  {
+   "finding": "follow-up flag f",
+   "kind": "cross_section",
+   "location": "§C4b: \"A passively recharged SPAD such as Sony's is paralyzable: a photon that arrives while it recovers restarts the recovery (§C5a)\"; §C6(d): \"The table uses the paralyzable form.\"; §C7a(a): \"Its passive recharge behaves paralyzably, since the 60 Mcps ceiling equals $1/(e\\tau_d)$ (§C5a)\"",
+   "detail": "Hedge as §C5a and §C0 10.3 do: §C4b 'A passively recharged SPAD is paralyzable: a photon that arrives while it recovers restarts the recovery. Sony's development chip appears to behave this way, since its 60 Mcps ceiling matches $1/(e\\tau_d)$, although the IMX459 press release says active recharge (§C5a) [E].'; §C6(d) 'The table uses the paralyzable form, which the model assumes for Sony's SPADs (§C5a) [E].'; §C7a(a) 'The model treats it as paralyzable [E], since the 60 Mcps ceiling equals $1/(e\\tau_d)$, although the IMX459 press release says active recharge (§C5a)'."
+  },
+  {
+   "finding": "follow-up flag g",
+   "kind": "cross_section",
+   "location": "§C0 subsection 1: \"so its return falls as $1/R^4$ (§E12).\"; §C3b: \"so the return falls as $1/R^4$ (§E12).\"",
+   "detail": "§E12 does not state the $1/R^4$ law; §E11.3 does (Eq. (169)). Change both pointers to '(§E11.3, Eq. (169))'."
+  },
+  {
+   "finding": "follow-up flag h",
+   "kind": "cross_section",
+   "location": "§C3b, after Eq. (62): \"$\\eta_{\\rm opt}$ the optics transmission and $\\eta_{\\rm det}$ the detector's photon detection efficiency\"",
+   "detail": "§C0 subsection 10's $\\eta$ includes the dead-time live fraction. Add: 'For a SPAD in sunlight, $\\eta_{\\rm det}$ also carries the dead-time live fraction (0.784 in the bright sun of §C0 subsection 10.3).' The $N_s$ to $n_{\\rm req}$ change in Eq. (62) is part of the symbol scheme."
+  },
+  {
+   "finding": "symbol scheme",
+   "kind": "cross_section",
+   "location": "§C7b subsection 1, Eq. (98): \"$$\\bar n_{\\rm bg,bin}=r_{\\rm bg}\\,t_{\\rm bin}\\,N_{\\rm shots}, \\tag{98}$$\"",
+   "detail": "§C0 10.3 writes the histogram bin width as $\\Delta t_{\\rm bin}$ (scheme) where it applies Eq. (98); write $\\Delta t_{\\rm bin}$ in Eq. (98) and its text as well so the two match."
+  }
+ ]
+}

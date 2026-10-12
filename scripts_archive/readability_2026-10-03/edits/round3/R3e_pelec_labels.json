@@ -1,0 +1,27 @@
+{
+ "block": "R3e_pelec_labels",
+ "edits": [
+  {
+   "id": "R3e_pelec_labels-001",
+   "finding": "08_C7b report #34 (P_elec display); build compatibility",
+   "old": "_{\\rm independent\\ of\\ P_{\\rm ch}}",
+   "new": "_{\\text{fixed}}",
+   "why": "The build converts {\\rm ...} only one brace level deep; labels without nested \\rm."
+  },
+  {
+   "id": "R3e_pelec_labels-002",
+   "finding": "08_C7b report #34 (P_elec display); build compatibility",
+   "old": "_{\\rm grows\\ with\\ P_{\\rm ch}}",
+   "new": "_{\\propto\\,P_{\\rm ch}}",
+   "why": "The build converts {\\rm ...} only one brace level deep; labels without nested \\rm."
+  },
+  {
+   "id": "R3e_pelec_labels-003",
+   "finding": "08_C7b report #34 (P_elec display); build compatibility",
+   "old": "_{\\rm falls\\ as\\ 1/P_{\\rm ch}}",
+   "new": "_{\\propto\\,1/P_{\\rm ch}}",
+   "why": "The build converts {\\rm ...} only one brace level deep; labels without nested \\rm."
+  }
+ ],
+ "skipped": []
+}

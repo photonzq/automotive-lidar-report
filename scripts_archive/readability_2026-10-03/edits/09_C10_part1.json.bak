@@ -1,0 +1,675 @@
+{
+ "block": "09_C10_part1",
+ "edits": [
+  {
+   "id": "09_C10_part1-001",
+   "finding": "report #38",
+   "old": "for physical rather than merely engineering reasons, and that very fine \"camera-like\" sampling is cheaper to build with time-of-flight pixel arrays than with coherent receivers.",
+   "new": "for physical rather than merely engineering reasons. Very fine \"camera-like\" sampling is also cheaper to build with time-of-flight pixel arrays than with coherent receivers.",
+   "why": "Splits a 42-word sentence in the section opening."
+  },
+  {
+   "id": "09_C10_part1-002",
+   "finding": "report #17, #18, #34",
+   "old": "- **OPA as the primary long-range automotive lidar** (range ≥200 m on a 10%-reflectance target, horizontal field ≥100°, resolution ≤0.1°): **unlikely this decade**. The obstacles are physical scaling laws, not only immaturity:\n  - degrees of freedom: the number of directions a steerer can address efficiently is roughly its number of independent controls (§C10.1);\n  - the second steering axis;",
+   "new": "- **OPA as the primary long-range automotive lidar** [R] (range ≥200 m on a 10%-reflectance target, horizontal field ≥100°, resolution ≤0.1°): **unlikely this decade**. The obstacles are physical scaling laws, not only immaturity:\n  - degrees of freedom: for a steerer built from element-level controls, the number of directions it can address efficiently is roughly its number of independent controls, while whole-aperture phase ramps (mirror tilt, wavelength sweep) escape this at a cost in dwell, bandwidth or loss (§C10.1);\n  - the second steering axis: phase control on both axes needs about $10^6$ shifters at 0.05° over 120° × 25°, and wavelength steering over 25° needs ≈160 nm of tuning on Si (§C10.2, item 2);",
+   "why": "Adds the deployability tag, limits the degrees-of-freedom rule to element-level steerers as §C10.1 does, and gives the reason behind the second-axis obstacle."
+  },
+  {
+   "id": "09_C10_part1-003",
+   "finding": "report #34",
+   "old": "- **FPAs are the more natural solid-state coherent architecture.** A lens supplies a large physical aperture without per-element phase control.",
+   "new": "- **FPAs are the more natural solid-state coherent architecture** [NT, mid-range; §C7a]. A lens supplies a large physical aperture without per-element phase control.",
+   "why": "Adds the deployability tag that §C7a gives the Pointcloud FPA."
+  },
+  {
+   "id": "09_C10_part1-004",
+   "finding": "report #18; consistency flag (Pointcloud wavelength)",
+   "old": "Full nominal coverage needs $A_{\\rm mode}\\lesssim\\tfrac{t^2}{2}N_{\\rm cell}\\lambda^2/\\Omega_{\\rm FOV}$, where $N_{\\rm cell}$ is the number of FPA cells, $\\lambda$ the wavelength, $\\Omega_{\\rm FOV}$ the solid angle of the field of view, $t$ the Gaussian aperture-truncation (power) factor of §C10.3b and ½ the single-polarization factor. For Pointcloud's coherent FPA (*Nature* 2026) that is under 1 mm equivalent diameter at full fill (beam footprints covering the whole field), and ≈6 mm at its ≈2% fill (§C10.3a).",
+   "new": "For Pointcloud's coherent FPA (*Nature* 2026, 1.31 µm), covering its whole field would leave an $A_{\\rm mode}$ equal to that of a lens under 1 mm across; at the ≈2% nominal footprint fraction it actually uses (defined below), it gets ≈6 mm (§C10.3a, item 5).",
+   "why": "Removes the five-symbol inequality from the summary (it is derived in §C10.3a, item 5), states the wavelength and uses the defined term instead of 'fill'."
+  },
+  {
+   "id": "09_C10_part1-005",
+   "finding": "report #24, #34; consistency flag (Lumotive range)",
+   "old": "- **LC metasurfaces (Lumotive) are the only non-mechanical beam steerer found in commercial production.** A large, free-space-fed aperture addresses the solid-state *receive* problem. The limits are LC switching speed, one-dimensional steering, cold-temperature response and grating dispersion (the steering angle shifts with wavelength). Products so far reach ≈10–50 m (§C10.5).",
+   "new": "- **LC metasurfaces (Lumotive) are the only non-mechanical beam steerer found in commercial production** [D]. A large, free-space-fed aperture could address the solid-state *receive* problem, collecting many spatial modes from the steered direction (§C10.2, item 6), although no shipping product documents a receive-path metasurface yet (§C10.5). The limits are LC switching speed, one-dimensional steering, cold-temperature response and grating dispersion (the steering angle shifts with wavelength). Shipping products and reference designs reach ≈10–50 m, and one module shown at CES 2026 claims up to 100 m (§C10.5).",
+   "why": "Defines the receive problem where it is first used, matches §C10.5 (no receive-path product; Stella-2 at up to 100 m) and adds the deployability tag."
+  },
+  {
+   "id": "09_C10_part1-006",
+   "finding": "report #38",
+   "old": "not in dwell time or per-channel coherent hardware; that is why the race happened there.",
+   "new": "not in dwell time or per-channel coherent hardware. That is why the race happened there.",
+   "why": "Splits a sentence of about 45 words."
+  },
+  {
+   "id": "09_C10_part1-007",
+   "finding": "report #36",
+   "old": "| Angular sampling over 120°×25° | Cells per axis | Cells per frame | At 10 Hz |\n|---|---|---:|---:|\n| 0.1° | 1,200 × 250 | 0.30 M | 3 M/s |\n| 0.05° | 2,400 × 500 | 1.2 M | 12 M/s |\n| 0.025° (\"camera-like\") | 4,800 × 1,000 | 4.8 M | 48 M/s |",
+   "new": "| Angular sampling over 120°×25° | Cells per axis | Cells per frame | Points per second at 10 Hz |\n|---|---|---:|---:|\n| 0.1° | 1,200 × 250 | 0.30 M | 3 Mpts/s |\n| 0.05° | 2,400 × 500 | 1.2 M | 12 Mpts/s |\n| 0.025° (\"camera-like\") | 4,800 × 1,000 | 4.8 M | 48 Mpts/s |",
+   "why": "Uses the point-rate unit of the rest of the section."
+  },
+  {
+   "id": "09_C10_part1-008",
+   "finding": "report #36",
+   "old": "- The rate is cells per frame times the 10 Hz frame rate, e.g. $1.2\\times10^{6}\\times10\\ {\\rm s^{-1}}=12$ M/s.",
+   "new": "- The point rate is cells per frame times the 10 Hz frame rate, e.g. $1.2\\times10^{6}\\times10\\ {\\rm s^{-1}}=1.2\\times10^{7}$ points per second, written 12 Mpts/s.",
+   "why": "Same unit as the table and the rest of the section."
+  },
+  {
+   "id": "09_C10_part1-009",
+   "finding": "report #17",
+   "old": "**A degrees-of-freedom rule links every steerer** [E; standard antenna theory]:",
+   "new": "**A degrees-of-freedom rule links every steerer built from independent element-level controls** [E; standard antenna theory]:",
+   "why": "The next bullet exempts whole-aperture phase ramps, so 'every steerer' contradicted it."
+  },
+  {
+   "id": "09_C10_part1-010",
+   "finding": "report #23",
+   "old": "Examples are mirror tilt, a wavelength sweep through a dispersive grating, and row–column addressing (§C10.3a, item 5b).",
+   "new": "Examples are mirror tilt, a wavelength sweep through a dispersive grating, and row–column addressing (§C10.3a, item 5, limit (b): the steering space–bandwidth product).",
+   "why": "§C10.3a has no item 5b; points to limit (b) of item 5 and names it."
+  },
+  {
+   "id": "09_C10_part1-011",
+   "finding": "report #22",
+   "old": "  - Peak intensity scales as $N^2$, because the fields of $N$ elements add in phase in the main-lobe direction, while the angle-averaged intensity scales as $N$ and spreads over $N_{\\rm spot}$ spots. The main-lobe power fraction is therefore about $N/N_{\\rm spot}$, and the mean sidelobe level about $1/N$ relative to the peak:",
+   "new": "  - Normalize the intensity radiated by one element to 1. The peak intensity is then $N^2$, because the fields of $N$ elements add in phase in the main-lobe direction, while the angle-averaged intensity is $N$, because elsewhere their random phases add in power. Measured in units of the full steering range, the main lobe is $1/N_{\\rm spot}$ wide, so it carries power $N^2/N_{\\rm spot}$ out of a total of $N$, a main-lobe power fraction of $N/N_{\\rm spot}$. The mean sidelobe level is $N/N^2=1/N$ of the peak:",
+   "why": "Shows the skipped step from intensities to the power fraction."
+  },
+  {
+   "id": "09_C10_part1-012",
+   "finding": "report #20",
+   "old": "For $N=256$ and $N_{\\rm spot}\\approx1{,}720$ it gave 12%, −12.6 dB and −24 dB.",
+   "new": "For $N=256$ and $N_{\\rm spot}\\approx1{,}720$ ($N/N_{\\rm spot}=15\\%$) it gave 12%, −12.6 dB and −24 dB.",
+   "why": "Gives the N/N_spot prediction for the second case too (256/1,720 = 0.149)."
+  },
+  {
+   "id": "09_C10_part1-013",
+   "finding": "report #12, #29; symbol scheme",
+   "old": "the aperture length $D$ that gives the required beamwidth $\\theta$ (full width at half maximum, FWHM, in radians), and the resulting element count $N$:\n\n$$d\\le\\frac{\\lambda}{2\\sin(\\mathrm{FOV}/2)},\\qquad D=\\frac{0.886\\,\\lambda}{\\theta},\\qquad N=\\frac{D}{d} \\tag{130}$$\n\nHere FOV is the full alias-free field of view along that axis, and 0.886 is the FWHM of the far-field pattern of a uniformly illuminated aperture in units of $\\lambda/D$.\n\n| Alias-free FOV (no grating lobe inside the FOV) | Max pitch $\\lambda/(2\\sin\\tfrac{\\rm FOV}{2})$ | 0.1°: aperture / elements | 0.05° | 0.025° |",
+   "new": "the aperture length $D$ that gives the required beamwidth $\\theta_{\\rm B}$ (full width at half maximum, FWHM, in radians), and the resulting element count $N$:\n\n$$d\\le\\frac{\\lambda}{2\\sin(\\mathrm{FOV}/2)},\\qquad D=\\frac{0.886\\,\\lambda}{\\theta_{\\rm B}},\\qquad N=\\frac{D}{d} \\tag{130}$$\n\nHere FOV is the full alias-free field of view along that axis, and 0.886 is the FWHM of the far-field pattern of a uniformly illuminated aperture in units of $\\lambda/D$. The table evaluates Eq. (130) for three fields and three beamwidths $\\theta_{\\rm B}$.\n\n| Alias-free FOV (no grating lobe inside the FOV) | Max pitch $\\lambda/(2\\sin\\tfrac{\\rm FOV}{2})$ | Beamwidth $\\theta_{\\rm B}=0.1^\\circ$: aperture / elements | $\\theta_{\\rm B}=0.05^\\circ$ | $\\theta_{\\rm B}=0.025^\\circ$ |",
+   "why": "Beamwidth gets its own symbol (theta is the emission angle a few lines later); the table gets a lead-in and headers that say the columns are beamwidths."
+  },
+  {
+   "id": "09_C10_part1-014",
+   "finding": "report #12; symbol scheme",
+   "old": "- Aperture: a uniform aperture of length $D$ has a FWHM beamwidth $\\theta=0.886\\lambda/D$, so $D=0.886\\lambda/\\theta$.",
+   "new": "- Aperture: a uniform aperture of length $D$ has a FWHM beamwidth $\\theta_{\\rm B}=0.886\\lambda/D$, so $D=0.886\\lambda/\\theta_{\\rm B}$.",
+   "why": "Beamwidth symbol as in Eq. (130)."
+  },
+  {
+   "id": "09_C10_part1-015",
+   "finding": "report #13, #33",
+   "old": "- 2D phase control for 2,400×500 spots would need about 1.2 M phase shifters. Published 2D arrays are orders of magnitude smaller.\n- The standard answer is **wavelength steering** with grating emitters [E]. A grating emitter is a waveguide with a periodic corrugation that leaks light out at an angle $\\theta$ set by the wavelength $\\lambda$, so tuning the laser steers the beam along the second axis. Its steering rate $d\\theta/d\\lambda$ (radians of beam angle per nanometre of wavelength change) is",
+   "new": "- 2D phase control for 2,400×500 spots (0.05° over 120° × 25°) would need about $2{,}400\\times500=1.2\\times10^{6}$ phase shifters [E]. Published 2D arrays are orders of magnitude smaller [U].\n- The standard answer is **wavelength steering** with grating emitters. A grating emitter is a waveguide with a periodic corrugation of period $\\Lambda$ that leaks light out at an angle $\\theta$ given by the grating equation $\\sin\\theta=n_{\\rm eff}-\\lambda/\\Lambda$, where $\\lambda$ is the wavelength and $n_{\\rm eff}$ the effective index of the guided mode (the refractive index the light \"sees\" in the waveguide). Tuning the laser therefore steers the beam along the second axis. Differentiating the grating equation with respect to $\\lambda$, and writing $n_g=n_{\\rm eff}-\\lambda\\,dn_{\\rm eff}/d\\lambda$, gives the magnitude of the steering rate $d\\theta/d\\lambda$ (radians of beam angle per nanometre of wavelength change):",
+   "why": "Writes the grating equation and the derivation step behind Eq. (131); puts [E] on the estimate rather than on common practice and marks the unsourced 2D-array claim [U]."
+  },
+  {
+   "id": "09_C10_part1-016",
+   "finding": "report #13, #33",
+   "old": "  where $n_g$ is the group index of the waveguide (the ratio of the speed of light in vacuum to the speed of a light pulse in the guide). Near normal emission this gives:",
+   "new": "  Here $n_g$, the group index of the waveguide, is the ratio of the speed of light in vacuum to the speed of a light pulse in the guide. Near normal emission Eq. (131) gives [E]:",
+   "why": "n_g is now introduced before the equation; the [E] tag moves to the Si and SiN estimates."
+  },
+  {
+   "id": "09_C10_part1-017",
+   "finding": "report #28",
+   "old": "- The laser must therefore be **widely tunable, narrow-linewidth (≲20–55 kHz at 300 m for a 1–3 dB coherent loss, §C7b subsection 2(e); Waymo designs to ≲60–120 kHz at 250 m, §C10.3), linearly chirped and cheap** at once. Linewidth is the spectral width of the laser; it limits the coherence length and hence the range over which the return can still be mixed coherently with the LO.",
+   "new": "- The laser must therefore be **widely tunable, linearly chirped, cheap and narrow in linewidth** at once. Linewidth is the spectral width of the laser; it limits the coherence length and hence the range over which the return can still be mixed coherently with the LO. A 1–3 dB coherent loss at 300 m allows ≲18–55 kHz (§C7b subsection 2(e)); Waymo's design value of ≲60–120 kHz at 250 m accepts a 2.7–5.5 dB loss (§C7a(f); §C10.3).",
+   "why": "Un-nests the parentheses, uses the 18.3 kHz of the §C7b table and says why Waymo's limit is looser."
+  },
+  {
+   "id": "09_C10_part1-018",
+   "finding": "symbol scheme (chirp bandwidth B, as in §C0 and Eq. (136))",
+   "old": "A chirp spanning a frequency range $\\Delta f$ changes the wavelength by $\\Delta\\lambda=\\lambda^2\\Delta f/c$, with $c$ the speed of light.",
+   "new": "A chirp of bandwidth $B$ (the frequency range it sweeps) changes the wavelength by $\\Delta\\lambda=\\lambda^2B/c$, with $c$ the speed of light.",
+   "why": "Delta f is reserved for the electrical bandwidth; the chirp bandwidth is B elsewhere in the report."
+  },
+  {
+   "id": "09_C10_part1-019",
+   "finding": "report #37",
+   "old": "A residual random phase error of rms $\\sigma=0.3$ rad lowers that to **82%**, as the Strehl-type factor $e^{-\\sigma^2}=e^{-0.09}=0.914$ predicts ($0.90\\times0.914=0.82$). The Strehl factor is the fraction of peak intensity kept when uncorrelated phase errors of rms $\\sigma$ (in radians) are present.",
+   "new": "The Strehl factor $e^{-\\sigma^2}$ is the fraction of peak intensity kept when uncorrelated phase errors of rms $\\sigma$ (in radians) are present. For a residual random phase error of $\\sigma=0.3$ rad it is $e^{-0.09}=0.914$, which lowers the main-lobe share to **82%** ($0.90\\times0.914=0.82$), as the Monte Carlo finds.",
+   "why": "Defines the Strehl factor before using it."
+  },
+  {
+   "id": "09_C10_part1-020",
+   "finding": "report #13",
+   "old": "The emission angle of a grating depends on the effective index $n_{\\rm eff}$ of the guided mode (the refractive index the light \"sees\" in the waveguide), and $n_{\\rm eff}$ changes with temperature at a rate $dn_{\\rm eff}/dT$ (the thermo-optic coefficient of the mode, per kelvin). Differentiating the grating equation at fixed wavelength gives the angle drift $\\Delta\\theta$ for a temperature change $\\Delta T$, and dividing it by the steering rate of Eq. (131) gives the wavelength change $\\Delta\\lambda_{\\rm comp}$ needed per kelvin to hold the angle:",
+   "new": "The emission angle depends on the effective index $n_{\\rm eff}$ of the guided mode (item 2), and $n_{\\rm eff}$ changes with temperature at a rate $dn_{\\rm eff}/dT$ (the thermo-optic coefficient of the mode, per kelvin). At fixed wavelength the grating equation gives $\\cos\\theta\\,\\Delta\\theta=\\Delta n_{\\rm eff}$, hence the angle drift $\\Delta\\theta$ for a temperature change $\\Delta T$. Dividing it by the steering rate of Eq. (131) gives the wavelength change $\\Delta\\lambda_{\\rm comp}$ needed per kelvin to hold the angle:",
+   "why": "Shows the differentiation step; n_eff is defined at its first use in item 2."
+  },
+  {
+   "id": "09_C10_part1-021",
+   "finding": "report #32",
+   "old": "$\\Delta\\theta\\approx1.6\\times10^{-4}$ rad/K, about **0.009°/K**, i.e. about $0.0092\\times145\\ {\\rm K}\\approx$ **1.3° over −40 to +105 °C**, or about 25 cells at 0.05° ($1.3^\\circ/0.05^\\circ\\approx26$);",
+   "new": "$\\Delta\\theta/\\Delta T\\approx1.6\\times10^{-4}$ rad/K, about **0.009°/K**, i.e. about $0.0092\\times145\\ {\\rm K}\\approx$ **1.3° over −40 to +105 °C**, or about 26 cells at 0.05° ($1.3^\\circ/0.05^\\circ=26$);",
+   "why": "A per-kelvin rate is written as a rate, and the prose matches the arithmetic."
+  },
+  {
+   "id": "09_C10_part1-022",
+   "finding": "report #25",
+   "old": "gives only 20–38 dB two-way, 20–38 dB short of the 58 dB retroreflector case.",
+   "new": "gives only 20–38 dB two-way, which leaves the 58 dB retroreflector case 38 dB short (10 dB devices) to 20 dB short (19 dB devices).",
+   "why": "The repeated range read like a typo, and the shortfall runs in the opposite order."
+  },
+  {
+   "id": "09_C10_part1-023",
+   "finding": "report #39; symbol scheme",
+   "old": "The number of detected signal photons $N_s$ from one pulse is the number of transmitted photons, times the fraction of them that a Lambertian target scatters into the receive mode, times the detection efficiency, times the OPA's one-way transmission squared:\n\n  $$N_s=\\frac{E_{\\rm pulse}}{E_{\\rm ph}}\\,\\frac{\\rho A_{\\rm mode}}{\\pi R^2}\\,\\eta\\,\\eta_{\\rm OPA}^2 \\tag{134}$$\n\n  Here $E_{\\rm pulse}$ is the transmitted energy per shot,",
+   "new": "The number of detected signal photons $N_s$ from one sample (one chirp or pulse) is the number of transmitted photons, times the fraction of them that a Lambertian target scatters into the receive mode, times the detection efficiency, times the OPA's one-way transmission squared:\n\n  $$N_s=\\frac{E_{\\rm pt}}{E_{\\rm ph}}\\,\\frac{\\rho A_{\\rm mode}}{\\pi R^2}\\,\\eta\\,\\eta_{\\rm OPA}^2 \\tag{134}$$\n\n  Here $E_{\\rm pt}$ is the optical energy transmitted toward one point,",
+   "why": "The example is a 5 µs chirp, not a pulse; E_pt is the report-wide symbol for energy per point."
+  },
+  {
+   "id": "09_C10_part1-024",
+   "finding": "report #39",
+   "old": "  - The pulse carries $5\\ \\mu{\\rm J}/(1.28\\times10^{-19}\\ {\\rm J})=3.9\\times10^{13}$ photons,",
+   "new": "  - The 5 µJ sample carries $5\\ \\mu{\\rm J}/(1.28\\times10^{-19}\\ {\\rm J})=3.9\\times10^{13}$ photons,",
+   "why": "Same correction: the sample is a chirp."
+  },
+  {
+   "id": "09_C10_part1-025",
+   "finding": "consistency flag (t^2 label)",
+   "old": "§C10.3b's Gaussian mode-shape and truncation factor ($t^2=0.915^2\\approx0.84$, where $t$ is the fraction of a Gaussian beam's power passed by the finite aperture) would lower the results below by a further ≈16%.",
+   "new": "§C10.3b's truncation factor ($t^2=0.915^2\\approx0.84$, where $t$ is the fraction of a Gaussian beam's power that the finite aperture passes one way, counted once on transmit and once on receive) would lower the results below by a further ≈16%.",
+   "why": "Matches §C10.3b, which defines t as one-way truncation and t^2 as transmit plus receive."
+  },
+  {
+   "id": "09_C10_part1-026",
+   "finding": "report #37",
+   "old": "  - A non-fading return needs about 21 [E: for a constant signal the detection probability is the Marcum function $Q_1(\\sqrt{2\\bar n},\\sqrt{2\\gamma_{\\rm th}})$ with $\\gamma_{\\rm th}=\\ln10^{6}=13.8$, and $Q_1=0.9$ at $\\bar n=20.8$]. The Marcum Q-function $Q_1(a,b)$ is the probability that the envelope of a constant signal of normalized amplitude $a$ plus complex Gaussian noise exceeds a normalized threshold $b$.",
+   "new": "  - A non-fading return needs about 21. For a constant signal the detection probability is the Marcum Q-function $Q_1(a,b)$: the probability that the envelope of a constant signal of normalized amplitude $a$ plus complex Gaussian noise exceeds a normalized threshold $b$. With $a=\\sqrt{2\\bar n}$, $b=\\sqrt{2\\gamma_{\\rm th}}$ and $\\gamma_{\\rm th}=\\ln10^{6}=13.8$, $Q_1=0.9$ at $\\bar n=20.8$ [E].",
+   "why": "Defines the Marcum function before using it."
+  },
+  {
+   "id": "09_C10_part1-027",
+   "finding": "report #38; consistency flag (120 photoelectrons)",
+   "old": "The report's per-point rule (§C0 subsection 10.3: at most $10^{-3}$ false points per point over a 0–300 m search, with the echo's peak found in both chirp ramps) raises them to ≈259 for one look, 120 for two, ≈88 for four and ≈82 for eight looks, and ≈39 for a non-fading return.",
+   "new": "The report's per-point rule is stricter: at most $10^{-3}$ false points per point over a 0–300 m search, with the echo's peak found in both chirp ramps (§C0 subsection 10.3). It raises the requirements to ≈259 detected photons for one look, 120 for two, 88.5 for four, 82 for eight and 39 for a non-fading return. The 120 for two looks is not the 120 of the §C7a model, which is the four-look requirement of 88.5 with a 1.36× margin.",
+   "why": "Splits a 55-word sentence, uses the 88.5 that the power figures use, and separates two different 120s."
+  },
+  {
+   "id": "09_C10_part1-028",
+   "finding": "report #5 (residual)",
+   "old": "hence $60\\times9.0=540$ W to $60\\times26.4\\approx1{,}590$ W. Si trunks (the input waveguides that carry the full power before it is split among elements) are limited by two-photon absorption, a nonlinear loss that grows with intensity (§C8.2); SiN handles watts;",
+   "new": "hence $60\\times9.0=540$ W to $60\\times26.4\\approx1{,}590$ W;\n  - a waveguide platform that carries watts: Si trunks (the input waveguides that carry the full power before it is split among elements) are limited by two-photon absorption, a nonlinear loss that grows with intensity (§C8.2), whereas SiN handles watts;",
+   "why": "Gives the separate power-handling requirement its own bullet."
+  },
+  {
+   "id": "09_C10_part1-029",
+   "finding": "report #24",
+   "old": "**6. The OPA does not by itself solve the ToF receive problem.**",
+   "new": "**6. Receive étendue: an OPA collects only one spatial mode.** A long-range direct-detection (ToF) receiver needs a large multimode aperture looking along the beam, and an OPA does not provide one.",
+   "why": "Names the constraint as the section intro does and defines the receive problem."
+  },
+  {
+   "id": "09_C10_part1-030",
+   "finding": "report #23",
+   "old": "But it collects only one spatial mode per polarization per channel (§C10.3a, bite (a)).",
+   "new": "But it collects only one spatial mode per polarization per channel (§C10.3a, item 5, limit (a): receive modes per unit time).",
+   "why": "'Bite (a)' is a coinage defined only later; the pointer now names the item and the limit."
+  },
+  {
+   "id": "09_C10_part1-031",
+   "finding": "report #14",
+   "old": "- Each channel needs its own receiver and digitizer: 0.2–1 GHz beat at 300 m, i.e. 0.4–2 GS/s (gigasamples per second) real sampling, doubled for up/down chirps, plus about ±0.1 GHz of Doppler.",
+   "new": "- Each channel needs its own receiver and digitizer. For a single ramp, the beat at 300 m is 0.2 GHz at 10 µs and 1 GHz at 2 µs, which needs 0.4–2 GS/s (gigasamples per second) of real sampling, as derived next.",
+   "why": "States the single-ramp case first; what doubles is explained after Eq. (136)."
+  },
+  {
+   "id": "09_C10_part1-032",
+   "finding": "report #14",
+   "old": "Real sampling needs at least twice the beat frequency (the Nyquist criterion), hence 0.4–2 GS/s. From the Doppler term of Eq. (136), ±0.1 GHz covers radial speeds up to",
+   "new": "Real sampling needs at least twice the beat frequency (the Nyquist criterion), hence 0.4–2 GS/s. If the dwell is split into an up-ramp and a down-ramp, each ramp is half as long, so by Eq. (136) the beat frequency and the sampling rate double, to 0.4–2 GHz and 0.8–4 GS/s. Doppler adds about ±0.1 GHz: from the Doppler term of Eq. (136), ±0.1 GHz covers radial speeds up to",
+   "why": "Says what doubles for up/down chirps and why."
+  },
+  {
+   "id": "09_C10_part1-033",
+   "finding": "report #19",
+   "old": "This subsection checks the seven constraints of §C10.2 against devices that have actually been built and measured.",
+   "new": "This subsection compares devices that have actually been built and measured with the degrees-of-freedom rule of §C10.1 and the constraints of §C10.2; seven findings follow the table.",
+   "why": "The findings do not map one-to-one onto the seven constraints, and one checks §C10.1."
+  },
+  {
+   "id": "09_C10_part1-034",
+   "finding": "follow-up #6",
+   "old": "| Analog Photonics, 9,216 (VLSI 2023) [I/S] | 9,216 | About 50° × 11° | 0.05° |",
+   "new": "| Analog Photonics, 9,216 (VLSI 2023) [I/S] | 9,216 | About 50° × 11° | 0.05°, axis not stated [U] |",
+   "why": "The 0.05° cannot be the phase-axis beamwidth of 9,216 elements (derivation added below the table)."
+  },
+  {
+   "id": "09_C10_part1-035",
+   "finding": "follow-up #6",
+   "old": "- ZJU driver power: about 1 mW per element times 4,096 elements is 4.1 W.",
+   "new": "- ZJU driver power: about 1 mW per element times 4,096 elements is 4.1 W.\n- Analog Photonics 9,216: by Eq. (130) a 50° alias-free field allows a pitch of at most $1.55\\ \\mu{\\rm m}/(2\\sin25^\\circ)=1.83$ µm. All 9,216 elements on one phase axis would then span 7.1–16.9 mm (pitch $\\lambda/2=0.775$ µm to 1.83 µm), with a FWHM of $0.886\\lambda/D=0.011^\\circ$ to $0.886\\times1.55\\ \\mu{\\rm m}/16.9\\ {\\rm mm}=8.1\\times10^{-5}$ rad $=0.005^\\circ$. The listed 0.05° is about 5–11 times wider, so it cannot be the phase-axis beamwidth of a single 9,216-element row; which axis it describes is not stated.",
+   "why": "Shows why the 9,216-element beam figure is marked [U]."
+  },
+  {
+   "id": "09_C10_part1-036",
+   "finding": "follow-up #12; consistency flag (resolvable spots)",
+   "old": "1. **The phase axis is no longer the barrier.** Element counts of 10³–10⁴ at λ/2–1 µm pitch exist, with about 10⁴ resolvable spots in one axis (8,192 elements over 100°: $100^\\circ/0.01^\\circ=10^{4}$ beamwidths). Multi-reticle stitching has been demonstrated (49,152 elements).",
+   "new": "1. **The phase axis is no longer the barrier.** Element counts of 10³–10⁴ at λ/2–1 µm pitch exist. The 8,192-element array resolves about 8,100 spots over its 100° phase axis: its 8.19 mm aperture spans $8.19\\ {\\rm mm}\\times2\\sin50^\\circ/1.55\\ \\mu{\\rm m}\\approx8{,}100$ beamwidths in sine space, close to its element count, as the rule of §C10.1 predicts (dividing by the broadside beamwidth instead, $100^\\circ/0.01^\\circ$, gives $10^{4}$). Multi-reticle stitching of more than 49,152 elements (24 OPAs combined coherently over four reticles) has been reported in a conference abstract [I], without ranging.",
+   "why": "Counts spots in sine space as §C10.1 does, and matches the table (conference abstract, >49,152, no ranging)."
+  },
+  {
+   "id": "09_C10_part1-037",
+   "finding": "report #11",
+   "old": "DTU's 120-element array spread over 6 mm has a *simulated* main-lobe fraction of 0.8% and a *measured* floor only 3–6 dB below the peak.",
+   "new": "DTU's 120-element array spread over 6 mm has a *simulated* main-lobe fraction of 0.8%. Its *measured* floor, only 3–6 dB below the peak, was recorded with a camera of 0.13° resolution, whose pixels each integrate many sidelobe spots of width $\\lambda/D$, with $D=6$ mm the aperture: $1.55\\ \\mu{\\rm m}/6\\ {\\rm mm}=2.6\\times10^{-4}$ rad $=0.015^\\circ$, about $0.13/0.015\\approx9$ spots per pixel along that axis. A pixel's floor therefore sits far above the per-spot mean of §C10.1, $1/N=1/120$, i.e. −21 dB [E].",
+   "why": "Explains why the measured floor is far above the 1/N rule (the N/N_spot part needs the array geometry; see skipped)."
+  },
+  {
+   "id": "09_C10_part1-038",
+   "finding": "report #32",
+   "old": "its peak is about 9 dB higher.",
+   "new": "its peak is about 8 dB higher.",
+   "why": "Matches the 8.4 dB computed in the same bullet."
+  },
+  {
+   "id": "09_C10_part1-039",
+   "finding": "report #27",
+   "old": "   - Correlated waveguide-width errors make uncalibrated phases effectively random: about 12 rad per nm of width error per mm of Si path, and the Si phase-coherence length is about 1.6–4 mm [I].",
+   "new": "   - Waveguide-width errors, correlated along each guide, accumulate phase at about 12 rad per nm of width error per mm of Si path, so after a few millimetres the uncalibrated phases are effectively random. The Si phase-coherence length, the guide length beyond which two nominally identical paths no longer keep a predictable phase relation, is about 1.6–4 mm [I].",
+   "why": "Removes the apparent 'correlated ... random' contradiction and defines the phase-coherence length."
+  },
+  {
+   "id": "09_C10_part1-040",
+   "finding": "consistency flag (FSOC-B1 loss)",
+   "old": "The npj review's itemized state of the art sums to about 4–10 dB. Every dB counts twice (§C10.2, item 5).",
+   "new": "The npj review's itemized state of the art sums to about 4–10 dB, and Analog Photonics specifies its FSOC-B1 steerer at ≤7.5 dB from fibre to beam (products table below; vendor claim [U]). Every dB counts twice (§C10.2, item 5).",
+   "why": "Mentions the vendor loss figure given later in the same subsection."
+  },
+  {
+   "id": "09_C10_part1-041",
+   "finding": "report #9",
+   "old": "   - Energy per point for OPA lidars is 1,360–1,700 nJ, against 46 nJ for the Pointcloud FPA and 212 nJ for Rogers et al. (Pointcloud's comparison table) [S].",
+   "new": "   - Optical energy per point for OPA lidars is 1,360–1,700 nJ, the upper value being the 8,192-element array's at 35 m on a 10% target. Pointcloud's FPA uses 46 nJ (at 65 m and 30%), and the 512-pixel coherent receiver array of Rogers et al. (*Nature* 2021, §C10.4) 212 nJ. All four values come from Pointcloud's comparison table [S].",
+   "why": "Says the energies are optical, ties 1,700 nJ to its device and range, and identifies Rogers et al."
+  },
+  {
+   "id": "09_C10_part1-042",
+   "finding": "report #9",
+   "old": "   - At 12 Mpts/s this is about 530–670 W ($44\\ \\mu{\\rm J}\\times12\\times10^{6}\\ {\\rm s^{-1}}=530$ W, $56\\ \\mu{\\rm J}\\times12\\times10^{6}\\ {\\rm s^{-1}}=670$ W): a gap of one to two orders of magnitude, not a calibration detail.",
+   "new": "   - At 12 Mpts/s this is about 530–670 W of optical power ($44\\ \\mu{\\rm J}\\times12\\times10^{6}\\ {\\rm s^{-1}}=530$ W, $56\\ \\mu{\\rm J}\\times12\\times10^{6}\\ {\\rm s^{-1}}=670$ W). That is 15–19 times the 35 W that the whole FS-4S module draws and 66–84 times the 8 W of the Hesai ATX (table below): a gap of one to two orders of magnitude, not a calibration detail.",
+   "why": "States what the gap is measured against (530/35 = 15, 670/35 = 19, 530/8 = 66, 670/8 = 84)."
+  },
+  {
+   "id": "09_C10_part1-043",
+   "finding": "report #34",
+   "old": "[P, company datasheets Rev A, June–July 2025, rendered and read; figures are vendor claims]",
+   "new": "[P, company datasheets Rev A, June–July 2025; figures are vendor claims]",
+   "why": "Removes a working note."
+  },
+  {
+   "id": "09_C10_part1-044",
+   "finding": "report #10; follow-up #9",
+   "old": "**Who they are.** An MIT-linked Boston company founded by Michael Watts [I]. Third-party databases give 2012 as the founding year; the company's own timeline begins with a 2016 award under DARPA's MOABB (Modular Optical Aperture Building Blocks) program. Its platform is MOABB-funded 300 mm silicon photonics with flip-chip CMOS drivers (electronic driver chips bonded face-down onto the photonic chip). Company milestones: a Tier-1 (a supplier selling directly to carmakers) development agreement (2018), on-car tests (2019), a second Tier-1 agreement (2020) and a narrow-linewidth FMCW laser (2021).",
+   "new": "**Who they are.** Analog Photonics (Boston) was founded about 2012 by Michael Watts of MIT, who remains CEO [P/S]. Federal records show subawards from Nov 2013 and SBIR (US Small Business Innovation Research) awards from 2015 [I]; the company's own timeline starts with a 2016 award under the MOABB (Modular Optical Aperture Building Blocks) program of DARPA, the US Defense Advanced Research Projects Agency (§C3a). Its platform is MOABB-funded 300 mm silicon photonics with flip-chip CMOS drivers (electronic driver chips bonded face-down onto the photonic chip). Company milestones [P]: a joint development agreement with a Tier 1 (a supplier selling directly to carmakers) in 2018, on-car tests in 2019, a second Tier 1 agreement in 2020 and a narrow-linewidth FMCW laser in 2021. Funding, size and the departure of the lead author of its OPA papers are covered in §C3a.",
+   "why": "Aligns the profile with §C3a (founding, tags, earlier federal money) and points there instead of duplicating it."
+  },
+  {
+   "id": "09_C10_part1-045",
+   "finding": "report #10, #34; follow-up #2",
+   "old": "Its 2023 company-authored IEEE Spectrum article promised \"large numbers of samples\" for automotive in 2025. **No production award or sample shipment was found.** Funding is mostly government contracts and grants; amounts are not disclosed, so treat any figure with a grain of salt. A 2025 talk by the CEO emphasized drone and counter-drone (counter-UAS) lidar and drone-to-drone optical links [I].",
+   "new": "Its 2023 company-authored IEEE Spectrum article promised \"large numbers of samples\" for automotive in 2025 [P]. **No production award or sample shipment was found.** Funding is mostly US government money: \\$45.2 M of federal prime obligations (money committed under contracts and grants the company holds itself) and \\$34.2 M of subawards (money passed on by other prime holders) [I], ≈\\$79 M over 2013–2026 [E] (§C3a); no venture round was found. A 2025 talk by the CEO emphasized drone and counter-drone (counter-UAS, where UAS means unmanned aircraft system) lidar and drone-to-drone optical links [P].",
+   "why": "'Not disclosed' contradicted §C3a's USAspending figures; company statements carry [P]."
+  },
+  {
+   "id": "09_C10_part1-046",
+   "finding": "follow-up #5; follow-up section 4 flag ('AP')",
+   "old": "It is far beyond the 14–17° in AP's papers [U] |",
+   "new": "It is far beyond the 15–17° wavelength axes of Analog Photonics' 512- and 8,192-element papers [U] |",
+   "why": "Matches the device table (15° and 17°) and spells out the undefined 'AP'."
+  },
+  {
+   "id": "09_C10_part1-047",
+   "finding": "follow-up #4, #8",
+   "old": "| **FSOC-B1** / OPA-B1 steerer | 50° × 14°, 1 mrad beam, ≤7.5 dB fibre-to-beam loss at up to 400 mW in, <10 µs random access, <5 W | The same engine sold for free-space optical links |",
+   "new": "| **FSOC-B1** / OPA-B1 steerer | 50° × 14°, 1 mrad beam, ≤7.5 dB fibre-to-beam loss at up to 400 mW in, <10 µs random access, <5 W [U] | The same OPA engine sold for free-space optical links. If its 14° axis is wavelength-steered, <10 µs access needs a laser that retunes about 30× faster than RAY-H1 (<300 µs) |",
+   "why": "Flags the untraced datasheet and the conflict with RAY-H1's retune time (300/10 = 30)."
+  },
+  {
+   "id": "09_C10_part1-048",
+   "finding": "follow-up #5",
+   "old": "against $n_g\\approx4.2$ for a Si strip waveguide ($32/4.2\\approx8$).",
+   "new": "against $n_g\\approx4.2$ for a Si strip waveguide ($32/4.2\\approx8$). Over the whole ≈95 nm C+L band it would still need $70^\\circ/95\\ {\\rm nm}=0.74^\\circ/{\\rm nm}=0.0129$ rad/nm, a factor $(n_g-\\sin\\theta)/\\cos\\theta=0.0129\\times1550\\approx20$, about $20/4.2\\approx4.8$ times a Si strip; either is far beyond the published arrays.\n- FS-4S: its 14° wavelength-steered axis over the ≈95 nm C+L band needs $14^\\circ/95\\ {\\rm nm}=0.147^\\circ/{\\rm nm}$, consistent with the 8,192-element array's 0.14°/nm. Over RAY-H1's 60 nm it would need $14^\\circ/60\\ {\\rm nm}=0.23^\\circ/{\\rm nm}=0.00407$ rad/nm, a factor $0.00407\\times1550\\approx6.3$, 1.5 times a Si strip ($6.3/4.2$).",
+   "why": "Checks both modules against both laser bands, since the datasheets do not say which laser each uses."
+  },
+  {
+   "id": "09_C10_part1-049",
+   "finding": "report #34",
+   "old": "Per 2024 press reports, its target price is under \\$200 [I].",
+   "new": "Per 2024 press reports, its target price is under \\$200 [T].",
+   "why": "Press reports are [T] in the legend."
+  },
+  {
+   "id": "09_C10_part1-050",
+   "finding": "report #36",
+   "old": "at 230 m at 10%, 1.5 MHz, 0.1° × 0.05° and ≤5 W",
+   "new": "at 230 m at 10%, 1.5 MHz (1.5 Mpts/s if each pulse yields one point), 0.1° × 0.05° and ≤5 W",
+   "why": "Relates the quoted rate to the point-rate unit used elsewhere."
+  },
+  {
+   "id": "09_C10_part1-051",
+   "finding": "follow-up residual (report #1)",
+   "old": "- *Speckle.* The coherent thresholds $N_{\\rm req}=10$–30 are roughly those for a non-fading return.",
+   "new": "- *Speckle.* The coherent thresholds $N_{\\rm req}=10$–30 bracket the single-bin non-fading requirement (≈21 detected photons) and lie below the per-point one (≈39).",
+   "why": "States how the thresholds compare with the two non-fading requirements of §C10.2, item 5."
+  },
+  {
+   "id": "09_C10_part1-052",
+   "finding": "symbol scheme (M reserved for APD gain); acronym at first use",
+   "old": "- *Ideal modes.* Beams are ideal TEM00 Gaussians ($M^2=1$) with perfect mode matching and alignment, and there is no atmospheric turbulence.",
+   "new": "- *Ideal modes.* Beams are ideal TEM00 Gaussians (the fundamental transverse mode, with beam-quality factor $M^2=1$; this $M$ is not an APD gain) with perfect mode matching and alignment, and there is no atmospheric turbulence.",
+   "why": "Defines TEM00 and M^2 at their first use in the section."
+  },
+  {
+   "id": "09_C10_part1-053",
+   "finding": "report #30, #38; symbol scheme",
+   "old": "**One photon budget, two receiving rules** [E]. Both receivers share one transmitted energy per sample, but they differ in how much of the return they can use. Let $\\Omega_{\\rm FOV}$ be the solid angle of the field of view and $\\Omega_{\\rm cell}$ the solid angle of one angular sample (resolution cell), both in steradians. Let $N_{\\rm samp}\\simeq\\Omega_{\\rm FOV}/\\Omega_{\\rm cell}$ be the number of uniformly spaced samples per frame, $E_s=P/(f_{\\rm frame}N_{\\rm samp})$ their transmitted energy (average optical power $P$, frame rate $f_{\\rm frame}$), and $E_{\\rm ph}=hc/\\lambda$ the photon energy at wavelength $\\lambda$. For a large Lambertian target that fills the illuminated patch, with end-to-end detection efficiency $\\eta$ (the fraction of photons arriving at the aperture that are detected, including optics transmission and quantum efficiency), reflectivity $\\rho$, range $R$ and receive-aperture area $A_{\\rm rx}$, the photons reaching a direct detector are approximately\n\n$$n_{\\rm direct}=\\frac{\\eta\\rho E_s}{E_{\\rm ph}}\\frac{A_{\\rm rx}}{\\pi R^2}\\ \\propto\\ A_{\\rm rx}\\Omega_{\\rm cell}. \\tag{137}$$",
+   "new": "**One photon budget, two receiving rules** [E]. Both receivers share one transmitted energy per sample, but they differ in how much of the return they can use. The symbols are:\n- $\\Omega_{\\rm FOV}$, the solid angle of the field of view, and $\\Omega_{\\rm cell}$, the solid angle of one angular sample (resolution cell), both in steradians;\n- $N_{\\rm samp}\\simeq\\Omega_{\\rm FOV}/\\Omega_{\\rm cell}$, the number of uniformly spaced samples per frame;\n- $E_{\\rm pt}=P/(f_{\\rm frame}N_{\\rm samp})$, the optical energy transmitted toward one sample, with $P$ the average optical power and $f_{\\rm frame}$ the frame rate;\n- $E_{\\rm ph}=hc/\\lambda$, the photon energy at wavelength $\\lambda$;\n- $\\eta$, the end-to-end detection efficiency: the fraction of photons arriving at the aperture that are detected, including optics transmission and quantum efficiency;\n- $\\rho$, the target's reflectance; $R$, the range; and $A_{\\rm rx}$, the receive-aperture area.\n\nFor a large Lambertian target that fills the illuminated patch, the number of photons a direct-detection receiver detects is approximately\n\n$$n_{\\rm direct}=\\frac{\\eta\\rho E_{\\rm pt}}{E_{\\rm ph}}\\frac{A_{\\rm rx}}{\\pi R^2}\\ \\propto\\ A_{\\rm rx}\\Omega_{\\rm cell}. \\tag{137}$$",
+   "why": "Turns the packed symbol sentence into a list, uses E_pt, and says that Eq. (137) counts detected photons (it includes eta)."
+  },
+  {
+   "id": "09_C10_part1-054",
+   "finding": "report #30; symbol scheme",
+   "old": "($E_s\\propto1/N_{\\rm samp}\\propto\\Omega_{\\rm cell}$). Do not multiply by cell étendue again.",
+   "new": "($E_{\\rm pt}\\propto1/N_{\\rm samp}\\propto\\Omega_{\\rm cell}$). The receiver's étendue adds no second factor: the lens collects light from the whole illuminated cell, whatever its size.",
+   "why": "Replaces a note-to-self with the reason."
+  },
+  {
+   "id": "09_C10_part1-055",
+   "finding": "report #39; symbol scheme",
+   "old": "- **A matched single-mode coherent receiver uses a *mode-equivalent collecting area* instead of the hard area.** The mode-equivalent collecting area $A_{\\rm mode}$ is the effective area with which a single-mode receiver collects diffusely scattered light: only light matching its one spatial mode counts, so its area and accepted solid angle together are limited to about $\\lambda^2$. The coherent count is Eq. (137) with $A_{\\rm mode}$ in place of $A_{\\rm rx}$:\n\n  $$n_{\\rm coh}=\\frac{\\eta\\rho E_s}{E_{\\rm ph}}\\frac{A_{\\rm mode}}{\\pi R^2},\\qquad A_{\\rm mode}\\sim\\frac{\\lambda^2}{\\Omega_{\\rm cell}} \\tag{138}$$\n\n  If the received mode is widened to fill every angular cell, its best-order scaling is $A_{\\rm mode}\\sim\\lambda^2/\\Omega_{\\rm cell}$, and the two cell-angle factors (in $E_s$ and in $A_{\\rm mode}$) cancel.",
+   "new": "- **A matched single-mode coherent receiver uses the mode-equivalent collecting area $A_{\\rm mode}$ of §C10.2, item 5, instead of the hard area.** Only light matching its one spatial mode counts, so its area and accepted solid angle together are limited to about $\\lambda^2$. The coherent count is Eq. (137) with $A_{\\rm mode}$ in place of $A_{\\rm rx}$, which is also Eq. (134) with $\\eta_{\\rm OPA}=1$:\n\n  $$n_{\\rm coh}=\\frac{\\eta\\rho E_{\\rm pt}}{E_{\\rm ph}}\\frac{A_{\\rm mode}}{\\pi R^2},\\qquad A_{\\rm mode}\\sim\\frac{\\lambda^2}{\\Omega_{\\rm cell}} \\tag{138}$$\n\n  If the received mode is widened to fill every angular cell, its best-order scaling is $A_{\\rm mode}\\sim\\lambda^2/\\Omega_{\\rm cell}$, and the two cell-angle factors (in $E_{\\rm pt}$ and in $A_{\\rm mode}$) cancel.",
+   "why": "Points to the earlier definition of A_mode instead of repeating it, and links Eq. (138) to Eq. (134)."
+  },
+  {
+   "id": "09_C10_part1-056",
+   "finding": "symbol scheme",
+   "old": "solving for $P=f_{\\rm frame}N_{\\rm samp}E_s$ gives",
+   "new": "solving for $P=f_{\\rm frame}N_{\\rm samp}E_{\\rm pt}$ gives",
+   "why": "E_pt for the energy per point."
+  },
+  {
+   "id": "09_C10_part1-057",
+   "finding": "report #30",
+   "old": "$$P_{\\rm coh}=\\frac{N_{\\rm req}E_{\\rm ph}\\pi R^2f_{\\rm frame}\\,\\Omega_{\\rm FOV}}{\\rho\\,\\lambda^2\\,\\eta},\\qquad P_{\\rm ToF}=\\frac{N_{\\rm req}E_{\\rm ph}\\pi R^2f_{\\rm frame}\\,\\Omega_{\\rm FOV}}{\\rho\\,A_{\\rm rx}\\Omega_{\\rm cell}\\,\\eta} \\tag{139}$$",
+   "new": "$$\\begin{aligned}P_{\\rm coh}&=\\frac{N_{\\rm req}E_{\\rm ph}\\pi R^2f_{\\rm frame}\\,\\Omega_{\\rm FOV}}{\\rho\\,\\lambda^2\\,\\eta},\\\\ P_{\\rm ToF}&=\\frac{N_{\\rm req}E_{\\rm ph}\\pi R^2f_{\\rm frame}\\,\\Omega_{\\rm FOV}}{\\rho\\,A_{\\rm rx}\\Omega_{\\rm cell}\\,\\eta}\\end{aligned} \\tag{139}$$",
+   "why": "Splits the very wide display equation over two lines in one block; the tag is unchanged."
+  },
+  {
+   "id": "09_C10_part1-058",
+   "finding": "report #39",
+   "old": "Both powers grow as $R^2\\Omega_{\\rm FOV}$, which is why range squared times field solid angle is used as a figure of merit elsewhere in this section.",
+   "new": "Both powers grow as $R^2\\Omega_{\\rm FOV}$, which is why §C10.2b and the product comparison below rank by $R^2\\Omega$.",
+   "why": "Points to the R^2 Omega definition instead of restating it."
+  },
+  {
+   "id": "09_C10_part1-059",
+   "finding": "report #8",
+   "old": "1. **In this fixed-power, fixed-threshold example, gap-free single-mode coverage of a full automotive field to 200 m is demanding.** A coherent design must allocate range by elevation: 200 m within a ±1.5° horizon band and 50 m elsewhere cuts the required power about **5.7×**. Required power scales as $R^2$ times solid angle (Eq. (139)), so the mix costs $[3^\\circ\\times1+22^\\circ\\times(50/200)^2]/25^\\circ=0.175$ of the uniform 200 m case, and $1/0.175=5.7$. It must also narrow its field or point rate. That is exactly how FMCW products position themselves: as long-range, narrower-field truck sensors (§C7, §F6).",
+   "new": "1. **In this fixed-threshold example, gap-free single-mode coverage of a full automotive field to 200 m needs 20–184 W, even before speckle fading (caveat 4).** A coherent design must allocate range by elevation: 200 m within a ±1.5° horizon band and 50 m elsewhere cuts the required power about **5.7×**. Required power scales as $R^2$ times solid angle (Eq. (139)), so the mix costs $[3^\\circ\\times1+22^\\circ\\times(50/200)^2]/25^\\circ=0.175$ of the uniform 200 m case, and $1/0.175=5.7$. It must also narrow its field, lower its point rate or accept sparse footprints. Some FMCW products are long-range, narrower-field truck sensors (§C7, §F6), while the scanned 120°-wide ones sample sparsely (the $R^2\\Omega$ table below).",
+   "why": "Replaces the vague 'is demanding' with the table's figure, and matches the product table, where scanned FMCW units cover 120°."
+  },
+  {
+   "id": "09_C10_part1-060",
+   "finding": "report #12; symbol scheme",
+   "old": "Because the ratio scales as $\\theta^2$, with $\\theta$ the cell width, parity needs $\\theta=0.1^\\circ/\\sqrt{87}=0.011^\\circ$ to $0.1^\\circ/\\sqrt{800}=0.0035^\\circ$; the diffraction limit itself is at $\\theta=\\lambda/\\sqrt{A_{\\rm rx}}=0.905\\ \\mu{\\rm m}/22\\ {\\rm mm}=4.1\\times10^{-5}$ rad $=0.0023^\\circ$.",
+   "new": "Because the ratio scales as $\\theta_{\\rm cell}^2$, with $\\theta_{\\rm cell}$ the cell width, parity needs $\\theta_{\\rm cell}=0.1^\\circ/\\sqrt{87}=0.011^\\circ$ to $0.1^\\circ/\\sqrt{800}=0.0035^\\circ$; the diffraction limit itself is at $\\theta_{\\rm cell}=\\lambda/\\sqrt{A_{\\rm rx}}=0.905\\ \\mu{\\rm m}/22\\ {\\rm mm}=4.1\\times10^{-5}$ rad $=0.0023^\\circ$.",
+   "why": "Cell-width symbol from the scheme; theta alone is the beam or emission angle elsewhere in §C10."
+  },
+  {
+   "id": "09_C10_part1-061",
+   "finding": "follow-up residual (report #4)",
+   "old": "   - Sunlight raises the ToF $N_{\\rm req}$ (§C6(d)).",
+   "new": "   - Sunlight is already included in the ToF $N_{\\rm req}$, which corresponds to bright sun; a fully sunlit scene of reflectance 0.9 raises the ideal requirement only to ≈20 (§C0 subsection 10.3; background model in §C6(d)).",
+   "why": "The caveat contradicted the Sunlight assumption above, which takes N_req = 20 as the bright-sun value."
+  },
+  {
+   "id": "09_C10_part1-062",
+   "finding": "report #16",
+   "old": "- **A larger useful aperture can buy photons at the cost of sparser angular sampling.**",
+   "new": "- **A larger useful aperture can buy photons at the cost of coverage: the sampling pitch is unchanged, but narrow footprints leave gaps between samples.**",
+   "why": "Waymo's example keeps the 0.05° pitch; what it gives up is coverage."
+  },
+  {
+   "id": "09_C10_part1-063",
+   "finding": "report #40; report #12; symbol scheme",
+   "old": "  - It takes a **$w_0=10$ mm** beam, where $w_0$ is the beam's 1/e² waist radius at the aperture. The derived nominal footprint fraction on the 0.05° grid is about 0.6% with a FWHM-area convention, or about 1.6–1.8% with the Gaussian 1/e²-area convention of §C10.3b [E: the Rayleigh range (the distance over which a Gaussian beam stays roughly collimated) is $z_R=\\pi w_0^2/\\lambda=\\pi(10\\ {\\rm mm})^2/1.55\\ \\mu{\\rm m}=203$ m, so at 250 m the 1/e² radius is $w=w_0\\sqrt{1+(R/z_R)^2}=15.9$ mm and $\\pi w^2/(R\\theta)^2=7.9\\ {\\rm cm^2}/(21.8\\ {\\rm cm})^2=1.66\\%$, where $R\\theta$ is the width of one 0.05° cell at 250 m (1.8% for the 20 mm-aperture model of §C10.3b, Result 2). The FWHM circle encloses $\\ln2/2=0.35$ of the 1/e² area, giving $0.35\\times1.66\\%=0.58\\%$]. They differ by convention and are not inconsistent measurements of scene coverage.",
+   "new": "  - It takes a **$w_0=10$ mm** beam, where $w_0$ is the beam's 1/e² waist radius at the aperture. The derived nominal footprint fraction on the 0.05° grid is about 0.6% with a FWHM-area convention, or about 1.6–1.8% with the Gaussian 1/e²-area convention of §C10.3b. The two figures differ only in the contour convention; neither measures scene coverage. *How the numbers are derived* [E]:\n    - The Rayleigh range, the distance over which a Gaussian beam stays roughly collimated, is $z_R=\\pi w_0^2/\\lambda=\\pi(10\\ {\\rm mm})^2/1.55\\ \\mu{\\rm m}=203$ m, so at $R=250$ m the 1/e² radius is $w=w_0\\sqrt{1+(R/z_R)^2}=15.9$ mm.\n    - One 0.05° cell is $R\\theta_{\\rm cell}=250\\ {\\rm m}\\times8.73\\times10^{-4}\\ {\\rm rad}=21.8$ cm wide at 250 m, so the 1/e² fraction is $\\pi w^2/(R\\theta_{\\rm cell})^2=7.9\\ {\\rm cm^2}/(21.8\\ {\\rm cm})^2=1.66\\%$. The 20 mm-aperture model of §C10.3b (Result 2) gives 1.8%.\n    - The FWHM circle encloses $\\ln2/2=0.35$ of the 1/e² area, giving $0.35\\times1.66\\%=0.58\\%$.",
+   "why": "Moves a 90-word bracketed derivation into a derivation list and replaces the double negative."
+  },
+  {
+   "id": "09_C10_part1-064",
+   "finding": "report #7",
+   "old": "  - It needs about 50 photons per detection, a −106 dB link (the ratio of received to transmitted power) and 0.52 µJ per shot at 1.2×10⁷ shots/s.",
+   "new": "  - It needs about 50 detected photons for a detection, with four speckles averaged [P]. That is close to the 45 that four looks need in one bin (§C10.2, item 5) and to the 47.3 for one chirp ramp searched in full (§C0 subsection 10.3); requiring the echo's peak in both ramps, as the report's per-point rule does, raises it to 88.5. The link is −106 dB (the ratio of received to transmitted power), and each shot carries 0.52 µJ at $1.2\\times10^{7}$ shots/s.",
+   "why": "Reconciles Waymo's 50 photons with the 130 for one fading look in §C10.2, item 5."
+  },
+  {
+   "id": "09_C10_part1-065",
+   "finding": "report #21",
+   "old": "- **Other coherent solid-state designs show the same choice.** These illustrative footprint fractions are inferred from beam width and address pitch, not field-measured detection probabilities (Berkeley FPSA is a focal-plane switch array):\n\n  | Design | Nominal footprint fraction per frame |\n  |---|---|\n  | Analog Photonics FS-4S | about 3.6% (box convention; 2.8% as a FWHM ellipse; ≈8% at 1/e² if the datasheet widths are FWHM) |\n  | Berkeley FPSA | about 0.7% (box; ≈0.55% FWHM ellipse, ≈1.6% at 1/e²) |\n  | Waymo's worked example | about 0.6% (FWHM-area convention; about 1.6–1.8% at 1/e²) |\n  | A ToF column receiver | its pixels tile the field (about 100%) |",
+   "new": "- **Other coherent solid-state designs show the same choice.** These illustrative footprint fractions are inferred from beam width and address pitch, not field-measured detection probabilities (Berkeley FPSA is a focal-plane switch array). The table gives each nominal footprint fraction per frame in three contour conventions: the rectangle of the quoted widths (box), the FWHM ellipse, and the Gaussian 1/e² contour of §C10.3b.\n\n  | Design | Box (quoted widths) | FWHM ellipse | Gaussian 1/e² |\n  |---|---|---|---|\n  | Analog Photonics FS-4S (§C10.2b) | ≈3.6% | ≈2.8% | ≈8%, if the datasheet widths are FWHM |\n  | Berkeley FPSA (§C10.4) | ≈0.7% | ≈0.55% | ≈1.6% |\n  | Waymo's worked example (above) | — | ≈0.6% | ≈1.6–1.8% |\n  | A ToF column receiver | ≈100%: its pixels tile the field | ≈100% | ≈100% |",
+   "why": "One column per convention, so rows compare like with like, with pointers to where each value is derived."
+  },
+  {
+   "id": "09_C10_part1-066",
+   "finding": "symbol scheme (scan rate); consistency flag (walk-off beam width)",
+   "old": "$$\\Delta\\theta\\approx\\frac{2R\\,\\omega}{c} \\tag{141}$$\n\nwhere $R$ is the range, $\\omega$ the angular scan rate of the beam (rad/s; §C0, §C4d and §C7 write it $\\Omega$, but §C10 keeps $\\Omega$ for solid angles), $2R/c$ the round-trip time and $c$ the speed of light. A single-mode receiver loses signal once this walk-off becomes comparable with the beam's own divergence, because the returning light no longer overlaps the receive mode.\n- For a 360° spin at 10 Hz and 250 m, the walk-off is about 0.006°, larger than a 0.003° beam. [E: $\\omega=3{,}600^\\circ/{\\rm s}=62.8$ rad/s, so from Eq. (141) $\\Delta\\theta=2\\times250\\ {\\rm m}\\times62.8\\ {\\rm s^{-1}}/(3\\times10^{8}\\ {\\rm m\\,s^{-1}})=1.05\\times10^{-4}$ rad $=0.006^\\circ$; the beam figure is the far-field 1/e² half-angle of a $w_0=10$ mm beam, $\\lambda/(\\pi w_0)=4.9\\times10^{-5}$ rad $=0.0028^\\circ$.]",
+   "new": "$$\\Delta\\theta\\approx\\frac{2R\\,\\dot\\theta}{c} \\tag{141}$$\n\nwhere $R$ is the range, $\\dot\\theta$ the angular scan rate of the beam (rad/s), $2R/c$ the round-trip time and $c$ the speed of light. A single-mode receiver loses signal once this walk-off becomes comparable with the beam's own divergence, because the returning light no longer overlaps the receive mode.\n- For a 360° spin at 10 Hz and 250 m, the walk-off is about 0.006°, larger than the beam's 0.0036° angular radius at that range. [E: $\\dot\\theta=3{,}600^\\circ/{\\rm s}=62.8$ rad/s, so from Eq. (141) $\\Delta\\theta=2\\times250\\ {\\rm m}\\times62.8\\ {\\rm s^{-1}}/(3\\times10^{8}\\ {\\rm m\\,s^{-1}})=1.05\\times10^{-4}$ rad $=0.006^\\circ$. The beam figure is the 1/e² radius of the $w_0=10$ mm beam at 250 m divided by the range, $15.9\\ {\\rm mm}/250\\ {\\rm m}=6.4\\times10^{-5}$ rad $=0.0036^\\circ$, as in §C10.3a; the far-field half-angle $\\lambda/(\\pi w_0)=4.9\\times10^{-5}$ rad $=0.0028^\\circ$ is smaller because 250 m is only $1.2z_R$.]",
+   "why": "Uses the scheme's scan-rate symbol (so the note on other sections' symbols goes) and the same 0.0036° beam as §C10.3a for this case."
+  },
+  {
+   "id": "09_C10_part1-067",
+   "finding": "report #35, #39",
+   "old": "**Reality check: range × field ($R^2\\Omega$) of coherent and ToF products** [P vendor or peer-reviewed figures; E metric]\n\nThis comparison ranks products by $R^2\\Omega$, the specified range $R$ squared times the solid angle $\\Omega$ of the field, because the photon budget for covering a field scales that way (Eq. (139)). Scanned coherent products claim $R^2\\Omega$ comparable to scanned ToF, at higher power; solid-state coherent designs sit one to two orders of magnitude below.",
+   "new": "**Reality check: range² × field ($R^2\\Omega$) of coherent and ToF products** [P vendor or peer-reviewed figures; E metric]\n\nThis comparison ranks products by $R^2\\Omega$ (§C10.2b), because the photon budget for covering a field scales that way (Eq. (139)). Scanned coherent products claim $R^2\\Omega$ comparable to scanned ToF, at higher power; solid-state coherent designs sit about 16–24× (FS-4S) to 280× (Pointcloud) below the Hesai ATX.",
+   "why": "The metric is range squared; the gap is quantified (38,700/2,440 = 16, 38,700/1,640 = 24, 38,700/140 = 276); the definition is a pointer."
+  },
+  {
+   "id": "09_C10_part1-068",
+   "finding": "report #36",
+   "old": "| 90k / 400k pts/s; 35 W |\n| LuminWave F1 | FMCW, steering undisclosed | 150 m at 10% (Apr 2025 datasheet); 250 m in the Dec 2025 sheet | 120° × 25° | ≈20,600 / ≈57,000 | 128 lines; <45 W |",
+   "new": "| 0.09 / 0.4 Mpts/s; 35 W |\n| LuminWave F1 | FMCW, steering undisclosed | 150 m at 10% (Apr 2025 datasheet); 250 m in the Dec 2025 sheet | 120° × 25° | ≈20,600 / ≈57,000 | ≈1.5 Mpts/s implied by 128 lines (§C7a); <45 W |",
+   "why": "One point-rate unit in the column; LuminWave's line count was not a rate."
+  }
+ ],
+ "skipped": [
+  {
+   "finding": "report #1",
+   "kind": "already_fixed",
+   "location": "§C10.3 opening paragraph, 'For a 10% target at 200 m and 10 Hz, gap-free single-mode coherent coverage of 120° × 25° needs 20–184 W…'",
+   "detail": "The headline states target, range, frame rate, threshold and the 180–1,590 W speckle case. The residual wording in the *Speckle* assumption is applied as an edit (follow-up residual)."
+  },
+  {
+   "finding": "report #2",
+   "kind": "already_fixed",
+   "location": "§C10 question 4, 'Does the push to **\"camera-like\" lidar** create value? Here camera-like means about 0.025–0.03°…'",
+   "detail": "Definition and the 0.0125° pitch of '2,000+ line' claims are in the live text. Repeating the sentence in §C10.1 would duplicate it inside the block, so it was not added."
+  },
+  {
+   "finding": "report #4",
+   "kind": "already_fixed",
+   "location": "§C10.3 inputs paragraph '…$N_{\\rm req}=20$ [E: close to the bright-sun requirement of §C0 subsection 10.3]…' and the *Sunlight* assumption",
+   "detail": "Sources and reasons for the ToF inputs are given. The residual caveat 'Sunlight raises the ToF $N_{\\rm req}$' is applied as an edit (follow-up residual)."
+  },
+  {
+   "finding": "report #5",
+   "kind": "already_fixed",
+   "location": "§C10.2 item 5, 'about 9–26 W per beam at 5 µs dwell and 3 dB one-way loss [E], if the looks share one receive mode…'",
+   "detail": "Diversity assumption, 9–26 W, '3 dB' and the 2.3 W multi-mode case are in the live text. The residual split of the Si/SiN power-handling point into its own bullet is applied as an edit."
+  },
+  {
+   "finding": "report #6",
+   "kind": "already_fixed",
+   "location": "§C10 summary, 'In photons, ToF's advantage narrows' bullet",
+   "detail": "Mechanism (module caps the lens) and pointers are in the live text."
+  },
+  {
+   "finding": "report #32 (part)",
+   "kind": "already_fixed",
+   "location": "§C10.2 item 5, '$259/9.8=26.4$ W'",
+   "detail": "The quotient reads 26.4 in the live text; the other three slips of this finding are applied as edits."
+  },
+  {
+   "finding": "report #3",
+   "kind": "model_round2",
+   "location": "§C10.2 item 5 assumptions, 'an efficiency $\\eta=0.4$ (polarization 0.5 × quantum efficiency 0.8)'; §C10.3 *One polarization*, 'The values of $\\eta$ below are assumed to include whatever polarization loss applies.'; §C10.3 table caveat, 'The numerical Gaussian model in §C10.3b applies a further factor $t^2/2\\simeq0.42$…'",
+   "detail": "eta convention: here eta includes the polarization ½, while §C0 subsection 10.1 keeps polarization and mode factors in $A_{\\rm mode}$ (t^2/2). Reviewer's fix: adopt §C0's convention, so a cell-filling mode has $A_{\\rm mode}=\\tfrac{t^2}{2}\\lambda^2/\\Omega_{\\rm cell}=1.32$ mm² at 0.05° (§C10.3b), item 5 uses eta = 0.8 and §C10.3 uses 0.6–0.2; or rename the block's symbol eta' and replace the caveat with 'Because $\\eta$ here already includes polarization, only $t^2\\approx0.84$ applies, raising the coherent powers by ≈19%.'"
+  },
+  {
+   "finding": "report #15",
+   "kind": "model_round2",
+   "location": "§C10.3 caveat 4, 'The choices of $N_{\\rm req}$ and $\\eta$ move the numbers by a few times but do not change the scaling.' and '…raises the coherent requirement to about **180–1,590 W**…'",
+   "detail": "Proposed: 'The choice of $\\eta$ moves the numbers by up to 3×, and speckle raises the coherent $N_{\\rm req}$ about 9–26× (next bullet); neither changes the scaling with $\\Omega_{\\rm cell}$.' and '…rises to about **180 W** (four looks sharing one mode, $\\eta=0.3$) to **1,590 W** (one look, $\\eta=0.1$)…'. Both depend on the 20–184 W numbers and the eta values that Round 2 recomputes."
+  },
+  {
+   "finding": "report #31",
+   "kind": "model_round2",
+   "location": "§C10.3 power table, '| 0.1° × 0.1° | 0.23 W | 87–800× |' and item 2, '$0.1^\\circ/\\sqrt{87}=0.011^\\circ$ to $0.1^\\circ/\\sqrt{800}=0.0035^\\circ$'",
+   "detail": "Computed from the unrounded P_ToF like the other rows: 20.4/0.225 = 91 and 184/0.225 = 818, so '91–820×', and in item 2 '$0.1^\\circ/\\sqrt{91}=0.010^\\circ$ to $0.1^\\circ/\\sqrt{820}=0.0035^\\circ$'. Part of the §C10.3 power table."
+  },
+  {
+   "finding": "consistency flag (ToF model in §C10.3)",
+   "kind": "model_round2",
+   "location": "§C10.3 inputs, 'for ToF: 905 nm, 25 mm aperture, $N_{\\rm req}=20$ … and $\\eta=0.15$'",
+   "detail": "The §C0/§C7a ToF model is 940 nm with 17.3 (ideal) / 25 (model) counts in bright sun and eta = 0.145 including the live fraction; §C10.3 uses 905 nm. Wavelength and efficiency basis belong to Round 2."
+  },
+  {
+   "finding": "follow-up section 4 (optional headline)",
+   "kind": "model_round2",
+   "location": "§C10.3 opening paragraph, '…and about 180–1,590 W once speckle fading is counted…'",
+   "detail": "Optional addition of the multi-mode case from caveat 4, '≈45 W with four receive modes'. Depends on the eta convention."
+  },
+  {
+   "finding": "report #9 (part)",
+   "kind": "needs_source",
+   "location": "§C10.2b finding 7, 'Optical energy per point for OPA lidars is 1,360–1,700 nJ' and the next bullet, '…from 35 m to 200 m at 10% gives ≈44–56 µJ per point'",
+   "detail": "Device, range and reflectance behind the 1,360 nJ value in Pointcloud's comparison table. If it was not measured at 35 m on 10%, scale it from its own range and reflectance in the ≈44–56 µJ step and the 530–670 W that follows."
+  },
+  {
+   "finding": "report #11 (part)",
+   "kind": "needs_source",
+   "location": "§C10.2b finding 2, 'DTU's 120-element array spread over 6 mm has a *simulated* main-lobe fraction of 0.8%'",
+   "detail": "To state the $N/N_{\\rm spot}$ prediction for this array, the DTU paper's geometry is needed: 1D or 2D layout over the 6 × 5 mm aperture, element pattern and the field used in the 0.8% simulation. The camera explanation of the 3–6 dB floor is applied as an edit."
+  },
+  {
+   "finding": "report #20",
+   "kind": "needs_source",
+   "location": "§C10.1 sparse array, 'A Monte Carlo check with random sparse arrays gave **8.5%** main-lobe power for $N=128$ and $N_{\\rm spot}\\approx1{,}140$'",
+   "detail": "Inputs of the Monte Carlo run: aperture length, placement rule, the steering range that sets $N_{\\rm spot}$ (≈1,140 and ≈1,720) and the number of trials. The $N/N_{\\rm spot}=15\\%$ for $N=256$ is applied as an edit."
+  },
+  {
+   "finding": "report #26",
+   "kind": "needs_source",
+   "location": "§C10.2b finding 7, '35 m at 10% (8,192 elements), about 50 m (9,216), 22 m (Jilin), 20 m (imec). 100 m has been shown only on a 90% target [S].' (also the summary, 'Measured reality check')",
+   "detail": "Reflectance for the 50 m (9,216), 22 m (Jilin) and 20 m (imec) results, and the device and year of the 100 m result on a 90% target (≈33 m at 10%), which should also be added to the device table."
+  },
+  {
+   "finding": "report #27 (part)",
+   "kind": "needs_source",
+   "location": "§C10.2b finding 3, 'about 12 rad per nm of width error per mm of Si path … about 1.6–4 mm [I]'",
+   "detail": "The [I] tag names no source. Give the paper for the 12 rad/nm/mm sensitivity and the 1.6–4 mm phase-coherence length, and use that paper's own definition of the coherence length if it differs from the gloss in the edit."
+  },
+  {
+   "finding": "report #33 (part)",
+   "kind": "needs_source",
+   "location": "§C10.2 item 2, 'Published 2D arrays are orders of magnitude smaller [U].'",
+   "detail": "Element count and source of the largest published 2D phase-controlled array, to replace the [U] claim with a number and a [P]/[I] tag."
+  },
+  {
+   "finding": "follow-up #3",
+   "kind": "needs_source",
+   "location": "§C10 summary 'If the quoted widths are FWHM…'; §C10.2b 'if the datasheet widths are FWHM'; §C10.3 footprint table '≈8%, if the datasheet widths are FWHM'; outside the block §C0 subsection 10.8, 'with a beam of at most 0.04° × 0.02° FWHM.'",
+   "detail": "Check the FS-4S datasheet. If it states FWHM, write 'Beam ≤0.04° × 0.02° FWHM' in the §C10.2b products table and drop the three conditionals (2.8% as a FWHM ellipse, ≈8% at 1/e²). If it does not, change §C0 subsection 10.8 to 'with a beam of at most 0.04° × 0.02° (width convention not stated)'."
+  },
+  {
+   "finding": "follow-up #5 (part)",
+   "kind": "needs_source",
+   "location": "§C10.2b products table, FS-4S row 'C+L band' and SR-1S row",
+   "detail": "State which laser each datasheet names (RAY-H1 or another source). The derivation for both lasers is applied as an edit."
+  },
+  {
+   "finding": "follow-up #8",
+   "kind": "needs_source",
+   "location": "Appendix 2, 'Analog Photonics FS-4S / SR-1S / RAY-H1 / FSOC-B1 datasheets (2025):' followed by three URLs only",
+   "detail": "Add the FSOC-B1 datasheet URL with its revision and date, or drop 'FSOC-B1' from that entry. Until then the §C10.2b FSOC-B1 row and the loss mention in finding 4 carry [U] (applied as edits)."
+  },
+  {
+   "finding": "follow-up #12 (part)",
+   "kind": "needs_source",
+   "location": "§C10.2b device table, 'Analog Photonics \"super-cell\" (CLEO 2023) [I, abstract] | >49,152 over **four reticles**'",
+   "detail": "Whether the abstract gives exactly 49,152 elements (24 × 2,048) or more. Finding 1 was aligned with the table's '>49,152'; if the count is exact, change both to '49,152'."
+  },
+  {
+   "finding": "consistency flag (detection notation)",
+   "kind": "needs_decision",
+   "location": "§C10.2 item 5 and §C10.3: $P_d$, $P_{\\rm fa}$, $\\gamma_{\\rm th}$, $L$, $N_{\\rm req}$",
+   "detail": "§C0 subsection 10.3 writes $P_D$, $x_{\\rm th}$, $N_{\\rm sp}$ and $n_{\\rm req}$ for the same quantities ($P_{\\rm fa}$ here is a per-bin probability, $p$ in §C0, not $P_{FA,{\\rm pt}}$). The symbol scheme does not cover them; harmonizing needs the author's decision."
+  },
+  {
+   "finding": "follow-up #10 (part)",
+   "kind": "needs_decision",
+   "location": "§C3a 'ONR … **\\$3.97 M**, 2023–26 [I];' against §D8 '\\$4.0 M over FY2023–25 … [P]'",
+   "detail": "The same USAspending record is tagged [I] in §C3a and [P] in §D8 (the §D8 USAspending table is also [P]). Choose one tag for USAspending records throughout."
+  },
+  {
+   "finding": "consistency flag (duplicated equations)",
+   "kind": "structural",
+   "location": "§C10.2 item 5, Eq. (135); §C10.3, Eq. (140)",
+   "detail": "Eq. (135) restates §C0 Eq. (38) and Eq. (140) restates §C0 Eq. (33). Merging duplicated equations is Round 3 work."
+  },
+  {
+   "finding": "follow-up #1",
+   "kind": "cross_section",
+   "location": "§C10.7, 'The industry evidence points the same way.'",
+   "detail": "Exact text and fix: (1) '  - Voyant and Pointcloud: switched FPAs;' -> '  - Voyant: one on-chip axis plus a slow mirror (Carbon) and a switched FPA (Helium); Pointcloud: a switched FPA;'. (2) '- The only OPA product that shipped was Quanergy's S3-2, at 5–20 m, and Quanergy went bankrupt.' -> '- The only fully solid-state OPA product that shipped was Quanergy's S3-2, at 5–20 m, and Quanergy went bankrupt; Voyant's Carbon, which pairs one on-chip steered axis with a slow mirror, ships for industrial use (§B8).'. (3) '- Analog Photonics is the one serious OPA-lidar developer still publishing datasheets,' -> '- Analog Photonics is the one serious developer of two-axis non-mechanical OPA lidar still publishing datasheets,'. If Carbon's on-chip axis is not an OPA, change §C8 ('hybrid (OPA + slow mirror, e.g. Voyant Carbon)') instead."
+  },
+  {
+   "finding": "follow-up #2, #11",
+   "kind": "cross_section",
+   "location": "§C3a company table, Analog Photonics row",
+   "detail": "Exact text: '| **Analog Photonics** | OPA plus tunable lasers on SiPh | ≈\\$45 M of US federal contracts and grants, mostly DARPA and ONR; SBIR only ≈\\$4.3 M [I] | No automotive programme; two unnamed Tier 1 JDAs (2018, 2020) [P]; defence FSOC and lasers (below; §C10.2b) |' -> '| **Analog Photonics** | OPA plus tunable lasers on SiPh | ≈\\$45 M of US federal prime contracts and grants (≈\\$79 M with \\$34.2 M of subawards, mainly from AIM Photonics), mostly DARPA and ONR; SBIR only ≈\\$4.3 M [I] | No automotive production award found; two unnamed Tier 1 JDAs (2018, 2020) and on-car tests (2019) claimed [P]; defence FSOC and lasers (below; §C10.2b) |'"
+  },
+  {
+   "finding": "follow-up #2",
+   "kind": "cross_section",
+   "location": "§C3a profile, SBIR bullet",
+   "detail": "Exact text: 'The company does not live on SBIRs; it lives on large DARPA and ONR contracts.' -> 'The company does not live on SBIRs; it lives on large DARPA and ONR prime contracts and on subawards, mainly from AIM Photonics.'"
+  },
+  {
+   "finding": "follow-up #7",
+   "kind": "cross_section",
+   "location": "§C3a profile, '**Automotive:**' bullet",
+   "detail": "Exact text: 'Its public milestones stop in 2021 [P]. The FS-4S datasheet (2025) is analysed in §C10.2b.' -> 'Its published milestone timeline stops in 2021 [P]; a 2023 company-authored IEEE Spectrum article promised automotive samples in 2025, and none were found (§C10.2b). The FS-4S datasheet (2025) is analysed in §C10.2b.'"
+  },
+  {
+   "finding": "follow-up #10",
+   "kind": "cross_section",
+   "location": "§C3a profile, DARPA MOABB and ONR bullets; §D8, 'DoD lidar research outside SBIR has shrunk.'",
+   "detail": "If the USAspending records confirm that the first dates are periods of performance and the §D8 years are obligation years: (1) §C3a '**\\$26.6 M**, 2016–2023, awarded in full and open competition [I];' -> '**\\$26.6 M**, period of performance 2016–2023 (MOABB's budget lines end in FY2021, §D8), awarded in full and open competition [I];'. (2) §C3a '**\\$3.97 M**, 2023–26 [I];' -> '**\\$3.97 M** obligated in FY2023–25, period of performance 2023–26 [I];'. (3) §D8 '\\$4.0 M over FY2023–25, is the only active integrated-photonics lidar contract found [P].' -> '\\$4.0 M obligated over FY2023–25 (performance to 2026, §C3a), is the only active integrated-photonics lidar contract found [P].' with the tag chosen under the needs_decision entry."
+  },
+  {
+   "finding": "follow-up section 4 flag (pitch)",
+   "kind": "cross_section",
+   "location": "§C7 'Commercial status', '  - **Analog Photonics** (OPA with electro-optic phase shifters, 1.5 µm pitch, about 60°) has no production award found.'",
+   "detail": "The 512-element device in §C10.2b is 1.65 µm and 56°; 1.5 µm is unsourced. Fix: '(OPA with electro-optic phase shifters; its ≈60° phase-steered field implies a pitch of about 1.5 µm [E])'."
+  },
+  {
+   "finding": "consistency flag (wrong pointer)",
+   "kind": "cross_section",
+   "location": "§C7b subsection 2(e), lasers against the requirement, '  - 100 kHz (Waymo's upper figure; Pointcloud's external DFB, §C10.3):'",
+   "detail": "Pointcloud's laser is described in §C10.4, not §C10.3. Exact text: 'Pointcloud's external DFB, §C10.3)' -> 'Pointcloud's external DFB, §C10.4)'."
+  },
+  {
+   "finding": "consistency flag (source of report #6)",
+   "kind": "cross_section",
+   "location": "§C10.3a item 7 caveats, '- **Finer resolution shrinks ToF's usable aperture.**'",
+   "detail": "The table beneath it shows the aperture growing (14 → 29 → 57 mm). Fix: '- **Finer resolution needs a larger ToF aperture than a module can hold.**'"
+  }
+ ]
+}

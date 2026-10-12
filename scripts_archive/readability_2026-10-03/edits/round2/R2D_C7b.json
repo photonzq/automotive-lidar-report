@@ -1,0 +1,493 @@
+{
+ "block": "R2D_C7b",
+ "edits": [
+  {
+   "id": "R2D_C7b-001",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin); Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case)",
+   "old": "- **Per joule of emitted light, FMCW buys ≈3.2× fewer sampled points than 940 nm SPAD ToF. The reason is spatial, not temporal** (subsection 1). With the coherent efficiencies measured so far (0.057–0.168), the gap is 5–14× rather than 3.2× (subsection 1(c)).",
+   "new": "- **Per joule of useful light, FMCW buys ≈4.2× fewer sampled points than 940 nm SPAD ToF. The reason is spatial, not temporal** (subsection 1). Useful light is the light whose echo arrives inside the receiver's measurement windows; an ungated CW channel also emits during the round trips, which widens the gap to ≈5.3× per joule emitted (subsection 1(e)). With the coherent efficiencies measured so far (0.057–0.168), the gap is 6–19× rather than 4.2× (subsection 1(c)).",
+   "why": "ToF reference 72 nJ (0.303/0.0717 = 4.2); ungated FMCW emits 0.384 uJ (5.3x); measured-eta gaps 6.3-18.6x."
+  },
+  {
+   "id": "R2D_C7b-002",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "and still needs 120 photoelectrons per point against 25 counts for ToF (§C0 subsection 10.3).",
+   "new": "and still needs 120 photoelectrons per point against 21.7 counts for ToF (§C0 subsection 10.3).",
+   "why": "ToF n_req = 1.45 x 14.98 = 21.7."
+  },
+  {
+   "id": "R2D_C7b-003",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "against ≈93 nJ per ToF point (200 m, 10% target)",
+   "new": "against ≈72 nJ per ToF point (200 m, 10% target)",
+   "why": "ToF E_pt 71.7 nJ."
+  },
+  {
+   "id": "R2D_C7b-004",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "and about 160× the 93 nJ of a ToF point.",
+   "new": "and about 200× the 72 nJ of a ToF point.",
+   "why": "14.6 uJ / 72 nJ = 203."
+  },
+  {
+   "id": "R2D_C7b-005",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "it would need ≈15× more energy to stand out.",
+   "new": "it would need ≈13× more energy to stand out.",
+   "why": "5 sqrt(3,370) = 290 counts against 21.7: 13.4x (subsection 1(a))."
+  },
+  {
+   "id": "R2D_C7b-006",
+   "finding": "Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case)",
+   "old": "apart from the 12–35% it emits during the last $\\tau$ of each ramp, whose echo falls in the next ramp's discarded window.",
+   "new": "apart from the 12–35% it emits during the last $\\tau$ of each ramp (21% in the §C7a central case), whose echo falls in the next ramp's discarded window.",
+   "why": "Central case 2.67/12.67 = 21%."
+  },
+  {
+   "id": "R2D_C7b-007",
+   "finding": "Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case)",
+   "old": "A coherent channel costs ≈176 mW of receive power (four receivers of ≈44 mW) plus ≈200 mW of electrical power for its light (2026 central).",
+   "new": "A coherent channel costs ≈185 mW of receive power (four receivers of ≈46 mW) plus ≈200 mW of electrical power for its light (2026 central).",
+   "why": "E_rx 2.337 uJ over the 12.67 us dwell = 184 mW per channel (subsection 3)."
+  },
+  {
+   "id": "R2D_C7b-008",
+   "finding": "Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case)",
+   "old": "but only 1.2× at 25 Mpts/s, where an ungated one can reach the allowance.",
+   "new": "but only 1.2× at 25 Mpts/s, where the ungated §C7a central transmitter, at 9.6 W, exceeds it.",
+   "why": "Central case is ungated: 7.58 W x 1.267 = 9.6 W > 9.1 W."
+  },
+  {
+   "id": "R2D_C7b-009",
+   "finding": "Round 2 decision 5 (single parity definition, section C7b subsection 5)",
+   "old": "- **Parity with ToF needs three things at once** (subsection 5):",
+   "new": "- **Parity with ToF, defined as ≥15 Mpts/s in ≤15 W at 200 m and 10%, needs three things at once** (subsection 5):",
+   "why": "State the single parity definition where the conditions are listed."
+  },
+  {
+   "id": "R2D_C7b-010",
+   "finding": "round1_skipped [08_C7b] report #6 (channel count); Round 2 decision 5 (single parity definition, section C7b subsection 5)",
+   "old": "a coherent receiver chip with ≥150 channels of four receivers each, at ≈8–13 mW per channel",
+   "new": "a coherent receiver chip with 115–190 channels of four receivers each (460–760 receivers), at ≈8–13 mW per channel",
+   "why": "One channel requirement throughout: 140-190 ungated, 115 gated (subsection 5)."
+  },
+  {
+   "id": "R2D_C7b-011",
+   "finding": "Round 2 decision 5 (single parity definition, section C7b subsection 5); Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case); Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "  - Without the efficient laser or the lower energy per point, a 15 Mpts/s sensor stays near 19.5 W against a 15 W target; without the low-power receiver it stays near 44 W. Today's central case, at 15 Mpts/s and 200 m, is ≈67 W.",
+   "new": "  - With all three, a 15 Mpts/s sensor whose transmitter stays on through the round trips draws ≈14 W at 15 mW per channel, just inside the target; channels brighter than ≈22 mW stay inside it only if the transmitter is gated. That is still 1.8× the electrical energy per point of the 2026 SPAD ToF reference, which needs 9.2 W at 15 Mpts/s. Without the efficient laser or the lower energy per point, the sensor stays near 23.5 W; without the low-power receiver, near 48 W. Today's central case, at 15 Mpts/s and 200 m, is ≈76.5 W.",
+   "why": "Parity table recomputed on the ungated basis (subsection 5): 14.0 / 23.5-23.7 / 47.6 / 76.5 W; ToF 9.2 W."
+  },
+  {
+   "id": "R2D_C7b-012",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin); Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case)",
+   "old": "A 940 nm SPAD time-of-flight sensor needs ≈93 nJ per point; a 1,550 nm FMCW sensor needs ≈0.30 µJ per sample, about 3.2× more. The gap comes from how much of the echo each receiver can collect, not from pulsed versus continuous light.",
+   "new": "A 940 nm SPAD time-of-flight sensor needs ≈72 nJ per point; a 1,550 nm FMCW sensor needs ≈0.30 µJ per sample, about 4.2× more. The gap comes from how much of the echo each receiver can collect, not from pulsed versus continuous light, which adds only the light an ungated CW channel emits during the round trips: 1.27× the useful energy in the §C7a central case (item (e)).",
+   "why": "ToF 72 nJ; ratio 4.2; ungated factor 12.67/10."
+  },
+  {
+   "id": "R2D_C7b-013",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin); Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case)",
+   "old": "  - SPAD ToF: $93\\ {\\rm nJ}\\times15\\times10^{6}\\ {\\rm s^{-1}}=1.4$ W;\n  - FMCW: $0.30\\ \\mu{\\rm J}\\times15\\times10^{6}\\ {\\rm s^{-1}}=4.5$ W.",
+   "new": "  - SPAD ToF: $72\\ {\\rm nJ}\\times15\\times10^{6}\\ {\\rm s^{-1}}=1.1$ W;\n  - FMCW: $0.30\\ \\mu{\\rm J}\\times15\\times10^{6}\\ {\\rm s^{-1}}=4.5$ W of useful light, and 1.27 times as much, 5.7 W, from a transmitter that also emits during the round trips (item (e)).",
+   "why": "72 nJ x 15e6 = 1.08 W; 4.5 W x 1.267 = 5.7 W emitted."
+  },
+  {
+   "id": "R2D_C7b-014",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "  - **In the §C7a model:** a macro-pixel (a group of SPADs read out as one pixel) in bright sun counts $r_{\\rm bg}=3.66\\times10^{8}$ s⁻¹, half the fully sunlit case of §C6(d) at the model's photon detection efficiency (PDE) of 0.37. It listens for the 20.8 µs column time per point (≈10 shots of ≈2 µs, §C6). It is dead (unable to count) for 21.6% of that time (Eq. (82), paralyzable form), so it is live for a fraction 0.784 of it. That gives $3.66\\times10^{8}\\times20.8\\times10^{-6}\\times0.784\\approx5{,}960$ background events per point. (§C7a(c) counts ≈5,990 because it adds the 25 signal counts.)",
+   "new": "  - **In the §C7a model:** a macro-pixel (a group of SPADs read out as one pixel, here 3×3 SPADs viewing a 0.05° × 0.05° field) in bright sun counts $r_{\\rm bg}=1.83\\times10^{8}$ s⁻¹. That is half the fully sunlit case of §C6(d), $2.965\\times10^{8}$ s⁻¹ at a photon detection efficiency (PDE) of 0.3, scaled to the model's PDE of 0.37: $2.965\\times10^{8}\\times(0.37/0.3)/2=1.83\\times10^{8}$ s⁻¹. It listens for the 20.8 µs column time per point (≈10 shots of ≈2 µs, §C6). Each of its nine SPADs counts $r=1.83\\times10^{8}/9=2.03\\times10^{7}$ s⁻¹. With the dead time $\\tau_d=6$ ns this gives $r\\tau_d=0.122$, so each SPAD is dead (unable to count) for $1-e^{-0.122}=11.5\\%$ of that time (Eq. (82), paralyzable form), and the macro-pixel is live for a fraction 0.885 of it. That gives $1.83\\times10^{8}\\times20.8\\times10^{-6}\\times0.885\\approx3{,}370$ background events per point. (§C7a(c) counts ≈3,390 because it adds the 21.7 signal counts.)",
+   "why": "0.05 x 0.05 deg pixel halves r_bg; dead fraction, live fraction and events recomputed with substitutions."
+  },
+  {
+   "id": "R2D_C7b-015",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "  - **Per bin:** these events are spread over the ≈2,080 histogram bins of 1 ns in each shot's 2.08 µs listening window (≈300 m of range), so there are $5{,}960/2{,}080\\approx2.87$ counts per bin. Eq. (98), with the 0.784 live fraction, gives the same: $3.66\\times10^{8}\\times10^{-9}\\times10\\times0.784=2.87$. So ≈25 signal counts in one bin stand out clearly: the detection threshold is 15 counts (§C0 subsection 10.3).",
+   "new": "  - **Per bin:** these events are spread over the ≈2,080 histogram bins of 1 ns in each shot's 2.08 µs listening window (≈300 m of range), so there are $3{,}370/2{,}080\\approx1.62$ counts per bin. Eq. (98), with the 0.885 live fraction, gives the same: $1.83\\times10^{8}\\times10^{-9}\\times10\\times0.885=1.62$. So the model's 21.7 signal counts in one bin stand out clearly: the detection threshold is 12 counts (§C0 subsection 10.3).",
+   "why": "b = 1.62; Poisson tail 1.1e-6 at 11 and 1.5e-7 at 12 counts against 5e-7 per bin, so threshold 12."
+  },
+  {
+   "id": "R2D_C7b-016",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "  - **The same energy spread evenly in time,** as with CW light, would have to stand out against all 5,970 events. The random (Poisson) fluctuation of 5,970 counts is $\\sqrt{5{,}970}\\approx77$. At 5 standard deviations that takes $5\\sqrt{5{,}970}\\approx390$ counts: ≈15× more energy per point, before any requirement on ranging precision.",
+   "new": "  - **The same energy spread evenly in time,** as with CW light, would have to stand out against all ≈3,370 background events. Their random (Poisson) fluctuation is $\\sqrt{3{,}370}\\approx58$ counts. At 5 standard deviations that takes $5\\sqrt{3{,}370}\\approx290$ counts: $290/21.7\\approx13$ times the energy per point, before any requirement on ranging precision.",
+   "why": "sqrt(3,370) = 58; 5 x 58 = 290; 290/21.7 = 13.4."
+  },
+  {
+   "id": "R2D_C7b-017",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "some 35× the SPAD's 25 counts.",
+   "new": "some 41× the SPAD's 21.7 counts.",
+   "why": "890/21.7 = 41."
+  },
+  {
+   "id": "R2D_C7b-018",
+   "finding": "Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case)",
+   "old": "or 0.006 photons in a 10 µs dwell.",
+   "new": "or 0.006 photons in the 10 µs that one point integrates ($T_{\\rm int}$, subsection 2(b)).",
+   "why": "The dwell is 12.67 us; the 10 us is the integration time (650 /s x 10 us = 0.0065)."
+  },
+  {
+   "id": "R2D_C7b-019",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "The model uses 120, a ×1.36 margin, close to the ×1.45 that takes ToF from 17.3 to 25 counts.",
+   "new": "The model uses 120, a ×1.36 margin, close to the ×1.45 that takes ToF from the ideal 15.0 to 21.7 counts.",
+   "why": "Ideal requirement at b = 1.62 is 14.98 counts; 21.7/14.98 = 1.45."
+  },
+  {
+   "id": "R2D_C7b-020",
+   "finding": "Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case)",
+   "old": "**(c) Result: points per joule of emitted light, 200 m, 10% target**",
+   "new": "**(c) Result: points per joule of light, 200 m, 10% target**",
+   "why": "The FMCW rows count the useful light; the emitted light of an ungated channel is given in the notes."
+  },
+  {
+   "id": "R2D_C7b-021",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "a coherent sample needs 120 photoelectrons against 25 counts (§C0 subsection 10.3);",
+   "new": "a coherent sample needs 120 photoelectrons against 21.7 counts (§C0 subsection 10.3);",
+   "why": "ToF n_req 21.7."
+  },
+  {
+   "id": "R2D_C7b-022",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "| 940 nm SPAD or SiPM dToF, scanned or line-flash, 25 mm lens | 491 mm² (whole lens) | 25 counts | 0.145 | 93 nJ | $1.1\\times10^{7}$ |",
+   "new": "| 940 nm SPAD or SiPM dToF, scanned or line-flash, 25 mm lens | 491 mm² (whole lens) | 21.7 counts | 0.164 | 72 nJ | $1.4\\times10^{7}$ |",
+   "why": "n_req 21.7, eta 0.164, E_pt 71.7 nJ, 1/E = 1.4e7 per J."
+  },
+  {
+   "id": "R2D_C7b-023",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "Worked example (SPAD row): $25\\times2.11\\times10^{-19}\\times1.26\\times10^{5}/(0.1\\times4.91\\times10^{-4}\\times0.145)=9.3\\times10^{-8}$ J.",
+   "new": "Worked example (SPAD row): $21.7\\times2.11\\times10^{-19}\\times1.26\\times10^{5}/(0.1\\times4.91\\times10^{-4}\\times0.164)=7.2\\times10^{-8}$ J.",
+   "why": "5.77e-13 / 8.05e-6 = 7.2e-8 J."
+  },
+  {
+   "id": "R2D_C7b-024",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "  - ToF: optics 0.5 × photon detection efficiency 0.37 × the bright-sun live fraction 0.784 (6 ns paralyzable dead time, §C7a(a));",
+   "new": "  - ToF: optics 0.5 × photon detection efficiency 0.37 × the bright-sun live fraction 0.885 (6 ns paralyzable dead time, (a) and §C7a(a)), i.e. $0.5\\times0.37\\times0.885=0.164$;",
+   "why": "Live fraction 0.885 at the halved background."
+  },
+  {
+   "id": "R2D_C7b-025",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "for example $1/(9.3\\times10^{-8}\\ {\\rm J})=1.1\\times10^{7}$ points per joule.",
+   "new": "for example $1/(7.2\\times10^{-8}\\ {\\rm J})=1.4\\times10^{7}$ points per joule.",
+   "why": "1/7.2e-8 = 1.39e7."
+  },
+  {
+   "id": "R2D_C7b-026",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin); Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case)",
+   "old": "so FMCW buys 5–7× (discrete fibre chain) or ≈14× (integrated array) fewer points per optical joule than SPAD ToF, instead of ≈3.2×.",
+   "new": "so FMCW buys $4.23\\times0.25/0.168=6.3$ to $4.23\\times0.25/0.112=9.4$ times (discrete fibre chain) or $4.23\\times0.25/0.057=18.6$ times (integrated array) fewer points per optical joule than SPAD ToF, instead of ≈4.2×. Here 4.23 is the unrounded ratio of Eq. (104), $0.303\\ \\mu{\\rm J}/71.7\\ {\\rm nJ}$.\n- **Useful and emitted light:** the FMCW rows count the light whose echo arrives inside the useful windows. An ungated CW transmitter also emits during the round trips (item (e)), 1.27 times as much in the §C7a central case: 0.384 µJ per sample, or $1/(3.84\\times10^{-7}\\ {\\rm J})=2.6\\times10^{6}$ samples per emitted joule.",
+   "why": "4.23 x (1.49, 2.23, 4.39) = 6.3, 9.4, 18.6; emitted 0.303 x 12.67/10 = 0.384 uJ."
+  },
+  {
+   "id": "R2D_C7b-027",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "Why FMCW buys ≈3.2× fewer sampled points per joule than SPAD ToF.** Let $E_{\\rm FMCW}$ be the optical energy per FMCW sample (0.30 µJ) and $E_{\\rm ToF}$ the optical energy per SPAD ToF point (93 nJ)",
+   "new": "Why FMCW buys ≈4.2× fewer sampled points per joule than SPAD ToF.** Let $E_{\\rm FMCW}$ be the optical energy per FMCW sample (0.30 µJ) and $E_{\\rm ToF}$ the optical energy per SPAD ToF point (72 nJ)",
+   "why": "Ratio 4.2 with the 72 nJ ToF point."
+  },
+  {
+   "id": "R2D_C7b-028",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "\\times\\underbrace{\\frac{120}{25}}_{\\rm detection}\\times\\underbrace{\\frac{940}{1{,}550}}_{\\rm photon\\ energy}\\times\\underbrace{\\frac{0.145}{0.25}}_{\\rm efficiency}=1.93\\times4.8\\times0.607\\times0.580\\approx3.25. \\tag{104}",
+   "new": "\\times\\underbrace{\\frac{120}{21.7}}_{\\rm detection}\\times\\underbrace{\\frac{940}{1{,}550}}_{\\rm photon\\ energy}\\times\\underbrace{\\frac{0.164}{0.25}}_{\\rm efficiency}=1.93\\times5.53\\times0.606\\times0.656\\approx4.2. \\tag{104}",
+   "why": "1.93 x 5.53 x 0.606 x 0.656 = 4.24 (model 0.3034/0.0717 = 4.23); 940/1550 = 0.606."
+  },
+  {
+   "id": "R2D_C7b-029",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "- **Detection statistics (4.8×):** the four looks need 120 photoelectrons and ToF 25 counts; for the ideal requirements the ratio is 5.1 ($88.5/17.3$, §C0 subsection 10.3). Of the ideal 5.1, ×1.27 is the coherent receiver's one photoelectron of shot noise in each of the ≈2,450 FFT bins it searches (17.3 → 21.9), ×1.79 is finding the peak in both ramps (21.9 → 39.1), and ×2.26 is speckle fading with four looks (39.1 → 88.5): $1.27\\times1.79\\times2.26=5.1$.",
+   "new": "- **Detection statistics (5.5×):** the four looks need 120 photoelectrons and ToF 21.7 counts; for the ideal requirements the ratio is 5.9 ($88.5/15.0$, §C0 subsection 10.3). Of the ideal 5.9, ×1.46 is the coherent receiver's one photoelectron of shot noise in each of the ≈2,450 FFT bins it searches (15.0 → 21.9), ×1.79 is finding the peak in both ramps (21.9 → 39.1), and ×2.26 is speckle fading with four looks (39.1 → 88.5): $1.46\\times1.79\\times2.26=5.9$.",
+   "why": "120/21.7 = 5.53; 88.5/14.98 = 5.9; 21.9/15.0 = 1.46."
+  },
+  {
+   "id": "R2D_C7b-030",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "- **Efficiency (0.58×):** the FMCW model's $\\eta=0.25$ is higher than the ToF model's 0.145,",
+   "new": "- **Efficiency (0.66×):** the FMCW model's $\\eta=0.25$ is higher than the ToF model's 0.164,",
+   "why": "0.164/0.25 = 0.66."
+  },
+  {
+   "id": "R2D_C7b-031",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "- **Per fully covered cell the gap is ≈160×** ($14.6\\ \\mu{\\rm J}/93\\ {\\rm nJ}$).",
+   "new": "- **Per fully covered cell the gap is ≈200×** ($14.6\\ \\mu{\\rm J}/72\\ {\\rm nJ}=203$).",
+   "why": "14.6 uJ / 72 nJ = 203."
+  },
+  {
+   "id": "R2D_C7b-032",
+   "finding": "Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case)",
+   "old": "  - At 16–30 mW per channel, a share $2\\tau/T_{\\rm dwell}$ of 12–35% of the transmitted energy is emitted during the dead time and wasted (subsection 2 table).",
+   "new": "  - At 16–30 mW per channel, a share $2\\tau/T_{\\rm dwell}$ of 12–35% of the transmitted energy is emitted during the dead time and wasted (subsection 2 table).\n  - The §C7a central case is ungated: $E_{\\rm pt}=0.303$ µJ at $P_{\\rm ch}=30$ mW gives $T_{\\rm int}=10$ µs and $T_{\\rm dwell}=12.67$ µs, so each point costs $0.303\\times12.67/10=0.384$ µJ of emitted light, 21% of it wasted. Per joule emitted, FMCW therefore buys $0.384/0.072\\approx5.3$ times fewer points than SPAD ToF, against the 4.2 of Eq. (104) for the useful light.",
+   "why": "Decision 1: emitted energy E_pt T_dwell/T_int in the central case."
+  },
+  {
+   "id": "R2D_C7b-033",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "The same SPAD receiver needs only $93\\ {\\rm nJ}\\times(10/200)^2=0.23$ nJ per point at 10 m",
+   "new": "The same SPAD receiver needs only $72\\ {\\rm nJ}\\times(10/200)^2=0.18$ nJ per point at 10 m",
+   "why": "72 x 0.0025 = 0.18 nJ."
+  },
+  {
+   "id": "R2D_C7b-034",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "and SPAD ToF $93\\ {\\rm nJ}\\times(300/200)^2=0.21$ µJ per point, so the ratio of Eq. (104) falls from 3.2 at 200 m to $0.45/0.21=2.1$ at 300 m [E].",
+   "new": "and SPAD ToF $72\\ {\\rm nJ}\\times(300/200)^2=0.16$ µJ per point, so the ratio of Eq. (104) falls from 4.2 at 200 m to $0.45/0.16=2.8$ at 300 m [E].",
+   "why": "72 x 2.25 = 162 nJ; 0.45/0.16 = 2.8."
+  },
+  {
+   "id": "R2D_C7b-035",
+   "finding": "Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case)",
+   "old": "Then $T_{\\rm dwell}=10+2.67=12.7$ µs and $\\dot N_{\\rm ch}=1/12.7\\ \\mu{\\rm s}=79$ kpts/s.",
+   "new": "Then $T_{\\rm dwell}=10+2.67=12.7$ µs and $\\dot N_{\\rm ch}=1/12.7\\ \\mu{\\rm s}=79$ kpts/s. This is the §C7a central case, whose 10 µs of integration are its two 5 µs useful windows.",
+   "why": "Tie Eq. (107) to the model's single dwell definition."
+  },
+  {
+   "id": "R2D_C7b-036",
+   "finding": "round1_skipped [08_C7b] consistency flag (Eq. (109) vs Eq. (94)); round1_skipped [08_C7b] report #1 (search range); Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case)",
+   "old": "  - At 300 m (the §C7a case, with the same $T_u=5$ µs), it is $5\\times300/0.15+2{,}260=10{,}000+2{,}260\\approx12{,}300$.",
+   "new": "  - At 300 m (the §C7a case, with the same $T_u=5$ µs), it is $5\\times300/0.15+2{,}260=10{,}000+2{,}260\\approx12{,}300$. This is the count of §C7a's Eq. (94): Eq. (109) becomes Eq. (94) when $R$ is the far end of the range searched, $R_{\\max}=300$ m, and the chirp duration $T$ of Eq. (94) is read as the useful window $T_u$, since only the useful windows are digitized. The §C7a model digitizes this whole 0–300 m search for its 200 m design point; a sensor that searched only to 200 m would need the 8,900 samples above.",
+   "why": "Cross-reference Eq. (109) to Eq. (94) and state once which range a 200 m sensor digitizes."
+  },
+  {
+   "id": "R2D_C7b-037",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "the same SPAD ToF model needs $0.21\\ \\mu{\\rm J}\\times10^{7}\\ {\\rm s^{-1}}=2.1$ W of useful light with a fixed 25 mm lens, against FMCW's 4.5 W, a ratio of 2.1 rather than the 3.2 of 200 m.",
+   "new": "the same SPAD ToF model needs $0.16\\ \\mu{\\rm J}\\times10^{7}\\ {\\rm s^{-1}}=1.6$ W of useful light with a fixed 25 mm lens, against FMCW's 4.5 W, a ratio of 2.8 rather than the 4.2 of 200 m.",
+   "why": "ToF 0.16 uJ at 300 m; 4.5/1.6 = 2.8."
+  },
+  {
+   "id": "R2D_C7b-038",
+   "finding": "Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case)",
+   "old": "so at 25 Mpts/s it can exceed the allowance [E].",
+   "new": "so at 25 Mpts/s it can exceed the allowance. The upper values, at 30 mW per channel, are the ungated §C7a central case [E].",
+   "why": "The model's central case is the ungated 30 mW one (3.84 / 9.61 W)."
+  },
+  {
+   "id": "R2D_C7b-039",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "  - SPAD ToF emits 0.93 W at 10 Mpts/s and 2.3 W at 25 Mpts/s, 9.3 nJ per shot and point.",
+   "new": "  - SPAD ToF emits 0.72 W at 10 Mpts/s and 1.8 W at 25 Mpts/s, 7.2 nJ per shot and point.",
+   "why": "72 nJ x 1e7 = 0.72 W, x 2.5e7 = 1.8 W; 72/10 shots = 7.2 nJ."
+  },
+  {
+   "id": "R2D_C7b-040",
+   "finding": "Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case)",
+   "old": "at 25 Mpts/s an ungated FMCW transmitter reaches the allowance.",
+   "new": "at 25 Mpts/s the ungated §C7a central transmitter exceeds it (9.6 against 9.1 W).",
+   "why": "7.58 W x 1.267 = 9.6 W."
+  },
+  {
+   "id": "R2D_C7b-041",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "would need 0.84 µJ per point at 600 m and 8.4 W at 10 Mpts/s, far beyond its average-power limits.",
+   "new": "would need 0.65 µJ per point at 600 m and 6.5 W at 10 Mpts/s, far beyond its small-source average limit of ≈0.24–0.28 W.",
+   "why": "72 nJ x 9 = 0.65 uJ; x 1e7 = 6.5 W (23-27x the small-source limit)."
+  },
+  {
+   "id": "R2D_C7b-042",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "the gated floor of ≈49 W is still ≈3.5× the ≈14 W of the SPAD ToF sensor at the same range and rate.",
+   "new": "the gated floor of ≈49 W is still $49.4/11.7\\approx4.2$ times the ≈11.7 W of the SPAD ToF sensor at the same range and rate.",
+   "why": "49.4/11.7 = 4.2."
+  },
+  {
+   "id": "R2D_C7b-043",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "For ToF, $93\\ {\\rm nJ}\\times(600/200)^2=0.84$ µJ.",
+   "new": "For ToF, $72\\ {\\rm nJ}\\times(600/200)^2=0.65$ µJ, and $0.65\\ \\mu{\\rm J}\\times10^{7}\\ {\\rm s^{-1}}=6.5$ W.",
+   "why": "Substitution for the 600 m ToF figures."
+  },
+  {
+   "id": "R2D_C7b-044",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "and ≈70 nJ of SPAD-SoC receive electronics (§C7a(c)): $3\\ {\\rm W}+10^{7}\\ {\\rm s^{-1}}\\times(93\\ {\\rm nJ}\\times2.25/0.20+70\\ {\\rm nJ})=3+11.2=14.2$ W.",
+   "new": "and ≈57 nJ of SPAD-SoC receive electronics (§C7a(c)): $3\\ {\\rm W}+10^{7}\\ {\\rm s^{-1}}\\times(72\\ {\\rm nJ}\\times2.25/0.20+57\\ {\\rm nJ})=3+8.7=11.7$ W.",
+   "why": "810 + 57 = 867 nJ per point; 3 + 8.67 = 11.7 W."
+  },
+  {
+   "id": "R2D_C7b-045",
+   "finding": "Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case); Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "each with four receivers and drawing ≈376 mW of electrical power (receivers plus its share of the laser), against ≈26 mW per ToF channel.",
+   "new": "each with four receivers and drawing ≈385 mW of electrical power (receivers plus its share of the laser), against ≈20 mW per ToF channel.",
+   "why": "185 + 200 mW against 2.7 + 17.2 mW."
+  },
+  {
+   "id": "R2D_C7b-046",
+   "finding": "round1_skipped [08_C7b] report #1 (dwell definitions, column name, 4 us case); round1_skipped [08_C7b] report #6; Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case)",
+   "old": "The table applies Eq. (121) to four point rates at three dwells.\n\n| Target point rate | Channels at 4 µs dwell | Channels at 10 µs dwell | Channels at the 30 mW / 0.30 µJ dwell (12.7 µs) |\n|---|---|---|---|\n| 2 Mpts/s (Aeries-class) | 8 | 20 | 25 |\n| 10 Mpts/s | 40 | 100 | 127 |\n| 15 Mpts/s (the parity point rate) | 60 | 150 | 190 |\n| 41 Mpts/s (RoboSense EM4, ToF) | 164 | 410 | 520 |\n\n*How the table is computed* [E]:\n- $N_{\\rm ch}=\\dot N\\,T_{\\rm dwell}$ (Eq. (121)); for example $41\\times10^{6}\\times4\\times10^{-6}=164$.\n- A 4 µs dwell is close to the lower practical end at 200 m. It implies $T_u=4/2-1.33=0.67$ µs per ramp, a sampling rate $f_s\\approx5$ GS/s and ≈100 mW per channel at 0.15 µJ.",
+   "new": "The table applies Eq. (121) to four point rates at two dwells, both with the 2.67 µs of round trips at 200 m: the §C7a central dwell, 10 µs of integration (30 mW at 0.30 µJ), and a short one, 4 µs of integration.\n\n| Target point rate | Channels at 6.67 µs dwell (4 µs integration + $2\\tau$) | Channels at 12.67 µs dwell (10 µs integration + $2\\tau$; §C7a central) |\n|---|---|---|\n| 2 Mpts/s (Aeries-class) | 13 | 25 |\n| 10 Mpts/s | 67 | 127 |\n| 15 Mpts/s (the parity point rate) | 100 | 190 |\n| 41 Mpts/s (RoboSense EM4, ToF) | 273 | 519 |\n\n*How the table is computed* [E]:\n- $N_{\\rm ch}=\\dot N\\,T_{\\rm dwell}$ (Eq. (121)), with $T_{\\rm dwell}=T_{\\rm int}+2\\tau$ (Eq. (107)); for example $41\\times10^{6}\\times6.67\\times10^{-6}=273$ and $41\\times10^{6}\\times12.67\\times10^{-6}=519$.\n- A 4 µs integration time is close to the lower practical end at 200 m. It means $T_u=2$ µs per ramp and $T_c=T_u+\\tau=3.33$ µs. The sampling rate is then $f_s\\approx1.9$ GS/s for a search to 200 m (subsection 2(c) table), or ≈2.7 GS/s for the 0–300 m search of the §C7a model (§C7a(d)), and each channel needs $P_{\\rm ch}=E_{\\rm pt}/T_{\\rm int}=0.30\\ \\mu{\\rm J}/4\\ \\mu{\\rm s}\\approx76$ mW (38 mW at 0.15 µJ).",
+   "why": "One dwell definition: the 10 us column was the integration time; the short case is 4 us + 2 tau."
+  },
+  {
+   "id": "R2D_C7b-047",
+   "finding": "Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "- **Power per ToF channel.** At the §C7a central values (≈70 nJ of receive electronics and ≈0.47 µJ of laser electrical energy per ToF point):\n  - receive: $15\\times10^{6}\\times70\\ {\\rm nJ}=1.05$ W, i.e. $1.05\\ {\\rm W}/312=3.4$ mW per macro-pixel;\n  - laser: $15\\times10^{6}\\times0.47\\ \\mu{\\rm J}=7.0$ W, i.e. ≈22 mW per macro-pixel.",
+   "new": "- **Power per ToF channel.** At the §C7a central values (≈57 nJ of receive electronics and ≈0.36 µJ of laser electrical energy per ToF point):\n  - receive: $15\\times10^{6}\\times57\\ {\\rm nJ}=0.855$ W, i.e. $0.855\\ {\\rm W}/312=2.7$ mW per macro-pixel;\n  - laser: $15\\times10^{6}\\times0.36\\ \\mu{\\rm J}=5.4$ W, i.e. ≈17 mW per macro-pixel.",
+   "why": "ToF electronics 57 nJ and laser 358 nJ per point."
+  },
+  {
+   "id": "R2D_C7b-048",
+   "finding": "Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case)",
+   "old": "  - receive: $15\\times10^{6}\\times2.23\\ \\mu{\\rm J}=33.4$ W, i.e. ≈176 mW per channel, ≈44 mW for each of its four receivers (2.23 µJ is the §C7a receiver energy per point, $E_{\\rm rx}$ below);\n  - light: each channel transmits 30 mW continuously, i.e. $0.030/0.15=200$ mW of electrical power at 15% wall-plug efficiency.",
+   "new": "  - receive: $15\\times10^{6}\\times2.34\\ \\mu{\\rm J}=35.1$ W, i.e. ≈185 mW per channel, ≈46 mW for each of its four receivers (2.34 µJ is the §C7a receiver energy per point, $E_{\\rm rx}$ below);\n  - light: each channel transmits 30 mW continuously, round trips included, i.e. $0.030/0.15=200$ mW of electrical power at 15% wall-plug efficiency.",
+   "why": "E_rx with the analog power over the 12.67 us dwell; 35.1 W / 190 = 185 mW."
+  },
+  {
+   "id": "R2D_C7b-049",
+   "finding": "Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case); Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "- **So the per-channel electrical power is ≈376 mW for FMCW against ≈26 mW for ToF, ≈15× more.**",
+   "new": "- **So the per-channel electrical power is ≈385 mW for FMCW (185 + 200 mW) against ≈20 mW for ToF (2.7 + 17 mW), ≈19× more.**",
+   "why": "384.7/19.97 = 19.3."
+  },
+  {
+   "id": "R2D_C7b-050",
+   "finding": "Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case)",
+   "old": "The transmitted power is larger by the dead-time factor, e.g. $190\\times30\\ {\\rm mW}=5.7$ W.",
+   "new": "The power an ungated transmitter emits is larger by the dead-time factor $T_{\\rm dwell}/T_{\\rm int}$, e.g. $190\\times30\\ {\\rm mW}=5.7$ W in the §C7a central case.",
+   "why": "Name the factor and the case."
+  },
+  {
+   "id": "R2D_C7b-051",
+   "finding": "round1_skipped [08_C7b] report #1 (E_rx with T_dwell; search range); Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case); Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "  - The §C7a 2026 central value, at 300 m with the model's 10 µs dwell, is $E_{\\rm rx}=4\\times(12{,}300\\times37\\ {\\rm pJ}+10\\ {\\rm mW}\\times10\\ \\mu{\\rm s})=4\\times(0.46+0.10)\\approx2.23$ µJ per point, for four receivers. In each, the first term is the samples: 12,300 per point at 300 m (Eq. (109)) times ≈37 pJ each, the §C7a figure for an 8-ENOB ADC at 50 fJ per conversion step plus the FFT. The second term is the ≈10 mW per receiver that §C7a assumes for the TIA, bias and drivers, running for the 10 µs dwell.\n  - At 15 Mpts/s that is $15\\times10^{6}\\times2.23\\times10^{-6}=33.4$ W of receiver electronics, about 3.4 times a whole 520-line ToF unit (≈9.7 W at 12.5 Mpts/s in the §C7a model).",
+   "new": "  - The §C7a 2026 central value digitizes the 0–300 m search and keeps the analog front end on for the whole 12.67 µs dwell, round trips included (Eq. (96) with $T_{\\rm dwell}$ from Eq. (107)): $E_{\\rm rx}=4\\times(12{,}265\\times37.3\\ {\\rm pJ}+10\\ {\\rm mW}\\times12.67\\ \\mu{\\rm s})=4\\times(0.457+0.127)\\approx2.34$ µJ per point, for four receivers. In each, the first term is the samples: 12,265 per point (the ≈12,300 of Eq. (109) at $R=300$ m, taken in the two 5 µs useful windows) times ≈37.3 pJ each, the §C7a figure for an 8-ENOB ADC at 50 fJ per conversion step plus the FFT. The second term is the ≈10 mW per receiver that §C7a assumes for the TIA, bias and drivers, running for the whole dwell. A sensor that searched only to 200 m would digitize 8,900 samples per receiver (subsection 2(c)) and need $4\\times(8{,}900\\times37.3\\ {\\rm pJ}+0.127\\ \\mu{\\rm J})=4\\times(0.332+0.127)\\approx1.84$ µJ.\n  - At 15 Mpts/s that is $15\\times10^{6}\\times2.34\\times10^{-6}=35.1$ W of receiver electronics, about 4.3 times a whole 520-line ToF unit ($35.1/8.2=4.3$; ≈8.2 W at 12.5 Mpts/s in the §C7a model: $3\\ {\\rm W}+12.5\\times10^{6}\\ {\\rm s^{-1}}\\times0.415\\ \\mu{\\rm J}$).",
+   "why": "E_rx = 2.337 uJ (model); 35.1 W against 8.19 W."
+  },
+  {
+   "id": "R2D_C7b-052",
+   "finding": "Round 2 decision 5 (single parity definition, section C7b subsection 5); Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case); Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "This subsection asks what FMCW must improve, and by how much, to match ToF's point rate per watt. Three improvements must land together: a cheap, low-power multichannel coherent receiver, more efficient CW lasers and amplifiers, and a lower optical energy per point. With all three, a 15 Mpts/s sensor reaches ≈12 W counting only the useful light, and 14–16 W once the light sent during the round trips is counted (below). Without the efficient laser, or without the lower energy per point, it stays near 19.5 W; without the low-power receiver it stays near 44 W. A receiver at 0.30 µJ per point, 7× better than today's but 3× short of the goal, lands at the 15 W target.",
+   "new": "This subsection asks what FMCW must improve, and by how much, to match ToF's point rate per watt. Three improvements must land together: a cheap, low-power multichannel coherent receiver, more efficient CW lasers and amplifiers, and a lower optical energy per point. With all three, a 15 Mpts/s sensor whose transmitter stays on through the round trips, as in the §C7a model, draws ≈14 W with 15 mW channels, just inside the 15 W target (below); with 30 mW channels it draws 16 W unless the transmitter is gated, which brings it to 12 W. Without the efficient laser, or without the lower energy per point, it stays near 23.5 W; without the low-power receiver it stays near 48 W. A receiver at 0.30 µJ per point, 8× better than today's but 3× short of the goal, gives 17 W. Even at parity FMCW spends 1.8× the electrical energy per point of the 2026 SPAD ToF reference, which needs only 9.2 W at 15 Mpts/s.",
+   "why": "Headline numbers of the ungated parity table and the ToF reference."
+  },
+  {
+   "id": "R2D_C7b-053",
+   "finding": "Round 2 decision 5 (single parity definition, section C7b subsection 5); Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case); Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "**The target.** Parity (§C7a) means ≥15 Mpts/s in ≤15 W at 200 m and 10%. Sensor power is overhead plus point rate times electrical energy per point:\n$$P=P_{\\rm oh}+\\dot N\\left(\\frac{E_{\\rm pt}}{\\eta_{\\rm wp}}+E_{\\rm rx}\\right), \\tag{122}$$\nwhere $P$ is the sensor's electrical power and $P_{\\rm oh}$ the fixed overhead that does not scale with point rate. $\\dot N$ is the point rate, $E_{\\rm pt}$ the optical energy per point, $\\eta_{\\rm wp}$ the laser and amplifier wall-plug efficiency (light out per electrical power in), so $E_{\\rm pt}/\\eta_{\\rm wp}$ is the laser's electrical energy per point. $E_{\\rm rx}$ is the receiver's electrical energy per point (samples, TIA and bias; subsection 3). With $P_{\\rm oh}=3$ W, parity needs\n$$\\frac{E_{\\rm pt}}{\\eta_{\\rm wp}}+E_{\\rm rx}\\le\\frac{15-3\\ {\\rm W}}{15\\times10^{6}\\ {\\rm s^{-1}}}=0.8\\ \\mu{\\rm J}. \\tag{123}$$\nIn words: after the overhead, each point may cost at most 0.8 µJ of electricity, for its light and its receiver together. Eq. (122) is Eq. (118) of subsection 2(h) with the dead-time light left out, no coherent loss ($E'=E_{\\rm pt}$) and the per-channel receiver terms folded into $E_{\\rm rx}$ (Eq. (96)). Subsection 2(h) evaluated Eq. (118) at 10 Mpts/s and 300 m, whereas this subsection evaluates Eq. (122) at 15 Mpts/s and 200 m, so the ≈68 W there and the ≈67 W below are different cases.",
+   "new": "**The target.** Parity, in this report, means ≥15 Mpts/s in ≤15 W at 200 m and 10% (§C7a subsection 5 summarizes the conditions derived here). The 2026 SPAD ToF reference of §C7a, at 0.415 µJ of electrical energy per point, meets it with room to spare: $3\\ {\\rm W}+15\\times10^{6}\\ {\\rm s^{-1}}\\times0.415\\ \\mu{\\rm J}=9.2$ W. Sensor power is overhead plus point rate times electrical energy per point:\n$$P=P_{\\rm oh}+\\dot N\\left(\\frac{E_{\\rm pt}}{\\eta_{\\rm wp}}\\,\\frac{T_{\\rm dwell}}{T_{\\rm int}}+E_{\\rm rx}\\right), \\tag{122}$$\nwhere $P$ is the sensor's electrical power and $P_{\\rm oh}$ the fixed overhead that does not scale with point rate. $\\dot N$ is the point rate, $E_{\\rm pt}$ the optical energy per point and $\\eta_{\\rm wp}$ the laser and amplifier wall-plug efficiency (light out per electrical power in). $T_{\\rm dwell}/T_{\\rm int}=1+2\\tau P_{\\rm ch}/E_{\\rm pt}$ (Eq. (107)) is the factor by which an ungated CW transmitter emits more than the useful energy: $12.67/10=1.27$ at the §C7a dwell, and 1 for a transmitter switched off during the last $\\tau$ of each ramp. The first term in the bracket is therefore the laser's electrical energy per point. $E_{\\rm rx}$ is the receiver's electrical energy per point (samples, TIA and bias over the whole dwell; subsection 3). With $P_{\\rm oh}=3$ W, parity needs\n$$\\frac{E_{\\rm pt}}{\\eta_{\\rm wp}}\\,\\frac{T_{\\rm dwell}}{T_{\\rm int}}+E_{\\rm rx}\\le\\frac{15-3\\ {\\rm W}}{15\\times10^{6}\\ {\\rm s^{-1}}}=0.8\\ \\mu{\\rm J}. \\tag{123}$$\nIn words: after the overhead, each point may cost at most 0.8 µJ of electricity, for its light and its receiver together, i.e. $0.8/0.415=1.9$ times what the ToF reference spends per point. Eq. (122) is Eq. (118) of subsection 2(h) with its useful and dead-time light combined in the factor $T_{\\rm dwell}/T_{\\rm int}$, the per-channel receiver terms folded into $E_{\\rm rx}$ (Eq. (96)) and no coherent loss ($E'=E_{\\rm pt}$), which holds to within 1 dB for a laser of ≲27 kHz at 200 m (≲55 kHz keeps the loss within 3 dB at 300 m; Eq. (115) and its table). Subsection 2(h) evaluated Eq. (118) at 10 Mpts/s and 300 m, whereas this subsection evaluates Eq. (122) at 15 Mpts/s and 200 m, so the ≈68 W there and the ≈76.5 W below are different cases.",
+   "why": "Single parity definition; Eqs. (122)-(123) on the ungated basis (tags kept); ToF reference 9.2 W; linewidth condition from Eq. (115)."
+  },
+  {
+   "id": "R2D_C7b-054",
+   "finding": "Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case)",
+   "old": "and the 2026 central case at 15 Mpts/s rises from ≈67 W to ≈82–104 W, or to ≈170 W. For example, at $\\eta=0.112$ the optical energy is $0.303\\ \\mu{\\rm J}\\times0.25/0.112=0.68$ µJ, and Eq. (122) gives $3+15\\times(0.68/0.15+2.23)=104$ W.",
+   "new": "and the 2026 central case at 15 Mpts/s rises from ≈76.5 W to ≈95–124 W, or to ≈207 W. For example, at $\\eta=0.112$ the optical energy is $0.303\\ \\mu{\\rm J}\\times0.25/0.112=0.68$ µJ, or 0.86 µJ as emitted ($\\times1.267$), and Eq. (122) gives $3+15\\times(0.86/0.15+2.34)=124$ W.",
+   "why": "Measured-efficiency cases on the ungated basis: 95.2 / 123.9 / 206.6 W."
+  },
+  {
+   "id": "R2D_C7b-055",
+   "finding": "round1_skipped [08_C7b] report #29 (2032 row); round1_skipped [08_C7b] report #6; Round 2 decision 5 (single parity definition, section C7b subsection 5); Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case); Round 2 decisions 2-3 (ToF 0.05 x 0.05 deg macro-pixel; n_req 21.7 with the x1.45 margin)",
+   "old": "The table evaluates Eq. (122) for the central, optimistic and parity cases.\n\n| Case | $E_{\\rm pt}$ | $\\eta_{\\rm wp}$ | Laser electrical $E_{\\rm pt}/\\eta_{\\rm wp}$ | $E_{\\rm rx}$ | Total per point | $P$ at 15 Mpts/s |\n|---|---|---|---|---|---|---|\n| 2026 central (§C7a) | 0.30 µJ | 15% | 2.02 µJ | 2.23 µJ | 4.25 µJ | $3+15\\times4.25=67$ W |\n| Better steering only (no other change) | 0.30 µJ | 15% | 2.02 µJ | 2.23 µJ | 4.25 µJ | 67 W |\n| 2032 optimistic (§C7a) | 0.19 µJ | 22% | 0.86 µJ | 0.61 µJ | 1.48 µJ | 25 W |\n| All three win conditions | 0.15 µJ | 30% | 0.50 µJ | 0.10 µJ | 0.60 µJ | **12 W (parity)** |\n| Two of three: $\\eta_{\\rm wp}$ stays at 15% | 0.15 µJ | 15% | 1.0 µJ | 0.10 µJ | 1.1 µJ | 19.5 W |\n| Receiver only partly improved: $E_{\\rm rx}$ at 0.30 µJ | 0.15 µJ | 30% | 0.50 µJ | 0.30 µJ | 0.80 µJ | 15 W (borderline) |\n| Two of three: $E_{\\rm rx}$ stays at today's 2.23 µJ | 0.15 µJ | 30% | 0.50 µJ | 2.23 µJ | 2.73 µJ | 44 W |\n| Two of three: $E_{\\rm pt}$ stays at 0.30 µJ | 0.30 µJ | 30% | 1.0 µJ | 0.10 µJ | 1.1 µJ | 19.5 W |\n\n*Worked row* (\"all three\"): $0.15/0.30=0.50$ µJ; adding 0.10 µJ gives 0.60 µJ; $3\\ {\\rm W}+15\\times10^{6}\\times0.60\\times10^{-6}\\ {\\rm J}=3+9=12$ W. In the first two rows, 0.30 µJ is the §C7a 0.303 µJ rounded, so the laser term is $0.303/0.15=2.02$ µJ and the total $2.02+2.23=4.25$ µJ.\n\n**The round-trip waste tightens this further** [E]. The table counts only the useful energy. A CW laser transmits for the whole dwell $T_{\\rm dwell}$, not just for the useful integration time $T_{\\rm int}=E_{\\rm pt}/P_{\\rm ch}$. The transmitted energy per point is therefore $E_{\\rm pt}\\,T_{\\rm dwell}/T_{\\rm int}$ (subsection 1(e)), with $T_{\\rm dwell}=T_{\\rm int}+2\\tau$ from Eq. (107).\n- **At 30 mW per channel** (\"all three\" case): $T_{\\rm int}=0.15\\ \\mu{\\rm J}/0.03\\ {\\rm W}=5$ µs and $T_{\\rm dwell}=7.67$ µs.\n  - Transmitted energy: $0.15\\times7.67/5=0.23$ µJ.\n  - Total, dividing the light by $\\eta_{\\rm wp}=0.30$ and adding $E_{\\rm rx}$: $0.23/0.30+0.10=0.87$ µJ, i.e. $3+15\\times0.87=16$ W, with 115 channels.\n- **At 15 mW per channel:** $T_{\\rm int}=10$ µs and $T_{\\rm dwell}=12.7$ µs.\n  - Transmitted energy: 0.19 µJ.\n  - Total: $0.19/0.30+0.10=0.73$ µJ, i.e. 14 W, but with $15\\times10^{6}\\times12.7\\times10^{-6}=190$ channels.\n- Parity therefore also forces a choice between wasted light (few bright channels), many dim channels, and a transmitter switched off during the last $\\tau$ of each ramp (subsection 2(i), item 2).\n\n**The per-channel budget at parity** follows from these numbers:\n- 115–190 channels;\n- ≈15–30 mW of optical power each;\n- ≈8–13 mW of receive power each, i.e. ≈2–3 mW for each of its four receivers, including ≈1 GS/s ADCs and FFT. This comes from dividing the receiver power $E_{\\rm rx}\\dot N$ by the channel count $N_{\\rm ch}$, $E_{\\rm rx}\\dot N/N_{\\rm ch}=0.10\\ \\mu{\\rm J}\\times15\\times10^{6}/(115\\ {\\rm to}\\ 190)$, and then by four. Today's §C7a receiver draws ≈44 mW, 13–22× more.",
+   "new": "The table evaluates Eq. (122) for the 2026 SPAD ToF reference and for the central, optimistic and parity FMCW cases. Every FMCW row is ungated at the §C7a dwell, 10 µs of integration plus the 2.67 µs of round trips at 200 m (Eq. (107)): each channel carries $E_{\\rm pt}/10\\ \\mu{\\rm s}$ (30 mW at 0.303 µJ, 15 mW at 0.15 µJ), emits 1.267 times $E_{\\rm pt}$, and 15 Mpts/s needs 190 channels.\n\n| Case | $E_{\\rm pt}$ | Emitted per point | $\\eta_{\\rm wp}$ | Laser electrical | $E_{\\rm rx}$ | Total per point | Total ÷ 0.415 µJ (2026 ToF) | $P$ at 15 Mpts/s |\n|---|---|---|---|---|---|---|---|---|\n| 2026 SPAD ToF reference (§C7a) | 0.0717 µJ | 0.0717 µJ (pulsed) | 20% | 0.358 µJ | 0.057 µJ | 0.415 µJ | 1 | $3+15\\times0.415=9.2$ W |\n| 2026 FMCW central (§C7a) | 0.303 µJ | 0.384 µJ | 15% | 2.563 µJ | 2.337 µJ | 4.900 µJ | 11.8 | $3+15\\times4.900=76.5$ W |\n| Better steering only (no other change) | 0.303 µJ | 0.384 µJ | 15% | 2.563 µJ | 2.337 µJ | 4.900 µJ | 11.8 | 76.5 W |\n| 2032 optimistic (§C7a) | 0.190 µJ | 0.240 µJ | 22% | 1.092 µJ | 0.646 µJ | 1.738 µJ | 4.2 | 29.1 W |\n| All three win conditions | 0.150 µJ | 0.190 µJ | 30% | 0.633 µJ | 0.100 µJ | 0.733 µJ | 1.8 | **14.0 W (parity)** |\n| Two of three: $\\eta_{\\rm wp}$ stays at 15% | 0.150 µJ | 0.190 µJ | 15% | 1.267 µJ | 0.100 µJ | 1.367 µJ | 3.3 | 23.5 W |\n| Receiver only partly improved: $E_{\\rm rx}$ at 0.30 µJ | 0.150 µJ | 0.190 µJ | 30% | 0.633 µJ | 0.300 µJ | 0.933 µJ | 2.2 | 17.0 W |\n| Two of three: $E_{\\rm rx}$ stays at today's 2.337 µJ | 0.150 µJ | 0.190 µJ | 30% | 0.633 µJ | 2.337 µJ | 2.970 µJ | 7.2 | 47.6 W |\n| Two of three: $E_{\\rm pt}$ stays at 0.303 µJ | 0.303 µJ | 0.384 µJ | 30% | 1.281 µJ | 0.100 µJ | 1.381 µJ | 3.3 | 23.7 W |\n\n*How the table is computed* [E], row by row from Eq. (122) with $P_{\\rm oh}=3$ W and $\\dot N=15\\times10^{6}$ s⁻¹:\n- *Worked row* (\"all three\"): at 15 mW per channel the integration takes $T_{\\rm int}=0.15\\ \\mu{\\rm J}/0.015\\ {\\rm W}=10$ µs and the dwell $T_{\\rm dwell}=10+2.67=12.67$ µs, so the channel emits $0.150\\times12.67/10=0.190$ µJ per point. The laser term is $0.190/0.30=0.633$ µJ; adding 0.100 µJ gives 0.733 µJ; $3\\ {\\rm W}+15\\times10^{6}\\times0.733\\times10^{-6}\\ {\\rm J}=3+11.0=14.0$ W.\n- *2026 central:* $0.3034\\times12.67/10=0.3844$ µJ emitted, $0.3844/0.15=2.563$ µJ for the laser and $E_{\\rm rx}=2.337$ µJ (subsection 3), so $2.563+2.337=4.900$ µJ.\n- *2032 optimistic,* with the §C7a 2032 inputs (0.190 µJ, 22%, 10.07 pJ per sample, 3 mW of analog power per receiver): $0.1897\\times12.67/10=0.2403$ µJ emitted, $0.2403/0.22=1.092$ µJ for the laser, and $E_{\\rm rx}=4\\times(12{,}265\\times10.07\\ {\\rm pJ}+3\\ {\\rm mW}\\times12.67\\ \\mu{\\rm s})=4\\times(0.1235+0.0380)=0.646$ µJ. Against §C7a's 2032 ToF (0.280 µJ per point) its ratio is $1.738/0.280=6.2$ rather than 4.2.\n- *ToF reference:* the §C7a central budget, 71.67 nJ of light (the 72 nJ of subsection 1), $71.67/0.20=358$ nJ for the laser and 57 nJ for the SPAD-SoC (§C7a(c)). A pulsed laser emits nothing while it waits for the echo.\n- *Ratio column:* each total divided by the ToF reference's 0.415 µJ, e.g. $0.733/0.415=1.8$.\n\n**Brighter channels need a gated transmitter** [E]. More power per channel at the same 0.15 µJ shortens the dwell and cuts the channel count, but an ungated transmitter then wastes a larger share of its light (Eq. (107)):\n- **At 30 mW per channel:** $T_{\\rm int}=0.15\\ \\mu{\\rm J}/0.03\\ {\\rm W}=5$ µs and $T_{\\rm dwell}=7.67$ µs, so 15 Mpts/s needs only $15\\times10^{6}\\times7.67\\times10^{-6}=115$ channels.\n  - Ungated, each point emits $0.15\\times7.67/5=0.230$ µJ, and the total is $0.230/0.30+0.10=0.867$ µJ, i.e. $3+15\\times0.867=16.0$ W, above the target.\n  - Switched off during the last $\\tau$ of each ramp (subsection 2(i), item 2), the transmitter emits only $E_{\\rm pt}$: $0.15/0.30+0.10=0.60$ µJ, i.e. $3+15\\times0.60=12.0$ W, at any power per channel.\n- **The ungated ceiling:** Eq. (123) with $\\eta_{\\rm wp}=0.30$ and $E_{\\rm rx}=0.10$ µJ allows $T_{\\rm dwell}/T_{\\rm int}\\le(0.8-0.10)\\times0.30/0.15=1.40$, i.e. $2\\tau P_{\\rm ch}/E_{\\rm pt}\\le0.40$, so $P_{\\rm ch}\\le0.40\\times0.15\\ \\mu{\\rm J}/2.67\\ \\mu{\\rm s}=22.5$ mW. Then $T_{\\rm int}=0.15\\ \\mu{\\rm J}/22.5\\ {\\rm mW}=6.67$ µs, and 15 Mpts/s needs $15\\times10^{6}\\times(6.67+2.67)\\times10^{-6}=140$ channels.\n- Parity therefore also forces a choice between many dim channels (140–190 at 15–22.5 mW, ungated) and fewer bright ones behind a transmitter switched off during the last $\\tau$ of each ramp (115 at 30 mW).\n\n**Do the three conditions still reach parity?** Yes, but narrowly [E].\n- Ungated, as in the §C7a model, the \"all three\" case draws 14.0 W at 15 Mpts/s, 1 W inside the target, and only while each channel carries ≤22.5 mW.\n- The receiver condition is the tightest: with the other two met, Eq. (123) leaves $0.8-0.633=0.17$ µJ per point for the receiver, 14× below today's 2.34 µJ.\n- Parity in this sense is not equality with ToF. The parity case still spends $0.733/0.415=1.8$ times the electrical energy per point of the 2026 SPAD ToF reference, which delivers the same 15 Mpts/s in 9.2 W. Matching that reference point for point would need, even with a gated transmitter, $\\eta_{\\rm wp}=0.30$ and a 0.10 µJ receiver, an optical energy of $(0.415-0.10)\\times0.30=0.095$ µJ per point. By Eq. (97) that is a receive efficiency near $0.25\\times0.303/0.095=0.80$, far above the 0.5 that the parity case already assumes.\n\n**The per-channel budget at parity** follows from these numbers:\n- 140–190 channels (560–760 receivers) at ≈15–22.5 mW of optical power each with an ungated transmitter, or 115 channels (460 receivers) at 30 mW with a gated one;\n- ≈8–13 mW of receive power per channel, i.e. ≈2–3 mW for each of its four receivers, including ≈1 GS/s ADCs and FFT. This comes from dividing the receiver power $E_{\\rm rx}\\dot N=0.10\\ \\mu{\\rm J}\\times15\\times10^{6}\\ {\\rm s^{-1}}=1.5$ W by the channel count $N_{\\rm ch}$: 7.9, 10.7 or 13.0 mW for 190, 140 or 115 channels, and 2.0, 2.7 or 3.3 mW per receiver. Today's §C7a receiver draws ≈46 mW ($2.337\\ \\mu{\\rm J}/12.67\\ \\mu{\\rm s}/4$), 14–23× more.",
+   "why": "Parity table recomputed on the ungated basis with the ToF reference row and ratio column; 2032 row 1.092 + 0.646 = 1.738 uJ; brighter channels and gating; plain statement; per-channel budget."
+  },
+  {
+   "id": "R2D_C7b-056",
+   "finding": "round1_skipped [08_C7b] report #6 (channel count)",
+   "old": "with ≥150–256 channels of four LO-matched receivers each, 600–1,000 receivers in all. Each receiver runs at ≈2–3 mW including ADC and FFT (subsection 5), for a few cents of silicon.",
+   "new": "with 115–190 channels of four LO-matched receivers each, 460–760 receivers in all (140–190 channels with an ungated transmitter, 115 with a gated one; subsection 5). Each receiver runs at ≈2–3 mW including ADC and FFT (subsection 5), for a few cents of silicon.",
+   "why": "One channel requirement, from subsection 5."
+  },
+  {
+   "id": "R2D_C7b-057",
+   "finding": "round1_skipped [08_C7b] report #6 (signpost)",
+   "old": "   - Signpost: a published chip with ≥256 receivers at ≤5 mW each. §C10.7's looser signpost, ≥256 channels within ≈10 W, marks the first step.",
+   "new": "   - Signpost: a published chip with ≥256 receivers (64 channels) at ≤5 mW each, a third to a half of the parity count ($64/190=0.34$ to $64/115=0.56$) at about twice the parity power per receiver (5 mW against 2–3 mW). §C10.7's signpost, ≥256 channels within ≈10 W (≈10 mW per receiver if each channel has four: $10\\ {\\rm W}/1{,}024$), asks for more channels at a higher power per receiver.",
+   "why": "State both signposts in the same units as the parity requirement."
+  },
+  {
+   "id": "R2D_C7b-058",
+   "finding": "round1_skipped [08_C7b] report #6 (item 2); Round 2 decision 1 (FMCW dwell T_int + 2 tau, ungated central case)",
+   "old": "for SOAs or lasers delivering $P_{\\rm opt}=E_{\\rm pt}\\dot N\\approx2$–4 W of light across ≥100 channels on SiN or III-V.",
+   "new": "for SOAs or lasers delivering ≈2.3–2.9 W of light across 115–190 channels on SiN or III-V: at the parity point, $E_{\\rm pt}\\dot N=0.15\\ \\mu{\\rm J}\\times15\\times10^{6}\\ {\\rm s^{-1}}=2.25$ W of useful light, and $190\\times15\\ {\\rm mW}=2.85$ W as emitted by an ungated transmitter.",
+   "why": "Light at the parity point, useful and ungated."
+  },
+  {
+   "id": "R2D_C7b-059",
+   "finding": "round1_skipped [08_C7b] report #6 (subsection 7 row)",
+   "old": "| A published coherent receiver chip with ≥256 simultaneous receivers including ADC and FFT at ≤5 mW per receiver |",
+   "new": "| A published coherent receiver chip with ≥256 simultaneous receivers (64 channels) including ADC and FFT at ≤5 mW per receiver |",
+   "why": "Receivers and channels named together."
+  },
+  {
+   "id": "R2D_C7b-060",
+   "finding": "Round 2 decision 5 (single parity definition, section C7b subsection 5)",
+   "old": "| FMCW parity on point rate per watt (as in §C7a) |",
+   "new": "| FMCW parity on point rate per watt (≥15 Mpts/s in ≤15 W at 200 m and 10%, subsection 5) |",
+   "why": "Point to the single parity definition."
+  }
+ ],
+ "skipped": [
+  {
+   "finding": "Round 2 decision 5 (single parity definition, section C7b subsection 5) (target against the ToF reference)",
+   "kind": "needs_decision",
+   "location": "§C7b subsection 5, '**The target.** Parity, in this report, means ≥15 Mpts/s in ≤15 W at 200 m and 10%'",
+   "detail": "The definition is kept as decided. With the ToF reference at 0.415 µJ per point (9.2 W at 15 Mpts/s), the 15 W target allows FMCW 0.8/0.415 = 1.9× ToF's electrical energy per point after the overhead (it was 0.8/0.536 = 1.5×). The edits say so plainly. If parity should instead mean equality with the ToF model, Eq. (123)'s budget becomes 0.415 µJ per point: the three conditions do not reach it (0.733 µJ ungated at 15 mW, 0.60 µJ gated), and matching it would need, with gating, eta_wp 0.30 and a 0.10 µJ receiver, E_pt ≈ 0.095 µJ (receive efficiency ≈0.8). Author to decide whether to keep 15 W."
+  },
+  {
+   "finding": "Round 2 decision 5 (single parity definition, section C7b subsection 5) (probability)",
+   "kind": "needs_decision",
+   "location": "§C7b subsection 7 table, '| FMCW parity on point rate per watt (…) | 2032 | ≈3–7% |'",
+   "detail": "The ≈3–7% (also in §C7a subsection 6) was judged when the parity case had 3 W of margin (12 W). On the ungated basis it has 1 W (14.0 W) and holds only with ≤22.5 mW channels or a gated transmitter. The probability is the author's judgement and is left unchanged; revisit if wanted. If §C7a subsection 6 loses its probability table when it becomes a pointer (decision 5), the subsection 7 heading '(my judgement; the §C7a table stands)' and 'They complement the §C7a probability table and do not replace it' need the matching change."
+  },
+  {
+   "finding": "cross-section quote of §C7b subsection 5 (parity conditions)",
+   "kind": "cross_section",
+   "location": "§0 executive summary, 'Better beam steering would not change this (§C7b).' bullet",
+   "detail": "Old: 'Parity would need three things together: a coherent receiver chip with ≥150 channels of four receivers each, at ≈2–3 mW per receiver, a CW light source with ≥30% wall-plug efficiency at 105 °C, and ≈0.15 µJ of optical energy per point.' New: 'Parity (≥15 Mpts/s in ≤15 W at 200 m and 10%, §C7b subsection 5) would need three things together: a coherent receiver chip with 115–190 channels of four receivers each, at ≈2–3 mW per receiver, a CW light source with ≥30% wall-plug efficiency at 105 °C, and ≈0.15 µJ of optical energy per point. Even then an ungated sensor draws ≈14 W at 15 Mpts/s, 1.8× the electrical energy per point of 2026 SPAD ToF (9.2 W).'"
+  },
+  {
+   "finding": "cross-section quote of the §C7b ratio",
+   "kind": "cross_section",
+   "location": "§C0 Main results, '**Equal apertures, constant gap** (10.5).'",
+   "detail": "Old: 'Against the fixed 25 mm ToF lens of §C7a the factor is 3.1 at 200 m (10.5), the ≈3.2× used in §C7a, §C7b and §C10.' New: 'Against the fixed 25 mm ToF lens of §C7a the factor is 4.1 at 200 m (10.5), the ≈4.2× used in §C7a, §C7b and §C10.' (link_budget ratio 4.08; §C7b Eq. (104) 4.2.)"
+  },
+  {
+   "finding": "cross-section quote of the §C7b ToF energy",
+   "kind": "cross_section",
+   "location": "§C0 subsection 10.6, '**SPAD ToF at 940 nm with a 25 mm lens** needs 96 nJ per point'",
+   "detail": "Old: 'Without the 0.15 dB of clear-air loss this is the ≈93 nJ of §C7b subsection 1.' New: 'Without the 0.15 dB of clear-air loss this is the ≈72 nJ of §C7b subsection 1.' (74.2 nJ x 10^(-0.015) = 71.7 nJ.)"
+  },
+  {
+   "finding": "cross-section quote of §C7b Eq. (98)",
+   "kind": "cross_section",
+   "location": "§C0 subsection 10.3, 'Eq. (98) of §C7b, multiplied by the live fraction'",
+   "detail": "Old: '$b=r_{\\rm bg}\\,\\Delta t_{\\rm bin}\\,N_{\\rm shots}\\,(1-f_{\\rm dead})=3.66\\times10^{8}\\times10^{-9}\\times10\\times0.784=2.87$.' New: '$b=r_{\\rm bg}\\,\\Delta t_{\\rm bin}\\,N_{\\rm shots}\\,(1-f_{\\rm dead})=1.83\\times10^{8}\\times10^{-9}\\times10\\times0.885=1.62$.' (as §C7b subsection 1(a))"
+  },
+  {
+   "finding": "cross-section quote of the §C7b event count",
+   "kind": "cross_section",
+   "location": "§C5a 'What the numbers mean physically', dark-count bullet",
+   "detail": "Old: '(≈5,970 in the central case of §C7b subsection 1, built from the rates of §C6(d))' New: '(≈3,370 in the central case of §C7b subsection 1, built from the rates of §C6(d))' (1.83e8 x 20.8e-6 x 0.885 = 3,370)."
+  },
+  {
+   "finding": "cross-section quote of the §C7b ratio",
+   "kind": "cross_section",
+   "location": "§F6 '**My view.**' paragraph",
+   "detail": "Old: 'at 200 m FMCW needs ≈3.2× more optical energy per point than 940 nm time-of-flight (ToF) lidar' New: 'at 200 m FMCW needs ≈4.2× more optical energy per point than 940 nm time-of-flight (ToF) lidar'"
+  },
+  {
+   "finding": "cross-section quote of the §C7b factor split",
+   "kind": "cross_section",
+   "location": "§C7a subsection 2(a), 'FMCW therefore needs ≈3.2× more optical energy per point than ToF'",
+   "detail": "Proposed, matching Eq. (104): 'FMCW therefore needs ≈4.2× more optical energy per point than ToF (0.30 µJ against 72 nJ). The ≈4.2× ratio splits into four factors:' … 'detection statistics (5.5×), 120 required photoelectrons against 21.7 counts: …' … 'efficiency (0.66×), ToF's 0.164, which includes the SPADs' dead time in bright sun, against FMCW's 0.25.' (collection 1.9× and photon energy 0.61× unchanged)."
+  },
+  {
+   "finding": "cross-section wording, decision 1 (ungated central case)",
+   "kind": "cross_section",
+   "location": "§C4c, '**1,550 nm CW (FMCW) can emit several watts when scanned**' bullet",
+   "detail": "Old: 'but an ungated transmitter, which also emits during the round trips, sends 8.6–9.6 W at 25 Mpts/s and reaches it (§C7a(b); §C7b subsection 2(i)).' New: 'but an ungated transmitter, which also emits during the round trips, sends 8.6–9.6 W at 25 Mpts/s; the §C7a central case, ungated at 30 mW per channel, sends $7.58\\ {\\rm W}\\times12.67/10=9.6$ W and exceeds it (§C7a(b); §C7b subsection 2(i)).' This matches §C7b subsection 2(i), which states that the central case exceeds the allowance."
+  },
+  {
+   "finding": "cross-section, decision 5",
+   "kind": "cross_section",
+   "location": "§C7a subsection 6 table, parity row",
+   "detail": "Old: '| FMCW matching 2026 SPAD ToF on point rate per watt (≥15 Mpts/s in ≤15 W at 200–300 m, 10%) | 2032 | ≈3–7% |' New: '| FMCW matching 2026 SPAD ToF on point rate per watt (≥15 Mpts/s in ≤15 W at 200 m, 10%; §C7b subsection 5) | 2032 | ≈3–7% |'. §C7a subsection 5 should quote the ungated parity case as ≈14 W at 15 mW per channel (16 W at 30 mW unless gated, 12 W gated), 140–190 channels ungated or 115 gated, ≈8–13 mW of receive power per channel."
+  }
+ ]
+}

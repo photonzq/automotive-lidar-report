@@ -1,0 +1,531 @@
+{
+ "block": "11_E9-E12",
+ "edits": [
+  {
+   "id": "11_E9-E12-001",
+   "finding": "report #33",
+   "old": "adds 6.7–13.3 kWh/100 km, a third to two-thirds of the 20 kWh/100 km baseline, so the loss is 6.7 / 26.7 = 25% to 13.3 / 33.3 = 40%.",
+   "new": "adds $x=100\\times2/30\\approx6.7$ to $x=100\\times4/30\\approx13.3$ kWh/100 km (Eq. (163) with $\\Delta P$ = 2 and 4 kW), a third to two-thirds of the 20 kWh/100 km baseline, so the loss is $6.7/26.7\\approx0.25$ (25%) to $13.3/33.3\\approx0.40$ (40%).",
+   "why": "Puts the arithmetic in math and shows the step that gives x."
+  },
+  {
+   "id": "11_E9-E12-002",
+   "finding": "report #20",
+   "old": "- **Power:** their component table reports about **447 W** actual added auxiliary power for the full setup, including about **325 W** for the two computers.",
+   "new": "- **Power:** their component table reports about **447 W** actual added auxiliary power for the full setup, including about **325 W** for the two computers. These loads do not reproduce the two range losses through Eq. (165). If 447 W costs 12.2% of range, Eq. (165) gives $x/e_0=0.122/(1-0.122)\\approx0.139$. Scaling $x$ in proportion to the load, the ≈122 W of sensing and instrumentation alone ($447-325=122$ W) would give $x/e_0\\approx0.139\\times122/447\\approx0.038$, a loss of $0.038/1.038\\approx0.037$ (3.7%), not the reported 5.6%. The two percentages are therefore not consistent with constant loads of the tabulated sizes, and they should not be rescaled to other loads [E].",
+   "why": "Shows, with Eq. (165), that 5.6% and 12.2% are not proportional to the ≈122 W and 447 W loads."
+  },
+  {
+   "id": "11_E9-E12-003",
+   "finding": "report #3; symbol scheme (E_pt)",
+   "old": "Let $E_{\\rm pulse}$ be the optical energy the lidar sends toward one independent point, and $R_{\\max}$ the largest range at which a given target is still detected. If $E_{\\rm pulse}$ falls while aperture, target reflectivity, receiver efficiency, background and detection threshold stay fixed, the simplified extended-target model in §C6 gives $R_{\\max}\\propto\\sqrt{E_{\\rm pulse}}$. The model assumes a target larger than the beam footprint, so the received energy falls as $E_{\\rm pulse}/R^2$ with range $R$, and detection needs a fixed received energy. Halving the pulse energy then shortens reach by a factor $\\sqrt2$.",
+   "new": "Let $E_{\\rm pt}$ be the optical energy the lidar sends toward one measured point (the symbol of §C6), and $R_{\\max}$ the largest range at which a given target is still detected. If $E_{\\rm pt}$ falls while aperture, target reflectivity, receiver efficiency, background and detection threshold stay fixed, the simplified extended-target model of §C6, Eq. (79), gives $R_{\\max}\\propto\\sqrt{E_{\\rm pt}}$. The model assumes a target larger than the beam footprint, so the received energy falls as $E_{\\rm pt}/R^2$ with range $R$, and detection needs a fixed received energy; setting $E_{\\rm pt}/R_{\\max}^2$ equal to a constant gives the square root. Halving $E_{\\rm pt}$ then shortens reach by a factor $\\sqrt2$, to $1/\\sqrt2\\approx0.71$ of its former value.",
+   "why": "Uses E_pt (per point, as in §C6 Eq. (79)) instead of E_pulse, explains 'independent point' and shows the halving step."
+  },
+  {
+   "id": "11_E9-E12-004",
+   "finding": "report #28 (part); consistency flag: 'ADS' has two meanings",
+   "old": "**Huawei ADS 4 \"WEWA\"** ingests lidar, radar and vision [T]",
+   "new": "**Huawei ADS 4 \"WEWA\"** (ADS is Huawei's brand name for its driver-assistance system) ingests lidar, radar and vision [T]",
+   "why": "Expands ADS at its first use in §E10 and marks it as Huawei's brand, not the generic 'automated driving system'."
+  },
+  {
+   "id": "11_E9-E12-005",
+   "finding": "report #40",
+   "old": "Huawei ADS SE (no lidar) vs Pro/Max. BYD God's Eye C vs A/B",
+   "new": "Huawei ADS SE (no lidar) vs Pro/Max (with lidar); BYD God's Eye C (vision-only) vs A (three lidars) and B (one or two) [T; §E1]",
+   "why": "States which tiers carry lidar (from §E1) and adds an evidence tag."
+  },
+  {
+   "id": "11_E9-E12-006",
+   "finding": "report #27",
+   "old": "BEVDepth and BEVDistill (§E3, §E8) [I]",
+   "new": "BEVDepth and BEVDistill [I] (the lidar-teacher method is explained in §E8)",
+   "why": "Neither §E3 nor §E8 names these models; §E8 explains the lidar-teacher method."
+  },
+  {
+   "id": "11_E9-E12-007",
+   "finding": "report #18 (part)",
+   "old": "in 2018 Waymo and Mobileye-based cars also localized against stored maps, and with lidar, landmark matching places a car \"down to the centimeter\" [T, WSJ, 11 Oct 2018]",
+   "new": "in 2018 Waymo's cars and Mobileye-equipped cars also localized against stored maps (Mobileye's map is built from production cars' forward-camera data, §E8); with lidar, matching landmarks to such a map was reported to place a car \"down to the centimeter\" [T, WSJ, 11 Oct 2018]",
+   "why": "Fixes the tense and makes clear that 'with lidar' does not describe Mobileye's camera-built map."
+  },
+  {
+   "id": "11_E9-E12-008",
+   "finding": "consistency flag: spelling",
+   "old": "Naïvely fused networks",
+   "new": "Naively fused networks",
+   "why": "Matches the spelling 'naive' used elsewhere in the block."
+  },
+  {
+   "id": "11_E9-E12-009",
+   "finding": "report §1 Problem 3 (terms defined twice)",
+   "old": "still collapse to about 0 mAP (mean average precision) without lidar",
+   "new": "still collapse to about 0 mAP without lidar",
+   "why": "mAP is already defined in the §E10.2 lead-in."
+  },
+  {
+   "id": "11_E9-E12-010",
+   "finding": "report #24",
+   "old": "move from 128 to 192, then 520, then 896 lines and switch suppliers between model years.",
+   "new": "move from 128 to 192, 520, 896 and, from 2026, 2,160 lines and switch suppliers between model years [P/T; spec sheets in §C3b].",
+   "why": "Uses the same line-count sequence as §E11.2 and adds an evidence tag."
+  },
+  {
+   "id": "11_E9-E12-011",
+   "finding": "consistency flag: §C6(e) pointer",
+   "old": "compression reduce the host's load (§C6(e))",
+   "new": "compression reduce the host's load (§C5a; §C6(e))",
+   "why": "The ≈98% on-chip data reduction is described in §C5a; §C6(e) covers histogram memory."
+  },
+  {
+   "id": "11_E9-E12-012",
+   "finding": "report #29",
+   "old": "- **Planning benchmarks:** NAVSIM shows only 83.8 (camera) vs 84.0 (camera+lidar) PDMS, its 0–100 composite score of a planned trajectory.",
+   "new": "- **Planning benchmarks:** on NAVSIM, a planning benchmark built on logged real driving, an end-to-end planner scores only 83.8 PDMS with cameras alone and 84.0 with cameras and lidar. PDMS (PDM score) is NAVSIM's 0–100 composite score of a planned trajectory's safety, progress and comfort.",
+   "why": "Defines NAVSIM and PDMS at first use in §E10, as §E3 does."
+  },
+  {
+   "id": "11_E9-E12-013",
+   "finding": "report #29",
+   "old": "there is **no public matched ablation** of a production stack",
+   "new": "there is **no public matched ablation** (an experiment that removes one sensor and measures what is lost) of a production stack",
+   "why": "Defines 'ablation' at its first use in §E10."
+  },
+  {
+   "id": "11_E9-E12-014",
+   "finding": "report #26; report §1 Problem 3 (token defined twice)",
+   "old": "1. **Camera-first / end-to-end** (Tesla, Xpeng, Wayve's London fleet): extra modalities complicate training and arbitration; data scale and a uniform fleet matter more; use lidar in training only.\n2. **Fusion-first** (Waymo, Huawei, Li Auto): direct geometry and night performance are worth it; tokenized transformers, which process every sensor as a set of feature vectors (\"tokens\"), make fusion natural; lidar tokens are cheap compared with multi-camera vision backbones.\n3. **Redundancy-first** (Mobileye, NVIDIA's dual stack, Nissan/Wayve): don't put everything into one opaque network; keep an independent geometric channel for the safety case, which ties to the common-cause arithmetic in §E5.",
+   "new": "1. **Camera-first / end-to-end** (Tesla, Xpeng, Wayve's London fleet): this camp argues that extra modalities complicate training and arbitration, that data scale and a uniform fleet matter more, and that lidar belongs in training only.\n2. **Fusion-first** (Waymo, Huawei, Li Auto): this camp holds that direct geometry and night performance are worth the cost, that tokenized transformers (§E10.1) make fusion natural, and that lidar tokens are cheap compared with multi-camera vision backbones.\n3. **Redundancy-first** (Mobileye, NVIDIA's dual stack, Nissan/Wayve): this camp argues that not everything should go into one opaque network, and that an independent geometric channel should be kept for the safety case, which ties to the common-cause arithmetic in §E5.",
+   "why": "Full sentences that attribute each view to its camp; 'token' is defined in §E10.1, not again here."
+  },
+  {
+   "id": "11_E9-E12-015",
+   "finding": "report #36",
+   "old": "Short answers (argued in full in §E11.4):",
+   "new": "Short answers (argued in §E11.1–§E11.3 and drawn together in §E11.4):",
+   "why": "§E11.4 is a summary; the arguments are in §E11.1–§E11.3."
+  },
+  {
+   "id": "11_E9-E12-016",
+   "finding": "report #8 (part)",
+   "old": "*Late fusion* runs a separate *encoder* (the sub-network that turns raw input into features) for each modality and merges their high-level features near the output. *BEV fusion* converts each modality into features on a shared bird's-eye-view (BEV) grid, a top-down map of the ground around the car, and merges them there.",
+   "new": "*Late fusion*, in Huang et al.'s sense (below), runs a separate *encoder* (the sub-network that turns raw input into features) for each modality and merges their high-level features near the output; §E10.1 calls this merging of learned features *mid fusion*. *BEV fusion* converts each modality into features on a shared bird's-eye-view (BEV) grid, a top-down map of the ground around the car, and merges them there; it too merges learned features, so it is mid fusion in §E10.1's terms. Merging the finished object lists of two separate stacks, as an independent safety channel does (§E10.1, role 3), is a different scheme and is not what \"late fusion\" means here.",
+   "why": "Maps the §E11.1 fusion terms onto §E10.1's early/mid scheme and separates them from object-list merging."
+  },
+  {
+   "id": "11_E9-E12-017",
+   "finding": "report #6",
+   "old": "DETR3D (camera-only) and CenterPoint (lidar-only) are single-modality reference detectors.",
+   "new": "DETR3D (camera-only) and CenterPoint (lidar-only) are single-modality reference detectors. Grace-BEV's own retraining of BEVFusion-MIT, used in the next table, scores 66.9 / 69.7 (mAP / NDS) rather than 68.5 / 71.4.",
+   "why": "Explains the two clean scores of BEVFusion-MIT before the reader meets the second table."
+  },
+  {
+   "id": "11_E9-E12-018",
+   "finding": "consistency flag: §E11.1 baselines and sources",
+   "old": "[MetaBEV, ICCV 2023](https://arxiv.org/abs/2304.09801); [Yu et al.,",
+   "new": "[MetaBEV, ICCV 2023](https://arxiv.org/abs/2304.09801); [BEVFusion, Liu et al.](https://arxiv.org/abs/2205.13542); [Yu et al.,",
+   "why": "BEVFusion's Table I is used in §E11.1 but was missing from its source line (link as in the §E11 list)."
+  },
+  {
+   "id": "11_E9-E12-019",
+   "finding": "report #7 (part)",
+   "old": "Fusion4CA's extra camera supervision recovers about +1.2 mAP over the fully trained baseline ($69.7-68.5=1.2$), consistent with a modest but real under-exploitation.",
+   "new": "Fusion4CA's extra camera supervision, trained for 6 epochs (reference table), scores about +1.2 mAP above the BEVFusion-MIT camera + lidar baseline of the same table, which was trained on its full schedule ($69.7-68.5=1.2$). That gain is consistent with a modest but real under-exploitation of the camera.",
+   "why": "Names the baseline and links the 6 epochs to it; the baseline's epoch count is listed in skipped."
+  },
+  {
+   "id": "11_E9-E12-020",
+   "finding": "report #4 (part)",
+   "old": "keep or slightly beat clean accuracy *within Grace-BEV's own retraining* (BEVFusion-MIT baseline 66.9 mAP), while retaining a fallback. Against BEVFusion's published 68.5 mAP, MetaBEV (68.0) and Grace-BEV (68.3) roughly match it.",
+   "new": "keep or beat clean accuracy while retaining a fallback. In Grace-BEV's Table 1, against its retrained BEVFusion-MIT baseline of 66.9 mAP, Grace-BEV scores 68.3 mAP, 1.4 above it ($68.3-66.9=1.4$), and MEFormer 70.5, 3.6 above it ($70.5-66.9=3.6$). MetaBEV's 68.0 is quoted from its own paper, so it is not like-for-like with that baseline. Set against BEVFusion's published 68.5 mAP instead, a cross-source comparison that is only indicative (see the last point of this finding), MetaBEV (68.0) and Grace-BEV (68.3) roughly match it.",
+   "why": "Separates the within-source comparison from the quoted MetaBEV figure, drops 'slightly' for +3.6 and labels the cross-source comparison."
+  },
+  {
+   "id": "11_E9-E12-021",
+   "finding": "report #6",
+   "old": "Different papers retrain the same model to different baselines: Grace-BEV's CenterPoint is 56.3 mAP, against 59.6 in BEVFusion's Table I (§E11.3). Compare rows only within one source.",
+   "new": "Different papers retrain the same model to different baselines. BEVFusion-MIT scores 68.5 mAP in Fusion4CA's Table I and in BEVFusion's own Table I (§E11.3), but 66.9 in Grace-BEV's retraining; CenterPoint scores 59.6 in BEVFusion's Table I but 56.3 in Grace-BEV's. Compare rows only within one source.",
+   "why": "Explains the more visible BEVFusion-MIT discrepancy (68.5 versus 66.9) as well as CenterPoint's."
+  },
+  {
+   "id": "11_E9-E12-022",
+   "finding": "report #39",
+   "old": "Because everything except localization is assumed perfect, $\\bar m$ is an upper bound",
+   "new": "Because everything except localization is assumed perfect, and lidar's centimetre-level localization is taken to match every object ($\\bar m\\approx1$ for lidar), $\\bar m$ is an upper bound",
+   "why": "States the assumption that lets the matched fraction be read as a camera-to-lidar ratio."
+  },
+  {
+   "id": "11_E9-E12-023",
+   "finding": "report §1 Problem 3 (terms defined twice)",
+   "old": "peaks in the **lidar** bird's-eye-view (BEV) heatmap",
+   "new": "peaks in the **lidar** BEV heatmap",
+   "why": "BEV is already defined in §E11.1's 'Terms used below'."
+  },
+  {
+   "id": "11_E9-E12-024",
+   "finding": "report #37",
+   "old": "close to what the front third of objects alone would give (±60° is 120° of 360°).\n- Across the 240° seen only by cameras it therefore detected essentially nothing.",
+   "new": "close to what the front third of objects alone would give (±60° is 120° of 360°). If objects were spread evenly in azimuth and those in the front third were detected at clean accuracy, the score would be about $66.9\\times120/360\\approx22.3$ mAP.\n- The observed 20.2 mAP falls slightly short of that, so across the 240° seen only by cameras the model detected essentially nothing.",
+   "why": "Adds the step (22.3 mAP expected from the front third) that supports 'essentially nothing'."
+  },
+  {
+   "id": "11_E9-E12-025",
+   "finding": "report #23",
+   "old": "Waymo's scaling study used **500,000 hours** of multimodal driving (§E8), so the leaders drive lidar-equipped fleets for $10^5$–$10^6$+ hours. Fleet size is probably not the binding constraint for them.\n- **But fleet hours are not a retained paired corpus.** Waymo's study trained motion-forecasting and planning models (which predict how other road users will move and choose the car's own path) on encoded scene representations, compact summaries of each scene produced by earlier networks, not raw paired sensor streams (§E8).",
+   "new": "Waymo's scaling study used **500,000 hours** of Waymo's own driving data, logged by its lidar-equipped fleet (§E1) [P, Baniodeh et al., 2025; §E8]. The leaders' lidar-equipped fleets therefore log $10^5$–$10^6$+ hours [E], and fleet size is probably not the binding constraint for them.\n- **But fleet hours are not a retained paired corpus.** Waymo's study trained motion-forecasting and planning models (which predict how other road users will move and choose the car's own path) on encoded scene representations, compact summaries of each scene produced by earlier networks, not raw paired sensor streams [P, Baniodeh et al., 2025].",
+   "why": "Drops the unsupported 'multimodal', tags the inference [E] and cites the paper directly for what §E8 does not say."
+  },
+  {
+   "id": "11_E9-E12-026",
+   "finding": "report #24",
+   "old": "moved from 128 to 192, 520, 896 and then 2,160 within a few model years, often with supplier changes (§E10.2).",
+   "new": "moved from 128 to 192, 520, 896 and, from 2026, 2,160 within a few model years, often with supplier changes (§E10.2) [P/T; spec sheets in §C3b].",
+   "why": "Same sequence and evidence tag as §E10.2."
+  },
+  {
+   "id": "11_E9-E12-027",
+   "finding": "report #17",
+   "old": "and lidar tokens do not map naturally into a VLM's token space. (A *token* is the unit of input a transformer network processes, such as a patch of an image or a piece of a word; the *token space* is the set of learned representations the pretrained model already understands, and a *tokenizer* is the front end that cuts raw input into tokens.)",
+   "new": "and lidar tokens do not map naturally onto what a pretrained VLM has learned. (A *token* is the unit of input a transformer processes, such as an image patch or a piece of a word (§E10.1). A pretrained VLM has learned what image-patch and word tokens mean, but lidar tokens fall outside that learned vocabulary. A *tokenizer* is the front end that cuts raw input into tokens.)",
+   "why": "Removes the second, conflicting meaning of 'token space' (§E10.1 defines it as the scene's feature vectors)."
+  },
+  {
+   "id": "11_E9-E12-028",
+   "finding": "report #35",
+   "old": "eye-safety discussion in §C4: it is not",
+   "new": "eye-safety discussion in §C4c (subsection 1, IEC 60825-1): it is not",
+   "why": "Eye safety is covered in §C4c subsection 1, not §C4."
+  },
+  {
+   "id": "11_E9-E12-029",
+   "finding": "report #2; symbol scheme (R_grid)",
+   "old": "$$N_{\\rm cell}=\\left(\\frac{2R_{\\max}}{\\Delta_{\\rm cell}}\\right)^{2} \\tag{167}$$\n\n  where $R_{\\max}$ is the perception range (the grid extends $\\pm R_{\\max}$ in each direction) and $\\Delta_{\\rm cell}$ is the side of one cell. At 0.4 m cells, ±50 m is $250^2$ ≈ 62,500 cells and ±200 m is $1000^2 = 10^6$ cells, **16×** more [E].",
+   "new": "$$N_{\\rm cell}=\\left(\\frac{2R_{\\rm grid}}{\\Delta_{\\rm cell}}\\right)^{2} \\tag{167}$$\n\n  where $R_{\\rm grid}$ is the perception range the grid covers (it extends $\\pm R_{\\rm grid}$ in each direction) and $\\Delta_{\\rm cell}$ is the side of one cell. With $\\Delta_{\\rm cell}=0.4$ m, $R_{\\rm grid}=50$ m gives $(2\\times50/0.4)^2=250^2=62{,}500$ cells and $R_{\\rm grid}=200$ m gives $(2\\times200/0.4)^2=1000^2=10^6$ cells, **16×** more ($10^6/62{,}500=16$) [E].",
+   "why": "R_max is the detection range elsewhere; the grid half-width becomes R_grid, with the substitution shown."
+  },
+  {
+   "id": "11_E9-E12-030",
+   "finding": "report #38",
+   "old": "Most of that gain comes from BEVFusion's stronger lidar branch: against BEVFusion's own lidar-only version (64.7 mAP, §E11.1), cameras add only about +3.8 mAP.",
+   "new": "Most of that gain, $64.7-59.6=5.1$ of the 8.9 mAP, comes from BEVFusion's stronger lidar branch; cameras add the remaining ≈3.8 mAP ($68.5-64.7=3.8$). The lidar-only figure of 64.7 mAP is from Fusion4CA's Table I (§E11.1), so this split combines two sources.",
+   "why": "Quantifies 'most' and names the source of the 64.7 mAP lidar-only figure."
+  },
+  {
+   "id": "11_E9-E12-031",
+   "finding": "consistency flag: multi-gigabit claim",
+   "old": "A 2,160-line unit needs a multi-gigabit link, a switch port and matching SoC ingest",
+   "new": "A 2,160-line unit needs a multi-gigabit link in all but its most compact format (only the polar stream at 25 Mpts/s and 4 bytes per return, $25\\times10^{6}\\times4\\times8=0.8$ Gbit/s, would just fit 1000BASE-T1), plus a switch port and matching SoC ingest",
+   "why": "The 0.8 Gbit/s low end of the polar-packet range fits 1000BASE-T1, so 'needs multi-gigabit' needs that qualifier."
+  },
+  {
+   "id": "11_E9-E12-032",
+   "finding": "report #14; symbol scheme (delta-theta)",
+   "old": "The spacing between neighbouring lidar points at range $R$ is $R\\,\\Delta\\theta$, where $\\Delta\\theta$ is the angular step in radians. Beyond about 0.05° at ranges under 150 m, most extra points fall into the same 0.1–0.2 m voxel, because a 0.05° step",
+   "new": "The spacing between neighbouring lidar points at range $R$ is $R\\,\\delta\\theta$, where $\\delta\\theta$ is the angular step in radians. For angular steps finer than about 0.05°, at ranges under 150 m, neighbouring points lie less than 0.13 m apart, so most extra points fall into the same 0.1–0.2 m voxel: a 0.05° step",
+   "why": "'Beyond 0.05°' read as 'coarser'; the meaning is finer steps. Point spacing uses delta-theta."
+  },
+  {
+   "id": "11_E9-E12-033",
+   "finding": "report #3; symbol scheme (E_pt, R_max)",
+   "old": "the received energy falls as $1/R^2$. For a target smaller than the footprint, it intercepts a share of the beam that also falls as $1/R^2$, so the received energy falls as $1/R^4$. The detection range $R$ therefore scales with the optical energy per point $E_{\\rm point}$ as\n\n  $$R\\propto\\sqrt{E_{\\rm point}}\\quad\\text{(beam-filling target)},\\qquad R\\propto E_{\\rm point}^{1/4}\\quad\\text{(target smaller than the footprint)} \\tag{169}$$\n\n  (§C6, §E9). By Eq. (169), for the extended, beam-filling target in clear air, doubling range at a fixed point rate then needs about **4×** the optical energy per point.\n  - For a target smaller than the footprint, doubling needs about 16×.",
+   "new": "the received energy falls as $E_{\\rm pt}/R^2$, where $E_{\\rm pt}$ is the optical energy sent toward one point. For a target smaller than the footprint, it intercepts a share of the beam that also falls as $1/R^2$, so the received energy falls as $E_{\\rm pt}/R^4$. Setting the received energy at the maximum detection range $R_{\\max}$ equal to the fixed threshold gives\n\n  $$R_{\\max}\\propto\\sqrt{E_{\\rm pt}}\\quad\\text{(beam-filling target)},\\qquad R_{\\max}\\propto E_{\\rm pt}^{1/4}\\quad\\text{(target smaller than the footprint)} \\tag{169}$$\n\n  (§C6, §E9). By Eq. (169), for the extended, beam-filling target in clear air, $E_{\\rm pt}\\propto R_{\\max}^2$, so doubling range at a fixed point rate needs about **4×** ($2^2$) the optical energy per point.\n  - For a target smaller than the footprint, $E_{\\rm pt}\\propto R_{\\max}^4$, so doubling needs about 16× ($2^4$).",
+   "why": "Same symbols as §E9 and §C6 (E_pt, R_max), with the threshold step and the 4x and 16x substitutions shown."
+  },
+  {
+   "id": "11_E9-E12-034",
+   "finding": "report #34",
+   "old": "for speed $v$ and latency $t_{\\rm lat}$. At 36 m/s (about 130 km/h), 100 ms of end-to-end latency is 3.6 m.",
+   "new": "for speed $v$ (m/s) and latency $t_{\\rm lat}$ (s). At 36 m/s (about 130 km/h), 100 ms of end-to-end latency is $36\\times0.1=3.6$ m.",
+   "why": "v is in km/h in §E9; units stated here, with the substitution."
+  },
+  {
+   "id": "11_E9-E12-035",
+   "finding": "report #15",
+   "old": "Balanced, reliability-gated training fixes most of it at modest cost.",
+   "new": "Balanced, reliability-gated training removes the collapse at little or no cost in clean accuracy, but the no-lidar fallback (33–41 mAP) stays far below the fused score (68–71 mAP) (§E11.1, findings 2–3).",
+   "why": "Removes the clash with §E11.1 ('only a partial fallback') and the ambiguous 'it'."
+  },
+  {
+   "id": "11_E9-E12-036",
+   "finding": "report #25 (part); report #31; shared input (257 m)",
+   "old": "This section asks whether a heavy truck can drive itself on cameras alone, the approach Tesla has chosen for its Semi. It matters for the lidar market because a working camera-only truck would undercut FMCW lidar (frequency-modulated continuous-wave lidar, which measures each point's range and radial velocity at once) in the application where it is most needed.\n\nHeavy trucks are FMCW's strongest case (§F6): an 80,000 lb (36,300 kg) truck at 105 km/h needs 165–255 m to stop, so it must detect hazards far beyond that distance. Tesla is the one large carmaker entering Class 8 trucking (the heaviest US truck weight class, which includes tractor-trailers) with a **camera-only** stack and explicit self-driving promises. This section sets those promises against what has shipped, reads the NHTSA (US National Highway Traffic Safety Administration) crash evidence on the camera stack, and works out what cameras can and cannot measure at truck-relevant ranges. In short, supervised camera-only assistance (a human driver still monitors and takes over) is plausible, but driverless camera-only trucking faces open problems, above all night reach: an unlit obstacle beyond headlight range is invisible to a camera (subsections 3 and 4).",
+   "new": "This section asks whether a heavy truck can drive itself on cameras alone, the approach Tesla has chosen for its Semi. In short, supervised camera-only assistance (a human driver still monitors and takes over) is plausible, but driverless camera-only trucking faces open problems, above all night reach: an unlit obstacle beyond headlight range is invisible to a camera (§E12.3, §E12.4). The question matters for the lidar market because a working camera-only truck would undercut FMCW lidar (frequency-modulated continuous-wave lidar, which measures each point's range and radial velocity at once) in the application where it is most needed.\n\nHeavy trucks are FMCW's strongest case (§F6): an 80,000 lb (36,300 kg) truck at 105 km/h needs 165–257 m to stop, so it must detect hazards far beyond that distance. Tesla is the one large carmaker entering Class 8 trucking (the heaviest US truck weight class, which includes tractor-trailers) with a **camera-only** stack and explicit self-driving promises. This section sets those promises against what has shipped, reads the NHTSA (US National Highway Traffic Safety Administration) crash evidence on the camera stack, and works out what cameras can and cannot measure at truck-relevant ranges.",
+   "why": "Puts the short answer right after the question, uses E12.x pointers and the 257 m stopping distance."
+  },
+  {
+   "id": "11_E9-E12-037",
+   "finding": "report #31",
+   "old": "### 1. Promises versus delivery",
+   "new": "### E12.1 Promises versus delivery",
+   "why": "Subsection numbering as in §E10 and §E11."
+  },
+  {
+   "id": "11_E9-E12-038",
+   "finding": "report #31",
+   "old": "### 2. What NHTSA's investigation of the camera stack actually found",
+   "new": "### E12.2 What NHTSA's investigation of the camera stack actually found",
+   "why": "Subsection numbering as in §E10 and §E11."
+  },
+  {
+   "id": "11_E9-E12-039",
+   "finding": "report #31",
+   "old": "### 3. Physics: what each sensor delivers at 150–400 m",
+   "new": "### E12.3 Physics: what each sensor delivers at 150–400 m",
+   "why": "Subsection numbering as in §E10 and §E11."
+  },
+  {
+   "id": "11_E9-E12-040",
+   "finding": "report #31",
+   "old": "### 4. Assessment",
+   "new": "### E12.4 Assessment",
+   "why": "Subsection numbering as in §E10 and §E11."
+  },
+  {
+   "id": "11_E9-E12-041",
+   "finding": "report #32 (part)",
+   "old": "[T, Wikipedia; TechCrunch 2017]",
+   "new": "[S, Wikipedia; T, TechCrunch 2017]",
+   "why": "Wikipedia is a secondary source [S] under the legend."
+  },
+  {
+   "id": "11_E9-E12-042",
+   "finding": "report #11 (part); symbol scheme (a_b)",
+   "old": "so the deceleration is $a=0.8g\\approx7.85$ m/s². The stopping distance is the distance covered during the reaction time plus the braking distance:\n\n  $$d_{\\rm stop}=v\\,t_{\\rm r}+\\frac{v^2}{2a} \\tag{170}$$\n\n  where $v$ is the initial speed, $t_{\\rm r}$ the reaction time and $a$ the constant deceleration.",
+   "new": "so the braking deceleration is $a_{\\rm b}=0.8g\\approx7.85$ m/s². The stopping distance is the distance covered during the reaction time plus the braking distance, as in Eq. (162) of §E6 (written there with $d$ for $d_{\\rm stop}$):\n\n  $$d_{\\rm stop}=v\\,t_{\\rm r}+\\frac{v^2}{2a_{\\rm b}} \\tag{170}$$\n\n  where $v$ is the initial speed (m/s), $t_{\\rm r}$ the reaction time (s) and $a_{\\rm b}$ the constant braking deceleration (m/s²).",
+   "why": "Braking deceleration a_b per the scheme, units for v, and a pointer to the same relation in §E6 (merging is Round 3)."
+  },
+  {
+   "id": "11_E9-E12-043",
+   "finding": "report #11; shared input (257 m)",
+   "old": "against the truck's 165–255 m ($165/83\\approx2.0$, $255/83\\approx3.1$)",
+   "new": "against the truck's 165–257 m ($165/83\\approx2.0$, $257/83\\approx3.1$)",
+   "why": "Eq. (170) with 29.2 m/s, 1.5 s and 2.0 m/s² gives 257 m, as in §E6 and §F6."
+  },
+  {
+   "id": "11_E9-E12-044",
+   "finding": "report #11; shared input (257 m); symbol scheme (a_b)",
+   "old": "Its stopping distance $d_{\\rm stop}$ is 165–255 m, from Eq. (170) with a 1.5 s perception–reaction time and an average deceleration of 3.5 m/s² (best case, 165 m) to 2.0 m/s² (worst case, 255 m) (§F6).",
+   "new": "Its stopping distance $d_{\\rm stop}$ is 165–257 m, from Eq. (170) with a perception–reaction time $t_{\\rm r}$ = 1.5 s and an average braking deceleration $a_{\\rm b}$ of 3.5 m/s² (best case, 165 m) to 2.0 m/s² (worst case, 257 m) (§F6).",
+   "why": "257 m worst case and the Eq. (170) symbols."
+  },
+  {
+   "id": "11_E9-E12-045",
+   "finding": "report #31; report #11; report #19; report #13; symbol scheme (t_c, IFOV_st, pitch error)",
+   "old": "*Figure E12.*\n- *Scenario:* truck at 29.2 m/s, stopping distance 165–255 m, stalled 1.8 m-wide car in lane.\n- *(a)* Time available if the hazard is first detected at range $R$, $t_{\\rm avail}=(R-d_{\\rm stop})/v$ (grey band; Eq. (171)), against the time each sensor needs to call \"stationary\" rather than \"moving with traffic\". For a mono camera this uses image expansion alone, i.e. the time to contact $\\tau=\\varphi/\\dot\\varphi$, where $\\varphi$ is the car's angular width in the image and $\\dot\\varphi$ its rate of growth. It assumes 0.3 px edge noise at 36 fps (an optimistic daylight bound; Eq. (176)). The yellow band marks typical high-beam reach at night.\n- *(b)* Absolute range error: mono ground plane $\\delta R\\approx R^2\\delta\\theta/h_{\\rm cam}$ (Eq. (177); $h_{\\rm cam}=2.75$ m camera height, $\\delta\\theta$ the pitch or road-grade error); a 10% size prior (range inferred from an assumed car size known to ±10%); stereo $\\delta R=R^2\\sigma_d\\,{\\rm IFOV}/b_{\\rm st}$ (Eq. (178); $\\sigma_d$ disparity noise, $b_{\\rm st}$ baseline); lidar ≈5 cm.",
+   "new": "*Figure E12.1.*\n- *Scenario:* truck at 29.2 m/s, stopping distance 165–257 m, stalled 1.8 m-wide car in lane.\n- *(a)* Time available if the hazard is first detected at range $R$, $t_{\\rm avail}=(R-d_{\\rm stop})/v$ (grey band; Eq. (171)), against the time each sensor needs to call \"stationary\" rather than \"moving with traffic\". For a mono camera this uses image expansion alone, i.e. the time to contact $t_{\\rm c}=\\varphi/\\dot\\varphi$, where $\\varphi$ is the car's angular width in the image and $\\dot\\varphi$ its rate of growth. It assumes 0.3 px edge noise at 36 fps (an optimistic daylight bound; Eq. (176)). The yellow band marks typical high-beam reach at night.\n- *(b)* Absolute range error: mono ground plane $\\delta R\\approx R^2\\delta\\alpha/h_{\\rm cam}$ (Eq. (177); $h_{\\rm cam}=2.75$ m camera height, $\\delta\\alpha$ the pitch or road-grade error); a 10% size prior ($\\delta R=0.1R$, range inferred from an assumed car size known to ±10%); stereo $\\delta R=R^2\\sigma_d\\,{\\rm IFOV}_{\\rm st}/b_{\\rm st}$ (Eq. (178); $\\sigma_d$ disparity noise, ${\\rm IFOV}_{\\rm st}$ the stereo pixel angle, $b_{\\rm st}$ baseline); lidar ≈5 cm.",
+   "why": "Figure label E12.1; 257 m; t_c for time to contact; delta-alpha for the pitch error (delta-theta is point spacing); IFOV_st; size-prior formula."
+  },
+  {
+   "id": "11_E9-E12-046",
+   "finding": "shared input (257 m)",
+   "old": "| **1.5 to 4.6 s** | 5.0 to 8.1 s |",
+   "new": "| **1.5 to 4.6 s** | 4.9 to 8.1 s |",
+   "why": "With 257 m, Eq. (171) at 400 m worst case gives (400−257)/29.2 ≈ 4.9 s."
+  },
+  {
+   "id": "11_E9-E12-047",
+   "finding": "report #13",
+   "old": "| Mono camera: absolute range error (0.5–2 mrad pitch or road grade) | ±11–45 m | **±16–65 m** | ±29–116 m |",
+   "new": "| Mono camera: absolute range error (0.5–2 mrad pitch or road grade) | ±11–45 m | **±16–65 m** | ±29–116 m |\n| Mono camera: absolute range error (10% size prior) | ±25 m | ±30 m | ±40 m |",
+   "why": "The size-prior curve of Figure E12.1(b) had no table row (0.1R from the companion tables)."
+  },
+  {
+   "id": "11_E9-E12-048",
+   "finding": "shared input (257 m)",
+   "old": "$(300-255)/29.2\\approx1.5$",
+   "new": "$(300-257)/29.2\\approx1.5$",
+   "why": "Worst-case stopping distance 257 m."
+  },
+  {
+   "id": "11_E9-E12-049",
+   "finding": "symbol scheme (t_c)",
+   "old": "\\tau=\\frac{w}{\\dot w}=\\frac{R}{v_{\\rm c}} \\tag{173}$$\n\nwhere $\\tau$ is the time to contact",
+   "new": "t_{\\rm c}=\\frac{w}{\\dot w}=\\frac{R}{v_{\\rm c}} \\tag{173}$$\n\nwhere $t_{\\rm c}$ is the time to contact",
+   "why": "Time to contact is t_c in §E12."
+  },
+  {
+   "id": "11_E9-E12-050",
+   "finding": "report #12; report #21; report #13; symbol scheme (delta-theta is point spacing)",
+   "old": "*depression angle* $h_{\\rm cam}/R$ (small-angle approximation). An error $\\delta\\theta$ in the assumed camera pitch or road grade (the slope of the road) then shifts the inferred range by\n\n$$\\delta R\\approx\\frac{R^{2}\\,\\delta\\theta}{h_{\\rm cam}} \\tag{177}$$\n\nwith $h_{\\rm cam}=2.75$ m and $\\delta\\theta$ = 0.5–2 mrad. At 300 m, $300^2\\times0.5\\times10^{-3}/2.75\\approx16$ m and $300^2\\times2\\times10^{-3}/2.75\\approx65$ m. This linearized error is symmetric; for the largest case, 2 mrad at 400 m, the exact ground-plane error is about +164 m / −90 m, because 2 mrad is not small against the $2.75/400\\approx6.9$ mrad depression angle.",
+   "new": "*depression angle* $\\alpha\\approx h_{\\rm cam}/R$ (small-angle approximation). An error $\\delta\\alpha$ in that angle, caused by an error in the assumed camera pitch or road grade (the slope of the road), then shifts the inferred range by\n\n$$\\delta R\\approx\\frac{R^{2}\\,\\delta\\alpha}{h_{\\rm cam}} \\tag{177}$$\n\nwith $h_{\\rm cam}=2.75$ m and $\\delta\\alpha$ = 0.5–2 mrad [E]. This range of $\\delta\\alpha$ is a residual error: it assumes that pitch and grade are estimated online to that accuracy. An uncompensated pitch or grade change of 0.1–0.5° (1.7–8.7 mrad, §E2) would give errors up to about 4× those of the 2 mrad case ($8.7/2\\approx4.4$). Eq. (177) is Eq. (153) of §E2 with $R$ for $Z$, $h_{\\rm cam}$ for $h$ and $\\delta\\alpha$ for $\\delta\\theta$. At 300 m, $300^2\\times0.5\\times10^{-3}/2.75\\approx16$ m and $300^2\\times2\\times10^{-3}/2.75\\approx65$ m. This linearized error is symmetric; for the largest case, 2 mrad at 400 m, the exact ground-plane error is about +164 m / −90 m, because 2 mrad is not small against the $2.75/400\\approx6.9$ mrad depression angle.\n\n*Size prior.* A single camera can also infer range from the car's apparent width. The car subtends $\\varphi=W/R$, so $R=W/\\varphi$, and if $W$ is known only to ±10% the inferred range carries the same fractional error, $\\delta R/R=\\delta W/W=0.1$. That gives ±25 m at 250 m, ±30 m at 300 m and ±40 m at 400 m (Figure E12.1(b)), comparable to the ground-plane error of Eq. (177). The error in measuring $\\varphi$ itself is neglected: at 300 m, 0.3 px of edge noise on a 13–24 px image is about 1–2% per frame.",
+   "why": "Pitch error becomes delta-alpha (delta-theta is the point spacing); justifies 0.5–2 mrad against §E2's 0.1–0.5°; cross-references Eq. (153); derives the size-prior curve."
+  },
+  {
+   "id": "11_E9-E12-051",
+   "finding": "report #19; report #21; report #30; consistency flag: mono and stereo assumptions",
+   "old": "each of angle IFOV, gives\n\n$$\\delta R=\\frac{R^{2}\\,\\sigma_d\\,{\\rm IFOV}}{b_{\\rm st}} \\tag{178}$$\n\nwith a 0.1 mrad telephoto pixel (the script's assumption), $\\sigma_d=0.2$ px and $b_{\\rm st}=1.5$ m; at 300 m, $300^2\\times0.2\\times10^{-4}/1.5=1.2$ m. Both Eq. (177) and Eq. (178) grow as $R^2$, because a fixed angular error produces a range error that grows with the square of distance. Stereo does far better only because its angular error, $\\sigma_d\\,{\\rm IFOV}$, is much smaller than the mono camera's pitch uncertainty $\\delta\\theta$.",
+   "new": "each of angle ${\\rm IFOV}_{\\rm st}$, gives\n\n$$\\delta R=\\frac{R^{2}\\,\\sigma_d\\,{\\rm IFOV}_{\\rm st}}{b_{\\rm st}} \\tag{178}$$\n\nwith ${\\rm IFOV}_{\\rm st}=0.1$ mrad for the telephoto stereo pixel (the script's assumption, finer than the mono camera's 0.25–0.45 mrad), $\\sigma_d=0.2$ px and $b_{\\rm st}=1.5$ m; at 300 m, $300^2\\times0.2\\times10^{-4}/1.5=1.2$ m. Eq. (178) is Eq. (150) of §E2 with $R$ for $Z$, $\\delta R$ for $\\sigma_Z$, $f=1/{\\rm IFOV}_{\\rm st}$ pixels per radian and $b=b_{\\rm st}$; §E2's wide-baseline case (1.2 m, 140 µrad pixels, 0.25 px) gives 4.7 m at 400 m, against 2.1 m with the inputs here. With the mono camera's 0.25–0.45 mrad pixels instead, the stereo error at 300 m would be $300^2\\times0.2\\times0.25\\times10^{-3}/1.5=3.0$ m to $300^2\\times0.2\\times0.45\\times10^{-3}/1.5=5.4$ m, still well below the ground-plane error. Both Eq. (177) and Eq. (178) grow as $R^2$ because each reads range from an angle that shrinks as $1/R$: the depression angle $\\alpha\\approx h_{\\rm cam}/R$ for the mono camera, and the disparity angle $b_{\\rm st}/R$ for stereo. Differentiating $\\alpha=h_{\\rm cam}/R$ gives $|\\delta R|=R^2\\,\\delta\\alpha/h_{\\rm cam}$, and the same step for stereo gives $R^2/b_{\\rm st}$ times the disparity-angle error. Stereo does far better only because its angular error, $\\sigma_d\\,{\\rm IFOV}_{\\rm st}=0.2\\times0.1=0.02$ mrad, is much smaller than the mono camera's pitch or grade error $\\delta\\alpha$ of 0.5–2 mrad.",
+   "why": "IFOV_st separates the stereo pixel from the mono pixel; cross-reference to Eq. (150) and §E2's inputs; non-circular reason for the R^2 growth."
+  },
+  {
+   "id": "11_E9-E12-052",
+   "finding": "symbol scheme (delta-theta)",
+   "old": "A lidar with angular step $\\theta_{\\rm step}$ (in radians) in both directions places points $R\\,\\theta_{\\rm step}$ apart at range $R$, so the number of points on a $W\\times H$ car is\n\n$$N_{\\rm pts}=\\frac{W}{R\\,\\theta_{\\rm step}}\\times\\frac{H}{R\\,\\theta_{\\rm step}} \\tag{179}$$",
+   "new": "A lidar with angular step $\\delta\\theta$ (in radians) in both directions places points $R\\,\\delta\\theta$ apart at range $R$, so the number of points on a $W\\times H$ car is\n\n$$N_{\\rm pts}=\\frac{W}{R\\,\\delta\\theta}\\times\\frac{H}{R\\,\\delta\\theta} \\tag{179}$$",
+   "why": "Angular spacing of points is delta-theta in the report-wide scheme."
+  },
+  {
+   "id": "11_E9-E12-053",
+   "finding": "symbol scheme (delta-theta)",
+   "old": "as $(s/R\\theta_{\\rm step})^2$: at most $(0.30/0.35)^2\\approx0.7$ on the 0.1° grid at 200 m (where the point spacing is $R\\theta_{\\rm step}\\approx0.35$ m)",
+   "new": "as $(s/R\\,\\delta\\theta)^2$: at most $(0.30/0.35)^2\\approx0.7$ on the 0.1° grid at 200 m (where the point spacing is $R\\,\\delta\\theta\\approx0.35$ m)",
+   "why": "Angular spacing of points is delta-theta."
+  },
+  {
+   "id": "11_E9-E12-054",
+   "finding": "report #9; shared input (257 m)",
+   "old": "Low beams reach the road at ≈50–100 m and high beams at ≈150–250 m (§A6).",
+   "new": "Low beams reach the road at ≈50–100 m and high beams at ≈150–250 m (§A6). If an unlit hazard is first seen only when it enters high-beam reach, Eq. (171) leaves between $t_{\\rm avail}=(150-257)/29.2\\approx-3.7$ s (at 150 m, worst case) and $(250-165)/29.2\\approx2.9$ s (at 250 m, best case). At 150 m the truck cannot stop even in the best case ($(150-165)/29.2\\approx-0.5$ s), and at 250 m it cannot stop in the worst case ($(250-257)/29.2\\approx-0.2$ s), even before any time is spent on the stationary-versus-moving call (0.45–0.66 s at 250 m in daylight, table above).",
+   "why": "Ties the night verdict to Eq. (171) at the high-beam limit."
+  },
+  {
+   "id": "11_E9-E12-055",
+   "finding": "report #22; consistency flag: HD radar",
+   "old": "The credible camera-first path for trucks would add wide-baseline stereo for range and radar or thermal (infrared) cameras for night and weather. Tesla's cars already carry an unused HD radar (a high-resolution imaging radar) on S/X (§E1).",
+   "new": "The credible camera-first path for trucks would add wide-baseline stereo for daytime range and, for night and weather, thermal (infrared) cameras or an imaging radar whose cross-range cell at 300 m is narrower than the lane, which needs a beam below ≈0.7° ($3.7/300\\approx0.012$ rad; point 4 of §E12.3). Tesla's Model S/X already carry an HD radar (a high-resolution imaging radar) that is reportedly unused (§E1, §E2) [I/T].",
+   "why": "Stereo shares the night limit and a 1° radar cannot place a static return in-lane at 300 m; 'unused' hedged as in §E2."
+  },
+  {
+   "id": "11_E9-E12-056",
+   "finding": "report #32 (part)",
+   "old": "Sources: https://static.nhtsa.gov/odi/inv/2026/INOA-EA26002-10023.pdf ; https://static.nhtsa.gov/odi/ffdd/sgo-2021-01/SGO-2021-01_Incident_Reports_ADAS.csv ; https://static.nhtsa.gov/odi/ffdd/sgo-2021-01/Archive-2021-2025/SGO-2021-01_Incident_Reports_ADAS.csv ; https://electrek.co/2026/03/19/nhtsa-upgrades-tesla-fsd-visibility-investigation-3-2-million-vehicles/ ; https://electrek.co/2026/09/25/tesla-semi-volume-production-launch-nevada-factory/ ; https://www.electrive.com/2026/09/25/tesla-begins-series-deliveries-of-the-semi/ ; https://electrek.co/2026/07/27/musk-tesla-semi-self-driving-year-truckers-jobs-safe/ ; https://thedriven.io/2026/07/25/tesla-to-have-fsd-working-in-semi-electric-trucks-by-early-next-year-says-musk/ ; https://www.notateslaapp.com/news/4485/tesla-confirms-fsd-is-coming-to-the-tesla-semi ; https://en.wikipedia.org/wiki/Tesla_Semi ; https://techcrunch.com/2017/11/16/tesla-semi-has-the-technical-capability-to-convoy-today/ ; https://electrek.co/2022/12/03/tesla-semi-no-word-equipped-autopilot-full-self-driving/ ; https://teslahubs.com/blogs/tips/first-look-inside-the-new-tesla-semi-10-cameras-new-window-design-and-other-changes-video ; https://www.shop4tesla.com/en/blogs/news/tesla-hw4-neue-kameras-neue-kameraplatze-und-verbesserte-rechenleistung ; https://www.truckinginfo.com/articles/tesla-wants-a-self-driving-semi-are-cameras-enough ; https://www.businesswire.com/news/home/20260115818618/en/NODAR-Launches-Software-Only-Products-Bringing-Long-Range-3D-Perception-to-Any-Camera-Platform ; https://www.therobotreport.com/clarity-perception-platform-autonomous-vehicles-light-launches/",
+   "new": "Sources: [NHTSA ODI resume, EA26002](https://static.nhtsa.gov/odi/inv/2026/INOA-EA26002-10023.pdf); [NHTSA SGO ADAS incident reports, current file](https://static.nhtsa.gov/odi/ffdd/sgo-2021-01/SGO-2021-01_Incident_Reports_ADAS.csv); [NHTSA SGO ADAS incident reports, 2021–25 archive](https://static.nhtsa.gov/odi/ffdd/sgo-2021-01/Archive-2021-2025/SGO-2021-01_Incident_Reports_ADAS.csv); [Electrek, EA26002 upgrade, 19 Mar 2026](https://electrek.co/2026/03/19/nhtsa-upgrades-tesla-fsd-visibility-investigation-3-2-million-vehicles/); [Electrek, Semi volume-production launch, 25 Sep 2026](https://electrek.co/2026/09/25/tesla-semi-volume-production-launch-nevada-factory/); [electrive, Semi series deliveries, 25 Sep 2026](https://www.electrive.com/2026/09/25/tesla-begins-series-deliveries-of-the-semi/); [Electrek, Semi self-driving timeline, 27 Jul 2026](https://electrek.co/2026/07/27/musk-tesla-semi-self-driving-year-truckers-jobs-safe/); [The Driven, FSD on the Semi, 25 Jul 2026](https://thedriven.io/2026/07/25/tesla-to-have-fsd-working-in-semi-electric-trucks-by-early-next-year-says-musk/); [Not a Tesla App, FSD coming to the Semi](https://www.notateslaapp.com/news/4485/tesla-confirms-fsd-is-coming-to-the-tesla-semi); [Wikipedia, Tesla Semi](https://en.wikipedia.org/wiki/Tesla_Semi); [TechCrunch, Semi convoy capability, 16 Nov 2017](https://techcrunch.com/2017/11/16/tesla-semi-has-the-technical-capability-to-convoy-today/); [Electrek, Semi pilot deliveries, 3 Dec 2022](https://electrek.co/2022/12/03/tesla-semi-no-word-equipped-autopilot-full-self-driving/); [TeslaHubs, redesigned Semi's cameras](https://teslahubs.com/blogs/tips/first-look-inside-the-new-tesla-semi-10-cameras-new-window-design-and-other-changes-video); [shop4tesla, HW4 cameras](https://www.shop4tesla.com/en/blogs/news/tesla-hw4-neue-kameras-neue-kameraplatze-und-verbesserte-rechenleistung); [HDT/Trucking Info, cameras for a self-driving Semi](https://www.truckinginfo.com/articles/tesla-wants-a-self-driving-semi-are-cameras-enough); [NODAR press release, Business Wire, 15 Jan 2026](https://www.businesswire.com/news/home/20260115818618/en/NODAR-Launches-Software-Only-Products-Bringing-Long-Range-3D-Perception-to-Any-Camera-Platform); [The Robot Report, Light's Clarity launch](https://www.therobotreport.com/clarity-perception-platform-autonomous-vehicles-light-launches/).",
+   "why": "Named links, as in §E9 and §E11, instead of bare URLs."
+  }
+ ],
+ "skipped": [
+  {
+   "finding": "report #1",
+   "kind": "already_fixed",
+   "location": "§E11.1, 'Why the asymmetry is so large', effect 3: \"which is why the no-lidar score falls to exactly zero\"",
+   "detail": "The live text already reads 'The architectures are built around lidar, which is why the no-lidar score falls to exactly zero.'"
+  },
+  {
+   "finding": "report #5",
+   "kind": "already_fixed",
+   "location": "§E10.2, 'A missing or degraded modality': \"MetaBEV (ICCV 2023), a fusion detector built to tolerate a missing sensor, scores about 42.6 NDS\"",
+   "detail": "The live text already splits the sentence and gives both no-lidar baselines (≈7.1 NDS from 42.6 − 35.5, and 0.0 NDS in Grace-BEV's retraining) with tags."
+  },
+  {
+   "finding": "report #4 (part)",
+   "kind": "needs_source",
+   "location": "§E11.1, 'What the tables show', finding 2: \"and MEFormer 70.5, 3.6 above it\"",
+   "detail": "The report does not say whether Grace-BEV retrained MEFormer or quoted its 70.5 / 72.7 from the MEFormer paper (as it does for MetaBEV). Needs Grace-BEV (arXiv 2605.30983), Table 1 notes. If quoted, add after the MEFormer figure: 'quoted, like MetaBEV's, from its own paper'; if retrained, add 'retrained by Grace-BEV'."
+  },
+  {
+   "finding": "report #7 (part)",
+   "kind": "needs_source",
+   "location": "§E11.1, finding 1: \"above the BEVFusion-MIT camera + lidar baseline of the same table, which was trained on its full schedule\"",
+   "detail": "The training schedule (epochs) of the BEVFusion-MIT baseline in Fusion4CA's Table I is not in the report (Fusion4CA itself: 6 epochs), so the text cannot say whether the +1.2 mAP compares runs of equal training. Needs Fusion4CA (arXiv 2603.05305), Table I and training setup; then replace 'which was trained on its full schedule' with 'which was trained for N epochs'."
+  },
+  {
+   "finding": "report #8 (part)",
+   "kind": "needs_decision",
+   "location": "§E11.1, 'Terms used below': \"*Late fusion*, in Huang et al.'s sense (below), runs a separate *encoder*\"",
+   "detail": "Whether Huang et al.'s theorem formally covers BEV fusion as used by BEVFusion, or applies to it only by analogy. The report elsewhere treats the camera–lidar results as an empirical check of the effect (§E10.2: 'verified and quantified for camera–lidar detectors in §E11.1'). Once decided, add one sentence after the BEV-fusion definition stating which."
+  },
+  {
+   "finding": "report #10",
+   "kind": "needs_source",
+   "location": "§E12.2, 'Reading the pattern': \"SGO times can also be imprecise: the Rimrock record gives 00:03, while the ODI resume dates the fatal crash to 28 Nov 2023.\"",
+   "detail": "The date that SGO report 13781-8004 gives with its 00:03 time, and what in the ODI resume conflicts with it, are needed to make the imprecision visible; then add 'the time is therefore omitted from the table'. Needs the SGO archive record and the EA26002 resume."
+  },
+  {
+   "finding": "report #11 (part)",
+   "kind": "structural",
+   "location": "§E12.2, Eq. (170): \"$$d_{\\rm stop}=v\\,t_{\\rm r}+\\frac{v^2}{2a_{\\rm b}} \\tag{170}$$\"",
+   "detail": "Merging Eq. (170) with the stopping-distance equation it duplicates (Eq. (162) in §E6, Eq. (184) in §F6; Eq. (11) in §A6 has the same form) is left to Round 3. Round 1 adds a pointer to Eq. (162), uses a_b and 257 m."
+  },
+  {
+   "finding": "report #16",
+   "kind": "needs_source",
+   "location": "§E11.2(b): \"with gaps under about 3% for modest density changes [I, arXiv 2503.15087; figures taken from the paper's summary and not re-read from its tables]\"",
+   "detail": "Whether the 3% is mAP points or per cent of the dense-trained score, and which beam-count change counts as 'modest' (e.g. 128 to 64 beams). Needs the TU Graz paper's tables (arXiv 2503.15087)."
+  },
+  {
+   "finding": "report #18 (part)",
+   "kind": "needs_source",
+   "location": "§E10.1 table, role 5, weaknesses: \"6,000–8,000 of Ushr's ≈200,000 mapped highway miles\"",
+   "detail": "Ushr is not identified anywhere in the report. Once confirmed from the WSJ article (11 Oct 2018) or another source, write 'of the ≈200,000 highway miles mapped by Ushr (the HD-map supplier for GM's Super Cruise)'."
+  },
+  {
+   "finding": "report #20 (part)",
+   "kind": "needs_source",
+   "location": "§E9, 'Measured anchor': \"including about **325 W** for the two computers\"",
+   "detail": "(1) What besides a constant electrical load the paper's range extrapolation contains, which would explain 5.6% and 12.2% (Round 1 adds the Eq. (165) check: ≈3.7% expected for ≈122 W); (2) which two computers make up the 325 W (the reviewer suggests the RTX 3060 machine and the laptop). Needs Brown et al., IEEE ITSC 2023, method section and component table."
+  },
+  {
+   "finding": "report #25 (part)",
+   "kind": "structural",
+   "location": "§E12 lead: \"The companion script is `build/figures/truck_long_range_sensing.py`, which writes the figure below and `truck_long_range_sensing_tables.txt`.\"",
+   "detail": "Moving this sentence from the §E12 lead into the Figure E12.1 caption (in §E12.3) moves text between subsections. Proposed: delete it from the lead; add the caption bullet '- *Script:* `build/figures/truck_long_range_sensing.py`, which also writes `truck_long_range_sensing_tables.txt` [E].'; and in §E12.3 'Scenario and assumptions' write '(all from the companion script `truck_long_range_sensing.py` unless stated; each is an assumption, not a measurement)'."
+  },
+  {
+   "finding": "report #28 (part)",
+   "kind": "needs_source",
+   "location": "§E11.2(c), counter-examples: \"Huawei's \\\"WA\\\" (world–action) route deliberately skips the language layer\"",
+   "detail": "Whether Huawei's 'WA' route is the vehicle-side model of the WEWA architecture named in §E10.1 is not stated in the report. If confirmed, write: 'Huawei's WEWA architecture (§E10.1), whose vehicle-side \"WA\" (world–action) model deliberately skips the language layer and maps multimodal perception directly to actions [T]'. Round 1 expands ADS as Huawei's brand at its first use in §E10.1."
+  },
+  {
+   "finding": "report #32 (part)",
+   "kind": "needs_source",
+   "location": "§E11 source list: \"[Lin et al., ASPLOS 2018](https://dl.acm.org/doi/10.1145/3173162.3173191)\" and \"[Huawei's Jin Yuzhi interview, KrASIA](https://kr-asia.com/nothing-is-free-huaweis-richard-jin-on-assisted-driving-and-the-path-to-level-4-autonomy)\"",
+   "detail": "Neither is cited in the §E11 text. After checking the sources, attach each to the claim it supports (Lin et al. possibly to the compute-power or latency points of §E11.3; the KrASIA interview possibly to Huawei's 'WA' route in §E11.2(c)), or drop them from the list."
+  },
+  {
+   "finding": "consistency flag: 128-line point rate",
+   "kind": "needs_decision",
+   "location": "§E11.3, item 3: \"A 2–3 Mpts/s 128-line unit produces about 0.2–0.4 Gbit/s.\"",
+   "detail": "§C0 and §C3b give the AT128 1.536 Mpts/s (single return); dual return doubles it to ≈3.1 Mpts/s. Decide what '2–3 Mpts/s' means. If the AT128's single-to-dual range is meant, the figures become 1.536e6 × 12 × 8 ≈ 0.15 to 3.07e6 × 16 × 8 ≈ 0.39 Gbit/s decoded, and 1.536e6 × 4 × 8 ≈ 0.05 to 3.07e6 × 6 × 8 ≈ 0.15 Gbit/s as polar packets."
+  },
+  {
+   "finding": "consistency flag: Huawei ADS fleet size",
+   "kind": "needs_source",
+   "location": "§E11.2(a): \"and **1.7 million** ADS vehicles by April 2026\"",
+   "detail": "§E1 gives 'More than 2 M vehicles; 14.5 B km [P]' with no date. Date the §E1 figure or reconcile the two from Huawei's own releases (the §E1 change is outside this block)."
+  },
+  {
+   "finding": "consistency flag: ambiguous parallel",
+   "kind": "needs_source",
+   "location": "§E12.1: \"Light's Clarity (now John Deere) claimed 10 cm to 1 km [T].\"",
+   "detail": "Say whether '10 cm to 1 km' is a depth span or an object size at a range, as NODAR's '10 cm object at 150 m' is. Needs The Robot Report article on Clarity."
+  },
+  {
+   "finding": "report §1 Problem 3; consistency flag: repeated content",
+   "kind": "structural",
+   "location": "§E9 'Power also affects detection range' and §E11.3 item 4 'Sensor power' (Eq. (169)); missing-modality numbers in §E10.2, §E10.3 and §E11.1",
+   "detail": "Keeping one derivation of the detection-range scaling and pointing to it from the other, and trimming the repeated missing-modality numbers, moves material between subsections; left to Round 3. Round 1 aligns the symbols (E_pt, R_max) and removes the duplicate definitions of mAP (§E10.2), BEV (§E11.1) and token (§E10.4, §E11.2)."
+  },
+  {
+   "finding": "report §1 Problem 1 (equations re-derived)",
+   "kind": "structural",
+   "location": "§E12.3, Eq. (177) and Eq. (178)",
+   "detail": "Eq. (177) duplicates §E2 Eq. (153) and Eq. (178) duplicates §E2 Eq. (150); merging them is left to Round 3. Round 1 adds cross-references with the symbol mapping."
+  },
+  {
+   "finding": "report #11; consistency flag: stopping distance",
+   "kind": "cross_section",
+   "location": "build/figures/truck_long_range_sensing.py (companion script of Figure E12.1)",
+   "detail": "The script still uses the 255 m worst case. Replace 'D_STOP = (165.0, 255.0)' with 'D_STOP = (165.0, 257.0)' and, in the docstring, 'stopping distance 165-255 m' with 'stopping distance 165-257 m'; rerun it to regenerate the figure's grey band and truck_long_range_sensing_tables.txt (the 400 m worst case becomes 4.90 s, matching the table's 4.9 s)."
+  },
+  {
+   "finding": "consistency flag: stopping distance",
+   "kind": "cross_section",
+   "location": "§E6 (outside every Round 1 block): trucking row \"Stopping takes about 165–255 m\", derivation item \"*Truck (165–255 m).*\", and Eq. (162) \"$$d=v\\,t_{\\rm r}+\\frac{v^2}{2a} \\tag{162}$$\"",
+   "detail": "§E6 derives 257 m but quotes 165–255 m. Replace 'Stopping takes about 165–255 m' with 'Stopping takes about 165–257 m' and '*Truck (165–255 m).*' with '*Truck (165–257 m).*'. Under the symbol scheme, Eq. (162) and its text use a_b for a ('$$d=v\\,t_{\\rm r}+\\frac{v^2}{2a_{\\rm b}} \\tag{162}$$', 'brakes at constant deceleration $a_{\\rm b}$ (m/s²)'); Eq. (170) points to Eq. (162)."
+  },
+  {
+   "finding": "consistency flag: stopping distance (rounding)",
+   "kind": "needs_decision",
+   "location": "§E12.3 'Scenario and assumptions': \"3.5 m/s² (best case, 165 m) to 2.0 m/s² (worst case, 257 m)\"",
+   "detail": "With v = 29.2 m/s, t_r = 1.5 s and a_b = 3.5 m/s², Eq. (170) gives 43.8 + 121.8 = 165.6 ≈ 166 m, not 165 m; 165 m follows from v = 105/3.6 = 29.17 m/s, which in turn gives 256.4 m rather than 257 m. §F6's text after Eq. (184) prints '≈44+122=165'. Decide whether to keep 165 m (the pair then mixes two roundings of v) or use 166 m report-wide; the 400 m best-case time would then be (400−166)/29.2 ≈ 8.0 s instead of 8.1 s."
+  },
+  {
+   "finding": "symbol scheme (delta-theta)",
+   "kind": "cross_section",
+   "location": "§E2 Eq. (153): \"$$Z=\\frac{h}{\\tan\\theta},\\qquad \\frac{\\partial Z}{\\partial\\theta}\\approx-\\frac{Z^2}{h},\\qquad \\lvert\\delta Z\\rvert\\approx\\frac{Z^2}{h}\\,\\delta\\theta \\tag{153}$$\"",
+   "detail": "§E12 writes the depression angle as alpha and its pitch/grade error as delta-alpha, because delta-theta is reserved for point spacing. For consistency §E2 could use the same symbols: '$$Z=\\frac{h}{\\tan\\alpha},\\qquad \\frac{\\partial Z}{\\partial\\alpha}\\approx-\\frac{Z^2}{h},\\qquad \\lvert\\delta Z\\rvert\\approx\\frac{Z^2}{h}\\,\\delta\\alpha \\tag{153}$$', with 'an angle $\\alpha$ below the horizon' and '$\\delta\\alpha$ (rad) is an error in the assumed camera pitch' in its text. If so, the §E12 cross-reference after Eq. (177) drops 'and $\\delta\\alpha$ for $\\delta\\theta$'."
+  }
+ ]
+}

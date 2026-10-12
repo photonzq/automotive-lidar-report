@@ -1,0 +1,90 @@
+{
+ "block": "R2E2_C10_dwell",
+ "edits": [
+  {
+   "id": "R2E2_C10_dwell-001",
+   "finding": "decision 1 (FMCW dwell T_int + 2 tau, §C7b Eq. (107)): §C10.2 item 7, single-beam point rate",
+   "old": "**7. Point rate.** A single-beam FMCW OPA is limited to about $1/T_{\\rm dwell}$, where the dwell time $T_{\\rm dwell}$ is how long the beam stays on one point: **0.1–0.5 Mpts/s** at 2–10 µs dwell ($1/10\\ \\mu{\\rm s}=0.1$ Mpts/s, $1/2\\ \\mu{\\rm s}=0.5$ Mpts/s).",
+   "new": "**7. Point rate.** A single-beam FMCW OPA is limited to about $1/T_{\\rm dwell}$, where the dwell $T_{\\rm dwell}=T_{\\rm int}+2\\tau$ is how long the beam stays on one point (§C7b, Eq. (107)): the integration time $T_{\\rm int}$, the useful windows of an up- and a down-ramp, plus the round trip $\\tau=2R/c$ that opens each ramp before the echo arrives, $2\\tau=2\\times2\\times200\\ {\\rm m}/(3\\times10^{8}\\ {\\rm m\\,s^{-1}})=2.67$ µs at 200 m. At 2–10 µs of integration that is **0.079–0.21 Mpts/s** ($1/(10+2.67)\\ \\mu{\\rm s}=1/12.67\\ \\mu{\\rm s}=0.079$ Mpts/s and $1/(2+2.67)\\ \\mu{\\rm s}=1/4.67\\ \\mu{\\rm s}=0.21$ Mpts/s).",
+   "why": "Dwell = chirp + 2 tau; point rate 0.079-0.21 Mpts/s."
+  },
+  {
+   "id": "R2E2_C10_dwell-002",
+   "finding": "decision 1 (FMCW dwell T_int + 2 tau, §C7b Eq. (107)): §C10.2 item 7, channel count",
+   "old": "- One sample per 0.05° cell over the full field (12 Mpts/s) would need **24–120 parallel coherent channels** at 2–10 µs dwell. The number of channels is the required point rate $\\dot N$ times the dwell: $N_{\\rm ch}=\\dot N\\,T_{\\rm dwell}=12\\times10^{6}\\ {\\rm s^{-1}}\\times2\\ \\mu{\\rm s}=24$, and 120 at 10 µs.",
+   "new": "- One sample per 0.05° cell over the full field (12 Mpts/s) would need **56–152 parallel coherent channels** at 2–10 µs of integration. The number of channels is the required point rate $\\dot N$ times the dwell: $N_{\\rm ch}=\\dot N\\,T_{\\rm dwell}=12\\times10^{6}\\ {\\rm s^{-1}}\\times4.67\\ \\mu{\\rm s}=56$, and $12\\times10^{6}\\ {\\rm s^{-1}}\\times12.67\\ \\mu{\\rm s}=152$ at 10 µs of integration.",
+   "why": "Channels = point rate x dwell at the dwell of Eq. (107)."
+  },
+  {
+   "id": "R2E2_C10_dwell-003",
+   "finding": "decision 1 (FMCW dwell T_int + 2 tau, §C7b Eq. (107)): §C10.2 item 7, beat paragraph",
+   "old": "Shorter dwell (a shorter chirp) raises the beat frequency: for $B=1$ GHz, $f_b=2\\times10^{9}\\times300\\ {\\rm m}/(3\\times10^{8}\\ {\\rm m\\,s^{-1}}\\times10\\ \\mu{\\rm s})=0.2$ GHz for a 10 µs chirp and about 1 GHz for a 2 µs chirp. Real sampling needs at least twice the beat frequency (the Nyquist criterion), hence 0.4–2 GS/s. If the dwell is split into an up-ramp and a down-ramp, each ramp is half as long",
+   "new": "A shorter chirp raises the beat frequency: for $B=1$ GHz, $f_b=2\\times10^{9}\\times300\\ {\\rm m}/(3\\times10^{8}\\ {\\rm m\\,s^{-1}}\\times10\\ \\mu{\\rm s})=0.2$ GHz for a 10 µs chirp and about 1 GHz for a 2 µs chirp. Real sampling needs at least twice the beat frequency (the Nyquist criterion), hence 0.4–2 GS/s. If the integration time is split into an up-ramp and a down-ramp, as the dwell above assumes, each ramp's useful window is half as long",
+   "why": "The beat depends on the chirp, not on the whole dwell."
+  },
+  {
+   "id": "R2E2_C10_dwell-004",
+   "finding": "decision 1 (FMCW dwell T_int + 2 tau, §C7b Eq. (107)): §C10.3a item 5 table",
+   "old": "| Coherent, scanned monostatic: 20 mm aperture, 128 channels × (0.1 s ÷ 10 µs) | 1.2×10⁸ | 1.3×10⁶ | ≈1% |\n| Same with 2 µs dwell | 1.2×10⁸ | 6.4×10⁶ | ≈5% |",
+   "new": "| Coherent, scanned monostatic: 20 mm aperture, 128 channels × (0.1 s ÷ 12.67 µs dwell for 10 µs of integration) | 1.2×10⁸ | 1.0×10⁶ | ≈0.8% |\n| Same with 2 µs of integration (4.67 µs dwell) | 1.2×10⁸ | 2.7×10⁶ | ≈2.3% |",
+   "why": "Slots per frame at the dwell of Eq. (107)."
+  },
+  {
+   "id": "R2E2_C10_dwell-005",
+   "finding": "decision 1 (FMCW dwell T_int + 2 tau, §C7b Eq. (107)): §C10.3a item 5 derivation",
+   "old": "coherent $128\\times(0.1\\ {\\rm s}/10\\ \\mu{\\rm s})=1.28\\times10^{6}$ (0.1 s is one frame at 10 Hz), or $128\\times5\\times10^{4}=6.4\\times10^{6}$ at 2 µs ($0.1\\ {\\rm s}/2\\ \\mu{\\rm s}=5\\times10^{4}$ dwells).",
+   "new": "coherent $128\\times(0.1\\ {\\rm s}/12.67\\ \\mu{\\rm s})=128\\times7{,}890=1.01\\times10^{6}$ (0.1 s is one frame at 10 Hz, and $12.67\\ \\mu{\\rm s}=10\\ \\mu{\\rm s}+2\\tau$ is the dwell of §C7b, Eq. (107), with $2\\tau=2.67$ µs at 200 m), or $128\\times2.14\\times10^{4}=2.74\\times10^{6}$ for 2 µs of integration ($0.1\\ {\\rm s}/4.67\\ \\mu{\\rm s}=2.14\\times10^{4}$ dwells).",
+   "why": "Substitutions for the table rows."
+  },
+  {
+   "id": "R2E2_C10_dwell-006",
+   "finding": "decision 1 (FMCW dwell T_int + 2 tau, §C7b Eq. (107)): §C10.3a item 5 derivation",
+   "old": "- Nominal footprint fraction, available over required: $1.28\\times10^{6}/1.2\\times10^{8}=1.1\\%$ and $6.4\\times10^{6}/1.2\\times10^{8}=5.4\\%$.",
+   "new": "- Nominal footprint fraction, available over required: $1.01\\times10^{6}/1.2\\times10^{8}=0.84\\%$ and $2.74\\times10^{6}/1.2\\times10^{8}=2.3\\%$.",
+   "why": "Footprint fractions from the slots above."
+  },
+  {
+   "id": "R2E2_C10_dwell-007",
+   "finding": "decision 1 (FMCW dwell T_int + 2 tau, §C7b Eq. (107)): §C10.3a item 5, channels for full coverage",
+   "old": "would need about 2,400–12,000 parallel channels by this mode count ($1.2\\times10^{8}$ slots divided by $5\\times10^{4}$ or $10^{4}$ dwells per channel per frame, for 2 µs or 10 µs dwells). The footprint count of §C10.3b gives half that, ≈1,200–5,800, because one nominal footprint spans ≈2 hard-aperture modes at 200 m; this is also why the table shows ≈1% where §C10.3b's Result 2 shows 2.1%.",
+   "new": "would need about 5,600–15,200 parallel channels by this mode count ($1.2\\times10^{8}$ slots divided by $2.14\\times10^{4}$ or $7{,}890$ dwells per channel per frame, for 4.67 µs or 12.67 µs dwells, i.e. 2 µs or 10 µs of integration). The footprint count of §C10.3b gives about half that, ≈2,700–7,300: the $1.2\\times10^{6}$ cells, divided by the 2.1% footprint fraction of one sample at 200 m (§C10.3b, Result 2; 2.08% unrounded), need $1.2\\times10^{6}/0.0208=5.77\\times10^{7}$ samples per frame, and $5.77\\times10^{7}/2.14\\times10^{4}=2{,}700$ and $5.77\\times10^{7}/7{,}890=7{,}300$ channels. The factor of two arises because one nominal footprint spans ≈2 hard-aperture modes at 200 m. It is also why the table's ≈0.8% is half the 1.75% that §C10.3b's per-sample footprint gives for the same $1.01\\times10^{6}$ samples per frame ($2.08\\%\\times1.01\\times10^{6}/1.2\\times10^{6}=1.75\\%$).",
+   "why": "Channel counts at the dwell of Eq. (107); the comparison with Result 2 restated for the samples the channels supply."
+  },
+  {
+   "id": "R2E2_C10_dwell-008",
+   "finding": "decision 1 (FMCW dwell T_int + 2 tau, §C7b Eq. (107)): §C10.3a item 5, area-matched alternative",
+   "old": "[E: 128 channels at 10 µs give $1.28\\times10^{6}$ samples per frame, a 0.048° mesh. With aperture diameter $D=2$ mm, waist $w_0=0.9$ mm and Rayleigh range $z_R=\\pi w_0^2/\\lambda=1.6$ m, the 1/e² radius at 200 m is $w=11$ cm, slightly overfilling a 0.05° cell (17.5 cm).",
+   "new": "[E: 128 channels at a 12.67 µs dwell (10 µs of integration) give $1.01\\times10^{6}$ samples per frame, a 0.054° mesh ($\\sqrt{0.914\\ {\\rm sr}/1.01\\times10^{6}}=9.5\\times10^{-4}$ rad, 19 cm at 200 m). With aperture diameter $D=2$ mm, waist $w_0=0.9$ mm and Rayleigh range $z_R=\\pi w_0^2/\\lambda=1.6$ m, the 1/e² radius at 200 m is $w=11$ cm, slightly overfilling such a cell, whose area-matched radius is $19\\ {\\rm cm}/\\sqrt{\\pi}=10.7$ cm.",
+   "why": "Mesh from the samples at the dwell of Eq. (107); the 2 mm aperture still gives an area-matched spot."
+  },
+  {
+   "id": "R2E2_C10_dwell-009",
+   "finding": "decision 1 (FMCW dwell T_int + 2 tau, §C7b Eq. (107)): §C10.3a item 6, smear",
+   "old": "a 10 µs dwell moves the beam about $1{,}200^\\circ/{\\rm s}\\times10\\ \\mu{\\rm s}=0.012^\\circ$: roughly three 1/e² beam radii of the 250 m confocal spot ($0.012^\\circ/0.0036^\\circ=3.3$), or 1.7 full 1/e² widths ($0.012^\\circ/0.0072^\\circ$). The swept geometric footprint is larger, but coherent integration and speckle decorrelation depend on the chirp and processing.",
+   "new": "a 12.67 µs dwell (10 µs of integration plus $2\\tau=2.67$ µs at 200 m, §C7b, Eq. (107)) moves the beam about $1{,}200^\\circ/{\\rm s}\\times12.67\\ \\mu{\\rm s}=0.015^\\circ$: roughly four 1/e² beam radii of the 250 m confocal spot ($0.015^\\circ/0.0036^\\circ=4.2$), or 2.1 full 1/e² widths ($0.015^\\circ/0.0072^\\circ$). The swept geometric footprint is larger, but coherent integration and speckle decorrelation depend on the chirp and processing, and only the 10 µs of useful windows is integrated.",
+   "why": "Smear over the whole dwell; integration over the chirp only."
+  },
+  {
+   "id": "R2E2_C10_dwell-010",
+   "finding": "decision 1 (FMCW dwell T_int + 2 tau, §C7b Eq. (107)): §C10.3a item 8 (quotes item 5)",
+   "old": "≈1–5% for item 5's channel budgets",
+   "new": "≈0.8–2.3% for item 5's channel budgets",
+   "why": "From the item 5 table at the dwell of Eq. (107)."
+  },
+  {
+   "id": "R2E2_C10_dwell-011",
+   "finding": "decision 1 (FMCW dwell T_int + 2 tau, §C7b Eq. (107)): §C10.4 item 3 (quotes §C10.2 item 7)",
+   "old": "The 12 Mpts/s case of §C10.2 would need tens to about a hundred parallel channels.",
+   "new": "The 12 Mpts/s case of §C10.2 would need 56–152 parallel channels at 2–10 µs of integration (§C10.2, item 7).",
+   "why": "Channel count of §C10.2 item 7 at the dwell of Eq. (107)."
+  },
+  {
+   "id": "R2E2_C10_dwell-012",
+   "finding": "decision 1 (FMCW dwell T_int + 2 tau, §C7b Eq. (107)): §C10.7 requirement 5 (quotes §C10.2 item 7)",
+   "old": "| 5 | Tens of parallel coherent channels |",
+   "new": "| 5 | 56–152 parallel coherent channels for one sample per 0.05° cell at 12 Mpts/s (§C10.2, item 7) |",
+   "why": "Channel count of §C10.2 item 7 at the dwell of Eq. (107)."
+  }
+ ],
+ "skipped": []
+}

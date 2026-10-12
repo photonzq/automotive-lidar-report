@@ -1,0 +1,132 @@
+{
+ "block": "R4_R6_C10_part2",
+ "edits": [
+  {
+   "id": "R4_R6_C10_part2-01a",
+   "finding": "Round 4 source research, R6_C10_part2-01",
+   "old": "Pointcloud's 61,952-pixel focal-plane array (FPA, §C10.4) could fill its field only with a mode-equivalent collecting diameter of ≈0.8 mm. At an assumed nominal footprint fraction of ≈2%, the identity allows ≈6 mm. [E: the bound is the identity Eq. (140), derived in item 4, with $f_{\\rm fp}\\le1$ and a cell solid angle $\\theta_{\\rm cell}^2=\\Omega_{\\rm FOV}/N_{\\rm cell}$, where $N_{\\rm cell}=61{,}952$ is the number of pixels and $\\Omega_{\\rm FOV}$ the 23° × 14° field: $A_{\\rm mode}\\lesssim\\tfrac{t^2}{2}N_{\\rm cell}\\lambda^2/\\Omega_{\\rm FOV}=0.42\\times61{,}952\\times(1.31\\ \\mu{\\rm m})^2/[(23^\\circ\\times14^\\circ)(\\pi/180)^2]=0.42\\times61{,}952\\times1.72\\times10^{-12}/0.098=0.45$ mm². That is an equivalent diameter $2\\sqrt{A_{\\rm mode}/\\pi}=0.76$ mm; at $f_{\\rm fp}=0.02$ it becomes $0.45/0.02=23$ mm², or 5.4 mm. Using the 0.061° address pitch $\\theta_{\\rm cell}$ instead of the quoted field, $\\tfrac{t^2}{2}(\\lambda/\\theta_{\\rm cell})^2=0.64$ mm², gives 0.9 mm and 6.4 mm.]",
+   "new": "Pointcloud's 61,952-pixel focal-plane array (FPA, §C10.4) could fill its field only with a mode-equivalent collecting diameter of ≈0.9 mm behind its 50 mm lens. The one beam its authors measured, behind a 25 mm test lens focused at 11.1 m [P, Settembrini et al. 2026, Methods and Extended Data Fig. 2c], has a nominal 1/e² footprint fraction of ≈1% at that focus and ≈2% at 22 m on that lens's 0.12° address grid, and hence a mode-equivalent collecting diameter of ≈5 mm and ≈3.5 mm. [E: the full-coverage bound is the identity Eq. (140), derived in item 4, with $f_{\\rm fp}\\le1$. For the 0.061° address pitch of the 50 mm lens, $\\theta_{\\rm cell}=53\\ \\mu{\\rm m}/50\\ {\\rm mm}=1.06\\times10^{-3}$ rad, it gives $A_{\\rm mode}\\lesssim\\tfrac{t^2}{2}(\\lambda/\\theta_{\\rm cell})^2=0.42\\times(1.31\\ \\mu{\\rm m}/1.06\\times10^{-3})^2=0.64$ mm², an equivalent diameter $2\\sqrt{A_{\\rm mode}/\\pi}=0.9$ mm. Spreading the $N_{\\rm cell}=61{,}952$ cells over the measured 23.1° × 13.6° field instead, $\\theta_{\\rm cell}^2=\\Omega_{\\rm FOV}/N_{\\rm cell}$, gives 0.47 mm² (0.77 mm), because that field includes the routing gaps between pixel blocks: 352 × 176 pixels at 0.061° span only 21.4° × 10.7°. The measured beam has $w(R)=w_0\\sqrt{1+[(R-11.1\\ {\\rm m})/z_R]^2}$ with $w_0=1.31$ mm and $z_R=4.1$ m. On the 25 mm lens's pitch, $\\theta_{\\rm cell}=53\\ \\mu{\\rm m}/25\\ {\\rm mm}=2.12\\times10^{-3}$ rad, its footprint fraction $f_{\\rm fp}=\\pi w^2/(R\\theta_{\\rm cell})^2$ is $5.39\\ {\\rm mm^2}/(23.5\\ {\\rm mm})^2=1.0\\%$ at 11.1 m and, with $w=3.72$ mm, $43.5\\ {\\rm mm^2}/(46.6\\ {\\rm mm})^2=2.0\\%$ at 22 m. Eq. (33) of §C0 with $t=1$, as in §C0 subsection 10.8, gives $A_{\\rm mode}=\\lambda^2R^2/(2\\pi w^2)=19.6$ mm² (5.0 mm) at 11.1 m and 9.6 mm² (3.5 mm) at 22 m; each times its $f_{\\rm fp}$ is $\\tfrac12(\\lambda/\\theta_{\\rm cell})^2=0.19$ mm², as Eq. (140) requires.]",
+   "why": "Source found by the R6_C10_part2 research agent; see sources/R6_C10_part2_findings.md, R6_C10_part2-01."
+  },
+  {
+   "id": "R4_R6_C10_part2-01b",
+   "finding": "Round 4 source research, R6_C10_part2-01",
+   "old": "0.06° *address spacing* (53 µm ÷ 50 mm). The beam is much narrower (mode-equivalent collecting diameter ≈6 mm at an assumed ≈2% nominal footprint fraction; §C10.3a, item 5)",
+   "new": "0.06° *address spacing* (53 µm ÷ 50 mm). The beam is much narrower: the one measured, behind a 25 mm test lens, has a nominal 1/e² footprint fraction of ≈1–2% of that lens's 0.12° cells at 11–22 m and a mode-equivalent collecting diameter of ≈3.5–5 mm (§C10.3a, item 5)",
+   "why": "Source found by the R6_C10_part2 research agent; see sources/R6_C10_part2_findings.md, R6_C10_part2-01."
+  },
+  {
+   "id": "R4_R6_C10_part2-01c",
+   "finding": "Round 4 source research, R6_C10_part2-01",
+   "old": "For Pointcloud's coherent FPA (*Nature* 2026, 1.31 µm), covering its whole field would leave an $A_{\\rm mode}$ equal to that of a lens under 1 mm across; at an assumed ≈2% nominal footprint fraction (defined below), it would get ≈6 mm (§C10.3a, item 5).",
+   "new": "For Pointcloud's coherent FPA (*Nature* 2026, 1.31 µm), covering its whole field would leave an $A_{\\rm mode}$ equal to that of a lens under 1 mm across; the one beam its authors measured has a nominal footprint fraction (defined below) of only ≈1–2% at 11–22 m and gets ≈3.5–5 mm (§C10.3a, item 5).",
+   "why": "Source found by the R6_C10_part2 research agent; see sources/R6_C10_part2_findings.md, R6_C10_part2-01."
+  },
+  {
+   "id": "R4_R6_C10_part2-02",
+   "finding": "Round 4 source research, R6_C10_part2-02",
+   "old": "A company blog says the production chip has just over 5,000 antennas, and that the demonstration used a 4 × 80 sub-array at 30 Hz.",
+   "new": "A February 2023 company blog, written before Helium was named, says that the first-generation production version of its 2D monostatic antenna array would have just over 5,000 antennas, and that its demonstration used a 4 × 80 sub-array of the first 2D chip, at a scan-pattern rate of 30 Hz [P].",
+   "why": "Source found by the R6_C10_part2 research agent; see sources/R6_C10_part2_findings.md, R6_C10_part2-02."
+  },
+  {
+   "id": "R4_R6_C10_part2-03",
+   "finding": "Round 4 source research, R6_C10_part2-03",
+   "old": "**Mode counts:** Goodman's integrated-speckle formula, $N_{\\rm spk}=A_{\\rm rx}^2\\big/\\!\\int K_{\\rm ap}(\\Delta)\\,|\\mu(\\Delta)|^2\\,d^2\\Delta$, where $A_{\\rm rx}$ is the aperture area",
+   "new": "**Mode counts:** Goodman's integrated-speckle formula for the degrees of freedom of speckle integrated over a uniformly weighted aperture [I, J. W. Goodman, *Speckle Phenomena in Optics*, 2007, §4.6.1], $N_{\\rm spk}=A_{\\rm rx}^2\\big/\\!\\int K_{\\rm ap}(\\Delta)\\,|\\mu(\\Delta)|^2\\,d^2\\Delta$, where $A_{\\rm rx}$ is the aperture area",
+   "why": "Source found by the R6_C10_part2 research agent; see sources/R6_C10_part2_findings.md, R6_C10_part2-03."
+  },
+  {
+   "id": "R4_R6_C10_part2-04a",
+   "finding": "Round 4 source research, R6_C10_part2-04",
+   "old": "On Argoverse 2 the vehicle AP of FSD (a fully sparse 3D detector, unrelated to Tesla's FSD software) falls from **89.0 to 61.7, 29.2, 13.9 and 3.6** across 0–50 / 50–100 / 100–150 / 150–200 / 200–250 m. Adding camera virtual points (extra 3D points generated from the camera image) lifts 150–200 m to 23.2.",
+   "new": "On Argoverse 2 the vehicle AP of FSD (a fully sparse 3D detector, unrelated to Tesla's FSD software), averaged over 0.5–4 m centre-distance match thresholds, falls from **89.0 to 61.7, 29.2, 13.9 and 3.6** across 0–50 / 50–100 / 100–150 / 150–200 / 200–250 m. Adding camera virtual points (extra 3D points generated from the camera image) lifts 150–200 m to 23.2 (Khoche et al., IEEE IV 2024, Table III).",
+   "why": "Source found by the R6_C10_part2 research agent; see sources/R6_C10_part2_findings.md, R6_C10_part2-04."
+  },
+  {
+   "id": "R4_R6_C10_part2-04b",
+   "finding": "Round 4 source research, R6_C10_part2-04",
+   "old": "In nuScenes (32 beams), about **half of all objects beyond 50 m have zero lidar points**.",
+   "new": "In nuScenes (32 beams), about **a third of the annotated objects at 50–80 m have zero lidar points**: 45,050 of 145,173 training boxes and 10,069 of 31,727 validation boxes (Gupta et al., Far3Det, WACV 2023, appendix Table 11). The paper's headline \"almost 50%\" matches the ratio of zero-point boxes to boxes with points ($45{,}050/100{,}123=45\\%$).",
+   "why": "Source found by the R6_C10_part2 research agent; see sources/R6_C10_part2_findings.md, R6_C10_part2-04."
+  },
+  {
+   "id": "R4_R6_C10_part2-05a",
+   "finding": "Round 4 source research, R6_C10_part2-05",
+   "old": "| Rogers et al. (*Nature* 2021) [P] |",
+   "new": "| Rogers et al. (Pointcloud Inc. with the University of Southampton, *Nature* 2021) [P] |",
+   "why": "Source found by the R6_C10_part2 research agent; see sources/R6_C10_part2_findings.md, R6_C10_part2-05."
+  },
+  {
+   "id": "R4_R6_C10_part2-05b",
+   "finding": "Round 4 source research, R6_C10_part2-05",
+   "old": "The design was bistatic, with separate transmit and receive apertures (16 transmit, 512 receive).",
+   "new": "The design was bistatic at the chip level: a 16-grating transmit chip and a 512-pixel receive chip, combined by a polarizing beamsplitter and a Faraday rotator behind one output lens of 25 mm aperture [P].",
+   "why": "Source found by the R6_C10_part2 research agent; see sources/R6_C10_part2_findings.md, R6_C10_part2-05."
+  },
+  {
+   "id": "R4_R6_C10_part2-06",
+   "finding": "Round 4 source research, R6_C10_part2-06",
+   "old": "Mobileye/Intel: parallel PIC (photonic integrated circuit) channels \"moved through optics\", in an in-house FMCW programme cancelled in 2024 (§B3) [P/T];",
+   "new": "Mobileye/Intel: parallel PIC (photonic integrated circuit) channels, \"184 vertical lines\" that its CEO said are \"moved through optics\" (CES 2021) [P], in an in-house FMCW programme cancelled in 2024 (§B3) [P/T];",
+   "why": "Source found by the R6_C10_part2 research agent; see sources/R6_C10_part2_findings.md, R6_C10_part2-06."
+  },
+  {
+   "id": "R4_R6_C10_part2-07",
+   "finding": "Round 4 source research, R6_C10_part2-07",
+   "old": "Voyant (August 2026) and 国科光芯 (Guoke Guangxin, a Haining-based maker of SiN OPA chips, §D7; September 2026) are also moving into data-centre optical switching.",
+   "new": "Voyant is pointing its lidar switch fabric at data-centre optical circuit switching, in a white paper by its CTO (August 2026) [P]. 国科光芯 (Guoke Guangxin, a Haining-based maker of SiN OPA chips, §D7) raised a B+ round of several hundred million yuan in September 2026 mainly for data-centre optical interconnect: 400 Gb/s-per-lane silicon-photonics chips, 1.6T and 3.2T detector chips, near- and co-packaged optics (NPO/CPO) and OIO chiplets, and to expand its datacom subsidiary 星汉光子 [T].",
+   "why": "Source found by the R6_C10_part2 research agent; see sources/R6_C10_part2_findings.md, R6_C10_part2-07."
+  },
+  {
+   "id": "R4_R6_C10_part2-08",
+   "finding": "Round 4 source research, R6_C10_part2-08",
+   "old": "Piggott et al. (Waymo) put coherent detection about 6 dB behind ToF at equal aperture, from polarization and mode weighting [P]; the far-field factor of item 2 in this model is 2.9×, or 4.7 dB.",
+   "new": "Piggott et al. (Waymo) put coherent detection about 6 dB behind ToF at long range: 3 dB for the single polarization and ≈3 dB because their 30 mm ToF lens, sized not to clip the coherent beam's Gaussian wings ($w_0=10$ mm), has $(15/10)^2=2.25$ times the coherent mode's far-field collecting area $\\pi w_0^2$ before polarization [P, §2.5, Fig. 5(a)]. The far-field factor of item 2 in this model is 2.9×, or 4.7 dB, because its Gaussian fills the hard aperture more fully ($w_0=0.45D$, an aperture radius of $1.11w_0$ against $1.5w_0$) and pays 1.47× (1.7 dB) for mode shape and truncation instead of 2.25× (3.5 dB); the polarization factor is the same [E].",
+   "why": "Source found by the R6_C10_part2 research agent; see sources/R6_C10_part2_findings.md, R6_C10_part2-08."
+  },
+  {
+   "id": "R4_R6_C10_part2-09",
+   "finding": "Round 4 source research, R6_C10_part2-09",
+   "old": "**Namuga Stella-2 (CES 2026):** ≤100 m, 15–80 Hz, below 15 W.",
+   "new": "**Namuga Stella-2** (first shown in May 2025, launched at CES 2026): ≤100 m in its HDR mode (reflectivity not stated), 15–80 Hz, below 15 W; the May 2025 release gave a 120° × 90° field and 30 m typical, 80 m maximum range [P]. It is not the Stella-180 of §F5: Namuga's April 2026 brochure lists a separate wide-angle pair, Stella 120 (120° × 90°) and Stella 180 (185° × 110°), both 256 × 192 points at 30 Hz, 72 m maximum range and 40 m or 30 m on a 10% target in 100 klux [P].",
+   "why": "Source found by the R6_C10_part2 research agent; see sources/R6_C10_part2_findings.md, R6_C10_part2-09."
+  },
+  {
+   "id": "R4_R6_C10_part2-A2-13",
+   "finding": "Round 4 source research, Appendix 2 (Focal-plane arrays and FMCW products)",
+   "old": "- LuminWave F-series: https://docs.luminwave.com.cn/f-series/",
+   "new": "- LuminWave F-series: https://docs.luminwave.com.cn/f-series/\n- Voyant blog, \"Science Fiction to Forklifts in < 2 Years\" (P. Stern, Feb 2023; 2D monostatic antenna array, 4 × 80 demonstration, production version of just over 5,000 antennas): https://voyantphotonics.com/news/448/\n- Voyant, \"Silicon Photonics Switching\" white paper (S. Miller, Aug 2026; lidar switch fabric aimed at datacenter optical circuit switching): https://voyantphotonics.com/wp-content/uploads/2026/08/Silicon-Photonics-Switching-Empowering-AI-Physical-Virtual-World-Voyant-Photonics.pdf",
+   "why": "Sources read by the R6_C10_part2 research agent, added to the group 'Focal-plane arrays and FMCW products'."
+  },
+  {
+   "id": "R4_R6_C10_part2-A2-14",
+   "finding": "Round 4 source research, Appendix 2 (OPA devices, reviews and receive-side analysis)",
+   "old": "- Piggott *et al.* (Waymo), coherent-lidar headwinds and link model (preprint, 2025): https://arxiv.org/abs/2502.09736",
+   "new": "- Piggott *et al.* (Waymo), coherent-lidar headwinds and link model (preprint, 2025): https://arxiv.org/abs/2502.09736\n- Goodman, *Speckle Phenomena in Optics: Theory and Applications* (Roberts & Company, 2007), §4.6.1, mean and variance of integrated speckle (degrees of freedom of an aperture-integrated speckle field); second edition, SPIE Press 2020: https://doi.org/10.1117/3.2548484",
+   "why": "Sources read by the R6_C10_part2 research agent, added to the group 'OPA devices, reviews and receive-side analysis'."
+  },
+  {
+   "id": "R4_R6_C10_part2-A2-15",
+   "finding": "Round 4 source research, Appendix 2 (FMCW and beam steering)",
+   "old": "- AeroDIODE 1550LD-5/-6 narrow-linewidth DFB datasheets (<50 kHz by the phase-noise method at 1 MHz; PN_A75, PN_A79, rev. 04/26): https://shop.laserdiodesource.com/wp-content/uploads/2025/04/1550-nm-laser-diode-Model-5-20-mW-Datasheet.pdf ; https://shop.laserdiodesource.com/wp-content/uploads/2025/04/1550-nm-laser-diode-Model-6-40-mW-Datasheet.pdf",
+   "new": "- AeroDIODE 1550LD-5/-6 narrow-linewidth DFB datasheets (<50 kHz by the phase-noise method at 1 MHz; PN_A75, PN_A79, rev. 04/26): https://shop.laserdiodesource.com/wp-content/uploads/2025/04/1550-nm-laser-diode-Model-5-20-mW-Datasheet.pdf ; https://shop.laserdiodesource.com/wp-content/uploads/2025/04/1550-nm-laser-diode-Model-6-40-mW-Datasheet.pdf\n- Mobileye, CES 2021 \"Under the Hood\" live blog (Shashua: FMCW lidar PIC with 184 vertical lines scanned by optics): https://www.mobileye.com/news/ces-2021-under-the-hood-with-prof-amnon-shashua/",
+   "why": "Sources read by the R6_C10_part2 research agent, added to the group 'FMCW and beam steering'."
+  },
+  {
+   "id": "R4_R6_C10_part2-A2-16",
+   "finding": "Round 4 source research, Appendix 2 (Supply chain and geopolitics)",
+   "old": "- INL probes Chinese lidar: https://techcrunch.com/2026/08/21/us-government-lab-is-probing-chinese-lidar-for-security-vulnerabilities/",
+   "new": "- INL probes Chinese lidar: https://techcrunch.com/2026/08/21/us-government-lab-is-probing-chinese-lidar-for-security-vulnerabilities/\n- 国科光芯 B+ round and use of proceeds (瑞财经 via Tencent News, 3 Sep 2026): https://news.qq.com/rain/a/20260903A09R9000",
+   "why": "Sources read by the R6_C10_part2 research agent, added to the group 'Supply chain and geopolitics'."
+  },
+  {
+   "id": "R4_R6_C10_part2-A2-17",
+   "finding": "Round 4 source research, Appendix 2 (Lumotive LC metasurface)",
+   "old": "- SkyWater production qualification: https://www.skywatertechnology.com/skywater-and-lumotive-announce-qualification-and-production-start-for-worlds-first-commercially-available-optical-beamforming-chip/",
+   "new": "- SkyWater production qualification: https://www.skywatertechnology.com/skywater-and-lumotive-announce-qualification-and-production-start-for-worlds-first-commercially-available-optical-beamforming-chip/\n- Namuga Stella-2 releases (debut May 2025; CES 2026, Nov 2025) and Stella 120/180 brochure (Apr 2026): https://namuga.com/eng/invest/news_view.php?v_seqno=254 ; https://namuga.com/eng/invest/news_view.php?v_seqno=307 ; https://namuga.com/down/NAMUGA_ProductIntro.pdf",
+   "why": "Sources read by the R6_C10_part2 research agent, added to the group 'Lumotive LC metasurface'."
+  }
+ ],
+ "skipped": []
+}

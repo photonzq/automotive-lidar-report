@@ -1,0 +1,7 @@
+AEVA: reference 2020-02-24 49.25; peak x1.98; latest x0.312 (2026-09-25); deepest drawdown 0.0241; latest vs running peak 0.157
+OUST: reference 2020-10-05 97; peak x1.68; latest x0.451 (2026-09-25); deepest drawdown 0.0218; latest vs running peak 0.269
+INVZ: reference 2020-06-29 9.92; peak x1.56; latest x0.039 (2026-09-25); deepest drawdown 0.0201; latest vs running peak 0.025
+LIDR: reference 2021-01-11 383.1; peak x1.07; latest x0.003 (2026-09-25); deepest drawdown 0.0012; latest vs running peak 0.003
+MVIS: reference 2020-01-01 9.75; peak x28.54; latest x0.164 (2026-09-25); deepest drawdown 0.0058; latest vs running peak 0.006
+HSAI: reference 2023-02-06 22.2; peak x1.31; latest x0.732 (2026-09-25); deepest drawdown 0.1599; latest vs running peak 0.559
+2498.HK: reference 2023-12-31 43; peak x1.86; latest x0.372 (2026-09-20); deepest drawdown 0.1381; latest vs running peak 0.200

@@ -1,0 +1,656 @@
+{
+ "block": "05_C4d_C8_C9",
+ "edits": [
+  {
+   "id": "05_C4d_C8_C9-001",
+   "finding": "consistency flag #7",
+   "old": "Stacked vertically: HDL-64E 64 lasers and detectors, up to 2.2 M pts/s [P];",
+   "new": "Stacked vertically: HDL-64E 64 lasers and detectors, up to 2.2 M pts/s in its S3 version [P] (§C3c quotes 1.3 M points/s for the 2013 unit);",
+   "why": "Names the S3 version behind 2.2 M pts/s and reconciles it with §C3c's 1.3 M."
+  },
+  {
+   "id": "05_C4d_C8_C9-002",
+   "finding": "consistency flag #8",
+   "old": "AT128 128 channels, ATX 256 [P];",
+   "new": "AT128 128 channels, ATX 256 [P], whose laser-addressed lines share 64 physical receive channels (§C4b);",
+   "why": "States that the ATX's 256 lines share fewer receive channels, as §C4b says."
+  },
+  {
+   "id": "05_C4d_C8_C9-003",
+   "finding": "report #23; consistency flags #2, #9",
+   "old": "Few: one to tens of coherent channels (Mobileye's ended design, 184), because each needs its own LO, balanced detector and GS/s digitizer (§C7a)",
+   "new": "Few: one to tens of coherent channels (Mobileye's ended design was specified with 184 lines, §C3, §C7a), because each channel needs its own local oscillator (LO), balanced detector and GS/s digitizer for a 100–400 MHz beat (§C7, §C7a)",
+   "why": "184 is lines, not channels (§C3, §C7a); expands LO; one digitizer wording for §C4d and §C8."
+  },
+  {
+   "id": "05_C4d_C8_C9-004",
+   "finding": "report #35",
+   "old": "A **SiPM** (silicon photomultiplier) is an array of SPADs whose outputs are summed into one analogue signal.",
+   "new": "A **VCSEL** (vertical-cavity surface-emitting laser) emits from the chip surface, which makes dense laser arrays on one chip easy. A **SPAD** (single-photon avalanche diode) is a photodiode biased above breakdown, so that a single photon can trigger a detectable avalanche, and a **SiPM** (silicon photomultiplier) is an array of SPADs whose outputs are summed into one analogue signal. **FMCW** (frequency-modulated continuous-wave) lidar is the coherent kind: it sweeps its laser frequency and measures range and velocity from the beat between the return and the local oscillator.",
+   "why": "Defines VCSEL, SPAD and FMCW at first use in §C4d."
+  },
+  {
+   "id": "05_C4d_C8_C9-005",
+   "finding": "report #14",
+   "old": "Consider a frame of $N_{\\rm lines}$ lines (rows of points along the slow axis)",
+   "new": "Consider a frame of $N_{\\rm lines}$ lines (rows of points, each drawn along the fast axis and stacked along the slow axis)",
+   "why": "Lines run along the fast axis and stack along the slow axis, as in Eq. (69) and §C0 subsection 3."
+  },
+  {
+   "id": "05_C4d_C8_C9-006",
+   "finding": "symbol scheme",
+   "old": "so its oscillation frequency must be $f=S/2$.",
+   "new": "so its oscillation frequency must be $f_{\\rm mirror}=S/2$.",
+   "why": "Mirror resonance written f_mirror, as in §C0 subsection 3."
+  },
+  {
+   "id": "05_C4d_C8_C9-007",
+   "finding": "symbol scheme",
+   "old": "a resonant fast axis near $f=S/2=0.94$ kHz.",
+   "new": "a resonant fast axis near $f_{\\rm mirror}=S/2=0.94$ kHz.",
+   "why": "Mirror resonance written f_mirror."
+  },
+  {
+   "id": "05_C4d_C8_C9-008",
+   "finding": "symbol scheme",
+   "old": "a resonant fast axis near $f=S/2=0.30$–$0.32$ kHz [E].",
+   "new": "a resonant fast axis near $f_{\\rm mirror}=S/2=0.30$–$0.32$ kHz [E].",
+   "why": "Mirror resonance written f_mirror."
+  },
+  {
+   "id": "05_C4d_C8_C9-009",
+   "finding": "report #29",
+   "old": "so the mirror runs 100–250× slower than a single-beam 2-D mirror (10 sweeps/s against 1,000–2,560: $1{,}000/10=100$ and $2{,}560/10=256$; figure panel d).",
+   "new": "so the mirror runs about 100–300× slower than a single-beam 2-D mirror (10 sweeps/s against 1,000–3,000, i.e. $1{,}000/10=100$ to $3{,}000/10=300$; $1{,}875/10\\approx190$ for the M1 and $2{,}560/10=256$ for a single-beam InnovizOne; figure panel d).",
+   "why": "256 is not 250, and the range now matches the 1,000–3,000 used in the introduction and §5."
+  },
+  {
+   "id": "05_C4d_C8_C9-010",
+   "finding": "report #15",
+   "old": "A sensor's point rate divided by this per-channel limit is the minimum number of channels that must fire in parallel.",
+   "new": "A sensor's point rate divided by this per-channel limit is the minimum number of channels that must fire in parallel, at one pulse per point; several pulses per point multiply that minimum by their number.",
+   "why": "States the one-pulse-per-point assumption behind the channel counts."
+  },
+  {
+   "id": "05_C4d_C8_C9-011",
+   "finding": "report #15; consistency flag #8",
+   "old": "- AT128 and ATX fire each channel at only 12–15 kHz (1.536 M pts/s over 128 channels and 3.84 M/256).",
+   "new": "- AT128 and ATX measure only 12–15 kpts/s per channel (1.536 M pts/s over 128 channels and 3.84 M/256). At one pulse per point that is also each channel's pulse rate, roughly 40–60 times below Eq. (70)'s 600–750 kHz ($600/15=40$ to $750/12\\approx63$). The ATX's 256 lines share 64 physical receive channels (§C4b), so each receive channel handles $3.84\\times10^{6}/64=60$ kpts/s, still about a tenth of the limit.",
+   "why": "12–15 k is a point rate, not a pulse rate; adds the margin and the 64-receive-channel case."
+  },
+  {
+   "id": "05_C4d_C8_C9-012",
+   "finding": "report #35; symbol scheme",
+   "old": "$$\\Delta\\theta=\\frac{2R\\,\\Omega}{c} \\tag{71}$$\n\nwhere $R$ is the target range, $c$ the speed of light and $\\Omega$ the *optical* angular speed, i.e. the rate at which the outgoing beam direction sweeps (for a mirror, twice its mechanical rotation rate, because reflection doubles angles). The formula assumes that $\\Omega$ is constant during the flight time. This is the ToF counterpart of the coherent lag angle in §C10.3a (item 6). The table evaluates it at each scanner's peak optical angular speed $\\Omega$, against a 0.1° receive pixel [E]:",
+   "new": "$$\\Delta\\theta=\\frac{2R\\,\\dot\\theta}{c} \\tag{71}$$\n\nwhere $R$ is the target range, $c$ the speed of light and $\\dot\\theta$ the *optical* angular speed, i.e. the rate at which the outgoing beam direction sweeps (for a mirror, twice its mechanical rotation rate $\\dot\\theta_{\\rm m}$, because reflection doubles angles). With $\\dot\\theta$ in °/s, $\\Delta\\theta$ comes out in degrees; with $\\dot\\theta$ in rad/s, in radians. The formula assumes that $\\dot\\theta$ is constant during the flight time. This is the time-of-flight (ToF) counterpart of the coherent lag angle in §C10.3a (item 6). The table evaluates it at each scanner's peak optical angular speed $\\dot\\theta$, against a 0.1° receive pixel [E]:",
+   "why": "Scan rate written theta-dot per the scheme; units of Eq. (71) stated; ToF expanded at first use."
+  },
+  {
+   "id": "05_C4d_C8_C9-013",
+   "finding": "report #35",
+   "old": "About one 0.09° ROI step:",
+   "new": "About one 0.09° region-of-interest (ROI) step:",
+   "why": "ROI defined at its first use, in the table rather than after it."
+  },
+  {
+   "id": "05_C4d_C8_C9-014",
+   "finding": "symbol scheme; consistency flag #1; live-text consistency (polygon row)",
+   "old": "- **Optical angular speed.** A 10 Hz spin is $360°\\times10=3{,}600$°/s. The AT128 mirror turns at $200/60\\times360°=1{,}200$°/s, doubled on reflection to 2,400°/s. The polygon lower bound is $120°\\times380\\ {\\rm s^{-1}}=45{,}600$°/s. A resonant mirror scanning $\\theta(t)=(\\Theta_{\\rm pp}/2)\\sin2\\pi ft$, where $\\theta(t)$ is the optical beam angle at time $t$, $\\Theta_{\\rm pp}$ the peak-to-peak optical scan angle and $f$ the resonant frequency, moves fastest mid-sweep. Its time derivative peaks there at $\\Omega_{\\max}=\\pi f\\,\\Theta_{\\rm pp}$:",
+   "new": "- **Optical angular speed.** A 10 Hz spin is $360°\\times10=3{,}600$°/s. The AT128 mirror turns at $\\dot\\theta_{\\rm m}=200/60\\times360°=1{,}200$°/s, doubled on reflection to $\\dot\\theta=2{,}400$°/s. Each of its three facets turns through 120° per frame and so sweeps the beam through 240°, of which the 120° field uses half; the frame-average rate $120°\\times10\\ {\\rm Hz}=1{,}200$°/s used for a column sweep in §C10.3a (item 6) is therefore half this active rate. The Falcon K1 polygon turns at 76 rev/s (subsection 2(a)), so $\\dot\\theta=2\\times360°\\times76\\ {\\rm s^{-1}}=54{,}720$°/s, the value in the table; the lower bound used in §C7 and §C7b, $120°\\times380\\ {\\rm s^{-1}}=45{,}600$°/s, assumes that the 120° field fills each facet's whole sweep time. A resonant mirror scanning $\\theta(t)=(\\Theta_{\\rm pp}/2)\\sin2\\pi f_{\\rm mirror}t$, where $\\theta(t)$ is the optical beam angle at time $t$, $\\Theta_{\\rm pp}$ the peak-to-peak optical scan angle and $f_{\\rm mirror}$ the resonant frequency, moves fastest mid-sweep. Its time derivative peaks there at $\\dot\\theta_{\\max}=\\pi f_{\\rm mirror}\\Theta_{\\rm pp}$:",
+   "why": "Matches the table's 54,720°/s, explains the AT128 2,400 vs 1,200°/s (§C10.3a) by its 50% duty, applies theta-dot and f_mirror."
+  },
+  {
+   "id": "05_C4d_C8_C9-015",
+   "finding": "symbol scheme; live-text consistency (polygon row)",
+   "old": "- **Walk-off** is $\\Delta\\theta=2R\\Omega/c$, Eq. (71). At 200 m and 3,600°/s, $\\Delta\\theta=2\\times200\\ {\\rm m}\\times3{,}600°{\\rm /s}/(3\\times10^{8}\\ {\\rm m\\,s^{-1}})=0.0048°$. The same step gives 0.0032° (AT128), 0.061° (polygon; 0.076° at 250 m),",
+   "new": "- **Walk-off** is $\\Delta\\theta=2R\\dot\\theta/c$, Eq. (71). At 200 m and 3,600°/s, $\\Delta\\theta=2\\times200\\ {\\rm m}\\times3{,}600°{\\rm /s}/(3\\times10^{8}\\ {\\rm m\\,s^{-1}})=0.0048°$. The same step gives 0.0032° (AT128), 0.073° (polygon at 54,720°/s; 0.091° at 250 m, and 0.061° at the 45,600°/s lower bound),",
+   "why": "The derivation gave 0.061°/0.076° while the table gives 0.073°/0.091°; both are now shown."
+  },
+  {
+   "id": "05_C4d_C8_C9-016",
+   "finding": "report #35; live-text consistency (polygon row)",
+   "old": "- **Polygon row.** \"100% duty\" assumes the polygon sweeps the 120° field without any dead time between facets; any dead time makes the real sweep faster, so the entry is a lower bound. The \"ROI step\" is the finest angular spacing Falcon K1 uses inside its region of interest (ROI, the part of the field it samples more densely; 0.09°, subsection 4).",
+   "new": "- **Polygon row.** The entry uses the teardown geometry of subsection 2(a): each of the five facets sweeps the beam through $2\\times360°/5=144°$, of which the 120° field uses 83%, so the active sweep is faster than the lower bound. The \"ROI step\" is the finest angular spacing Falcon K1 uses inside its region of interest, the part of the field it samples more densely (0.09°, subsection 4).",
+   "why": "The table no longer says \"100% duty\"; the note now describes the teardown entry it explains."
+  },
+  {
+   "id": "05_C4d_C8_C9-017",
+   "finding": "report #13; symbol scheme",
+   "old": "by about $\\Omega D/\\lambda$ per pass. Here $\\Omega$ is the optical angular speed in rad/s, $D$ the beam diameter on the scanner and $\\lambda$ the wavelength. That caps the chirp (the FMCW frequency sweep) at roughly the time the beam takes to cross its own width (§C7, scanner-induced Doppler).",
+   "new": "by about $\\Delta f_{\\rm scan}\\approx\\dot\\theta D/\\lambda$ per pass. Here $\\dot\\theta$ is the optical angular speed in rad/s, $D$ the beam diameter on the scanner and $\\lambda$ the wavelength. A chirp (the FMCW frequency sweep) longer than about $1/\\Delta f_{\\rm scan}=\\lambda/(\\dot\\theta D)$ is smeared, so that time caps the chirp; it is also the time the beam takes to sweep through one diffraction-limited beamwidth, $\\lambda/D$. For a 5 mm beam at 1,550 nm and the Falcon polygon's lower-bound 45,600°/s (796 rad/s), $\\Delta f_{\\rm scan}=796\\ {\\rm s^{-1}}\\times5\\times10^{-3}\\ {\\rm m}/(1.55\\times10^{-6}\\ {\\rm m})\\approx2.6$ MHz, which caps the chirp near $1/(2.6\\ {\\rm MHz})\\approx0.39$ µs (§C7, scanner-induced Doppler).",
+   "why": "Shows the step from frequency spread to chirp cap, says which width is meant, and gives the §C7 number."
+  },
+  {
+   "id": "05_C4d_C8_C9-018",
+   "finding": "symbol scheme",
+   "old": "against that inertia, $f\\propto\\sqrt{k_\\theta/J}$,",
+   "new": "against that inertia, $f_{\\rm mirror}\\propto\\sqrt{k_\\theta/J}$,",
+   "why": "Mirror resonance written f_mirror."
+  },
+  {
+   "id": "05_C4d_C8_C9-019",
+   "finding": "symbol scheme",
+   "old": "$$\\delta_{\\max}=\\frac{0.217\\,\\rho_{\\rm m}f^2D^5\\theta_{\\rm mech}}{E\\,t_{\\rm m}^2} \\tag{73}$$",
+   "new": "$$\\delta_{\\max}=\\frac{0.217\\,\\rho_{\\rm m}f_{\\rm mirror}^2D^5\\theta_{\\rm mech}}{E\\,t_{\\rm m}^2} \\tag{73}$$",
+   "why": "Mirror scan frequency written f_mirror; tag kept."
+  },
+  {
+   "id": "05_C4d_C8_C9-020",
+   "finding": "symbol scheme",
+   "old": "$f$ the scan frequency (Hz); $D$ the mirror diameter (m); $\\theta_{\\rm mech}$ the mechanical scan amplitude, i.e. the peak rotation of the mirror from rest (rad), which is half the optical amplitude; $E$ the material's Young's modulus (Pa); and $t_{\\rm m}$ the thickness (m). Here $f$ is in hertz, not the angular frequency $2\\pi f$;",
+   "new": "$f_{\\rm mirror}$ the scan frequency (Hz); $D$ the mirror diameter (m); $\\theta_{\\rm mech}$ the mechanical scan amplitude, i.e. the peak rotation of the mirror from rest (rad), which is half the optical amplitude; $E$ the material's Young's modulus (Pa); and $t_{\\rm m}$ the thickness (m). Here $f_{\\rm mirror}$ is in hertz, not the angular frequency $2\\pi f_{\\rm mirror}$;",
+   "why": "Mirror scan frequency written f_mirror."
+  },
+  {
+   "id": "05_C4d_C8_C9-021",
+   "finding": "symbol scheme",
+   "old": "$(2\\pi f)^2\\theta_{\\rm mech}$, gives $\\delta_{\\max}=0.226\\,(1-\\nu^2)\\rho_{\\rm m}f^2D^5\\theta_{\\rm mech}/(E\\,t_{\\rm m}^2)$",
+   "new": "$(2\\pi f_{\\rm mirror})^2\\theta_{\\rm mech}$, gives $\\delta_{\\max}=0.226\\,(1-\\nu^2)\\rho_{\\rm m}f_{\\rm mirror}^2D^5\\theta_{\\rm mech}/(E\\,t_{\\rm m}^2)$",
+   "why": "Mirror scan frequency written f_mirror."
+  },
+  {
+   "id": "05_C4d_C8_C9-022",
+   "finding": "report #30",
+   "old": "=4.3\\times10^{-8}$ m, i.e. 43 nm.",
+   "new": "=4.25\\times10^{-8}$ m, i.e. 42.5 nm.",
+   "why": "The unrounded 42.5 nm is what gives the 547 nm used for the 5 mm case."
+  },
+  {
+   "id": "05_C4d_C8_C9-023",
+   "finding": "report #30",
+   "old": "$(5/3)^5=12.9$ times the 3 mm value, **0.55 µm**, six times $\\lambda/10$ at 905 nm (90 nm; $547/90.5=6.0$).",
+   "new": "$(5/3)^5=12.86$ times the 3 mm value, $12.86\\times42.5\\ {\\rm nm}=547$ nm ≈ **0.55 µm**, six times $\\lambda/10$ at 905 nm (90.5 nm; $547/90.5=6.0$).",
+   "why": "Shows the 547 nm substitution and prints lambda/10 as 90.5 nm, as used in the ratio."
+  },
+  {
+   "id": "05_C4d_C8_C9-024",
+   "finding": "report #25",
+   "old": "A 905 nm ToF beam 0.05–0.1° wide tolerates more, because deformation tilts reflected rays by roughly $10\\,\\delta_{\\max}/D$ [E, order of magnitude].",
+   "new": "A 905 nm ToF beam is 0.05–0.1° wide, 5–10 times the 0.01° diffraction limit of a 5 mm mirror ($\\lambda/D=905\\ {\\rm nm}/5\\ {\\rm mm}=0.18$ mrad). What matters is therefore not wavefront error against $\\lambda/10$ but whether deformation tilts the reflected rays by a sizeable fraction of the beam width; that tilt is roughly $10\\,\\delta_{\\max}/D$ [E, order of magnitude].",
+   "why": "Gives the actual reason a ToF beam tolerates more: it is far wider than its diffraction limit."
+  },
+  {
+   "id": "05_C4d_C8_C9-025",
+   "finding": "report #34",
+   "old": "consistent with the table: its signal-limited factor of 0.40 applied to the ≈200 m of a one-axis unit such as the AT128 gives roughly 80 m.",
+   "new": "consistent with the table: applied to the ≈200 m of a one-axis unit such as the AT128, its factors give roughly 80 m when signal-limited ($0.40\\times200$ m) and ≈126 m when background-limited ($0.63\\times200$ m). If its receive field matches its 0.4° divergence, it spans about $(0.4/0.1)^2=16$ times the solid angle of a 0.1° pixel, and that extra background favours the lower figure [E].",
+   "why": "Shows both factors and says why the signal-limited one is the better match."
+  },
+  {
+   "id": "05_C4d_C8_C9-026",
+   "finding": "report #12",
+   "old": "exactly where a MEMS mirror's slow axis must resonate.",
+   "new": "exactly where the slow axis of a MEMS mirror of 3 mm or more resonates.",
+   "why": "A 2 mm mirror resonates at 1.3 kHz, so the claim holds only for larger mirrors."
+  },
+  {
+   "id": "05_C4d_C8_C9-027",
+   "finding": "report #31",
+   "old": "where $\\gamma$ is the slope on log–log axes.",
+   "new": "where $-\\gamma$ is the slope on log–log axes (the PSD falls as $f^{-\\gamma}$).",
+   "why": "The log-log slope of Eq. (74) is minus gamma."
+  },
+  {
+   "id": "05_C4d_C8_C9-028",
+   "finding": "report #26",
+   "old": "| An illustrative 95 rev/s gives 2.7 × 10⁹ revolutions |",
+   "new": "| The 76 rev/s of subsection 2(a) gives 2.2 × 10⁹ revolutions |",
+   "why": "Uses the five-facet teardown speed of 2(a) instead of the superseded four-facet assumption."
+  },
+  {
+   "id": "05_C4d_C8_C9-029",
+   "finding": "report #26",
+   "old": "- **Polygon.** 95 rev/s is what the ≈380 sweeps/s of subsection 2(a) require from a four-facet polygon ($380/4=95$; the facet count is an assumption), and $95\\times2.88\\times10^{7}=2.7\\times10^{9}$.",
+   "new": "- **Polygon.** The ≈380 sweeps/s of subsection 2(a), already divided by the four beams, need $380/5=76$ rev/s from the five-facet polygon of the teardown (one sweep per facet), and $76\\times2.88\\times10^{7}=2.2\\times10^{9}$.",
+   "why": "Removes the apparent double division and uses the teardown facet count of 2(a)."
+  },
+  {
+   "id": "05_C4d_C8_C9-030",
+   "finding": "report #22; symbol scheme",
+   "old": "The line budget sets it ($f=S/2$ with $S$ from Eq. (69), 0.3–0.94 kHz for the products above: 0.94 kHz for the M1, whose module mirror's maker rates its fast axis at 1.2–1.3 kHz [I], and 0.30–0.32 kHz for InnovizOne, whose four lasers share each sweep [P/E]), and it drifts with temperature.",
+   "new": "The line budget sets it: $f_{\\rm mirror}=S/2$ with $S$ from Eq. (69), which gives 0.3–0.94 kHz for the products above. For the M1 that is 0.94 kHz, while the maker of its module mirror rates the fast axis at 1.2–1.3 kHz [I]. For InnovizOne, whose four lasers share each sweep, it is 0.30–0.32 kHz [P/E]. The frequency also drifts with temperature.",
+   "why": "Splits a long sentence with nested parentheses; f_mirror per the scheme."
+  },
+  {
+   "id": "05_C4d_C8_C9-031",
+   "finding": "symbol scheme",
+   "old": "its bandwidth is $f/Q=f/1{,}000$, i.e. 0.1% of $f$,",
+   "new": "its bandwidth is $f_{\\rm mirror}/Q=f_{\\rm mirror}/1{,}000$, i.e. 0.1% of $f_{\\rm mirror}$,",
+   "why": "Mirror resonance written f_mirror."
+  },
+  {
+   "id": "05_C4d_C8_C9-032",
+   "finding": "report #32",
+   "old": "a 10° × 11° field and up to 29 Hz.",
+   "new": "a 10° × 11° field and frame rates up to 29 Hz.",
+   "why": "Says what the 29 Hz is."
+  },
+  {
+   "id": "05_C4d_C8_C9-033",
+   "finding": "report #12",
+   "old": "In practice that puts the resonance at 100–400 Hz, the most energetic part of the road spectrum.",
+   "new": "Raising that resonance needs stiffer springs, which cut the quasi-static angle for a given actuator (the FoM bound, Eq. (72)). Mirrors of 3 mm and more therefore sit at about 100–400 Hz (Hua et al.'s 5 mm mirror at 136 Hz; Mirrorcle's 3–6.4 mm mirrors at 300–400 Hz), the most energetic part of the road spectrum. Only small mirrors escape it, such as Mirrorcle's 2 mm mirror at 1.3 kHz, at the cost of the collecting area of subsection 2(e).",
+   "why": "Gives the reason (FoM bound) and limits the 100–400 Hz claim to mirrors of 3 mm or more."
+  },
+  {
+   "id": "05_C4d_C8_C9-034",
+   "finding": "consistency flag #10",
+   "old": "Hesai (>2 M cumulative by Nov 2025; 1.62 M in 2025 [P])",
+   "new": "Hesai (>2 M cumulative by Nov 2025; 1.38 M driver-assistance (ADAS) units of its 1.62 M in 2025 [P], §B1)",
+   "why": "The 1.62 M includes 239,273 robotics units (§B1); the one-axis row is the ADAS figure."
+  },
+  {
+   "id": "05_C4d_C8_C9-035",
+   "finding": "report #16",
+   "old": "**Won:** ≈54% of 2024 units weighted by supplier, and the basis of Yole's 52–66% rotating-mirror shares (§C2)",
+   "new": "**Won:** ≈54% of 2024 units weighted by supplier [E], against Yole's 66% for rotating mirrors in 2024 and 52% in its ten-year outlook (§C2)",
+   "why": "Separates Yole's 2024 share from its forecast and tags the supplier-weighted estimate."
+  },
+  {
+   "id": "05_C4d_C8_C9-036",
+   "finding": "consistency flag #12",
+   "old": "**a mechanical ROI:** 0.09° × 0.08° inside a 40° × 4.8° window against 0.18° × 0.24° outside [P], consistent with the galvo slowing over the window and the laser firing faster [E]",
+   "new": "**a mechanical ROI:** the K1 samples 0.09° × 0.08° inside a 40° × 4.8° window against 0.18° × 0.24° outside [P], consistent with the galvo slowing over the window and the laser firing faster [E]; the K2 reaches 0.06° × 0.06° in a 120° × 4.8° band (§C10.6)",
+   "why": "Names the model, so the K1 figures here and the K2 figures of §C10.6 no longer look contradictory."
+  },
+  {
+   "id": "05_C4d_C8_C9-037",
+   "finding": "consistency flag #11",
+   "old": "Seyond now ships mostly 9xx-nm Robin units; Luminar entered Chapter 11",
+   "new": "Seyond shipped 71% of its Q2 2026 units as 9xx-nm Robin sensors, although Falcon still outsold Robin over 2025 (≈195k against 138k; §B1, §C2); Luminar entered Chapter 11",
+   "why": "States the period and figure; in 2025 Falcon outsold Robin."
+  },
+  {
+   "id": "05_C4d_C8_C9-038",
+   "finding": "report #33",
+   "old": "Horizon covers 60% of its field in 100 ms; the Mid-40 reaches 64-line equivalence only at 0.5 s and ≈100% after ≈1.4 s.",
+   "new": "Livox's Horizon covers 60% of its field in 100 ms, while the Mid-40's coverage equals that of a 64-line lidar only after 0.5 s and reaches ≈100% after ≈1.4 s.",
+   "why": "Identifies Horizon as a Livox model and spells out the 64-line comparison."
+  },
+  {
+   "id": "05_C4d_C8_C9-039",
+   "finding": "report #33",
+   "old": "FirstLight gen 2 claims ≈1 km maximum and Atlas Ultra 250 m on low-reflectivity targets (company claims)",
+   "new": "Aurora's FirstLight gen 2 claims ≈1 km maximum range and Aeva's Atlas Ultra 250 m on low-reflectivity targets [P, company claims]",
+   "why": "Attributes both products and uses an evidence tag instead of a parenthesis."
+  },
+  {
+   "id": "05_C4d_C8_C9-040",
+   "finding": "report #28",
+   "old": "energy per point ≈8× that of SPAD ToF (§C7a)",
+   "new": "electrical energy per point ≈8× that of SPAD ToF (§C7a)",
+   "why": "The 8x is electrical (4.25 vs 0.54 uJ); the optical ratio in §C7a is about 3x."
+  },
+  {
+   "id": "05_C4d_C8_C9-041",
+   "finding": "report #40",
+   "old": "5. **What could reverse this.** A large-aperture receive-side steerer",
+   "new": "5. **What could reverse this.** Two developments could: a large-aperture receive-side steerer",
+   "why": "Turns a verbless fragment into a sentence."
+  },
+  {
+   "id": "05_C4d_C8_C9-042",
+   "finding": "report #24; symbol scheme",
+   "old": "Mirrorcle's 300–350 Hz quasi-static 5–6 mm mirrors, the \">0.8 kHz\" guideline and a 1.5 kHz resonant 1-D mirror. The yellow band lies above the profile. (b) Scan walk-off $2R\\Omega/c$ (Eq. (71); $R$ range, $\\Omega$ optical angular speed, $c$ speed of light)",
+   "new": "Mirrorcle's 300–350 Hz quasi-static 5–6.4 mm mirrors, the \">0.8 kHz\" guideline and a 1.5 kHz resonant 1-D mirror. The shaded band marks frequencies above 1 kHz, where the Test IV profile has no energy. (b) Scan walk-off $2R\\dot\\theta/c$ (Eq. (71); $R$ range, $\\dot\\theta$ optical angular speed, $c$ speed of light)",
+   "why": "Says what the band in (a) marks, gives the 6.4 mm size, and uses theta-dot."
+  },
+  {
+   "id": "05_C4d_C8_C9-043",
+   "finding": "report #24",
+   "old": "and four lasers for InnovizOne (company statement). All curves are engineering estimates [E];",
+   "new": "and four lasers for InnovizOne (company statement). The shaded band, from 625 sweeps/s upward, marks rates that call for a resonant mirror ($f_{\\rm mirror}=S/2\\gtrsim0.3$ kHz). All curves are engineering estimates [E];",
+   "why": "Describes the shaded band of panel (d), which the caption did not mention."
+  },
+  {
+   "id": "05_C4d_C8_C9-044",
+   "finding": "report #36",
+   "old": "hit this limit at automotive resolution: staring SPAD arrays and switched FMCW focal-plane arrays.",
+   "new": "hit this limit at automotive resolution: staring arrays of single-photon avalanche diodes (SPADs) and switched focal-plane arrays for frequency-modulated continuous-wave (FMCW) lidar.",
+   "why": "Expands SPAD and FMCW at first use in §C8."
+  },
+  {
+   "id": "05_C4d_C8_C9-045",
+   "finding": "symbol scheme",
+   "old": "grow with $(\\text{FOV}/\\theta)^2$, so they meet the reticle first. Here FOV is the field of view and $\\theta$ the angular resolution per cell, so $\\text{FOV}/\\theta$ is the number of cells along one axis.",
+   "new": "grow with $(\\text{FOV}/\\theta_{\\rm cell})^2$, so they meet the reticle first. Here FOV is the field of view and $\\theta_{\\rm cell}$ the angular pitch of one cell, so $\\text{FOV}/\\theta_{\\rm cell}$ is the number of cells along one axis.",
+   "why": "Cell angular pitch written theta_cell per the scheme."
+  },
+  {
+   "id": "05_C4d_C8_C9-046",
+   "finding": "report #36",
+   "old": "CMOS image sensors of 28.3×38.8 mm on 300 mm wafers, and a 203×179 mm, 1.8-gigapixel wafer-scale sensor, have been demonstrated [P, Zhu et al., *ELEX* 2016]. Wafer-scale stitched sensors are being qualified for particle physics (the ALICE ITS3 upgrade; MOSS prototype) [I].",
+   "new": "CMOS (complementary metal–oxide–semiconductor, the standard silicon chip process) image sensors of 28.3×38.8 mm on 300 mm wafers, and a 203×179 mm, 1.8-gigapixel wafer-scale sensor, have been demonstrated [P, Zhu et al., *ELEX* 2016]. Wafer-scale stitched sensors are being qualified for particle physics (the ITS3 inner-tracker upgrade of CERN's ALICE experiment, with its MOSS monolithic stitched-sensor prototype) [I].",
+   "why": "Expands CMOS and explains ALICE ITS3 and MOSS."
+  },
+  {
+   "id": "05_C4d_C8_C9-047",
+   "finding": "report #36",
+   "old": "- LO is the local oscillator, the reference light each coherent pixel mixes with its echo.",
+   "new": "- LO is the local oscillator, the reference light each coherent pixel mixes with its echo;\n- a SPAD-SoC is a SPAD array stacked on its own timing and histogram logic as one system-on-chip (§C5);\n- an SOA is a semiconductor optical amplifier, and SiN is silicon nitride;\n- an ASIC is an application-specific integrated circuit;\n- étendue is the product of an aperture's area and the solid angle it accepts (§C0 subsection 3).",
+   "why": "Completes the abbreviation list (SPAD-SoC, SOA, SiN, ASIC, étendue)."
+  },
+  {
+   "id": "05_C4d_C8_C9-048",
+   "finding": "report #21; consistency flag #16",
+   "old": "2,160 rows of 3-SPAD macro-pixels at 10 µm ≈ 65 mm (§C6(a)) | Above about 1k lines with 3-SPAD grouping, up to about 3k with 1-SPAD rows, at 10 µm pitch in a 33 mm field before periphery; more at smaller pitch [E]",
+   "new": "2,160 rows of 3-SPAD-high macro-pixels at 10.08 µm ≈ 65 mm (§C6(a)) | Yes above about 1,090 lines with 3-SPAD-high (3×3) macro-pixels, or above about 3,270 lines with one-SPAD rows, at IMX479's 10.08 µm pitch in a 33 mm field before periphery; more lines fit at smaller pitch [E]",
+   "why": "Removes the 'up to 3k' misreading and uses §C6's macro-pixel name and 10.08 µm pitch."
+  },
+  {
+   "id": "05_C4d_C8_C9-049",
+   "finding": "consistency flag #17",
+   "old": "**two chips** (the 4,320-line ETX)",
+   "new": "**two chips** (reported for the 4,320-line ETX, though that choice alone does not prove a reticle limit, §C6(a))",
+   "why": "Carries §C6(a)'s caveat on the ETX two-chip layout."
+  },
+  {
+   "id": "05_C4d_C8_C9-050",
+   "finding": "symbol scheme; consistency flag #16",
+   "old": "| $(\\text{FOV}/\\theta)^2$ × pixel pitch² | 0.05° over 120°×26° with 30 µm macro-pixels ≈ **72.6×15.7 mm** (§C6)",
+   "new": "| $(\\text{FOV}/\\theta_{\\rm cell})^2$ × pixel pitch² | 0.05° over 120°×26° with 30.24 µm (3×3) macro-pixels ≈ **72.6×15.7 mm** (§C6)",
+   "why": "theta_cell per the scheme; 30.24 µm is the pitch that gives 72.6×15.7 mm."
+  },
+  {
+   "id": "05_C4d_C8_C9-051",
+   "finding": "symbol scheme",
+   "old": "Aperture $D\\sim\\lambda/\\theta$: 0.9–1.8 mm for 0.1–0.05°.",
+   "new": "Aperture $D\\sim\\lambda/\\theta_{\\rm beam}$, with $\\theta_{\\rm beam}$ the beam's angular width: 0.9–1.8 mm for 0.1–0.05° at 1550 nm.",
+   "why": "Beam width kept distinct from the cell pitch theta_cell; wavelength stated."
+  },
+  {
+   "id": "05_C4d_C8_C9-052",
+   "finding": "consistency flag #16",
+   "old": "lines of 3-SPAD macro-pixels, or $33\\ {\\rm mm}/10.08\\ \\mu{\\rm m}\\approx3{,}270$ one-SPAD rows, before periphery. 2,160 rows of 3-SPAD macro-pixels at 10 µm are $2{,}160\\times30\\ \\mu{\\rm m}\\approx65$ mm.",
+   "new": "lines of 3-SPAD-high macro-pixels, or $33\\ {\\rm mm}/10.08\\ \\mu{\\rm m}\\approx3{,}270$ one-SPAD rows, before periphery. 2,160 rows of 3-SPAD-high macro-pixels at 10.08 µm are $2{,}160\\times30.24\\ \\mu{\\rm m}\\approx65.3$ mm.",
+   "why": "Same macro-pixel name and pitch as §C6."
+  },
+  {
+   "id": "05_C4d_C8_C9-053",
+   "finding": "symbol scheme",
+   "old": "- **OPA aperture:** by diffraction, a beam of angular width $\\theta$ at wavelength $\\lambda$ needs an emitting aperture of diameter $D\\sim\\lambda/\\theta$.",
+   "new": "- **OPA aperture:** by diffraction, a beam of angular width $\\theta_{\\rm beam}$ at wavelength $\\lambda$ needs an emitting aperture of diameter $D\\sim\\lambda/\\theta_{\\rm beam}$. At 1550 nm that is $1.55\\ \\mu{\\rm m}/(0.1\\times\\pi/180)=0.89$ mm for 0.1° and 1.78 mm for 0.05°.",
+   "why": "Beam width written theta_beam; substitution for the table's 0.9–1.8 mm shown."
+  },
+  {
+   "id": "05_C4d_C8_C9-054",
+   "finding": "report #38",
+   "old": "here an illustrative $D_0=0.1$ cm⁻² [E]. The cost per good die then scales as $A/Y$ [E]. It grows faster than linearly because a larger die both uses more wafer and is more likely to be hit:",
+   "new": "here an illustrative $D_0=0.1$ cm⁻² [E]. The cost per good die grows faster than linearly with $A$, because a larger die both uses more wafer and is more likely to be hit. The table evaluates Eq. (124) for four die areas, on one wafer and on two stacked wafers:",
+   "why": "Drops the restatement of Eq. (124) and gives the table a lead-in sentence."
+  },
+  {
+   "id": "05_C4d_C8_C9-055",
+   "finding": "report #37",
+   "old": "\n$$Y=\\left(1+\\frac{AD_0}{\\alpha}\\right)^{-\\alpha}, \\tag{125}$$",
+   "new": "\n  $$Y=\\left(1+\\frac{AD_0}{\\alpha}\\right)^{-\\alpha}, \\tag{125}$$",
+   "why": "Indents Eq. (125) to its bullet's content column so the list does not break."
+  },
+  {
+   "id": "05_C4d_C8_C9-056",
+   "finding": "symbol scheme",
+   "old": "divided by the angle per cell $\\theta$ in radians: $f=p/\\theta=53\\ \\mu{\\rm m}/(1.745\\times10^{-3})=30.4$ mm.",
+   "new": "divided by the angle per cell $\\theta_{\\rm cell}$ in radians: $f=p/\\theta_{\\rm cell}=53\\ \\mu{\\rm m}/(1.745\\times10^{-3})=30.4$ mm.",
+   "why": "Cell angular pitch written theta_cell."
+  },
+  {
+   "id": "05_C4d_C8_C9-057",
+   "finding": "symbol scheme",
+   "old": "The same two relations, $f=p/\\theta$ and width $=f\\Theta$,",
+   "new": "The same two relations, $f=p/\\theta_{\\rm cell}$ and width $=f\\Theta$,",
+   "why": "Cell angular pitch written theta_cell."
+  },
+  {
+   "id": "05_C4d_C8_C9-058",
+   "finding": "report #19; report #20",
+   "old": "  - Shrinking the pitch shortens $f$ (30 → 5.7 mm) without the photon penalty it imposes on a SPAD staring array (§C6: 28.5 → 11.5 mm).\n  - The difficulty moves to the antenna: contiguous sampling needs each cell's mode to fill most of its pitch. That is why Berkeley's array (a $f\\approx5$ mm lens, since $55\\ \\mu{\\rm m}/(0.6\\times\\pi/180)=5.3$ mm) samples at 0.6° with 0.05° beams (§C10.4).",
+   "new": "  - Shrinking the pitch shortens $f$ (30 → 5.7 mm) without a photon penalty. In a SPAD staring array the same kind of shrink, from 10.08 to 4 µm SPAD pitch, cuts the f/1.2 entrance aperture from 28.5 to 11.5 mm, about six times less collecting area ($(28.5/11.5)^2=6.1$; §C6).\n  - The difficulty moves to the antenna: contiguous sampling needs each cell's mode to fill most of its pitch. Berkeley's array shows the gap. Its lens has $f=55\\ \\mu{\\rm m}/(0.6\\times\\pi/180)=5.3$ mm, so a 0.05° beam corresponds to a mode only $f\\,\\theta_{\\rm beam}=5.3\\ {\\rm mm}\\times8.7\\times10^{-4}\\approx4.6\\ \\mu{\\rm m}$ wide in the focal plane, a twelfth of the 55 µm pitch. The array therefore samples at 0.6° with 0.05° beams ($0.6/0.05=55/4.6\\approx12$; §C10.4).",
+   "why": "The §C6 pair is an entrance aperture, not a focal length; the 0.6°/0.05° step is derived."
+  },
+  {
+   "id": "05_C4d_C8_C9-059",
+   "finding": "report #17; consistency flag #6",
+   "old": "draw about 1–25 mW per $\\pi$ of phase shift each. The low end needs trenches or undercuts and responds more slowly (§C10.2b: 0.14 mW/π undercut at 200–300 µs; about 20 mW/π for a standard heater). With a mean phase of about $\\pi$, 1,000 elements need roughly **1–25 W** of control power ($1{,}000\\times1$–25 mW) [U, typical].",
+   "new": "draw about 0.1–25 mW per $\\pi$ of phase shift each. Heaters with trenches or undercuts reach 0.14 mW/π but respond in 200–300 µs, while the thermal shifters of MIT's 50-element array need 13 mW/π (§C10.2b); the 25 mW/π upper end is unverified [U]. With a mean phase of about $\\pi$, 1,000 elements need roughly **0.1–25 W** of control power ($1{,}000\\times0.14$ mW $=0.14$ W to $1{,}000\\times25$ mW $=25$ W) [E].",
+   "why": "The range now contains its own 0.14 mW/π example; §C10.2b gives 13 mW/π, not 20; the total is a calculation."
+  },
+  {
+   "id": "05_C4d_C8_C9-060",
+   "finding": "report #37",
+   "old": "\n$$L_{2\\pi}=\\frac{2\\,V_\\pi L}{\\Delta V}, \\tag{126}$$",
+   "new": "\n    $$L_{2\\pi}=\\frac{2\\,V_\\pi L}{\\Delta V}, \\tag{126}$$",
+   "why": "Indents Eq. (126) to its nested bullet's content column."
+  },
+  {
+   "id": "05_C4d_C8_C9-061",
+   "finding": "report #18",
+   "old": "- Low-voltage EO OPAs are therefore among the few *transmitter* designs that genuinely approach the reticle.",
+   "new": "- At 0–5 V (16–24 mm) the same 1,000 elements take $20\\times16=320$ to $30\\times24=720$ mm², 37–84% of one 858 mm² field; at 0–3 V (27–40 mm) they take $20\\times27=540$ to $30\\times40=1{,}200$ mm², 63–140%. Low-voltage electro-optic OPAs are therefore among the few *transmitter* designs that approach or exceed the reticle.",
+   "why": "Carries the low-voltage lengths through to area, which the conclusion is about."
+  },
+  {
+   "id": "05_C4d_C8_C9-062",
+   "finding": "consistency flag #2",
+   "old": "each needing LO power, a balanced detector and a 100–400 MHz digitizer (§C7)",
+   "new": "each needing LO power, a balanced detector and a digitizer for a 100–400 MHz beat, sampling at about 1 GS/s (10⁹ samples per second; §C7, §C7a)",
+   "why": "One digitizer description: beat bandwidth from §C7, sample rate from §C7a."
+  },
+  {
+   "id": "05_C4d_C8_C9-063",
+   "finding": "report #38",
+   "old": "In short, the reticle is a hard design constraint only for one-cell-per-direction architectures. For the rest, other limits bind first, and chip area matters mainly through yield and cost.\n\n- **Reticle is a real constraint mainly for \"one cell per direction\" designs at automotive resolution:** staring SPAD arrays and switched FMCW focal-plane arrays.\n- For scanned SPAD columns, SiPMs, lasers and continuously steered OPAs, other limits usually bind first: photons, memory, pins, phase control, heat.",
+   "new": "- **Reticle is a real constraint mainly for \"one cell per direction\" designs at automotive resolution:** staring SPAD arrays and switched FMCW focal-plane arrays.\n- For scanned SPAD columns, SiPMs, lasers and continuously steered OPAs, other limits usually bind first (photons, memory, pins, phase control, heat), and chip area matters mainly through yield and cost.",
+   "why": "Folds the opening paragraph, which restated the first two bullets, into the second bullet."
+  },
+  {
+   "id": "05_C4d_C8_C9-064",
+   "finding": "consistency flag #18",
+   "old": "The one-axis mechanical scan dominates today (§C6) partly because",
+   "new": "The one-axis mechanical scan dominates today (§C4, item 6; §C4d) partly because",
+   "why": "The one-axis argument is in §C4 item 6 and §C4d, not §C6."
+  },
+  {
+   "id": "05_C4d_C8_C9-065",
+   "finding": "report #38",
+   "old": "The answer is that the raw collision rate in dense traffic is already at the percent level, but that dithered firing plus consistency tests keep the surviving random-ghost rate low; the residual risks are identical units firing in step, saturation when one lidar looks straight into another, and products without that logic.",
+   "new": "In short, foreign pulses are common before rejection, and the receiver's rejection logic decides whether they become false points; the judgement below gives the detail.",
+   "why": "Cuts the introduction's answer to one sentence; the Judgement carries the detail."
+  },
+  {
+   "id": "05_C4d_C8_C9-066",
+   "finding": "consistency flag #20",
+   "old": "newly sold new-energy vehicles (NEVs: battery-electric and plug-in hybrid cars)",
+   "new": "newly sold new-energy vehicles (NEVs: battery-electric, plug-in hybrid and range-extended cars)",
+   "why": "Same NEV definition as §B1."
+  },
+  {
+   "id": "05_C4d_C8_C9-067",
+   "finding": "report #11",
+   "old": "Adding 2024 (1.53 M units, §B1), earlier years and 2026 (985k units in Q1, §B1), and assuming 4–5 M units for the whole of 2026, gives a stock of roughly 6–8 M lidar cars by end-2026, about 2% of a Chinese car fleet assumed at ≈350 M.",
+   "new": "Adding 2024 (1.53 M units, §B1) and 2026 (985k units in Q1, §B1, and an assumed 4–5 M for the whole year) gives $1.53+3.21+4\\approx8.7$ M to $1.53+3.32+5\\approx9.9$ M units installed in 2024–2026, i.e. $8.7/1.6\\approx5.5$ M to $9.9/1.3\\approx7.6$ M lidar cars. Installations before 2024, not quantified here, add to this, so the stock is roughly 6–8 M lidar cars by end-2026. That is about 2% ($7\\ {\\rm M}/350\\ {\\rm M}$) of a Chinese car fleet assumed at ≈350 M [U].",
+   "why": "Shows the sum and the division by units per car; tags the assumed fleet."
+  },
+  {
+   "id": "05_C4d_C8_C9-068",
+   "finding": "report #27",
+   "old": "The exception is near temperature extremes, because a laser's wavelength rises with temperature: a 905 nm edge-emitting laser (EEL) drifts to about 927 nm at +105 °C ($905+0.27\\ {\\rm nm\\,K^{-1}}\\times80\\ {\\rm K}\\approx927$ nm, taking 905 nm at 25 °C; 0.27 nm/K is the laser's wavelength temperature coefficient).",
+   "new": "The exception is at temperature extremes, because a laser's wavelength rises with temperature. A 905 nm edge-emitting laser (EEL), whose wavelength temperature coefficient is 0.27 nm/K, drifts to about 927 nm at +105 °C ($905\\ {\\rm nm}+0.27\\ {\\rm nm\\,K^{-1}}\\times80\\ {\\rm K}\\approx927$ nm, taking 905 nm at 25 °C). That reaches a 940 nm receiver only through a filter wider than about 26 nm ($2\\times(940-927)$ nm), at the wide end of the 10–40 nm range.",
+   "why": "States the consequence of the 927 nm drift."
+  },
+  {
+   "id": "05_C4d_C8_C9-069",
+   "finding": "report #10",
+   "old": "Stray light is the larger risk. If even $10^{-5}$ of the directly received light is scattered by lens flare or the window onto other active pixels, each gets about 100× a normal return ($10^{-5}\\times10^{7}=10^{2}$).",
+   "new": "Stray light is the larger risk. If lens flare or window scatter delivers even $10^{-5}$ of the directly received power to each of the other active pixels, each gets about 100 times the return of a 10% Lambertian target at the same range ($10^{-5}\\times10^{7}=10^{2}$).",
+   "why": "The 1e-5 must reach each pixel for the 100x; 'a normal return' defined."
+  },
+  {
+   "id": "05_C4d_C8_C9-070",
+   "finding": "report #39",
+   "old": "**Measurements**\n\n| Study | Setup | Result |",
+   "new": "**Measurements**\n\nThe table lists published measurements of lidar-to-lidar interference: each study's setup and what it found.\n\n| Study | Setup | Result |",
+   "why": "Table lead-in sentence."
+  },
+  {
+   "id": "05_C4d_C8_C9-071",
+   "finding": "report #39",
+   "old": "(≈5×10⁻⁴ of points; my inference from the stated frame format)",
+   "new": "(≈5×10⁻⁴ of points [E], inferred from the stated frame format)",
+   "why": "Own estimate tagged [E]."
+  },
+  {
+   "id": "05_C4d_C8_C9-072",
+   "finding": "report #39",
+   "old": "spanning 1.5–110 m of equivalent range.",
+   "new": "with randomization windows equivalent to 1.5–110 m of range ($2\\times1.5\\ {\\rm m}/c=10$ ns to $2\\times110\\ {\\rm m}/c\\approx730$ ns).",
+   "why": "Explains what spans 1.5–110 m and gives it in time."
+  },
+  {
+   "id": "05_C4d_C8_C9-073",
+   "finding": "report #5",
+   "old": "- Post-rejection rates in modern units (10⁻⁵–10⁻³, or \"negligible\") agree.",
+   "new": "- Published post-rejection false-alarm rates, from $10^{-5}$ (Hwang & Lee, a preset value) to $1.1\\times10^{-3}$ (Liang et al., with 200 interferers), both from simulations, lie above this random-coincidence floor. Bursts, direct view or synchronized units, not random coincidences, therefore probably set the residual rate.",
+   "why": "1e-5 to 1e-3 lies above the derived floor, so 'agree' was wrong; the sources are simulations."
+  }
+ ],
+ "skipped": [
+  {
+   "finding": "report #1",
+   "kind": "model_round2",
+   "location": "§C9a, Check item 3: \"the Poisson probability of two foreign counts in a point is about $\\bar n^2/2$\" (Eq. (128))",
+   "detail": "Rebuilds the §C9a ghost model: foreign shots rather than counts (one shot can add up to nine counts, §C9), a 2-of-10 shot-recurrence rule, and $\\bar k=n\\,p_1$ in place of $\\bar n$. Round 2."
+  },
+  {
+   "finding": "report #2",
+   "kind": "model_round2",
+   "location": "§C9, 'Two kinds of event matter', item 2: \"For two facing scanners they affect of order $10^{-3}$ of points per frame and saturate a few points.\"",
+   "detail": "Needs an [E] chain (fraction of points whose pixel sees the foreign aperture × probability the foreign beam is aimed at my aperture in the 20.8 µs window × pixels per saturating hit ÷ 1.25 M points per frame) and a per-frame or per-event statement; §C9a item 5 and the GB/T ≤0.1% comparison depend on it. Round 2."
+  },
+  {
+   "finding": "report #3",
+   "kind": "model_round2",
+   "location": "§C9a, Check item 3: \"That is ≈1–9 ghosts per 2.5 Mpt frame under a 2-count rule\"",
+   "detail": "The §C6-class unit gives 1.25 Mpt frames at 20 fps; ghost counts per frame and per second to be recomputed with the rule of report #1. Round 2."
+  },
+  {
+   "finding": "report #4",
+   "kind": "model_round2",
+   "location": "§C9a, Check item 3: \"$\\tau_{\\rm bin}$ the histogram bin width (1 ns here)\"",
+   "detail": "§C9 uses 5 cm (0.33 ns) bins; with 0.33 ns, $p_{\\rm ghost}$ falls about threefold (1.3×10⁻⁷ to 1.2×10⁻⁶). Round 2."
+  },
+  {
+   "finding": "report #6",
+   "kind": "model_round2",
+   "location": "§C9, 'Units within 100 m': \"from a few to perhaps 15 lidars today\"",
+   "detail": "Today's derived count is 3–16 while the Result uses n = 10–30; restating the Result for today's 3–16 (1.3–6.5%) and the later 10–30 changes the model's stated rates. Round 2."
+  },
+  {
+   "finding": "report #7",
+   "kind": "model_round2",
+   "location": "§C9a, Check item 1: \"Kim's SICK geometry (≈60–125 foreign shots/s per footprint, ≈0.53 µs window)\"",
+   "detail": "Derive 60–125 s⁻¹ from the LMS-511 shot rate × (beam width ÷ field) with sources, explain the 80 m window, and label ≈4.9×10⁻⁵ as the model's prediction. Round 2."
+  },
+  {
+   "finding": "report #8",
+   "kind": "model_round2",
+   "location": "§C9a, Check item 1: \"Kim measured 2.6×10⁻⁵–1.7×10⁻⁴\"",
+   "detail": "The Measurements table gives 6×10⁻⁶–1.7×10⁻⁴; the 85× rescaling depends on which arrangements are used. Round 2."
+  },
+  {
+   "finding": "report #9",
+   "kind": "model_round2",
+   "location": "§C9a, Check item 2: \"a combined reduction factor of about 0.1–0.5 applied to the 4–12%\"",
+   "detail": "Each reduction factor (overlap, in-band share, spot density) needs a value range and tag before multiplying; 'one foreign count' should read shot. Round 2."
+  },
+  {
+   "finding": "consistency flag #4",
+   "kind": "model_round2",
+   "location": "§C9a, Check item 1 vs Measurements table (Kim)",
+   "detail": "Same as report #8."
+  },
+  {
+   "finding": "consistency flag #5",
+   "kind": "model_round2",
+   "location": "§C9a, Check item 3 (2.5 Mpt frame; 1 ns bins)",
+   "detail": "Same as reports #3 and #4."
+  },
+  {
+   "finding": "report #11 (pre-2024 units; fleet size)",
+   "kind": "needs_source",
+   "location": "§C9, 'Sales penetration is not fleet share': \"earlier years\" and \"a Chinese car fleet assumed at ≈350 M\"",
+   "detail": "The edit shows the 2024–2026 arithmetic (5.5–7.6 M lidar cars) and tags the fleet [U]. Closing the 6–8 M estimate needs China's lidar installations before 2024 (2022–2023) and a source for the ≈350 M car fleet."
+  },
+  {
+   "finding": "report #17 (upper end)",
+   "kind": "needs_source",
+   "location": "§C8.2 item 3: \"draw about 1–25 mW per $\\pi$ of phase shift each\"",
+   "detail": "The 25 mW/π upper end, and the 25 W total it gives, has no source in the report and stays tagged [U]; a citation for a high-power thermo-optic shifter would firm it or replace it with the 13 mW/π of §C10.2b."
+  },
+  {
+   "finding": "report #33 (InnovizOne 60/75 m)",
+   "kind": "needs_source",
+   "location": "§C4d subsection 4 table, 2-D MEMS row: \"60/75 m outside, at 20 klx [P]\"",
+   "detail": "Which of 60 and 75 m is native and which uses pixel summation must be read from the InnovizOne series-production datasheet. If 60 m is native: \"…(140 m with pixel summation) and 60 m native (75 m with summation) outside it, at 20 klx [P]\"."
+  },
+  {
+   "finding": "report #22 (two-beam assumption)",
+   "kind": "already_fixed",
+   "location": "§C4d subsection 3: \"The line budget sets it ($f=S/2$ with $S$ from Eq. (69), 0.3–0.94 kHz…\"",
+   "detail": "The two-beams-per-sweep InnovizOne assumption (0.6 kHz) is gone; the live text uses the four-lasers-per-sweep 0.30–0.32 kHz of 2(a). The sentence split and $f_{\\rm mirror}$ are applied as an edit."
+  },
+  {
+   "finding": "consistency flag #1 (§C10.3a side)",
+   "kind": "cross_section",
+   "location": "§C10.3a item 6: \"With a column of channels swept once per frame ($120^\\circ\\times10$ Hz, about 1,200°/s),\"",
+   "detail": "Proposed: \"With a column of channels swept once per frame ($120^\\circ\\times10$ Hz, about 1,200°/s as a frame average; a mirror that spends half of each frame on the field, such as the AT128's, sweeps at 2,400°/s during that half, §C4d),\". If the AT128 is meant, its lag and smear at the active rate are twice the values given there."
+  },
+  {
+   "finding": "consistency flag #2 (§C7 side)",
+   "kind": "cross_section",
+   "location": "§C7, channel paragraph: \"each with its own 100–400 MHz ADC path:\"",
+   "detail": "Proposed: \"each with its own ADC path for a 100–400 MHz beat, sampling at about 1 GS/s (§C7a):\", matching §C4d and §C8.2 item 4."
+  },
+  {
+   "finding": "consistency flag #20 (§F2 side)",
+   "kind": "cross_section",
+   "location": "§F2, volume paragraph: \"about 25–30% of new-energy vehicles (NEVs: battery-electric and plug-in hybrid cars)\"",
+   "detail": "Proposed: \"about 25–30% of new-energy vehicles (NEVs: battery-electric, plug-in hybrid and range-extended cars)\", matching §B1 and the §C9 edit."
+  },
+  {
+   "finding": "consistency flag #8 (68 vs 64 channels)",
+   "kind": "needs_source",
+   "location": "§C8.1 table, SiPM row: \"ATX: **17 SiPM dies × 4 channels** [T]\" (also §C4b's family table and §C10.7) vs §C4b: \"The ATX uses 64 physical channels\"",
+   "detail": "17 × 4 = 68 against 64. Reconciling them (for example spare or reference channels) needs the TechInsights teardown DDT-2505-806, which is paywalled."
+  },
+  {
+   "finding": "consistency flag #13",
+   "kind": "already_fixed",
+   "location": "§C4d 2(a): \"its manual gives **1,520 \"vertical scanning lines\" per second**\"",
+   "detail": "The TechInsights '1,500 lines/s' figure no longer appears anywhere in the report; the live text uses the K1 manual's 1,520 lines/s and the teardown geometry throughout."
+  },
+  {
+   "finding": "consistency flag #14",
+   "kind": "needs_source",
+   "location": "§C4d subsection 1 table, one-axis row: \"The Feb 2026 manual calls it a \"1-D rotating mirror (hybrid solid-state)\"\"",
+   "detail": "§C3b and the §E9 note date the ATX S01 manual A07 to May 2026, and the linked file name ends -260520. Confirm the manual's own date; if May 2026, write \"The ATX S01 user manual (A07, May 2026, §E9) calls it…\"."
+  },
+  {
+   "finding": "consistency flag #15",
+   "kind": "needs_decision",
+   "location": "§C8.1 table, FMCW switched FPA row: \"0.1° over 120°×25° at 53 µm ≈ **63.6×13.3 mm** [E]. At §C7's specification (0.05° over 120°×26°, 55 µm pitch) ≈132×29 mm\"",
+   "detail": "§C10.4 uses 53 µm and 120°×25° (127×27 mm at 0.05°); §C7 and this row use 55 µm and 120°×26° (132×29 mm); this row's own 0.1° case uses 120°×25°. Choose one vertical field and one pitch for the 0.05° case; for example 120°×25° at 53 µm gives 2,400×500 addresses, 127×26.5 mm."
+  },
+  {
+   "finding": "consistency flag #19",
+   "kind": "needs_source",
+   "location": "§C4d 2(a): \"RoboSense M1 (125 lines at 15 Hz [P])\"",
+   "detail": "125 lines at 15 Hz with the 787,500 pts/s of 2(b) (an M1 Plus figure) implies 420 points per line (≈0.29° over 120°); at 10 Hz it would be 630 points (≈0.19°), $S=1{,}250$ sweeps/s and $f_{\\rm mirror}=0.63$ kHz. Confirm the M1 frame rate from the RoboSense specification; panel (d) and the 0.3–0.94 kHz range depend on it."
+  },
+  {
+   "finding": "report #24 (figure labels)",
+   "kind": "needs_decision",
+   "location": "Figure C4d, script build/figures/mechanical_scanning_limits.py: panel (d) label \"kHz-class resonant mirror needed\"; panel (a) label \"quasi-static 5–6 mm\"",
+   "detail": "The panel (d) band starts at 625 sweeps/s ($f_{\\rm mirror}\\approx0.31$ kHz), not at kHz class, and panel (a) labels Mirrorcle's 5.0 and 6.4 mm mirrors '5–6 mm'. The caption edits describe the bands; relabelling needs a script change and a figure rebuild, outside this round."
+  }
+ ]
+}

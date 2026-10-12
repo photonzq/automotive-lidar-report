@@ -1,0 +1,34 @@
+{
+ "block": "R4_R2_appendix",
+ "edits": [
+  {
+   "id": "R4_R2_appendix-001",
+   "finding": "Round 4 source research, R2 Appendix 2 (Technology routes and SPAD)",
+   "old": "- 汽车之心 (Autobit), Huawei 192-line lidar D3 launched 26 Dec 2023 (21 Jun 2024): https://www.autobit.xyz/news/3986.html",
+   "new": "- 汽车之心 (Autobit), Huawei 192-line lidar D3 launched 26 Dec 2023 (21 Jun 2024): https://www.autobit.xyz/news/3986.html\n- Excelitas C30902EH Si APD datasheet ($k_{\\rm eff}=0.02$, gain 150): https://www.excelitas.com/file-download/download/public/91501?filename=C30902EH_Si_APD_Datasheet.pdf\n- Excelitas C30645/C30662 InGaAs APD datasheet (usable gain 10–20): https://www.excelitas.com/file-download/download/public/61766?filename=Excelitas_C30645_Series_InGaAs_APD_Datasheet.pdf\n- Campbell *et al.*, recent advances in APDs, *IEEE JSTQE* (2004): https://coldren.ece.ucsb.edu/sites/default/files/publications/campbelljstqejuly04.pdf\n- Martyniuk *et al.*, infrared APDs review, *Light Sci. Appl.* (2023): https://www.nature.com/articles/s41377-023-01259-3\n- Rae and Mellot (ST), 64-zone SPAD ranging device, ISSW 2018 slides: https://imagesensors.org/wp-content/uploads/2019/05/Bruce_Rae.pdf\n- Bonanno (Yole), smartphone laser-autofocus teardown and costing, ISSW 2024: https://www.imagesensors.org/Past%20Workshops/2024%20ISSW/Papers/R06.1.pdf\n- Seibersdorf Laboratories, white papers on IEC 60825-1:2014 (Class 3B cap above 1,310 nm) and on EN 60825-1 A11: https://www.seibersdorf-laboratories.at/fileadmin/user_upload/docs/le/las/publ/whitepaper_iec-60825-1.pdf ; https://www.seibersdorf-laboratories.at/fileadmin/user_upload/docs/le/las/publ/whitepaper_a11_to_en_60825-1.pdf\n- Duthon, Colomb and Bernardin, fog extinction against wavelength, *Appl. Sci.* (2019): https://www.mdpi.com/2076-3417/9/14/2843\n- Seyond Falcon K1 user manual V2.1.2 (30 W, 1.75 kg): https://www.seyond.com/wp-content/uploads/2024/12/Seyond-Falcon-K1-LiDAR_User-Manual_V2.1.2_EN_PublicRH_20240314.pdf\n- Seyond Falcon K3 product page (Chinese; 900 m maximum, 450 m at 10%, 20 W): https://www.seyond.cn/falcon-k3-2/\n- Beer *et al.*, Fraunhofer IMS SPAD lidar sensor (2% PDE at 905 nm), *Sensors* (2018): https://pmc.ncbi.nlm.nih.gov/articles/PMC6308528/\n- onsemi ArrayRDM-0112A20 (16% PDE at 905 nm): https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6325/ARRAYRDM-0112A20-QFN.pdf\n- onsemi J-Series SiPM datasheet: https://www.farnell.com/datasheets/2704145.pdf\n- Na *et al.*, review of germanium-silicon SPADs, Proc. SPIE 13448 (2025): https://arxiv.org/pdf/2605.07343\n- Na *et al.*, room-temperature Ge-Si SPAD (Artilux), *Nature* (2024): https://doi.org/10.1038/s41586-024-07076-x\n- Bian *et al.* (GlobalFoundries), Ge-on-Si PIN photodiodes, OFC 2025 Th3E.6: https://opg.optica.org/abstract.cfm?URI=OFC-2025-Th3E.6\n- Wang *et al.* (Fudan University, Zhangjiang Laboratory, Innolight), ultra-thin Ge photodiode, OFC 2025 M4K.2: https://opg.optica.org/abstract.cfm?uri=OFC-2025-M4K.2\n- Chen *et al.*, Ge p-i-n dark current, *J. Appl. Phys.* (2016), author copy: https://www.photonics.intec.ugent.be/download/pub_3746.pdf\n- Hale and Querry, optical constants of water (1973): https://doi.org/10.1364/AO.12.000555\n- Kou, Labrie and Chylek, refractive indices of water and ice (1993): https://doi.org/10.1364/AO.32.003531\n- KrASIA (36Kr), Seyond's SPAC listing and the 1,550 nm cost (Oct 2025): https://kr-asia.com/lidar-maker-seyond-pursues-spac-listing-after-losing-ground-to-rivals\n- Yole, Automotive LiDAR 2023 conference deck (wavelength and light-source shares): https://medias.yolegroup.com/uploads/2023/12/automotive-lidar_boulay_yole_intelligence_v2.pdf\n- RoboSense M3 at CES 2024 (940 nm, 50–70% cheaper than 1,550 nm): https://en.prnasia.com/releases/global/robosense-announces-new-m-platform-lidar-sensors-at-ces-2024-433294.shtml",
+   "why": "Sources read by the R2 research agent (sources/R2_C0_C4_findings.md), placed by section."
+  },
+  {
+   "id": "R4_R2_appendix-002",
+   "finding": "Round 4 source research, R2 Appendix 2 (FMCW and beam steering)",
+   "old": "- Mobileye, CES 2021 \"Under the Hood\" live blog (Shashua: FMCW lidar PIC with 184 vertical lines scanned by optics): https://www.mobileye.com/news/ces-2021-under-the-hood-with-prof-amnon-shashua/",
+   "new": "- Mobileye, CES 2021 \"Under the Hood\" live blog (Shashua: FMCW lidar PIC with 184 vertical lines scanned by optics): https://www.mobileye.com/news/ces-2021-under-the-hood-with-prof-amnon-shashua/\n- Wang *et al.* (SUSTech and RoboSense), integrated FMCW photonic engine, *Moore and More* (2025): https://link.springer.com/article/10.1007/s44275-025-00030-7",
+   "why": "Sources read by the R2 research agent (sources/R2_C0_C4_findings.md), placed by section."
+  },
+  {
+   "id": "R4_R2_appendix-003",
+   "finding": "Round 4 source research, R2 Appendix 2 (Supply chain and geopolitics)",
+   "old": "- 国科光芯 B+ round and use of proceeds (瑞财经 via Tencent News, 3 Sep 2026): https://news.qq.com/rain/a/20260903A09R9000",
+   "new": "- 国科光芯 B+ round and use of proceeds (瑞财经 via Tencent News, 3 Sep 2026): https://news.qq.com/rain/a/20260903A09R9000\n- BigGo Finance, InP substrate prices (Apr 2026): https://finance.biggo.com/news/xsiIxJ0Bh5an-7GhIww3\n- Reuters via MINING.COM, InP export controls and the 6-inch price (Jun 2026): https://www.mining.com/web/chinas-control-over-indium-phosphide-exports-threatens-ai-data-centre-rollout/",
+   "why": "Sources read by the R2 research agent (sources/R2_C0_C4_findings.md), placed by section."
+  },
+  {
+   "id": "R4_R2_appendix-004",
+   "finding": "Round 4 source research, R2 Appendix 2 (Lidar market and Western programs)",
+   "old": "- Tencent News, Jin Yuzhi announces more than 2 M ADS installations (8 Sep 2026): https://news.qq.com/rain/a/20260908A05SBC00",
+   "new": "- Tencent News, Jin Yuzhi announces more than 2 M ADS installations (8 Sep 2026): https://news.qq.com/rain/a/20260908A05SBC00\n- Hesai, ATX \"best-selling long-range lidar in the ADAS segment\" and the Yole 43% share (May 2026): https://www.prnewswire.com/news-releases/hesai-secures-design-win-from-another-top-european-oem-adding-1-million-unit-order-302777712.html",
+   "why": "Sources read by the R2 research agent (sources/R2_C0_C4_findings.md), placed by section."
+  }
+ ],
+ "skipped": []
+}

@@ -1,0 +1,1219 @@
+{
+ "block": "08_C7b",
+ "edits": [
+  {
+   "id": "08_C7b-001",
+   "finding": "report #27",
+   "old": "laser and mixes",
+   "new": "laser in linear ramps (chirps), one up and one down per point, and mixes",
+   "why": "define ramps at the first FMCW sentence"
+  },
+  {
+   "id": "08_C7b-002",
+   "finding": "symbol scheme",
+   "old": "$P_{\\rm opt}=E_{\\rm opt}\\dot N$. Here $E_{\\rm opt}$",
+   "new": "$P_{\\rm opt}=E_{\\rm pt}\\dot N$. Here $E_{\\rm pt}$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-003",
+   "finding": "report #12; report #15 (per-cell caveat)",
+   "old": "a small part of a 0.05° angular cell. To cover the whole cell, FMCW needs ≈15 µJ, about 160× more.",
+   "new": "≈2% of a cell, one 0.05° × 0.05° angular resolution element of the point cloud. To cover a whole cell, FMCW needs ≈15 µJ: 48 samples, and about 160× the 93 nJ of a ToF point. The per-sample comparison is the fair one for objects larger than the sample spacing, such as cars; the per-cell one applies to objects smaller than a cell, such as debris (subsection 1(d)).",
+   "why": "say what 160x is relative to, define the cell, add the per-sample vs per-cell caveat"
+  },
+  {
+   "id": "08_C7b-004",
+   "finding": "report #27",
+   "old": "$E_{\\rm opt}/P_{\\rm ch}+2\\tau$ on each point.",
+   "new": "$E_{\\rm pt}/P_{\\rm ch}+2\\tau$ on each point; the $2\\tau$ arises because each of the point's two ramps loses one round trip.",
+   "why": "explain the 2 tau (two ramps, one round trip each)"
+  },
+  {
+   "id": "08_C7b-005",
+   "finding": "report #10",
+   "old": "measures only ≈0.05–0.25 Mpts/s at 200 m.",
+   "new": "measures only ≈47–130 kpts/s at 200 m with 16–30 mW of light, and 176–240 kpts/s even at 100 mW (subsection 2(b) table).",
+   "why": "per-channel rate consistent with the subsection 2 table at realistic power"
+  },
+  {
+   "id": "08_C7b-006",
+   "finding": "report #20; report #8",
+   "old": "m, ≈30 of ≈68 W is the useful optical energy per point divided by the CW laser's wall-plug efficiency, $\\dot NE_{\\rm opt}/(\\eta_{\\rm coh}\\eta_{\\rm WPE})$, and ≈9 W more is light emitted during the round-trip dead time;",
+   "new": "m the sensor draws ≈68 W. About 30 W of it is the useful optical power $\\dot NE_{\\rm pt}$ divided by $\\eta_{\\rm coh}\\eta_{\\rm wp}$, where $\\eta_{\\rm coh}$ is the share of the beat power left in the FFT peak (≈1 for a narrow laser) and $\\eta_{\\rm wp}$ the CW laser's wall-plug efficiency. About 9 W more is light emitted during the round-trip dead time, and",
+   "why": "power, not energy; define eta_coh before use; split the long sentence"
+  },
+  {
+   "id": "08_C7b-007",
+   "finding": "report #20",
+   "old": "- Laser linewidth",
+   "new": "- The laser linewidth $\\Delta\\nu$",
+   "why": "define the linewidth symbol at first use"
+  },
+  {
+   "id": "08_C7b-008",
+   "finding": "report #38",
+   "old": "permits brighter channels, which pay if the transmitter is gated off while its echo would be wasted.",
+   "new": "also permits brighter channels, which save power only if each transmitter is switched off during the last $\\tau$ of every ramp, when its echo would land in a discarded window.",
+   "why": "replace the hard-to-parse 'which pay if'"
+  },
+  {
+   "id": "08_C7b-009",
+   "finding": "report #8",
+   "old": "central case is",
+   "new": "central case, at 15 Mpts/s and 200 m, is",
+   "why": "label the 67 W total with its case"
+  },
+  {
+   "id": "08_C7b-010",
+   "finding": "symbol scheme",
+   "old": "$$E_{\\rm opt}=\\frac{n_{\\rm req}\\,E_{\\rm ph}\\,\\pi R^2}{\\rho\\,A_{\\rm eff}\\,\\eta},\\qquad E_{\\rm ph}=\\frac{hc}{\\lambda}, \\tag{97}$$",
+   "new": "$$E_{\\rm pt}=\\frac{n_{\\rm req}\\,E_{\\rm ph}\\,\\pi R^2}{\\rho\\,A_{\\rm eff}\\,\\eta},\\qquad E_{\\rm ph}=\\frac{hc}{\\lambda}, \\tag{97}$$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-011",
+   "finding": "consistency flag (equations re-tagged)",
+   "old": "$1/E_{\\rm opt}$ points.",
+   "new": "$1/E_{\\rm pt}$ points. Eq. (97) is Eq. (93) of §C7a.",
+   "why": "cite the earlier tag of the same equation"
+  },
+  {
+   "id": "08_C7b-012",
+   "finding": "symbol scheme",
+   "old": "$P_{\\rm opt}=E_{\\rm opt}\\dot N$,",
+   "new": "$P_{\\rm opt}=E_{\\rm pt}\\dot N$,",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-013",
+   "finding": "symbol scheme",
+   "old": "$$\\bar n_{\\rm bg,bin}=r_{\\rm bg}\\,t_{\\rm bin}\\,N_{\\rm shots}, \\tag{98}$$",
+   "new": "$$\\bar n_{\\rm bg,bin}=r_{\\rm bg}\\,\\Delta t_{\\rm bin}\\,N_{\\rm shots}, \\tag{98}$$",
+   "why": "symbol scheme: t_bin -> Delta t_bin"
+  },
+  {
+   "id": "08_C7b-014",
+   "finding": "symbol scheme",
+   "old": "$t_{\\rm bin}$",
+   "new": "$\\Delta t_{\\rm bin}$",
+   "why": "symbol scheme: t_bin -> Delta t_bin"
+  },
+  {
+   "id": "08_C7b-015",
+   "finding": "report #35",
+   "old": "the model's PDE of 0.37.",
+   "new": "the model's photon detection efficiency (PDE) of 0.37.",
+   "why": "expand PDE at first use"
+  },
+  {
+   "id": "08_C7b-016",
+   "finding": "consistency flag (background events)",
+   "old": "events per point.",
+   "new": "events per point. (§C7a(c) counts ≈5,990 because it adds the 25 signal counts.)",
+   "why": "explain why §C7a gives 5,990"
+  },
+  {
+   "id": "08_C7b-017",
+   "finding": "symbol scheme (ionization ratio k)",
+   "old": "ionization-coefficient ratio, the ratio of the two carriers' impact-ionization rates, is $k=0.45$;",
+   "new": "ionization ratio $k$, the impact-ionization coefficient of the weaker-ionizing carrier divided by that of the stronger one (hole/electron in Si; electron/hole in InP), is 0.45;",
+   "why": "define k as the fix spec requires"
+  },
+  {
+   "id": "08_C7b-018",
+   "finding": "report #28",
+   "old": "This gives $n\\approx890$",
+   "new": "Squaring Eq. (100) and dividing by $M^2$ gives a quadratic in $I_s$, $I_s^2-98\\,qF\\Delta f\\,I_s-49\\,i_n^2/M^2=0$, with $98\\,qF\\Delta f=98\\times1.60\\times10^{-19}\\ {\\rm C}\\times5.5\\times2.5\\times10^{8}\\ {\\rm s^{-1}}=21.6$ nA and $49\\,i_n^2/M^2=49\\times(32\\ {\\rm nA})^2/100=502\\ {\\rm nA^2}$. Its positive root is $I_s=(21.6+\\sqrt{21.6^2+4\\times502})/2\\ {\\rm nA}=35.7$ nA. Then $n=I_st_p/q=35.7\\ {\\rm nA}\\times4\\ {\\rm ns}/(1.60\\times10^{-19}\\ {\\rm C})\\approx890$",
+   "why": "show the solve step of the quadratic with substitutions"
+  },
+  {
+   "id": "08_C7b-019",
+   "finding": "symbol scheme",
+   "old": "$E_{\\rm opt}\\approx0.73$",
+   "new": "$E_{\\rm pt}\\approx0.73$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-020",
+   "finding": "report #33",
+   "old": "$E_\\lambda\\approx0.25$ W m⁻² nm⁻¹. On a 10% target it gives a radiance $L=\\rho E_\\lambda/\\pi\\approx8\\times10^{-3}$",
+   "new": "$E_\\lambda\\approx0.27$ W m⁻² nm⁻¹ (ASTM G173-03, §C4c) [P]. On a 10% target it gives a radiance $L=\\rho E_\\lambda/\\pi=0.1\\times0.27/\\pi\\approx8.6\\times10^{-3}$",
+   "why": "tag the sunlight value with the report's own ASTM G173 figure (0.27, §C4c) and show the substitution"
+  },
+  {
+   "id": "08_C7b-021",
+   "finding": "report #21; symbol scheme",
+   "old": "$\\Delta f=1$ GHz corresponds to an optical bandwidth $\\Delta\\lambda=\\lambda^2\\Delta f/c=0.008$",
+   "new": "$\\Delta f_{\\rm beat}=1$ GHz corresponds to an optical bandwidth $\\Delta\\lambda=\\lambda^2\\Delta f_{\\rm beat}/c=0.008$",
+   "why": "beat bandwidth gets its own symbol (Delta f is the TIA bandwidth of Eqs. (99)-(100))"
+  },
+  {
+   "id": "08_C7b-022",
+   "finding": "report #33",
+   "old": "$8\\times10^{-3}\\times2.4\\times10^{-12}\\times0.008\\times0.5\\approx8\\times10^{-17}$ W. That is ≈600",
+   "new": "$8.6\\times10^{-3}\\times2.4\\times10^{-12}\\times0.008\\times0.5\\approx8.3\\times10^{-17}$ W. Divided by the photon energy, $8.3\\times10^{-17}\\ {\\rm W}/(1.28\\times10^{-19}\\ {\\rm J})$, that is ≈650",
+   "why": "carry the 0.27 irradiance through and show the photon-rate step"
+  },
+  {
+   "id": "08_C7b-023",
+   "finding": "consistency flag (equations re-tagged)",
+   "old": "§C10.3b model,",
+   "new": "§C10.3b model (Eq. (146)),",
+   "why": "cite the earlier tag of the same equation"
+  },
+  {
+   "id": "08_C7b-024",
+   "finding": "report #26; report #33",
+   "old": "½ is the single polarization the LO accepts. §C0 subsection 10.2 derives Eq. (101) from the antenna theorem and the back-propagated-LO overlap (Siegman 1966; Rye 1979; Frehlich and Kavaya 1991)",
+   "new": "factor 2 in the denominator is the ½ for the single polarization the LO accepts. §C0 subsection 10.2 derives Eq. (101) from the antenna theorem and the back-propagated-LO overlap (Siegman 1966; Rye 1979; Frehlich and Kavaya 1991) [I]",
+   "why": "say where the 1/2 sits in Eq. (101); tag the academic sources"
+  },
+  {
+   "id": "08_C7b-025",
+   "finding": "report #26",
+   "old": "$t^2=0.84$) spreads",
+   "new": "$t^2=0.84$) spreads, by Eq. (102) below,",
+   "why": "point forward to Eq. (102), which the 14.2 mm uses"
+  },
+  {
+   "id": "08_C7b-026",
+   "finding": "report #26",
+   "old": "This is smallest, at $2\\lambda R/\\pi$,",
+   "new": "At a given $R$, $w^2$ is smallest, $w^2_{\\min}=2\\lambda R/\\pi$,",
+   "why": "the minimum is of w^2, not w"
+  },
+  {
+   "id": "08_C7b-027",
+   "finding": "report #35",
+   "old": "rows, four",
+   "new": "rows, a monostatic 20 mm beam (its transmit aperture also receives) and four",
+   "why": "explain monostatic at first use"
+  },
+  {
+   "id": "08_C7b-028",
+   "finding": "report #37",
+   "old": "exposure, ≈4×10⁴× a scanner's",
+   "new": "exposure: ≈4×10⁴× a scanner's sunlight per unit signal",
+   "why": "name what the 4x10^4 compares"
+  },
+  {
+   "id": "08_C7b-029",
+   "finding": "symbol scheme",
+   "old": "(97), $E_{\\rm opt}=n_{\\rm req}E_{\\rm ph}\\pi R^2/(\\rho A_{\\rm eff}\\eta)$,",
+   "new": "(97), $E_{\\rm pt}=n_{\\rm req}E_{\\rm ph}\\pi R^2/(\\rho A_{\\rm eff}\\eta)$,",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-030",
+   "finding": "report #37; symbol scheme",
+   "old": "the §C7a common optical × detector × mixing efficiency (the mode and polarization factors are in $A_{\\rm mode}$).\n- **Last column:** $1/E_{\\rm opt}$;",
+   "new": "0.25, a design value for optics × detector × mixing, checked against Waymo's estimate rather than built from component factors (§C7a(a)); the mode and polarization factors are in $A_{\\rm mode}$.\n- **Last column:** $1/E_{\\rm pt}$;",
+   "why": "state that 0.25 is a design value checked against Waymo, as §C7a(a) says; symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-031",
+   "finding": "report #35; report #33",
+   "old": "without its Hann window, and Pointcloud's integrated array 0.057 (§C0 subsection 10.1,",
+   "new": "without its Hann window (a taper applied to the beat signal before the FFT, which cost Waymo 1.8 dB of SNR, §C0 subsection 10.7), and Pointcloud's integrated array 0.057 [P] (§C0 subsection 10.1,",
+   "why": "explain the Hann window; tag the measured efficiencies"
+  },
+  {
+   "id": "08_C7b-032",
+   "finding": "report #24",
+   "old": "this, ×2.3 is speckle fading with four looks, ×1.8 is finding the peak in both ramps, and ×1.3 is the coherent receiver's one photoelectron of shot noise in each of the ≈2,450 FFT bins it searches.",
+   "new": "the ideal 5.1, ×1.27 is the coherent receiver's one photoelectron of shot noise in each of the ≈2,450 FFT bins it searches (17.3 → 21.9), ×1.79 is finding the peak in both ramps (21.9 → 39.1), and ×2.26 is speckle fading with four looks (39.1 → 88.5): $1.27\\times1.79\\times2.26=5.1$.",
+   "why": "factors of the ideal 5.1 from the §C0 steps; their product now matches"
+  },
+  {
+   "id": "08_C7b-033",
+   "finding": "report #27",
+   "old": "range. (An FMCW channel sweeps its frequency in \"ramps\", or chirps; one point uses an up-ramp and a down-ramp, subsection 2.)",
+   "new": "range.",
+   "why": "ramps are defined in the section's first FMCW sentence"
+  },
+  {
+   "id": "08_C7b-034",
+   "finding": "report #25",
+   "old": "round-trip time, 1.33",
+   "new": "round-trip time (Eq. (105)), 1.33",
+   "why": "point to the formal definition of tau"
+  },
+  {
+   "id": "08_C7b-035",
+   "finding": "symbol scheme",
+   "old": "$E_{\\rm opt}T_{\\rm dwell}/T_{\\rm int}$.",
+   "new": "$E_{\\rm pt}T_{\\rm dwell}/T_{\\rm int}$.",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-036",
+   "finding": "symbol scheme",
+   "old": "point. $T_{\\rm int}=E_{\\rm opt}/P_{\\rm ch}$",
+   "new": "point. $T_{\\rm int}=E_{\\rm pt}/P_{\\rm ch}$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-037",
+   "finding": "symbol scheme",
+   "old": "$E_{\\rm opt}/\\eta_{\\rm coh}$.",
+   "new": "$E_{\\rm pt}/\\eta_{\\rm coh}$.",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-038",
+   "finding": "symbol scheme",
+   "old": "$E_{\\rm opt}\\propto R^2/\\rho$.",
+   "new": "$E_{\\rm pt}\\propto R^2/\\rho$.",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-039",
+   "finding": "symbol scheme",
+   "old": "$E_{\\rm opt}\\propto R^2/A_{\\rm mode}\\propto R$.",
+   "new": "$E_{\\rm pt}\\propto R^2/A_{\\rm mode}\\propto R$.",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-040",
+   "finding": "report #16",
+   "old": "falls as $1/R$.",
+   "new": "falls as $1/R$.\n- **Consequence.** FMCW's photon handicap against ToF shrinks as $1/R$. At 300 m FMCW needs $0.30\\ \\mu{\\rm J}\\times300/200=0.45$ µJ per sample and SPAD ToF $93\\ {\\rm nJ}\\times(300/200)^2=0.21$ µJ per point, so the ratio of Eq. (104) falls from 3.2 at 200 m to $0.45/0.21=2.1$ at 300 m [E]. This assumes that the coherent aperture is re-optimized for each range while the ToF lens stays at 25 mm.",
+   "why": "tie 'Range dominates everything' to its result"
+  },
+  {
+   "id": "08_C7b-041",
+   "finding": "symbol scheme",
+   "old": "deliver $E_{\\rm opt}$",
+   "new": "deliver $E_{\\rm pt}$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-042",
+   "finding": "report #11; report #14 (preview of items (h)-(i))",
+   "old": "8–21 µs per point. The round trip adds a fixed 2.67 µs. The ADC rate and the laser's chirp rate and tuning range set further lower bounds on the chirp length, scanning sets an upper bound, and laser linewidth multiplies the energy each point needs (items (c)–(h)).",
+   "new": "emitting it takes 5–19 µs per point, and the round trip adds a fixed 2.67 µs, for a dwell of 8–21 µs. The ADC rate and the laser's chirp rate and tuning range set further lower bounds on the chirp length, scanning sets an upper bound, and laser linewidth multiplies the energy each point needs (items (c)–(g)). Items (h) and (i) then add up the electrical power of a whole sensor at 10 Mpts/s and 300 m and ask what the 1,550 nm eye-safety allowance buys.",
+   "why": "8-21 us already includes the round trip; preview items (h)-(i)"
+  },
+  {
+   "id": "08_C7b-043",
+   "finding": "symbol scheme",
+   "old": "point $E_{\\rm opt}=0.30$",
+   "new": "point $E_{\\rm pt}=0.30$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-044",
+   "finding": "report #23",
+   "old": "case, and 0.15 µJ in the optimistic parity case (subsection 5).",
+   "new": "case; the parity energy of subsection 5 is 0.15 µJ.",
+   "why": "'parity case' named as the parity energy"
+  },
+  {
+   "id": "08_C7b-045",
+   "finding": "symbol scheme",
+   "old": "for $T_{\\rm int}=E_{\\rm opt}/P_{\\rm ch}$",
+   "new": "for $T_{\\rm int}=E_{\\rm pt}/P_{\\rm ch}$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-046",
+   "finding": "symbol scheme",
+   "old": "$$\\boxed{\\,T_{\\rm dwell}=2T_c=\\frac{E_{\\rm opt}}{P_{\\rm ch}}+2\\tau\\,},\\qquad \\dot N_{\\rm ch}=\\frac{1}{T_{\\rm dwell}}. \\tag{107}$$",
+   "new": "$$\\boxed{\\,T_{\\rm dwell}=2T_c=\\frac{E_{\\rm pt}}{P_{\\rm ch}}+2\\tau\\,},\\qquad \\dot N_{\\rm ch}=\\frac{1}{T_{\\rm dwell}}. \\tag{107}$$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-047",
+   "finding": "symbol scheme",
+   "old": "example:** $E_{\\rm opt}=0.30$",
+   "new": "example:** $E_{\\rm pt}=0.30$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-048",
+   "finding": "report #33",
+   "old": "(Pointcloud Methods, §C7a(b)).",
+   "new": "[P, Pointcloud Methods] (§C7a(b)).",
+   "why": "evidence tag"
+  },
+  {
+   "id": "08_C7b-049",
+   "finding": "report #25",
+   "old": "share of the laser's energy emitted during the round-trip windows** is $2\\tau/T_{\\rm dwell}$, and it is wasted (subsection 1(e)). In the example, $2.67/12.7=21\\%$.",
+   "new": "wasted share** of the laser's energy, $2\\tau/T_{\\rm dwell}$ (subsection 1(e)), is $2.67/12.7=21\\%$ in the example.",
+   "why": "shorten the repeated dead-time share to a pointer"
+  },
+  {
+   "id": "08_C7b-050",
+   "finding": "symbol scheme",
+   "old": "$T_{\\rm dwell}=E_{\\rm opt}/P_{\\rm ch}+2\\tau$",
+   "new": "$T_{\\rm dwell}=E_{\\rm pt}/P_{\\rm ch}+2\\tau$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-051",
+   "finding": "report #34",
+   "old": "$f_D=2\\times70/1.55\\times10^{-6}=90$",
+   "new": "$f_D=2\\times70/(1.55\\times10^{-6})=90$",
+   "why": "bracket the denominator"
+  },
+  {
+   "id": "08_C7b-052",
+   "finding": "report #37",
+   "old": "case), it is $10{,}000+2{,}260\\approx12{,}300$.",
+   "new": "case, with the same $T_u=5$ µs), it is $5\\times300/0.15+2{,}260=10{,}000+2{,}260\\approx12{,}300$.",
+   "why": "name the input and show the first term"
+  },
+  {
+   "id": "08_C7b-053",
+   "finding": "report #33",
+   "old": "practice** [I/U]:\n  - ADC energy per conversion step worsens above about 1 GS/s (the Murmann ADC survey trend).\n  - Wider-band TIAs add noise and power.",
+   "new": "practice:**\n  - ADC energy per conversion step worsens above about 1 GS/s (the Murmann ADC survey trend) [I].\n  - Wider-band TIAs add noise and power [U].",
+   "why": "split [I/U] onto the claims it belongs to"
+  },
+  {
+   "id": "08_C7b-054",
+   "finding": "report #35",
+   "old": "sweep per ramp is therefore",
+   "new": "sweep per ramp (one without jumps between the laser cavity's modes) is therefore",
+   "why": "explain mode-hop-free"
+  },
+  {
+   "id": "08_C7b-055",
+   "finding": "report #31",
+   "old": "resolution cell: at 200 m, $\\varepsilon=10^{-3}$ gives $\\delta R\\approx0.2$ m, more than the 15 cm cell,",
+   "new": "range bin: at 200 m, $\\varepsilon=10^{-3}$ gives $\\delta R\\approx0.2$ m, more than the 15 cm bin,",
+   "why": "'cell' here is a range bin, not the angular cell"
+  },
+  {
+   "id": "08_C7b-056",
+   "finding": "report #35; report #33",
+   "old": "chirping** (thin-film lithium niobate, single-sideband modulators) or an optical phase-locked loop (a feedback loop that locks the laser's frequency sweep to a reference) reaches $10^{15}$–$10^{16}$ Hz/s linearly.",
+   "new": "chirping**, in thin-film lithium niobate (TFLN) or with single-sideband modulators, or an optical phase-locked loop (a feedback loop that locks the laser's frequency sweep to a reference) reaches $10^{15}$–$10^{16}$ Hz/s linearly [U]. A TFLN laser has been chirped at $1.2\\times10^{16}$ Hz/s (Snigirev et al., §C7a(f)) [I].",
+   "why": "define TFLN at first use; tag the chirp-rate claim and give the sourced example"
+  },
+  {
+   "id": "08_C7b-057",
+   "finding": "report #33",
+   "old": "(1986)).",
+   "new": "(1986)) [I].",
+   "why": "evidence tag"
+  },
+  {
+   "id": "08_C7b-058",
+   "finding": "report #31",
+   "old": "$\\pm T_u/\\tau$ range cells, so",
+   "new": "$\\pm T_u/\\tau$ range bins, so",
+   "why": "'cell' here is a range bin"
+  },
+  {
+   "id": "08_C7b-059",
+   "finding": "symbol scheme",
+   "old": "$E_{\\rm opt}\\to E'=E_{\\rm opt}/\\eta_{\\rm coh}$,",
+   "new": "$E_{\\rm pt}\\to E'=E_{\\rm pt}/\\eta_{\\rm coh}$,",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-060",
+   "finding": "report #22",
+   "old": "frequency noise slower than $1/T_u$ (flicker noise, drift) and chirp nonlinearity (Eq. (112)), which are specified separately.",
+   "new": "low-frequency noise (flicker noise, drift): as $T_u$ grows, the lower limit $1/T_u$ of Eq. (113) falls and lets more of that noise into $\\sigma^2_{\\Delta\\phi}$. Chirp nonlinearity (Eq. (112)) also makes long ramps harder. Both are specified separately from the linewidth.",
+   "why": "remove the contradiction with the 'left out' statement above"
+  },
+  {
+   "id": "08_C7b-061",
+   "finding": "house style (table lead-in)",
+   "old": "| Allowed",
+   "new": "The table evaluates Eq. (115) for five allowed losses at 200, 250 and 300 m.\n\n| Allowed",
+   "why": "lead-in sentence for the linewidth table"
+  },
+  {
+   "id": "08_C7b-062",
+   "finding": "report #34",
+   "old": "$\\ln2/(1.26\\times10^{-5}\\ {\\rm s})=0.693/1.26\\times10^{-5}=55$",
+   "new": "$\\ln2/(1.26\\times10^{-5}\\ {\\rm s})=0.693/(1.26\\times10^{-5}\\ {\\rm s})=55$",
+   "why": "bracket the denominator"
+  },
+  {
+   "id": "08_C7b-063",
+   "finding": "report #36",
+   "old": "(Waymo's upper figure; Pointcloud's external DFB, §C10.3):",
+   "new": "(within Waymo's ≲60–120 kHz, §C7a(f); Pointcloud's external DFB, §C10.4):",
+   "why": "100 kHz is inside Waymo's 60-120 kHz; Pointcloud's DFB is in §C10.4"
+  },
+  {
+   "id": "08_C7b-064",
+   "finding": "report #25",
+   "old": "out.** With a 100 kHz laser at 200 m, $\\eta_{\\rm coh}=e^{-0.84}=0.43$, so the central 0.30 µJ becomes $0.30/0.43=0.70$ µJ.",
+   "new": "out;** at 200 m a 100 kHz laser more than doubles them (subsection 1(e)).",
+   "why": "replace the near-verbatim repeat of subsection 1(e) with a pointer"
+  },
+  {
+   "id": "08_C7b-065",
+   "finding": "report #13",
+   "old": "(§C7, Eq. (185)),",
+   "new": "(§C7; §F6, Eq. (185)), where $L_c$ is the coherence length (§C0 subsection 2; §C3a, Eq. (56)),",
+   "why": "Eq. (185) is in §F6; define L_c with its pointers"
+  },
+  {
+   "id": "08_C7b-066",
+   "finding": "symbol scheme",
+   "old": "$$T_c\\lesssim\\frac{\\theta_b}{\\Omega}, \\tag{116}$$",
+   "new": "$$T_c\\lesssim\\frac{\\theta_b}{\\dot\\theta}, \\tag{116}$$",
+   "why": "symbol scheme: Omega (scan rate) -> dot theta"
+  },
+  {
+   "id": "08_C7b-067",
+   "finding": "symbol scheme",
+   "old": "$\\Omega$ the angular scan",
+   "new": "$\\dot\\theta$ the optical scan rate, the beam's angular",
+   "why": "scan rate is dot theta"
+  },
+  {
+   "id": "08_C7b-068",
+   "finding": "report #34; symbol scheme",
+   "old": "$\\Omega\\lesssim8.7\\times10^{-4}/5\\times10^{-6}=175$",
+   "new": "$\\dot\\theta\\lesssim8.7\\times10^{-4}/(5\\times10^{-6})=175$",
+   "why": "bracket the denominator; scan rate symbol"
+  },
+  {
+   "id": "08_C7b-069",
+   "finding": "report #18",
+   "old": "0.5 mm.",
+   "new": "0.5 mm.\n- Eq. (116) caps each ramp. The up- and down-ramp of one point are paired to separate range from Doppler, and if both must see the same spot the condition becomes $2T_c\\lesssim\\theta_b/\\dot\\theta$, which halves the allowed scan rate (≈$5\\times10^3$ °/s for 0.05° and 5 µs chirps). Item (g) and subsection 4 use the per-ramp condition of Eq. (116), which lets the two ramps of a point fall on adjacent beam positions.",
+   "why": "Eq. (116) caps one ramp; state the paired condition and which one the text uses"
+  },
+  {
+   "id": "08_C7b-070",
+   "finding": "symbol scheme",
+   "old": "$T_u+\\tau\\le\\theta_b/\\Omega$",
+   "new": "$T_u+\\tau\\le\\theta_b/\\dot\\theta$",
+   "why": "symbol scheme: Omega (scan rate) -> dot theta"
+  },
+  {
+   "id": "08_C7b-071",
+   "finding": "symbol scheme",
+   "old": "$E'=E_{\\rm opt}/\\eta_{\\rm coh}$",
+   "new": "$E'=E_{\\rm pt}/\\eta_{\\rm coh}$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-072",
+   "finding": "report #34",
+   "old": "$2{,}000/3.1\\times10^{8}\\ {\\rm s^{-1}}=6.45$ µs; at 2 GS/s, $2{,}000/7.1\\times10^{8}=2.8$ µs; at 4 GS/s, $2{,}000/1.51\\times10^{9}=1.3$",
+   "new": "$2{,}000/(3.1\\times10^{8}\\ {\\rm s^{-1}})=6.45$ µs; at 2 GS/s, $2{,}000/(7.1\\times10^{8}\\ {\\rm s^{-1}})=2.8$ µs; at 4 GS/s, $2{,}000/(1.51\\times10^{9}\\ {\\rm s^{-1}})=1.3$",
+   "why": "bracket the denominators"
+  },
+  {
+   "id": "08_C7b-073",
+   "finding": "report #35",
+   "old": "indie Surya class,",
+   "new": "class of indie Semiconductor's Surya FMCW system-on-chip,",
+   "why": "spell out the Surya reference"
+  },
+  {
+   "id": "08_C7b-074",
+   "finding": "report #34",
+   "old": "($T_{\\rm ADC}=2{,}000/9.1\\times10^{8}=2.2$",
+   "new": "($T_{\\rm ADC}=2{,}000/(9.1\\times10^{8}\\ {\\rm s^{-1}})=2.2$",
+   "why": "bracket the denominator"
+  },
+  {
+   "id": "08_C7b-075",
+   "finding": "report #34",
+   "old": "$T_{\\rm ADC}=6{,}000/3.1\\times10^{8}=19$",
+   "new": "$T_{\\rm ADC}=6{,}000/(3.1\\times10^{8}\\ {\\rm s^{-1}})=19$",
+   "why": "bracket the denominator"
+  },
+  {
+   "id": "08_C7b-076",
+   "finding": "report #31",
+   "old": "several range cells, so",
+   "new": "several range bins, so",
+   "why": "'range cells' are range bins"
+  },
+  {
+   "id": "08_C7b-077",
+   "finding": "symbol scheme",
+   "old": "when $\\theta_b/\\Omega$",
+   "new": "when $\\theta_b/\\dot\\theta$",
+   "why": "symbol scheme: Omega (scan rate) -> dot theta"
+  },
+  {
+   "id": "08_C7b-078",
+   "finding": "symbol scheme",
+   "old": "$P_{\\rm ch}\\ge E'/[2(\\theta_b/\\Omega-\\tau)]$. For a 0.05° beam at $10^4$ °/s ($\\theta_b/\\Omega=5$",
+   "new": "$P_{\\rm ch}\\ge E'/[2(\\theta_b/\\dot\\theta-\\tau)]$. For a 0.05° beam at $10^4$ °/s ($\\theta_b/\\dot\\theta=5$",
+   "why": "symbol scheme: Omega (scan rate) -> dot theta"
+  },
+  {
+   "id": "08_C7b-079",
+   "finding": "report #33",
+   "old": "polygon's 45,600°/s",
+   "new": "45,600°/s of a Falcon-class polygon (§C4d)",
+   "why": "say which polygon and where the 45,600 deg/s comes from"
+  },
+  {
+   "id": "08_C7b-080",
+   "finding": "symbol scheme",
+   "old": "$$P_{\\rm elec}=\\underbrace{\\frac{\\dot N E'}{\\eta_{\\rm WPE}}}_{\\rm useful\\ light}+\\underbrace{\\frac{2\\tau\\,\\dot N P_{\\rm ch}}{\\eta_{\\rm WPE}}}_{\\rm dead\\text{-}time\\ light}+\\underbrace{N_{\\rm ch}N_LP_{\\rm an}}_{\\rm analog}+\\underbrace{\\dot N N_LN_{\\rm samp}e_s}_{\\rm ADC\\ and\\ FFT}+P_0 . \\tag{118}$$\n\nHere $\\dot N$ is the point rate; $\\eta_{\\rm WPE}$",
+   "new": "$$P_{\\rm elec}=\\underbrace{\\frac{\\dot N E'}{\\eta_{\\rm wp}}}_{\\rm useful\\ light}+\\underbrace{\\frac{2\\tau\\,\\dot N P_{\\rm ch}}{\\eta_{\\rm wp}}}_{\\rm dead\\text{-}time\\ light}+\\underbrace{N_{\\rm ch}N_LP_{\\rm an}}_{\\rm analog}+\\underbrace{\\dot N N_LN_{\\rm samp}e_s}_{\\rm ADC\\ and\\ FFT}+P_{\\rm oh} . \\tag{118}$$\n\nHere $\\dot N$ is the point rate; $\\eta_{\\rm wp}$",
+   "why": "symbol scheme: eta_WPE -> eta_wp; symbol scheme: P_0 -> P_oh"
+  },
+  {
+   "id": "08_C7b-081",
+   "finding": "symbol scheme",
+   "old": "$P_0$",
+   "new": "$P_{\\rm oh}$",
+   "why": "symbol scheme: P_0 -> P_oh"
+  },
+  {
+   "id": "08_C7b-082",
+   "finding": "report #34; report #8; symbol scheme",
+   "old": "gives $P_{\\rm elec}=\\dot N[E'/\\eta_{\\rm WPE}+5N_L(R/\\Delta R)e_s+2\\tau N_LP_{\\rm an}]+2\\tau\\dot NP_{\\rm ch}/\\eta_{\\rm WPE}+\\dot NE'N_L(P_{\\rm an}+2.5f_De_s)/P_{\\rm ch}+P_0$. The dead-time light grows with $P_{\\rm ch}$, while the analog power and the Doppler share of the samples",
+   "new": "splits $P_{\\rm elec}$ into three parts. The part independent of $P_{\\rm ch}$ is $\\dot N[E'/\\eta_{\\rm wp}+5N_L(R/\\Delta R)e_s+2\\tau N_LP_{\\rm an}]+P_{\\rm oh}$. The dead-time light, $2\\tau\\dot NP_{\\rm ch}/\\eta_{\\rm wp}$, grows with $P_{\\rm ch}$. The analog power and the Doppler share of the samples, $\\dot NE'N_L(P_{\\rm an}+2.5f_De_s)/P_{\\rm ch}$,",
+   "why": "split the very wide inline equation without adding a display equation; eta_wp and P_oh"
+  },
+  {
+   "id": "08_C7b-083",
+   "finding": "symbol scheme",
+   "old": "$$P_{\\rm ch}^{*}=\\sqrt{\\frac{\\eta_{\\rm WPE}\\,E'\\,N_L\\,(P_{\\rm an}+2.5f_De_s)}{2\\tau}}, \\tag{119}$$",
+   "new": "$$P_{\\rm ch}^{*}=\\sqrt{\\frac{\\eta_{\\rm wp}\\,E'\\,N_L\\,(P_{\\rm an}+2.5f_De_s)}{2\\tau}}, \\tag{119}$$",
+   "why": "symbol scheme: eta_WPE -> eta_wp"
+  },
+  {
+   "id": "08_C7b-084",
+   "finding": "symbol scheme",
+   "old": "$$P_{\\rm elec,min}=\\dot N\\left[\\frac{E'}{\\eta_{\\rm WPE}}+5N_L\\,\\frac{R}{\\Delta R}\\,e_s+2\\tau N_LP_{\\rm an}+2\\sqrt{\\frac{2\\tau\\,E'\\,N_L\\,(P_{\\rm an}+2.5f_De_s)}{\\eta_{\\rm WPE}}}\\,\\right]+P_0 . \\tag{120}$$",
+   "new": "$$P_{\\rm elec,min}=\\dot N\\left[\\frac{E'}{\\eta_{\\rm wp}}+5N_L\\,\\frac{R}{\\Delta R}\\,e_s+2\\tau N_LP_{\\rm an}+2\\sqrt{\\frac{2\\tau\\,E'\\,N_L\\,(P_{\\rm an}+2.5f_De_s)}{\\eta_{\\rm wp}}}\\,\\right]+P_{\\rm oh} . \\tag{120}$$",
+   "why": "symbol scheme: eta_WPE -> eta_wp; symbol scheme: P_0 -> P_oh"
+  },
+  {
+   "id": "08_C7b-085",
+   "finding": "symbol scheme",
+   "old": "$\\eta_{\\rm WPE}=0.15$,",
+   "new": "$\\eta_{\\rm wp}=0.15$,",
+   "why": "symbol scheme: eta_WPE -> eta_wp"
+  },
+  {
+   "id": "08_C7b-086",
+   "finding": "symbol scheme",
+   "old": "and $P_0=3$",
+   "new": "and $P_{\\rm oh}=3$",
+   "why": "symbol scheme: P_0 -> P_oh"
+  },
+  {
+   "id": "08_C7b-087",
+   "finding": "symbol scheme",
+   "old": "$2\\tau\\dot NP_{\\rm ch}^{*}/\\eta_{\\rm WPE}=4\\times10^{-6}\\times10^{7}\\times0.0352/0.15=9.4$",
+   "new": "$2\\tau\\dot NP_{\\rm ch}^{*}/\\eta_{\\rm wp}=4\\times10^{-6}\\times10^{7}\\times0.0352/0.15=9.4$",
+   "why": "symbol scheme: eta_WPE -> eta_wp"
+  },
+  {
+   "id": "08_C7b-088",
+   "finding": "house style (table lead-in)",
+   "old": "| $P_{\\rm ch}$ | Channels",
+   "new": "The table evaluates Eq. (118) at 10 Mpts/s and 300 m for four powers per channel, including the optimum of Eq. (119).\n\n| $P_{\\rm ch}$ | Channels",
+   "why": "lead-in sentence for the sensor-power table"
+  },
+  {
+   "id": "08_C7b-089",
+   "finding": "symbol scheme",
+   "old": "including $P_0=3$",
+   "new": "including $P_{\\rm oh}=3$",
+   "why": "symbol scheme: P_0 -> P_oh"
+  },
+  {
+   "id": "08_C7b-090",
+   "finding": "symbol scheme",
+   "old": "$2\\tau\\dot NP_{\\rm ch}/\\eta_{\\rm WPE}$:",
+   "new": "$2\\tau\\dot NP_{\\rm ch}/\\eta_{\\rm wp}$:",
+   "why": "symbol scheme: eta_WPE -> eta_wp"
+  },
+  {
+   "id": "08_C7b-091",
+   "finding": "report #23",
+   "old": "(the parity case,",
+   "new": "(to the parity energy,",
+   "why": "'parity case' named as the parity energy"
+  },
+  {
+   "id": "08_C7b-092",
+   "finding": "symbol scheme",
+   "old": "doubling $\\eta_{\\rm WPE}$",
+   "new": "doubling $\\eta_{\\rm wp}$",
+   "why": "symbol scheme: eta_WPE -> eta_wp"
+  },
+  {
+   "id": "08_C7b-093",
+   "finding": "symbol scheme",
+   "old": "$E'/\\eta_{\\rm WPE}$.",
+   "new": "$E'/\\eta_{\\rm wp}$.",
+   "why": "symbol scheme: eta_WPE -> eta_wp"
+  },
+  {
+   "id": "08_C7b-094",
+   "finding": "symbol scheme",
+   "old": "higher $\\eta_{\\rm WPE}$",
+   "new": "higher $\\eta_{\\rm wp}$",
+   "why": "symbol scheme: eta_WPE -> eta_wp"
+  },
+  {
+   "id": "08_C7b-095",
+   "finding": "report #16",
+   "old": "range.** The same 940 nm SPAD ToF model needs $93\\ {\\rm nJ}\\times(300/200)^2\\times10^{7}=2.1$ W of useful light at 300 m with a fixed 25 mm lens. The FMCW-to-ToF photon ratio therefore falls from $0.30/0.093=3.2$ at 200 m to $4.5/2.1=2.1$ at 300 m, because coherent energy grows as $R$ and direct-detection energy as $R^2$ (subsection 1(f)).",
+   "new": "range** (subsection 1(f)): at 10 Mpts/s and 300 m the same SPAD ToF model needs $0.21\\ \\mu{\\rm J}\\times10^{7}\\ {\\rm s^{-1}}=2.1$ W of useful light with a fixed 25 mm lens, against FMCW's 4.5 W, a ratio of 2.1 rather than the 3.2 of 200 m.",
+   "why": "the range-scaling result now sits in subsection 1(f); keep the sensor-level numbers as a pointer"
+  },
+  {
+   "id": "08_C7b-096",
+   "finding": "report #35",
+   "old": "array behind a line-forming lens is an extended source, whose apparent size raises the limits by the factor $C_6$ (up",
+   "new": "(vertical-cavity surface-emitting laser) array behind a line-forming lens is an extended source, whose apparent size raises the limits by the IEC 60825-1 extended-source factor $C_6$ (§C4c; up",
+   "why": "expand VCSEL; name C_6 and point to its definition"
+  },
+  {
+   "id": "08_C7b-097",
+   "finding": "symbol scheme",
+   "old": "$\\dot NE_{\\rm opt}$:",
+   "new": "$\\dot NE_{\\rm pt}$:",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-098",
+   "finding": "report #36",
+   "old": "4.6 and 11.4",
+   "new": "4.5 and 11.3",
+   "why": "use 0.45 uJ consistently (4.5 W in item (h))"
+  },
+  {
+   "id": "08_C7b-099",
+   "finding": "report #30",
+   "old": "light, the range samples and the overhead.",
+   "new": "light (30 W), the range samples (14.8 W), the analog power held during the round trips (1.6 W) and the overhead (3 W).",
+   "why": "list all four terms of the 49 W floor"
+  },
+  {
+   "id": "08_C7b-100",
+   "finding": "symbol scheme",
+   "old": "allowance:** $\\dot NE_{\\rm opt}$",
+   "new": "allowance:** $\\dot NE_{\\rm pt}$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-101",
+   "finding": "report #36; report #5 (derivation of the ungated figures)",
+   "old": "$0.45$ µJ gives $2.5\\times10^{7}\\times0.455\\ \\mu{\\rm J}=11.4$ W against 9.1",
+   "new": "$2.5\\times10^{7}\\times0.45\\ \\mu{\\rm J}=11.3$ W against 9.1 W. An ungated transmitter emits more by the factor $T_{\\rm dwell}/T_{\\rm int}$ of Eq. (107): $21.4/18.75=1.14$ at 16 mW and $12.7/10=1.27$ at 30 mW (subsection 2(b) table). At 10 Mpts/s that gives $3.03\\ {\\rm W}\\times1.14=3.5$ W to $3.03\\ {\\rm W}\\times1.27=3.8$ W, and at 25 Mpts/s $7.58\\ {\\rm W}\\times1.14=8.6$ W to $7.58\\ {\\rm W}\\times1.27=9.6$",
+   "why": "one energy value per clause; derive the ungated emission"
+  },
+  {
+   "id": "08_C7b-102",
+   "finding": "report #5 (derivation of the ungated reach)",
+   "old": "$E_{\\rm opt}\\propto R$.",
+   "new": "$E_{\\rm pt}\\propto R$. Ungated at 30 mW, both terms of Eq. (107) grow as $R$, so the factor 1.27 holds at every range and the reach is $600\\ {\\rm m}/1.27\\approx470$ m. At 25 Mpts/s the allowance is $9.1\\ {\\rm W}/(2.5\\times10^{7}\\ {\\rm s^{-1}})=0.36$ µJ per point, so the reach is $200\\ {\\rm m}\\times0.36/0.30\\approx240$ m gated and $240\\ {\\rm m}/1.27\\approx190$ m ungated.",
+   "why": "derive the 470 m, 240 m and 190 m reaches"
+  },
+  {
+   "id": "08_C7b-103",
+   "finding": "report #19",
+   "old": "$3\\ {\\rm W}+10^{7}\\times(93\\ {\\rm nJ}\\times2.25/0.20+70\\ {\\rm nJ})=14.2$",
+   "new": "the 3 W overhead, plus per point the laser's electrical energy at the §C7a ToF wall-plug efficiency of 0.20, with the optical energy scaled by $(300/200)^2=2.25$, and ≈70 nJ of SPAD-SoC receive electronics (§C7a(c)): $3\\ {\\rm W}+10^{7}\\ {\\rm s^{-1}}\\times(93\\ {\\rm nJ}\\times2.25/0.20+70\\ {\\rm nJ})=3+11.2=14.2$",
+   "why": "name the three inputs of the ToF estimate"
+  },
+  {
+   "id": "08_C7b-104",
+   "finding": "report #11",
+   "old": "8–21 µs per point, i.e. 47–130 kpts/s per channel.\n- The round trip adds a fixed 2.67 µs and",
+   "new": "emitting it takes 5–19 µs per point, and the round trip adds a fixed 2.67 µs, for a dwell of 8–21 µs, i.e. 47–130 kpts/s per channel.\n- The round trip alone",
+   "why": "8-21 us already includes the round trip"
+  },
+  {
+   "id": "08_C7b-105",
+   "finding": "symbol scheme",
+   "old": "at $\\theta_b/\\Omega$",
+   "new": "at $\\theta_b/\\dot\\theta$",
+   "why": "symbol scheme: Omega (scan rate) -> dot theta"
+  },
+  {
+   "id": "08_C7b-106",
+   "finding": "symbol scheme",
+   "old": "$$N_{\\rm ch}=\\dot N\\,T_{\\rm dwell}=\\dot N\\left(\\frac{E_{\\rm opt}}{P_{\\rm ch}}+2\\tau\\right)=\\frac{P_{\\rm opt}}{P_{\\rm ch}}+2\\tau\\dot N \\tag{121}$$",
+   "new": "$$N_{\\rm ch}=\\dot N\\,T_{\\rm dwell}=\\dot N\\left(\\frac{E_{\\rm pt}}{P_{\\rm ch}}+2\\tau\\right)=\\frac{P_{\\rm opt}}{P_{\\rm ch}}+2\\tau\\dot N \\tag{121}$$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-107",
+   "finding": "symbol scheme",
+   "old": "(107), $E_{\\rm opt}$",
+   "new": "(107), $E_{\\rm pt}$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-108",
+   "finding": "report #25; consistency flag (equations re-tagged)",
+   "old": "$\\tau=2R/c$ the round-trip time and $P_{\\rm opt}=E_{\\rm opt}\\dot N$ the sensor's average optical power.",
+   "new": "$\\tau$ the round-trip time (Eq. (105)) and $P_{\\rm opt}=E_{\\rm pt}\\dot N$ the sensor's average optical power. Eq. (121) is Eq. (89) of §C7, rearranged.",
+   "why": "point to Eq. (105) for tau; cite the earlier tag of Eq. (121)"
+  },
+  {
+   "id": "08_C7b-109",
+   "finding": "house style (table lead-in)",
+   "old": "| Target",
+   "new": "The table applies Eq. (121) to four point rates at three dwells.\n\n| Target",
+   "why": "lead-in sentence for the channel-count table"
+  },
+  {
+   "id": "08_C7b-110",
+   "finding": "report #23",
+   "old": "parity case)",
+   "new": "parity point rate)",
+   "why": "'parity case' here is the parity point rate"
+  },
+  {
+   "id": "08_C7b-111",
+   "finding": "report #33",
+   "old": "sensors; the 41 Mpts/s row is a ToF sensor,",
+   "new": "sensors. Aeva claims 4 M raw points/s for Aeries II [P] (§C7a subsection 1), and its own dataset paper reports ≈0.85 M delivered [P] (Appendix 1), so 2 Mpts/s is a representative rate between the two [E]. The 41 Mpts/s row is RoboSense's EM4, a ToF sensor (41.04 Mpts/s [P], §C3b),",
+   "why": "source the Aeries-class and EM4 rates"
+  },
+  {
+   "id": "08_C7b-112",
+   "finding": "report #35",
+   "old": "(SRAM):",
+   "new": "(static random-access memory, SRAM):",
+   "why": "expand SRAM"
+  },
+  {
+   "id": "08_C7b-113",
+   "finding": "report #35",
+   "old": "an FFT pipe.",
+   "new": "a pipelined FFT processor.",
+   "why": "replace 'FFT pipe'"
+  },
+  {
+   "id": "08_C7b-114",
+   "finding": "symbol scheme",
+   "old": "$P_{\\rm opt}=E_{\\rm opt}\\dot N=4.5$",
+   "new": "$P_{\\rm opt}=E_{\\rm pt}\\dot N=4.5$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-115",
+   "finding": "consistency flag (520-line ToF unit)",
+   "old": "(≈9.7 W in the",
+   "new": "(≈9.7 W at 12.5 Mpts/s in the",
+   "why": "label the point rate of the compared ToF unit"
+  },
+  {
+   "id": "08_C7b-116",
+   "finding": "report #39; report #33",
+   "old": "figures, at different ranges). Electrical energy per point is the sensor's electrical power $P$ divided by its point rate, $E=P/\\dot N$ [E from P]. The ranges and fields differ, so the comparison is of orders of magnitude, not like for like.",
+   "new": "figures [P], at different ranges). Electrical energy per point is the sensor's electrical power $P$ divided by its point rate, $E_{\\rm el}=P/\\dot N$ [E, from the vendor figures]. The ranges and fields differ, so the comparison is of orders of magnitude, not like for like: the FMCW products spend 30–390 µJ per point against 2–9 µJ for the ToF products.",
+   "why": "E_el instead of bare E; house tags; add the takeaway"
+  },
+  {
+   "id": "08_C7b-117",
+   "finding": "report #39",
+   "old": "| $E=P/\\dot N$",
+   "new": "| $E_{\\rm el}=P/\\dot N$",
+   "why": "E_el in the column header"
+  },
+  {
+   "id": "08_C7b-118",
+   "finding": "report #34",
+   "old": "$8/3.84\\times10^{6}=2.1$",
+   "new": "$8/(3.84\\times10^{6})=2.1$",
+   "why": "bracket the denominator"
+  },
+  {
+   "id": "08_C7b-119",
+   "finding": "report #34",
+   "old": "$13.5/1.536\\times10^{6}=8.8$",
+   "new": "$13.5/(1.536\\times10^{6})=8.8$",
+   "why": "bracket the denominator"
+  },
+  {
+   "id": "08_C7b-120",
+   "finding": "report #34",
+   "old": "$\\lesssim45/1.5\\times10^{6}=30$",
+   "new": "$\\lesssim45/(1.5\\times10^{6})=30$",
+   "why": "bracket the denominator"
+  },
+  {
+   "id": "08_C7b-121",
+   "finding": "report #34",
+   "old": "$35/0.09\\times10^{6}=390$ / $35/0.4\\times10^{6}=88$",
+   "new": "$35/(0.09\\times10^{6})=390$ / $35/(0.4\\times10^{6})=88$",
+   "why": "bracket the denominators"
+  },
+  {
+   "id": "08_C7b-122",
+   "finding": "report #17",
+   "old": "Optical energy per point scales as $R^2/\\rho$ (subsection 1).",
+   "new": "Pointcloud's beam leaves a ≈6 mm aperture (§C10.4), whose Rayleigh range at 1,310 nm is at most $\\pi(3\\ {\\rm mm})^2/1.31\\ \\mu{\\rm m}\\approx22$ m. At 65–200 m the beam is therefore in its far field, where $A_{\\rm mode}$ (Eq. (101)) changes little with range, and the optical energy per point scales as $R^2/\\rho$ (Eq. (97)) rather than as the $R$ of subsection 1(f), which re-optimizes the aperture for each range.",
+   "why": "say why R^2 holds for Pointcloud (fixed ~6 mm aperture, far field, §C10.4)"
+  },
+  {
+   "id": "08_C7b-123",
+   "finding": "report #17",
+   "old": "conversion [E].",
+   "new": "conversion [E]. Pointcloud works at 1,310 nm, where a photon carries $1{,}550/1{,}310=1.18$ times the energy of a 1,550 nm photon, so in photons the gap is ≈3.7× [E].",
+   "why": "state the wavelength difference"
+  },
+  {
+   "id": "08_C7b-124",
+   "finding": "report #10",
+   "old": "47–240 k with realistic power,",
+   "new": "47–130 k at the realistic 16–30 mW, 176–240 k at 100 mW,",
+   "why": "per-channel rate consistent with the subsection 2 table"
+  },
+  {
+   "id": "08_C7b-125",
+   "finding": "symbol scheme",
+   "old": "speed $\\Omega$ supplies $\\Omega/\\theta_b$",
+   "new": "speed $\\dot\\theta$ supplies $\\dot\\theta/\\theta_b$",
+   "why": "symbol scheme: Omega (scan rate) -> dot theta"
+  },
+  {
+   "id": "08_C7b-126",
+   "finding": "report #33",
+   "old": "45,600 °/s",
+   "new": "45,600 °/s, the lower bound of §C4d [E],",
+   "why": "source of the 45,600 deg/s"
+  },
+  {
+   "id": "08_C7b-127",
+   "finding": "report #37",
+   "old": "columns per second per channel.",
+   "new": "columns per second per channel (1,200 columns per frame at 10 frames per second).",
+   "why": "name the inputs of 1,200 x 10"
+  },
+  {
+   "id": "08_C7b-128",
+   "finding": "report #25; symbol scheme",
+   "old": "threshold.** The chirp must end before the beam crosses its own width: $\\Omega\\lesssim\\theta_b/T_c=175$ rad/s ≈ $10^4$ °/s for 0.05° and a chirp duration $T_c=5$ µs",
+   "new": "threshold:** about $10^4$ °/s for a 0.05° beam and 5 µs chirps, the scan rate at which one chirp lasts as long as the beam takes to cross its own width",
+   "why": "the scan limit is derived in subsection 2(f); keep the number and point to it"
+  },
+  {
+   "id": "08_C7b-129",
+   "finding": "symbol scheme",
+   "old": "beat over $\\approx T_c\\,\\Omega D/\\lambda$ FFT",
+   "new": "beat over $\\approx T_c\\,\\dot\\theta D/\\lambda$ FFT",
+   "why": "symbol scheme: Omega (scan rate) -> dot theta"
+  },
+  {
+   "id": "08_C7b-130",
+   "finding": "report #31; symbol scheme",
+   "old": "angle $\\Omega_{\\rm cell}$",
+   "new": "angle $\\Omega_{\\rm cell}=\\theta_{\\rm cell}^2$, where $\\theta_{\\rm cell}=8.7\\times10^{-4}$ rad is the cell's angular pitch,",
+   "why": "solid angle written with the cell pitch; Omega is only a solid angle"
+  },
+  {
+   "id": "08_C7b-131",
+   "finding": "report #37",
+   "old": "of 2 Mpts/s",
+   "new": "of an Aeries-class 2 Mpts/s",
+   "why": "name the input"
+  },
+  {
+   "id": "08_C7b-132",
+   "finding": "report #35",
+   "old": "qualified by the million",
+   "new": "passed automotive qualification and shipped in millions",
+   "why": "replace 'qualified by the million'"
+  },
+  {
+   "id": "08_C7b-133",
+   "finding": "report #35; report #40",
+   "old": "foundry.\n  - It emits a ≈0.5–0.66 µm mode (divergence",
+   "new": "(complementary metal-oxide-semiconductor) foundry.\n  - It emits a mode ≈0.5–0.66 µm across (1/e² diameter; divergence",
+   "why": "expand CMOS; say that 0.5-0.66 um is a diameter (consistent with the 41-53 deg divergence at 737 nm)"
+  },
+  {
+   "id": "08_C7b-134",
+   "finding": "report #40",
+   "old": "state-of-the-art",
+   "new": "that of state-of-the-art",
+   "why": "missing words"
+  },
+  {
+   "id": "08_C7b-135",
+   "finding": "report #40",
+   "old": "$\\eta_{\\rm cpl}=e^{-(\\Delta x/w_0)^2}$. Here $w_0\\approx0.3$ µm is the radius of the tip's emitted mode (not the transmit beam of subsection 1).",
+   "new": "$\\eta_{\\rm cpl}=e^{-(\\Delta x/w_{\\rm tip})^2}$. Here $w_{\\rm tip}\\approx0.3$ µm is the 1/e² radius of the tip's emitted mode.",
+   "why": "own symbol for the tip mode radius (w_0 is the 9 mm beam of subsection 1)"
+  },
+  {
+   "id": "08_C7b-136",
+   "finding": "symbol scheme",
+   "old": "$$P=P_{\\rm oh}+\\dot N\\left(\\frac{E_{\\rm opt}}{\\eta_{\\rm wp}}+E_{\\rm rx}\\right), \\tag{122}$$",
+   "new": "$$P=P_{\\rm oh}+\\dot N\\left(\\frac{E_{\\rm pt}}{\\eta_{\\rm wp}}+E_{\\rm rx}\\right), \\tag{122}$$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-137",
+   "finding": "symbol scheme",
+   "old": "rate, $E_{\\rm opt}$",
+   "new": "rate, $E_{\\rm pt}$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-138",
+   "finding": "symbol scheme",
+   "old": "so $E_{\\rm opt}/\\eta_{\\rm wp}$",
+   "new": "so $E_{\\rm pt}/\\eta_{\\rm wp}$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-139",
+   "finding": "symbol scheme",
+   "old": "$$\\frac{E_{\\rm opt}}{\\eta_{\\rm wp}}+E_{\\rm rx}\\le\\frac{15-3\\ {\\rm W}}{15\\times10^{6}\\ {\\rm s^{-1}}}=0.8\\ \\mu{\\rm J}. \\tag{123}$$",
+   "new": "$$\\frac{E_{\\rm pt}}{\\eta_{\\rm wp}}+E_{\\rm rx}\\le\\frac{15-3\\ {\\rm W}}{15\\times10^{6}\\ {\\rm s^{-1}}}=0.8\\ \\mu{\\rm J}. \\tag{123}$$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-140",
+   "finding": "report #8; symbol scheme",
+   "old": "receiver together.\n\n**Reaching $E_{\\rm opt}\\approx0.15$",
+   "new": "receiver together. Eq. (122) is Eq. (118) of subsection 2(h) with the dead-time light left out, no coherent loss ($E'=E_{\\rm pt}$) and the per-channel receiver terms folded into $E_{\\rm rx}$ (Eq. (96)). Subsection 2(h) evaluated Eq. (118) at 10 Mpts/s and 300 m, whereas this subsection evaluates Eq. (122) at 15 Mpts/s and 200 m, so the ≈68 W there and the ≈67 W below are different cases.\n\n**Reaching $E_{\\rm pt}\\approx0.15$",
+   "why": "relate the two power models and their cases; symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-141",
+   "finding": "report #7; report #25",
+   "old": "at the optimistic end of what has been measured: Waymo's lab chain measured 0.112 end to end, or 0.168 without its Hann window, and Pointcloud's integrated array 0.057 (§C0 subsection 10.1). With those values FMCW needs 1.5–2.2× (discrete fibre chain) or about 4.4× (integrated array) the energy per point quoted in this report, and the 2026 central case rises from ≈67 W at 15 Mpts/s to ≈82–104 W, or to ≈170",
+   "new": "about 1.5× above the best coherent chain measured so far (subsection 1(c)). With the measured efficiencies, 0.112–0.168 for Waymo's discrete fibre chain and 0.057 for Pointcloud's integrated array, the optical energy per point grows by $0.25/\\eta$, and the 2026 central case at 15 Mpts/s rises from ≈67 W to ≈82–104 W, or to ≈170 W. For example, at $\\eta=0.112$ the optical energy is $0.303\\ \\mu{\\rm J}\\times0.25/0.112=0.68$ µJ, and Eq. (122) gives $3+15\\times(0.68/0.15+2.23)=104$",
+   "why": "efficiency wording as in subsection 1(c); keep one copy of the measured list; show one substitution"
+  },
+  {
+   "id": "08_C7b-142",
+   "finding": "symbol scheme",
+   "old": "| $E_{\\rm opt}$ | $\\eta_{\\rm wp}$ | Laser electrical $E_{\\rm opt}/\\eta_{\\rm wp}$",
+   "new": "| $E_{\\rm pt}$ | $\\eta_{\\rm wp}$ | Laser electrical $E_{\\rm pt}/\\eta_{\\rm wp}$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-143",
+   "finding": "report #29",
+   "old": "(§C7a) | 0.30 µJ | 15% | 2.0 µJ | 2.23 µJ | 4.25",
+   "new": "(§C7a) | 0.30 µJ | 15% | 2.02 µJ | 2.23 µJ | 4.25",
+   "why": "print 2.02 so the row adds up (0.303/0.15)"
+  },
+  {
+   "id": "08_C7b-144",
+   "finding": "report #29",
+   "old": "change) | 0.30 µJ | 15% | 2.0 µJ | 2.23 µJ | 4.25",
+   "new": "change) | 0.30 µJ | 15% | 2.02 µJ | 2.23 µJ | 4.25",
+   "why": "print 2.02 so the row adds up (0.303/0.15)"
+  },
+  {
+   "id": "08_C7b-145",
+   "finding": "symbol scheme",
+   "old": "three: $E_{\\rm opt}$",
+   "new": "three: $E_{\\rm pt}$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-146",
+   "finding": "report #29",
+   "old": "$3\\ {\\rm W}+15\\times10^{6}\\times0.60\\times10^{-6}\\ {\\rm J}=3+9=12$ W.",
+   "new": "$3\\ {\\rm W}+15\\times10^{6}\\times0.60\\times10^{-6}\\ {\\rm J}=3+9=12$ W. In the first two rows, 0.30 µJ is the §C7a 0.303 µJ rounded, so the laser term is $0.303/0.15=2.02$ µJ and the total $2.02+2.23=4.25$ µJ.",
+   "why": "note the rounding of 0.303 uJ"
+  },
+  {
+   "id": "08_C7b-147",
+   "finding": "symbol scheme",
+   "old": "$T_{\\rm int}=E_{\\rm opt}/P_{\\rm ch}$.",
+   "new": "$T_{\\rm int}=E_{\\rm pt}/P_{\\rm ch}$.",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-148",
+   "finding": "symbol scheme",
+   "old": "$E_{\\rm opt}\\,T_{\\rm dwell}/T_{\\rm int}$",
+   "new": "$E_{\\rm pt}\\,T_{\\rm dwell}/T_{\\rm int}$",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-149",
+   "finding": "report #9 (remaining part)",
+   "old": "channels) and many dim channels.",
+   "new": "channels), many dim channels, and a transmitter switched off during the last $\\tau$ of each ramp (subsection 2(i), item 2).",
+   "why": "name the gated-transmitter option at parity"
+  },
+  {
+   "id": "08_C7b-150",
+   "finding": "report #33",
+   "old": "published (§C7a).",
+   "new": "published [P] (§C7a(d)).",
+   "why": "evidence tag and exact pointer"
+  },
+  {
+   "id": "08_C7b-151",
+   "finding": "report #33",
+   "old": "evidence status of each in brackets.",
+   "new": "deployability status of each in brackets ([D] shipping, [NT] a plausible automotive path within about five years, [R] research-stage); the sixth, a hypothetical, carries the evidence tag [U].",
+   "why": "the brackets hold deployability tags; say so and explain [U]"
+  },
+  {
+   "id": "08_C7b-152",
+   "finding": "symbol scheme",
+   "old": "$P_{\\rm opt}=E_{\\rm opt}\\dot N\\approx2$–4",
+   "new": "$P_{\\rm opt}=E_{\\rm pt}\\dot N\\approx2$–4",
+   "why": "symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-153",
+   "finding": "report #33",
+   "old": "[D in trucks].",
+   "new": "[D] (trucks only).",
+   "why": "house tag format"
+  },
+  {
+   "id": "08_C7b-154",
+   "finding": "report #33; symbol scheme",
+   "old": "is milliseconds.\n   - This cuts the occupancy term $E_{\\rm opt}/P_{\\rm ch}$",
+   "new": "is milliseconds [U].\n   - This cuts the occupancy term $E_{\\rm pt}/P_{\\rm ch}$",
+   "why": "evidence tag; symbol scheme: E_opt -> E_pt"
+  },
+  {
+   "id": "08_C7b-155",
+   "finding": "report #32; report #33",
+   "old": "[U].\n   - Documented mutual interference at high penetration (§C9), i.e. when many lidar-equipped cars share the road, or eye-safety and sunlight limits beyond 300 m at 905/940 nm.\n   - None is documented today; ToF coding and randomization cope.",
+   "new": "(hypothetical, none documented) [U].\n   - It would matter if mutual interference were documented at high penetration (§C9), i.e. when many lidar-equipped cars share the road, or if 905/940 nm ToF hit eye-safety and sunlight limits beyond 300 m.\n   - Neither is documented today; ToF coding and randomization cope with interference.",
+   "why": "make the failure mode conditional, as the next bullet says none is documented"
+  },
+  {
+   "id": "08_C7b-156",
+   "finding": "report #36",
+   "old": "§C10.7);",
+   "new": "§C7 and §C10.2b);",
+   "why": "the 8,192-element OPA is described in §C7 and §C10.2b"
+  }
+ ],
+ "skipped": [
+  {
+   "finding": "report #1",
+   "kind": "model_round2",
+   "location": "### 3, Optical and receiver power: 'The §C7a 2026 central value, at 300 m with the model's 10 µs dwell, is $E_{\\rm rx}=4\\times(12{,}300\\times37\\ {\\rm pJ}+10\\ {\\rm mW}\\times10\\ \\mu{\\rm s})$…'; also the table header 'Channels at 10 µs dwell', 'A 4 µs dwell … a sampling rate $f_s\\approx5$ GS/s', and the 2.23 µJ applied at 200 m and 15 Mpts/s in subsections 3 and 5",
+   "detail": "Dwell has two definitions: §C7a Eq. (96) charges the analog power for $2T=10$ µs (integration, no round trip) and digitizes the 0–300 m search window (12,300 samples), while Eq. (107) defines $T_{\\rm dwell}=E_{\\rm pt}/P_{\\rm ch}+2\\tau=12.7$ µs. Proposed for Round 2: $E_{\\rm rx}=4\\times(12{,}300\\times37\\ {\\rm pJ}+10\\ {\\rm mW}\\times12.7\\ \\mu{\\rm s})\\approx2.3$ µJ; a sensor that searches only to 200 m (8,900 samples) needs $4\\times(8{,}900\\times37\\ {\\rm pJ}+0.127\\ \\mu{\\rm J})\\approx1.8$ µJ; rename the column to 'Channels at 10 µs integration (§C7a, no round trip)'; reconcile the ≈5 GS/s of the 4 µs dwell here with §C7a(d)'s ≈2.7 GS/s; state once which range a 200 m sensor digitizes. This changes E_rx, channel counts and sensor totals."
+  },
+  {
+   "finding": "report #2",
+   "kind": "already_fixed",
+   "location": "2(d), Directly modulated DFB lasers: 'Waymo reports a pre-distorted DFB holding <100 kHz error over 1 GHz [P] (§C7a(f)), a fractional frequency error $\\delta\\nu/B_{\\rm eff}<10^{-4}$…'",
+   "detail": "$\\varepsilon=8\\times10^{-4}$ for a 100 kHz bow, the 94/62.5 kHz tolerances and the peak versus peak-to-peak dependence are in the live text; §C7a(f) 'Parts' carries the same wording."
+  },
+  {
+   "finding": "report #3",
+   "kind": "already_fixed",
+   "location": "5, opening and table: 'without the low-power receiver it stays near 44 W'; rows 'Receiver only partly improved: $E_{\\rm rx}$ at 0.30 µJ' and 'Two of three: $E_{\\rm rx}$ stays at today's 2.23 µJ … 44 W'; short answer 'stays near 44 W'",
+   "detail": "The 44 W row, the relabelled 0.30 µJ row, 'lands at the 15 W target' and the short-answer wording are in the live text."
+  },
+  {
+   "finding": "report #4",
+   "kind": "already_fixed",
+   "location": "1(e), Round-trip dead time: 'The light a CW channel sends during the last $\\tau$ of each ramp returns in that discarded window of the next ramp'; short answer 'apart from the 12–35% it emits during the last $\\tau$ of each ramp'",
+   "detail": "Both places already put the wasted light at the end of the ramp, consistent with the gating in 2(i)."
+  },
+  {
+   "finding": "report #5",
+   "kind": "already_fixed",
+   "location": "2(i): 'An ungated transmitter also emits during the round trips, 1.14–1.27 times as much …'; item 1 '≈600 m … or ≈470 m ungated at 30 mW per channel'; 'at 25 Mpts/s an ungated FMCW transmitter reaches the allowance'",
+   "detail": "Gated and ungated emission, the reaches and the 25 Mpts/s qualification are in the live text, including the short answer. Their derivations were missing from 'How the numbers are derived'; two edits tagged report #5 supply them."
+  },
+  {
+   "finding": "report #6",
+   "kind": "model_round2",
+   "location": "Short answer 'a coherent receiver chip with ≥150 channels'; 5 '115–190 channels'; 6 item 1 '≥150–256 channels of four LO-matched receivers each, 600–1,000 receivers' and 'Signpost: a published chip with ≥256 receivers at ≤5 mW each. §C10.7's looser signpost, ≥256 channels within ≈10 W, marks the first step.'; item 2 '≥100 channels'; subsection 7 table row",
+   "detail": "Fix one requirement after the Round 2 dwell and channel model: 'a channel is one transmit beam with its four receivers'; '115–190 channels (460–760 receivers) at ≈2–3 mW per receiver, ADC and FFT included (subsection 5)'. Signpost: 'a published chip with ≥256 receivers (64 channels) at ≤5 mW each: a third to a half of the parity count, at about twice the parity power per receiver. §C10.7's signpost, ≥256 channels within ≈10 W (≈10 mW per receiver if each channel has four), asks for more channels at a higher power per receiver.' The parity channel count depends on the dwell definition (report #1)."
+  },
+  {
+   "finding": "report #7",
+   "kind": "already_fixed",
+   "location": "Short answer bullet 1 'With the coherent efficiencies measured so far (0.057–0.168), the gap is 5–14×'; 1(c) 'The FMCW value, 0.25, is a design value about 1.5× above the best coherent chain measured so far'",
+   "detail": "These two places are fixed in the live text. The remaining copy in subsection 5 ('at the optimistic end of what has been measured') is edited under report #7 and #25."
+  },
+  {
+   "finding": "report #9",
+   "kind": "already_fixed",
+   "location": "5 opening: 'reaches ≈12 W counting only the useful light, and 14–16 W once the light sent during the round trips is counted'",
+   "detail": "The opening is fixed in the live text; the gated-transmitter alternative is added at 'Parity therefore also forces a choice' (edit tagged report #9, remaining part)."
+  },
+  {
+   "finding": "report #14",
+   "kind": "structural",
+   "location": "2(h) 'What limits a 10 Mpts/s sensor at 300 m' and 2(i) 'What the 1,550 nm eye-safety allowance buys', followed by '**Summary of the dwell.**'",
+   "detail": "Move 'Summary of the dwell' to directly after item (g). Make (h) and (i) a subsection after the channel tax, '### 3a. Sensor power at 10 Mpts/s and 300 m, and the 1,550 nm eye-safety ceiling', opening: 'This subsection adds up a whole FMCW sensor's electrical power from the dwell (subsection 2) and the channel count (Eq. (121)), and asks whether the 1,550 nm eye-safety allowance relaxes it.' Order: 1 → 2(a)–(g) + summary → 3 → 3a → 4 → 5 → 6 → 7. Then update 'subsection 2(h)' (short answer; §C7a(d), §C7a(f)), 'subsection 2(i)' (short answer; §C7a(b)), 'item (i)' and 'Item (h)' inside (h)–(i), 'subsection 2(i), item 2' in subsection 5, and the preview sentence 'Items (h) and (i) then add up …' in the subsection 2 opening."
+  },
+  {
+   "finding": "report #15",
+   "kind": "structural",
+   "location": "**Short answer** [E unless tagged] (10 top-level bullets, about 25 sub-bullets)",
+   "detail": "Cut to about eight one-sentence bullets, each with one number and a pointer; move the floor, sweep and ADC numbers (7.5–14 µs window, 1.1–1.3 GHz at ≈$10^{14}$ Hz/s, the ≈35 mW ADC crossover), the $\\eta_{\\rm coh}$ formula and the 176 mW + 200 mW per channel into subsection 2. The two missing caveats (measured efficiencies; per sample versus per cell) are already in the short answer, the second through the report #12 edit."
+  },
+  {
+   "finding": "report #34 (display equation)",
+   "kind": "structural",
+   "location": "2(h): 'Substituting $N_{\\rm ch}$ and $N_{\\rm samp}$ …'",
+   "detail": "The finding asks for the expanded $P_{\\rm elec}$ as a numbered display equation over two lines. Round 1 adds no display equations, so the edit splits the wide inline expression into three inline parts; the display equation and its number are left for Round 3."
+  },
+  {
+   "finding": "report #35 (E-DBR)",
+   "kind": "needs_source",
+   "location": "2(e), lasers against the requirement: '378 kHz (TFLN E-DBR laser)'; also §C7a(f) 'TFLN E-DBR lasers (378 kHz, 1.5%) [P, Bianconi et al. 2025]'",
+   "detail": "The report never spells out 'E-DBR'. Take the expansion from Bianconi et al. (2025) and write it at first use. TFLN is defined at 2(d) by an edit."
+  },
+  {
+   "finding": "report #29 (2032 row)",
+   "kind": "model_round2",
+   "location": "5 table: '| 2032 optimistic (§C7a) | 0.19 µJ | 22% | 0.86 µJ | 0.61 µJ | 1.48 µJ | 25 W |'",
+   "detail": "0.86 + 0.61 = 1.47, not 1.48. With §C7a's 2032 inputs, Eq. (96) gives $E_{\\rm rx}=4\\times(12{,}300\\times10.07\\ {\\rm pJ}+3\\ {\\rm mW}\\times10\\ \\mu{\\rm s})=0.62$ µJ, which makes the total 1.48 µJ; §C7a §3 prints 0.61 µJ ('$4\\times(0.12+0.03)=0.61$ µJ'). Correcting it changes a receiver energy, so it belongs to Round 2 (both §C7a §3 and this row)."
+  },
+  {
+   "finding": "consistency flag (equations re-tagged)",
+   "kind": "structural",
+   "location": "Eq. (97) = Eq. (93); Eq. (101) = Eq. (146); Eq. (121) = Eq. (89) rearranged",
+   "detail": "Merging the duplicated equations is Round 3 work. Pointers to the earlier tags are added in the text (edits tagged 'consistency flag (equations re-tagged)')."
+  },
+  {
+   "finding": "consistency flag (Eq. (109) vs Eq. (94))",
+   "kind": "model_round2",
+   "location": "2(c): Eq. (109) $N_{\\rm samp}=f_s\\times2T_u=\\dots$; §C7a(c) Eq. (94) $N_{\\rm samp}\\approx5R_{\\max}/\\Delta R+5f_DT$",
+   "detail": "Eq. (109) uses the useful window $T_u$ and the target range, Eq. (94) the whole chirp $T$ and the search range $R_{\\max}$. Whether they are the same equation depends on the Round 2 dwell and search-range definitions; add the cross-reference once those are settled."
+  },
+  {
+   "finding": "consistency flag (range scaling of coherent energy)",
+   "kind": "cross_section",
+   "location": "§C7a(e), FMCW bullet: 'since the energy scales as $R^2$ ($30\\times(250/200)^2=47$ mW and $30\\times(300/200)^2=68$ mW)'",
+   "detail": "Conflicts with §C7b subsection 1(f), where coherent energy grows as $R$ for an aperture re-optimized at each range ($R^2$ only for direct detection or a fixed aperture in its far field). Proposed: 'since the energy grows with range: as $R$ for an aperture re-optimized at each range (§C7b subsection 1(f)), i.e. $30\\times250/200=38$ mW and $30\\times300/200=45$ mW, and faster for a fixed 20 mm aperture'. This also weakens §C7a(e)'s '≈50–100 mW of dedicated optical power', so it may belong with the Round 2 model work."
+  },
+  {
+   "finding": "consistency flag (laser linearity)",
+   "kind": "needs_source",
+   "location": "§C7a(f): 'SiN self-injection-locked lasers (42 kHz, 0.65% nonlinearity) and thin-film lithium niobate (TFLN) E-DBR lasers (378 kHz, 1.5%) [P, Bianconi et al. 2025]. Read as fractional chirp-rate errors, those nonlinearities are 13–30× above …'",
+   "detail": "Whether 0.65% and 1.5% are fractional chirp-rate errors $\\varepsilon$ or frequency deviations $\\delta\\nu/B$ needs the paper's definition; if they are $\\delta\\nu/B$, $\\varepsilon=8\\delta\\nu/B$ (§C7b Eq. (112)) makes them up to 8× worse."
+  },
+  {
+   "finding": "consistency flag (parity conditions)",
+   "kind": "needs_decision",
+   "location": "§C7a §5 (five conditions, '≥100 mW per channel', 'Integrated sub-100 kHz lasers', '200–300 m') against §C7b subsection 5 (three conditions, 15–30 mW per channel, 200 m)",
+   "detail": "§C7b shows that more power per channel is not the lever (2(h)), that 100 kHz costs ×2.3 in energy at 200 m and a 1 dB loss needs ≤27 kHz (Eq. (115)), and defines parity at 200 m with three conditions. The author should choose one parity definition and align §C7a §5 and §6 with it."
+  },
+  {
+   "finding": "consistency flag (eye safety, §C7a(b))",
+   "kind": "already_fixed",
+   "location": "§C7a(b): 'which FMCW's 3.0–7.6 W … fits within if its transmitter is gated during the round trips; ungated, it emits 3.5–9.6 W'",
+   "detail": "§C7a(b) already counts the round-trip light."
+  },
+  {
+   "finding": "symbol scheme (histogram bin width)",
+   "kind": "cross_section",
+   "location": "§C0 subsection 10.3: '$b=r_{\\rm bg}\\,t_{\\rm bin}\\,N_{\\rm shots}\\,(1-f_{\\rm dead})$'",
+   "detail": "This line quotes Eq. (98), whose bin width becomes $\\Delta t_{\\rm bin}$ under the symbol scheme (as in §C0 subsection 1). Proposed: '$b=r_{\\rm bg}\\,\\Delta t_{\\rm bin}\\,N_{\\rm shots}\\,(1-f_{\\rm dead})$'."
+  }
+ ]
+}

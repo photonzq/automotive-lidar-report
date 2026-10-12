@@ -1,0 +1,237 @@
+{
+ "block": "R4_R2_C0_C4",
+ "edits": [
+  {
+   "id": "R4_R2_C0_C4-01a",
+   "finding": "Round 4 source research, R2_C0_C4-01",
+   "old": "| Silicon APD (905/940 nm) | ≈0.02 [U] | 2.9 at $M=50$; 4.0 at $M=100$ | ≈50–200 [U] |",
+   "new": "| Silicon APD (905/940 nm) | ≈0.02 [P, Excelitas C30902EH datasheet; I: 0.01–0.06 for the best commercial Si APDs, Martyniuk et al. 2023] | 2.9 at $M=50$; 4.0 at $M=100$ | ≈50–200 [P: 150 recommended for the C30902EH; I: 20–400 across Si APDs, Martyniuk et al. 2023, Table 3] |",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-01."
+  },
+  {
+   "id": "R4_R2_C0_C4-01b",
+   "finding": "Round 4 source research, R2_C0_C4-01",
+   "old": "| InGaAs/InP APD (1,550 nm) | ≈0.4–0.5 [U] (§C4) | 5.5 at $M=10$; 10 at $M=20$ | ≈10–20 [U] (§C4) |",
+   "new": "| InGaAs/InP APD (1,550 nm) | ≈0.4–0.5 [I, Campbell et al. 2004; Martyniuk et al. 2023] (§C4) | 5.5 at $M=10$; 10 at $M=20$ | ≈10–20 [P: maximum usable gain 10 minimum and 20 typical, Excelitas C30645/C30662 datasheet; I: 10–40, Martyniuk et al. 2023] (§C4) |",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-01."
+  },
+  {
+   "id": "R4_R2_C0_C4-01c",
+   "finding": "Round 4 source research, R2_C0_C4-01",
+   "old": "is $k\\approx0.4$–0.5, against about 0.02 for Si. A large $k$ makes the avalanche noisy, which limits useful linear gain to about 10–20.",
+   "new": "is $k\\approx0.4$–0.5 [I, Campbell et al. 2004], against about 0.02 for Si [P, Excelitas C30902EH datasheet]. A large $k$ makes the avalanche noisy, which limits useful linear gain to about 10–20 [P, Excelitas C30645/C30662 datasheet].",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-01."
+  },
+  {
+   "id": "R4_R2_C0_C4-02a",
+   "finding": "Round 4 source research, R2_C0_C4-02",
+   "old": "VL53L5 14 × 10 macro-pixels [I]",
+   "new": "VL53L5 14 × 10 macro-pixels of 4 × 4 SPADs, an oversized array from which an 8 × 8 block forms the 64 zones, one macro-pixel each, or 4 × 4 zones of 2 × 2 macro-pixels [I, Bonanno 2024; P, Rae and Mellot 2018]",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-02."
+  },
+  {
+   "id": "R4_R2_C0_C4-03a",
+   "finding": "Round 4 source research, R2_C0_C4-03",
+   "old": "saw no noticeable blooming from a retroreflector beside a 5% target at 7.2 m, although the retroreflector was 37.7 dB brighter [P].",
+   "new": "saw no noticeable blooming from a retroreflector beside a 5% target at 7.2 m, although the retroreflector's measured SNR exceeded that target's by 37.7 dB in the same single acquisition [P, Extended Data Table 2; E: $10\\log_{10}(113{,}715/19.4)=37.7$ dB]. The 31.8 dB of \"Measured at a lidar wavelength\" comes from the same row ($10\\log_{10}(113{,}715/74.7)=31.8$ dB against the 50% target). The two differ by 5.9 dB rather than the 10 dB of the reflectance ratio because the paper averages SNR only over returns that gave the correct distance, which favours the strongest speckles of the 5% target, detected in only 17% of acquisitions [P, Methods; E]. Scaled by reflectance from the 50% target, the retroreflector is ≈42 dB above a 5% Lambertian return [E: $31.8+10.0=41.8$ dB].",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-03."
+  },
+  {
+   "id": "R4_R2_C0_C4-03b",
+   "finding": "Round 4 source research, R2_C0_C4-03",
+   "old": "saw no noticeable blooming beside a retroreflector 37.7 dB brighter than a 5% target [P] (§C0 subsection 10.7).",
+   "new": "saw no noticeable blooming beside a retroreflector whose measured SNR was 37.7 dB above that of a 5% target, ≈42 dB in reflectance terms [P/E] (§C0 subsection 10.7).",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-03."
+  },
+  {
+   "id": "R4_R2_C0_C4-04",
+   "finding": "Round 4 source research, R2_C0_C4-04",
+   "old": "For an assumed $T$ of 18–40 µs [E] that is $\\eta P_{\\rm tx}\\approx$ 5–11 mW, i.e. 20–44 mW transmitted at the report's $\\eta=0.25$.",
+   "new": "The paper's triangular modulation has a period of 36 µs and a sweep of 4.1 GHz, and its beat frequency $(2R/c)(2B/T)$ puts each ramp at half the period [P], so one measurement integrates $T=18$ µs. Then $\\eta P_{\\rm tx}=2\\times10^{-7}\\ {\\rm J}/18\\ \\mu{\\rm s}\\approx11$ mW, i.e. about 44 mW transmitted at the report's $\\eta=0.25$, or 22 mW if both ramps of a period were integrated [E].",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-04."
+  },
+  {
+   "id": "R4_R2_C0_C4-05a",
+   "finding": "Round 4 source research, R2_C0_C4-05",
+   "old": "Waymo's 50 photoelectrons for 90% detection with four averaged speckles at $10^{-6}$ per bin [P] matches one ramp searched in full,",
+   "new": "Waymo's 50 photons per detection, 45 photoelectrons at its quantum efficiency of 0.9, for 90% detection with four averaged speckles at $10^{-6}$ per bin [P] match one ramp searched in full,",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-05."
+  },
+  {
+   "id": "R4_R2_C0_C4-05b",
+   "finding": "Round 4 source research, R2_C0_C4-05",
+   "old": "Waymo's analysis uses **50 photoelectrons for 90% detection** with four averaged speckles at a $10^{-6}$ false-alarm probability per frequency bin, and finds that 10–30 photoelectrons give only ≈50% [P]. Waymo's 50 requires the peak in one ramp only:",
+   "new": "Waymo's analysis uses **50 photons (45 photoelectrons at a quantum efficiency of 0.9) for 90% detection** with four averaged speckles at a $10^{-6}$ false-alarm probability per frequency bin, and finds that with a single speckle 10–30 photoelectrons give only ≈50%, depending on the false-alarm probability [P]. Waymo's 45 photoelectrons require the peak in one ramp only:",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-05."
+  },
+  {
+   "id": "R4_R2_C0_C4-05c",
+   "finding": "Round 4 source research, R2_C0_C4-05",
+   "old": "(12 Mpts/s, 250 m, 5%, 50 photoelectrons, 90% detection)",
+   "new": "(12 Mpts/s, 250 m, 5%, 50 photons or 45 photoelectrons at a quantum efficiency of 0.9, 90% detection)",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-05."
+  },
+  {
+   "id": "R4_R2_C0_C4-05d",
+   "finding": "Round 4 source research, R2_C0_C4-05",
+   "old": "gives $50\\times1.28\\times10^{-19}\\times\\pi\\times250^2/(0.05\\times7.45\\times10^{-5}\\times0.25)=1.35$ µJ for one ramp.",
+   "new": "gives $45\\times1.28\\times10^{-19}\\times\\pi\\times250^2/(0.05\\times7.45\\times10^{-5}\\times0.25)=1.21$ µJ for one ramp.",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-05."
+  },
+  {
+   "id": "R4_R2_C0_C4-05e",
+   "finding": "Round 4 source research, R2_C0_C4-05",
+   "old": "The like-for-like value is therefore $2\\times1.35=2.7$ µJ at $\\eta=0.25$, 1.6–3.3× Waymo's range, or 1.35 µJ at $\\eta=0.5$, the efficiency of Waymo's 3 dB case, which lies inside it [E].",
+   "new": "The like-for-like value is therefore $2\\times1.21=2.4$ µJ at $\\eta=0.25$, 1.5–2.9× Waymo's range, or 1.35 µJ at $\\eta=0.45$, the efficiency of Waymo's 3 dB case including its quantum efficiency of 0.9, which lies inside it [E].",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-05."
+  },
+  {
+   "id": "R4_R2_C0_C4-05f",
+   "finding": "Round 4 source research, R2_C0_C4-05",
+   "old": "and its 50 is the total over the four acquisitions",
+   "new": "and its 50 photons, 45 photoelectrons, are the total over the four acquisitions",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-05."
+  },
+  {
+   "id": "R4_R2_C0_C4-05g",
+   "finding": "Round 4 source research, R2_C0_C4-05",
+   "old": "which divides the energy for the same 50 photoelectrons by four, to $1.35/4\\approx0.34$ µJ.",
+   "new": "which divides the energy for the same 45 photoelectrons by four, to $1.21/4\\approx0.30$ µJ.",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-05."
+  },
+  {
+   "id": "R4_R2_C0_C4-05h",
+   "finding": "Round 4 source research, R2_C0_C4-05",
+   "old": "Waymo's 50 photoelectrons with four averaged speckles [P] is the corresponding one-ramp figure (≈47 by the same rule).",
+   "new": "Waymo's 50 photons per detection with four averaged speckles, 45 photoelectrons at its quantum efficiency of 0.9 [P], are the corresponding one-ramp figure (≈47 by the same rule).",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-05."
+  },
+  {
+   "id": "R4_R2_C0_C4-06",
+   "finding": "Round 4 source research, R2_C0_C4-06",
+   "old": "where eye safety is set by the Class 3B cap and, in Europe, by the A11 corneal limit for 1,250–1,400 nm (subsection 1); or bond InGaAs photodiodes to the PIC.",
+   "new": "where the retinal factor $C_7=8+10^{0.04(\\lambda-1250)}=259$ (with $C_4=5$) makes the small-source Class 1 retinal limit for long exposures $3.9\\times10^{-4}C_4C_7=0.51$ W, so lenient that the binding limits become the 0.5 W cap at the Class 3B level, which IEC 60825-1:2014 imposes on Class 1 over 1,250–1,400 nm [P, Tables 8 and 9 via TCVN 12670-1:2020; I, Seibersdorf], and, in Europe, the A11 corneal limit for 1,250–1,400 nm, 0.1 W for exposures of 0.35 s or more [I, Seibersdorf] (subsection 1); or bond InGaAs photodiodes to the PIC.",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-06."
+  },
+  {
+   "id": "R4_R2_C0_C4-07",
+   "finding": "Round 4 source research, R2_C0_C4-07",
+   "old": "| [T, unattributed; internally inconsistent] |",
+   "new": "| [T: BigGo Finance, 25 Apr 2026, citing unnamed \"market data\"; its headline says prices \"nearly double\" in a year while its text has the 2″ price nearly tripling; the 6″ rise of 250% to \\$5,000 also in Reuters, 11 Jun 2026] |",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-07."
+  },
+  {
+   "id": "R4_R2_C0_C4-08",
+   "finding": "Round 4 source research, R2_C0_C4-08",
+   "old": "| Fog | Extinction differs by <10% between 905 and 1,550 nm; near-IR ≈10% worse only in very dense advection fog (<30 m visibility) | [I, Duthon et al. 2019] |",
+   "new": "| Fog | Extinction differs by <10% between 905 and 1,550 nm (a ratio of 1.0–1.1); light of 1,000–2,400 nm, including 1,550 nm, is ≈10% more attenuated than visible light, which 905 nm matches, only in very dense fog (<30 m visibility), especially advection fog | [I, Duthon et al. 2019] |",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-08."
+  },
+  {
+   "id": "R4_R2_C0_C4-09",
+   "finding": "Round 4 source research, R2_C0_C4-09",
+   "old": "Seyond's Falcon K drew 30 W [U],",
+   "new": "Seyond's Falcon K1 draws about 30 W in regular operation and about 50 W for under a second at start-up [P, user manual],",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-09."
+  },
+  {
+   "id": "R4_R2_C0_C4-10a",
+   "finding": "Round 4 source research, R2_C0_C4-10",
+   "old": "reached only 2–5% PDE at 9xx nm [U].",
+   "new": "reached only 2–5% at 905 nm, counted over the SPAD's active area: 2% in Fraunhofer IMS's 0.35 µm lidar sensor and 5% in a 180 nm flash-lidar chip from EPFL and TU Delft, before pixel fill factors of 5% and 28% [I, Beer et al. 2018; S, Villa et al. 2021, Table 1].",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-10."
+  },
+  {
+   "id": "R4_R2_C0_C4-10b",
+   "finding": "Round 4 source research, R2_C0_C4-10",
+   "old": "Historically about 5–10% (front-side); NIR-enhanced automotive SiPMs are reported in the mid-to-high teens [U].",
+   "new": "Front-side, and set by the process: about 2% at 900 nm for a blue-optimized SiPM (onsemi J-Series, 6 V overvoltage) against 16% at 905 nm for onsemi's NIR-enhanced automotive ArrayRDM-0112A20 [P, datasheets].",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-10."
+  },
+  {
+   "id": "R4_R2_C0_C4-11a",
+   "finding": "Round 4 source research, R2_C0_C4-11",
+   "old": "https://webstore.iec.ch/en/publication/62424 ;",
+   "new": "https://webstore.iec.ch/en/publication/62424 (IEC 60825:2026 series, listing IEC 60825-1:2014 as the current Part 1 and TS 60825-13:2026) ;",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-11."
+  },
+  {
+   "id": "R4_R2_C0_C4-11b",
+   "finding": "Round 4 source research, R2_C0_C4-11",
+   "old": "https://www.nature.com/articles/s41467-019-08830-w ;",
+   "new": "https://www.nature.com/articles/s41467-019-08830-w (Vines et al., Nature Communications 2019) ;",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-11."
+  },
+  {
+   "id": "R4_R2_C0_C4-11c",
+   "finding": "Round 4 source research, R2_C0_C4-11",
+   "old": "https://arxiv.org/pdf/2605.07343 ;",
+   "new": "https://arxiv.org/pdf/2605.07343 (Na et al., review of germanium-silicon SPADs, Proc. SPIE 13448, 2025, for the Artilux and Vines et al. devices) ;",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-11."
+  },
+  {
+   "id": "R4_R2_C0_C4-11d",
+   "finding": "Round 4 source research, R2_C0_C4-11",
+   "old": "https://www.photonics.intec.ugent.be/download/pub_3746.pdf ;",
+   "new": "https://www.photonics.intec.ugent.be/download/pub_3746.pdf (Chen et al., Journal of Applied Physics 2016, author copy) ;",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-11."
+  },
+  {
+   "id": "R4_R2_C0_C4-11e",
+   "finding": "Round 4 source research, R2_C0_C4-11",
+   "old": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12113715/ ; https://arxiv.org/pdf/2008.02411 ;",
+   "new": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12113715/ (Liu et al., Micromachines 2025) ; https://arxiv.org/pdf/2008.02411 (Rogers et al., Nature 2021, preprint) ;",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-11."
+  },
+  {
+   "id": "R4_R2_C0_C4-11f",
+   "finding": "Round 4 source research, R2_C0_C4-11",
+   "old": "https://arxiv.org/pdf/2112.08936",
+   "new": "https://arxiv.org/pdf/2112.08936 (Zhang et al., adverse-weather survey, ISPRS 2023, relaying Wojtanowski et al. 2014) ; https://opg.optica.org/abstract.cfm?URI=OFC-2025-Th3E.6 (GlobalFoundries Ge photodiode, OFC 2025) ; https://opg.optica.org/abstract.cfm?uri=OFC-2025-M4K.2 (Fudan University, Zhangjiang Laboratory and Innolight ultra-thin Ge photodiode, OFC 2025) ; https://doi.org/10.1364/AO.12.000555 (Hale and Querry 1973) ; https://doi.org/10.1364/AO.32.003531 (Kou, Labrie and Chylek 1993) ; https://doi.org/10.1038/s41586-024-07076-x (Na et al., Artilux room-temperature Ge-Si SPAD, Nature 2024) ; https://www.embedded.com/chip-integrated-fmcw-lidar-sensors-deliver-coherent-3d-vision/ (SiLC germanium detectors, trade press) ; https://www.indiamart.com/proddetail/hamamatsu-ingaas-apd-23931342712.html (G8931-20 distributor listing)",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-11."
+  },
+  {
+   "id": "R4_R2_C0_C4-11g",
+   "finding": "Round 4 source research, R2_C0_C4-11",
+   "old": "a Hamamatsu G8931-20 InGaAs APD sells for ≈\\$700 against ≈\\$113 for a comparable Si APD [T].",
+   "new": "a Hamamatsu G8931-20 InGaAs APD sells for ≈\\$700 (₹60,500 in an Indian distributor listing [S, search extract]) against ≈\\$113 for a comparable Si APD [U].",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-11."
+  },
+  {
+   "id": "R4_R2_C0_C4-12a",
+   "finding": "Round 4 source research, R2_C0_C4-12",
+   "old": "- KrASIA, summarising Seyond's prospectus: the InGaAs route costs **2–3×** as much as 905 nm [T].",
+   "new": "- KrASIA, in a 36Kr article of 22 Oct 2025 on Seyond's listing prospectus, puts the InGaAs route at **2–3×** the cost of 905 nm; the article gives the figure as its own, not as a prospectus figure [T].",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-12."
+  },
+  {
+   "id": "R4_R2_C0_C4-12b",
+   "finding": "Round 4 source research, R2_C0_C4-12",
+   "old": "- Yole: 1,550 nm cost is hard to reconcile with OEM (carmaker) targets [MR/S].",
+   "new": "- Yole ties fibre-laser (1,550 nm) penetration to one lidar maker and does not expect it to last because of its high cost; 1,550 nm accounted for 8% of passenger-car lidar design wins since 2018, against 89% for 905 nm [MR, Yole Automotive LiDAR 2023 conference, slides 13 and 26].",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-12."
+  },
+  {
+   "id": "R4_R2_C0_C4-12c",
+   "finding": "Round 4 source research, R2_C0_C4-12",
+   "old": "Separately, 1,550 nm is the natural band for FMCW (frequency-modulated continuous-wave, coherent) lidar (§C4c subsection 6).",
+   "new": "Separately, 1,550 nm is the natural band for FMCW (frequency-modulated continuous-wave, coherent) lidar (§C4c subsection 6).\n\nSources: https://kr-asia.com/lidar-maker-seyond-pursues-spac-listing-after-losing-ground-to-rivals (KrASIA, 36Kr article on Seyond, 22 Oct 2025) ; https://medias.yolegroup.com/uploads/2023/12/automotive-lidar_boulay_yole_intelligence_v2.pdf (Yole, Automotive LiDAR 2023 conference) ; https://en.prnasia.com/releases/global/robosense-announces-new-m-platform-lidar-sensors-at-ces-2024-433294.shtml (RoboSense M3 at CES 2024) ; https://www.seyond.com/wp-content/uploads/2024/12/Seyond-Falcon-K1-LiDAR_User-Manual_V2.1.2_EN_PublicRH_20240314.pdf (Seyond Falcon K1 user manual) ; https://www.seyond.cn/falcon-k3-2/ (Seyond Falcon K3 product page) ; https://www.excelitas.com/file-download/download/public/91501?filename=C30902EH_Si_APD_Datasheet.pdf (Excelitas C30902EH Si APD) ; https://www.excelitas.com/file-download/download/public/61766?filename=Excelitas_C30645_Series_InGaAs_APD_Datasheet.pdf (Excelitas C30645/C30662 InGaAs APD) ; https://coldren.ece.ucsb.edu/sites/default/files/publications/campbelljstqejuly04.pdf (Campbell et al., IEEE JSTQE 2004) ; https://pmc.ncbi.nlm.nih.gov/articles/PMC6308528/ (Beer et al., Sensors 2018) ; https://www.mdpi.com/1424-8220/21/11/3839 (Villa et al., Sensors 2021)",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-12."
+  },
+  {
+   "id": "R4_R2_C0_C4-13",
+   "finding": "Round 4 source research, R2_C0_C4-13",
+   "old": "at NIO (Seyond Falcon K3, 450 m at 10%, §C3)",
+   "new": "at NIO (Seyond Falcon K3, 450 m at 10% and 900 m maximum, conditions unstated [P, product page], §C3)",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-13."
+  },
+  {
+   "id": "R4_R2_C0_C4-14",
+   "finding": "Round 4 source research, R2_C0_C4-14",
+   "old": "**Hesai's ATX, by its delivery count the best-selling long-range lidar [U], uses SiPM** (more than 1 M delivered, §C3; ≈\\$200 [T], §C3c).",
+   "new": "**Hesai's ATX, the best-selling long-range ADAS lidar by Hesai's own account [P], uses SiPM** (more than 1 M delivered, §C3; ≈\\$200 [T], §C3c). No independent model-level ranking was found; Huawei's more than 1 M lidars by July 2025 span several models (§E11.2).",
+   "why": "Source found by the R2_C0_C4 research agent; see sources/R2_C0_C4_findings.md, R2_C0_C4-14."
+  }
+ ],
+ "skipped": []
+}

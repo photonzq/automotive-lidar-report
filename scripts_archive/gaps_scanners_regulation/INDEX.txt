@@ -1,0 +1,19 @@
+Scripts for the scanner, eye-safety and sunlight checks (open items of Appendix 1).
+Inputs are public files downloaded separately; run each script from the folder holding its inputs.
+
+astm_g173_lidar_bands.py   ASTM G173-03 (global tilt, extraterrestrial, direct) at 905/940/1,550 nm:
+                           exact values, +/-10 nm averages, ground/extraterrestrial ratios, photon flux.
+                           Input: astmg173.zip from the NLR (formerly NREL) "Reference Air Mass 1.5 Spectra" page.
+si_absorption_905_940.py   Silicon absorption coefficient and absorption length at 905 and 940 nm
+                           from Green 2008 (refractiveindex.info transcription, alpha = 4 pi k / lambda)
+                           and Green & Keevers 1995 (PVEducation workbook); 905 nm log-interpolated.
+brosens_constant_check.py  Independent cantilever-strip check of the 0.217 constant in Brosens'
+                           dynamic-deformation formula (f in Hz, D the width across the axis,
+                           deviation measured from the chord); reproduces 0.217 for Poisson ratio 0.2.
+Status: current (source of the numbers quoted for these items).
+nhtsa_investigation_docket.py  Public docket of NHTSA investigations (e.g. EA26002, AQ26002) from the
+                           api.nhtsa.gov safety-issues endpoint: dates, linked recalls, every document
+                           (extension memos, CBI placeholders); optional check of ODI's FLAT_INV.zip.
+scanner_rate_arithmetic.py  Falcon polygon speed (1,520 lines/s, 4 beams, 5 facets -> 4,560 rpm),
+                           optical speed, duty and walk-off; InnovizOne sweeps with 4 lasers and the
+                           per-laser pulse-rate check; RoboSense M1 sweeps against a 1.2-1.3 kHz fast axis.

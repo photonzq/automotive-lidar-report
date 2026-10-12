@@ -1,0 +1,167 @@
+{
+ "block": "R4_R5_C10_part1",
+ "edits": [
+  {
+   "id": "R4_R5_C10_part1-01a",
+   "finding": "Round 4 source research, R5_C10_part1-01",
+   "old": "- Optical energy per point for OPA lidars is 1,360–1,700 nJ, the upper value being the 8,192-element array's at 35 m on a 10% target. Pointcloud's FPA uses 46 nJ (at 65 m and 30%), and the 512-pixel coherent receiver array of Rogers et al. (*Nature* 2021, §C10.4) 212 nJ. All four values come from Pointcloud's comparison table [S].",
+   "new": "- Optical energy per point for OPA lidars is 1,360–1,700 nJ in Pointcloud's comparison table [S]. The 1,360 nJ is that of Jilin University's 128-channel OPA (Li *et al.*, *Photon. Res.* 2021) at 100 m on a 90% target, and the 1,700 nJ that of the 8,192-element array at 35 m on a 10% target. The table counts energy per pulse or per up-and-down chirp pair, and Li *et al.*'s 26 dBm input, less its 17.7 dB system insertion loss, over $2\\times100$ µs of chirp gives the same figure [E: $398\\ {\\rm mW}\\times10^{-1.77}=6.8$ mW and $6.8\\ {\\rm mW}\\times200\\ \\mu{\\rm s}=1.35\\ \\mu{\\rm J}$]. Pointcloud's FPA uses 46 nJ (at 65 m and 30%), and the 512-pixel coherent receiver array of Rogers et al. (*Nature* 2021, §C10.4) 212 nJ, from the same table [S].",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-01."
+  },
+  {
+   "id": "R4_R5_C10_part1-01b",
+   "finding": "Round 4 source research, R5_C10_part1-01",
+   "old": "- Scaling the measured energy per point as $R^2$ (the return from an extended target falls as $1/R^2$) from 35 m to 200 m at 10% gives ≈44–56 µJ per point [E: $(200/35)^2=32.7$, and $1.36\\ \\mu{\\rm J}\\times32.7=44\\ \\mu{\\rm J}$, $1.7\\ \\mu{\\rm J}\\times32.7=56\\ \\mu{\\rm J}$].",
+   "new": "- Scaling each measured energy per point to 200 m at 10% as $R^2/\\rho$ (the return from an extended diffuse target is proportional to $\\rho/R^2$, with $\\rho$ the reflectance) gives ≈49–56 µJ per point [E: $1.36\\ \\mu{\\rm J}\\times(200/100)^2\\times(0.9/0.1)=1.36\\ \\mu{\\rm J}\\times36=49\\ \\mu{\\rm J}$ and $1.7\\ \\mu{\\rm J}\\times(200/35)^2=1.7\\ \\mu{\\rm J}\\times32.7=56\\ \\mu{\\rm J}$].",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-01."
+  },
+  {
+   "id": "R4_R5_C10_part1-01c",
+   "finding": "Round 4 source research, R5_C10_part1-01",
+   "old": "- At 12 Mpts/s this is about 530–670 W of optical power ($44\\ \\mu{\\rm J}\\times12\\times10^{6}\\ {\\rm s^{-1}}=530$ W, $56\\ \\mu{\\rm J}\\times12\\times10^{6}\\ {\\rm s^{-1}}=670$ W). That is 15–19 times the 35 W that the whole FS-4S module draws and 66–84 times the 8 W of the Hesai ATX (table below)",
+   "new": "- At 12 Mpts/s this is about 590–670 W of optical power ($49\\ \\mu{\\rm J}\\times12\\times10^{6}\\ {\\rm s^{-1}}=590$ W, $56\\ \\mu{\\rm J}\\times12\\times10^{6}\\ {\\rm s^{-1}}=670$ W). That is 17–19 times the 35 W that the whole FS-4S module draws and 74–84 times the 8 W of the Hesai ATX (table below)",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-01."
+  },
+  {
+   "id": "R4_R5_C10_part1-02a",
+   "finding": "Round 4 source research, R5_C10_part1-02",
+   "old": "DTU's 120-element array spread over 6 mm has a *simulated* main-lobe fraction of 0.8%. Its *measured* floor, only 3–6 dB below the peak, was recorded with a camera of 0.13° resolution, whose pixels each integrate many sidelobe spots of width $\\lambda/D$, with $D=6$ mm the aperture: $1.55\\ \\mu{\\rm m}/6\\ {\\rm mm}=2.6\\times10^{-4}$ rad $=0.015^\\circ$, about $0.13/0.015\\approx9$ spots per pixel along that axis. A pixel's floor therefore sits far above the per-spot mean of §C10.1, $1/N=1/120$, i.e. −21 dB [E].",
+   "new": "DTU's 120-element array is one aperiodic row of 120 grating emitters at a mean pitch of about 50 µm across 6 mm, each grating 5 mm long and steered by wavelength along the other axis, so it is sparse along one axis only [P]. Its *simulated* main-lobe fraction of 0.8% comes from the array factor alone, with a flat element pattern over the ±90° field, and it is what §C10.1 predicts: counting spots in angle as the paper does, $N_{\\rm spot}=\\pi D/\\lambda=\\pi\\times6\\ {\\rm mm}/1.55\\ \\mu{\\rm m}\\approx12{,}200$ (the paper's ≈12,000 simulated resolvable points), so $N/N_{\\rm spot}=120/12{,}200=1.0\\%$, and random 120-element layouts give 0.9% [E]. Its *measured* floor, only 3–6 dB below the peak, is set mostly by the camera's 0.13° resolution, about 9 main-lobe widths ($\\lambda/D=1.55\\ \\mu{\\rm m}/6\\ {\\rm mm}=2.6\\times10^{-4}$ rad $=0.015^\\circ$, with $D=6$ mm the aperture). The camera spreads the main lobe over those 9 widths and reads its peak about 9.5 dB low ($10\\log_{10}9$), while it averages the floor to its mean, $1/N=1/120$ of the true peak (−21 dB). The observed peak therefore stands only about 11 dB above the mean floor, and the floor's highest points lie about 5–6 dB above that mean, so only about 4–6.5 dB below the observed peak, close to the measured 3–6 dB [E: 20 layouts of 120 random emitters over 6 mm with exact amplitudes, seen through a 0.13° Gaussian response, give 11 dB from the observed peak to the mean floor and 4–6.5 dB to the floor's highest point]. The paper itself attributes the gap from its simulated 12.8 dB to amplitude variation in its cascaded directional couplers [P].",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-02."
+  },
+  {
+   "id": "R4_R5_C10_part1-02b",
+   "finding": "Round 4 source research, R5_C10_part1-02",
+   "old": "| DTU ultra-sparse 120 (LPR 2024) [P] | 120 over 6 × 5 mm | 162° |",
+   "new": "| DTU ultra-sparse 120 (LPR 2024) [P] | 120 in one aperiodic row, ≈50 µm mean pitch, across 6 mm; gratings 5 mm long | Phase 162° × wavelength 13.7° (1,480–1,572 nm) |",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-02."
+  },
+  {
+   "id": "R4_R5_C10_part1-03a",
+   "finding": "Round 4 source research, R5_C10_part1-03",
+   "old": "- A Monte Carlo check with random sparse arrays gave **8.5%** main-lobe power for $N=128$ and $N_{\\rm spot}\\approx1{,}140$ ($N/N_{\\rm spot}=11\\%$), with a peak sidelobe of −11 dB and a mean sidelobe of −21 dB. For $N=256$ and $N_{\\rm spot}\\approx1{,}720$ ($N/N_{\\rm spot}=15\\%$) it gave 12%, −12.6 dB and −24 dB.",
+   "new": "- A Monte Carlo check [E] placed $N$ isotropic elements independently and uniformly at random over an aperture $L=N_{\\rm spot}\\lambda/2$: $570\\lambda=0.88$ mm for $N=128$ and $N_{\\rm spot}=1{,}140$, and $860\\lambda=1.33$ mm for $N=256$ and $N_{\\rm spot}=1{,}720$, at 1.55 µm. It evaluated the far field over all of visible space, $\\sin\\theta$ from −1 to 1, which holds $N_{\\rm spot}=2L/\\lambda$ beamwidths, and counted the main lobe out to its first nulls, $|\\sin\\theta|<\\lambda/L$. Over 200 trials it gave **9.2%** main-lobe power for $N=128$ ($N/N_{\\rm spot}=11\\%$), with a peak sidelobe of −11.5 dB and a mean sidelobe of −21 dB, and 11.8% ($N/N_{\\rm spot}=15\\%$), −13.0 dB and −24 dB for $N=256$. Both fractions match the expectation $0.90\\,N/(N_{\\rm spot}+N)$, 9.1% and 11.7%: 90% of the main lobe lies inside its first nulls, and the main lobe's own power adds to the total.",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-03."
+  },
+  {
+   "id": "R4_R5_C10_part1-03b",
+   "finding": "Round 4 source research, R5_C10_part1-03",
+   "old": "As expected, they improve only weakly with $N$ (1.6 dB, against 3 dB for the mean).",
+   "new": "As expected, they improve only weakly with $N$ (1.5 dB, against 3 dB for the mean).",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-03."
+  },
+  {
+   "id": "R4_R5_C10_part1-04a",
+   "finding": "Round 4 source research, R5_C10_part1-04",
+   "old": "- 35 m at 10% (8,192 elements), about 50 m (9,216), 22 m (Jilin), 20 m (imec). 100 m has been shown only on a 90% target [S].",
+   "new": "- 35 m at 10% (8,192 elements) [S]; more than 50 m for the 9,216-element array, reflectance not stated [I, abstract]; 22 m for Jilin's Vernier array, to an indoor wall whose reflectance the paper does not state (10% in the npj review [S]); and 20 m for imec, on a retroreflective traffic-sign-type target [P]. 100 m has been shown only on 90% targets over mirror-folded paths: by Jilin University's 128-channel OPA (Li *et al.*, *Photon. Res.* 2021), with a fibre collimator on the other side of the link [P], and, at 109 m, by the 64-channel OPA of Jilin University and the Changchun Institute of Optics, Fine Mechanics and Physics (CIOMP), with a bulk lens in front of the chip (36 m without it; Zhang *et al.*, *Opt. Express* 2022, §D7) [P]. 100 m on a 90% target is ≈33 m at 10% under $R^2$ scaling.",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-04."
+  },
+  {
+   "id": "R4_R5_C10_part1-04b",
+   "finding": "Round 4 source research, R5_C10_part1-04",
+   "old": "100 m has been shown only on a 90% target, which is ≈33 m at 10% under $R^2$ scaling",
+   "new": "100 m has been shown only on a 90% target, by Jilin University's OPAs in 2021 and 2022 (§C10.2b; §D7), which is ≈33 m at 10% under $R^2$ scaling",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-04."
+  },
+  {
+   "id": "R4_R5_C10_part1-04c",
+   "finding": "Round 4 source research, R5_C10_part1-04",
+   "old": "<3.8 µs point-to-point | About 50–55 m coherent |",
+   "new": "<3.8 µs point-to-point | More than 50 m coherent [I, abstract]; reflectance not stated |",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-04."
+  },
+  {
+   "id": "R4_R5_C10_part1-04d",
+   "finding": "Round 4 source research, R5_C10_part1-04",
+   "old": "| 25 dBm in, about 11 dBm in the main beam | FMCW 22 m |",
+   "new": "| 25 dBm in, about 11 dBm in the main beam | FMCW 22 m, to an indoor wall via a folding mirror; the paper states no reflectance, and the npj review lists 10% [S] |\n| Jilin 128-channel SiN-on-SOI (*Photon. Res.* 2021) [P] | 128, aperiodic, 29.7 µm mean pitch; 4 × 3 mm aperture | Phase 140° (chain gratings) or 100° (fishbone) × wavelength 19.2–19.4° (1,350–1,630 nm) | 0.021° × 0.1° (chain), 0.021° × 0.029° (fishbone) | System insertion loss 17.7 dB (chain) and 17.0 dB (fishbone); PN shifters ≤1.8 µW static each; sidelobe suppression 10.3–10.6 dB at 0° | FMCW **100 m on a 90% scatter plate** (path folded by a mirror beyond 50 m; the OPA at one end of the link, a fibre collimator at the other), 26 dBm in; 1,360 nJ per point [S]; ≈33 m at 10% under $R^2$ scaling |",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-04."
+  },
+  {
+   "id": "R4_R5_C10_part1-04e",
+   "finding": "Round 4 source research, R5_C10_part1-04",
+   "old": "about 85% main-lobe power | FMCW 20 m |",
+   "new": "about 85% main-lobe power | FMCW 20 m, on a retroreflective traffic-sign-type target; no low-reflectance target was tested [P] |",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-04."
+  },
+  {
+   "id": "R4_R5_C10_part1-05",
+   "finding": "Round 4 source research, R5_C10_part1-05",
+   "old": "- Waveguide-width errors, correlated along each guide, accumulate phase at about 12 rad per nm of width error per mm of Si path, so after a few millimetres the uncalibrated phases are effectively random. The Si phase-coherence length, the guide length beyond which two nominally identical paths no longer keep a predictable phase relation, is about 1.6–4 mm [I].",
+   "new": "- Waveguide-width errors, correlated along each guide, accumulate a phase $(2\\pi/\\lambda)(\\partial n_{\\rm eff}/\\partial w)$ per unit width error and length: about 12 rad per nm of width error per mm for a 400 nm wide Si strip ($\\partial n_{\\rm eff}/\\partial w=3\\times10^{-3}\\ {\\rm nm^{-1}}$ at 1,550 nm, Rizzo *et al.*, *Opt. Lett.* 2023) and about 6.5 rad for the common 500 nm strip ($1.6\\times10^{-3}\\ {\\rm nm^{-1}}$, Yang *et al.*, *Opt. Express* 2015) [I; $(2\\pi/1.55\\ \\mu{\\rm m})\\times3\\times10^{-3}\\ {\\rm nm^{-1}}\\times1\\ {\\rm mm}=12$ rad]. After a few millimetres the uncalibrated phases are therefore effectively random. Yang *et al.* measured the phase-coherence length of 220 nm SOI waveguides, the length $L_{\\rm coh}$ at which the random phase reaches an rms of $\\sqrt2$ rad (its rms is $\\sqrt{2L/L_{\\rm coh}}$ for a length $L$, so $\\langle e^{i\\Delta\\phi}\\rangle=e^{-1}$ at $L_{\\rm coh}$), at 4.2 mm for strip and 1.6 mm for rib waveguides, from 800 Mach–Zehnder interferometers across one 6-inch foundry wafer [I].",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-05."
+  },
+  {
+   "id": "R4_R5_C10_part1-06",
+   "finding": "Round 4 source research, R5_C10_part1-06",
+   "old": "Published 2D arrays are orders of magnitude smaller [U].",
+   "new": "The largest integrated 2D phased arrays with a phase control per element found for this report are far smaller: 128 emitters in a waveguide-fed silicon chip (Fatemi *et al.*, *IEEE JSSC* 2019) and 160 × 160 = 25,600 MEMS-actuated grating phase shifters in a free-space-fed chip with a 6.6° × 4.4° field (Wang *et al.*, *Optica* 2019) [I], about 9,400 and 47 times fewer ($1.2\\times10^{6}/128$ and $1.2\\times10^{6}/25{,}600$). Liquid-crystal-on-silicon modulators have millions of phase pixels but respond in milliseconds [I, as cited by Wang *et al.*].",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-06."
+  },
+  {
+   "id": "R4_R5_C10_part1-07a",
+   "finding": "Round 4 source research, R5_C10_part1-07",
+   "old": "Beam ≤0.04° × 0.02°, sampling grid 0.15° × 0.15°.",
+   "new": "Beam ≤0.04° × 0.02° FWHM, sampling grid 0.15° × 0.15°.",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-07."
+  },
+  {
+   "id": "R4_R5_C10_part1-07b",
+   "finding": "Round 4 source research, R5_C10_part1-07",
+   "old": "If the quoted widths are FWHM, the nominal 1/e² footprint fraction (§C10.3b convention: the spot is bounded where intensity falls to $1/e^2$ of its peak) is about 1.6–8%.",
+   "new": "Taking the quoted widths as FWHM, as the FS-4S datasheet states for its beam, the nominal 1/e² footprint fraction (§C10.3b convention: the spot is bounded where intensity falls to $1/e^2$ of its peak) is about 1.6–8%.",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-07."
+  },
+  {
+   "id": "R4_R5_C10_part1-07c",
+   "finding": "Round 4 source research, R5_C10_part1-07",
+   "old": "and ≈8% as a nominal 1/e² footprint fraction (§C10.3b convention) if the datasheet widths are FWHM.",
+   "new": "and ≈8% as a nominal 1/e² footprint fraction (§C10.3b convention), since the datasheet gives the widths as FWHM.",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-07."
+  },
+  {
+   "id": "R4_R5_C10_part1-07d",
+   "finding": "Round 4 source research, R5_C10_part1-07",
+   "old": "| Analog Photonics FS-4S (§C10.2b) | ≈3.6% | ≈2.8% | ≈8%, if the datasheet widths are FWHM |",
+   "new": "| Analog Photonics FS-4S (§C10.2b) | ≈3.6% | ≈2.8% | ≈8% |",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-07."
+  },
+  {
+   "id": "R4_R5_C10_part1-08a",
+   "finding": "Round 4 source research, R5_C10_part1-08",
+   "old": "| **FS-4S** (long range) | C+L band, Class 1,",
+   "new": "| **FS-4S** (long range) | C+L band with an \"integrated tunable laser\" (no model named), Class 1,",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-08."
+  },
+  {
+   "id": "R4_R5_C10_part1-08b",
+   "finding": "Round 4 source research, R5_C10_part1-08",
+   "old": "| **SR-1S** (short range) | 20 m at 10%, 150° × 70°, 0.4° × 0.4°, 660 kpts/s, 35 W | The 70° wavelength-steered axis would need ≈1.17°/nm over RAY-H1's 60 nm,",
+   "new": "| **SR-1S** (short range) | C+L band with an \"integrated tunable laser\" (no model named), 20 m at 10%, 150° × 70°, sampling grid 0.4° × 0.4°, beam ≤0.04° × 0.02° FWHM (as for the FS-4S), 660 kpts/s, 35 W | The 70° wavelength-steered axis would need ≈1.17°/nm over a 60 nm sweep such as RAY-H1's,",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-08."
+  },
+  {
+   "id": "R4_R5_C10_part1-09a",
+   "finding": "Round 4 source research, R5_C10_part1-09",
+   "old": "| **FSOC-B1** / OPA-B1 steerer | 50° × 14°, 1 mrad beam, ≤7.5 dB fibre-to-beam loss at up to 400 mW in, <10 µs random access, <5 W [U] | The same OPA engine sold for free-space optical links. If its 14° axis is wavelength-steered, <10 µs access needs a laser that retunes about 30× faster than RAY-H1 (<300 µs) |",
+   "new": "| **FSOC-B1** / OPA-B1 steerer | 50° × 14° (phase-steered 50° axis, wavelength-steered 14° axis), 1 mrad × 1 mrad beam, ≤7.5 dB insertion loss from fibre input to beam at up to 400 mW in, <10 µs point-to-point random access, <5 W, customer-provided C/L-band laser; FSOC-B1 has a direct-detection receiver and OPA-B1 an I/Q coherent receiver [P] | The same OPA engine sold for free-space optical links. Because the 14° axis is wavelength-steered and the laser is the customer's, <10 µs access across that axis needs a laser that retunes about 30× faster than RAY-H1 (<300 µs) |",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-09."
+  },
+  {
+   "id": "R4_R5_C10_part1-09b",
+   "finding": "Round 4 source research, R5_C10_part1-09",
+   "old": "(products table below; vendor claim [U])",
+   "new": "(products table below; vendor claim [P])",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-09."
+  },
+  {
+   "id": "R4_R5_C10_part1-09c",
+   "finding": "Round 4 source research, R5_C10_part1-09",
+   "old": "- Analog Photonics FS-4S / SR-1S / RAY-H1 / FSOC-B1 datasheets (2025): https://www.analogphotonics.com/wp-content/uploads/2025/07/LiDAR-FS-4S-RevA.pdf ; https://www.analogphotonics.com/wp-content/uploads/2025/07/LiDAR-SR-1S-RevA.pdf ; https://www.analogphotonics.com/wp-content/uploads/2025/06/Laser-RAY-H1-RevA.pdf",
+   "new": "- Analog Photonics FS-4S / SR-1S / RAY-H1 / FSOC-B1 / OPA-B1 datasheets (Rev A, June–July 2025): https://www.analogphotonics.com/wp-content/uploads/2025/07/LiDAR-FS-4S-RevA.pdf ; https://www.analogphotonics.com/wp-content/uploads/2025/07/LiDAR-SR-1S-RevA.pdf ; https://www.analogphotonics.com/wp-content/uploads/2025/06/Laser-RAY-H1-RevA.pdf ; https://www.analogphotonics.com/wp-content/uploads/2025/06/FSOC-B1-RevA.pdf ; https://www.analogphotonics.com/wp-content/uploads/2025/06/OPA-B1-RevA.pdf",
+   "why": "Source found by the R5_C10_part1 research agent; see sources/R5_C10_part1_findings.md, R5_C10_part1-09."
+  }
+ ],
+ "skipped": []
+}

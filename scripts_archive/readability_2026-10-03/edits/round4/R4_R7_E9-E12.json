@@ -1,0 +1,146 @@
+{
+ "block": "R4_R7_E9-E12",
+ "edits": [
+  {
+   "id": "R4_R7_E9-E12-01",
+   "finding": "Round 4 source research, R7_E9-E12-01",
+   "old": "and MEFormer 70.5, 3.6 above it ($70.5-66.9=3.6$).",
+   "new": "and MEFormer 70.5, 3.6 above it ($70.5-66.9=3.6$). Grace-BEV retrained MEFormer in the same unified setting as its baseline; MEFormer's own paper reports 71.5 [I, Cha et al., arXiv 2407.19156, Table 1].",
+   "why": "Source found by the R7_E9-E12 research agent; see sources/R7_E9-E12_findings.md, R7_E9-E12-01."
+  },
+  {
+   "id": "R4_R7_E9-E12-02",
+   "finding": "Round 4 source research, R7_E9-E12-02",
+   "old": "which was trained on its full schedule ($69.7-68.5=1.2$).",
+   "new": "which Fusion4CA describes as fully trained for 20 epochs ($69.7-68.5=1.2$); Fusion4CA's own 6-epoch BEVFusion run scores 64.7 mAP (its Table II and Fig. 1). In BEVFusion's released code, however, the 20 epochs train the lidar-only detector, and the camera + lidar model is then trained from that checkpoint for 6 epochs, the number Fusion4CA reports for itself [P, BEVFusion repository]. Fusion4CA does not state its starting checkpoint, so the +1.2 mAP may compare equal camera + lidar schedules.",
+   "why": "Source found by the R7_E9-E12 research agent; see sources/R7_E9-E12_findings.md, R7_E9-E12-02."
+  },
+  {
+   "id": "R4_R7_E9-E12-03a",
+   "finding": "Round 4 source research, R7_E9-E12-03",
+   "old": "SGO times can also be imprecise: the Rimrock record gives 00:03, while the ODI resume dates the fatal crash to 28 Nov 2023.",
+   "new": "Tesla files its SGO times in UTC (coordinated universal time), not local time: in the 2021–25 archive, the lighting field of 97% of the 1,563 Tesla reports that give a time and a lighting condition agrees with that time read as UTC, against 49% read as local time, whereas the 217 such reports from all other companies agree with local time (93%) and not with UTC (50%) [E: mid-month solar elevation at each state's centre]. The Rimrock record (13781-8004) shows the effect. It gives only the month, November 2023, with 00:03 and the lighting \"Dawn / Dusk\"; the ODI resume dates the fatal crash to 28 Nov 2023, and the Arizona Department of Public Safety placed it just after 5 p.m. on 27 Nov [P; T, AP via CBS News, 18 Oct 2024]. Both fit a crash at 17:03 on 27 Nov, because Arizona keeps UTC−7 all year and 17:03 there is 00:03 UTC on 28 Nov [E]. The time is therefore omitted from the table, and the other times shown are as filed; in local time they are 14:19 or 15:19 (Red Mills), 00:03 (Fullerton), 13:40 (Issaquah), 22:23 the previous evening (Barrington), 16:36 or 17:36 the previous afternoon (Sunol) and 16:49 (Bentonville) [E].",
+   "why": "Source found by the R7_E9-E12 research agent; see sources/R7_E9-E12_findings.md, R7_E9-E12-03."
+  },
+  {
+   "id": "R4_R7_E9-E12-03b",
+   "finding": "Round 4 source research, R7_E9-E12-03",
+   "old": "| SGO report | Date, place | Road | Weather field | Struck | Tesla speed | Injury |",
+   "new": "| SGO report | Date, place (time as filed, in UTC) | Road | Weather field | Struck | Tesla speed | Injury |",
+   "why": "Source found by the R7_E9-E12 research agent; see sources/R7_E9-E12_findings.md, R7_E9-E12-03."
+  },
+  {
+   "id": "R4_R7_E9-E12-03c",
+   "finding": "Round 4 source research, R7_E9-E12-03",
+   "old": "several at night or dawn, some in fog.",
+   "new": "several at night, dawn or dusk in local time, some in fog.",
+   "why": "Source found by the R7_E9-E12 research agent; see sources/R7_E9-E12_findings.md, R7_E9-E12-03."
+  },
+  {
+   "id": "R4_R7_E9-E12-04",
+   "finding": "Round 4 source research, R7_E9-E12-04",
+   "old": "The TU Graz beam-density study (2025) found that training on *denser* data generalized better across 32–128 beams, with gaps under about 3% for modest density changes [I, arXiv 2503.15087; figures taken from the paper's summary and not re-read from its tables].",
+   "new": "The TU Graz beam-density study (2025) found that training on *denser* data generalized better across 32–128 beams when detection is scored at the loose 0.4 IoU threshold (§C10.6(i)), and that halving or doubling the beam count at test time (for example from 128 to 64 beams, or from 32 to 64) widened the domain gap by at most about 3 percentage points at the strict 0.7 threshold, against about 12 points for a fourfold change [I, arXiv 2503.15087, Eq. (1), Tables 7–8]. The domain gap is the shortfall in vehicle AP (PV-RCNN++) expressed as a percentage of the AP of the same detector trained on the target data, so the 3 points are a change in a relative gap, not mAP points.",
+   "why": "Source found by the R7_E9-E12 research agent; see sources/R7_E9-E12_findings.md, R7_E9-E12-04."
+  },
+  {
+   "id": "R4_R7_E9-E12-05",
+   "finding": "Round 4 source research, R7_E9-E12-05",
+   "old": "maps age (in 2018, 6,000–8,000 of Ushr's ≈200,000 mapped highway miles, 3–4%, changed each year)",
+   "new": "maps age (in 2018, 6,000–8,000 of the ≈200,000 highway miles mapped by Ushr, the HD-map supplier for GM's Super Cruise [P, Ushr, 18 Oct 2017], 3–4%, changed each year)",
+   "why": "Source found by the R7_E9-E12 research agent; see sources/R7_E9-E12_findings.md, R7_E9-E12-05."
+  },
+  {
+   "id": "R4_R7_E9-E12-06a",
+   "finding": "Round 4 source research, R7_E9-E12-06",
+   "old": "including about **325 W** for the two computers.",
+   "new": "including about **325 W** for the two computers, the Nuvo-8108GC XL that carries the RTX 3060 (125 W) and the HP Omen laptop (200 W).",
+   "why": "Source found by the R7_E9-E12 research agent; see sources/R7_E9-E12_findings.md, R7_E9-E12-06."
+  },
+  {
+   "id": "R4_R7_E9-E12-06b",
+   "finding": "Round 4 source research, R7_E9-E12-06",
+   "old": "The two percentages are therefore not consistent with constant loads of the tabulated sizes, and they should not be rescaled to other loads [E].",
+   "new": "The two percentages are therefore not consistent with constant loads of the tabulated sizes, and they should not be rescaled to other loads [E]. The paper does not derive them from those loads. Each is extrapolated from one measured drop in battery state of charge over a single 17.71-mile cycle started at 95% charge (10.36% for the bare car, 11.05% with sensing and 11.9% with sensing and compute, its Table III), with the cycle repeated until the battery is depleted, so each includes everything else that differed between the three runs; the paper reports no repeat runs or uncertainties [I]. With the 27 kWh pack that Kia specifies [P], the extra 0.69 and 0.85 points of charge correspond to average battery-side draws of about 310 W and 380 W, against the tabulated 122 W and 325 W [E: $0.0069\\times27\\ {\\rm kWh}/0.597\\ {\\rm h}\\approx0.31$ kW and $0.0085\\times27/0.597\\approx0.38$ kW, with $2{,}149\\ {\\rm s}=0.597$ h]. The extrapolation is also not exactly inverse to the charge drops, which alone would give losses of 6.2% and 12.9% ($1-10.36/11.05$ and $1-10.36/11.9$).",
+   "why": "Source found by the R7_E9-E12 research agent; see sources/R7_E9-E12_findings.md, R7_E9-E12-06."
+  },
+  {
+   "id": "R4_R7_E9-E12-06c",
+   "finding": "Round 4 source research, R7_E9-E12-06",
+   "old": "[Brown *et al.*, IEEE ITSC 2023 paper](https://files.wmich.edu/s3fs-public/attachments/u56/2023/IEEE_ITSC_2023__Evaluation_of_Autonomous_Vehicle_Sensing_and_Compute_Load_on_a_Chassis_Dynamometer.pdf)",
+   "new": "[Brown *et al.*, IEEE ITSC 2023 paper, accepted manuscript at OSTI](https://www.osti.gov/servlets/purl/2311313)",
+   "why": "Source found by the R7_E9-E12 research agent; see sources/R7_E9-E12_findings.md, R7_E9-E12-06."
+  },
+  {
+   "id": "R4_R7_E9-E12-07",
+   "finding": "Round 4 source research, R7_E9-E12-07",
+   "old": "Huawei's \"WA\" (world–action) route deliberately skips the language layer and maps multimodal perception directly to actions [T].",
+   "new": "Huawei's WEWA architecture (§E10.1) pairs a cloud \"world engine\" (WE) with a vehicle-side \"world action\" (WA) model [P, Huawei ADS page], and the WA model deliberately skips the language layer, mapping multimodal perception directly to actions [T, KrASIA, Sep 2025].",
+   "why": "Source found by the R7_E9-E12 research agent; see sources/R7_E9-E12_findings.md, R7_E9-E12-07."
+  },
+  {
+   "id": "R4_R7_E9-E12-08a",
+   "finding": "Round 4 source research, R7_E9-E12-08",
+   "old": "At 36 m/s (about 130 km/h), 100 ms of end-to-end latency is $36\\times0.1=3.6$ m.",
+   "new": "At 36 m/s (about 130 km/h), 100 ms of end-to-end latency is $36\\times0.1=3.6$ m; 100 ms is the processing budget Lin et al. set for an autonomous-driving system, to be met at 10 or more frames per second and judged on tail latency, the 99th or 99.99th percentile of processing time [I, Lin et al., ASPLOS 2018, §2.4].",
+   "why": "Source found by the R7_E9-E12 research agent; see sources/R7_E9-E12_findings.md, R7_E9-E12-08."
+  },
+  {
+   "id": "R4_R7_E9-E12-08b",
+   "finding": "Round 4 source research, R7_E9-E12-08",
+   "old": "so the slower the car, the more of that energy is spent per kilometre driven.",
+   "new": "so the slower the car, the more of that energy is spent per kilometre driven. Lin et al. estimate for a Chevrolet Bolt that a computer with one CPU and three GPUs at full load cuts range by about 6%, and the whole system by about 11.5% once storage and the air conditioning that removes its heat are counted (about 77 W of cooling per 100 W of load) [I, Lin et al., ASPLOS 2018, Fig. 2].",
+   "why": "Source found by the R7_E9-E12 research agent; see sources/R7_E9-E12_findings.md, R7_E9-E12-08."
+  },
+  {
+   "id": "R4_R7_E9-E12-09a",
+   "finding": "Round 4 source research, R7_E9-E12-09",
+   "old": "by July 2025, and **1.7 million** ADS vehicles by April 2026.",
+   "new": "by July 2025 [T, KrASIA, Sep 2025], **1.7 million** ADS vehicles by April 2026 [P, Huawei, 23 Apr 2026] and more than 2 million by 8 Sep 2026 (§E1) [T, Tencent News, 8 Sep 2026].",
+   "why": "Source found by the R7_E9-E12 research agent; see sources/R7_E9-E12_findings.md, R7_E9-E12-09."
+  },
+  {
+   "id": "R4_R7_E9-E12-09b",
+   "finding": "Round 4 source research, R7_E9-E12-09",
+   "old": "More than 2 M vehicles; 14.5 B km [P]",
+   "new": "More than 2 M vehicles (8 Sep 2026) [T]; 14.7 B km of assisted driving to end-Aug 2026 [P]",
+   "why": "Source found by the R7_E9-E12 research agent; see sources/R7_E9-E12_findings.md, R7_E9-E12-09."
+  },
+  {
+   "id": "R4_R7_E9-E12-10",
+   "finding": "Round 4 source research, R7_E9-E12-10",
+   "old": "Light's Clarity (now John Deere) claimed 10 cm to 1 km [T].",
+   "new": "Light's Clarity, whose patents and part of whose team John Deere acquired in 2022, claimed to see any 3D structure in the road at distances from 10 cm to 1 km, a span of range rather than an object size [T, The Robot Report, 27 Oct 2020 and 19 May 2022].",
+   "why": "Source found by the R7_E9-E12 research agent; see sources/R7_E9-E12_findings.md, R7_E9-E12-10."
+  },
+  {
+   "id": "R4_R7_E9-E12-A2-16",
+   "finding": "Round 4 source research, Appendix 2 (Chip-size limits, interference and fusion (§C8, §C9, §E10))",
+   "old": "- Momenta R6 flywheel model and configurations: https://www.momenta.cn/en/article/304.html ; https://www.momenta.ai/en/article/234.html",
+   "new": "- Momenta R6 flywheel model and configurations: https://www.momenta.cn/en/article/304.html ; https://www.momenta.ai/en/article/234.html\n- Zhang *et al.*, Grace-BEV, BEV detection under sensor failures (arXiv 2605.30983, 2026): https://arxiv.org/abs/2605.30983\n- Cha *et al.*, MEFormer, modality-agnostic decoding and modality ensemble (arXiv 2407.19156): https://arxiv.org/abs/2407.19156\n- Luo *et al.*, Fusion4CA, camera auxiliary supervision for BEVFusion (arXiv 2603.05305, 2026): https://arxiv.org/abs/2603.05305\n- BEVFusion (MIT) released code and training configurations (20-epoch lidar-only stage, 6-epoch camera + lidar stage): https://github.com/mit-han-lab/bevfusion\n- Huawei ADS page, WEWA cloud world engine and vehicle-side world action model: https://auto.huawei.com/en/ads",
+   "why": "Sources read by the R7_E9-E12 research agent, added to the group 'Chip-size limits, interference and fusion (§C8, §C9, §E10)'."
+  },
+  {
+   "id": "R4_R7_E9-E12-A2-17",
+   "finding": "Round 4 source research, Appendix 2 (Camera-only vs multimodal)",
+   "old": "- RSS paper: https://arxiv.org/abs/1708.06374",
+   "new": "- RSS paper: https://arxiv.org/abs/1708.06374\n- AP via CBS News, Rimrock fatal crash, Arizona DPS date and time (18 Oct 2024): https://www.cbsnews.com/news/tesla-fsd-self-driving-autopilot-elon-musk/\n- NHTSA SGO ADAS incident reports, 2021–25 archive (time, lighting and weather fields): https://static.nhtsa.gov/odi/ffdd/sgo-2021-01/Archive-2021-2025/SGO-2021-01_Incident_Reports_ADAS.csv\n- The Robot Report, Light's Clarity launch (10 cm to 1 km depth range claim, 27 Oct 2020): https://www.therobotreport.com/clarity-perception-platform-autonomous-vehicles-light-launches/\n- The Robot Report, John Deere acquires Light's perception patents and team (19 May 2022): https://www.therobotreport.com/john-deere-acquires-light-camera-based-perception-platform/",
+   "why": "Sources read by the R7_E9-E12 research agent, added to the group 'Camera-only vs multimodal'."
+  },
+  {
+   "id": "R4_R7_E9-E12-A2-18",
+   "finding": "Round 4 source research, Appendix 2 (Software, data and ADAS validation)",
+   "old": "- NTSB Uber Tempe investigation (detection versus response): https://www.ntsb.gov/investigations/AccidentReports/Reports/HAR1903.pdf",
+   "new": "- NTSB Uber Tempe investigation (detection versus response): https://www.ntsb.gov/investigations/AccidentReports/Reports/HAR1903.pdf\n- Ushr, lidar-built HD map implemented in Cadillac Super Cruise (18 Oct 2017): https://www.prnewswire.com/news-releases/ushr-powers-hd-map-data-for-cadillac-super-cruise-300538822.html\n- Brown *et al.*, AV sensing and compute load on a chassis dynamometer, IEEE ITSC 2023 (OSTI accepted manuscript): https://www.osti.gov/servlets/purl/2311313\n- Kia, 2015 Soul EV overview (27 kWh, 360 V pack): https://www.kiamedia.com/us/en/media/pressreleases/9382/2015-soul-ev-overview\n- Lin *et al.*, architectural implications of autonomous driving (100 ms tail-latency budget; compute, storage and cooling cost in range), ASPLOS 2018: https://dl.acm.org/doi/10.1145/3173162.3173191\n- KrASIA (36Kr), interview with Huawei's Jin Yuzhi on WA and Level 4 (12 Sep 2025): https://kr-asia.com/nothing-is-free-huaweis-richard-jin-on-assisted-driving-and-the-path-to-level-4-autonomy",
+   "why": "Sources read by the R7_E9-E12 research agent, added to the group 'Software, data and ADAS validation'."
+  },
+  {
+   "id": "R4_R7_E9-E12-A2-19",
+   "finding": "Round 4 source research, Appendix 2 (Lidar market and Western programs)",
+   "old": "- Innoviz Q2 2026 (6-K): https://www.sec.gov/Archives/edgar/data/0001835654/000117891326003861/exhibit_99-1.htm",
+   "new": "- Innoviz Q2 2026 (6-K): https://www.sec.gov/Archives/edgar/data/0001835654/000117891326003861/exhibit_99-1.htm\n- Huawei, 2026 Qiankun technology conference (more than 1.7 M ADS vehicles; 10 B km by 19 Apr 2026): https://auto.huawei.com/cn/news/2026/2026-04-23-jishu\n- Huawei, August 2026 safety report (14.71 B km of assisted driving): https://auto.huawei.com/cn/ads/safety-and-data-report/202608\n- Tencent News, Jin Yuzhi announces more than 2 M ADS installations (8 Sep 2026): https://news.qq.com/rain/a/20260908A05SBC00",
+   "why": "Sources read by the R7_E9-E12 research agent, added to the group 'Lidar market and Western programs'."
+  }
+ ],
+ "skipped": []
+}

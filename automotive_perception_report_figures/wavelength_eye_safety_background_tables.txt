@@ -1,0 +1,25 @@
+Class 1 building blocks (small source, IEC 60825-1:2014 via ICNIRP 2013) [E]
+  905 nm: C4 = 2.5704; single pulse 198 nJ (79 nJ at the C5 floor); CW 1.00 mW
+  940 nm: C4 = 3.0200; single pulse 233 nJ (93 nJ at the C5 floor); CW 1.18 mW
+  1550 nm: single pulse (<0.35 s, 1 mm aperture) 7.85 mJ; CW (3.5 mm aperture) 9.6 mW
+  940/905 C4 ratio: 1.1749
+
+Photons per joule relative to 905 nm: 940 nm 1.039, 1550 nm 1.713
+CW ratio 1550/905: power 9.6x, photons 16.4x
+
+Stationary beam, short pulses: max energy per pulse (nJ) and 1550/905 ratio
+       1 kHz: 905     98.0  940    115.1  1550     9600.0  ratio     98x
+      10 kHz: 905     79.2  940     93.0  1550      960.0  ratio     12x
+     100 kHz: 905     10.0  940     11.8  1550       96.0  ratio     10x
+    1000 kHz: 905      1.0  940      1.2  1550        9.6  ratio     10x
+
+Solar background per receive pixel (25 mm aperture, 0.05 x 0.05 deg, rho 0.9, optics 0.5) [E]
+  905 nm, efficiency 0.24, 20 nm filter: 8.11e+08 counts/s
+  905 nm, efficiency 0.24, 40 nm filter: 1.62e+09 counts/s
+  940 nm, efficiency 0.37, 10 nm filter: 2.84e+08 counts/s
+  1550 nm, efficiency 0.30, 10 nm filter: 3.38e+08 counts/s
+  1550 nm, efficiency 0.80, 10 nm filter: 9.02e+08 counts/s
+
+Count-rate headroom: background / maximum sustainable detector count rate
+  Si SPAD 3x3 at 940 nm: 2.84e+08 / 5.4e+08 = 0.53
+  InGaAs SPAD pixel at 1550 nm: 3.38e+08 / 1e+06 = 338

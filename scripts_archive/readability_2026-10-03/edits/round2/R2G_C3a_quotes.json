@@ -1,0 +1,48 @@
+{
+ "block": "R2G_C3a_quotes",
+ "edits": [
+  {
+   "id": "R2G_C3a_quotes-001",
+   "finding": "cross_section (C4c count-rate headroom quoted in §C3a), skipped by R2C",
+   "old": "InGaAs SPADs would run ≈700× over their count-rate ceiling in sunlight (§C4c), with µs-class hold-off against afterpulsing",
+   "new": "InGaAs SPADs would run ≈340× over their count-rate ceiling in sunlight (§C4c subsection 3), with µs-class hold-off against afterpulsing",
+   "why": "The 0.05° pixel halves the 1,550 nm background to 3.4e8 counts/s, 340× the ≈1e6 counts/s of a 1 µs hold-off (§C4c subsection 3; §0)."
+  },
+  {
+   "id": "R2G_C3a_quotes-002",
+   "finding": "cross_section (C7a totals quoted in §C3a, Mobileye row), skipped by R2C",
+   "old": "(FMCW ≈4.3 µJ vs ToF ≈0.53 µJ per point at 200 m, §C7a)",
+   "new": "(FMCW ≈4.9 µJ vs ToF ≈0.42 µJ per point at 200 m, §C7a)",
+   "why": "§C7a model totals 4.90 and 0.415 µJ per point."
+  },
+  {
+   "id": "R2G_C3a_quotes-003",
+   "finding": "cross_section (C7a(e) light per channel quoted in §C3a), skipped by R2C",
+   "old": "   - powerful (≈50–100 mW per simultaneous line, §C7a(e));",
+   "new": "   - powerful (≈30 mW per simultaneous line at 200 m in the §C7a central case, ≈40–53 mW at 250–300 m and ≈88 mW in its high-energy case, §C7a(e));",
+   "why": "§C7a subsection 2(e): P_ch = E_pt/T_int = 30 mW at 200 m; 40 and 53 mW at 250 and 300 m with the fixed 20 mm aperture; 0.885 µJ/10 µs = 88 mW in the high case."
+  },
+  {
+   "id": "R2G_C3a_quotes-004",
+   "finding": "cross_section (§0 interference bullet), skipped by R2F",
+   "old": "now ships and makes random ghosts rare.",
+   "new": "now ships. Combined with a test that a peak recurs on three of a point's ten shots, it makes random ghosts negligible by day and night; a two-of-ten test is marginal in dense traffic (§C9a).",
+   "why": "§C9a item 3 as rebuilt by R2F: 3-of-10 gives at most 2e-7 (night) and 1.1e-5 (bright sun) per point; 2-of-10 gives 2.0e-5 to 2.0e-4 at night and leaks 1.6e-3 in bright sun."
+  },
+  {
+   "id": "R2G_C3a_quotes-005",
+   "finding": "cross_section (Appendix 2 sources for §C9a), skipped by R2F",
+   "old": "- Mutual interference potential of scanning lidar (SPIE 11005): https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11005/110050I/Mutual-interference-potential-and-impact-of-scanning-lidar-according-to/10.1117/12.2518643.full",
+   "new": "- Mutual interference potential of scanning lidar (SPIE 11005): https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11005/110050I/Mutual-interference-potential-and-impact-of-scanning-lidar-according-to/10.1117/12.2518643.full\n- Kim, Eom, Choi & Park, \"Mutual interference on mobile pulsed scanning LIDAR\", *IEMEK J. Embed. Sys. Appl.* 12(1), 43–62 (2017), Tables 1, 3 and 4: https://doi.org/10.14372/IEMEK.2017.12.1.43\n- SICK, LMS511-10100 PRO data sheet (190° field, 0.2–80 m working range, 11.9 mrad divergence): https://www.sick.com/media/pdf/1/41/941/dataSheet_LMS511-10100-PRO_1046135_en.pdf\n- Popko, \"Signal interactions between lidar scanners\", MS thesis, Georgia Institute of Technology (2019), Table 8 and §7.2: http://hdl.handle.net/1853/62690",
+   "why": "The three sources R2F read for §C9a; Popko's title page reads 'Master of Science' (Georgia Tech, May 2019), so the entry says MS thesis, not R2F's 'PhD thesis'."
+  },
+  {
+   "id": "R2G_C3a_quotes-006",
+   "finding": "source check (Popko's degree), found while checking R2F's sources",
+   "old": "Popko, Gaylord, Valenta (Georgia Tech): PhD thesis 2019",
+   "new": "Popko, Gaylord, Valenta (Georgia Tech): MS thesis 2019",
+   "why": "The thesis at hdl 1853/62690 is 'In Partial Fulfillment of the Requirements for the Degree Master of Science' (title page)."
+  }
+ ],
+ "skipped": []
+}

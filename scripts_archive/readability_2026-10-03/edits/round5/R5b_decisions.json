@@ -1,0 +1,825 @@
+{
+ "block": "R5b_decisions",
+ "edits": [
+  {
+   "id": "R5b-L43",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "- **Part B, Lidar markets (China vs outside China):** installation counts, Western car programs and suppliers, robotaxis and trucks, China's driverless delivery vans, parking sensing, and markets beyond cars.",
+   "new": "- **Part B, Lidar markets (China vs outside China):** installation counts, Western car programmes and suppliers, robotaxis and trucks, China's driverless delivery vans, parking sensing, and markets beyond cars.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L105",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "   - **My bottom-up estimate** (built up program by program and export channel by channel, §B5): about 50–155k passenger-car lidars were fitted to cars sold outside China in 2025. That is about 0.1–0.3% of non-China production ($5.0\\times10^{4}/6\\times10^{7}\\approx0.08\\%$ and $1.55\\times10^{5}/6\\times10^{7}\\approx0.26\\%$ of an assumed 60 M non-China light vehicles, rounded), the same order of magnitude as OEM thermal night vision (about 50–100k per year).",
+   "new": "   - **My bottom-up estimate** (built up programme by programme and export channel by channel, §B5): about 50–155k passenger-car lidars were fitted to cars sold outside China in 2025. That is about 0.1–0.3% of non-China production ($5.0\\times10^{4}/6\\times10^{7}\\approx0.08\\%$ and $1.55\\times10^{5}/6\\times10^{7}\\approx0.26\\%$ of an assumed 60 M non-China light vehicles, rounded), the same order of magnitude as OEM thermal night vision (about 50–100k per year).",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L110",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "     - Stellantis shelved its L3 program.",
+   "new": "     - Stellantis shelved its L3 programme.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L123",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "4. **Several Western programs target 2027–28, many tied to eyes-off L3** (level 3 driving in which the driver may look away while the system drives). They range from supplier awards to planned vehicle launches, and none of these dates establishes a volume ramp:",
+   "new": "4. **Several Western programmes target 2027–28, many tied to eyes-off L3** (level 3 driving in which the driver may look away while the system drives). They range from supplier awards to planned vehicle launches, and none of these dates establishes a volume ramp:",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L141",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "     - Survivors re-rated (their share prices recovered) in 2025–26 on truck and L3 programs, US restrictions on Chinese lidar and, for Aeva, a data-centre optics pivot.",
+   "new": "     - Survivors re-rated (their share prices recovered) in 2025–26 on truck and L3 programmes, US restrictions on Chinese lidar and, for Aeva, a data-centre optics pivot.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L149",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "     - No Chinese FMCW lidar has a verifiable automotive series nomination (a carmaker's award for a production model) with an SOP. The strongest candidates (LightIC/摩尔芯光, LuminWave) are one program stage behind Aurora and Aeva, and they partly rely on Tower (the foundry Tower Semiconductor) and indie Semiconductor.",
+   "new": "     - No Chinese FMCW lidar has a verifiable automotive series nomination (a carmaker's award for a production model) with an SOP. The strongest candidates (LightIC/摩尔芯光, LuminWave) are one programme stage behind Aurora and Aeva, and they partly rely on Tower (the foundry Tower Semiconductor) and indie Semiconductor.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L194",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "    - **Industry behaviour.** Every announced production eyes-off or driverless program uses lidar, except Tesla (and Xpeng's robotaxi). Almost every Western L2++ product (supervised driver assistance with extended functions such as navigation-guided highway driving, where the driver remains responsible) now ships **without** lidar.",
+   "new": "    - **Industry behaviour.** Every announced production eyes-off or driverless programme uses lidar, except Tesla (and Xpeng's robotaxi). Almost every Western L2++ product (supervised driver assistance with extended functions such as navigation-guided highway driving, where the driver remains responsible) now ships **without** lidar.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L199",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "    - **Software and data change the comparison (§E8).** Fleet reach, rare-event mining, labels, simulation, validation and update speed can outweigh a sensor specification in an ADAS program. Tesla, Waymo and Mobileye have different data advantages. Raw fleet miles or installed sensors alone do not establish a durable moat or a safety result.",
+   "new": "    - **Software and data change the comparison (§E8).** Fleet reach, rare-event mining, labels, simulation, validation and update speed can outweigh a sensor specification in an ADAS programme. Tesla, Waymo and Mobileye have different data advantages. Raw fleet miles or installed sensors alone do not establish a durable moat or a safety result.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L205-206",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "    - 905/940 nm dToF holds about 85–92% of units in 2030. FMCW holds about 0.1–0.5% of units (roughly 10–90k under §F5's 11–18 M-unit denominator, larger by value), mostly trucks and a few L3 programs.\n    - Western brands face strong pressure to offer lidar **in China** (about 70% chance that most of their ¥150k+ new-energy vehicle, NEV, models offer it by 2028), and meet it with Chinese stacks (Chinese-supplied lidar and driver-assistance systems). That makes them large lidar buyers for China-built cars while their home programs retreat (§B6).",
+   "new": "    - 905/940 nm dToF holds about 85–92% of units in 2030. FMCW holds about 0.1–0.5% of units (roughly 10–90k under §F5's 11–18 M-unit denominator, larger by value), mostly trucks and a few L3 programmes.\n    - Western brands face strong pressure to offer lidar **in China** (about 70% chance that most of their ¥150k+ new-energy vehicle, NEV, models offer it by 2028), and meet it with Chinese stacks (Chinese-supplied lidar and driver-assistance systems). That makes them large lidar buyers for China-built cars while their home programmes retreat (§B6).",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L1595",
+   "finding": "T_c in §C0 subsection 2",
+   "old": "- *How the numbers are derived* [E], for 1,550 nm, $B=1$ GHz and $T=10$ µs, so that $\\kappa=B/T=10^{14}$ Hz/s. These are illustrative values, as in §C7 Eq. (85); the §C7a model and §C0 subsection 10.3 integrate 5 µs in each ramp ($T_{\\rm int}=10$ µs):",
+   "new": "- *How the numbers are derived* [E], for 1,550 nm, $B=1$ GHz and $T_c=10$ µs, so that $\\kappa=B/T_c=10^{14}$ Hz/s. These are illustrative values, as in §C7 Eq. (85); the §C7a model and §C0 subsection 10.3 integrate 5 µs in each ramp ($T_{\\rm int}=10$ µs):",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L1984",
+   "finding": "N_ADC for ADC samples per point",
+   "old": "  - $N_b=(f_{b,\\max}+f_{D,\\max})\\,T_u=2{,}450$, where $T_u=5$ µs is the useful window of one ramp, $f_{b,\\max}=400$ MHz the range beat at 300 m and $f_{D,\\max}=90$ MHz the Doppler shift at 70 m/s. Equivalently $N_b=(300\\ {\\rm m})/\\Delta R+f_{D,\\max}T_u=2{,}000+450$, where $\\Delta R=c/(2B)=0.15$ m is the range resolution of the chirp's bandwidth $B=1$ GHz. §C7a's digitizer takes 2.5 samples per bin in each ramp, so its Eq. (94) counts $N_{\\rm samp}=5N_b\\approx12{,}300$ samples per point.",
+   "new": "  - $N_b=(f_{b,\\max}+f_{D,\\max})\\,T_u=2{,}450$, where $T_u=5$ µs is the useful window of one ramp, $f_{b,\\max}=400$ MHz the range beat at 300 m and $f_{D,\\max}=90$ MHz the Doppler shift at 70 m/s. Equivalently $N_b=(300\\ {\\rm m})/\\Delta R+f_{D,\\max}T_u=2{,}000+450$, where $\\Delta R=c/(2B)=0.15$ m is the range resolution of the chirp's bandwidth $B=1$ GHz. §C7a's digitizer takes 2.5 samples per bin in each ramp, so its Eq. (94) counts $N_{\\rm ADC}=5N_b\\approx12{,}300$ samples per point.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L2141",
+   "finding": "water film 1.88 dB",
+   "old": "- **A coherent design falls off a cliff at $X=\\mathcal{M}_0$.** Beyond it the square root has no real value: the design detects nothing *at any range*, because even its near-field plateau no longer reaches the detection level. The best-aperture design reaches 110 m behind a 0.2 mm water film ($X=1.9$ dB), 27 m with $X=3$ dB and nothing beyond 3.1 dB. The 25 mm design reaches 58 m behind the film and nothing beyond 2.1 dB.",
+   "new": "- **A coherent design falls off a cliff at $X=\\mathcal{M}_0$.** Beyond it the square root has no real value: the design detects nothing *at any range*, because even its near-field plateau no longer reaches the detection level. The best-aperture design reaches 111 m behind a 0.2 mm water film ($X=1.88$ dB), 27 m with $X=3$ dB and nothing beyond 3.1 dB. The 25 mm design reaches 61 m behind the film and nothing beyond 2.1 dB.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L2374",
+   "finding": "§C0 10.8 efficiency caveat as pointer",
+   "old": "- **Efficiency.** It is the weakest input. The 0.25 of 10.4 lies above both measured chains, 0.112 for Waymo's fibre-optic bench and 0.057 effective for Pointcloud's integrated array, as 10.1 notes.",
+   "new": "- **Efficiency.** It is the weakest input: the 0.25 of 10.4 lies above both measured chains (10.1).",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L2522",
+   "finding": "reference form §X subsection N",
+   "old": "- **Counting.** Lidar statistics, including Hesai's and RoboSense's reported unit counts and Yole's lidar figures, exclude ToF cameras and ToF sensors. ToF cameras and sensors sit in \"3D sensing\" (§B8). A robot described as having \"no lidar\" may still range with ToF cameras (§B4a, subsection 4).",
+   "new": "- **Counting.** Lidar statistics, including Hesai's and RoboSense's reported unit counts and Yole's lidar figures, exclude ToF cameras and ToF sensors. ToF cameras and sensors sit in \"3D sensing\" (§B8). A robot described as having \"no lidar\" may still range with ToF cameras (§B4a subsection 4).",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L2551",
+   "finding": "Falcon K1 naming",
+   "old": "| **Seyond** (CN/US) | Falcon K/K2/K3 (1550); Robin W/E1X/E2; Hummingbird D1 | dToF | **1550** / 905 (Robin W) and **940 (Robin E1X, per its datasheet)** | Er-fiber MOPA + InGaAs APD / VCSEL + SiPM or SPAD | **Polygon + galvo** / 1D / flash | 250 m (K), 300 m (K2), 450 m (K3); Robin E1X 200 m; Robin W 70 m (notes) | NIO-dependent; moving to 9xx for cost |",
+   "new": "| **Seyond** (CN/US) | Falcon K1/K2/K3 (1550); Robin W/E1X/E2; Hummingbird D1 | dToF | **1550** / 905 (Robin W) and **940 (Robin E1X, per its datasheet)** | Er-fiber MOPA + InGaAs APD / VCSEL + SiPM or SPAD | **Polygon + galvo** / 1D / flash | 250 m (K), 300 m (K2), 450 m (K3); Robin E1X 200 m; Robin W 70 m (notes) | NIO-dependent; moving to 9xx for cost |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L2799",
+   "finding": "reference form §X subsection N",
+   "old": "| **Blickfeld** (Munich) | MEMS-mirror lidar; moved from automotive to security, volume and traffic monitoring | Self-administration insolvency Jun 2024 [T]; proceedings reportedly ended Jan 2025 [U]. Raised >\\$64 M of venture capital [T]; another report gives >€45 M in total, including €7.5 M in Dec 2023 [T]. Senstar cites \"over €60 million in technology investments since inception\" [P]; the higher figures probably include a €15 M European Investment Bank facility (2022) [P]. Public grants ≈€3.0 M, led by an EIC Accelerator-pilot grant of €1.84 M (2020–22) [P/T] (§C3a, subsection 1) | **Senstar Technologies (Nasdaq: SNT), €10.4 M cash plus up to €1 M earn-out**. Agreed 9 Dec 2025, closed 17 Feb 2026; runs as a subsidiary under its own name [P] | [agreement](https://www.prnewswire.com/news-releases/senstar-technologies-corporation-announces-agreement-to-acquire-blickfeld-gmbh-302637161.html); [closing](https://www.prnewswire.com/news-releases/senstar-technologies-corporation-announces-closing-of-blickfeld-gmbh-acquisition-302689067.html); [Munich Startup](https://www.munich-startup.de/news/insolvenz-q2-2024) |",
+   "new": "| **Blickfeld** (Munich) | MEMS-mirror lidar; moved from automotive to security, volume and traffic monitoring | Self-administration insolvency Jun 2024 [T]; proceedings reportedly ended Jan 2025 [U]. Raised >\\$64 M of venture capital [T]; another report gives >€45 M in total, including €7.5 M in Dec 2023 [T]. Senstar cites \"over €60 million in technology investments since inception\" [P]; the higher figures probably include a €15 M European Investment Bank facility (2022) [P]. Public grants ≈€3.0 M, led by an EIC Accelerator-pilot grant of €1.84 M (2020–22) [P/T] (§C3a subsection 1) | **Senstar Technologies (Nasdaq: SNT), €10.4 M cash plus up to €1 M earn-out**. Agreed 9 Dec 2025, closed 17 Feb 2026; runs as a subsidiary under its own name [P] | [agreement](https://www.prnewswire.com/news-releases/senstar-technologies-corporation-announces-agreement-to-acquire-blickfeld-gmbh-302637161.html); [closing](https://www.prnewswire.com/news-releases/senstar-technologies-corporation-announces-closing-of-blickfeld-gmbh-acquisition-302689067.html); [Munich Startup](https://www.munich-startup.de/news/insolvenz-q2-2024) |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L2955",
+   "finding": "Falcon K1 naming",
+   "old": "   - Meanwhile 905/940 nm multi-junction emitters and SiPM/SPAD receivers closed most of the gap. Hesai's ATX gives 230 m at 10% at 8 W, against 250 m at 10% for Seyond's 1,550 nm Falcon K (§C3, §C3b).",
+   "new": "   - Meanwhile 905/940 nm multi-junction emitters and SiPM/SPAD receivers closed most of the gap. Hesai's ATX gives 230 m at 10% at 8 W, against 250 m at 10% for Seyond's 1,550 nm Falcon K1 (§C3, §C3b).",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L3111",
+   "finding": "Falcon K1 naming",
+   "old": "| **Seyond Falcon K / K2** (1,550 nm ToF) | 500 m max; 250 m (K) / 300 m (K2) at 10% | Full field 0.18° × 0.24°; **0.09° × 0.08° only in the ROI** [T/P] | ROI resolution is 2–3× finer than the full field | Quote full-field and ROI figures separately |",
+   "new": "| **Seyond Falcon K1 / K2** (1,550 nm ToF) | 500 m max; 250 m (K1) / 300 m (K2) at 10% | Full field 0.18° × 0.24°; **0.09° × 0.08° only in the ROI** [T/P] | ROI resolution is 2–3× finer than the full field | Quote full-field and ROI figures separately |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L3130",
+   "finding": "Falcon K1 naming",
+   "old": "- **Seyond Falcon K / K2:** the ROI spacing is $0.18°/0.09°=2$ times finer horizontally and $0.24°/0.08°=3$ times finer vertically.",
+   "new": "- **Seyond Falcon K1 / K2:** the ROI spacing is $0.18°/0.09°=2$ times finer horizontally and $0.24°/0.08°=3$ times finer vertically.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L3226",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "| **Velodyne** (spinning multi-beam, 905 nm) | The HDL-64E was on **five of the six finishers** of the 2007 DARPA Urban Challenge [P]. Velodyne calls it \"the world's first commercially available real-time 3D lidar\" [P]. It was the robotaxi and mapping standard of the 2010s. Velodyne Lidar was spun out of Hall's audio company in 2016 with \\$150 M from Ford and Baidu, which were also customers [T, FT]. **Revenue peaked at \\$182.1 M in 2017** [P], mostly one-off sales to AV research teams at a weighted average price of nearly \\$18,000 per sensor [T, FT, 16 Jun 2021], i.e. ≈10,000 sensors [E: 182 M / 18k]. >300 customers in 2019–20 [P] | First mover with a working 360° sensor at the moment every AV program needed one; in 2017 its sensors had a months-long waiting list [T, FT, 13 Apr 2017] | Revenue fell every year: \\$142.9 M (2018), \\$101.4 M (2019), \\$95.4 M (2020), \\$61.9 M (2021) [P]. The 2018 fall came from a mix shift to cheaper sensors (−\\$54.0 M) and price cuts (−\\$32.6 M), only partly offset by volume (+\\$43.5 M) [P]. Velodyne said it cut prices \"proactively\" as rivals flooded the market; Hall said design theft had \"ruined\" it. It settled with Hesai and a second Chinese maker in 2020 for licence and royalty fees [T, FT]. Governance failed as well: the audit committee investigated Hall and his wife, Hall was removed as chair in Feb 2021, and the company started arbitration against him over trade secrets [T, FT, 16 Jun 2021]. Merged into Ouster at \\$306.6 M (2023; §C3a) | [Velodyne blog](https://velodynelidar.com/blog/hdl-64e-lidar-sensor-retires/); [10-K FY2020](https://www.sec.gov/Archives/edgar/data/1745317/000162828021004964/vldr-20201231.htm); [prospectus 2020](https://www.sec.gov/Archives/edgar/data/1745317/000110465920111164/tm2029218-6_424b3.htm) |",
+   "new": "| **Velodyne** (spinning multi-beam, 905 nm) | The HDL-64E was on **five of the six finishers** of the 2007 DARPA Urban Challenge [P]. Velodyne calls it \"the world's first commercially available real-time 3D lidar\" [P]. It was the robotaxi and mapping standard of the 2010s. Velodyne Lidar was spun out of Hall's audio company in 2016 with \\$150 M from Ford and Baidu, which were also customers [T, FT]. **Revenue peaked at \\$182.1 M in 2017** [P], mostly one-off sales to AV research teams at a weighted average price of nearly \\$18,000 per sensor [T, FT, 16 Jun 2021], i.e. ≈10,000 sensors [E: 182 M / 18k]. >300 customers in 2019–20 [P] | First mover with a working 360° sensor at the moment every AV programme needed one; in 2017 its sensors had a months-long waiting list [T, FT, 13 Apr 2017] | Revenue fell every year: \\$142.9 M (2018), \\$101.4 M (2019), \\$95.4 M (2020), \\$61.9 M (2021) [P]. The 2018 fall came from a mix shift to cheaper sensors (−\\$54.0 M) and price cuts (−\\$32.6 M), only partly offset by volume (+\\$43.5 M) [P]. Velodyne said it cut prices \"proactively\" as rivals flooded the market; Hall said design theft had \"ruined\" it. It settled with Hesai and a second Chinese maker in 2020 for licence and royalty fees [T, FT]. Governance failed as well: the audit committee investigated Hall and his wife, Hall was removed as chair in Feb 2021, and the company started arbitration against him over trade secrets [T, FT, 16 Jun 2021]. Merged into Ouster at \\$306.6 M (2023; §C3a) | [Velodyne blog](https://velodynelidar.com/blog/hdl-64e-lidar-sensor-retires/); [10-K FY2020](https://www.sec.gov/Archives/edgar/data/1745317/000162828021004964/vldr-20201231.htm); [prospectus 2020](https://www.sec.gov/Archives/edgar/data/1745317/000110465920111164/tm2029218-6_424b3.htm) |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L3230",
+   "finding": "reference form §X subsection N",
+   "old": "| **Continental HFL110** (1,064 nm flash, from ASC) | Series production from Nov 2021; fitted to the Toyota Mirai 2 [P/I]. It is the only flash lidar confirmed in a series car | A short-range (50 m) job that flash physics can do (§C3a, subsection 3) | No successor. Continental's long-range effort (AEye HRL131) ended in Dec 2023 | §C3a |",
+   "new": "| **Continental HFL110** (1,064 nm flash, from ASC) | Series production from Nov 2021; fitted to the Toyota Mirai 2 [P/I]. It is the only flash lidar confirmed in a series car | A short-range (50 m) job that flash physics can do (§C3a subsection 3) | No successor. Continental's long-range effort (AEye HRL131) ended in Dec 2023 | §C3a |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L3233",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "| **Waymo** (in-house) | In Jan 2017, Waymo said building in-house had cut the cost of its top-range lidar by ≈90% from the industry norm of \\$75,000 [T]. It sold its short-range lidar to non-AV customers from 2019 [T]. ≈4,000 vehicles with 4–5 in-house lidars each (§B4) | Vertical integration inside a funded robotaxi program | Captive; external sales stayed a side business | [CNBC 2017](https://www.cnbc.com/2017/01/08/waymo-cuts-costs-raises-reliability-of-its-self-driving-cars.html); [TechCrunch 2019](https://techcrunch.com/2019/03/06/waymo-to-start-selling-standalone-lidar-sensors/) |",
+   "new": "| **Waymo** (in-house) | In Jan 2017, Waymo said building in-house had cut the cost of its top-range lidar by ≈90% from the industry norm of \\$75,000 [T]. It sold its short-range lidar to non-AV customers from 2019 [T]. ≈4,000 vehicles with 4–5 in-house lidars each (§B4) | Vertical integration inside a funded robotaxi programme | Captive; external sales stayed a side business | [CNBC 2017](https://www.cnbc.com/2017/01/08/waymo-cuts-costs-raises-reliability-of-its-self-driving-cars.html); [TechCrunch 2019](https://techcrunch.com/2019/03/06/waymo-to-start-selling-standalone-lidar-sensors/) |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L3235",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "| **Aeva** (FMCW on silicon photonics) | Daimler Truck series program (production 2026–27); a European L3 award (2028); NVIDIA Hyperion reference [P]. Its SOA was spun into data-centre optics (§C3a) | Truck range and velocity, plus a strategic investor (LG Innotek) | Revenue still small (\\$18.1 M in 2025) | §B3, §C3a |",
+   "new": "| **Aeva** (FMCW on silicon photonics) | Daimler Truck series programme (production 2026–27); a European L3 award (2028); NVIDIA Hyperion reference [P]. Its SOA was spun into data-centre optics (§C3a) | Truck range and velocity, plus a strategic investor (LG Innotek) | Revenue still small (\\$18.1 M in 2025) | §B3, §C3a |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L3263",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "| 2019 | VW invests in Aeva's chip-scale lidar (\"less than \\$500\", no moving parts), to debut on the ID. Buzz in 2022. Woodside Capital forecasts lidar sales growing from ≈100,000 units (2018) to **4.7 M units in 2025**. VW, answering Musk's \"anyone relying on lidar is doomed\": \"if the cost isn't high any more then the argument falls away\" [T] | **Aeva/VW: missed.** The ID. Buzz AD uses nine Innoviz lidars (Mobileye Drive, §B4); Aeva's first series program is Daimler Truck (2026–27). **Volume: roughly came true** at ≈4.2–4.7 M lidars in 2025 [E: Hesai 1.62 M + RoboSense ≈0.91 M + Huawei ≈1.3 M (41.5% of China's 3.21 M) + Seyond 0.33 M + others], but mostly Chinese-made for Chinese L2+ cars at ≈\\$200–300, not for autonomous vehicles. **VW's argument: came true.** Cost fell, and VW's own China JVs now fit lidar (§B6) | FT, 11 Dec 2019 |",
+   "new": "| 2019 | VW invests in Aeva's chip-scale lidar (\"less than \\$500\", no moving parts), to debut on the ID. Buzz in 2022. Woodside Capital forecasts lidar sales growing from ≈100,000 units (2018) to **4.7 M units in 2025**. VW, answering Musk's \"anyone relying on lidar is doomed\": \"if the cost isn't high any more then the argument falls away\" [T] | **Aeva/VW: missed.** The ID. Buzz AD uses nine Innoviz lidars (Mobileye Drive, §B4); Aeva's first series programme is Daimler Truck (2026–27). **Volume: roughly came true** at ≈4.2–4.7 M lidars in 2025 [E: Hesai 1.62 M + RoboSense ≈0.91 M + Huawei ≈1.3 M (41.5% of China's 3.21 M) + Seyond 0.33 M + others], but mostly Chinese-made for Chinese L2+ cars at ≈\\$200–300, not for autonomous vehicles. **VW's argument: came true.** Cost fell, and VW's own China JVs now fit lidar (§B6) | FT, 11 Dec 2019 |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L3287-3288",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "- **What came true was narrow and program-bound:**\n  - Valeo's single Audi program (one year late);",
+   "new": "- **What came true was narrow and programme-bound:**\n  - Valeo's single Audi programme (one year late);",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L3301",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "   - Valeo SCALA 2/3, InnovizOne and Luminar Iris all tracked the fate of L3 or of a single safety program. When L3 was cut (§B2), their volume disappeared, whatever the sensor's merit.",
+   "new": "   - Valeo SCALA 2/3, InnovizOne and Luminar Iris all tracked the fate of L3 or of a single safety programme. When L3 was cut (§B2), their volume disappeared, whatever the sensor's merit.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L3785",
+   "finding": "PRF_ch in §C4d",
+   "old": "$$f_p\\le\\frac{c}{2R_{\\max}} \\tag{70}$$",
+   "new": "$$\\text{PRF}_{\\rm ch}\\le\\frac{c}{2R_{\\max}} \\tag{70}$$",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L3787",
+   "finding": "PRF_ch in §C4d",
+   "old": "where $f_p$ is the channel's pulse repetition frequency (PRF), $c$ the speed of light and $R_{\\max}$ the maximum range. That is $3\\times10^{8}\\ {\\rm m\\,s^{-1}}/(2\\times200\\ {\\rm m})=750$ kHz for a 200 m maximum range, 600 kHz for 250 m and 300 kHz for 500 m [E]. Pulse coding (giving successive pulses distinguishable patterns) can relax the bound, at a cost in processing and interference robustness (§C9). A sensor's point rate divided by this per-channel limit is the minimum number of channels that must fire in parallel, at one pulse per point; several pulses per point multiply that minimum by their number. Examples [E]:",
+   "new": "where $\\text{PRF}_{\\rm ch}$ is the channel's pulse repetition frequency, $c$ the speed of light and $R_{\\max}$ the maximum range. That is $3\\times10^{8}\\ {\\rm m\\,s^{-1}}/(2\\times200\\ {\\rm m})=750$ kHz for a 200 m maximum range, 600 kHz for 250 m and 300 kHz for 500 m [E]. Pulse coding (giving successive pulses distinguishable patterns) can relax the bound, at a cost in processing and interference robustness (§C9). A sensor's point rate divided by this per-channel limit is the minimum number of channels that must fire in parallel, at one pulse per point; several pulses per point multiply that minimum by their number. Examples [E]:",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L3981",
+   "finding": "reference form §X subsection N",
+   "old": "**Fastree3D: the European SPAD lineage now inside Hesai.** Part of Hesai's SPAD IP (intellectual property, here mainly patents) comes from Fastree3D, a spin-off of EPFL (the Swiss federal technology institute in Lausanne) and TU Delft (Delft University of Technology) that Hesai bought on 15 December 2023 for \\$7.67 M [P]; Hesai says it had also researched SPADs itself since 2016. Hesai booked the acquired patent rights at RMB 59.35 M (≈\\$8.4 M) [P]. No public evidence yet shows Fastree3D circuits in a shipping chip, as distinct from its patents in Hesai's 4th-generation platform; §C3a, subsection 2, traces the company's history and asks whether the deal was a success.",
+   "new": "**Fastree3D: the European SPAD lineage now inside Hesai.** Part of Hesai's SPAD IP (intellectual property, here mainly patents) comes from Fastree3D, a spin-off of EPFL (the Swiss federal technology institute in Lausanne) and TU Delft (Delft University of Technology) that Hesai bought on 15 December 2023 for \\$7.67 M [P]; Hesai says it had also researched SPADs itself since 2016. Hesai booked the acquired patent rights at RMB 59.35 M (≈\\$8.4 M) [P]. No public evidence yet shows Fastree3D circuits in a shipping chip, as distinct from its patents in Hesai's 4th-generation platform; §C3a subsection 2, traces the company's history and asks whether the deal was a success.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4046",
+   "finding": "reference form §X subsection N",
+   "old": "- **Range per time bin** is $c\\,\\Delta t_{\\rm bin}/2$ (§C0, subsection 1), where $c$ is the speed of light and $\\Delta t_{\\rm bin}$ the bin width; the factor 2 is there because the light travels out and back. This gives $3\\times10^{8}\\ {\\rm m\\,s^{-1}}\\times1\\ {\\rm ns}/2=15$ cm for 1 ns bins, and $3\\times10^{8}/(2\\times3\\times10^{9})=5$ cm for 3 GHz sampling (a bin of $1/(3\\ {\\rm GHz})$).",
+   "new": "- **Range per time bin** is $c\\,\\Delta t_{\\rm bin}/2$ (§C0 subsection 1), where $c$ is the speed of light and $\\Delta t_{\\rm bin}$ the bin width; the factor 2 is there because the light travels out and back. This gives $3\\times10^{8}\\ {\\rm m\\,s^{-1}}\\times1\\ {\\rm ns}/2=15$ cm for 1 ns bins, and $3\\times10^{8}/(2\\times3\\times10^{9})=5$ cm for 3 GHz sampling (a bin of $1/(3\\ {\\rm GHz})$).",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4393",
+   "finding": "reference form §X subsection N",
+   "old": "- **Wavelength.** In the illustrative reference spectrum, 940 nm sits in a water-vapour dip (an absorption band of atmospheric water vapour) with about 0.44–0.58× the solar irradiance of 905 nm. The ratio varies with humidity and passband: the ASTM G173 values of §C4c give $0.303/0.693=0.44$ for ±10 nm band averages and $0.472/0.817=0.58$ at the exact wavelengths. At 1,550 nm the reference value is 0.33–0.39× ($0.270/0.817=0.33$ against the exact 905 nm value, $0.270/0.693=0.39$ against the band average), with a larger permitted average power under the particular Class 1 comparison of §C4c, subsection 1. Complete eye-safety limits depend on pulse train, scanning, aperture and exposure.",
+   "new": "- **Wavelength.** In the illustrative reference spectrum, 940 nm sits in a water-vapour dip (an absorption band of atmospheric water vapour) with about 0.44–0.58× the solar irradiance of 905 nm. The ratio varies with humidity and passband: the ASTM G173 values of §C4c give $0.303/0.693=0.44$ for ±10 nm band averages and $0.472/0.817=0.58$ at the exact wavelengths. At 1,550 nm the reference value is 0.33–0.39× ($0.270/0.817=0.33$ against the exact 905 nm value, $0.270/0.693=0.39$ against the band average), with a larger permitted average power under the particular Class 1 comparison of §C4c subsection 1. Complete eye-safety limits depend on pulse train, scanning, aperture and exposure.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4454",
+   "finding": "§C6(f) VGA pixel basis (f/2.4)",
+   "old": "  - The VGA figure corresponds to about $10^{7}$ avalanches/s in each of $640\\times480=3.1\\times10^{5}$ pixels: $3.1\\times10^{5}\\times10^{7}\\ {\\rm s^{-1}}\\times1.6\\ {\\rm pJ}=4.9$ W, and 12 W at 3.9 pJ.",
+   "new": "  - The VGA figure corresponds to about $10^{7}$ avalanches/s in each of $640\\times480=3.1\\times10^{5}$ pixels: $3.1\\times10^{5}\\times10^{7}\\ {\\rm s^{-1}}\\times1.6\\ {\\rm pJ}=4.9$ W, and 12 W at 3.9 pJ. The $10^{7}$ is the recorded rate of a staring 10 µm single-SPAD pixel behind an f/2.4 lens in the fully sunlit scene of (d). A pixel collects background in proportion to its étendue $\\pi p^2/(4N^2)$, with $p$ the pixel pitch and $N$ the f-number: $\\pi\\times(10\\ \\mu{\\rm m})^2/(4\\times2.4^2)=1.36\\times10^{-11}$ m² sr, i.e. 0.036 of the $7.62\\times10^{-7}\\ {\\rm sr}\\times4.91\\times10^{-4}\\ {\\rm m^2}=3.74\\times10^{-10}$ m² sr of the macro-pixel in (d). That gives $2.965\\times10^{8}\\times0.036=1.08\\times10^{7}$ s⁻¹ incident (940 nm, 10 nm filter, reflectance 0.9, PDE 0.3) and, with 6 ns of paralyzable dead time, $1.08\\times10^{7}\\times e^{-0.065}=1.0\\times10^{7}$ s⁻¹ recorded. At f/2 the recorded rate is $1.4\\times10^{7}$ s⁻¹; an f/1.2 lens, with four times the étendue of f/2.4, gives $3.3\\times10^{7}$ s⁻¹ and about 3.3 times the power [E].",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4508",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "The first passenger-car program starts in 2028, and several steering start-ups have failed or pivoted.",
+   "new": "The first passenger-car programme starts in 2028, and several steering start-ups have failed or pivoted.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4519",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "    - Aeva is the exclusive long-range lidar supplier for **Daimler Truck/Torc**. It delivered C-samples (near-production prototypes, the last of the automotive A/B/C sample stages) in May 2026 [P], began production in 2026 on a fully automated final-assembly line at the contract manufacturer Jabil in North America, which it expects to reach 100,000 systems a year [P, Aeva earnings calls of 26 Feb and 12 Aug 2026], and the program plans Daimler Truck's production ramp for 2027 [P, Aeva–Daimler Truck release, 9 Jan 2024].",
+   "new": "    - Aeva is the exclusive long-range lidar supplier for **Daimler Truck/Torc**. It delivered C-samples (near-production prototypes, the last of the automotive A/B/C sample stages) in May 2026 [P], began production in 2026 on a fully automated final-assembly line at the contract manufacturer Jabil in North America, which it expects to reach 100,000 systems a year [P, Aeva earnings calls of 26 Feb and 12 Aug 2026], and the programme plans Daimler Truck's production ramp for 2027 [P, Aeva–Daimler Truck release, 9 Jan 2024].",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4523",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "  - **Mobileye** ended its FMCW program on Intel silicon photonics (SiPh) in Sep 2024, citing progress of its EyeQ6 vision chip, in-house imaging radar and \"better-than-expected cost reductions in third-party time-of-flight lidar\" [P].",
+   "new": "  - **Mobileye** ended its FMCW programme on Intel silicon photonics (SiPh) in Sep 2024, citing progress of its EyeQ6 vision chip, in-house imaging radar and \"better-than-expected cost reductions in third-party time-of-flight lidar\" [P].",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4533",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "  - **LuminWave**'s \"Raptor\" engine (Sep 2024) is a fully integrated III-V-on-Si chip (compound-semiconductor laser material on silicon photonics) with more than 10 GHz of FM bandwidth, i.e. optical frequency sweep [P, LuminWave, 10 Sep 2024]. Its heavy-truck nomination of 8 July 2025 (selection for a truck program) names no product, customer or start of production, and does not say FMCW [P, LuminWave, 8 Jul 2025] (§D7).",
+   "new": "  - **LuminWave**'s \"Raptor\" engine (Sep 2024) is a fully integrated III-V-on-Si chip (compound-semiconductor laser material on silicon photonics) with more than 10 GHz of FM bandwidth, i.e. optical frequency sweep [P, LuminWave, 10 Sep 2024]. Its heavy-truck nomination of 8 July 2025 (selection for a truck programme) names no product, customer or start of production, and does not say FMCW [P, LuminWave, 8 Jul 2025] (§D7).",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4551",
+   "finding": "T_c in §C7",
+   "old": "**Beat frequency and ADC load.** A linear chirp of bandwidth $B$ (Hz) swept in a time $T$ returns from a target at range $R$ delayed by $2R/c$. By then the LO has moved on in frequency, so the photodiode sees a beat tone at",
+   "new": "**Beat frequency and ADC load.** A linear chirp of bandwidth $B$ (Hz) swept in a time $T_c$ returns from a target at range $R$ delayed by $2R/c$. By then the LO has moved on in frequency, so the photodiode sees a beat tone at",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4553",
+   "finding": "T_c in §C7",
+   "old": "$$f_b=\\frac{2BR}{cT} \\tag{85}$$",
+   "new": "$$f_b=\\frac{2BR}{cT_c} \\tag{85}$$",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4555",
+   "finding": "T_c in §C7",
+   "old": "This beat frequency $f_b$ sets the bandwidth each receive channel must digitize. For $B=1$ GHz (range resolution $c/2B=15$ cm), $T=10$ µs and $R=300$ m, Eq. (85) gives $f_b=2\\times10^{9}\\times300/(3\\times10^{8}\\times10^{-5})\\approx200$ MHz per channel.",
+   "new": "This beat frequency $f_b$ sets the bandwidth each receive channel must digitize. For $B=1$ GHz (range resolution $c/2B=15$ cm), $T_c=10$ µs and $R=300$ m, Eq. (85) gives $f_b=2\\times10^{9}\\times300/(3\\times10^{8}\\times10^{-5})\\approx200$ MHz per channel.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4566",
+   "finding": "T_c in §C7",
+   "old": "  - Let $T_c$ be the chirp duration, the same quantity as $T$ in Eq. (85), over which one fast Fourier transform (FFT) integrates the beat tone. If $T_c$ outlasts $\\theta_b/\\dot\\theta$, the beat tone spreads over $\\approx T_c\\,\\dot\\theta D/\\lambda=T_c\\,\\Delta f_{\\rm scan}$ FFT bins. Its peak falls by that factor (roughly half as much in dB with incoherent combining across bins), and the velocity estimate blurs by $\\approx\\lambda\\Delta f_{\\rm scan}/2=\\dot\\theta D/2=\\dot\\theta_{\\rm m}D$, the difference between the normal velocities of the two edges of the beam's footprint on the mirror.",
+   "new": "  - Let $T_c$ be the chirp duration of Eq. (85), over which one fast Fourier transform (FFT) integrates the beat tone. If $T_c$ outlasts $\\theta_b/\\dot\\theta$, the beat tone spreads over $\\approx T_c\\,\\dot\\theta D/\\lambda=T_c\\,\\Delta f_{\\rm scan}$ FFT bins. Its peak falls by that factor (roughly half as much in dB with incoherent combining across bins), and the velocity estimate blurs by $\\approx\\lambda\\Delta f_{\\rm scan}/2=\\dot\\theta D/2=\\dot\\theta_{\\rm m}D$, the difference between the normal velocities of the two edges of the beam's footprint on the mirror.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4577",
+   "finding": "T_c in §C7",
+   "old": "  - A single-slope chirp would also read the bias as range. A beat frequency $f$ maps to range $cf/(2\\kappa)$, where $\\kappa=B/T$ is the chirp rate in Hz/s, so the range error is $\\Delta R_{\\rm bias}=cf_{\\rm bias}/2\\kappa$. Up/down chirp pairs cancel it to first order, because the bias adds to one beat tone and subtracts from the other.",
+   "new": "  - A single-slope chirp would also read the bias as range. A beat frequency $f$ maps to range $cf/(2\\kappa)$, where $\\kappa=B/T_c$ is the chirp rate in Hz/s, so the range error is $\\Delta R_{\\rm bias}=cf_{\\rm bias}/2\\kappa$. Up/down chirp pairs cancel it to first order, because the bias adds to one beat tone and subtracts from the other.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4597",
+   "finding": "T_c in §C7",
+   "old": "    - The arithmetic [E]: the mechanical rate is $\\dot\\theta_{\\rm m}=3{,}000\\times2\\pi/60=314$ rad/s. Let $\\phi$ be the facet's mechanical rotation angle from scan centre and $h=20$ mm the facet distance (the perpendicular distance from the rotation axis to the facet plane; not Planck's constant). At angle $\\phi$ the beam meets the facet $\\bar s=h\\tan\\phi$ from the foot of the perpendicular from the axis: $20\\ {\\rm mm}\\times\\tan30^\\circ=11.5$ mm at the scan edge. The false velocity is therefore $2\\dot\\theta_{\\rm m}\\bar s\\cos\\theta_i=2\\times314\\times0.0115\\times0.866=6.3$ m/s, and $f_{\\rm bias}=2v_r/\\lambda=2\\times6.3/(1.55\\times10^{-6})=8.1$ MHz, with $v_r$ the false radial velocity. With chirp rate $\\kappa=B/T=10^{9}/10^{-5}=10^{14}$ Hz/s, a single chirp's range error is $cf_{\\rm bias}/2\\kappa=3\\times10^{8}\\times8.1\\times10^{6}/(2\\times10^{14})\\approx12$ m.",
+   "new": "    - The arithmetic [E]: the mechanical rate is $\\dot\\theta_{\\rm m}=3{,}000\\times2\\pi/60=314$ rad/s. Let $\\phi$ be the facet's mechanical rotation angle from scan centre and $h=20$ mm the facet distance (the perpendicular distance from the rotation axis to the facet plane; not Planck's constant). At angle $\\phi$ the beam meets the facet $\\bar s=h\\tan\\phi$ from the foot of the perpendicular from the axis: $20\\ {\\rm mm}\\times\\tan30^\\circ=11.5$ mm at the scan edge. The false velocity is therefore $2\\dot\\theta_{\\rm m}\\bar s\\cos\\theta_i=2\\times314\\times0.0115\\times0.866=6.3$ m/s, and $f_{\\rm bias}=2v_r/\\lambda=2\\times6.3/(1.55\\times10^{-6})=8.1$ MHz, with $v_r$ the false radial velocity. With chirp rate $\\kappa=B/T_c=10^{9}/10^{-5}=10^{14}$ Hz/s, a single chirp's range error is $cf_{\\rm bias}/2\\kappa=3\\times10^{8}\\times8.1\\times10^{6}/(2\\times10^{14})\\approx12$ m.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4613",
+   "finding": "T_c in §C7",
+   "old": "- Shorter chirps reduce the channel count, though never below the round-trip share $2\\tau\\dot N$, but raise the beat frequency, $f_b\\propto1/T$ by Eq. (85), and with it the ADC rate.",
+   "new": "- Shorter chirps reduce the channel count, though never below the round-trip share $2\\tau\\dot N$, but raise the beat frequency, $f_b\\propto1/T_c$ by Eq. (85), and with it the ADC rate.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4694",
+   "finding": "power envelope: Figure C7a band against the parity target",
+   "old": "- *(a)* Modelled sensor electrical power (3 W overhead + point rate × electrical energy per point) for a 200 m, 10% extended target. The 3 W is an assumed fixed overhead for scanner motor, the sensor's system-on-chip (SoC), heaters and power conversion, the same for both sensor types. Bands span the low/high parameter sets, and the yellow band marks the 8–25 W typical of automotive lidars.",
+   "new": "- *(a)* Modelled sensor electrical power (3 W overhead + point rate × electrical energy per point) for a 200 m, 10% extended target. The 3 W is an assumed fixed overhead for scanner motor, the sensor's system-on-chip (SoC), heaters and power conversion, the same for both sensor types. Bands span the low/high parameter sets, and the yellow band marks the 8–25 W typical of shipping automotive lidars; the parity target of §C7b subsection 5 is ≤15 W.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4715",
+   "finding": "FS-4S deployability tag [R]",
+   "old": "| Analog Photonics FS-4S (optical phased array, OPA) | 90 kpts/s in its region-of-interest (ROI) mode; 400 kpts/s in its base mode | 200 m at 10% in a 20° × 10° ROI; 80 m at 10% over 60° × 14° [P] | **35 W** [P]; ≈390 µJ per point in the ROI mode [E] | No production award found (§C7 Commercial status) |",
+   "new": "| Analog Photonics FS-4S (optical phased array, OPA) | 90 kpts/s in its region-of-interest (ROI) mode; 400 kpts/s in its base mode | 200 m at 10% in a 20° × 10° ROI; 80 m at 10% over 60° × 14° [P] | **35 W** [P]; ≈390 µJ per point in the ROI mode [E] | [R]: no production award found (§C7 Commercial status) |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4793",
+   "finding": "T_u in §C7a; N_ADC for ADC samples per point",
+   "old": "The beat frequency is $f_b=2BR/(cT)$ (Eq. (85)), with $R$ the range, $T$ the useful window of one chirp ramp and $B$ the bandwidth swept in it. The useful window is the part of the ramp after the round trip $\\tau=2R/c$, once the echo beats with the LO; the ramp itself lasts $T+\\tau$, with $\\tau$ taken at the 200 m design range (§C7b, Eq. (102)), so the laser sweeps $1\\ {\\rm GHz}\\times(5+1.33)/5=1.27$ GHz per ramp (§C7b, Eq. (106)). An echo from beyond 200 m arrives later and beats for less of the window, 4.33 µs instead of 5 µs at 300 m, which the model ignores because its design target sits at 200 m. On top of it comes the Doppler shift $f_D=2v_r/\\lambda$ of the fastest target, $2\\times70/(1.55\\times10^{-6})\\approx90$ MHz at a closing speed $v_r=70$ m/s. The model samples at $f_s\\approx2.5(f_b+f_D)$, where $f_s$ is the ADC sample rate and $f_b$ is taken at the maximum range $R_{\\max}$. The receiver must search the whole 0–300 m window even when the design target is at 200 m, so $R_{\\max}=300$ m sets the digitization while 200 m sets the optical energy. The factor 2.5 is twice the highest beat frequency (the Nyquist rate for real sampling) times a 25% margin. Only the two useful windows, $T_{\\rm int}=2T$ in all, are digitized, so the number of ADC samples per point is $N_{\\rm samp}=f_s\\times2T$, which gives",
+   "new": "The beat frequency is $f_b=2BR/(cT_u)$, Eq. (85) with the useful window $T_u$ of one chirp ramp in place of the chirp duration, where $R$ is the range and $B$ the bandwidth swept in the useful window. The useful window is the part of the ramp after the round trip $\\tau=2R/c$, once the echo beats with the LO; the ramp itself lasts $T_u+\\tau$, with $\\tau$ taken at the 200 m design range (§C7b, Eq. (102)), so the laser sweeps $1\\ {\\rm GHz}\\times(5+1.33)/5=1.27$ GHz per ramp (§C7b, Eq. (106)). An echo from beyond 200 m arrives later and beats for less of the window, 4.33 µs instead of 5 µs at 300 m, which the model ignores because its design target sits at 200 m. On top of it comes the Doppler shift $f_D=2v_r/\\lambda$ of the fastest target, $2\\times70/(1.55\\times10^{-6})\\approx90$ MHz at a closing speed $v_r=70$ m/s. The model samples at $f_s\\approx2.5(f_b+f_D)$, where $f_s$ is the ADC sample rate and $f_b$ is taken at the maximum range $R_{\\max}$. The receiver must search the whole 0–300 m window even when the design target is at 200 m, so $R_{\\max}=300$ m sets the digitization while 200 m sets the optical energy. The factor 2.5 is twice the highest beat frequency (the Nyquist rate for real sampling) times a 25% margin. Only the two useful windows, $T_{\\rm int}=2T_u$ in all, are digitized, so the number of ADC samples per point is $N_{\\rm ADC}=f_s\\times2T_u$, which gives",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4795",
+   "finding": "T_u in §C7a; N_ADC for ADC samples per point",
+   "old": "$$N_{\\rm samp}\\approx 5\\,\\frac{R_{\\max}}{\\Delta R}\\;+\\;5\\,f_D\\,T \\tag{94}$$",
+   "new": "$$N_{\\rm ADC}\\approx 5\\,\\frac{R_{\\max}}{\\Delta R}\\;+\\;5\\,f_D\\,T_u \\tag{94}$$",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4797-4798",
+   "finding": "T_u in §C7a; N_ADC for ADC samples per point",
+   "old": "samples per point, **independent of how many photons return**. Here $\\Delta R=c/(2B)$ is the range resolution, so $R_{\\max}/\\Delta R$ is the number of range bins. The first term follows because $f_bT=2BR_{\\max}/c=R_{\\max}/\\Delta R$ at maximum range. Eq. (94) is Eq. (105) of §C7b with $R=R_{\\max}$ and $T_u=T$.\n- For 300 m, 15 cm resolution (2,000 range bins) and 5 µs useful windows: $f_s\\approx1.2$ GS/s and **≈12,000 samples per point**. Step by step: $B=c/(2\\Delta R)=1$ GHz and $R_{\\max}/\\Delta R=300/0.15=2{,}000$; $f_b=2\\times10^{9}\\times300/(3\\times10^{8}\\times5\\times10^{-6})=400$ MHz; $f_s=2.5\\times(400+90)\\ {\\rm MHz}=1.23$ GS/s; $N_{\\rm samp}=f_s\\times2T=1.23\\times10^{9}\\ {\\rm s^{-1}}\\times10^{-5}\\ {\\rm s}\\approx12{,}300$. Eq. (94) gives the same count, because $f_bT=R_{\\max}/\\Delta R$: $N_{\\rm samp}=5\\times2{,}000+5\\times(90\\times10^{6})\\times(5\\times10^{-6})=10{,}000+2{,}250\\approx12{,}300$.",
+   "new": "samples per point, **independent of how many photons return**. Here $\\Delta R=c/(2B)$ is the range resolution, so $R_{\\max}/\\Delta R$ is the number of range bins. The first term follows because $f_bT_u=2BR_{\\max}/c=R_{\\max}/\\Delta R$ at maximum range. Eq. (94) is Eq. (105) of §C7b with $R=R_{\\max}$.\n- For 300 m, 15 cm resolution (2,000 range bins) and 5 µs useful windows: $f_s\\approx1.2$ GS/s and **≈12,000 samples per point**. Step by step: $B=c/(2\\Delta R)=1$ GHz and $R_{\\max}/\\Delta R=300/0.15=2{,}000$; $f_b=2\\times10^{9}\\times300/(3\\times10^{8}\\times5\\times10^{-6})=400$ MHz; $f_s=2.5\\times(400+90)\\ {\\rm MHz}=1.23$ GS/s; $N_{\\rm ADC}=f_s\\times2T_u=1.23\\times10^{9}\\ {\\rm s^{-1}}\\times10^{-5}\\ {\\rm s}\\approx12{,}300$. Eq. (94) gives the same count, because $f_bT_u=R_{\\max}/\\Delta R$: $N_{\\rm ADC}=5\\times2{,}000+5\\times(90\\times10^{6})\\times(5\\times10^{-6})=10{,}000+2{,}250\\approx12{,}300$.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4810",
+   "finding": "N_ADC for ADC samples per point",
+   "old": "  $$E_{\\rm rx}=N_L\\left(N_{\\rm samp}\\,e_s+P_{\\rm an}\\,T_{\\rm dwell}\\right) \\tag{96}$$",
+   "new": "  $$E_{\\rm rx}=N_L\\left(N_{\\rm ADC}\\,e_s+P_{\\rm an}\\,T_{\\rm dwell}\\right) \\tag{96}$$",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4812",
+   "finding": "T_u in §C7a",
+   "old": "  where $E_{\\rm rx}$ is the receiver electronics energy per point, $N_L$ the number of receivers (looks) per point, $P_{\\rm an}$ the analog power per receiver and $T_{\\rm dwell}$ the dwell per point. The dwell is the two useful windows plus the two round trips, $T_{\\rm dwell}=2T+2\\tau=10+2.67=12.67$ µs at the 200 m design range (§C7b, Eq. (103)). The ADC samples only the useful windows, but the analog front end stays on for the whole dwell. This gives **≈2.3 µJ per point** (1.3–4.0): $E_{\\rm rx}=4\\times(12{,}300\\times37.3\\ {\\rm pJ}+10\\ {\\rm mW}\\times12.67\\ \\mu{\\rm s})=4\\times(0.459+0.127)=2.34$ µJ. The low and high cases are $4\\times(12{,}300\\times22\\ {\\rm pJ}+5\\ {\\rm mW}\\times12.67\\ \\mu{\\rm s})=1.3$ µJ and $4\\times(12{,}300\\times61\\ {\\rm pJ}+20\\ {\\rm mW}\\times12.67\\ \\mu{\\rm s})=4.0$ µJ.",
+   "new": "  where $E_{\\rm rx}$ is the receiver electronics energy per point, $N_L$ the number of receivers (looks) per point, $P_{\\rm an}$ the analog power per receiver and $T_{\\rm dwell}$ the dwell per point. The dwell is the two useful windows plus the two round trips, $T_{\\rm dwell}=2T_u+2\\tau=10+2.67=12.67$ µs at the 200 m design range (§C7b, Eq. (103)). The ADC samples only the useful windows, but the analog front end stays on for the whole dwell. This gives **≈2.3 µJ per point** (1.3–4.0): $E_{\\rm rx}=4\\times(12{,}300\\times37.3\\ {\\rm pJ}+10\\ {\\rm mW}\\times12.67\\ \\mu{\\rm s})=4\\times(0.459+0.127)=2.34$ µJ. The low and high cases are $4\\times(12{,}300\\times22\\ {\\rm pJ}+5\\ {\\rm mW}\\times12.67\\ \\mu{\\rm s})=1.3$ µJ and $4\\times(12{,}300\\times61\\ {\\rm pJ}+20\\ {\\rm mW}\\times12.67\\ \\mu{\\rm s})=4.0$ µJ.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4829-4830",
+   "finding": "N_ADC for ADC samples per point",
+   "old": "- Raw ADC output at 10 bits per sample is **0.98, 4.9 and 12 Tb/s** respectively: $N_L\\dot N N_{\\rm samp}\\times10$ bits with $N_L=4$ receivers per channel, e.g. $4\\times10^{7}\\ {\\rm s^{-1}}\\times12{,}300\\times10=4.9\\times10^{12}$ b/s at 10 Mpts/s. This counts the useful windows only, as the ADC energy of (c) does; converters left running through the round trips would stream $T_{\\rm dwell}/T_{\\rm int}=1.27$ times more, 6.2 Tb/s. The 10 bits are the converter's output word; the energy model's 8 effective bits (ENOB) are fewer because noise and distortion corrupt the lowest bits. This data stream cannot leave the chip economically, so FFT and peak extraction must sit beside the ADCs in a stacked electronic-photonic IC (EPIC): the same stacking step Sony made for SPAD-SoCs, with GS/s converters instead of counters.\n- Today's merchant FMCW SoC, indie's **iND83301 \"Surya\"**, provides 4 × 1 GS/s or 8 × 500 MS/s 12-bit ADCs with an FFT unit and four DSP cores; power is not published [P]. A 10 Mpts/s sensor would need roughly **120–130 such devices** [E]. The aggregate sample rate is $\\dot N N_LN_{\\rm samp}=10^{7}\\ {\\rm s^{-1}}\\times4\\times12{,}300\\approx4.9\\times10^{11}$ samples/s, against $4\\times1$ GS/s per device, so $490/4\\approx123$ devices. Counting one ADC per receiver gives $507/4\\approx127$, but each 1 GS/s converter is then below the 1.23 GS/s a receiver needs during its useful windows, and the 8 × 500 MS/s mode (≈63 devices) is far too slow per receiver. Because $N_{\\rm samp}\\approx5R_{\\max}/\\Delta R$ (Eq. (94)), the aggregate rate barely depends on the chirp length.",
+   "new": "- Raw ADC output at 10 bits per sample is **0.98, 4.9 and 12 Tb/s** respectively: $N_L\\dot N N_{\\rm ADC}\\times10$ bits with $N_L=4$ receivers per channel, e.g. $4\\times10^{7}\\ {\\rm s^{-1}}\\times12{,}300\\times10=4.9\\times10^{12}$ b/s at 10 Mpts/s. This counts the useful windows only, as the ADC energy of (c) does; converters left running through the round trips would stream $T_{\\rm dwell}/T_{\\rm int}=1.27$ times more, 6.2 Tb/s. The 10 bits are the converter's output word; the energy model's 8 effective bits (ENOB) are fewer because noise and distortion corrupt the lowest bits. This data stream cannot leave the chip economically, so FFT and peak extraction must sit beside the ADCs in a stacked electronic-photonic IC (EPIC): the same stacking step Sony made for SPAD-SoCs, with GS/s converters instead of counters.\n- Today's merchant FMCW SoC, indie's **iND83301 \"Surya\"**, provides 4 × 1 GS/s or 8 × 500 MS/s 12-bit ADCs with an FFT unit and four DSP cores; power is not published [P]. A 10 Mpts/s sensor would need roughly **120–130 such devices** [E]. The aggregate sample rate is $\\dot N N_LN_{\\rm ADC}=10^{7}\\ {\\rm s^{-1}}\\times4\\times12{,}300\\approx4.9\\times10^{11}$ samples/s, against $4\\times1$ GS/s per device, so $490/4\\approx123$ devices. Counting one ADC per receiver gives $507/4\\approx127$, but each 1 GS/s converter is then below the 1.23 GS/s a receiver needs during its useful windows, and the 8 × 500 MS/s mode (≈63 devices) is far too slow per receiver. Because $N_{\\rm ADC}\\approx5R_{\\max}/\\Delta R$ (Eq. (94)), the aggregate rate barely depends on the chirp length.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4852",
+   "finding": "T_u in §C7a",
+   "old": "- **Very fast chirps buy little:** above ≈$10^{17}$ Hz/s, a 25 GHz detector bandwidth restricts ranging to short distances [P, Bianconi et al.]. With chirp rate $\\kappa=B/T$ (Hz/s), the beat frequency is $\\kappa\\times2R/c$, the chirp rate times the round-trip delay. It must stay below the detector bandwidth $f_{\\rm det}$, so a 25 GHz detector limits range to $R\\le cf_{\\rm det}/(2\\kappa)=3\\times10^{8}\\times2.5\\times10^{10}/(2\\times10^{17})\\approx37$ m [E]. This works against the \"ultrafast chirp\" argument for TFLN in automotive use.",
+   "new": "- **Very fast chirps buy little:** above ≈$10^{17}$ Hz/s, a 25 GHz detector bandwidth restricts ranging to short distances [P, Bianconi et al.]. With chirp rate $\\kappa=B/T_u$ (Hz/s), the beat frequency is $\\kappa\\times2R/c$, the chirp rate times the round-trip delay. It must stay below the detector bandwidth $f_{\\rm det}$, so a 25 GHz detector limits range to $R\\le cf_{\\rm det}/(2\\kappa)=3\\times10^{8}\\times2.5\\times10^{10}/(2\\times10^{17})\\approx37$ m [E]. This works against the \"ultrafast chirp\" argument for TFLN in automotive use.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4876",
+   "finding": "N_ADC for ADC samples per point",
+   "old": "- **Receiver electronics:** ToF is a fixed 40 nJ (2026) or 20 nJ (2032) plus ≈3,390 or ≈4,010 events at 5 or 3.5 pJ, giving 57 and 34 nJ (subsection 2(c)); the 2032 sensor counts more events because its higher PDE also detects more sunlight (Eq. (81)): $2.224\\times10^{8}\\ {\\rm s^{-1}}\\times20.8\\ \\mu{\\rm s}\\times0.862+22.0\\approx4{,}010$. FMCW is $N_L(N_{\\rm samp}e_s+P_{\\rm an}T_{\\rm dwell})$ (Eq. (96)): $N_L=4$ receivers, each with $N_{\\rm samp}$ samples per point times energy per sample $e_s$, plus analog power per receiver $P_{\\rm an}$ times the dwell $T_{\\rm dwell}=12.67$ µs. That is 2.34 µJ in 2026 (subsection 2(c)). In 2032 the model keeps 8 effective bits (ENOB = 8) at a FOM of 12 fJ/step and 70 DSP operations at 0.1 pJ each, so Eq. (95) gives $e_s=12\\ {\\rm fJ}\\times2^{8}+70\\times0.1\\ {\\rm pJ}=3.07+7=10.07$ pJ, and $4\\times(12{,}300\\times10.07\\ {\\rm pJ}+3\\ {\\rm mW}\\times12.67\\ \\mu{\\rm s})=4\\times(0.124+0.038)=0.65$ µJ.",
+   "new": "- **Receiver electronics:** ToF is a fixed 40 nJ (2026) or 20 nJ (2032) plus ≈3,390 or ≈4,010 events at 5 or 3.5 pJ, giving 57 and 34 nJ (subsection 2(c)); the 2032 sensor counts more events because its higher PDE also detects more sunlight (Eq. (81)): $2.224\\times10^{8}\\ {\\rm s^{-1}}\\times20.8\\ \\mu{\\rm s}\\times0.862+22.0\\approx4{,}010$. FMCW is $N_L(N_{\\rm ADC}e_s+P_{\\rm an}T_{\\rm dwell})$ (Eq. (96)): $N_L=4$ receivers, each with $N_{\\rm ADC}$ samples per point times energy per sample $e_s$, plus analog power per receiver $P_{\\rm an}$ times the dwell $T_{\\rm dwell}=12.67$ µs. That is 2.34 µJ in 2026 (subsection 2(c)). In 2032 the model keeps 8 effective bits (ENOB = 8) at a FOM of 12 fJ/step and 70 DSP operations at 0.1 pJ each, so Eq. (95) gives $e_s=12\\ {\\rm fJ}\\times2^{8}+70\\times0.1\\ {\\rm pJ}=3.07+7=10.07$ pJ, and $4\\times(12{,}300\\times10.07\\ {\\rm pJ}+3\\ {\\rm mW}\\times12.67\\ \\mu{\\rm s})=4\\times(0.124+0.038)=0.65$ µJ.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4903",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "With all three and the model's ungated dwell (10 µs of integration, so 15 mW per channel and 190 channels), a point costs $0.150\\times1.267/0.30+0.10=0.73$ µJ, and a 15 Mpts/s sensor draws $3+15\\times0.73=14.0$ W: just inside the target, yet still 1.8× the electrical energy per point of the SPAD ToF model ($0.73/0.415$). Channels brighter than ≈22 mW stay inside 15 W only with a gated transmitter: at 30 mW per channel the sensor draws 16 W ungated and 12 W gated (§C7b subsection 5). More power per channel is not a lever: it trades receivers against light wasted during the round trips, and the optimum is already ≈30–40 mW per channel (§C7b subsection 3a(a)). The energies also assume a laser narrow enough to lose little to phase noise: ≲27 kHz for a 1 dB coherent loss at 200 m, or ≲55 kHz for 3 dB at 300 m (Eq. (111); table in §C7b subsection 2(e)), with its residual chirp error inside Eq. (108), all qualified to automotive grade. Two gaps lie outside this per-watt definition: each sample covers only ≈2% of its cell (§C10.3b, Result 2), which more modes per sample would close at the price of more receivers (§C7b subsection 6, item 3), and the cost curve needs programs of hundreds of thousands of units a year (subsection 4).",
+   "new": "With all three and the model's ungated dwell (10 µs of integration, so 15 mW per channel and 190 channels), a point costs $0.150\\times1.267/0.30+0.10=0.73$ µJ, and a 15 Mpts/s sensor draws $3+15\\times0.73=14.0$ W: just inside the target, yet still 1.8× the electrical energy per point of the SPAD ToF model ($0.73/0.415$). Channels brighter than ≈22 mW stay inside 15 W only with a gated transmitter: at 30 mW per channel the sensor draws 16 W ungated and 12 W gated (§C7b subsection 5). More power per channel is not a lever: it trades receivers against light wasted during the round trips, and the optimum is already ≈30–40 mW per channel (§C7b subsection 3a(a)). The energies also assume a laser narrow enough to lose little to phase noise: ≲27 kHz for a 1 dB coherent loss at 200 m, or ≲55 kHz for 3 dB at 300 m (Eq. (111); table in §C7b subsection 2(e)), with its residual chirp error inside Eq. (108), all qualified to automotive grade. Two gaps lie outside this per-watt definition: each sample covers only ≈2% of its cell (§C10.3b, Result 2), which more modes per sample would close at the price of more receivers (§C7b subsection 6, item 3), and the cost curve needs programmes of hundreds of thousands of units a year (subsection 4).",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L5114",
+   "finding": "N_ADC for ADC samples per point",
+   "old": "  $$N_{\\rm samp}=f_s\\times2T_u=5B_{\\rm eff}\\tau+5f_DT_u=5\\frac{R}{\\Delta R}+5f_DT_u , \\tag{105}$$",
+   "new": "  $$N_{\\rm ADC}=f_s\\times2T_u=5B_{\\rm eff}\\tau+5f_DT_u=5\\frac{R}{\\Delta R}+5f_DT_u , \\tag{105}$$",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L5116",
+   "finding": "N_ADC for ADC samples per point",
+   "old": "  - At 200 m and 15 cm with $T_u=5$ µs: $N_{\\rm samp}=5\\times200/0.15+5\\times90\\times10^{6}\\times5\\times10^{-6}=6{,}670+2{,}260\\approx8{,}900$ samples per point.",
+   "new": "  - At 200 m and 15 cm with $T_u=5$ µs: $N_{\\rm ADC}=5\\times200/0.15+5\\times90\\times10^{6}\\times5\\times10^{-6}=6{,}670+2{,}260\\approx8{,}900$ samples per point.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L5311",
+   "finding": "N_ADC for ADC samples per point",
+   "old": "$$P_{\\rm elec}=\\underbrace{\\frac{\\dot N E'}{\\eta_{\\rm wp}}}_{\\rm useful\\ light}+\\underbrace{\\frac{2\\tau\\,\\dot N P_{\\rm ch}}{\\eta_{\\rm wp}}}_{\\rm dead\\text{-}time\\ light}+\\underbrace{N_{\\rm ch}N_LP_{\\rm an}}_{\\rm analog}+\\underbrace{\\dot N N_LN_{\\rm samp}e_s}_{\\rm ADC\\ and\\ FFT}+P_{\\rm oh} . \\tag{115}$$",
+   "new": "$$P_{\\rm elec}=\\underbrace{\\frac{\\dot N E'}{\\eta_{\\rm wp}}}_{\\rm useful\\ light}+\\underbrace{\\frac{2\\tau\\,\\dot N P_{\\rm ch}}{\\eta_{\\rm wp}}}_{\\rm dead\\text{-}time\\ light}+\\underbrace{N_{\\rm ch}N_LP_{\\rm an}}_{\\rm analog}+\\underbrace{\\dot N N_LN_{\\rm ADC}e_s}_{\\rm ADC\\ and\\ FFT}+P_{\\rm oh} . \\tag{115}$$",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L5313",
+   "finding": "N_ADC for ADC samples per point",
+   "old": "Here $\\dot N$ is the point rate; $\\eta_{\\rm wp}$ the wall-plug efficiency of the CW laser with its amplifiers, the optical power out per electrical power in (≈0.15 in 2026, §C7a(b)); $P_{\\rm an}$ the analog power per receiver (TIA, bias and drivers, ≈10 mW); $N_L=4$ the receivers (looks) per channel; $e_s$ the energy per ADC sample including the FFT (≈37 pJ, Eq. (95)); $P_{\\rm oh}$ the fixed overhead (≈3 W); and $N_{\\rm ch}=\\dot N(E'/P_{\\rm ch}+2\\tau)$ the channel count (Eq. (114)). While photons set the window, $T_u=E'/(2P_{\\rm ch})$ and $N_{\\rm samp}=5R/\\Delta R+5f_DT_u$ (Eq. (105)).",
+   "new": "Here $\\dot N$ is the point rate; $\\eta_{\\rm wp}$ the wall-plug efficiency of the CW laser with its amplifiers, the optical power out per electrical power in (≈0.15 in 2026, §C7a(b)); $P_{\\rm an}$ the analog power per receiver (TIA, bias and drivers, ≈10 mW); $N_L=4$ the receivers (looks) per channel; $e_s$ the energy per ADC sample including the FFT (≈37 pJ, Eq. (95)); $P_{\\rm oh}$ the fixed overhead (≈3 W); and $N_{\\rm ch}=\\dot N(E'/P_{\\rm ch}+2\\tau)$ the channel count (Eq. (114)). While photons set the window, $T_u=E'/(2P_{\\rm ch})$ and $N_{\\rm ADC}=5R/\\Delta R+5f_DT_u$ (Eq. (105)).",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L5316",
+   "finding": "N_ADC for ADC samples per point",
+   "old": "- **Only the channel terms depend on $P_{\\rm ch}$.** Substituting $N_{\\rm ch}$ and $N_{\\rm samp}$ splits $P_{\\rm elec}$ into three parts:",
+   "new": "- **Only the channel terms depend on $P_{\\rm ch}$.** Substituting $N_{\\rm ch}$ and $N_{\\rm ADC}$ splits $P_{\\rm elec}$ into three parts:",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L5586",
+   "finding": "§C8.1 FPA: 120°×25° at 53 µm, as §C10.4",
+   "old": "| **FMCW switched focal-plane array** (one address per direction) | directions × cell pitch² | Berkeley 128×128 at 55 µm: **7×7 mm** active on a 10×11 mm chip [P]. Pointcloud 352×176 at **53 µm**: about **18.7×9.3 mm** active [E from P] | **Yes** at automotive resolution: 0.1° over 120°×25° at 53 µm ≈ **63.6×13.3 mm** [E]. At §C7's specification (0.05° over 120°×26°, 55 µm pitch) ≈132×29 mm. Both assume contiguous sampling (address spacing = beamwidth), unlike Berkeley's sparse addresses (0.6° spacing, 0.05° beams) | Package pins and bonding (Berkeley bonded only 128×96 cells [P]); simultaneous readout channels (Pointcloud: up to 128 outputs [P]); LO distribution and power per pixel | Smaller cell pitch (25 µm → 30×6 mm); tiling several FPAs behind separate lenses; a one-axis mechanical scan |",
+   "new": "| **FMCW switched focal-plane array** (one address per direction) | directions × cell pitch² | Berkeley 128×128 at 55 µm: **7×7 mm** active on a 10×11 mm chip [P]. Pointcloud 352×176 at **53 µm**: about **18.7×9.3 mm** active [E from P] | **Yes** at automotive resolution: 0.1° over 120°×25° at 53 µm ≈ **63.6×13.3 mm** [E]. At 0.05° over the same 120°×25° and 53 µm ≈127×26.5 mm (2,400×500 addresses, as in §C10.4); §C7's 2,400×520 grid at Berkeley's 55 µm pitch gives ≈132×29 mm. Both assume contiguous sampling (address spacing = beamwidth), unlike Berkeley's sparse addresses (0.6° spacing, 0.05° beams) | Package pins and bonding (Berkeley bonded only 128×96 cells [P]); simultaneous readout channels (Pointcloud: up to 128 outputs [P]); LO distribution and power per pixel | Smaller cell pitch (25 µm → 30×6 mm); tiling several FPAs behind separate lenses; a one-axis mechanical scan |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L5975",
+   "finding": "§C10 detection notation",
+   "old": "- **Speckle raises the requirement.** A rough target produces a speckle pattern, a random interference pattern of bright and dark spots. A single-mode receiver samples one speckle, whose power is exponentially distributed (Rayleigh-distributed amplitude), so the return sometimes fades deeply. For a detection probability $P_d=0.9$ at a false-alarm probability $P_{\\rm fa}=10^{-6}$, one look needs a mean of about **130 detected photons**. This assumes shot-noise-limited coherent detection: the local oscillator's shot noise dominates and thermal and dark-current noise are neglected, which at 105–125 °C holds only approximately (§C4c gives 82–94% of the shot-noise limit for Ge at 125 °C). With the detection threshold $\\gamma_{\\rm th}$ expressed in units of the mean noise power, and $\\bar n$ the mean number of detected signal photons, $P_{\\rm fa}=e^{-\\gamma_{\\rm th}}$ and $P_d=e^{-\\gamma_{\\rm th}/(1+\\bar n)}$, the single-speckle detection law of Eq. (38) (§C0 subsection 10.3) with $p=P_{\\rm fa}$. Hence $\\bar n=\\ln P_{\\rm fa}/\\ln P_d-1=13.8/0.105-1\\approx130$, using $-\\ln10^{-6}=13.8$ and $-\\ln0.9=0.105$.",
+   "new": "- **Speckle raises the requirement.** A rough target produces a speckle pattern, a random interference pattern of bright and dark spots. A single-mode receiver samples one speckle, whose power is exponentially distributed (Rayleigh-distributed amplitude), so the return sometimes fades deeply. For a detection probability $P_D=0.9$ at a per-bin false-alarm probability $p=10^{-6}$, one look needs a mean of about **130 detected photons**. This assumes shot-noise-limited coherent detection: the local oscillator's shot noise dominates and thermal and dark-current noise are neglected, which at 105–125 °C holds only approximately (§C4c gives 82–94% of the shot-noise limit for Ge at 125 °C). With the detection threshold $x_{\\rm th}$ expressed in units of the mean noise power, and $\\bar n$ the mean number of detected signal photons, $p=e^{-x_{\\rm th}}$ and $P_D=e^{-x_{\\rm th}/(1+\\bar n)}$, the single-speckle detection law of Eq. (38) (§C0 subsection 10.3). Hence $\\bar n=\\ln p/\\ln P_D-1=13.8/0.105-1\\approx130$, using $-\\ln10^{-6}=13.8$ and $-\\ln0.9=0.105$.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L5977",
+   "finding": "§C10 detection notation",
+   "old": "  - A non-fading return needs about 21. For a constant signal the detection probability is the Marcum Q-function $Q_1(a,b)$: the probability that the envelope of a constant signal of normalized amplitude $a$ plus complex Gaussian noise exceeds a normalized threshold $b$. With $a=\\sqrt{2\\bar n}$, $b=\\sqrt{2\\gamma_{\\rm th}}$ and $\\gamma_{\\rm th}=\\ln10^{6}=13.8$, $Q_1=0.9$ at $\\bar n=20.8$ [E].",
+   "new": "  - A non-fading return needs about 21. For a constant signal the detection probability is the Marcum Q-function $Q_1(a,b)$: the probability that the envelope of a constant signal of normalized amplitude $a$ plus complex Gaussian noise exceeds a normalized threshold $b$. With $a=\\sqrt{2\\bar n}$, $b=\\sqrt{2x_{\\rm th}}$ and $x_{\\rm th}=\\ln10^{6}=13.8$, $Q_1=0.9$ at $\\bar n=20.8$ [E].",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L6049",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "**Who they are.** Analog Photonics (Boston) was founded about 2012 by Michael Watts of MIT, who remains CEO [P/S]. Federal records show subawards from Nov 2013 and SBIR (US Small Business Innovation Research) awards from 2015 [I]; the company's own timeline starts with a 2016 award under the MOABB (Modular Optical Aperture Building Blocks) program of DARPA, the US Defense Advanced Research Projects Agency (§C3a). Its platform is MOABB-funded 300 mm silicon photonics with flip-chip CMOS drivers (electronic driver chips bonded face-down onto the photonic chip). Company milestones [P]: a joint development agreement with a Tier 1 (a supplier selling directly to carmakers) in 2018, on-car tests in 2019, a second Tier 1 agreement in 2020 and a narrow-linewidth FMCW laser in 2021. Funding, size and the departure of the lead author of its OPA papers are covered in §C3a.",
+   "new": "**Who they are.** Analog Photonics (Boston) was founded about 2012 by Michael Watts of MIT, who remains CEO [P/S]. Federal records show subawards from Nov 2013 and SBIR (US Small Business Innovation Research) awards from 2015 [I]; the company's own timeline starts with a 2016 award under the MOABB (Modular Optical Aperture Building Blocks) programme of DARPA, the US Defense Advanced Research Projects Agency (§C3a). Its platform is MOABB-funded 300 mm silicon photonics with flip-chip CMOS drivers (electronic driver chips bonded face-down onto the photonic chip). Company milestones [P]: a joint development agreement with a Tier 1 (a supplier selling directly to carmakers) in 2018, on-car tests in 2019, a second Tier 1 agreement in 2020 and a narrow-linewidth FMCW laser in 2021. Funding, size and the departure of the lead author of its OPA papers are covered in §C3a.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L6105",
+   "finding": "§C10 detection notation: n_req",
+   "old": "- *Speckle.* The coherent thresholds $N_{\\rm req}=10$–30 bracket the single-bin non-fading requirement (≈21 detected photons) and lie below the per-point one (≈39). A single speckle has exponentially distributed intensity, and a fading return needs more photons (caveat 4 below and §C10.2, item 5).",
+   "new": "- *Speckle.* The coherent thresholds $n_{\\rm req}=10$–30 bracket the single-bin non-fading requirement (≈21 detected photons) and lie below the per-point one (≈39). A single speckle has exponentially distributed intensity, and a fading return needs more photons (caveat 4 below and §C10.2, item 5).",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L6109",
+   "finding": "§C10 detection notation: n_req",
+   "old": "- *Sunlight.* For ToF, $N_{\\rm req}=21.7$ already corresponds to bright sun: an ideal counter needs 15.0 counts there (§C0 subsection 10.3), and the §C7a model applies its ×1.45 implementation margin, $1.45\\times15.0\\approx21.7$. The dead time that sunlight causes is in $\\eta$, through the SPAD live fraction 0.885. At night ≈5 counts suffice.",
+   "new": "- *Sunlight.* For ToF, $n_{\\rm req}=21.7$ already corresponds to bright sun: an ideal counter needs 15.0 counts there (§C0 subsection 10.3), and the §C7a model applies its ×1.45 implementation margin, $1.45\\times15.0\\approx21.7$. The dead time that sunlight causes is in $\\eta$, through the SPAD live fraction 0.885. At night ≈5 counts suffice.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L6132",
+   "finding": "§C10 detection notation: n_req",
+   "old": "**Required average optical power** to cover 120°×25° at 10 Hz and reach 200 m on a 10% target. Setting the detected count of Eq. (133) or Eq. (134) equal to the required count $N_{\\rm req}$ and solving for $P=f_{\\rm frame}N_{\\rm samp}E_{\\rm pt}$ gives",
+   "new": "**Required average optical power** to cover 120°×25° at 10 Hz and reach 200 m on a 10% target. Setting the detected count of Eq. (133) or Eq. (134) equal to the required count $n_{\\rm req}$ and solving for $P=f_{\\rm frame}N_{\\rm samp}E_{\\rm pt}$ gives",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L6134",
+   "finding": "§C10 detection notation: n_req",
+   "old": "$$\\begin{aligned}P_{\\rm coh}&=\\dfrac{N_{\\rm req}E_{\\rm ph}\\pi R^2f_{\\rm frame}\\,\\Omega_{\\rm FOV}}{\\rho\\,\\tfrac{t^2}{2}\\lambda^2\\,\\eta},\\\\ P_{\\rm ToF}&=\\dfrac{N_{\\rm req}E_{\\rm ph}\\pi R^2f_{\\rm frame}\\,\\Omega_{\\rm FOV}}{\\rho\\,A_{\\rm rx}\\Omega_{\\rm cell}\\,\\eta}\\end{aligned} \\tag{135}$$",
+   "new": "$$\\begin{aligned}P_{\\rm coh}&=\\dfrac{n_{\\rm req}E_{\\rm ph}\\pi R^2f_{\\rm frame}\\,\\Omega_{\\rm FOV}}{\\rho\\,\\tfrac{t^2}{2}\\lambda^2\\,\\eta},\\\\ P_{\\rm ToF}&=\\dfrac{n_{\\rm req}E_{\\rm ph}\\pi R^2f_{\\rm frame}\\,\\Omega_{\\rm FOV}}{\\rho\\,A_{\\rm rx}\\Omega_{\\rm cell}\\,\\eta}\\end{aligned} \\tag{135}$$",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L6136",
+   "finding": "§C10 detection notation; §C10 detection notation: n_req",
+   "old": "$N_{\\rm req}$ is the number of detected photons (photoelectrons) required per sample, the $n_{\\rm req}$ of §C0 subsection 10.1. The ToF inputs are those of the 940 nm SPAD model of §C0 subsection 10.3 and §C7a: a 25 mm aperture, $N_{\\rm req}=21.7$ [E: the bright-sun requirement with the model's ×1.45 margin] and $\\eta=0.5\\times0.37\\times0.885=0.164$ [E: optics × PDE × the bright-sun live fraction]. They belong to the model's 0.05° × 0.05° macro-pixel and are held fixed across the grids below, although a coarser pixel collects more sunlight and a finer one less. Single-mode coherent: 1550 nm, $N_{\\rm req}$ 10–30 and $\\eta=0.25$, the design value of §C0 subsection 10.1, needing **58.5–175.5 W** on every grid, because $\\Omega_{\\rm cell}$ does not appear in $P_{\\rm coh}$; Waymo's measured chain efficiency of 0.112 (§C0 subsection 10.1) would raise this 2.23-fold. Both powers grow as $R^2\\Omega_{\\rm FOV}$, which is why §C10.2b and the product comparison below rank by $R^2\\Omega$.",
+   "new": "$n_{\\rm req}$ is the number of detected photons (photoelectrons) required per sample, as in §C0 subsection 10.1. The ToF inputs are those of the 940 nm SPAD model of §C0 subsection 10.3 and §C7a: a 25 mm aperture, $n_{\\rm req}=21.7$ [E: the bright-sun requirement with the model's ×1.45 margin] and $\\eta=0.5\\times0.37\\times0.885=0.164$ [E: optics × PDE × the bright-sun live fraction]. They belong to the model's 0.05° × 0.05° macro-pixel and are held fixed across the grids below, although a coarser pixel collects more sunlight and a finer one less. Single-mode coherent: 1550 nm, $n_{\\rm req}$ 10–30 and $\\eta=0.25$, the design value of §C0 subsection 10.1, needing **58.5–175.5 W** on every grid, because $\\Omega_{\\rm cell}$ does not appear in $P_{\\rm coh}$; Waymo's measured chain efficiency of 0.112 (§C0 subsection 10.1) would raise this 2.23-fold. Both powers grow as $R^2\\Omega_{\\rm FOV}$, which is why §C10.2b and the product comparison below rank by $R^2\\Omega$.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L6150",
+   "finding": "§C10 detection notation: n_req",
+   "old": "- Coherent: $E_{\\rm ph}=hc/\\lambda=1.282\\times10^{-19}$ J and $\\lambda^2=2.403\\times10^{-12}$ m² at 1550 nm, and $t^2/2=0.419$. With $N_{\\rm req}=10$ and $\\eta=0.25$, $P_{\\rm coh}=10\\times1.282\\times10^{-19}\\times1.148\\times10^{7}/(0.419\\times2.403\\times10^{-12}\\times0.25)=58.5$ W, i.e. 5.85 W per detected photon per sample; $N_{\\rm req}=30$ triples it, to 175.5 W. With the measured efficiency 0.112 instead of 0.25, both rise $0.25/0.112=2.23$-fold, to 131 and 392 W.",
+   "new": "- Coherent: $E_{\\rm ph}=hc/\\lambda=1.282\\times10^{-19}$ J and $\\lambda^2=2.403\\times10^{-12}$ m² at 1550 nm, and $t^2/2=0.419$. With $n_{\\rm req}=10$ and $\\eta=0.25$, $P_{\\rm coh}=10\\times1.282\\times10^{-19}\\times1.148\\times10^{7}/(0.419\\times2.403\\times10^{-12}\\times0.25)=58.5$ W, i.e. 5.85 W per detected photon per sample; $n_{\\rm req}=30$ triples it, to 175.5 W. With the measured efficiency 0.112 instead of 0.25, both rise $0.25/0.112=2.23$-fold, to 131 and 392 W.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L6164",
+   "finding": "§C10 detection notation: n_req",
+   "old": "   - Sunlight is already included in the ToF inputs: $N_{\\rm req}=21.7$ is the bright-sun requirement, and $\\eta=0.164$ contains the bright-sun live fraction 0.885. A fully sunlit scene of reflectance 0.9 doubles the background to $3.66\\times10^{8}$ counts/s per macro-pixel, which lowers the live fraction to $e^{-0.244}=0.784$ (each of the nine SPADs has $r\\tau_d=3.66\\times10^{8}/9\\times6\\ {\\rm ns}=0.244$) and raises the ideal requirement only to 17.3 counts ($b=3.66\\times10^{8}\\ {\\rm s^{-1}}\\times1\\ {\\rm ns}\\times10\\times0.784=2.87$ background counts per bin, threshold 15; §C0 subsection 10.3; background model in §C6(d)). $P_{\\rm ToF}$ then rises by $(17.3/15.0)\\times(0.885/0.784)=1.30$.",
+   "new": "   - Sunlight is already included in the ToF inputs: $n_{\\rm req}=21.7$ is the bright-sun requirement, and $\\eta=0.164$ contains the bright-sun live fraction 0.885. A fully sunlit scene of reflectance 0.9 doubles the background to $3.66\\times10^{8}$ counts/s per macro-pixel, which lowers the live fraction to $e^{-0.244}=0.784$ (each of the nine SPADs has $r\\tau_d=3.66\\times10^{8}/9\\times6\\ {\\rm ns}=0.244$) and raises the ideal requirement only to 17.3 counts ($b=3.66\\times10^{8}\\ {\\rm s^{-1}}\\times1\\ {\\rm ns}\\times10\\times0.784=2.87$ background counts per bin, threshold 15; §C0 subsection 10.3; background model in §C6(d)). $P_{\\rm ToF}$ then rises by $(17.3/15.0)\\times(0.885/0.784)=1.30$.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L6166-6167",
+   "finding": "§C10 detection notation: n_req; §C10 detection notation",
+   "old": "   - The choices of $N_{\\rm req}$ and $\\eta$ move the numbers but do not change the scaling with $\\Omega_{\\rm cell}$. The measured chain efficiency of 0.112 in place of the design value 0.25 raises the coherent powers 2.23×, and speckle raises the coherent $N_{\\rm req}$ to 88.5–259, 3–26× the 10–30 of the table (next bullet).\n   - **Speckle.** $N_{\\rm req}=10$–30 is at or below the non-fading requirement: ≈21 detected photons for $P_d=0.9$ at $P_{\\rm fa}=10^{-6}$ in one bin, and ≈39 under the report's per-point rule, which searches 0–300 m and needs the peak in both chirp ramps (§C0 subsection 10.3). A single-mode fading return needs about 88 photons in total with four-look diversity, or about 259 with one look, under that rule (§C10.2, item 5). If the looks share one mode's collection (wavelength or time diversity), that raises the coherent requirement to about **518–1,515 W**: at fixed $\\eta$, Eq. (135) gives $P_{\\rm coh}\\propto N_{\\rm req}$, 5.85 W per detected photon, so 88.5 photons need $58.5\\times88.5/10=518$ W and 259 need $58.5\\times259/10=1{,}515$ W, while the non-fading per-point 39.1 needs $58.5\\times3.91=229$ W. Looks that each add a mode (polarization or spatial diversity, as in §C7a) collect four times as much, which brings the four-look case back to ≈130 W ($518/4$).",
+   "new": "   - The choices of $n_{\\rm req}$ and $\\eta$ move the numbers but do not change the scaling with $\\Omega_{\\rm cell}$. The measured chain efficiency of 0.112 in place of the design value 0.25 raises the coherent powers 2.23×, and speckle raises the coherent $n_{\\rm req}$ to 88.5–259, 3–26× the 10–30 of the table (next bullet).\n   - **Speckle.** $n_{\\rm req}=10$–30 is at or below the non-fading requirement: ≈21 detected photons for $P_D=0.9$ at $p=10^{-6}$ in one bin, and ≈39 under the report's per-point rule, which searches 0–300 m and needs the peak in both chirp ramps (§C0 subsection 10.3). A single-mode fading return needs about 88 photons in total with four-look diversity, or about 259 with one look, under that rule (§C10.2, item 5). If the looks share one mode's collection (wavelength or time diversity), that raises the coherent requirement to about **518–1,515 W**: at fixed $\\eta$, Eq. (135) gives $P_{\\rm coh}\\propto n_{\\rm req}$, 5.85 W per detected photon, so 88.5 photons need $58.5\\times88.5/10=518$ W and 259 need $58.5\\times259/10=1{,}515$ W, while the non-fading per-point 39.1 needs $58.5\\times3.91=229$ W. Looks that each add a mode (polarization or spatial diversity, as in §C7a) collect four times as much, which brings the four-look case back to ≈130 W ($518/4$).",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L6174",
+   "finding": "§C10 detection notation",
+   "old": "- **Waymo's own automotive worked example makes exactly this choice.** For 250 m, 120° × 25°, 0.05° sampling, a 5% target, a detection probability $P_d=0.9$ and a false-alarm rate of $10^{-6}$ per bin:",
+   "new": "- **Waymo's own automotive worked example makes exactly this choice.** For 250 m, 120° × 25°, 0.05° sampling, a 5% target, a detection probability $P_D=0.9$ and a false-alarm probability $p=10^{-6}$ per bin:",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L6381",
+   "finding": "§C10 detection notation: n_req",
+   "old": "*How the numbers are derived* [E]: the bound is $f_{\\rm fp}=K/n_{\\rm mode}=(K/P)\\,P/n_{\\rm mode}$, capped at one, with $K/P=0.171$ W⁻¹ from above. For 20 W, $0.171\\times20/30=11\\%$ at 30 photoelectrons and $0.171\\times20/259=1.3\\%$ at 259. Full coverage at 30 photoelectrons needs $P=30/0.171=175$ W, the ≈175 W row, where 259 photoelectrons give $0.171\\times175/259=12\\%$. The 175 W is the $P_{\\rm coh}$ of Eq. (135) for $N_{\\rm req}=30$, as it must be, since both rest on the same cell-filling mode.",
+   "new": "*How the numbers are derived* [E]: the bound is $f_{\\rm fp}=K/n_{\\rm mode}=(K/P)\\,P/n_{\\rm mode}$, capped at one, with $K/P=0.171$ W⁻¹ from above. For 20 W, $0.171\\times20/30=11\\%$ at 30 photoelectrons and $0.171\\times20/259=1.3\\%$ at 259. Full coverage at 30 photoelectrons needs $P=30/0.171=175$ W, the ≈175 W row, where 259 photoelectrons give $0.171\\times175/259=12\\%$. The 175 W is the $P_{\\rm coh}$ of Eq. (135) for $n_{\\rm req}=30$, as it must be, since both rest on the same cell-filling mode.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L6389",
+   "finding": "§C10.3a mode count N_m (N_mode is §C0's photons in the LO mode)",
+   "old": "**More modes per sample scale the budget.** Receiving $N_{\\rm mode}$ spatial modes per sample, each with its own coherent channel and summed incoherently (in intensity), gives",
+   "new": "**More modes per sample scale the budget.** Receiving $N_{\\rm m}$ spatial modes per sample, each with its own coherent channel and summed incoherently (in intensity), gives",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L6391",
+   "finding": "§C10.3a mode count N_m (N_mode is §C0's photons in the LO mode)",
+   "old": "$$n_\\Sigma\\times f_{\\rm fp}\\sim N_{\\rm mode}\\,K \\tag{141}$$",
+   "new": "$$n_\\Sigma\\times f_{\\rm fp}\\sim N_{\\rm m}\\,K \\tag{141}$$",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L6393",
+   "finding": "§C10.3a mode count N_m (N_mode is §C0's photons in the LO mode)",
+   "old": "where $n_\\Sigma=N_{\\rm mode}\\,n_{\\rm mode}$ is the photoelectron count summed over the $N_{\\rm mode}$ selected modes and $K$ is the single-mode budget constant of Eq. (139). Four modes at 30 photoelectrons each, as in the §C7a four-look design, therefore have the coverage bound of one mode at 30 (the 30-photoelectron column of the table above).",
+   "new": "where $n_\\Sigma=N_{\\rm m}\\,n_{\\rm mode}$ is the photoelectron count summed over the $N_{\\rm m}$ selected modes and $K$ is the single-mode budget constant of Eq. (139). Four modes at 30 photoelectrons each, as in the §C7a four-look design, therefore have the coverage bound of one mode at 30 (the 30-photoelectron column of the table above).",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L6395-6396",
+   "finding": "§C10.3a mode count N_m (N_mode is §C0's photons in the LO mode)",
+   "old": "- A **ToF** macro-pixel (a group of SPAD cells read out together as one pixel; SPAD is a single-photon avalanche diode) in this 0.05° example at 940 nm sums of order 420 spatial speckles per polarization in one intensity detector, i.e. $N_{\\rm mode}\\sim N_{\\rm spk}\\approx420$, subject to its optical acceptance.\n- A **coherent** receiver needs extra optical modes, with matching mixing and digitization capacity, to capture that light in parallel. Multiplexed implementations can share hardware at a cost in time or bandwidth. $N_{\\rm mode}$ independent modes can also supply speckle diversity if their returns are genuinely decorrelated.",
+   "new": "- A **ToF** macro-pixel (a group of SPAD cells read out together as one pixel; SPAD is a single-photon avalanche diode) in this 0.05° example at 940 nm sums of order 420 spatial speckles per polarization in one intensity detector, i.e. $N_{\\rm m}\\sim N_{\\rm spk}\\approx420$, subject to its optical acceptance.\n- A **coherent** receiver needs extra optical modes, with matching mixing and digitization capacity, to capture that light in parallel. Multiplexed implementations can share hardware at a cost in time or bandwidth. $N_{\\rm m}$ independent modes can also supply speckle diversity if their returns are genuinely decorrelated.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L6744",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "- **Automotive status:** the 2020 automotive concept (X20) claimed more than 120 m; **no automotive series program was found by September 2026**.",
+   "new": "- **Automotive status:** the 2020 automotive concept (X20) claimed more than 120 m; **no automotive series programme was found by September 2026**.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L6887",
+   "finding": "§C10 detection notation: n_req",
+   "old": "  - Even in the ideal full-coverage bound, coherent detection needs 4.2–816× the power of the ToF example (§C10.3; the two cases there also differ in wavelength $\\lambda$, required detected photons per sample $N_{\\rm req}$ and efficiency $\\eta$):",
+   "new": "  - Even in the ideal full-coverage bound, coherent detection needs 4.2–816× the power of the ToF example (§C10.3; the two cases there also differ in wavelength $\\lambda$, required detected photons per sample $n_{\\rm req}$ and efficiency $\\eta$):",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L6927-6928",
+   "finding": "§C10.7 signpost: receiver count as §C7b subsection 7; §C10.7 signpost: LC switching from §C10.5",
+   "old": "- a coherent FPA or column with ≥256 simultaneous channels on an ASIC (application-specific integrated circuit) within about 10 W;\n- LC metasurfaces switching in ≤25 µs at −40 °C;",
+   "new": "- a coherent FPA or column with ≥256 simultaneous receivers (64 channels of four looks, the milestone of §C7b subsection 7) on an ASIC (application-specific integrated circuit) within about 10 W;\n- LC metasurfaces switching in ≤21 µs per step at −40 °C, the 0.05°, 20 fps requirement of §C10.5;",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L7294",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "**US demand leverage is modest.** North America was about 15% of Hesai's 2025 revenue (§D4), and bans so far cover DoD procurement only (§D3). The leverage would become significant only if S.4429 or a similar civilian ban passes (§F3). Even then it would mostly hit robotaxi and truck fleets and a few Western OEM (carmaker) programs, not Chinese domestic volume.",
+   "new": "**US demand leverage is modest.** North America was about 15% of Hesai's 2025 revenue (§D4), and bans so far cover DoD procurement only (§D3). The leverage would become significant only if S.4429 or a similar civilian ban passes (§F3). Even then it would mostly hit robotaxi and truck fleets and a few Western OEM (carmaker) programmes, not Chinese domestic volume.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L7491",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "**Judgement.** The lag is real at product level, but it is mainly a *choice* conditioned by demand, not an inability. Hesai and RoboSense already hold FMCW patents and in-house programmes. RoboSense's is visible in its papers with SUSTech, including the 200 m, 10% system test of 2025. Hesai's dates from 2018, continues in its patents through 2025 and has probably reached a road-going prototype, the FMCW lidar of a 2026 dataset. If a Chinese OEM or truck program starts paying for per-point velocity, the component base (TFLN, lasers, receivers, datacom packaging) and the ToF makers' ASIC (custom-chip) teams could close a one-stage gap in 2–4 years [E]. Automotive-grade heterogeneous SiPh (silicon photonics with bonded lasers and amplifiers) at yield would be the pacing item. For the market, this means the Western FMCW lead rests mainly on Chinese demand staying focused on cheap ToF lines.",
+   "new": "**Judgement.** The lag is real at product level, but it is mainly a *choice* conditioned by demand, not an inability. Hesai and RoboSense already hold FMCW patents and in-house programmes. RoboSense's is visible in its papers with SUSTech, including the 200 m, 10% system test of 2025. Hesai's dates from 2018, continues in its patents through 2025 and has probably reached a road-going prototype, the FMCW lidar of a 2026 dataset. If a Chinese OEM or truck programme starts paying for per-point velocity, the component base (TFLN, lasers, receivers, datacom packaging) and the ToF makers' ASIC (custom-chip) teams could close a one-stage gap in 2–4 years [E]. Automotive-grade heterogeneous SiPh (silicon photonics with bonded lasers and amplifiers) at yield would be the pacing item. For the market, this means the Western FMCW lead rests mainly on Chinese demand staying focused on cheap ToF lines.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L7703",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "| **Mobileye** | Camera-first; eyes-off adds an independent radar+lidar channel (\"True Redundancy\") | SuperVision about 300k on road; Chauffeur has a front lidar; Drive uses Innoviz lidars; imaging radar SOP 2028 | Ended its FMCW program. Safety paper: joint MTBF (mean time between failures) of at least $180\\,T_1T_2$ |",
+   "new": "| **Mobileye** | Camera-first; eyes-off adds an independent radar+lidar channel (\"True Redundancy\") | SuperVision about 300k on road; Chauffeur has a front lidar; Drive uses Innoviz lidars; imaging radar SOP 2028 | Ended its FMCW programme. Safety paper: joint MTBF (mean time between failures) of at least $180\\,T_1T_2$ |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L7709",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "| **Rivian / Nissan–Wayve / NVIDIA** | Adding lidar (R2 Gen 3; ProPILOT; **Hyperion 10 = 14 cameras, 9 radars, 1 lidar**) | — | Wayve's London Mach-E has no lidar; its Nissan programs do |",
+   "new": "| **Rivian / Nissan–Wayve / NVIDIA** | Adding lidar (R2 Gen 3; ProPILOT; **Hyperion 10 = 14 cameras, 9 radars, 1 lidar**) | — | Wayve's London Mach-E has no lidar; its Nissan programmes do |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L7721-7722",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "- **Several prominent approved or announced eyes-off and driverless programs in this report use lidar**, including Mercedes' earlier Drive Pilot, GM's planned eyes-off system and Waymo's robotaxis.\n  - This is an observed design pattern in the programs surveyed, not a complete global census or a legal requirement: camera/radar-only L3 remains permissible if the complete system meets the applicable requirements.",
+   "new": "- **Several prominent approved or announced eyes-off and driverless programmes in this report use lidar**, including Mercedes' earlier Drive Pilot, GM's planned eyes-off system and Waymo's robotaxis.\n  - This is an observed design pattern in the programmes surveyed, not a complete global census or a legal requirement: camera/radar-only L3 remains permissible if the complete system meets the applicable requirements.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L8048",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "| **L3 highway eyes-off** (up to 130 km/h in some designs) | Needs detection distance and coverage appropriate to its *permitted speed and operating domain*, plus a safe handover/fallback strategy; the illustrative stopping distance at higher highway speed is about 110–170 m. **No general L3 rule specifies lidar.** Several high-profile programs chose it, plausibly for directly measured range and a different failure mode, but this report does not show that it makes approval easier than a well-developed camera/radar design. The Changan SL03 permit's sensor configuration remains disputed (§E1). |",
+   "new": "| **L3 highway eyes-off** (up to 130 km/h in some designs) | Needs detection distance and coverage appropriate to its *permitted speed and operating domain*, plus a safe handover/fallback strategy; the illustrative stopping distance at higher highway speed is about 110–170 m. **No general L3 rule specifies lidar.** Several high-profile programmes chose it, plausibly for directly measured range and a different failure mode, but this report does not show that it makes approval easier than a well-developed camera/radar design. The Changan SL03 permit's sensor configuration remains disputed (§E1). |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L8077",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "4. **Fleet availability and lifecycle cost.** Report the installed hardware's cleaning and calibration burden, failure rates, service cost, energy use and styling constraints, and whether the feature is actually activated. A sensor that improves a test score but cannot be maintained or integrated profitably may not survive a vehicle program.",
+   "new": "4. **Fleet availability and lifecycle cost.** Report the installed hardware's cleaning and calibration burden, failure rates, service cost, energy use and styling constraints, and whether the feature is actually activated. A sensor that improves a test score but cannot be maintained or integrated profitably may not survive a vehicle programme.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L8135",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "Contractual data rights are program-specific; sensor shipment counts do not establish them.",
+   "new": "Contractual data rights are programme-specific; sensor shipment counts do not establish them.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L8247",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "| **2. Configurable input** (lidar optional) | The same software family runs with or without lidar on different trims | **Momenta** lists configurations such as \"5V5R\" and \"12V5R + lidar (optional)\" [T]. Huawei ADS SE (no lidar) vs Pro/Max (with lidar); BYD God's Eye C (vision-only) vs A (three lidars) and B (one or two) [T; §E1] | Commercial proof that a stack can accept or omit lidar; one development program serves several price points | Whether it is literally *one set of weights* is not public; each configuration still needs its own validation |",
+   "new": "| **2. Configurable input** (lidar optional) | The same software family runs with or without lidar on different trims | **Momenta** lists configurations such as \"5V5R\" and \"12V5R + lidar (optional)\" [T]. Huawei ADS SE (no lidar) vs Pro/Max (with lidar); BYD God's Eye C (vision-only) vs A (three lidars) and B (one or two) [T; §E1] | Commercial proof that a stack can accept or omit lidar; one development programme serves several price points | Whether it is literally *one set of weights* is not public; each configuration still needs its own validation |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L8335",
+   "finding": "§E11.1 Huang et al. and BEV fusion: by analogy",
+   "old": "- *Fusion* means combining modalities inside one network. *Early fusion* merges raw or low-level data before most processing. *Late fusion*, in Huang et al.'s sense (below), runs a separate *encoder* (the sub-network that turns raw input into features) for each modality and merges their high-level features near the output; §E10.1 calls this merging of learned features *mid fusion*. *BEV fusion* converts each modality into features on a shared bird's-eye-view (BEV) grid, a top-down map of the ground around the car, and merges them there; it too merges learned features, so it is mid fusion in §E10.1's terms. Merging the finished object lists of two separate stacks, as an independent safety channel does (§E10.1, role 3), is a different scheme and is not what \"late fusion\" means here.",
+   "new": "- *Fusion* means combining modalities inside one network. *Early fusion* merges raw or low-level data before most processing. *Late fusion*, in Huang et al.'s sense (below), runs a separate *encoder* (the sub-network that turns raw input into features) for each modality and merges their high-level features near the output; §E10.1 calls this merging of learned features *mid fusion*. *BEV fusion* converts each modality into features on a shared bird's-eye-view (BEV) grid, a top-down map of the ground around the car, and merges them there; it too merges learned features, so it is mid fusion in §E10.1's terms. Huang et al.'s theorem is proved for their late-fusion networks, in which the merged features feed the output directly; it carries over to BEV fusion, which processes the merged features further, only by analogy, and §E11.1 checks the effect empirically for camera–lidar detectors. Merging the finished object lists of two separate stacks, as an independent safety channel does (§E10.1, role 3), is a different scheme and is not what \"late fusion\" means here.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L8527",
+   "finding": "§E11.3 128-line rate: AT128 single to dual return",
+   "old": "- A 2,160-line lidar at 25–40 Mpts/s produces **2.4–5.1 Gbit/s** at 12–16 bytes per decoded host point (xyz, intensity, time). A 2–3 Mpts/s 128-line unit produces about 0.2–0.4 Gbit/s. Compact polar sensor packets (≈4–6 bytes per return) give about 0.8–1.9 and 0.06–0.14 Gbit/s respectively [E]. Each figure follows from Eq. (161): for example $25\\times10^{6}\\ {\\rm s^{-1}}\\times12\\times8\\approx2.4$ Gbit/s, $40\\times10^{6}\\times16\\times8\\approx5.1$ Gbit/s, $2\\times10^{6}\\times12\\times8\\approx0.19$ Gbit/s, and $3\\times10^{6}\\times6\\times8\\approx0.14$ Gbit/s.",
+   "new": "- A 2,160-line lidar at 25–40 Mpts/s produces **2.4–5.1 Gbit/s** at 12–16 bytes per decoded host point (xyz, intensity, time). A 128-line unit such as the Hesai AT128, at 1.54 Mpts/s with single returns (§C3b) and twice that with dual returns, produces about 0.15–0.39 Gbit/s. Compact polar sensor packets (≈4–6 bytes per return) give about 0.8–1.9 and 0.05–0.15 Gbit/s respectively [E]. Each figure follows from Eq. (161): for example $25\\times10^{6}\\ {\\rm s^{-1}}\\times12\\times8\\approx2.4$ Gbit/s, $40\\times10^{6}\\times16\\times8\\approx5.1$ Gbit/s, $1.54\\times10^{6}\\times12\\times8\\approx0.15$ Gbit/s, $3.07\\times10^{6}\\times16\\times8\\approx0.39$ Gbit/s, and $3.07\\times10^{6}\\times6\\times8\\approx0.15$ Gbit/s.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L8773",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "This Part turns the evidence of Parts A–E into dated forecasts, mostly for 2026–2030. It covers thermal night vision (§F1), lidar in China (§F2) and in Western passenger cars (§F3), robotaxi and truck lidar outside China (§F4), the 2030 technology mix (§F5), FMCW lidar (§F6), camera-only versus multimodal driving (§F7), and the events that would move these forecasts most (§F8). The inputs come from earlier Parts: installation counts and vehicle programs from Part B, sensor physics from Part C, supply-chain and policy risks from Part D, and the camera-only evidence from Part E. Each step cites the section it draws on and restates what it needs, so the Part can be read on its own. Part G then re-examines the strongest verdicts behind these forecasts.",
+   "new": "This Part turns the evidence of Parts A–E into dated forecasts, mostly for 2026–2030. It covers thermal night vision (§F1), lidar in China (§F2) and in Western passenger cars (§F3), robotaxi and truck lidar outside China (§F4), the 2030 technology mix (§F5), FMCW lidar (§F6), camera-only versus multimodal driving (§F7), and the events that would move these forecasts most (§F8). The inputs come from earlier Parts: installation counts and vehicle programmes from Part B, sensor physics from Part C, supply-chain and policy risks from Part D, and the camera-only evidence from Part E. Each step cites the section it draws on and restates what it needs, so the Part can be read on its own. Part G then re-examines the strongest verdicts behind these forecasts.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L8794",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "- **The West** grows mainly through Magna's 5th generation on the existing premium users (BMW, Audi, Porsche, GM/Cadillac, VW), plus possibly a handful of AEB programs that fuse thermal with camera and radar and are aimed at night pedestrian tests.",
+   "new": "- **The West** grows mainly through Magna's 5th generation on the existing premium users (BMW, Audi, Porsche, GM/Cadillac, VW), plus possibly a handful of AEB programmes that fuse thermal with camera and radar and are aimed at night pedestrian tests.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L8862",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "This section forecasts lidar in passenger cars sold outside China. Western passenger-car lidar is weak in 2026. Announced programs point to a 2027–28 restart, tied to \"eyes-off\" L3 driving (SAE level 3: the car drives itself in a defined domain, such as a motorway, and the driver may look away but must take over on request). US and EU policy on Chinese lidar are the swing factors, because Chinese suppliers set the low price that any mass-market Western lidar would need.",
+   "new": "This section forecasts lidar in passenger cars sold outside China. Western passenger-car lidar is weak in 2026. Announced programmes point to a 2027–28 restart, tied to \"eyes-off\" L3 driving (SAE level 3: the car drives itself in a defined domain, such as a motorway, and the driver may look away but must take over on request). US and EU policy on Chinese lidar are the swing factors, because Chinese suppliers set the low price that any mass-market Western lidar would need.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L8866",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "**Basis:** the main Western programs have pulled back.",
+   "new": "**Basis:** the main Western programmes have pulled back.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L8876",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "**Call 2: announced programs target a 2027–28 restart tied to eyes-off L3 and \"L4-ready\" platforms.** \"L4-ready\" means hardware designed so that it could later support L4 driving (no driver needed within the domain). Read the table as a pipeline: it deliberately mixes program stages. A nomination (a carmaker's selection of a supplier for a future model), signed award or development vehicle is weaker evidence than a delivered car with its lidar-dependent function activated.",
+   "new": "**Call 2: announced programmes target a 2027–28 restart tied to eyes-off L3 and \"L4-ready\" platforms.** \"L4-ready\" means hardware designed so that it could later support L4 driving (no driver needed within the domain). Read the table as a pipeline: it deliberately mixes programme stages. A nomination (a carmaker's selection of a supplier for a future model), signed award or development vehicle is weaker evidence than a delivered car with its lidar-dependent function activated.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L8878",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "| Program | Lidar | Timing | What could go wrong |",
+   "new": "| Programme | Lidar | Timing | What could go wrong |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L8940",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "4. supplied into both European and Chinese programs.",
+   "new": "4. supplied into both European and Chinese programmes.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L8998",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "| FMCW | **0.1–0.5%** (about **10–90k units** of 11–18 M); larger by value | Aurora (thousands of trucks per year × 1–3 FirstLight units), Daimler/Torc from 2027 (thousands), Bendix L2+ trucks, Aeva's European L3 from 2028 (a premium option: tens of thousands at most), LuminWave's Chinese truck programs. These are program-based assumptions, not booked 2030 shipments. Reaching 1%+ needs FMCW on a mainstream passenger L3/L2++ platform |",
+   "new": "| FMCW | **0.1–0.5%** (about **10–90k units** of 11–18 M); larger by value | Aurora (thousands of trucks per year × 1–3 FirstLight units), Daimler/Torc from 2027 (thousands), Bendix L2+ trucks, Aeva's European L3 from 2028 (a premium option: tens of thousands at most), LuminWave's Chinese truck programmes. These are programme-based assumptions, not booked 2030 shipments. Reaching 1%+ needs FMCW on a mainstream passenger L3/L2++ platform |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9020",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "| OPA in automotive series production | **10–15%** | No series program exists; OPA companies have suffered heavy attrition (Quanergy; Analog Photonics without a production award). Not zero, because LuminWave claims a 2026 truck SOP for an on-chip-antenna FMCW design (unverified). Voyant Helium is a switched FPA and belongs with FPAs (§C10.4). Hard problems remain: the second axis (100+ nm tuning), phase calibration over temperature, ≤3 dB loss and receive aperture. Element count per axis (≈510–880 for 0.1°, §C10.2) is no longer the barrier |",
+   "new": "| OPA in automotive series production | **10–15%** | No series programme exists; OPA companies have suffered heavy attrition (Quanergy; Analog Photonics without a production award). Not zero, because LuminWave claims a 2026 truck SOP for an on-chip-antenna FMCW design (unverified). Voyant Helium is a switched FPA and belongs with FPAs (§C10.4). Hard problems remain: the second axis (100+ nm tuning), phase calibration over temperature, ≤3 dB loss and receive aperture. Element count per axis (≈510–880 for 0.1°, §C10.2) is no longer the barrier |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9069",
+   "finding": "power envelope: §F6 sizing range; T_c in §F6",
+   "old": "- **Low-power, high-rate coherent receiver ASICs** (application-specific integrated circuits). Each channel digitizes 100–400 MHz of beat signal, using the beat-frequency relation $f_b=2BR/(cT)$ of Eq. (85) (§C7; §C0 subsection 2), where $f_b$ is the beat frequency from range alone, $B$ the chirp bandwidth (Hz), $T$ the chirp duration (s), $R$ the range and $c$ the speed of light. For a 1 GHz sweep in 10 µs, it gives 200 MHz at 300 m. A radial velocity of ±50 m/s adds up to 65 MHz of Doppler shift ($2v_r/\\lambda$ with radial velocity $v_r$ and wavelength $\\lambda\\approx1.55$ µm). Each of a channel's four receivers must therefore sample at ≈1.2 GS/s (gigasamples per second) for 5 µs chirps at 300 m (§C7a subsection 2(c)), so ADC (analog-to-digital converter) and DSP (digital signal processing) energy per channel sets how many channels fit in a 10–15 W sensor power envelope. In the §C7a central 2026 model one channel's four receivers draw ≈0.18 W ($E_{\\rm rx}/T_{\\rm dwell}=2.34\\ \\mu{\\rm J}/12.67\\ \\mu{\\rm s}$). After the 3 W overhead a 10–15 W sensor therefore holds ≈38–65 channels even if its light were free ($(10-3)/0.184$ to $(15-3)/0.184$), i.e. 3.0–5.1 Mpts/s, and supports only 1.4–2.4 Mpts/s once the light is paid for ($7\\ {\\rm W}/4.90\\ \\mu{\\rm J}$ to $12\\ {\\rm W}/4.90\\ \\mu{\\rm J}$) [E].",
+   "new": "- **Low-power, high-rate coherent receiver ASICs** (application-specific integrated circuits). Each channel digitizes 100–400 MHz of beat signal, using the beat-frequency relation $f_b=2BR/(cT_c)$ of Eq. (85) (§C7; §C0 subsection 2), where $f_b$ is the beat frequency from range alone, $B$ the chirp bandwidth (Hz), $T_c$ the chirp duration (s), $R$ the range and $c$ the speed of light. For a 1 GHz sweep in 10 µs, it gives 200 MHz at 300 m. A radial velocity of ±50 m/s adds up to 65 MHz of Doppler shift ($2v_r/\\lambda$ with radial velocity $v_r$ and wavelength $\\lambda\\approx1.55$ µm). Each of a channel's four receivers must therefore sample at ≈1.2 GS/s (gigasamples per second) for 5 µs chirps at 300 m (§C7a subsection 2(c)), so ADC (analog-to-digital converter) and DSP (digital signal processing) energy per channel sets how many channels fit in a sensor drawing 10–15 W, whose upper end is the ≤15 W of the parity target (§C7b subsection 5). In the §C7a central 2026 model one channel's four receivers draw ≈0.18 W ($E_{\\rm rx}/T_{\\rm dwell}=2.34\\ \\mu{\\rm J}/12.67\\ \\mu{\\rm s}$). After the 3 W overhead a 10–15 W sensor therefore holds ≈38–65 channels even if its light were free ($(10-3)/0.184$ to $(15-3)/0.184$), i.e. 3.0–5.1 Mpts/s, and supports only 1.4–2.4 Mpts/s once the light is paid for ($7\\ {\\rm W}/4.90\\ \\mu{\\rm J}$ to $12\\ {\\rm W}/4.90\\ \\mu{\\rm J}$) [E].",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9073-9074",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "- **Aeva–Daimler 2027 launch:** the first truck-OEM series FMCW program (OEM: original equipment manufacturer, here the truck maker).\n- **Aeva's European OEM SOP (start of production) in 2028:** the first passenger-car FMCW program.",
+   "new": "- **Aeva–Daimler 2027 launch:** the first truck-OEM series FMCW programme (OEM: original equipment manufacturer, here the truck maker).\n- **Aeva's European OEM SOP (start of production) in 2028:** the first passenger-car FMCW programme.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9112-9113",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "**Call 4: more than 90% of driverless trucks use lidar plus radar through 2030. Confidence: high.** In words: nearly all driverless trucks will keep lidar and radar. Confidence is high because every current program already does, and the physics of stopping a heavy truck leaves little alternative.\n- Every driverless truck program uses lidar: Aurora, Kodiak, Torc/Daimler, Waabi, PlusAI, Gatik, Bot Auto.",
+   "new": "**Call 4: more than 90% of driverless trucks use lidar plus radar through 2030. Confidence: high.** In words: nearly all driverless trucks will keep lidar and radar. Confidence is high because every current programme already does, and the physics of stopping a heavy truck leaves little alternative.\n- Every driverless truck programme uses lidar: Aurora, Kodiak, Torc/Daimler, Waabi, PlusAI, Gatik, Bot Auto.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9160",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "  - **Innoviz won Mobileye Drive:** 9 lidars per VW ID. Buzz, with a claimed program life of about 150k units. It is the largest non-Chinese merchant AV win, and it is not Hesai.",
+   "new": "  - **Innoviz won Mobileye Drive:** 9 lidars per VW ID. Buzz, with a claimed programme life of about 150k units. It is the largest non-Chinese merchant AV win, and it is not Hesai.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9182",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "- **Real, growing survivors:** Ouster (\\$169 M in FY25, up about 50%, mostly industrial); Valeo (>€1 B in SCALA orders); Innoviz (guiding, i.e. forecasting, \\$67–73 M for 2026); Aeva (Daimler, a European OEM L3 program, and LG Innotek as an investor).",
+   "new": "- **Real, growing survivors:** Ouster (\\$169 M in FY25, up about 50%, mostly industrial); Valeo (>€1 B in SCALA orders); Innoviz (guiding, i.e. forecasting, \\$67–73 M for 2026); Aeva (Daimler, a European OEM L3 programme, and LG Innotek as an investor).",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9188-9189",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "- Western lidar was tied to eyes-off L3 programs (the car drives in a defined domain and the driver may look away) that were narrow, expensive, and then cancelled.\n- OEM programs have long lead times and low volumes.",
+   "new": "- Western lidar was tied to eyes-off L3 programmes (the car drives in a defined domain and the driver may look away) that were narrow, expensive, and then cancelled.\n- OEM programmes have long lead times and low volumes.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9197",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "This section asks why Luminar, the US maker of 1550 nm automotive lidar that reached series production with Volvo, still failed. The answer is mainly program economics and execution: its carmaker programs bought far fewer sensors than planned, and its optics were not the problem. \"Program economics\" means whether the car programs a supplier wins sell enough equipped cars to repay its development and production costs.",
+   "new": "This section asks why Luminar, the US maker of 1550 nm automotive lidar that reached series production with Volvo, still failed. The answer is mainly programme economics and execution: its carmaker programmes bought far fewer sensors than planned, and its optics were not the problem. \"Program economics\" means whether the car programmes a supplier wins sell enough equipped cars to repay its development and production costs.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9205",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "**Fair statement.** It failed mainly on program economics and execution. Its 1550 nm cost structure contributed, but raw sensor performance was not the problem.",
+   "new": "**Fair statement.** It failed mainly on programme economics and execution. Its 1550 nm cost structure contributed, but raw sensor performance was not the problem.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9214",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "| \"2026 is a trough\" for Western lidar (§0, §F3) | Mercedes and BMW L3 exits and Volvo's lidar exit; programs target 2027–28 | Unmeasured Chinese exports; Rivian ramp; no complete non-China installation series | Plausible, not observed; low confidence |",
+   "new": "| \"2026 is a trough\" for Western lidar (§0, §F3) | Mercedes and BMW L3 exits and Volvo's lidar exit; programmes target 2027–28 | Unmeasured Chinese exports; Rivian ramp; no complete non-China installation series | Plausible, not observed; low confidence |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9231",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "- statements about the **present** (market shares, program exits, failures) are well supported;",
+   "new": "- statements about the **present** (market shares, programme exits, failures) are well supported;",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9242",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "- **Which market.** The distinction is between vehicles *sold outside China*, including Chinese-brand exports, and Western brands' *China-built* vehicles. The latter may buy millions of lidars through joint-venture programs without showing that buyers in Europe or North America want the same hardware.",
+   "new": "- **Which market.** The distinction is between vehicles *sold outside China*, including Chinese-brand exports, and Western brands' *China-built* vehicles. The latter may buy millions of lidars through joint-venture programmes without showing that buyers in Europe or North America want the same hardware.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9259",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "| **Supervised L2/L2++ passenger cars** | **Selective, not broadly standard.** This is the weakest commercial case for an onboard lidar. | The driver remains the fallback, and cameras and radar already support widely sold hands-free assistance. Mercedes' 2026 MB.DRIVE ASSIST PRO uses cameras, radar and ultrasonics without listing lidar [P]. GM reports nearly 750,000 Super Cruise-equipped vehicles; Super Cruise uses lidar to make maps rather than installing it on each customer car [P]. This shows what OEMs can sell without onboard lidar, not that lidar could never improve a rare hazard. Nissan's planned lidar-equipped ProPILOT is a direct counterexperiment. Rivian plans lidar in future R2s and explicitly values its geometric training data; the incremental customer-facing function remains unspecified [P]. Strong take rates for activated lidar-dependent assistance on either program would change this row. |",
+   "new": "| **Supervised L2/L2++ passenger cars** | **Selective, not broadly standard.** This is the weakest commercial case for an onboard lidar. | The driver remains the fallback, and cameras and radar already support widely sold hands-free assistance. Mercedes' 2026 MB.DRIVE ASSIST PRO uses cameras, radar and ultrasonics without listing lidar [P]. GM reports nearly 750,000 Super Cruise-equipped vehicles; Super Cruise uses lidar to make maps rather than installing it on each customer car [P]. This shows what OEMs can sell without onboard lidar, not that lidar could never improve a rare hazard. Nissan's planned lidar-equipped ProPILOT is a direct counterexperiment. Rivian plans lidar in future R2s and explicitly values its geometric training data; the incremental customer-facing function remains unspecified [P]. Strong take rates for activated lidar-dependent assistance on either programme would change this row. |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9261",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "| **Eyes-off L3 passenger cars** | **A plausible route to a meaningful consumer foothold, conditional on program economics.** | Four separate bets on directly measured range and sensor diversity when the driver may look away: GM explicitly plans lidar/radar/camera fusion for the 2028 Escalade IQ [P]; Mercedes selected Hesai for future Europe/China L3 models [P]; Mobileye's Chauffeur product lists a front lidar [P]; and Aeva has a production award for an unnamed European OEM's L3 platform [P]. These announcements show neither that the programs will ship at scale nor that they beat an alternative sensing design. Mercedes' earlier L3 pause and Volvo's installed-but-unused EX90 lidar show how a sensor can win the design and lose the product. **Commercial test:** an activated, useful eyes-off feature at a price and operating scope buyers accept, with evidence that lidar adds enough value to justify its own cost. |",
+   "new": "| **Eyes-off L3 passenger cars** | **A plausible route to a meaningful consumer foothold, conditional on programme economics.** | Four separate bets on directly measured range and sensor diversity when the driver may look away: GM explicitly plans lidar/radar/camera fusion for the 2028 Escalade IQ [P]; Mercedes selected Hesai for future Europe/China L3 models [P]; Mobileye's Chauffeur product lists a front lidar [P]; and Aeva has a production award for an unnamed European OEM's L3 platform [P]. These announcements show neither that the programmes will ship at scale nor that they beat an alternative sensing design. Mercedes' earlier L3 pause and Volvo's installed-but-unused EX90 lidar show how a sensor can win the design and lose the product. **Commercial test:** an activated, useful eyes-off feature at a price and operating scope buyers accept, with evidence that lidar adds enough value to justify its own cost. |",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9271",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "**Architecture is a second bet.** If lidar succeeds in passenger cars outside China, I expect qualified, lower-cost pulsed dToF (direct time-of-flight) units to take most of those installations, whether their silicon receiver uses SiPM (silicon photomultiplier) or SPAD-array (single-photon avalanche diode) readout. FMCW's range and direct radial velocity look more compelling in trucks and some premium eyes-off programs than in ordinary L2. Better SPAD arrays, stitched dies or integrated FMCW transmitters could lower cost or improve coverage, but none creates a customer-valued driving feature by itself. The reticle discussion in §C6–C7 (the size limit of one chip-lithography exposure field) constrains particular chip layouts; it does not set the ceiling on lidar adoption.",
+   "new": "**Architecture is a second bet.** If lidar succeeds in passenger cars outside China, I expect qualified, lower-cost pulsed dToF (direct time-of-flight) units to take most of those installations, whether their silicon receiver uses SiPM (silicon photomultiplier) or SPAD-array (single-photon avalanche diode) readout. FMCW's range and direct radial velocity look more compelling in trucks and some premium eyes-off programmes than in ordinary L2. Better SPAD arrays, stitched dies or integrated FMCW transmitters could lower cost or improve coverage, but none creates a customer-valued driving feature by itself. The reticle discussion in §C6–C7 (the size limit of one chip-lithography exposure field) constrains particular chip layouts; it does not set the ceiling on lidar adoption.",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9281",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "- actual deliveries and activation of GM's, Mercedes', Rivian's, Nissan's and Aeva's nominated programs;",
+   "new": "- actual deliveries and activation of GM's, Mercedes', Rivian's, Nissan's and Aeva's nominated programmes;",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L9590",
+   "finding": "programme (not in URLs, quotations or official names)",
+   "old": "**Lidar market and Western programs**",
+   "new": "**Lidar market and Western programmes**",
+   "why": "Author's decision of 2026-10-05 (see round5_build_decisions.py)."
+  },
+  {
+   "id": "R5b-L4534",
+   "finding": "Moore Photonics is LightIC (摩尔芯光), listed above it in §C7",
+   "old": "  - **Moore Photonics** has published claims but no product data.\n",
+   "new": "",
+   "why": "§D7 and LightIC's own site (www.lightic.tech, title 摩尔芯光) give one company; the LightIC bullet of the same list describes its Lark lidar."
+  }
+ ],
+ "skipped": []
+}

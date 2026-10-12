@@ -1,0 +1,48 @@
+{
+ "block": "R3a_E2a_E12",
+ "edits": [
+  {
+   "id": "R3a-01",
+   "finding": "structural, 01 report #30: radar market sideline as its own subsection",
+   "old": "**Sideline: the automotive mmWave radar market, deployments and prices.**\n\nThis sideline leaves the physics for the market:",
+   "new": "## E2a. Sideline: the automotive mmWave radar market, deployments and prices\n\nThis subsection leaves the physics of §E2 for the market:",
+   "why": "The sideline already closes §E2; promoting it to §E2a lets readers who navigate by headings find it."
+  },
+  {
+   "id": "R3a-02",
+   "finding": "structural, 01 report #30: signpost to §E2a",
+   "old": "A sideline at the end of the section gives automotive radar volumes, suppliers, deployments and prices, for comparison with the lidar market of Part B.",
+   "new": "A sideline after this section, §E2a, gives automotive radar volumes, suppliers, deployments and prices, for comparison with the lidar market of Part B.",
+   "why": "Points to the new subsection."
+  },
+  {
+   "id": "R3a-03",
+   "finding": "structural, 01 report #30: pointer to §E2a",
+   "old": "(the market sideline below discusses the term)",
+   "new": "(§E2a discusses the term)",
+   "why": "Points to the new subsection."
+  },
+  {
+   "id": "R3a-04",
+   "finding": "structural, 11 report #25 (part): companion-script sentence moves from the §E12 lead to the figure caption",
+   "old": "The companion script is `build/figures/truck_long_range_sensing.py`, which writes the figure below and `truck_long_range_sensing_tables.txt`.\n\n### E12.1",
+   "new": "### E12.1",
+   "why": "The script belongs with the figure it draws (§E12.3)."
+  },
+  {
+   "id": "R3a-05",
+   "finding": "structural, 11 report #25 (part)",
+   "old": "**Scenario and assumptions** (all from the companion script unless stated; each is an assumption, not a measurement):",
+   "new": "**Scenario and assumptions** (all from the companion script `truck_long_range_sensing.py` unless stated; each is an assumption, not a measurement):",
+   "why": "Names the script where its inputs are listed."
+  },
+  {
+   "id": "R3a-06",
+   "finding": "structural, 11 report #25 (part)",
+   "old": "- *(c)* Cross-range cell (beam or pixel angle × $R$, Eq. (180)) against lane and car widths.\n- All values [E].",
+   "new": "- *(c)* Cross-range cell (beam or pixel angle × $R$, Eq. (180)) against lane and car widths.\n- *Script:* `build/figures/truck_long_range_sensing.py`, which also writes `truck_long_range_sensing_tables.txt`.\n- All values [E].",
+   "why": "Caption bullet for the companion script, as proposed by the review."
+  }
+ ],
+ "skipped": []
+}

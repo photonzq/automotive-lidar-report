@@ -1,0 +1,630 @@
+{
+ "block": "04_C4_C4b_C4c",
+ "edits": [
+  {
+   "id": "04_C4_C4b_C4c-001",
+   "finding": "report #25 (pointer)",
+   "old": "favour 905/940 nm with silicon (numbers in §C4c).",
+   "new": "favour 905/940 nm with silicon (numbers in §C4c, and for scanning in §C4d).",
+   "why": "Scanning numbers are in §C4d, not §C4c."
+  },
+  {
+   "id": "04_C4_C4b_C4c-002",
+   "finding": "report polish (3258 vs 3423: physical reason for C4)",
+   "old": "which rises with wavelength because less of the light reaches and harms the retina:",
+   "new": "which rises with wavelength because the retina's pigment absorbs less of the light that reaches it (§C4c subsection 1):",
+   "why": "Give the same physical reason for C4 as §C4c."
+  },
+  {
+   "id": "04_C4_C4b_C4c-003",
+   "finding": "report #1 (remaining part: rounding), #9, #14 (3265), #25, #26, #27",
+   "old": "- **905 vs 940 nm.** Table 9 of the standard gives $C_4$ as in Eq. (63) over 700–1,050 nm, so $C_4(905)=10^{0.002\\times205}=10^{0.41}=2.5704$ and $C_4(940)=10^{0.002\\times240}=10^{0.48}=3.0200$. Their ratio is $10^{0.002\\times(940-905)}=10^{0.07}=1.1749$: a **17.49% increase** for any term containing $C_4$ [E]. Every Class 1 limit this report uses between 700 and 1,050 nm (single pulse, pulse train via $C_5$, and long-exposure average power; table in §C4c) contains $C_4$, so a 940 nm design may emit 17.5% more than an otherwise identical 905 nm design whichever rule binds. This is a gain in permitted emission, not in range or signal-to-noise ratio [E].\n- **905 vs 1,550 nm, long exposure.** A small source is one whose apparent angular size seen from the eye is $\\alpha\\le1.5$ mrad (§C4c); it is the most restrictive case. For a small source, Table 3 gives $3.9\\times10^{-4}C_4C_7$ W at 905 nm, where $C_7$ is a further correction factor that equals 1 at this wavelength ($C_7=1$). That is about **1.00 mW** ($3.9\\times10^{-4}\\times2.5704=1.002\\times10^{-3}$ W), against about **10 mW** at 1,550 nm (corresponding long-exposure entry) [P/E]. Adjusted for photon energy, the tabular ratio is $(10/1.002)(1550/905)=9.98\\times1.713\\approx17.1$: a joule carries $1/E_{\\rm ph}=\\lambda/hc$ photons, where $E_{\\rm ph}$ is the photon energy, $h$ Planck's constant and $c$ the speed of light, so a joule at 1,550 nm holds $1550/905$ times as many photons as at 905 nm. That explains the scale of Luminar's \"17×\" claim, **but the prescribed measurement apertures differ**: 7 mm for the retinal band (wavelengths the eye focuses onto the retina; 7 mm is roughly a dilated pupil), 3.5 mm for long 1,550 nm exposures. The ratio is not a matched transmitter-output or real-scene photon-flux comparison, nor a verified sensor-level range or compliance advantage.\n- **Pulses: the edition matters.** The $2\\times10^{-7}C_4$ J near-IR single-pulse expression is from the **2007** edition, so pulse limits of 0.514/0.604 µJ (905/940 nm) derived from it ($2\\times10^{-7}\\times2.5704=0.514$ µJ and $2\\times10^{-7}\\times3.0200=0.604$ µJ) should not be presented as IEC 60825-1:2014 results. The 2014 edition changed the pulsed Class 1 accessible emission limits (AELs): **198/233 nJ** per isolated pulse for a small source, falling to **79/93 nJ** for long pulse trains (§C4c), because the per-pulse limit is reduced when many pulses can enter the eye within the standard's reference time. In each pair the 940 nm value is the 905 nm one times $C_4(940)/C_4(905)=1.1749$: $198\\times1.1749\\approx233$ and $79\\times1.1749\\approx93$. A 1,550 nm entry such as 8 mJ has its own pulse-duration conditions, so dividing it by the 2007 near-IR entry is not a valid general comparison.",
+   "new": "- **905 vs 940 nm.** Table 9 of the standard gives $C_4$ as in Eq. (63) over 700–1,050 nm, so $C_4(905)=10^{0.002\\times205}=10^{0.41}=2.570$ and $C_4(940)=10^{0.002\\times240}=10^{0.48}=3.020$. Their ratio is $10^{0.002\\times(940-905)}=10^{0.07}=1.175$, a **17.5% increase** in any term containing $C_4$ [E]. Every Class 1 limit this report uses between 700 and 1,050 nm (single pulse, pulse train via $C_5$, and long-exposure average power; table in §C4c) contains $C_4$, so a 940 nm design may emit 17.5% more than an otherwise identical 905 nm design whichever rule binds. This is a gain in permitted emission, not in range or signal-to-noise ratio [E].\n- **905 vs 1,550 nm, long exposure.** The most restrictive case is a small source, one whose apparent angular size seen from the eye is $\\alpha\\le1.5$ mrad (§C4c subsection 1).\n  - For a small source, Table 3 of the standard gives a long-exposure limit of $3.9\\times10^{-4}C_4C_7$ W at 905 nm, where $C_7$ is a further correction factor that equals 1 at this wavelength. That is $3.9\\times10^{-4}\\times2.570=1.002\\times10^{-3}$ W, about **1.00 mW**, against **9.6 mW** at 1,550 nm (1 kW m⁻² over a 3.5 mm aperture; the standard's table entry is commonly quoted as 10 mW) [P/E].\n  - Per joule, 1,550 nm carries $1{,}550/905=1.713$ times as many photons as 905 nm, because a photon's energy is inversely proportional to its wavelength (§C4c subsection 1). Adjusted for photon energy, the ratio is therefore ≈16–17: $(9.6/1.00)\\times1.713=16.4$, or $(10/1.002)\\times1.713=17.1$ from the rounded 10 mW entry. That is the scale of Luminar's \"17×\" claim.\n  - **But the prescribed measurement apertures differ**: 7 mm for the retinal band (wavelengths the eye focuses onto the retina; 7 mm is roughly a dilated pupil), 3.5 mm for long 1,550 nm exposures. The ratio is therefore not a like-for-like comparison of transmitter output, real-scene photon flux, sensor-level range or compliance.\n- **Pulses: the edition matters.** The 2007 edition's single-pulse limit, $2\\times10^{-7}C_4$ J ($2\\times10^{-7}\\times2.570=0.514$ µJ at 905 nm and $2\\times10^{-7}\\times3.020=0.604$ µJ at 940 nm), was lowered in the 2014 edition to **198/233 nJ** per isolated small-source pulse, falling to **79/93 nJ** for long pulse trains. The per-pulse limit falls for trains because many pulses can enter the eye within the counting time $T_2=10$ s (§C4c subsection 1). The 1,550 nm single-pulse limit (7.85 mJ, ≈8 mJ in the standard's table) applies to pulses up to 0.35 s, so §C4c compares it with the 2014 near-IR values, not with the 2007 ones.",
+   "why": "Use 2.570/3.020/1.175/17.5% as in §C4c; split the long bullet; photon ratio 16–17 with both 9.6 and 10 mW; edition bullet without the correction-note wording; drop duplicated 1.1749 arithmetic."
+  },
+  {
+   "id": "04_C4_C4b_C4c-004",
+   "finding": "report #8 (silicon absorption)",
+   "old": "- **Silicon absorption:** the absorption coefficient is $\\alpha\\approx2.9\\times10^2$ cm⁻¹ at 905 nm ($1/\\alpha\\approx35$ µm) and $1.83\\times10^2$ cm⁻¹ at 940 nm ($1/\\alpha\\approx55$ µm) [I, Green 2008; the 905 nm value interpolated between the 900 and 910 nm entries]. Here $1/\\alpha$ is the absorption length, the depth over which the light falls to $1/e$, so a thin silicon detector lets most 9xx-nm photons pass unabsorbed: a 10 µm absorbing layer captures $1-e^{-\\alpha d}=25\\%$ of them at 905 nm and 17% at 940 nm in one pass, where $d$ is the layer thickness [E].",
+   "new": "- **Silicon absorption:** silicon's absorption coefficient is $\\alpha_{\\rm Si}\\approx2.9\\times10^2$ cm⁻¹ at 905 nm ($1/\\alpha_{\\rm Si}\\approx35$ µm) and $1.83\\times10^2$ cm⁻¹ at 940 nm ($1/\\alpha_{\\rm Si}\\approx55$ µm) [I, Green 2008; the 905 nm value interpolated between the 900 and 910 nm entries]. Here $1/\\alpha_{\\rm Si}$ is the absorption length, the depth over which the light falls to $1/e$, so a thin silicon detector lets most 9xx-nm photons pass unabsorbed: a 10 µm absorbing layer captures $1-e^{-\\alpha_{\\rm Si}d}=1-e^{-0.29}=25\\%$ of them at 905 nm and $1-e^{-0.183}=17\\%$ at 940 nm in one pass, where $d=10^{-3}$ cm is the layer thickness [E].",
+   "why": "alpha_Si distinguishes silicon absorption from the apparent source angle alpha; substitution shown for 25% and 17%."
+  },
+  {
+   "id": "04_C4_C4b_C4c-005",
+   "finding": "follow-up #2 (partial: definition and tag)",
+   "old": "Front-side SPADs reached only 2–5% PDE.",
+   "new": "Front-side-illuminated SPADs, in which light enters through the wiring layers on the circuit side of the chip, reached only 2–5% PDE at 9xx nm [U].",
+   "why": "Define front-side illumination and tag the unsourced figure [U]; the source itself is listed as needs_source."
+  },
+  {
+   "id": "04_C4_C4b_C4c-006",
+   "finding": "report #24 (ionization ratio k; symbol scheme)",
+   "old": "The InP multiplier's ionization-coefficient ratio (the ratio of hole to electron impact-ionization rates) is $k\\approx0.4$–0.5 (vs about 0.02 for Si).",
+   "new": "The InP multiplier's ionization-coefficient ratio $k$, the impact-ionization coefficient of the weaker-ionizing carrier divided by that of the stronger one (electron/hole in InP, where holes ionize more readily; hole/electron in Si), is $k\\approx0.4$–0.5, against about 0.02 for Si.",
+   "why": "In InP hole/electron is about 2-2.5; the 0.4-0.5 figure is electron/hole. Definition per the symbol scheme."
+  },
+  {
+   "id": "04_C4_C4b_C4c-007",
+   "finding": "report #39 (in §C4 item 2)",
+   "old": "In sunlight they would run ≈700× over their count-rate ceiling, the highest rate they can sustain with the long hold-off (a deliberately extended dead time) that afterpulsing forces (§C4c) [I/E].",
+   "new": "In sunlight they would exceed their count-rate ceiling, the highest rate they can sustain with the hold-off (a deliberately extended dead time) that afterpulsing forces, by ≈700× with a 1 µs hold-off and by ≈7,000× with the 10 µs that keeps afterpulsing below 3% (§C4c subsection 3) [I/E].",
+   "why": "700x holds for a 1 us hold-off that still leaves ~8% afterpulsing; <3% needs 10 us (Telesca table)."
+  },
+  {
+   "id": "04_C4_C4b_C4c-008",
+   "finding": "report polish (3278 untagged Falcon power, nested parentheses); follow-up #1 (partial); follow-up #5 (pointers)",
+   "old": "- A 1,550 nm fibre MOPA (master-oscillator power amplifier: a seed laser amplified in an erbium-doped fibre amplifier (EDFA) that is pumped at 940 nm, with the output split into four beams) is expensive and hot. Falcon K drew 30 W and K2 20 W, against about 6–10 W for 9xx-nm units (Robin E1X, Hesai ATX).",
+   "new": "- A 1,550 nm fibre MOPA is expensive and hot. A MOPA (master-oscillator power amplifier) amplifies a seed laser in an erbium-doped fibre amplifier (EDFA), which is pumped at 940 nm; here its output is split into four beams. Seyond's Falcon K drew 30 W [U], and its Falcon K2 is specified at 20 W [P, datasheet; §C3, §E9], against about 6–10 W for 9xx-nm units: the Seyond Robin E1X at 6 W [P] and the Hesai ATX at 8 W in its spec table or 10 W typical in its manual [P] (§C3b, §E9).",
+   "why": "Unnest the MOPA definition; tag and point each power figure to where the report sources it; the 30 W has no source ([U], see skipped)."
+  },
+  {
+   "id": "04_C4_C4b_C4c-009",
+   "finding": "report #25 (item 4: ASTM numbers derived again)",
+   "old": "- The reference is the ASTM G173-03 standard solar spectrum (global irradiance on a tilted surface). Its spectral irradiance $E_\\lambda$, the solar power per unit area per nm of wavelength, is, at the exact wavelength / averaged over ±10 nm: **0.82 / 0.69 W m⁻² nm⁻¹ at 905 nm**, **0.47 / 0.30 at 940 nm** (water-vapour band) and **0.27 / 0.27 at 1,550 nm** [P]. In photons, 940 nm has the lowest band-averaged background of the three. The photon flux per nm is $E_\\lambda/E_{\\rm ph}=E_\\lambda\\lambda/hc$, with $E_{\\rm ph}=hc/\\lambda$ the photon energy ($h$ Planck's constant, $c$ the speed of light), so the ±10 nm averages give $E_\\lambda\\lambda=0.69\\times905\\approx624$, $0.30\\times940=282$ and $0.27\\times1550\\approx419$ (in units proportional to photon flux): 940 nm is $624/282\\approx2.2$ times below 905 nm and $419/282\\approx1.5$ times below 1,550 nm. At the exact wavelengths ($0.47\\times940\\approx442$ against $0.27\\times1550\\approx419$) 1,550 nm is marginally lower, so the ranking rests on the band average. The advantage shrinks in dry air (§C4c).",
+   "new": "- The reference is the ASTM G173-03 standard solar spectrum (global irradiance on a tilted surface). Its spectral irradiance $E_\\lambda$, the solar power per unit area per nm of wavelength, is, at the exact wavelength / averaged over ±10 nm: **0.82 / 0.69 W m⁻² nm⁻¹ at 905 nm**, **0.47 / 0.30 at 940 nm** (water-vapour band) and **0.27 / 0.27 at 1,550 nm** [P]. Converted to photons, which is what a detector counts, the band-averaged background at 940 nm is 0.46× that at 905 nm and 0.68× that at 1,550 nm (§C4c subsection 2). At the exact wavelengths 1,550 nm is marginally lower than 940 nm: $E_\\lambda\\lambda$, which is proportional to the photon flux, is $0.27\\times1{,}550\\approx419$ against $0.47\\times940\\approx442$, so the ranking rests on the band average. The advantage shrinks in dry air (§C4c subsection 2).",
+   "why": "Quote the §C4c photon ratios instead of a second, rounder derivation; keep the exact-wavelength caveat."
+  },
+  {
+   "id": "04_C4_C4b_C4c-010",
+   "finding": "report #36",
+   "old": "allows 10–20 nm receive filters instead of about 40 nm, roughly halving background.",
+   "new": "allows 10–20 nm receive filters instead of about 40 nm, cutting background 2–4×.",
+   "why": "The same bullet says 20 nm halves and 10 nm quarters the background."
+  },
+  {
+   "id": "04_C4_C4b_C4c-011",
+   "finding": "report #1 (remaining part: 3285 sentence)",
+   "old": "The 17.5% allowance (item 1) comes from one simplified single-pulse calculation; it is not a universal 940 nm system advantage.",
+   "new": "The 17.5% higher emission limit (item 1) is the only intrinsic eye-safety gain of 940 nm; what it is worth at system level depends on those other factors.",
+   "why": "Item 1 shows the 17.5% applies whichever Class 1 rule binds; this sentence contradicted it."
+  },
+  {
+   "id": "04_C4_C4b_C4c-012",
+   "finding": "report #25 (item 5: water derived again); report #8 (alpha for water)",
+   "old": "**5. Liquid water penalises 1,550 nm.** The absorption coefficient of liquid water is about 10 cm⁻¹ at 1,550 nm vs about 0.07 cm⁻¹ at 905 nm, so a 1 mm water film absorbs about two-thirds of 1,550 nm light in one pass. By the Beer–Lambert law the absorbed fraction is $1-e^{-\\alpha d}$, where $\\alpha$ is the absorption coefficient (cm⁻¹) and $d$ the film thickness (cm). With $d=0.1$ cm this gives $1-e^{-1.0}\\approx63\\%$ for $\\alpha=10$ cm⁻¹ and $1-e^{-1.08}\\approx66\\%$ for 10.8 cm⁻¹ (the tabulated value used in §C4c), against $1-e^{-0.007}\\approx0.7\\%$ at 905 nm. That hurts wet windows and undercuts \"better in rain\" claims (§C4c).",
+   "new": "**5. Liquid water penalises 1,550 nm.** The absorption coefficient of liquid water is 10.8–11.9 cm⁻¹ at 1,550 nm against about 0.07 cm⁻¹ at 905 nm. By the Beer–Lambert law, a 1 mm water film therefore absorbs about two-thirds of 1,550 nm light in one pass (it transmits 30–34%) but only 0.7% at 905 nm (§C4c subsection 5). That hurts wet windows and undercuts \"better in rain\" claims (§C4c subsection 5).",
+   "why": "Result and pointer instead of a second Beer-Lambert derivation; removes the third meaning of alpha in §C4."
+  },
+  {
+   "id": "04_C4_C4b_C4c-013",
+   "finding": "report #17, #18",
+   "old": "Étendue is the receiver's aperture area times the solid angle it accepts; optics cannot increase it, so a receiver that stares at the whole field at once must give up aperture. The mirror then needs only about 10 sweeps a second, against 1,000–3,000 for a single-beam 2-D MEMS mirror. The sweep rate is lines × frame rate ÷ parallel channels (§C4d), i.e. the number of mirror passes per second needed when each pass draws as many lines as there are channels working in parallel: 128 lines read by 128 parallel channels at 10 Hz need $128\\times10/128=10$ sweeps a second, while one beam drawing an assumed 100–300 lines at 10 Hz needs $(100\\ {\\rm to}\\ 300)\\times10=1{,}000$–$3{,}000$.",
+   "new": "Étendue is the receiver's aperture area times the solid angle it accepts. Passive optics cannot increase it, and a detector of given area behind a lens of given f-number has a fixed étendue, so a receiver that stares at the whole field at once (a large solid angle) must accept a small aperture (§C0 subsection 3, §C6). The mirror then needs only about 10 sweeps a second, against 1,000–3,000 for a single-beam 2-D MEMS mirror. The required sweep rate is $S=N_{\\rm lines}f_{\\rm frame}/N_{\\rm par}$ (Eq. (69), §C4d), where $N_{\\rm lines}$ is the number of lines per frame, $f_{\\rm frame}$ the frame rate (Hz) and $N_{\\rm par}$ the number of lines drawn in parallel, one per channel. With 128 lines, 128 parallel channels and 10 Hz, $S=128\\times10/128=10$ sweeps/s; one beam drawing an assumed 100–300 lines at 10 Hz needs $S=(100\\ {\\rm to}\\ 300)\\times10/1=1{,}000$–$3{,}000$ sweeps/s.",
+   "why": "Write the sweep rate with the symbols of Eq. (69) and shorten the 70-word sentence; add the fixed-étendue step."
+  },
+  {
+   "id": "04_C4_C4b_C4c-014",
+   "finding": "report polish (3292-3293 Yole tag)",
+   "old": "- Yole: 1,550 nm cost is hard to reconcile with OEM (carmaker) targets [S].",
+   "new": "- Yole: 1,550 nm cost is hard to reconcile with OEM (carmaker) targets [MR/S].",
+   "why": "Market-research view taken from a secondary extract, per the legend."
+  },
+  {
+   "id": "04_C4_C4b_C4c-015",
+   "finding": "report #7; follow-up consistency flag (Luminar/MicroVision)",
+   "old": "**Where 1,550 nm ToF survives.** Pulsed time-of-flight (ToF) lidar at 1,550 nm survives where long range is worth its price: at NIO (Seyond Falcon K3, 450 m at 10%), in trucks and off-road vehicles, in defence and very long range (AEye; MicroVision ex-Luminar), and as the natural band for FMCW (frequency-modulated continuous-wave, coherent) lidar.",
+   "new": "**Where 1,550 nm survives.** Pulsed time-of-flight (ToF) lidar at 1,550 nm survives where long range is worth its price: at NIO (Seyond Falcon K3, 450 m at 10%, §C3), in trucks and off-road vehicles, and in defence and very long range (AEye; MicroVision, which bought Luminar's lidar business, §C3a). Separately, 1,550 nm is the natural band for FMCW (frequency-modulated continuous-wave, coherent) lidar (§C4c subsection 6).",
+   "why": "FMCW is not ToF; replace the telegraphic 'ex-Luminar'; point the K3 range to §C3."
+  },
+  {
+   "id": "04_C4_C4b_C4c-016",
+   "finding": "report polish (3302 dead time used before defined; V_bd and V_ex unused)",
+   "old": "A **SPAD** (single-photon avalanche diode) is a Geiger-mode avalanche photodiode biased above breakdown ($V_{\\rm bd}$, the breakdown voltage) by an excess bias $V_{\\rm ex}$ (volts above $V_{\\rm bd}$). \"Geiger mode\" means that each detected photon triggers a binary avalanche, a full-size pulse whatever the number of photons that caused it, which must be quenched (stopped) and the cell recharged. During that dead time $\\tau_d$ (a few to tens of ns) the cell is blind.",
+   "new": "A **SPAD** (single-photon avalanche diode) is a Geiger-mode avalanche photodiode biased above its breakdown voltage by an excess bias. \"Geiger mode\" means that each detected photon triggers a binary avalanche, a full-size pulse whatever the number of photons that caused it, which must be quenched (stopped) and the cell recharged. The interval from an avalanche until the cell can fire again is its dead time $\\tau_d$ (a few to tens of ns), during which the cell is blind.",
+   "why": "Define dead time before using it; V_bd and V_ex are not used in this section (§C6(f) defines its own)."
+  },
+  {
+   "id": "04_C4_C4b_C4c-017",
+   "finding": "report polish (3308 table without lead-in)",
+   "old": "### Architecture\n\n| | **SiPM**",
+   "new": "### Architecture\n\nThe table compares the two receivers by structure, output, signal chain, what one lidar channel is, and example products.\n\n| | **SiPM**",
+   "why": "Table lead-in sentence."
+  },
+  {
+   "id": "04_C4_C4b_C4c-018",
+   "finding": "report #15 (part 1)",
+   "old": "**Saturation.** Assume the photons of one pulse land at random",
+   "new": "**Saturation.** Let a channel have $N_c$ SPAD cells, and let $\\bar n$ be the mean number of photons it would detect in one pulse if no cell had already fired (photons after PDE). Assume the photons of one pulse land at random",
+   "why": "Define N_c and n-bar before their first use."
+  },
+  {
+   "id": "04_C4_C4b_C4c-019",
+   "finding": "report #15 (part 2)",
+   "old": "where $N_c$ is the number of SPAD cells per channel, $\\bar n$ the mean number of photons the channel would detect in the pulse if no cell were already fired (photons after PDE), and $N_{\\rm fired}$ the resulting number of cells that fire.",
+   "new": "where $N_{\\rm fired}$ is the resulting number of cells that fire.",
+   "why": "N_c and n-bar are now defined at first use; avoid repeating them."
+  },
+  {
+   "id": "04_C4_C4b_C4c-020",
+   "finding": "report #16",
+   "old": "So **dead-time blocking is negligible**.",
+   "new": "So **dead-time blocking is small** [E: in the brightest §C6(d) case, $2.2\\times10^{9}$ s⁻¹ spread over $N_c=1{,}000$ cells is $2.2\\times10^{6}$ s⁻¹ per cell; with an assumed microcell recovery time of 30 ns, a cell is dead $1-e^{-2.2\\times10^{6}\\times3\\times10^{-8}}=1-e^{-0.066}\\approx6\\%$ of the time by Eq. (65) below, against 77% for each SPAD of a 3×3 macro-pixel].",
+   "why": "Support 'negligible' with a number, allowing for slower microcell recovery than 6 ns."
+  },
+  {
+   "id": "04_C4_C4b_C4c-021",
+   "finding": "report #5 (part 1)",
+   "old": "Counting at rate $r$, it is dead a fraction",
+   "new": "Exposed to a rate $r$ of photons that would trigger avalanches, it is dead a fraction",
+   "why": "For a paralyzable SPAD, Eq. (65) needs the would-be trigger rate, not the recorded count rate."
+  },
+  {
+   "id": "04_C4_C4b_C4c-022",
+   "finding": "report #5 (part 2); consistency flag (Eq. (65) duplicates Eq. (82))",
+   "old": "of the time, where $r$ is the per-SPAD count rate (s⁻¹) and $\\tau_d$ the dead time (s).",
+   "new": "of the time, where $r$ (s⁻¹) is that rate for one SPAD (photon arrival rate × PDE; the recorded count rate is lower, $re^{-r\\tau_d}$, Eq. (76) in §C5a) and $\\tau_d$ the dead time (s). Eq. (65) is the paralyzable form of Eq. (82) (§C6(d)).",
+   "why": "Separate trigger rate from recorded rate; cross-reference the duplicate equation."
+  },
+  {
+   "id": "04_C4_C4b_C4c-023",
+   "finding": "report polish (3348: 10 µm pixels vs macro-pixel resolution)",
+   "old": "- SPAD-SoCs have 10 µm pixels, so the **receiver pixels themselves set the angular resolution** (for example 0.05° vertical in IMX479).",
+   "new": "- SPAD-SoCs have SPADs about 10 µm across, read out singly or as small macro-pixels, so the **receiver pixels themselves set the angular resolution** (for example 0.05° vertical in IMX479, set by its 3×3 macro-pixel).",
+   "why": "The 0.05° comes from the 3×3 macro-pixel, not a single 10 µm SPAD."
+  },
+  {
+   "id": "04_C4_C4b_C4c-024",
+   "finding": "report #11",
+   "old": "Scales on chip, from 520 to 2,160 channels per die, because timing and histogramming sit under the pixels and data are compressed on chip. Limits are the reticle and memory (§C6)",
+   "new": "Scales on chip: published effective line counts reach 520 and 2,160 per receiver chip, although these may involve binning or interleaving rather than independent channels (§C6). Timing and histogramming sit under the pixels and data are compressed on chip; the limits are the reticle and memory (§C6)",
+   "why": "§C6 and §0 call 520 and 2,160 effective line counts, not a single-die channel-count sequence."
+  },
+  {
+   "id": "04_C4_C4b_C4c-025",
+   "finding": "report polish (3359 RoboSense 45% untagged)",
+   "old": "RoboSense claims 45% for its 3rd-gen SPAD (measurement basis not matched here).",
+   "new": "RoboSense claims 45% for its 3rd-gen SPAD [P] (measurement basis not matched here).",
+   "why": "A company claim is [P] by the legend."
+  },
+  {
+   "id": "04_C4_C4b_C4c-026",
+   "finding": "report polish (3363 NE Times untagged); follow-up #5 (pointer)",
+   "old": "| Cheapest below about 200 lines (NE Times) |",
+   "new": "| Cheapest below about 200 lines [T, NE Times; §C2] |",
+   "why": "Tag the trade-press source and point to §C2, where the claim is discussed."
+  },
+  {
+   "id": "04_C4_C4b_C4c-027",
+   "finding": "report #32",
+   "old": "  - **The best-selling long-range lidar in the world, Hesai's ATX (more than 1 M delivered, under \\$200), uses SiPM.**",
+   "new": "  - **Hesai's ATX, by its delivery count the best-selling long-range lidar [U], uses SiPM** (more than 1 M delivered, §C3; ≈\\$200 [T], §C3c).",
+   "why": "Tag the rank, point the delivery count to §C3 and use the report's ≈$200 [T] from §C3c."
+  },
+  {
+   "id": "04_C4_C4b_C4c-028",
+   "finding": "report polish (3376: Huawei 192-line under 500-2,000+ lines)",
+   "old": "  - \"image-grade\" main lidars with 500–2,000+ lines (RoboSense EM4 and Phoenix, Hesai ETX/Picasso, Huawei 192/896-line);",
+   "new": "  - \"image-grade\" main lidars with 500–2,000+ lines (RoboSense EM4 and Phoenix, Hesai ETX/Picasso, Huawei 896-line), and some main lidars with fewer lines, such as Huawei's 192-line unit with its 189×600 SPAD array (§C3);",
+   "why": "A 192-line unit does not belong in the 500-2,000+ line group."
+  },
+  {
+   "id": "04_C4_C4b_C4c-029",
+   "finding": "report polish (3386: four constraints but five subsections)",
+   "old": "and answers it with numbers from four constraints: how much light the eye-safety standard lets the sensor emit, how much sunlight competes with the returning signal, what the detector material costs, and how much water on the window or the target absorbs.",
+   "new": "and answers it with numbers from five constraints: how much light the eye-safety standard lets the sensor emit, how much sunlight competes with the returning signal, what InGaAs detectors cost, whether silicon-foundry germanium photodiodes can serve coherent receivers, and how much water on the window or the target absorbs (subsections 1–5; subsection 6 gives the verdict).",
+   "why": "Match the five subsections."
+  },
+  {
+   "id": "04_C4_C4b_C4c-030",
+   "finding": "report #3 (remaining part: 3388 definition); consistency flag (emitter type)",
+   "old": "\"905 nm\" here means the 905–910 nm band of multi-junction edge-emitting lasers (EELs, which emit from the cleaved edge of the chip). 940 nm is the band of vertical-cavity surface-emitting lasers (VCSELs, which emit from the chip surface and can be made as dense 1-D or 2-D arrays).",
+   "new": "\"905 nm\" here means the 905–910 nm band, served by multi-junction edge-emitting lasers (EELs, which emit from the cleaved edge of the chip) and also by arrays of vertical-cavity surface-emitting lasers (VCSELs, which emit from the chip surface and can be made as dense 1-D or 2-D arrays), as in the Hesai AT128/ATX (§C3). 940 nm is the band of VCSELs.",
+   "why": "§C3 lists Hesai AT/ATX as 905 nm VCSEL + SiPM, so 905 nm is not EEL-only."
+  },
+  {
+   "id": "04_C4_C4b_C4c-031",
+   "finding": "report polish (3390: ICNIRP used before expansion)",
+   "old": "**Sources:** ICNIRP's 2013 guidelines (whose factors IEC 60825-1:2014 uses:",
+   "new": "**Sources:** the 2013 guidelines of ICNIRP, the International Commission on Non-Ionizing Radiation Protection (whose factors IEC 60825-1:2014 uses:",
+   "why": "Expand ICNIRP at first use."
+  },
+  {
+   "id": "04_C4_C4b_C4c-032",
+   "finding": "report polish (3390: ICNIRP expansion repeated)",
+   "old": "ICNIRP is the International Commission on Non-Ionizing Radiation Protection, whose exposure guidelines the IEC limits follow.",
+   "new": "The IEC limits follow ICNIRP's exposure guidelines.",
+   "why": "ICNIRP is expanded at first use above."
+  },
+  {
+   "id": "04_C4_C4b_C4c-033",
+   "finding": "report polish (3411: Eq. (63) not cited)",
+   "old": "and $C_4$ is the wavelength factor defined under the Class 1 table below.",
+   "new": "and $C_4$ is the wavelength factor of Eq. (63) (§C4), explained under the Class 1 table below.",
+   "why": "Cite Eq. (63)."
+  },
+  {
+   "id": "04_C4_C4b_C4c-034",
+   "finding": "report polish (3422: 'for C5 below' but Eq. (66) is above)",
+   "old": "and it is the time over which pulses are counted for $C_5$ below.",
+   "new": "and it is the time over which pulses are counted for $C_5$ (Eq. (66) above).",
+   "why": "Fix the direction of the pointer."
+  },
+  {
+   "id": "04_C4_C4b_C4c-035",
+   "finding": "report #27 (3433)",
+   "old": "times more generous than the 2014 value and should not be used (§C4).",
+   "new": "times more generous than the 2014 value, which superseded it (§C4).",
+   "why": "State the fact instead of a correction-note instruction."
+  },
+  {
+   "id": "04_C4_C4b_C4c-036",
+   "finding": "report polish (3436: Eq. (63) not cited)",
+   "old": "- **$C_4$.** For 700–1,050 nm, $C_4=10^{0.002(\\lambda-700)}$ with $\\lambda$ the wavelength in nm;",
+   "new": "- **$C_4$.** For 700–1,050 nm, $C_4=10^{0.002(\\lambda-700)}$ (Eq. (63), §C4) with $\\lambda$ the wavelength in nm;",
+   "why": "Cite Eq. (63)."
+  },
+  {
+   "id": "04_C4_C4b_C4c-037",
+   "finding": "report polish (3437: C4 missing in the middle term)",
+   "old": "corresponds to a radiant exposure of $7.7\\times10^{-8}/(3.85\\times10^{-5})=2.0\\times10^{-3}C_4\\ {\\rm J\\,m^{-2}}$.",
+   "new": "corresponds to a radiant exposure of $7.7\\times10^{-8}C_4\\ {\\rm J}/(3.85\\times10^{-5}\\ {\\rm m^2})=2.0\\times10^{-3}C_4\\ {\\rm J\\,m^{-2}}$.",
+   "why": "Carry C4 and units through the middle term."
+  },
+  {
+   "id": "04_C4_C4b_C4c-038",
+   "finding": "report #10 (table row)",
+   "old": "| **39×** | 67× | IEEE Spectrum's \"40 times more powerful\" [T] |",
+   "new": "| **38×** | 66× | IEEE Spectrum's \"40 times more powerful\" (the same ratio, rounded) [T] |",
+   "why": "38.4 rounds to 38, and 38.4 × 1.713 = 66."
+  },
+  {
+   "id": "04_C4_C4b_C4c-039",
+   "finding": "report polish (3448: photon column '×1.7')",
+   "old": "| 98× / 12× / **≈10×** | ×1.7 |",
+   "new": "| 98× / 12× / **≈10×** | 168× / 21× / **16.4×** |",
+   "why": "Give the photon ratios: 98 × 1.713 = 168, 12.2 × 1.713 = 21, 9.6 × 1.713 = 16.4."
+  },
+  {
+   "id": "04_C4_C4b_C4c-040",
+   "finding": "report #10 (derivation)",
+   "old": "The ratio is $1{,}000/26.0=38.4$, which the table rounds to 39×; in photons it is $38.4\\times1.713=66$ (67 from the rounded 39×).",
+   "new": "The ratio is $1{,}000/26.0=38.4$, shown as 38× in the table; in photons it is $38.4\\times1.713=66$.",
+   "why": "Correct the rounding."
+  },
+  {
+   "id": "04_C4_C4b_C4c-041",
+   "finding": "report #14 (3457)",
+   "old": "- **Stationary beam.** Over the $T_2=10$ s time base a pulse repetition frequency $f_p$ (in Hz) gives",
+   "new": "- **Stationary beam.** Over the counting time $T_2=10$ s, a pulse repetition frequency $f_p$ (the PRF, in Hz) gives",
+   "why": "T_2 is the counting time; 'time base' is the classification's exposure duration."
+  },
+  {
+   "id": "04_C4_C4b_C4c-042",
+   "finding": "report #34",
+   "old": "  - At 500 kHz the pulses are 2 µs apart, so pairs fall within one $T_i=5$ µs and count as one pulse carrying the energy of both (two pulses per group assumed). With $C_5$ at its 0.4 floor each pair may carry 79 nJ, i.e. ≈40 nJ per pulse; counting the average 2.5 pulses per $T_i$ instead would give ≈32 nJ.",
+   "new": "  - At 500 kHz the pulses are 2 µs apart. Along a line they land $209\\ {\\rm mm}/(5\\times10^{5}\\ {\\rm s^{-1}}/1{,}280\\ {\\rm lines\\,s^{-1}})=0.54$ mm apart at 100 mm (a 120° line is $2.094\\ {\\rm rad}\\times100\\ {\\rm mm}=209$ mm long, and 128 lines at 10 Hz make 1,280 lines a second), far closer than the 10 mm width of the patch, so consecutive pulses both reach the aperture. Pairs therefore fall within one $T_i=5$ µs and count as one pulse carrying the energy of both (two pulses per group assumed). In $T_2$ the aperture receives five times the 100 kHz count, $5\\times1.09\\times10^{4}=5.5\\times10^{4}$ pulses, i.e. $2.7\\times10^{4}$ pairs, and Eq. (66) gives $(2.7\\times10^{4}/600)^{-1/4}=0.39$, below the floor, so $C_5=0.4$. Each pair may then carry $0.4\\times198=79$ nJ, i.e. ≈40 nJ per pulse; counting the average 2.5 pulses per $T_i$ instead would give ≈32 nJ.",
+   "why": "Show why consecutive pulses both reach the aperture and the pulse count that puts C5 at its floor."
+  },
+  {
+   "id": "04_C4_C4b_C4c-043",
+   "finding": "report #33",
+   "old": "  - The ratios are $91\\ {\\rm µJ}/96\\ {\\rm nJ}\\approx950$ and $18\\ {\\rm µJ}/40\\ {\\rm nJ}\\approx460$.",
+   "new": "  - The ratios are $91\\ {\\rm µJ}/96\\ {\\rm nJ}\\approx950$ and $18.3\\ {\\rm µJ}/39.6\\ {\\rm nJ}\\approx460$, using the unrounded values $9.14\\ {\\rm W}/500\\ {\\rm kHz}=18.3$ µJ and $0.4\\times198/2=39.6$ nJ.",
+   "why": "18/40 as written is 450; the unrounded inputs give 460."
+  },
+  {
+   "id": "04_C4_C4b_C4c-044",
+   "finding": "report #28; consistency flag (shots per point)",
+   "old": "- **905/940 nm ToF is capped at ≈10–100 nJ per pulse** (more for scanned beams, within the $C_5$ floor). That is why lidars built on silicon single-photon avalanche diodes (SPADs, which register individual photons) fire ≈10 low-energy shots per point at high PRF and histogram them, i.e. accumulate the arrival times of many shots and take the peak as the echo (§C6).",
+   "new": "- **905/940 nm ToF is capped at ≈10–100 nJ per pulse**: ≈10 nJ for a stationary beam at 100 kHz or more, ≈40–96 nJ for the scanned raster of the table, and never more than the 198/233 nJ single-pulse limit. That is why lidars built on silicon single-photon avalanche diodes (SPADs, which register individual photons) fire several low-energy shots per point at high PRF and histogram them, i.e. accumulate the arrival times of many shots and take the peak as the echo. A 300 m design has time for at most ≈10 shots per point (§C6); shorter-range designs can use more (§C0 subsection 10.8).",
+   "why": "The scanned raster gives 40-96 nJ, inside 10-100 nJ; give the basis of '≈10 shots per point'."
+  },
+  {
+   "id": "04_C4_C4b_C4c-045",
+   "finding": "report #6",
+   "old": "Eye safety is therefore not the binding limit on FMCW point rate; heat and wall-plug efficiency (optical output power per unit of electrical input power) are (§C7a). The §C7a model's FMCW needs 3.0 W at 10 Mpts/s and 7.6 W at 25 Mpts/s at 200 m; at 300 m and 25 Mpts/s its 11 W would exceed the allowance for this field (§C7b subsection 2(i)).",
+   "new": "At 200 m, eye safety therefore binds FMCW point rate only near 25 Mpts/s: the §C7a model's FMCW needs 3.0 W of useful light at 10 Mpts/s and 7.6 W at 25 Mpts/s, within the 9.1 W allowance, but an ungated transmitter, which also emits during the round trips, sends 8.6–9.6 W at 25 Mpts/s and reaches it (§C7a(b); §C7b subsection 2(i)). Below that, heat and wall-plug efficiency (optical output power per unit of electrical input power) bind first (§C7a). At 300 m and 25 Mpts/s, however, the model's 11 W would exceed the allowance for this field (§C7b subsection 2(i)).",
+   "why": "The flat claim contradicted the next sentence's 11 W at 300 m; numbers unchanged."
+  },
+  {
+   "id": "04_C4_C4b_C4c-046",
+   "finding": "report #35 (ratios)",
+   "old": "These are ratios of the photon-flux column: $1.44/3.16\\approx0.46$, $1.44/2.10\\approx0.68$ and $2.10/3.16\\approx0.67$.",
+   "new": "These are ratios of the unrounded photon fluxes behind the photon-flux column: 940/905 ≈ 0.46, 940/1,550 ≈ 0.68 and 1,550/905 ≈ 0.67. The rounded entries shown give $1.44/3.16=0.46$, $1.44/2.10=0.69$ and $2.10/3.16=0.66$.",
+   "why": "As displayed, 1.44/2.10 = 0.69 and 2.10/3.16 = 0.66; the stated ratios come from unrounded values (archived astm_g173_lidar_bands.py)."
+  },
+  {
+   "id": "04_C4_C4b_C4c-047",
+   "finding": "report #35 (1.43 vs 1.44)",
+   "old": " (tabulated as 1.44×10¹⁸).",
+   "new": "; the table's 1.44×10¹⁸ comes from the unrounded band average.",
+   "why": "Explain the 1.43/1.44 difference."
+  },
+  {
+   "id": "04_C4_C4b_C4c-048",
+   "finding": "report #12 (table)",
+   "old": "| 905 nm, 24% efficiency, 20 nm filter | ≈1.6×10⁹ |",
+   "new": "| 905 nm, 24% efficiency, 20 nm filter | ≈1.6×10⁹ |\n| 905 nm, 24%, 40 nm filter (edge-emitting laser over −40 to +105 °C) | ≈3.2×10⁹ |",
+   "why": "§C4 item 4 and the verdict say a 905 nm EEL needs ≈40 nm; companion script gives 3.25e9."
+  },
+  {
+   "id": "04_C4_C4b_C4c-049",
+   "finding": "report polish (3504: Lambertian)",
+   "old": "it scatters the incident sunlight equally into all directions of the hemisphere, so its photon radiance",
+   "new": "it scatters the incident sunlight with the same radiance in every direction of the hemisphere (its intensity falls as the cosine of the angle from the surface normal), so its photon radiance",
+   "why": "Lambertian means equal radiance, not equal intensity."
+  },
+  {
+   "id": "04_C4_C4b_C4c-050",
+   "finding": "consistency flag (Eq. (67) duplicates Eq. (24) and Eq. (81))",
+   "old": "Atmospheric loss between scene and sensor is neglected (clear air, short range).",
+   "new": "Atmospheric loss between scene and sensor is neglected (clear air, short range). Eq. (67) is the per-pixel model of Eq. (24) (§C0 subsection 5) and Eq. (81) (§C6(d)), written with the photon flux $\\Phi$ in place of $E_\\odot/E_{\\rm ph}$ and $\\eta_{\\rm det}$ in place of PDE.",
+   "why": "Cross-reference the duplicated background-rate equation."
+  },
+  {
+   "id": "04_C4_C4b_C4c-051",
+   "finding": "report #12 (derivation)",
+   "old": "The 905 nm row uses $3.16\\times10^{18}$, a 20 nm filter and 0.24 ($1.6\\times10^{9}$); the 1,550 nm row uses $2.1\\times10^{18}$, 10 nm and 0.30 ($6.8\\times10^{8}$).",
+   "new": "The 905 nm rows use $3.16\\times10^{18}$ and 0.24, with a 20 nm filter ($1.6\\times10^{9}$) or a 40 nm filter ($3.2\\times10^{9}$, taking the same ±10 nm average irradiance); the 1,550 nm row uses $2.1\\times10^{18}$, 10 nm and 0.30 ($6.8\\times10^{8}$). The 20 nm row assumes a temperature-stabilised source or a 905 nm VCSEL; an edge-emitting laser needs ≈40 nm over −40 to +105 °C (§C4 item 4), which doubles the count.",
+   "why": "State the filter assumption and the EEL case."
+  },
+  {
+   "id": "04_C4_C4b_C4c-052",
+   "finding": "report #37",
+   "old": "processed InP is about 1.4–3.4 orders of magnitude (24× to 2,400×) dearer than 28 nm silicon, depending on volume (derived below).",
+   "new": "processed InP is about 1.4–3.4 orders of magnitude (24× to 2,400×) dearer than 28 nm silicon, depending on volume (derived below). Against the ≈\\$0.1 per mm² of a stacked Sony SPAD die (§C5a), processed InP at 1–10 €/mm² costs 10–100× as much, the figure used in subsection 6.",
+   "why": "Reconcile with the verdict's 10-100× (different baseline and volume range)."
+  },
+  {
+   "id": "04_C4_C4b_C4c-053",
+   "finding": "report polish (3530: F-1 not explained)",
+   "old": "  - Hesai's F-1: 1,550 nm systems",
+   "new": "  - Hesai's F-1 (the registration statement a foreign company files with the US Securities and Exchange Commission, SEC, before listing its shares): 1,550 nm systems",
+   "why": "Explain F-1 and SEC at first use."
+  },
+  {
+   "id": "04_C4_C4b_C4c-054",
+   "finding": "follow-up #6; report polish (3532: '$33 M lidar business' ambiguous)",
+   "old": "- **Luminar's semiconductor unit** (InGaAs design, ROIC, lasers) was sold for **\\$110 M** in Feb 2026, separately from its **\\$33 M** lidar business [P, 10-K]. (A 10-K is a US company's annual report to the Securities and Exchange Commission.)",
+   "new": "- **Luminar's semiconductor unit** (InGaAs design, ROIC, lasers) was sold to Quantum Computing Inc. for **\\$110 M** on 2 Feb 2026, and its lidar business separately to MicroVision for **\\$33 M** (plus \\$0.2 M cure costs) on 3 Feb 2026 [P, 10-K; §C3a]. (A 10-K is a US company's annual report to the SEC.)",
+   "why": "Name both buyers and dates as in §C3a; the $33 M is a sale price, not a valuation."
+  },
+  {
+   "id": "04_C4_C4b_C4c-055",
+   "finding": "report #39 (SPAD table)",
+   "old": "| Maximum count rate | ≈1 Mcps | ≈60 Mcps per SPAD |",
+   "new": "| Maximum count rate | ≈1 Mcps at 1 µs hold-off (≈0.1 Mcps at 10 µs) | ≈60 Mcps per SPAD |",
+   "why": "State the hold-off behind the ceiling."
+  },
+  {
+   "id": "04_C4_C4b_C4c-056",
+   "finding": "report #19, #39; consistency flag (solar background for the same case)",
+   "old": "A 1,550 nm pixel receives ≈7×10⁸ background counts/s in bright sun (§2 table), about **700× the ≈10⁶ counts/s an InGaAs SPAD can sustain** with the hold-off its afterpulsing requires [E: $6.8\\times10^{8}/10^{6}\\approx700$]. A silicon 3×3 macro-pixel (nine SPADs whose counts are pooled into one ranging pixel) at 940 nm sits at ≈1× its ceiling [E: nine SPADs at 60 Mcps each sustain $5.4\\times10^{8}$ counts/s, and $5.7\\times10^{8}/(5.4\\times10^{8})=1.05$] (§C6(d)).",
+   "new": "A 1,550 nm pixel receives ≈7×10⁸ background counts/s in bright sun (subsection 2 table above), about **700× the ≈10⁶ counts/s an InGaAs SPAD can sustain** with a 1 µs hold-off, which still leaves ≈8% afterpulsing [E: $6.8\\times10^{8}/10^{6}\\approx700$]. The 10 µs hold-off needed for <3% afterpulsing lowers the ceiling to ≈10⁵ counts/s, ≈7,000× below the sunlight rate [E: $6.8\\times10^{8}/10^{5}\\approx7{,}000$]. A silicon 3×3 macro-pixel (nine SPADs whose counts are pooled into one ranging pixel) at 940 nm sits at ≈1.0–1.35× its ceiling [E: nine SPADs at 60 Mcps each sustain $5.4\\times10^{8}$ counts/s; $5.7\\times10^{8}/(5.4\\times10^{8})=1.05$ with this subsection's band-averaged irradiance, and $7.31\\times10^{8}/(5.4\\times10^{8})=1.35$ with the higher irradiance of §C6(d)].",
+   "why": "'§2' read as a report section; 700x assumes a 1 us hold-off; give both background conventions for the 940 nm case."
+  },
+  {
+   "id": "04_C4_C4b_C4c-057",
+   "finding": "report #29",
+   "old": "| Platform / work | Responsivity at 1,550 nm | Dark current | Bandwidth |\n|---|---|---|---|\n| AIM (APSUNY process design kit, PDK), vertical PIN | >1 A/W at −1 V | — | ≈50 GHz |\n| imec, 1.8 × 15 µm² | 0.9 A/W | ≈15 nA at −1 V | >50 GHz |\n| GlobalFoundries (O-band), OFC 2025 | 0.95 A/W | <30 nA | ≈60 GHz |\n| Fudan / Zhangjiang Lab / Innolight, ultra-thin Ge | >0.8 A/W (C-band) | <20 nA | up to 100 GHz |\n| FMCW receiver engine (Moore and More, 2025) | 1.01–1.09 A/W over 18 PDs | 3.6 nA | saturation 6.3 mA |",
+   "new": "| Platform / work | Responsivity (at 1,550 nm unless stated) | Dark current | Bandwidth | Notes |\n|---|---|---|---|---|\n| AIM Photonics (American Institute for Manufacturing Integrated Photonics), APSUNY process design kit (PDK, from Analog Photonics and SUNY Polytechnic Institute), vertical PIN | >1 A/W at −1 V | — | ≈50 GHz | — |\n| imec, 1.8 × 15 µm² | 0.9 A/W | ≈15 nA at −1 V | >50 GHz | — |\n| GlobalFoundries, OFC 2025 | 0.95 A/W (O-band) | <30 nA | ≈60 GHz | — |\n| Fudan / Zhangjiang Lab / Innolight, ultra-thin Ge | >0.8 A/W (C-band) | <20 nA | up to 100 GHz | — |\n| FMCW receiver engine (Moore and More, 2025) | 1.01–1.09 A/W over 18 PDs (photodiodes) | 3.6 nA | — | Saturation photocurrent 6.3 mA |",
+   "why": "O-band device under a 1,550 nm column; saturation current sat in the bandwidth column; expand AIM, APSUNY and PDs."
+  },
+  {
+   "id": "04_C4_C4b_C4c-058",
+   "finding": "report polish (3574: 2qI called a noise power); consistency flag (i_n symbol)",
+   "old": "equivalently, its noise power per hertz is $2qI$.",
+   "new": "equivalently, its mean-square noise current per hertz is $2qI$ (A² Hz⁻¹). Here $i_n$ is a density, not the band-integrated mean square $\\langle i_n^2\\rangle$ of Eq. (26) (§C0 subsection 6).",
+   "why": "2qI is a current spectral density, not a power; distinguish i_n from Eq. (26)."
+  },
+  {
+   "id": "04_C4_C4b_C4c-059",
+   "finding": "report #22",
+   "old": "dark current of 15.8 µA per diode (50 nA at 25 °C, 0.5 eV activation energy), Eq. (68) gives",
+   "new": "dark current of 15.8 µA per diode (50 nA at 25 °C, 0.5 eV activation energy) [E: $I_d(T)=I_d(T_0)\\,(T/T_0)^3\\,e^{-(E_a/k_B)(1/T-1/T_0)}$, with $I_d(T_0)=50$ nA at $T_0=298.15$ K, activation energy $E_a=0.5$ eV and Boltzmann's constant $k_B=8.617\\times10^{-5}$ eV/K; at $T=398.15$ K, $(T/T_0)^3=2.38$ and $e^{5{,}803\\ {\\rm K}\\times(1/298.15-1/398.15)\\ {\\rm K^{-1}}}=e^{4.89}=133$, so $I_d\\approx50\\ {\\rm nA}\\times2.38\\times133=15.8$ µA], Eq. (68) gives",
+   "why": "Show the scaling law, inputs and substitution behind 15.8 µA (law from the figure caption)."
+  },
+  {
+   "id": "04_C4_C4b_C4c-060",
+   "finding": "report #30",
+   "old": "and note that telecom coherent receivers \"typically require ~10–100× more LO power\".",
+   "new": "and note that telecom coherent receivers \"typically require ~10–100× more LO power\". At 0.9 A/W, 5 µW gives 4.5 µA of LO photocurrent, so parity at that current implies an amplifier input noise of $\\sqrt{2qI_{\\rm LO}}=\\sqrt{2\\times1.602\\times10^{-19}\\times4.5\\times10^{-6}}\\approx1.2$ pA Hz⁻¹ᐟ², about 2.5 times quieter than the 3 pA Hz⁻¹ᐟ² assumed above [E]. The 0.3–1 mW used above therefore buys margin with a noisier amplifier; it is not a physical minimum.",
+   "why": "Explain the gap between 5 µW and the 28 µA / 0.3-1 mW derived above."
+  },
+  {
+   "id": "04_C4_C4b_C4c-061",
+   "finding": "report #40",
+   "old": "Germanium absorbs 1,550 nm light strongly only above the photon energy of its *direct band gap*, the \"direct edge\".",
+   "new": "Germanium absorbs strongly only photons whose energy exceeds its *direct band gap*, the \"direct edge\"; in Ge-on-Si that edge lies just longward of 1,550 nm at room temperature.",
+   "why": "The sentence mixed wavelength and photon energy."
+  },
+  {
+   "id": "04_C4_C4b_C4c-062",
+   "finding": "report polish (3598: 0.85 vs 0.86 nm/K; 1,600-1,625 vs 1,590 nm)",
+   "old": "- Tensile-strained Ge-on-Si has its direct edge near 1,600–1,625 nm at room temperature. The edge moves to shorter wavelengths as temperature falls: ≈0.54 nm/K for the SPAD cut-off in Vines et al., ≈0.85 nm/K for the direct gap in the model above (at 0.2% strain the companion table puts the edge at 1,590 nm at 25 °C and 1,534 nm at −40 °C, $(1{,}590-1{,}534)\\ {\\rm nm}/65\\ {\\rm K}=0.86$ nm/K).",
+   "new": "- Tensile-strained Ge-on-Si has its direct edge near 1,600–1,625 nm at room temperature; the companion model puts it at 1,590 nm at 25 °C for 0.2% strain. The edge moves to shorter wavelengths as temperature falls: ≈0.54 nm/K for the SPAD cut-off in Vines et al., and ≈0.86 nm/K for the direct gap in the model, which puts the edge at 1,534 nm at −40 °C for 0.2% strain, so $(1{,}590-1{,}534)\\ {\\rm nm}/65\\ {\\rm K}=0.86$ nm/K.",
+   "why": "One value (0.86 nm/K) and the model's 1,590 nm stated next to the quoted range."
+  },
+  {
+   "id": "04_C4_C4b_C4c-063",
+   "finding": "report #23",
+   "old": "loses a meaningful share of responsivity unless it compensates [E];",
+   "new": "loses roughly 40% of its responsivity unless it compensates [E: interpolating linearly between Liu et al.'s 0.87 A/W at room temperature, taken as 295 K, and 0.34 A/W at 200 K gives $0.34+(0.87-0.34)\\times(233-200)/(295-200)=0.34+0.53\\times0.347\\approx0.52$ A/W at 233 K, i.e. $1-0.52/0.87\\approx40\\%$ lower];",
+   "why": "Quantify the vague hedge from the data in the previous bullet."
+  },
+  {
+   "id": "04_C4_C4b_C4c-064",
+   "finding": "report #20 (partial: A11)",
+   "old": "where eye safety is set by the Class 3B cap and, in Europe, A11;",
+   "new": "where eye safety is set by the Class 3B cap and, in Europe, by the A11 corneal limit for 1,250–1,400 nm (subsection 1);",
+   "why": "Say what A11 is and where it is explained; the Class 3B cap needs a source (skipped)."
+  },
+  {
+   "id": "04_C4_C4b_C4c-065",
+   "finding": "report #21; report polish (3604: PDP vs PDE)",
+   "old": "12% photon detection probability (PDP) at 1,310 nm [I]. Vines et al. needed 125 K for 38% at 1,310 nm, with 1,550 nm requiring ≈245 K for 1 µm-thick Ge [I].",
+   "new": "12% PDE at 1,310 nm [I]. Vines et al. needed 125 K for 38% at 1,310 nm [I]; for 1 µm-thick Ge, detection at 1,550 nm needs operation at or above ≈245 K, because cooling moves the absorption edge to wavelengths shorter than 1,550 nm [I/E].",
+   "why": "State that 245 K is a minimum (direction from the report's own edge physics); use PDE as elsewhere."
+  },
+  {
+   "id": "04_C4_C4b_C4c-066",
+   "finding": "report #38 (double negative)",
+   "old": "a 0.1 mm film costs −0.47 dB one-way at 1,550 nm",
+   "new": "a 0.1 mm film costs 0.47 dB one way at 1,550 nm",
+   "why": "'Costs −0.47 dB' is a double negative."
+  },
+  {
+   "id": "04_C4_C4b_C4c-067",
+   "finding": "report #38 (tag)",
+   "old": "[I, Wojtanowski 2014 via survey; original not read]",
+   "new": "[S, Wojtanowski et al. 2014, relayed by a survey]",
+   "why": "A value taken from a survey without reading the original is [S] by the legend."
+  },
+  {
+   "id": "04_C4_C4b_C4c-068",
+   "finding": "report #3 (remaining part: 'RoboSense M series'); consistency flag (emitter type)",
+   "old": "edge-emitting lasers (EELs) in the RoboSense M series (§C3).",
+   "new": "edge-emitting lasers (EELs) in the RoboSense M1/M1P/MX (§C3).",
+   "why": "§C3 and §C4 put the RoboSense M3 at 940 nm."
+  },
+  {
+   "id": "04_C4_C4b_C4c-069",
+   "finding": "report #13",
+   "old": "($0.07\\ {\\rm nm/K}\\times125\\ {\\rm K}=8.8$ nm over −40 to +85 °C)",
+   "new": "($0.07\\ {\\rm nm/K}\\times145\\ {\\rm K}\\approx10$ nm over −40 to +105 °C, §C4 item 4)",
+   "why": "Use the −40 to +105 °C range of §C4 and §C6(d′)."
+  },
+  {
+   "id": "04_C4_C4b_C4c-070",
+   "finding": "report #39 (verdict)",
+   "old": "because InGaAs SPAD arrays are ≈700× over their count-rate ceiling in sunlight;",
+   "new": "because InGaAs SPAD arrays are ≈700–7,000× over their count-rate ceiling in sunlight (subsection 3);",
+   "why": "Carry the hold-off range into the verdict."
+  },
+  {
+   "id": "04_C4_C4b_C4c-071",
+   "finding": "follow-up #4 (partial: labels for links the report identifies)",
+   "old": "Sources: https://webstore.iec.ch/en/publication/3587 ; https://webstore.iec.ch/en/publication/62424 ; https://cdn.standards.iteh.ai/samples/102962/40796ccffe6b4cebaebebd5cdf8c2cba/IEC-TS-60825-19-2024.pdf ; https://www.icnirp.org/cms/upload/publications/ICNIRPLaser180gdl_2013.pdf ; https://web.archive.org/web/2023id_/https://laser-led-lamp-safety.seibersdorf-laboratories.at/fileadmin/uploads/intranet/dateien/le/laser/whitepaper_iec-60825-1_v1d.pdf ; https://web.archive.org/web/2023id_/https://laser-led-lamp-safety.seibersdorf-laboratories.at/fileadmin/uploads/intranet/dateien/le/laser/whitepaper_a11_to_en_60825-1_v2_2022.pdf ; https://support.tofsensors.com/product/CS20/certification/CS20_Class1_Test_report.pdf ; https://www.laserfocusworld.com/lasers-sources/article/14212074/1550-nm-triple-junction-laser-diode-excels-for-automotive-lidar ; https://spectrum.ieee.org/under-the-hood-of-luminars-long-reach-lidar ; https://www.laserfocusworld.com/blogs/article/14040682/safety-questions-raised-about-1550-nm-lidar ; https://www.sec.gov/Archives/edgar/data/1758057/000114036126011477/ef20067963-10k.htm ; https://www.sec.gov/Archives/edgar/data/1861737/000110465923004072/tm2120356-19_f1.htm ; https://raw.githubusercontent.com/pvlib/pvlib-python/main/pvlib/data/ASTMG173.csv ; https://techcrunch.com/2018/04/12/luminar-puts-its-lidar-tech-into-production-through-acquisitions-and-smart-engineering/ ; https://www.nature.com/articles/s41467-024-51975-6 ; https://www.coherent.com/news/press-releases/worlds-first-6-inch-inp-scalable-wafer-fabs-paving-the-way-for-the-next-generation-of-lasers-for-ai-transceivers-and-6g-wireless-networks ; https://www.jeppix.eu/wp-content/uploads/2020/pilotline-files/JePPIX_Roadmap_2021_2025.pdf ; https://www.jeppix.eu/wp-content/uploads/2020/04/JePPIXRoadmap2015.pdf ; https://siliconanalysts.com/data/wafer-pricing ; https://imagesensors.org/Past%20Workshops/2024%20ISSW/Papers/R02.1.pdf ; https://www.jstage.jst.go.jp/article/jsaprev/2023/0/2023_230402/_pdf ; https://www.nature.com/articles/s41467-019-08830-w ; https://arxiv.org/pdf/2605.07343 ; https://www.analogphotonics.com/wp-content/uploads/2021/08/7_NFahrenkopf_JSTQE_2019.pdf ; https://www.photonics.intec.ugent.be/download/pub_3746.pdf ; https://link.springer.com/article/10.1007/s44275-025-00030-7 ; https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12113715/ ; https://arxiv.org/pdf/2008.02411 ; https://opg.optica.org/abstract.cfm?URI=OFC-2014-Th5C.1 ; https://aurora.tech/newsroom/inside-auroras-photonic-engine-engineering-lidar-for-automotive-scale ; https://omlc.org/spectra/water/data/segelstein81.txt ; https://www.mdpi.com/2076-3417/9/14/2843 ; https://arxiv.org/pdf/2112.08936",
+   "new": "Sources: https://webstore.iec.ch/en/publication/3587 (IEC 60825-1:2014) ; https://webstore.iec.ch/en/publication/62424 ; https://cdn.standards.iteh.ai/samples/102962/40796ccffe6b4cebaebebd5cdf8c2cba/IEC-TS-60825-19-2024.pdf (IEC TS 60825-19:2024, sample) ; https://www.icnirp.org/cms/upload/publications/ICNIRPLaser180gdl_2013.pdf (ICNIRP 2013 laser guidelines) ; https://web.archive.org/web/2023id_/https://laser-led-lamp-safety.seibersdorf-laboratories.at/fileadmin/uploads/intranet/dateien/le/laser/whitepaper_iec-60825-1_v1d.pdf (Seibersdorf Laboratories white paper on IEC 60825-1:2014) ; https://web.archive.org/web/2023id_/https://laser-led-lamp-safety.seibersdorf-laboratories.at/fileadmin/uploads/intranet/dateien/le/laser/whitepaper_a11_to_en_60825-1_v2_2022.pdf (Seibersdorf Laboratories white paper on EN 60825-1 A11) ; https://support.tofsensors.com/product/CS20/certification/CS20_Class1_Test_report.pdf (SGS Class 1 test report for a 940 nm device) ; https://www.laserfocusworld.com/lasers-sources/article/14212074/1550-nm-triple-junction-laser-diode-excels-for-automotive-lidar (Laser Focus World, 1,550 nm triple-junction laser diode) ; https://spectrum.ieee.org/under-the-hood-of-luminars-long-reach-lidar (IEEE Spectrum on Luminar) ; https://www.laserfocusworld.com/blogs/article/14040682/safety-questions-raised-about-1550-nm-lidar (Laser Focus World, safety questions about 1,550 nm lidar) ; https://www.sec.gov/Archives/edgar/data/1758057/000114036126011477/ef20067963-10k.htm (Luminar 10-K) ; https://www.sec.gov/Archives/edgar/data/1861737/000110465923004072/tm2120356-19_f1.htm (Hesai F-1) ; https://raw.githubusercontent.com/pvlib/pvlib-python/main/pvlib/data/ASTMG173.csv (ASTM G173-03 spectrum, pvlib copy) ; https://techcrunch.com/2018/04/12/luminar-puts-its-lidar-tech-into-production-through-acquisitions-and-smart-engineering/ (TechCrunch 2018 on Luminar) ; https://www.nature.com/articles/s41467-024-51975-6 (Vertilite review, Nature Communications 2024) ; https://www.coherent.com/news/press-releases/worlds-first-6-inch-inp-scalable-wafer-fabs-paving-the-way-for-the-next-generation-of-lasers-for-ai-transceivers-and-6g-wireless-networks (Coherent 6-inch InP press release) ; https://www.jeppix.eu/wp-content/uploads/2020/pilotline-files/JePPIX_Roadmap_2021_2025.pdf (JePPIX roadmap 2021–2025) ; https://www.jeppix.eu/wp-content/uploads/2020/04/JePPIXRoadmap2015.pdf (JePPIX roadmap 2015) ; https://siliconanalysts.com/data/wafer-pricing (Silicon Analysts wafer pricing) ; https://imagesensors.org/Past%20Workshops/2024%20ISSW/Papers/R02.1.pdf (Telesca et al., ISSW 2024) ; https://www.jstage.jst.go.jp/article/jsaprev/2023/0/2023_230402/_pdf (Sony automotive SPAD) ; https://www.nature.com/articles/s41467-019-08830-w ; https://arxiv.org/pdf/2605.07343 ; https://www.analogphotonics.com/wp-content/uploads/2021/08/7_NFahrenkopf_JSTQE_2019.pdf (Fahrenkopf et al., JSTQE 2019) ; https://www.photonics.intec.ugent.be/download/pub_3746.pdf ; https://link.springer.com/article/10.1007/s44275-025-00030-7 (Wang et al., SUSTech and RoboSense, Moore and More 2025) ; https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12113715/ ; https://arxiv.org/pdf/2008.02411 ; https://opg.optica.org/abstract.cfm?URI=OFC-2014-Th5C.1 (OFC 2014 single-chip 100 Gb/s demonstration) ; https://aurora.tech/newsroom/inside-auroras-photonic-engine-engineering-lidar-for-automotive-scale (Aurora photonic engine) ; https://omlc.org/spectra/water/data/segelstein81.txt (Segelstein water absorption data) ; https://www.mdpi.com/2076-3417/9/14/2843 (Duthon et al. 2019) ; https://arxiv.org/pdf/2112.08936",
+   "why": "Label bare URLs as the §C0 Sources lines do; only links the report itself identifies (others listed under needs_source)."
+  }
+ ],
+ "skipped": [
+  {
+   "finding": "report #1",
+   "kind": "already_fixed",
+   "location": "§C4 item 1, '905 vs 940 nm': 'Every Class 1 limit this report uses between 700 and 1,050 nm …'",
+   "detail": "The proposed rewrite (17.5% applies whichever rule binds; a gain in permitted emission, not range or SNR) is already in the live text. The remaining parts (2.570/3.020/1.175/17.5% rounding and the item 4 sentence 'comes from one simplified single-pulse calculation') are applied as edits."
+  },
+  {
+   "finding": "report #2",
+   "kind": "already_fixed",
+   "location": "§C4c subsection 3, 'For arrays it matters a great deal.'",
+   "detail": "The live text already uses IMX479's ≈16.7 mm² active area and ≈$17–170 of processed InGaAs."
+  },
+  {
+   "finding": "report #3",
+   "kind": "already_fixed",
+   "location": "§C4c subsection 6, '905 nm is the incumbent: VCSEL columns in the Hesai AT128/ATX and edge-emitting lasers (EELs) …'",
+   "detail": "The verdict already separates VCSEL and EEL sources. The residual 'RoboSense M series' (M3 is 940 nm in §C3) and the EEL-only definition of '905 nm' at the head of §C4c are applied as edits."
+  },
+  {
+   "finding": "report #4; consistency flag (ATX channels)",
+   "kind": "needs_decision",
+   "location": "§C4b Architecture table '**ATX (17 SiPM dies × 4 channels)**' and Other dimensions table 'The ATX uses 64 physical channels and multiplies effective lines by laser addressing'",
+   "detail": "17 × 4 = 68, not 64; §C5 says '17 dies / 64 channels', §C8 '17 SiPM dies × 4 channels [T]', §C3b and §C4d '256 channels'. The report does not settle the mapping. Once the author states it, e.g.: cell 'ATX (17 SiPM dies, 64 receive channels [T])' and 'The ATX has 64 physical receive channels; laser addressing gives each four lines, which is how Hesai counts 256 channels (§C3b, §C4d).'"
+  },
+  {
+   "finding": "report #20",
+   "kind": "needs_source",
+   "location": "§C4c subsection 4, cold caveat bullet: 'where eye safety is set by the Class 3B cap'",
+   "detail": "The report never explains a Class 3B cap at 1,310 nm. Needs the IEC 60825-1:2014 rule (C7 over 1,150–1,400 nm and the Class 3B ceiling) before writing: 'There the retinal factor C7 makes the Class 1 retinal limit so lenient that the binding limits become the cap at the Class 3B level and, in Europe, the A11 corneal limit for 1,250–1,400 nm (subsection 1).' The A11 part is applied."
+  },
+  {
+   "finding": "report #31",
+   "kind": "needs_source",
+   "location": "§C4c subsection 3 cost table, InP substrate price row: '[T, unattributed; internally inconsistent]'",
+   "detail": "The report does not say which figures conflict (2″ $800 → $2,300–2,500; 6″ $1,400 → $5,000). Name the conflict from the source in one clause, or re-source the prices."
+  },
+  {
+   "finding": "report #38 (fog row)",
+   "kind": "needs_source",
+   "location": "§C4c subsection 5 table, Fog row: 'near-IR ≈10% worse only in very dense advection fog (<30 m visibility)'",
+   "detail": "Confirm against Duthon et al. 2019 which band is worse before rewriting as '905 nm ≈10% worse than 1,550 nm only in very dense advection fog (<30 m visibility)'."
+  },
+  {
+   "finding": "follow-up #1; report polish (3278)",
+   "kind": "needs_source",
+   "location": "§C4 item 3: 'Seyond's Falcon K drew 30 W [U]'",
+   "detail": "No source for 30 W anywhere in the report; tagged [U] meanwhile. Needs a Falcon K/K1 datasheet or manual figure. If none: drop it, and in §C4d change '1.75 kg, 20–30 W and fibre-laser cost (§C4)' to '1.75 kg, 20 W (Falcon K2 datasheet [P], §E9) and fibre-laser cost (§C4)'; §0 and §E11 ('6–20 W') then stand."
+  },
+  {
+   "finding": "follow-up #2",
+   "kind": "needs_source",
+   "location": "§C4 item 2: 'Front-side-illuminated SPADs … reached only 2–5% PDE at 9xx nm [U]'",
+   "detail": "No source anywhere in the report; tagged [U] meanwhile. Add a source, or write 'single-digit PDE [U]' and reconcile with §C4b's 'Historically about 5–10% (front-side)' for SiPMs."
+  },
+  {
+   "finding": "follow-up #3",
+   "kind": "needs_source",
+   "location": "§C4c Sources line ('Sources: https://webstore.iec.ch/en/publication/3587 ; …')",
+   "detail": "Links missing for: GlobalFoundries Ge photodiode, OFC 2025; Chen et al., JAP 2016; Hale & Querry; Kou; Artilux Ge-on-Si SPAD; Fudan/Zhangjiang Lab/Innolight (perhaps arXiv 2605.07343); Rogers et al., Nature 2021 (perhaps arXiv 2008.02411); Hamamatsu G8931-20 price [T]; SiLC 'germanium detectors' [T]. Confirm before labelling: s41467-019-08830-w (Vines et al.?), PMC12113715 (Liu et al., Micromachines 2025?), arXiv 2112.08936 (survey relaying Wojtanowski?), photonics.intec.ugent.be pub_3746, IEC webstore 62424."
+  },
+  {
+   "finding": "follow-up #5",
+   "kind": "needs_source",
+   "location": "End of §C4 and §C4b (no Sources line); §C4 item 7 'KrASIA, summarising Seyond's prospectus: the InGaAs route costs 2–3× as much as 905 nm [T]'",
+   "detail": "No URL anywhere for the KrASIA summary (§G3 points back to §C4), the Yole view [MR/S] or the RoboSense M3 '50–70% cheaper' pitch [P]. Add a Sources line to §C4 with these. Pointers to §C2, §C3, §C3b and §E9 are applied for NE Times and the power figures."
+  },
+  {
+   "finding": "report #7 (K3 range)",
+   "kind": "needs_source",
+   "location": "§C4 'Where 1,550 nm survives': 'Seyond Falcon K3, 450 m at 10%, §C3'",
+   "detail": "The 450 m at 10% has no source or tag anywhere (§C3, §C4d, §F). A Seyond source would allow [P]."
+  },
+  {
+   "finding": "report #32 (rank)",
+   "kind": "needs_source",
+   "location": "§C4b 'Where each wins': 'Hesai's ATX, by its delivery count the best-selling long-range lidar [U]'",
+   "detail": "Tagged [U]. Huawei also reports more than 1 M lidars shipped by July 2025 (Part E, [T]). Source the rank, or soften to 'one of the best-selling long-range lidars'."
+  },
+  {
+   "finding": "consistency flag (solar background for the same case)",
+   "kind": "needs_decision",
+   "location": "§C4c subsection 2 per-pixel table (1.6×10⁹, 5.7×10⁸) vs §C6(d) (2.2×10⁹, 5.9×10⁸, 7.31×10⁸) used by §C4b",
+   "detail": "§C4c uses ASTM ±10 nm band averages with PDE 0.24/0.37/0.30; §C6(d) uses 0.75 W m⁻² nm⁻¹ at 905 nm, a higher 940 nm irradiance and PDE 0.3 or 0.37. Choose one convention. Meanwhile the macro-pixel ceiling sentence gives both (1.05× and 1.35×)."
+  },
+  {
+   "finding": "consistency flag (duplicated background and dead-time equations)",
+   "kind": "structural",
+   "location": "§C4c Eq. (67) vs Eq. (24) (§C0) and Eq. (81) (§C6(d)); §C4b Eq. (65) vs Eq. (82)",
+   "detail": "Cross-references are applied. Unifying the symbols (E_lambda/Phi vs E_sun, eta_det vs PDE, rho vs rho_scene) or merging the equations is structural."
+  },
+  {
+   "finding": "consistency flag (Falcon naming)",
+   "kind": "needs_decision",
+   "location": "'Falcon K' (§C3, §C3b, §C4 item 3) vs 'Falcon K1' (§C0 subsection 7, §C4d three times)",
+   "detail": "Pick one name for the first-generation Falcon and use it throughout."
+  },
+  {
+   "finding": "report #24 (§C0 wording)",
+   "kind": "cross_section",
+   "location": "§C0 subsection 6, after Eq. (25)",
+   "detail": "Old: '$k$ is the ratio of the hole to the electron ionization coefficient, i.e. how readily holes, rather than electrons, trigger further ionization;' New: '$k$ is the ionization coefficient of the weaker-ionizing carrier divided by that of the stronger one (hole/electron in Si; electron/hole in InP), i.e. how readily the less active carrier also triggers ionization;' (symbol scheme)."
+  },
+  {
+   "finding": "follow-up consistency flag (§B3 note 1)",
+   "kind": "cross_section",
+   "location": "§B3 note 1",
+   "detail": "Old: 'The stated rationale for 1550 nm was about 17× the eye-safe photon flux of 905 nm (derived in §C4 from the IEC 60825-1 laser-safety standard's long-exposure limits).' New: 'The stated rationale for 1550 nm was about 16–17× the eye-safe photon flux of 905 nm (16.4× from the 9.6 mW long-exposure limit, 17.1× from its rounded 10 mW table entry; §C4).'"
+  },
+  {
+   "finding": "follow-up consistency flag (§G2 Luminar value)",
+   "kind": "cross_section",
+   "location": "§G2 'Cheap exits'",
+   "detail": "Old: 'its market value briefly exceeded roughly \\$10 B in late 2020 [U]' New: 'its market value reached ≈\\$13.5 B at the peak close of \\$41.80 on 8 Dec 2020 [E, §C3a]'."
+  },
+  {
+   "finding": "consistency flag (mixed standard editions)",
+   "kind": "cross_section",
+   "location": "§C3a, 'HFL110 eye-safety factor' bullet after Eq. (57)",
+   "detail": "Old: 'Against the ≈4×10⁴× gain at 1,550 nm (§C4c), it means' New: 'Against the ≈4×10⁴× gain at 1,550 nm (§C4c, a 2014-edition figure, so the comparison mixes editions), it means'."
+  },
+  {
+   "finding": "consistency flag (solar ratios in power vs photons)",
+   "kind": "cross_section",
+   "location": "§C6(d′), 'Wavelength' bullet",
+   "detail": "Old: 'with about 0.45–0.55× the solar irradiance of 905 nm.' New: 'with about 0.45–0.55× the solar irradiance (power) of 905 nm; in photons the band-averaged ratios are 0.46× and, for 1,550 nm, 0.67× (§C4c subsection 2).'"
+  }
+ ]
+}

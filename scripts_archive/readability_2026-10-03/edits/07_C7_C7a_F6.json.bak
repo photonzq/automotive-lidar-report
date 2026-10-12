@@ -1,0 +1,867 @@
+{
+ "block": "07_C7_C7a_F6",
+ "edits": [
+  {
+   "id": "07_C7_C7a_F6-001",
+   "finding": "report #39",
+   "old": "An Aurora \"observer\" has nevertheless ridden in the cab since May 2025, when truck maker Paccar asked for a person back on board less than three weeks after the first driverless runs; Aurora counts these as driverless miles [T, NYT, 17 Mar 2026]. Aurora had about 25 driverless trucks in mid-2026 across all generations (no count in the investor-day release below; one trade report says about 20 [T, single source]). It targets 200 by year-end 2026, for about \\$80 M annualized revenue.",
+   "new": "Since May 2025, however, an Aurora \"observer\" has ridden in the cab: truck maker Paccar asked for a person back on board less than three weeks after the first driverless runs. Aurora still counts these as driverless miles [T, NYT, 17 Mar 2026]. Aurora had about 25 driverless trucks in mid-2026 across all generations (no count in the investor-day release below; one trade report says about 20 [T, single source]). It targets 200 by year-end 2026 [P], for about \\$80 M annualized revenue.",
+   "why": "Splits the 43-word sentence with a nested clause; tags the 200-truck target from the investor-day release."
+  },
+  {
+   "id": "07_C7_C7a_F6-002",
+   "finding": "report #24",
+   "old": "More than 500k driverless miles since commercial launch.",
+   "new": "Aurora reports more than 500k driverless miles since commercial launch.",
+   "why": "Turns a telegraphic fragment into a sentence."
+  },
+  {
+   "id": "07_C7_C7a_F6-003",
+   "finding": "report #25",
+   "old": "a contract manufacturer, builds the kit.",
+   "new": "a contract manufacturer, builds the kit [P].",
+   "why": "Tags the Gen 2 claims (Aurora releases and newsroom, as cited in §G7)."
+  },
+  {
+   "id": "07_C7_C7a_F6-004",
+   "finding": "report #25",
+   "old": "Gen 3 follows with Aumovio in 2027, \"for tens of thousands of trucks\".",
+   "new": "Gen 3 follows in 2027, built by Aumovio (Continental's automotive business, spun off in September 2025), \"for tens of thousands of trucks\" [P].",
+   "why": "Tags the Gen 3 claim and says who Aumovio is."
+  },
+  {
+   "id": "07_C7_C7a_F6-005",
+   "finding": "report #24",
+   "old": "Q2 2026: revenue \\$2 M, net loss \\$270 M, about \\$1.2 B cash [P].",
+   "new": "In Q2 2026 Aurora reported \\$2 M of revenue, a \\$270 M net loss and about \\$1.2 B of cash [P].",
+   "why": "Turns a telegraphic note into a sentence."
+  },
+  {
+   "id": "07_C7_C7a_F6-006",
+   "finding": "report #24; report #25",
+   "old": "Exclusive long-range lidar for **Daimler Truck/Torc**: C-samples (near-production prototypes, the last of the automotive A/B/C sample stages) delivered May 2026; an automated line at the contract manufacturer Jabil of about 100k per year; Daimler launch 2027.\n    - **Bendix** L2+ truck ADAS (advanced driver-assistance systems at level 2+, where the driver still supervises).\n    - Atlas Ultra: 250 m at 10% reflectance, up to 150° horizontal field of view (FOV), ASIL-B(D).",
+   "new": "Aeva is the exclusive long-range lidar supplier for **Daimler Truck/Torc**. It delivered C-samples (near-production prototypes, the last of the automotive A/B/C sample stages) in May 2026 [P], has an automated line at the contract manufacturer Jabil with a capacity of about 100k units per year, and the Daimler launch is planned for 2027.\n    - It also works with **Bendix** on L2+ truck ADAS (advanced driver-assistance systems at level 2+, where the driver still supervises).\n    - Its Atlas Ultra reaches 250 m at 10% reflectance over up to 150° of horizontal field of view (FOV), and is specified to ASIL-B(D).",
+   "why": "Turns the telegraphic Aeva notes into sentences and tags the C-sample delivery (Aeva release)."
+  },
+  {
+   "id": "07_C7_C7a_F6-007",
+   "finding": "report #25",
+   "old": "its assets went to MicroVision.\n  - **Baraja** (wavelength steering) cut staff 75% in 2023 and put its patents up for sale in 2025.\n  - **Quanergy** (optical phased array, OPA) filed Chapter 11 (US bankruptcy reorganization) in 2022.",
+   "new": "its assets went to MicroVision [P] (§C3a).\n  - **Baraja** (wavelength steering) cut staff 75% in 2023 [T] and put its patents up for sale in 2025 [P] (§C3a).\n  - **Quanergy** (optical phased array, OPA) filed Chapter 11 (US bankruptcy reorganization) in 2022 [P] (§C3a).",
+   "why": "Tags the Scantinel, Baraja and Quanergy items with the evidence level §C3a gives them."
+  },
+  {
+   "id": "07_C7_C7a_F6-008",
+   "finding": "report #25",
+   "old": "(80 m over 60°×14°), at 35 W (§C10.2b).",
+   "new": "(80 m over 60°×14°), at 35 W [P] (§C10.2b).",
+   "why": "Tags the FS-4S datasheet figures."
+  },
+  {
+   "id": "07_C7_C7a_F6-009",
+   "finding": "report #24; report #25",
+   "old": "  - **SiLC:** Eyeonic line; 1 km claims; Honda investment.\n  - **Voyant:** Carbon at \\$1,490, with 1-axis on-chip steering plus a slow mirror; Helium, a 2D solid-state focal-plane array (FPA), i.e. a chip with a grid of switchable emitters and receivers, one per look direction.\n  - **LightIC:** Lark; Tower Semiconductor as foundry; indie Semiconductor's system-on-chip (SoC).",
+   "new": "  - **SiLC** sells its Eyeonic line for industrial and security uses and claims more than 1 km for its Eyeonic Vista [P/T] (§B8); Honda has invested in it.\n  - **Voyant** sells its Carbon for \\$1,490 a unit [P], with one axis steered on chip and the other by a slow mirror (§B8). Its Helium, announced as \"coming soon\", is a 2D solid-state focal-plane array (FPA), i.e. a chip with a grid of switchable emitters and receivers, one per look direction.\n  - **LightIC** builds its Lark lidar on silicon photonics made by the foundry Tower Semiconductor, with a custom system-on-chip (SoC) that matches indie Semiconductor's iND83301 \"Surya\" (§D7).",
+   "why": "Rewrites the telegraphic SiLC, Voyant and LightIC notes as sentences, with the tags and wording of §B8 and §D7."
+  },
+  {
+   "id": "07_C7_C7a_F6-010",
+   "finding": "report #24",
+   "old": "  - **LuminWave:** fully integrated III-V-on-Si chip (compound-semiconductor laser material on silicon photonics) with >10 GHz FM bandwidth, i.e. optical frequency sweep; heavy-truck nomination (selection for a truck program).\n  - **Moore Photonics:** claims only.",
+   "new": "  - **LuminWave**'s \"Raptor\" engine (Sep 2024) is a fully integrated III-V-on-Si chip (compound-semiconductor laser material on silicon photonics) with more than 10 GHz of FM bandwidth, i.e. optical frequency sweep. Its July 2025 heavy-truck nomination (selection for a truck program) names no product, customer or start of production, and does not say FMCW (§D7).\n  - **Moore Photonics** has published claims but no product data.",
+   "why": "Rewrites the telegraphic LuminWave and Moore Photonics notes; adds the §D7 caveat that the truck nomination is not shown to be FMCW."
+  },
+  {
+   "id": "07_C7_C7a_F6-011",
+   "finding": "report §3 flag (v vs v_r); report #36",
+   "old": "A target closing at radial speed $v$ shifts the return by $f_D=2v/\\lambda$, where $\\lambda$ is the wavelength. At 1550 nm this is",
+   "new": "A target closing at radial speed $v_r$ shifts the return by $f_D=2v_r/\\lambda$, where $\\lambda$ is the wavelength. At 1,550 nm this is",
+   "why": "Uses the report's radial-velocity symbol $v_r$ (§C0 subsection 2) and the 1,550 nm spelling."
+  },
+  {
+   "id": "07_C7_C7a_F6-012",
+   "finding": "symbol scheme",
+   "old": "Let the mirror rotate at mechanical angular rate $\\omega$ (rad/s). A point on the mirror a distance $s$ from the rotation axis, measured across the tilt direction, moves along the mirror normal at $v_n=\\omega s$.",
+   "new": "Let the mirror rotate at mechanical angular rate $\\dot\\theta_{\\rm m}$ (rad/s). A point on the mirror a distance $s$ from the rotation axis, measured across the tilt direction, moves along the mirror normal at $v_n=\\dot\\theta_{\\rm m}s$.",
+   "why": "Mechanical mirror rate becomes $\\dot\\theta_{\\rm m}$."
+  },
+  {
+   "id": "07_C7_C7a_F6-013",
+   "finding": "symbol scheme; report #9",
+   "old": "Let $\\Omega$ be the optical scan rate, the rate at which the beam direction sweeps (rad/s; for one mirror reflection it is twice the mechanical rate $\\omega$), and $D$ the beam diameter on the scanner. The frequency spread per pass is then",
+   "new": "Let $\\dot\\theta$ be the optical scan rate, the rate at which the beam direction sweeps (rad/s; for one mirror reflection it is twice the mechanical rate, $\\dot\\theta=2\\dot\\theta_{\\rm m}$), and $D$ the beam diameter on the scanner. The frequency spread $\\Delta f_{\\rm scan}$ across the beam, per pass, is then",
+   "why": "Optical scan rate becomes $\\dot\\theta$ (not $\\Omega$, kept for solid angle); names the spread $\\Delta f_{\\rm scan}$."
+  },
+  {
+   "id": "07_C7_C7a_F6-014",
+   "finding": "symbol scheme",
+   "old": "$$\\Delta f\\approx\\frac{\\Omega D}{\\lambda} \\tag{86}$$",
+   "new": "$$\\Delta f_{\\rm scan}\\approx\\frac{\\dot\\theta D}{\\lambda} \\tag{86}$$",
+   "why": "Symbol scheme in Eq. (86); tag unchanged."
+  },
+  {
+   "id": "07_C7_C7a_F6-015",
+   "finding": "symbol scheme; report #9",
+   "old": "That crossing time $\\theta_b/\\Omega$ is also the speckle-decorrelation time of the return. Afocal optics after the mirror (a telescope that enlarges the beam also slows its angular sweep by the same factor) conserve $\\Omega D$,",
+   "new": "That crossing time $\\theta_b/\\dot\\theta$ is also the speckle-decorrelation time of the return. The received beat is therefore broadened by about $\\Delta f_{\\rm scan}$ over the round trip, not by $2\\Delta f_{\\rm scan}$: the outgoing and returning shifts add for the mean shift of Eq. (88) below, but the width is set by how fast the return decorrelates, once per crossing time [E]. Afocal optics after the mirror (a telescope that enlarges the beam also slows its angular sweep by the same factor) conserve $\\dot\\theta D$,",
+   "why": "States that the round-trip broadening is about one per-pass spread, which the table and the Blackmore criterion assume."
+  },
+  {
+   "id": "07_C7_C7a_F6-016",
+   "finding": "symbol scheme; report #26",
+   "old": "If $T_c$ outlasts $\\theta_b/\\Omega$, the beat tone spreads over $\\approx T_c\\,\\Omega D/\\lambda$ FFT bins. Its peak falls by that factor (roughly half as much in dB with incoherent combining across bins), and the velocity estimate blurs by $\\approx\\Omega D/2$, the rim speed of the illuminated mirror.",
+   "new": "If $T_c$ outlasts $\\theta_b/\\dot\\theta$, the beat tone spreads over $\\approx T_c\\,\\dot\\theta D/\\lambda=T_c\\,\\Delta f_{\\rm scan}$ FFT bins. Its peak falls by that factor (roughly half as much in dB with incoherent combining across bins), and the velocity estimate blurs by $\\approx\\lambda\\Delta f_{\\rm scan}/2=\\dot\\theta D/2=\\dot\\theta_{\\rm m}D$, the difference between the velocities of the footprint's two edges along the beam.",
+   "why": "The blur $\\dot\\theta D/2=\\dot\\theta_{\\rm m}D$ is the edge-to-edge velocity difference, twice the rim speed."
+  },
+  {
+   "id": "07_C7_C7a_F6-017",
+   "finding": "symbol scheme",
+   "old": "$$D\\lesssim\\frac{\\lambda}{\\Omega T_c} \\tag{87}$$",
+   "new": "$$D\\lesssim\\frac{\\lambda}{\\dot\\theta T_c} \\tag{87}$$",
+   "why": "Symbol scheme in Eq. (87); tag unchanged."
+  },
+  {
+   "id": "07_C7_C7a_F6-018",
+   "finding": "symbol scheme",
+   "old": "$$f_{\\rm bias}\\approx\\frac{4\\omega\\bar s\\cos\\theta_i}{\\lambda} \\tag{88}$$",
+   "new": "$$f_{\\rm bias}\\approx\\frac{4\\dot\\theta_{\\rm m}\\bar s\\cos\\theta_i}{\\lambda} \\tag{88}$$",
+   "why": "Symbol scheme in Eq. (88); tag unchanged."
+  },
+  {
+   "id": "07_C7_C7a_F6-019",
+   "finding": "symbol scheme",
+   "old": "a false radial velocity $\\lambda f_{\\rm bias}/2=2\\omega\\bar s\\cos\\theta_i$.",
+   "new": "a false radial velocity $\\lambda f_{\\rm bias}/2=2\\dot\\theta_{\\rm m}\\bar s\\cos\\theta_i$.",
+   "why": "Mechanical rate symbol."
+  },
+  {
+   "id": "07_C7_C7a_F6-020",
+   "finding": "symbol scheme; report #9",
+   "old": "| Example at 1,550 nm | Optical scan rate $\\Omega$ | Beam $D$ | Spread per pass |",
+   "new": "| Example at 1,550 nm | Optical scan rate $\\dot\\theta$ | Beam $D$ | Spread $\\Delta f_{\\rm scan}$ (per pass; ≈ the round-trip broadening) |",
+   "why": "Column header says which spread the table uses."
+  },
+  {
+   "id": "07_C7_C7a_F6-021",
+   "finding": "report #10",
+   "old": "| Aeva's stated threshold (below) |",
+   "new": "| Aeva's threshold (below), read as an optical rate, with a 5 mm beam assumed [E] |",
+   "why": "The row label no longer makes the optical-rate reading and the 5 mm beam look sourced."
+  },
+  {
+   "id": "07_C7_C7a_F6-022",
+   "finding": "symbol scheme",
+   "old": "- **Spread per pass:** $\\Delta f=\\Omega D/\\lambda$ (Eq. (86)) with $\\Omega$ in rad/s. Polygon row: $45{,}600^\\circ/{\\rm s}\\times\\pi/180=796$ rad/s, so $\\Delta f=796\\times5\\times10^{-3}/(1.55\\times10^{-6})=2.6$ MHz.",
+   "new": "- **Spread per pass:** $\\Delta f_{\\rm scan}=\\dot\\theta D/\\lambda$ (Eq. (86)) with $\\dot\\theta$ in rad/s. Polygon row: $45{,}600^\\circ/{\\rm s}\\times\\pi/180=796$ rad/s, so $\\Delta f_{\\rm scan}=796\\times5\\times10^{-3}/(1.55\\times10^{-6})=2.6$ MHz.",
+   "why": "Symbol scheme in the derivation."
+  },
+  {
+   "id": "07_C7_C7a_F6-023",
+   "finding": "symbol scheme",
+   "old": "$\\theta_b/\\Omega=\\lambda/(D\\Omega)=1/\\Delta f$",
+   "new": "$\\theta_b/\\dot\\theta=\\lambda/(D\\dot\\theta)=1/\\Delta f_{\\rm scan}$",
+   "why": "Symbol scheme in the derivation."
+  },
+  {
+   "id": "07_C7_C7a_F6-024",
+   "finding": "symbol scheme",
+   "old": "- **FFT bins spread:** $T_c\\,\\Delta f$ for $T_c=10$ µs, e.g. $10\\ \\mu{\\rm s}\\times2.6\\ {\\rm MHz}\\approx26$. An FFT over a chirp of length $T_c$ has bins $1/T_c$ wide, so a tone spread over $\\Delta f$ occupies $T_c\\,\\Delta f$ bins.",
+   "new": "- **FFT bins spread:** $T_c\\,\\Delta f_{\\rm scan}$ for $T_c=10$ µs, e.g. $10\\ \\mu{\\rm s}\\times2.6\\ {\\rm MHz}\\approx26$. An FFT over a chirp of length $T_c$ has bins $1/T_c$ wide, so a tone spread over $\\Delta f_{\\rm scan}$ occupies $T_c\\,\\Delta f_{\\rm scan}$ bins.",
+   "why": "Symbol scheme in the derivation."
+  },
+  {
+   "id": "07_C7_C7a_F6-025",
+   "finding": "symbol scheme",
+   "old": "$D_{\\max}=\\lambda/(\\Omega T_c)$",
+   "new": "$D_{\\max}=\\lambda/(\\dot\\theta T_c)$",
+   "why": "Symbol scheme in the derivation."
+  },
+  {
+   "id": "07_C7_C7a_F6-026",
+   "finding": "symbol scheme",
+   "old": "at scan frequency $f$ (Hz) peaks at $\\Omega=2\\pi f\\Theta_0=2\\pi\\times1{,}000\\times0.524\\ {\\rm rad}=3{,}290$ rad/s",
+   "new": "at scan frequency $f_{\\rm mirror}$ (Hz) peaks at $\\dot\\theta=2\\pi f_{\\rm mirror}\\Theta_0=2\\pi\\times1{,}000\\times0.524\\ {\\rm rad}=3{,}290$ rad/s",
+   "why": "Optical scan rate $\\dot\\theta$; mirror frequency $f_{\\rm mirror}$ as in §C4d."
+  },
+  {
+   "id": "07_C7_C7a_F6-027",
+   "finding": "symbol scheme",
+   "old": "the mechanical rate is $\\omega=3{,}000\\times2\\pi/60=314$ rad/s.",
+   "new": "the mechanical rate is $\\dot\\theta_{\\rm m}=3{,}000\\times2\\pi/60=314$ rad/s.",
+   "why": "Mechanical rate symbol."
+  },
+  {
+   "id": "07_C7_C7a_F6-028",
+   "finding": "symbol scheme; report §3 flag (v vs v_r)",
+   "old": "The false velocity is therefore $2\\omega\\bar s\\cos\\theta_i=2\\times314\\times0.0115\\times0.866=6.3$ m/s, and $f_{\\rm bias}=2v/\\lambda=2\\times6.3/(1.55\\times10^{-6})=8.1$ MHz, with $v$ the false velocity.",
+   "new": "The false velocity is therefore $2\\dot\\theta_{\\rm m}\\bar s\\cos\\theta_i=2\\times314\\times0.0115\\times0.866=6.3$ m/s, and $f_{\\rm bias}=2v_r/\\lambda=2\\times6.3/(1.55\\times10^{-6})=8.1$ MHz, with $v_r$ the false radial velocity.",
+   "why": "Mechanical rate symbol; radial velocity $v_r$."
+  },
+  {
+   "id": "07_C7_C7a_F6-029",
+   "finding": "symbol scheme",
+   "old": "$d\\bar s/dt=h\\,\\omega\\sec^2\\phi$ (with $\\sec\\phi=1/\\cos\\phi$), which is 6.3 m/s at scan centre and 8.4 m/s at ±30°. The bias frequency therefore changes at $(4\\omega\\cos\\theta_i/\\lambda)\\,d\\bar s/dt$",
+   "new": "$d\\bar s/dt=h\\,\\dot\\theta_{\\rm m}\\sec^2\\phi$ (with $\\sec\\phi=1/\\cos\\phi$), which is 6.3 m/s at scan centre and 8.4 m/s at ±30°. The bias frequency therefore changes at $(4\\dot\\theta_{\\rm m}\\cos\\theta_i/\\lambda)\\,d\\bar s/dt$",
+   "why": "Mechanical rate symbol."
+  },
+  {
+   "id": "07_C7_C7a_F6-030",
+   "finding": "report #27; symbol scheme",
+   "old": "  - A 1 kHz, ±15° MEMS mirror centred to 0.2 mm ($\\bar s=0.2$ mm): up to ±0.57 m/s, oscillating at the scan frequency. The peak mechanical rate is $\\omega=2\\pi\\times1{,}000\\times0.262\\ {\\rm rad}=1{,}645$ rad/s ($15^\\circ=0.262$ rad), so at the same 30° incidence $2\\omega\\bar s\\cos\\theta_i=2\\times1{,}645\\times2\\times10^{-4}\\times0.866=0.57$ m/s.",
+   "new": "  - A 1 kHz MEMS mirror swinging ±15° mechanically (±30° optical, the table's MEMS row), centred to 0.2 mm ($\\bar s=0.2$ mm), shows a false velocity of up to ±0.57 m/s that oscillates at the scan frequency. The peak mechanical rate is $\\dot\\theta_{\\rm m}=2\\pi\\times1{,}000\\times0.262\\ {\\rm rad}=1{,}645$ rad/s ($15^\\circ=0.262$ rad), so at the same 30° incidence $2\\dot\\theta_{\\rm m}\\bar s\\cos\\theta_i=2\\times1{,}645\\times2\\times10^{-4}\\times0.866=0.57$ m/s.",
+   "why": "Says the ±15° is mechanical and links it to the table's ±30° optical MEMS row; full sentence."
+  },
+  {
+   "id": "07_C7_C7a_F6-031",
+   "finding": "report #10",
+   "old": "It places the problem at mirror speeds above about 5 kdeg/s, with \"little impact\" below.",
+   "new": "It places the problem at mirror speeds above about 5 kdeg/s, with \"little impact\" below. The table treats this as an optical scan rate and assumes a 5 mm beam [E]; if the patent means the mirror's mechanical rate, the optical rate is 10,000°/s and the spread doubles to 0.56 MHz.",
+   "why": "Says how the table reads Aeva's threshold and what the other reading gives."
+  },
+  {
+   "id": "07_C7_C7a_F6-032",
+   "finding": "symbol scheme",
+   "old": "That is the $D\\lesssim\\lambda/(\\Omega T_c)$ condition of Eq. (87)",
+   "new": "That is the $D\\lesssim\\lambda/(\\dot\\theta T_c)$ condition of Eq. (87)",
+   "why": "Symbol scheme."
+  },
+  {
+   "id": "07_C7_C7a_F6-033",
+   "finding": "report §3 flag (spelling)",
+   "old": "Insight Lidar's patent",
+   "new": "Insight LiDAR's patent",
+   "why": "Matches the company's spelling in §C3a and §C7a."
+  },
+  {
+   "id": "07_C7_C7a_F6-034",
+   "finding": "report #28",
+   "old": "This is the frequency-domain face of the walk-off (§C7a, §C10.3a), the lateral offset between where the beam points when the light returns and where it pointed when the light left.",
+   "new": "Scanner-induced Doppler is the companion of walk-off (§C0 subsection 2, §C7a subsection 2(d), §C10.3a). Both compare the angle the beam turns with its width $\\lambda/D$: walk-off over the round trip $2R/c$, Doppler spreading over the chirp $T_c$ (Eq. (87)).",
+   "why": "Walk-off is an angle and a separate error (§C0 subsection 2); states what the two effects share."
+  },
+  {
+   "id": "07_C7_C7a_F6-035",
+   "finding": "report #11",
+   "old": "- Reaching 2–4 Mpts/s therefore needs **tens of parallel coherent channels**, each with its own 100–400 MHz ADC path: at a 10 µs dwell, $N_{\\rm ch}=\\dot N\\,T_{\\rm dwell}=2\\times10^{6}\\ {\\rm s^{-1}}\\times10\\times10^{-6}\\ {\\rm s}=20$ channels, and 40 for 4 Mpts/s.",
+   "new": "- Reaching 2–4 Mpts/s (million points per second) therefore needs **tens of parallel coherent channels**. Each digitizes 100–400 MHz of beat bandwidth, sampled at ≈2.5× the highest beat plus Doppler frequency: ≈1.2 GS/s (gigasamples per second) for 5 µs chirps at 300 m (§C7a subsection 2(c)). A 10 µs dwell is a 5 µs up-chirp plus a 5 µs down-chirp, whose beat at 300 m is 400 MHz rather than the 200 MHz of the 10 µs example above. At that dwell, $N_{\\rm ch}=\\dot N\\,T_{\\rm dwell}=2\\times10^{6}\\ {\\rm s^{-1}}\\times10\\times10^{-6}\\ {\\rm s}=20$ channels, and 40 for 4 Mpts/s.",
+   "why": "Separates beat bandwidth from sample rate and says that a 10 µs dwell means 5 µs chirps; defines Mpts/s and GS/s."
+  },
+  {
+   "id": "07_C7_C7a_F6-036",
+   "finding": "report #29",
+   "old": "Matching areas does not guarantee strong response at square-cell corners.",
+   "new": "Matching the mode's solid angle to the cell's does not make its response uniform: a round, Gaussian-shaped mode responds weakly near the corners of a square cell.",
+   "why": "Replaces a cryptic sentence."
+  },
+  {
+   "id": "07_C7_C7a_F6-037",
+   "finding": "report #29",
+   "old": "The 1 mm value is therefore **an illustrative equivalent-mode area, not a prohibition on larger FMCW telescopes**.",
+   "new": "The 1 mm diameter (0.8 mm²) is therefore **an illustrative size for a mode that fills a 0.1° cell, not a prohibition on larger FMCW telescopes**. §C7a takes the other branch: a 20 mm aperture whose mode collects $A_{\\rm mode}\\approx64$ mm² at 200 m, with a beam that covers only ≈2% of a 0.05° cell (§C7b subsection 1(b), §C10.3a).",
+   "why": "A diameter is not an area; links the illustration to the 20 mm, 64 mm² design of §C7a."
+  },
+  {
+   "id": "07_C7_C7a_F6-038",
+   "finding": "report #25",
+   "old": "- no retroreflector blooming, i.e. no smearing of very bright returns into neighbouring pixels (a vendor claim).",
+   "new": "- no retroreflector blooming, i.e. no smearing of very bright returns into neighbouring pixels: Aeva, Mobileye, SiLC and Voyant claim it [P], none has been tested independently, and Settembrini et al. (2026) saw no noticeable blooming beside a retroreflector 37.7 dB brighter than a 5% target [P] (§C0 subsection 10.7).",
+   "why": "Replaces the untagged '(a vendor claim)' with the tagged evidence of §C0 subsection 10.7."
+  },
+  {
+   "id": "07_C7_C7a_F6-039",
+   "finding": "report #34",
+   "old": "In this simple array model the steering angle $\\theta_{\\rm s}$, measured from the array normal, stays free of grating lobes for",
+   "new": "In this simple array model the field $\\pm\\arcsin(\\lambda/2d)$ about the array normal is free of grating lobes: while the main beam steers to any angle $\\theta_{\\rm s}$ inside it (measured from the array normal), the nearest grating lobe stays outside, reaching the opposite edge when $\\theta_{\\rm s}$ reaches the edge. The usable steering range is therefore",
+   "why": "At 1.5 µm pitch a grating lobe always exists somewhere; Eq. (91) bounds the lobe-free field."
+  },
+  {
+   "id": "07_C7_C7a_F6-040",
+   "finding": "report #34",
+   "old": "where $\\arcsin$ is the inverse sine, so the steering range is $\\pm\\arcsin(\\lambda/2d)$. At $d=1.5$ µm",
+   "new": "where $\\arcsin$ is the inverse sine. At $d=1.5$ µm",
+   "why": "Removes the restatement that the lead-in now carries."
+  },
+  {
+   "id": "07_C7_C7a_F6-041",
+   "finding": "report #36",
+   "old": "Covering ±60° at 1550 nm",
+   "new": "Covering ±60° at 1,550 nm",
+   "why": "One spelling of 1,550 nm."
+  },
+  {
+   "id": "07_C7_C7a_F6-042",
+   "finding": "report #36",
+   "old": "of about **0.9 and 1.8 mm** at 1550 nm",
+   "new": "of about **0.9 and 1.8 mm** at 1,550 nm",
+   "why": "One spelling of 1,550 nm."
+  },
+  {
+   "id": "07_C7_C7a_F6-043",
+   "finding": "report #35; report §3 flag (two Analog Photonics OPAs)",
+   "old": "- A published **8,192-element, 1 µm-pitch** coherent OPA has a nearly **8 mm transmit aperture** ($8{,}192\\times1\\ \\mu{\\rm m}=8.2$ mm): near a centimeter, but below a conventional single field [P, Poulton et al., 2022].",
+   "new": "- Analog Photonics' published **8,192-element, 1 µm-pitch** coherent OPA, a research device distinct from the 1.5 µm-pitch OPA under Commercial status, has an **≈8.2 mm transmit aperture** ($8{,}192\\times1\\ \\mu{\\rm m}=8.2$ mm), well inside one ≈26×33 mm reticle field (§C6(a)) [P, Poulton et al., 2022].",
+   "why": "8.2 mm is not 'nearly 8 mm'; gives the field size; says the two Analog Photonics OPAs differ."
+  },
+  {
+   "id": "07_C7_C7a_F6-044",
+   "finding": "report #25; report #18; report §3 flag (45% PDE)",
+   "old": "(driver-supervised assistance with extended features such as navigation-guided highway driving). Meanwhile SPAD ToF keeps raising the performance bar (40 Mpts/s, 45% photon detection efficiency, PDE).",
+   "new": "(driver-supervised assistance with extended features such as navigation-guided highway driving) [E]. Meanwhile SPAD ToF keeps raising the performance bar: RoboSense's 2,160-beam EM4 reaches 41 Mpts/s [P] (§C7a subsection 1), and RoboSense claims a 45% photon detection efficiency (PDE) for its Phoenix SPAD chip [P, unverified] (§C5).",
+   "why": "Tags the cost bar; attributes 41 Mpts/s and the unverified 45% PDE to their products."
+  },
+  {
+   "id": "07_C7_C7a_F6-045",
+   "finding": "report #17",
+   "old": "totals from the §3 table). Both receivers are held to the same detection rule (§C0 subsection 10.3). With the lower FMCW efficiencies measured so far (§2(a))",
+   "new": "totals from the subsection 3 table). Both receivers are held to the same detection rule (§C0 subsection 10.3). With the lower FMCW efficiencies measured so far (subsection 2(a) below)",
+   "why": "Local references no longer look like report-level sections."
+  },
+  {
+   "id": "07_C7_C7a_F6-046",
+   "finding": "report #37",
+   "old": "**Automotive product maturity: probably, in a narrower segment.**",
+   "new": "**Automotive product maturity: about even odds by 2030 (≈50–60%, subsection 6), in a narrower segment.**",
+   "why": "Matches the 50–60% of subsection 6."
+  },
+  {
+   "id": "07_C7_C7a_F6-047",
+   "finding": "report #38",
+   "old": "- *(a)* Modelled sensor electrical power (3 W overhead + point rate × electrical energy per point) for a 200 m, 10% extended target. The 3 W is an assumed fixed overhead for scanner motor, system SoC, heaters and power conversion, the same for both sensor types. Bands span the low/high parameter sets, and the yellow band marks the 8–25 W typical of automotive lidars.\n- *Product markers* show published point rate and power. They are **at different ranges**, so they are sanity checks, not fits:\n  - Hesai ATX: 3.84 Mpts/s, 8 W, 230 m at 10% [P];\n  - Hesai ETX: ≈15 Mpts/s implied by field of view ÷ resolution × frame rate ($120^\\circ/0.06^\\circ=2{,}000$ columns × $20^\\circ/0.027^\\circ\\approx740$ rows × 10 Hz ≈ 14.8 Mpts/s, §C3b), <13 W, 300 m at 10% [P/E];\n  - LuminWave F1: 128 lines at 0.1° and 10 Hz, ≈1.5 Mpts/s implied ($120^\\circ/0.1^\\circ=1{,}200$ columns × 128 lines × 10 Hz = 1.54 Mpts/s over its 120° horizontal field, §C3b), <45 W, 250 m at 10% [P/E].\n- *(b)* Central energy breakdown.",
+   "new": "- *(a)* Modelled sensor electrical power (3 W overhead + point rate × electrical energy per point) for a 200 m, 10% extended target. The 3 W is an assumed fixed overhead for scanner motor, the sensor's system-on-chip (SoC), heaters and power conversion, the same for both sensor types. Bands span the low/high parameter sets, and the yellow band marks the 8–25 W typical of automotive lidars.\n  - *Product markers* show published point rate and power. They are **at different ranges**, so they are sanity checks, not fits; subsection 1 derives the implied rates:\n    - Hesai ATX: 3.84 Mpts/s (million points per second), 8 W, 230 m at 10% [P];\n    - Hesai ETX: ≈15 Mpts/s implied, <13 W, 300 m at 10% [P/E];\n    - LuminWave F1: 128 lines at 0.1° and 10 Hz, ≈1.5 Mpts/s implied, <45 W, 250 m at 10% [P/E].\n- *(b)* Electrical energy per point in the central case, for ToF and FMCW in 2026 and 2032, split into the emitted optical energy, the loss in the laser, semiconductor optical amplifier (SOA) and driver, and the receiver electronics.",
+   "why": "Nests the product markers under (a), says what (b) shows, keeps each rate derivation once (in subsection 1)."
+  },
+  {
+   "id": "07_C7_C7a_F6-048",
+   "finding": "report #1 (table row)",
+   "old": "| SiLC Eyeonic Edge | 1 M pts/s | ≤10 m | not published | [D] industrial |",
+   "new": "| SiLC Eyeonic Edge | 1 M pts/s | ≤10 m | not published | [D] industrial |\n| Analog Photonics FS-4S (optical phased array, OPA) | 90 kpts/s in its region-of-interest (ROI) mode; 400 kpts/s in its base mode | 200 m at 10% in a 20° × 10° ROI; 80 m at 10% over 60° × 14° [P] | **35 W** [P]; ≈390 µJ per point in the ROI mode [E] | No production award found (§C7 Commercial status) |",
+   "why": "Adds the one vendor the text above says publishes all three numbers."
+  },
+  {
+   "id": "07_C7_C7a_F6-049",
+   "finding": "report #1 (table row)",
+   "old": "- LuminWave F1: 1,200 columns (120° at 0.1°) × 128 lines × 10 Hz = 1.54 Mpts/s (§C3b).",
+   "new": "- LuminWave F1: 1,200 columns (120° at 0.1°) × 128 lines × 10 Hz = 1.54 Mpts/s (§C3b).\n- Analog Photonics FS-4S: $35\\ {\\rm W}/(9\\times10^{4}\\ {\\rm s^{-1}})=3.9\\times10^{-4}$ J, i.e. ≈390 µJ per point in the ROI mode (§C0 subsection 10.8, §C7b subsection 3).",
+   "why": "Shows the substitution behind the 390 µJ."
+  },
+  {
+   "id": "07_C7_C7a_F6-050",
+   "finding": "report #38",
+   "old": "**ETX:** ≈15 Mpts/s implied at <13 W, 300 m at 10% [P/E].",
+   "new": "**ETX:** ≈15 Mpts/s implied by field of view ÷ resolution × frame rate ($120^\\circ/0.06^\\circ=2{,}000$ columns × $20^\\circ/0.027^\\circ\\approx740$ rows × 10 Hz ≈ 14.8 Mpts/s, §C3b), at <13 W, 300 m at 10% [P/E].",
+   "why": "Keeps the ETX derivation once, here, instead of in the figure caption."
+  },
+  {
+   "id": "07_C7_C7a_F6-051",
+   "finding": "report #25",
+   "old": "single return [T, snippet].",
+   "new": "single return [S].",
+   "why": "A search snippet is [S] in the legend."
+  },
+  {
+   "id": "07_C7_C7a_F6-052",
+   "finding": "report #36",
+   "old": "**(a) Optical energy per point: ≈93 nJ for ToF against ≈0.30 µJ for FMCW.**",
+   "new": "**(a) Optical energy per point: ≈93 nJ for ToF against ≈300 nJ (0.30 µJ) for FMCW.**",
+   "why": "Same unit on both sides of the comparison."
+  },
+  {
+   "id": "07_C7_C7a_F6-053",
+   "finding": "report #7",
+   "old": "a 60 Mcps count-rate ceiling and 0.1% afterpulsing [P]. Its passive recharge behaves paralyzably, since the 60 Mcps ceiling equals $1/(e\\tau_d)$ (§C5a): a SPAD is live only if no photon arrived in the last 6 ns. In bright sun each SPAD is therefore dead 21.6% of the time (§C0 subsection 10.3), and a SPAD that is dead when the echo arrives misses it, so the live fraction 0.784 multiplies the signal efficiency as well as the background.",
+   "new": "a 60 Mcps (million counts per second) count-rate ceiling and 0.1% afterpulsing [P]. Its passive recharge behaves paralyzably: a SPAD is live only if no photon arrived during the last dead time $\\tau_d=6$ ns. A paralyzable counter counts at most $1/(e\\tau_d)=1/(2.718\\times6\\ {\\rm ns})=61$ Mcps, with $e$ Euler's number, which matches the measured 60 Mcps ceiling (§C5a, Eq. (76)); a non-paralyzable counter would instead approach $1/\\tau_d=167$ Mcps. In the model's central \"bright sun\" case, half the background of a fully sunlit scene of reflectance 0.9 (the model's high case; §C0 subsection 10.3), each of the nine SPADs of a macro-pixel counts $r=3.66\\times10^{8}/9=4.06\\times10^{7}$ s⁻¹, so $r\\tau_d=0.244$ and each SPAD is dead a fraction $1-e^{-0.244}=21.6\\%$ of the time (Eq. (82)). A SPAD that is dead when the echo arrives misses it, so the live fraction 0.784 multiplies the signal efficiency as well as the background.",
+   "why": "Defines $\\tau_d$ and Mcps, explains the paralyzable inference, defines bright sun and gives the per-SPAD rate behind 21.6%."
+  },
+  {
+   "id": "07_C7_C7a_F6-054",
+   "finding": "symbol scheme",
+   "old": "$$E_{\\rm opt}=\\frac{n_{\\rm req}\\,E_{\\rm ph}\\,\\pi R^2}{\\rho\\,A_{\\rm eff}\\,\\eta} \\tag{93}$$",
+   "new": "$$E_{\\rm pt}=\\frac{n_{\\rm req}\\,E_{\\rm ph}\\,\\pi R^2}{\\rho\\,A_{\\rm eff}\\,\\eta} \\tag{93}$$",
+   "why": "$E_{\\rm pt}$ for optical energy per point; tag unchanged."
+  },
+  {
+   "id": "07_C7_C7a_F6-055",
+   "finding": "symbol scheme",
+   "old": "- $E_{\\rm opt}$ is the optical energy the transmitter must emit per point (J);",
+   "new": "- $E_{\\rm pt}$ is the optical energy the transmitter must emit per point (J);",
+   "why": "Symbol scheme."
+  },
+  {
+   "id": "07_C7_C7a_F6-056",
+   "finding": "symbol scheme",
+   "old": "the detected number is $E_{\\rm opt}/E_{\\rm ph}$ photons",
+   "new": "the detected number is $E_{\\rm pt}/E_{\\rm ph}$ photons",
+   "why": "Symbol scheme."
+  },
+  {
+   "id": "07_C7_C7a_F6-057",
+   "finding": "symbol scheme",
+   "old": "$E_{\\rm opt}=25\\times2.11\\times10^{-19}\\times1.26\\times10^{5}/(0.1\\times4.91\\times10^{-4}\\times0.145)=6.64\\times10^{-13}/(7.12\\times10^{-6})\\approx9.3\\times10^{-8}$ J",
+   "new": "$E_{\\rm pt}=25\\times2.11\\times10^{-19}\\times1.26\\times10^{5}/(0.1\\times4.91\\times10^{-4}\\times0.145)=6.64\\times10^{-13}/(7.12\\times10^{-6})\\approx9.3\\times10^{-8}$ J",
+   "why": "Symbol scheme."
+  },
+  {
+   "id": "07_C7_C7a_F6-058",
+   "finding": "report #5",
+   "old": "It is the antenna-theorem quantity of Eq. (90) in §C7, for a mode set by a 20 mm aperture rather than by a 0.1° cell. $A_{\\rm mode}\\approx64$ mm² for a 20 mm monostatic Gaussian at 200 m (§C10.3b; derived in §C0 subsection 10.2), which already includes the polarization and mode-shape factors. Piggott et al. (Waymo) put one mode at **≈6 dB below ToF** (3 dB polarization, 3 dB aperture) [P]. The four looks together give $A_{\\rm eff}=4A_{\\rm mode}=255$ mm².",
+   "new": "It therefore already includes the polarization and mode-shape factors. It rests on the antenna theorem of Eq. (90) in §C7, applied to a monostatic Gaussian beam rather than to a 0.1° cell (§C0 subsection 10.2):\n    - §C0 Eq. (33) gives $A_{\\rm mode}=t^2\\lambda^2R^2/(2\\pi w^2)$, where $w$ is the beam's 1/e² radius at the target, $t^2=0.84$ the aperture-truncation factor counted on transmit and on receive, and the 2 in the denominator the factor ½ for the single polarization the LO accepts.\n    - A 20 mm aperture launches a beam of 1/e² radius $w_0=0.45\\times20\\ {\\rm mm}=9$ mm, whose Rayleigh range is $\\pi w_0^2/\\lambda=\\pi\\times(9\\times10^{-3}\\ {\\rm m})^2/(1.55\\times10^{-6}\\ {\\rm m})\\approx164$ m. At 200–250 m the target is only 1.2–1.5 Rayleigh ranges away, so the spot has not yet grown in proportion to range, and $A_{\\rm mode}\\propto R^2/w^2$ still rises with range. At 200 m, $w=14.2$ mm and $A_{\\rm mode}=0.84\\times(1.55\\times10^{-6})^2\\times200^2/(2\\pi\\times0.0142^2)\\approx64$ mm² (§C7b subsection 1(b), §C10.3b); at 250 m it is 74.5 mm², the value used in the Waymo check below.\n    - Piggott et al. (Waymo) put one mode ≈6 dB below a direct-detection receiver of the same aperture (3 dB polarization, 3 dB aperture) [P]. In this model one mode collects 4.9× (6.9 dB) less than the 314 mm² of its own 20 mm aperture ($314/64=4.9$).\n    - The four looks together give $A_{\\rm eff}=4A_{\\rm mode}=255$ mm².",
+   "why": "Shows how 64 mm² follows from §C0 Eq. (33), why it rises from 200 to 250 m, and what Waymo's 6 dB compares."
+  },
+  {
+   "id": "07_C7_C7a_F6-059",
+   "finding": "report #30",
+   "old": "with four averaged speckles at a $10^{-6}$ false-alarm probability, and finds that 10–30 photoelectrons give only ≈50% [P]; 50 is the one-ramp figure (47 by the same rule).",
+   "new": "with four averaged speckles at a $10^{-6}$ false-alarm probability per frequency bin, and finds that 10–30 photoelectrons give only ≈50% [P]. Waymo's 50 requires the peak in one ramp only: the report's rule gives 47 for that case and 88.5 when the peak must appear in both ramps (§C0 subsection 10.3).",
+   "why": "Waymo's false-alarm rate is per bin; spells out the 50, 47 and 88.5 comparison."
+  },
+  {
+   "id": "07_C7_C7a_F6-060",
+   "finding": "symbol scheme",
+   "old": "Eq. (93) gives $E_{\\rm opt}=120\\times1.28\\times10^{-19}\\times1.26\\times10^{5}/(0.1\\times2.55\\times10^{-4}\\times0.25)=1.93\\times10^{-12}/(6.37\\times10^{-6})\\approx3.0\\times10^{-7}$ J",
+   "new": "Eq. (93) gives $E_{\\rm pt}=120\\times1.28\\times10^{-19}\\times1.26\\times10^{5}/(0.1\\times2.55\\times10^{-4}\\times0.25)=1.93\\times10^{-12}/(6.37\\times10^{-6})\\approx3.0\\times10^{-7}$ J",
+   "why": "Symbol scheme."
+  },
+  {
+   "id": "07_C7_C7a_F6-061",
+   "finding": "report #8",
+   "old": "gives $50\\times1.28\\times10^{-19}\\times\\pi\\times250^2/(0.05\\times7.45\\times10^{-5}\\times0.25)=1.35$ µJ, inside that range.",
+   "new": "gives $50\\times1.28\\times10^{-19}\\times\\pi\\times250^2/(0.05\\times7.45\\times10^{-5}\\times0.25)=1.35$ µJ, inside that range. The check uses one receiver's $A_{\\rm mode}$, so it assumes that all 50 photoelectrons, and all four of Waymo's speckles, arrive through one receiver. With four separate receivers, as in the §C7a design, the same 50 photoelectrons would need $1.35/4\\approx0.34$ µJ, below Waymo's range, so the agreement holds only if Waymo's four speckles come from within one receiver.",
+   "why": "States the one-receiver assumption the check rests on and what four receivers would give."
+  },
+  {
+   "id": "07_C7_C7a_F6-062",
+   "finding": "report #36",
+   "old": "The 1550 nm eye-safety allowance (§C4c)",
+   "new": "The 1,550 nm eye-safety allowance (§C4c)",
+   "why": "One spelling of 1,550 nm."
+  },
+  {
+   "id": "07_C7_C7a_F6-063",
+   "finding": "report #36; symbol scheme",
+   "old": "on FMCW point rate at 1550 nm. Wall-plug efficiency $\\eta_{\\rm wp}$ is the optical power out divided by the electrical power in, so the laser's electrical energy per point is $E_{\\rm opt}/\\eta_{\\rm wp}$",
+   "new": "on FMCW point rate at 1,550 nm. Wall-plug efficiency $\\eta_{\\rm wp}$ is the optical power out divided by the electrical power in, so the laser's electrical energy per point is $E_{\\rm pt}/\\eta_{\\rm wp}$",
+   "why": "1,550 nm spelling; symbol scheme."
+  },
+  {
+   "id": "07_C7_C7a_F6-064",
+   "finding": "report #25; report §3 flag (ToF wall-plug efficiency)",
+   "old": "reach ≈15–30% system wall-plug efficiency on short pulses.",
+   "new": "reach ≈15–30% system wall-plug efficiency on short pulses [E]. The model spans this range and takes 20% as its 2026 central value (25% in 2032; subsection 3).",
+   "why": "Tags the range and ties it to the model's 20% central value."
+  },
+  {
+   "id": "07_C7_C7a_F6-065",
+   "finding": "symbol scheme",
+   "old": "$P_{\\rm opt}=\\dot N E_{\\rm opt}=10^{7}\\ {\\rm s^{-1}}\\times0.303\\ \\mu{\\rm J}=3.0$ W",
+   "new": "$P_{\\rm opt}=\\dot N E_{\\rm pt}=10^{7}\\ {\\rm s^{-1}}\\times0.303\\ \\mu{\\rm J}=3.0$ W",
+   "why": "Symbol scheme."
+  },
+  {
+   "id": "07_C7_C7a_F6-066",
+   "finding": "report #33; report §3 flag (v vs v_r)",
+   "old": "On top of it comes the Doppler shift $f_D=2v/\\lambda$ of the fastest target, $2\\times70/(1.55\\times10^{-6})\\approx90$ MHz at a closing speed $v=70$ m/s. The model samples at $f_s\\approx2.5(f_b+f_D)$, where $f_s$ is the ADC sample rate and $f_b$ is taken at the maximum range $R_{\\max}$.",
+   "new": "On top of it comes the Doppler shift $f_D=2v_r/\\lambda$ of the fastest target, $2\\times70/(1.55\\times10^{-6})\\approx90$ MHz at a closing speed $v_r=70$ m/s. The model samples at $f_s\\approx2.5(f_b+f_D)$, where $f_s$ is the ADC sample rate and $f_b$ is taken at the maximum range $R_{\\max}$. The receiver must search the whole 0–300 m window even when the design target is at 200 m, so $R_{\\max}=300$ m sets the digitization while 200 m sets the optical energy.",
+   "why": "Says why digitization uses 300 m while the optical budget uses 200 m."
+  },
+  {
+   "id": "07_C7_C7a_F6-067",
+   "finding": "report #23; report #6",
+   "old": "- **ToF is event-driven.** A SPAD-SoC (a SPAD array stacked on its own processing chip) spends energy per avalanche and histogram increment (a few pJ each; ≈5,990 events per point in bright sun), plus fixed clocking and readout. Calibrated to Sony's 1.19 W development chip (§C5a), that is **≈70 nJ per point** (20–126). Its histogram also has ≈2,000 bins, but they are *counted* sparsely, not *sampled and transformed* densely. The event count is background count rate × listening time × live fraction + signal counts, $r_{\\rm bg}\\,t_{\\rm listen}\\,(1-f_{\\rm dead})+n_{\\rm req}$: $3.66\\times10^{8}\\ {\\rm s^{-1}}\\times20.8\\ \\mu{\\rm s}\\times0.784+25\\approx5{,}990$. This takes a background count rate $r_{\\rm bg}=3.66\\times10^{8}$ s⁻¹ per macro-pixel, half the fully sunlit 940 nm case of §C6(d) (Eq. (81)) evaluated at the model's PDE of 0.37; a listening time $t_{\\rm listen}=20.8$ µs per point (a model input, equal to one column period of a 520-line sensor at 25 Mpts/s); the live fraction 0.784 that the paralyzable form of Eq. (82) gives at this rate (the SPADs are recharging and blind 21.6% of the time); and $n_{\\rm req}=25$ signal counts. §C0 subsection 10.3 derives the same background as 2.87 counts per 1 ns bin. At 5 pJ per event plus a fixed 40 nJ per point, $E=40\\ {\\rm nJ}+5{,}990\\times5\\ {\\rm pJ}=70$ nJ. The fixed term follows the calibration: 1–2 W for an IMX479-class chip at 25 Mpts/s is 40–80 nJ per point including events (Sony's 1.19 W divided by $25\\times10^{6}$ s⁻¹ is 48 nJ). The range runs from 20 nJ (night: 20 nJ fixed, 4 pJ per event) to $60\\ {\\rm nJ}+(7.31\\times10^{8}\\times20.8\\ \\mu{\\rm s}\\times0.614+35)\\times7\\ {\\rm pJ}=126$ nJ (the fully sunlit scene, live fraction 0.614).",
+   "new": "- **ToF is event-driven.** A SPAD-SoC (a SPAD array stacked on its own processing chip) spends energy per avalanche and histogram increment, a few pJ each, plus fixed clocking and readout. Its histogram also has ≈2,000 bins, but they are *counted* sparsely, not *sampled and transformed* densely.\n  - *Result:* **≈70 nJ per point** (20–126), calibrated to Sony's 1.19 W development chip (§C5a).\n  - *Event count:* background count rate × listening time × live fraction + signal counts, $r_{\\rm bg}\\,t_{\\rm listen}\\,(1-f_{\\rm dead})+n_{\\rm req}=3.66\\times10^{8}\\ {\\rm s^{-1}}\\times20.8\\ \\mu{\\rm s}\\times0.784+25\\approx5{,}990$ events per point in bright sun. The inputs are:\n    - the background count rate $r_{\\rm bg}=3.66\\times10^{8}$ s⁻¹ per macro-pixel, half the fully sunlit 940 nm case of §C6(d) (Eq. (81)) evaluated at the model's PDE of 0.37, i.e. a sunlit scene of reflectance ≈0.45 or a pixel half filled by bright surfaces (§C0 subsection 10.3);\n    - a listening time $t_{\\rm listen}=20.8$ µs per point, a model input equal to one column period of a 520-line sensor at 25 Mpts/s ($520/(25\\times10^{6}\\ {\\rm s^{-1}})=20.8$ µs);\n    - the live fraction 0.784 that the paralyzable form of Eq. (82) gives at the per-SPAD rate $r=r_{\\rm bg}/9=4.06\\times10^{7}$ s⁻¹ (nine SPADs per 3×3 macro-pixel; subsection 2(a)): $e^{-r\\tau_d}=e^{-0.244}=0.784$, so each SPAD is blind 21.6% of the time;\n    - $n_{\\rm req}=25$ signal counts.\n  - *Cross-check:* the same rate gives $b=r_{\\rm bg}\\,\\Delta t_{\\rm bin}\\,N_{\\rm shots}\\,(1-f_{\\rm dead})=3.66\\times10^{8}\\ {\\rm s^{-1}}\\times1\\ {\\rm ns}\\times10\\times0.784=2.87$ background counts per 1 ns bin, summed over the $N_{\\rm shots}=10$ shots of a point, the value §C0 subsection 10.3 uses.\n  - *Energy:* at 5 pJ per event plus a fixed 40 nJ per point, $E=40\\ {\\rm nJ}+5{,}990\\times5\\ {\\rm pJ}=70$ nJ.\n  - *Calibration:* the 70 nJ total sits inside the 40–80 nJ per point that a 1–2 W IMX479-class chip implies at 25 Mpts/s ($1\\ {\\rm W}/(25\\times10^{6}\\ {\\rm s^{-1}})=40$ nJ); Sony's 1.19 W gives 48 nJ.\n  - *Range:* from 20 nJ at night (20 nJ fixed, 4 pJ per event) to $60\\ {\\rm nJ}+(7.31\\times10^{8}\\times20.8\\ \\mu{\\rm s}\\times0.614+35)\\times7\\ {\\rm pJ}=126$ nJ in the fully sunlit scene (live fraction 0.614).",
+   "why": "Splits the 330-word bullet; per-SPAD rate behind 0.784; defines bright sun; shows the 10 shots behind 2.87; the calibration applies to the 70 nJ total."
+  },
+  {
+   "id": "07_C7_C7a_F6-068",
+   "finding": "report #12",
+   "old": "A 4 µs dwell cuts these by a factor of 2.5, to 8, 40 and 100, but",
+   "new": "A 4 µs dwell cuts the channel counts by a factor of 2.5, to 8, 40 and 100 channels (32, 160 and 400 receivers), but",
+   "why": "'These' pointed at receiver counts; the numbers are channels."
+  },
+  {
+   "id": "07_C7_C7a_F6-069",
+   "finding": "report #13; symbol scheme",
+   "old": "- **Physics also bounds the minimum dwell:**\n  - the round trip (1.67 µs at 250 m, $2\\times250\\ {\\rm m}/c$);\n  - scan-induced beam walk-off. During the round trip $2R/c$ the beam direction turns by $\\Omega\\cdot2R/c$, where $\\Omega$ is the beam's angular scan rate (rad/s; for a spinning sensor, its rotation rate). At range $R$ the return therefore lands a lateral distance $\\Delta x\\approx2R^2\\Omega/c$ away from where the receiver now looks. Waymo says this makes 360°, 10 Hz spinning \"impractical for target ranges much above 100 m\" and pushes designs to step-and-stare fast axes (point, dwell, then jump) [P].\n- **The scan also bounds the maximum dwell:** a chirp that outlasts the beam's crossing time $\\theta_b/\\Omega$ (with $\\theta_b\\approx\\lambda/D$ the beam's angular width and $D$ its diameter) is spread by scanner-induced Doppler (§C7, Eq. (86)). At a Falcon-class 45,600°/s (the polygon row of the §C7 table), even the 1.67 µs round trip to 250 m exceeds the crossing time of any beam wider than ≈1.2 mm unless the broadening is compensated digitally [E: the crossing time $\\lambda/(D\\Omega)$ falls below 1.67 µs for $D>\\lambda/(\\Omega\\times1.67\\ \\mu{\\rm s})=1.55\\times10^{-6}/(796\\times1.67\\times10^{-6})=1.2$ mm].",
+   "new": "- **Physics bounds the minimum dwell:** one round trip, $\\tau=2R/c=2\\times250\\ {\\rm m}/(3\\times10^{8}\\ {\\rm m\\,s^{-1}})=1.67$ µs at 250 m.\n- **Walk-off bounds the scan rate.** During the round trip $2R/c$ the beam direction turns by $\\dot\\theta\\cdot2R/c$, where $\\dot\\theta$ is the beam's optical scan rate (rad/s; for a spinning sensor, its rotation rate). At range $R$ the return therefore lands a lateral distance $\\Delta x\\approx2R^2\\dot\\theta/c$ away from where the receiver now looks. For a 360°, 10 Hz spin ($\\dot\\theta=2\\pi\\times10\\ {\\rm s^{-1}}=62.8$ rad/s) the lag angle $2R\\dot\\theta/c$ is $2\\times100\\ {\\rm m}\\times62.8\\ {\\rm s^{-1}}/(3\\times10^{8}\\ {\\rm m\\,s^{-1}})=4.2\\times10^{-5}$ rad $=0.0024^\\circ$ at 100 m and 0.006° at 250 m, against the 0.0036° 1/e² half-angle of a beam sized for 250 m (§C10.3a). Waymo says this makes 360°, 10 Hz spinning \"impractical for target ranges much above 100 m\" and pushes designs to step-and-stare fast axes (point, dwell, then jump) [P]; the lag angles above show why.\n- **The scan also bounds the maximum dwell:** a chirp that outlasts the beam's crossing time $\\theta_b/\\dot\\theta$ (with $\\theta_b\\approx\\lambda/D$ the beam's angular width and $D$ its diameter) is spread by scanner-induced Doppler (§C7, Eq. (86)). At a Falcon-class 45,600°/s (the polygon row of the §C7 table), even the 1.67 µs round trip to 250 m exceeds the crossing time of any beam wider than ≈1.2 mm unless the broadening is compensated digitally [E: the crossing time $\\lambda/(D\\dot\\theta)$ falls below 1.67 µs for $D>\\lambda/(\\dot\\theta\\times1.67\\ \\mu{\\rm s})=1.55\\times10^{-6}/(796\\times1.67\\times10^{-6})=1.2$ mm]. For any wider beam the minimum dwell already exceeds the maximum, so no chirp length works without digital compensation, as §C7b subsection 2(g) also finds for a 0.05° beam at 300 m.",
+   "why": "Walk-off bounds the scan rate, not the dwell; ties Waymo's 100 m claim to the lag numbers; states the min/max dwell conclusion."
+  },
+  {
+   "id": "07_C7_C7a_F6-070",
+   "finding": "report #14; symbol scheme",
+   "old": "plus **≈50–100 mW of dedicated optical power**. The central model gives $E_{\\rm opt}/T_{\\rm dwell}=0.30\\ \\mu{\\rm J}/10\\ \\mu{\\rm s}=30$ mW per channel at 200 m; 50–100 mW corresponds to its high-energy case (0.88 µJ, 88 mW) or to 250–300 m, since the energy scales as $R^2$",
+   "new": "plus its own CW optical power: **≈30 mW per channel** in the central model at 200 m ($E_{\\rm pt}/T_{\\rm dwell}=0.30\\ \\mu{\\rm J}/10\\ \\mu{\\rm s}=30$ mW), rising to ≈50–90 mW in the high-energy case (0.88 µJ, 88 mW) or at 250–300 m, since the energy scales as $R^2$",
+   "why": "The bold lead number is the central 30 mW, not the high case."
+  },
+  {
+   "id": "07_C7_C7a_F6-071",
+   "finding": "report #15",
+   "old": "The laser must sweep ≈1.1–1.9 GHz continuously and without mode hops, in ramps of ≈4–16 µs repeated as a 30–120 kHz triangle.",
+   "new": "The laser must sweep more than the 1 GHz that 15 cm needs, continuously and without mode hops, because the first round trip $\\tau=2R/c$ of each ramp yields no usable beat (Eq. (110)). At 300 m that is 1.14–1.27 GHz in 9.5–16 µs ramps at ≤30 mW per channel, and 1.89 GHz in 4.25 µs ramps at 100 mW (§C7b subsection 2(g)), repeated as a 30–120 kHz triangle.",
+   "why": "Says why the sweep exceeds 1 GHz and pairs each sweep with its ramp and channel power."
+  },
+  {
+   "id": "07_C7_C7a_F6-072",
+   "finding": "report #15",
+   "old": "The implied chirp rate, $0.7$–$4.4\\times10^{14}$ Hz/s, is modest,",
+   "new": "The implied chirp rate, $0.7$–$1.3\\times10^{14}$ Hz/s at ≤30 mW per channel ($4.4\\times10^{14}$ Hz/s at 100 mW), is modest,",
+   "why": "The upper end belongs to the 100 mW case, not to ≤30 mW."
+  },
+  {
+   "id": "07_C7_C7a_F6-073",
+   "finding": "report #3 (Bianconi part)",
+   "old": "  - Integrated alternatives: SiN self-injection-locked lasers (42 kHz, 0.65% nonlinearity) and thin-film lithium niobate (TFLN) E-DBR lasers (378 kHz, 1.5%) [P, Bianconi et al. 2025]. Read as fractional chirp-rate errors, those nonlinearities are 13–30× above the $5\\times10^{-4}$ that 15 cm at 300 m tolerates, so they need pre-distortion or resampling [E].",
+   "new": "  - Integrated alternatives are SiN self-injection-locked lasers (42 kHz, 0.65% nonlinearity) and thin-film lithium niobate (TFLN) E-DBR lasers (378 kHz, 1.5%) [P, Bianconi et al. 2025]. Read as peak frequency deviations over a 1 GHz sweep, the reading applied to Waymo's figure above, those nonlinearities are 6.5 and 15 MHz, ≈100–240× the 62.5 kHz that Eq. (112) allows at 300 m. Read as fractional chirp-rate errors, they are still 13–30× above the $5\\times10^{-4}$ that 15 cm at 300 m tolerates. Either way they need pre-distortion or resampling [E].",
+   "why": "Gives both readings of 'nonlinearity', so one word no longer carries two quantities."
+  },
+  {
+   "id": "07_C7_C7a_F6-074",
+   "finding": "report #17",
+   "old": "This table collects the budget of §2 for",
+   "new": "This table collects the budget of subsection 2 for",
+   "why": "Local reference."
+  },
+  {
+   "id": "07_C7_C7a_F6-075",
+   "finding": "report #36",
+   "old": "| Optical energy per point | 93 nJ | 0.30 µJ | 81 nJ | 0.19 µJ |",
+   "new": "| Optical energy per point | 0.093 µJ | 0.30 µJ | 0.081 µJ | 0.19 µJ |",
+   "why": "One unit within the row, as in the other rows."
+  },
+  {
+   "id": "07_C7_C7a_F6-076",
+   "finding": "report #17; symbol scheme",
+   "old": "**Optical energy** uses $E_{\\rm opt}=n_{\\rm req}E_{\\rm ph}\\pi R^2/(\\rho A_{\\rm eff}\\eta)$, Eq. (93) of §2(a): $n_{\\rm req}$ required counts or photoelectrons, $E_{\\rm ph}$ photon energy, $R$ range, $\\rho$ reflectance, $A_{\\rm eff}$ effective collecting area and $\\eta$ receive efficiency. ToF 2026 is 93 nJ and FMCW 2026 0.30 µJ (worked in §2(a)).",
+   "new": "**Optical energy** uses $E_{\\rm pt}=n_{\\rm req}E_{\\rm ph}\\pi R^2/(\\rho A_{\\rm eff}\\eta)$, Eq. (93) of subsection 2(a): $n_{\\rm req}$ required counts or photoelectrons, $E_{\\rm ph}$ photon energy, $R$ range, $\\rho$ reflectance, $A_{\\rm eff}$ effective collecting area and $\\eta$ receive efficiency. ToF 2026 is 93 nJ and FMCW 2026 0.30 µJ (worked in subsection 2(a)).",
+   "why": "Local references; symbol scheme."
+  },
+  {
+   "id": "07_C7_C7a_F6-077",
+   "finding": "symbol scheme",
+   "old": "**Laser/SOA electrical energy** is $E_{\\rm opt}/\\eta_{\\rm wp}$",
+   "new": "**Laser/SOA electrical energy** is $E_{\\rm pt}/\\eta_{\\rm wp}$",
+   "why": "Symbol scheme."
+  },
+  {
+   "id": "07_C7_C7a_F6-078",
+   "finding": "report #17",
+   "old": "giving 70 and 44 nJ (§2(c)); the 2032 sensor counts more events because its higher PDE also detects more sunlight (Eq. (81)). FMCW is $N_L(N_{\\rm samp}e_s+P_{\\rm an}T_{\\rm dwell})$ (Eq. (96)): $N_L=4$ receivers, each with $N_{\\rm samp}$ samples per point times energy per sample $e_s$, plus analog power per receiver $P_{\\rm an}$ times the dwell $T_{\\rm dwell}$. That is 2.23 µJ in 2026 (§2(c)).",
+   "new": "giving 70 and 44 nJ (subsection 2(c)); the 2032 sensor counts more events because its higher PDE also detects more sunlight (Eq. (81)). FMCW is $N_L(N_{\\rm samp}e_s+P_{\\rm an}T_{\\rm dwell})$ (Eq. (96)): $N_L=4$ receivers, each with $N_{\\rm samp}$ samples per point times energy per sample $e_s$, plus analog power per receiver $P_{\\rm an}$ times the dwell $T_{\\rm dwell}$. That is 2.23 µJ in 2026 (subsection 2(c)).",
+   "why": "Local references."
+  },
+  {
+   "id": "07_C7_C7a_F6-079",
+   "finding": "report #25",
+   "old": "FMCW's is probably $10^4$. That is about ten doublings",
+   "new": "FMCW's is probably $10^4$ [E]. That is about ten doublings",
+   "why": "The cumulative volumes are the author's estimate."
+  },
+  {
+   "id": "07_C7_C7a_F6-080",
+   "finding": "report #25",
+   "old": "PIC was found [P, search].",
+   "new": "PIC was found [E, search].",
+   "why": "A negative search result is not a primary source."
+  },
+  {
+   "id": "07_C7_C7a_F6-081",
+   "finding": "report #25",
+   "old": "Public laser and SOA ageing data were not found.",
+   "new": "Public laser and SOA ageing data were not found [E, search].",
+   "why": "Tags the second negative search the same way."
+  },
+  {
+   "id": "07_C7_C7a_F6-082",
+   "finding": "report #31",
+   "old": "- **Attrition since 2022:** Mobileye (exited 2024), Insight LiDAR (bankruptcy 2024), Baraja (IP sale 2025) and Scantinel (insolvency 2025) [P/T]; details under §C7 Commercial status.",
+   "new": "- **Attrition since 2022:** Quanergy (Chapter 11, 2022), Mobileye (exited 2024), Insight LiDAR (Chapter 11, 2024), Baraja (IP sale 2025) and Scantinel (insolvency 2025) [P/T]; details under §C7 Commercial status and, for Insight LiDAR, §C3a.",
+   "why": "Adds Quanergy's 2022 Chapter 11; Insight LiDAR's filing type and where it is covered."
+  },
+  {
+   "id": "07_C7_C7a_F6-083",
+   "finding": "report §3 flag (long range); report #40",
+   "old": "**My view.** FMCW's differentiators are per-point radial velocity, intrinsic rejection of sunlight and other lidars, and long range. Their value depends on the use case: decisive for heavy trucks, useful for L3 at 130 km/h, nice to have for L2++ (supervised hands-free assistance, where the driver remains the fallback).",
+   "new": "**My view.** FMCW's differentiators are per-point radial velocity, intrinsic rejection of sunlight and other lidars, and long range. Long range is not free: at 200 m FMCW needs ≈3.2× more optical energy per point than 940 nm time-of-flight (ToF) lidar with single-photon avalanche diode (SPAD) receivers, a gap that narrows with distance because its energy grows only in proportion to range when the aperture is matched to it. Its reach rests on the large 1,550 nm eye-safety allowance, which 1,550 nm ToF also enjoys (§C7a subsection 2(a); §C7b subsections 1(f) and 2(i)). The value of these differentiators depends on the use case: decisive for heavy trucks, useful for L3 (SAE level 3, where the car drives itself in a defined domain and the driver takes over on request) at 130 km/h, nice to have for L2++ (supervised hands-free assistance, where the driver remains the fallback).",
+   "why": "Qualifies 'long range' with the energy and eye-safety findings of §C7a/§C7b; expands L3, ToF and SPAD."
+  },
+  {
+   "id": "07_C7_C7a_F6-084",
+   "finding": "report #32",
+   "old": "needs 165–255 m to stop, so perception at 250–400+ m matters.",
+   "new": "needs about 166–257 m to stop, so perception at 250–400+ m matters.",
+   "why": "Lead matches the substitution below (257 m, the shared truck value)."
+  },
+  {
+   "id": "07_C7_C7a_F6-085",
+   "finding": "symbol scheme",
+   "old": "$$d=v\\,t_r+\\frac{v^2}{2a} \\tag{184}$$",
+   "new": "$$d=v\\,t_{\\rm r}+\\frac{v^2}{2a_{\\rm b}} \\tag{184}$$",
+   "why": "Braking deceleration $a_{\\rm b}$; tag unchanged."
+  },
+  {
+   "id": "07_C7_C7a_F6-086",
+   "finding": "report #32; symbol scheme",
+   "old": "where $d$ is the stopping distance (m), $v$ the initial speed (m/s), $t_r$ the perception–reaction time (s) before braking starts, and $a$ the average deceleration (m/s²), taken as constant on a level road. With $v=29.2$ m/s (105 km/h), a 1.5 s perception–reaction time (as in §A6.1) and an assumed average deceleration of 3.5 m/s² (≈0.36 g) down to 2.0 m/s² (≈0.2 g) for a loaded truck, Eq. (184) gives $29.2\\times1.5+29.2^2/(2\\times3.5)\\approx44+122=165$ m and $44+29.2^2/(2\\times2.0)\\approx44+213=257$ m [E].",
+   "new": "where $d$ is the stopping distance (m), $v$ the initial speed (m/s), $t_{\\rm r}$ the perception–reaction time (s) before braking starts, and $a_{\\rm b}$ the average braking deceleration (m/s²), taken as constant on a level road. With $v=29.2$ m/s (105 km/h), $t_{\\rm r}=1.5$ s (as in §A6.1) and an assumed average deceleration $a_{\\rm b}$ of 3.5 m/s² (≈0.36 $g$, where $g=9.81$ m/s² is the acceleration of gravity) down to 2.0 m/s² (≈0.2 $g$) for a loaded truck, Eq. (184) gives $29.2\\times1.5+29.2^2/(2\\times3.5)=43.8+121.8\\approx166$ m and $43.8+29.2^2/(2\\times2.0)=43.8+213.2\\approx257$ m [E].",
+   "why": "44 + 122 is 166, not 165; shows unrounded terms; $a_{\\rm b}$ and $t_{\\rm r}$; defines $g$ at first use."
+  },
+  {
+   "id": "07_C7_C7a_F6-087",
+   "finding": "report #40",
+   "old": "Any lidar places a static return in-lane and above the road surface.",
+   "new": "Any lidar can locate a static return precisely enough to place it in the lane and above the road surface.",
+   "why": "'Places' read as if the lidar put the return there."
+  },
+  {
+   "id": "07_C7_C7a_F6-088",
+   "finding": "report #40",
+   "old": "- **Sensitivity.** Detecting dark, low-reflectivity targets beyond 300 m.",
+   "new": "- **Sensitivity.** The sensor must detect dark, low-reflectivity targets beyond 300 m.",
+   "why": "Full sentence."
+  },
+  {
+   "id": "07_C7_C7a_F6-089",
+   "finding": "report #40; symbol scheme",
+   "old": "the same 1.5 s reaction time and a car's braking at $a=0.7g$ ($g=9.81$ m/s²): $36.1\\times1.5+36.1^2/(2\\times0.7\\times9.81)\\approx54+95$ m. Long-range velocity therefore helps prediction and lowers latency. The advantage is real but not unique: long-range ToF plus radar Doppler can cover much of it.",
+   "new": "the same 1.5 s reaction time and a car's firm dry-road stop at $a_{\\rm b}=0.7g$, as in §A6.1: $36.1\\times1.5+36.1^2/(2\\times0.7\\times9.81)=54.2+94.9\\approx149$ m. At that range a per-point velocity spares the tracker the frames it needs to estimate motion, which helps prediction and lowers latency. The advantage is real but not unique: long-range ToF plus radar Doppler can cover much of it.",
+   "why": "Completes the substitution; gives the reason velocity helps; names the 0.7 g as §A6's firm dry-road stop."
+  },
+  {
+   "id": "07_C7_C7a_F6-090",
+   "finding": "report #18; report §3 flag (45% PDE)",
+   "old": "**L2++: nice to have.** \\$200 ToF lidar at 25–40 Mpts/s (million points per second), with a SPAD photon detection efficiency (PDE, the probability that an arriving photon is detected) of 37–45%, keeps raising the bar. The human remains the fallback, so FMCW's advantages don't pay for its cost.",
+   "new": "**L2++: nice to have.** ToF keeps raising the bar on price and performance. Hesai's ATX sells for ≈\\$200 at 3.84 Mpts/s (million points per second) [P/T], RoboSense's 2,160-beam EM4 reaches 41 Mpts/s [P] (§C7a subsection 1), and the SPAD photon detection efficiency (PDE, the probability that an arriving photon is detected) is 37% in the §C7a model, with 45% claimed for RoboSense's Phoenix chip [P, unverified] (§C5). The human remains the fallback, so FMCW's advantages do not pay for its cost.",
+   "why": "No single product is \\$200 and 25–40 Mpts/s; attributes each figure and tags the unverified 45%."
+  },
+  {
+   "id": "07_C7_C7a_F6-091",
+   "finding": "report #19 (cross-reference only)",
+   "old": "it is about $N_{\\rm ch}/T_{\\rm dwell}$, where",
+   "new": "it is about $N_{\\rm ch}/T_{\\rm dwell}$ (Eq. (89)), where",
+   "why": "Points to the point-rate relation."
+  },
+  {
+   "id": "07_C7_C7a_F6-092",
+   "finding": "report §3 flag (n_mode wording)",
+   "old": "Channel count leaves the fixed-power trade $n_{\\rm mode}f_{\\rm fp}=K$ (§C10.3a) unchanged. In that trade, $n_{\\rm mode}$ is the number of signal photons collected per selected spatial mode, $f_{\\rm fp}$ the nominal footprint fraction (the share of the field of view covered by beam footprints in a frame, capped at one), and $K$ a constant set by laser power, target reflectance,",
+   "new": "Channel count leaves the fixed-power trade $n_{\\rm mode}f_{\\rm fp}=K$ (Eq. (144), §C10.3a) unchanged. In that trade, $n_{\\rm mode}$ is the mean number of signal photoelectrons per sample collected in the selected spatial mode, $f_{\\rm fp}$ the nominal footprint fraction (the share of the field of view covered by beam footprints in a frame, capped at one), and $K$ a constant set by laser power, receive efficiency, target reflectance,",
+   "why": "Matches the §C10.3a definition (photoelectrons per sample) and the efficiency in Eq. (144)."
+  },
+  {
+   "id": "07_C7_C7a_F6-093",
+   "finding": "report #40",
+   "old": "2. **A safety-case advantage from instantaneous Doppler at L3/L4.**",
+   "new": "2. **A safety-case advantage from instantaneous Doppler at L3 or L4** (SAE level 4: driverless within a defined operating domain).",
+   "why": "Expands L4 at first use in §F6."
+  },
+  {
+   "id": "07_C7_C7a_F6-094",
+   "finding": "report §3 flag (interference immunity)",
+   "old": "which responds only to light that matches its own LO.",
+   "new": "which rejects light that does not match its own LO in frequency and spatial mode, although not absolutely, since FMCW interference modes exist (§C7, Benefits).",
+   "why": "Matches the §C7 caveat on interference."
+  },
+  {
+   "id": "07_C7_C7a_F6-095",
+   "finding": "report #21",
+   "old": "The coherence-length rule of thumb gives about $\\Delta\\nu\\lesssim160$ kHz at 300 m, from the condition that the coherence length exceed the round trip:",
+   "new": "The linewidth requirement comes from the coherent loss of Eqs. (114)–(115): holding it to 1–3 dB at 300 m needs $\\Delta\\nu\\approx18$–55 kHz (§C7b subsection 2(e)). The coherence-length rule of thumb, that the coherence length exceed the round trip, allows about 160 kHz at 300 m but marks the edge of detectability, not a design point:",
+   "why": "Leads with the 18–55 kHz design requirement instead of the 160 kHz detectability edge."
+  },
+  {
+   "id": "07_C7_C7a_F6-096",
+   "finding": "report #21; report #40",
+   "old": "That condition still leaves only $e^{-2}\\approx14\\%$ of the beat in the coherent FFT peak, an 8.7 dB loss; a 1–3 dB design point needs ≈18–55 kHz at 300 m (§C7b subsection 2(e)).",
+   "new": "At that linewidth only $e^{-2}\\approx14\\%$ of the beat stays in the coherent fast-Fourier-transform (FFT) peak, an 8.7 dB loss.",
+   "why": "Removes the repeat of the design point now given first; expands FFT."
+  },
+  {
+   "id": "07_C7_C7a_F6-097",
+   "finding": "report #20 (text part)",
+   "old": "So ADC (analog-to-digital converter) and DSP (digital signal processing) power per channel sets how many channels fit in a 10–15 W sensor power envelope.",
+   "new": "Each of a channel's four receivers must therefore sample at ≈1.2 GS/s (gigasamples per second) for 5 µs chirps at 300 m (§C7a subsection 2(c)), so ADC (analog-to-digital converter) and DSP (digital signal processing) energy per channel sets how many channels fit in a 10–15 W sensor power envelope.",
+   "why": "Ties the conclusion to the sampling load of §C7a; numbers for the envelope are left to Round 2."
+  },
+  {
+   "id": "07_C7_C7a_F6-098",
+   "finding": "report #40",
+   "old": "Hesai holds FMCW, OPA and metasurface patents; a product announcement",
+   "new": "Hesai holds FMCW, optical phased array (OPA) and metasurface patents; a product announcement",
+   "why": "Expands OPA at first use in §F6."
+  }
+ ],
+ "skipped": [
+  {
+   "finding": "report #1 (claim); report §3 flag (FS-4S)",
+   "kind": "already_fixed",
+   "location": "§C7a subsection 1, 'Only one FMCW vendor publishes point rate, range and power for the same configuration:'",
+   "detail": "The live text already names Analog Photonics' FS-4S (90 kpts/s, 200 m at 10% in a 20° × 10° ROI, 35 W, ≈390 µJ per point). The proposed table row is added by an edit."
+  },
+  {
+   "finding": "report #3 (Waymo DFB part)",
+   "kind": "already_fixed",
+   "location": "§C7a subsection 2(f), 'Parts.' bullet, 'Waymo's thermally chirped DFB with pre-distortion holds its frequency error below 100 kHz'",
+   "detail": "The live bullet already reads the figure as a peak-to-peak bound (meets 200–250 m, marginal at 300 m) and as a peak deviation. The Bianconi part is applied by an edit."
+  },
+  {
+   "finding": "report #4",
+   "kind": "already_fixed",
+   "location": "§C7a subsection 2(f), 'producing the useful light alone takes ≈30 W of the sensor's ≈68 W electrical draw'",
+   "detail": "The live text matches the proposed rewrite. The (b) sentence on eye safety is also already gated ('fits within if its transmitter is gated during the round trips; ungated, it emits 3.5–9.6 W')."
+  },
+  {
+   "finding": "report §3 flag (definition of ε)",
+   "kind": "already_fixed",
+   "location": "§C7b subsection 2(d), 'a fractional frequency error $\\delta\\nu/B_{\\rm eff}<10^{-4}$. With the bow shape of Eq. (112)'",
+   "detail": "§C7b and §C7a(f) already distinguish the fractional frequency error $\\delta\\nu/B$ from the chirp-rate error $\\varepsilon=8\\delta\\nu_{\\max}/B_{\\rm eff}$ for Waymo's figure."
+  },
+  {
+   "finding": "report #2; report §3 flag (parity conditions)",
+   "kind": "model_round2",
+   "location": "§C7a subsection 5, 'Parity needs all five conditions below. Items 1–3 are engineering'",
+   "detail": "Adds a sixth condition (≈0.15 µJ optical energy per point, i.e. $\\eta\\approx0.5$ or more looks, §C7b subsection 5), changes 'all five' to 'all six', maps the list onto §C7b's three conditions, and revisits item 1 (≥100 mW per channel against §C7b subsection 2(h)'s 30–40 mW optimum). Conditions 1–2 alone give $0.30\\ \\mu{\\rm J}/0.30+(8$–$13\\ {\\rm mW})\\times10\\ \\mu{\\rm s}\\approx1.1$ µJ per point, ≈2× the 0.54 µJ of 2026 ToF."
+  },
+  {
+   "finding": "report #16",
+   "kind": "model_round2",
+   "location": "§C7a subsection 5, item 3, 'Integrated sub-100 kHz lasers with ≤$10^{-4}$ chirp nonlinearity'",
+   "detail": "Proposed: '3. Integrated lasers with linewidth ≤55 kHz (≤3 dB coherent loss at 300 m; ≤83 kHz at 200 m, Eq. (115)) and a residual chirp error inside Eq. (112) (≤62.5 kHz at 300 m), qualified to automotive grade.' It changes a parity condition."
+  },
+  {
+   "finding": "report #19",
+   "kind": "model_round2",
+   "location": "§F6 'What would change this' item 1, 'the time one channel must stay on a point (about one chirp). Tens of parallel LO-matched channels'",
+   "detail": "Proposed: '…one up-chirp plus one down-chirp (≈10 µs in §C7a; Eq. (89)). Hundreds of parallel LO-matched channels … 10–25 Mpts/s needs 100–250 channels, i.e. 400–1,000 receivers (§C7a subsection 2(d)).' It changes the §F6 dwell definition and channel counts, which Round 2 resets (12.7 µs dwell with the round trips). Only the Eq. (89) pointer is applied."
+  },
+  {
+   "finding": "report #20 (numbers)",
+   "kind": "model_round2",
+   "location": "§F6 'Low-power, high-rate coherent receiver ASICs', 'sets how many channels fit in a 10–15 W sensor power envelope'",
+   "detail": "Proposed addition: 'In the §C7a central 2026 model, one channel's four receivers draw ≈0.22 W ($2.23\\ \\mu{\\rm J}/10\\ \\mu{\\rm s}$). After the 3 W overhead, a 10–15 W sensor therefore holds ≈30–55 channels even with free light (3–5.5 Mpts/s), and supports only ≈1.6–2.8 Mpts/s once the light is paid for [E].' It sizes channels from $E_{\\rm rx}$ and the dwell; the wording link is applied by an edit."
+  },
+  {
+   "finding": "report §3 flag (round-trip dead time)",
+   "kind": "model_round2",
+   "location": "§C7a subsection 2(d), 'The 10 µs dwell is the 5 µs up-chirp plus the 5 µs down-chirp of (c)'",
+   "detail": "§C7a counts all 0.30 µJ as useful in a 10 µs dwell; §C7b subsection 2(a)–(b) adds $2\\tau$ (12.7 µs at 200 m, 12–35% wasted light), giving ≈190 channels at 15 Mpts/s against 150, and ≈176 mW against 223 mW of receive power per channel."
+  },
+  {
+   "finding": "report §3 flag (Eq. (94) chirp length)",
+   "kind": "model_round2",
+   "location": "§C7a subsection 2(c), Eq. (94), 'Over an up-plus-down chirp of total duration $2T$'",
+   "detail": "Eq. (94) uses the full chirp $T$, while §C7b Eq. (109) uses the useful window $T_u=T_c-\\tau$; aligning them changes $N_{\\rm samp}$ and $E_{\\rm rx}$."
+  },
+  {
+   "finding": "report #22; report §3 flags (Eq. (185) location, stopping distance numbered four times)",
+   "kind": "structural",
+   "location": "§F6 Eqs. (184)–(186)",
+   "detail": "Merge duplicated equations: Eq. (186) restates Eq. (85); Eq. (184) restates the stopping distance of Eq. (11) (§A6.1), Eq. (162) (§E6) and Eq. (170) (§E12); Eq. (185) restates the §C7 coherence condition, which has no number in §C7 although §C7b subsection 2(e) cites '$L_c=c/(\\pi\\Delta\\nu)\\ge2R$ (§C7, Eq. (185))'. Proposed: cite 'Eq. (85)' and 'Eq. (11), §A6.1' in §F6, and number the coherence condition where §C7 first states it."
+  },
+  {
+   "finding": "report §3 flag (Eq. (93) = Eq. (97))",
+   "kind": "structural",
+   "location": "§C7b subsection 1(c), 'Energy column:** Eq. (97), $E_{\\rm opt}=n_{\\rm req}E_{\\rm ph}\\pi R^2/(\\rho A_{\\rm eff}\\eta)$'",
+   "detail": "Eq. (97) repeats Eq. (93) of §C7a; merge and cite one number."
+  },
+  {
+   "finding": "report §3 flag (repeated paragraph)",
+   "kind": "structural",
+   "location": "§C7a subsection 2(a), 'Measured efficiencies are lower.'",
+   "detail": "The measured efficiencies 0.112/0.168/0.057 appear in §C0 subsection 10.1, §C7a subsection 2(a) and §C7b subsection 1(c); keep one statement and point to it."
+  },
+  {
+   "finding": "report #32 (other sections)",
+   "kind": "cross_section",
+   "location": "§E6, §E12, §F7 (truck stopping range)",
+   "detail": "Replace the truck stopping range with 166–257 m (low end $29.2\\times1.5+29.2^2/(2\\times3.5)=43.8+121.8=165.6\\approx166$ m; high end 257 m, the shared value of fix_spec): §E6 'Stopping takes about 165–255 m, so perception is needed at 250–400+ m.'; §E6 '- *Truck (165–255 m).* As reconstructed in §F6'; §E6 '$29.2\\times1.5+29.2^2/(2\\times3.5)\\approx165$ m and $29.2\\times1.5+29.2^2/(2\\times2.0)\\approx257$ m'; §E12 'truck at 105 km/h needs 165–255 m to stop, so it must detect hazards'; §E12 'against the truck's 165–255 m ($165/83\\approx2.0$, $255/83\\approx3.1$)'; §E12 'Its stopping distance $d_{\\rm stop}$ is 165–255 m'; §E12 '(best case, 165 m) to 2.0 m/s² (worst case, 255 m)'; §E12 'stopping distance 165–255 m, stalled'; §F7 '(165–255 m stopping distances, lane assignment at 300 m; §F6)'. In the §E12 ratio, $166/83\\approx2.0$ and $257/83\\approx3.1$."
+  },
+  {
+   "finding": "report #14 (consistency)",
+   "kind": "cross_section",
+   "location": "§D7 'Why the lag', item 1, 'plus ≈50–100 mW of light.'",
+   "detail": "Replace with 'plus ≈30 mW of light per channel at 200 m (≈50–90 mW at 250–300 m or in the high-energy case; §C7a subsection 2(e))', matching the §C7a edit."
+  },
+  {
+   "finding": "report §3 flag (ToF emitter wall-plug efficiency)",
+   "kind": "cross_section",
+   "location": "§C6(c) '*Laser power.*', 'At 20–30% wall-plug efficiency the laser alone draws $P_{\\rm opt}/\\eta_{\\rm wp}$, from $2.5/0.3\\approx8$ W to $7.5/0.2\\approx38$ W'",
+   "detail": "§C7a gives ≈15–30% (the model's range, 20% central). Either keep §C6(c) as an illustration and say so, or use 15–30%, which moves the upper draw to $7.5/0.15=50$ W."
+  },
+  {
+   "finding": "report §3 flag (ω and Ω)",
+   "kind": "cross_section",
+   "location": "§C10.3a item 6, 'where $\\omega$ is the optical scan rate in rad/s (written $\\Omega$ in §C0, §C4d and §C7)'",
+   "detail": "With the symbol scheme the optical scan rate is $\\dot\\theta$ in §C7 (this block), so this aside and the $\\omega$ of item 6 should become $\\dot\\theta$ there."
+  },
+  {
+   "finding": "report §3 flag (other symbols)",
+   "kind": "cross_section",
+   "location": "§C7b subsection 2(h), '$\\eta_{\\rm WPE}$ the wall-plug efficiency of the CW laser with its amplifiers'",
+   "detail": "§C7a uses $\\eta_{\\rm wp}$; the scheme replaces $\\eta_{\\rm WPE}$ in §C7b (Eq. (118) and its uses)."
+  },
+  {
+   "finding": "report §3 flag (power envelopes)",
+   "kind": "needs_decision",
+   "location": "§F6 '10–15 W sensor power envelope'; Figure C7a '8–25 W typical'; §C6(c) '8–13 W electrical envelopes'; §C7a subsection 6 '≤15 W'",
+   "detail": "Choose one envelope (or say which applies to passenger cars and which to all automotive lidars) and use it in all four places."
+  },
+  {
+   "finding": "report §3 flag (N_samp)",
+   "kind": "needs_decision",
+   "location": "§C7a Eqs. (94), (96) (ADC samples per point) against §C10.3a Eqs. (142), (144) (samples per frame)",
+   "detail": "One symbol has two meanings; decide which to rename (e.g. ADC samples per point) report-wide, including §C0 subsection 10.3 and §C7b."
+  },
+  {
+   "finding": "report §3 flag (T vs T_c)",
+   "kind": "needs_decision",
+   "location": "§C7 Eq. (85) ($T$) and Eq. (87) ($T_c$); §C7a Eq. (94) ($T$); §C7b ($T_c$, $T_u$)",
+   "detail": "§C7 links them in words ('the same quantity as $T$ in Eq. (85)'); decide whether to use one symbol for the chirp duration report-wide."
+  },
+  {
+   "finding": "report #24 (Moore Photonics)",
+   "kind": "needs_decision",
+   "location": "§C7 Commercial status, China, '**Moore Photonics** has published claims but no product data.'",
+   "detail": "§D7 states 'LightIC Technologies = 摩尔芯光', and 摩尔芯光 reads as 'Moore Photonics'. If it is the same company, delete this bullet and keep the LightIC one; the sentence is otherwise rewritten as proposed."
+  },
+  {
+   "finding": "report #1 (table row status)",
+   "kind": "needs_decision",
+   "location": "§C7a subsection 1 table, row 'Analog Photonics FS-4S'",
+   "detail": "The added row's status reads 'No production award found'; choose a deployability tag ([D] if the FS-4S ships, otherwise [NT] or [R])."
+  },
+  {
+   "finding": "report #8",
+   "kind": "needs_source",
+   "location": "§C7a subsection 2(a), 'Check against Waymo.'",
+   "detail": "Which mechanism gives Waymo's four averaged speckles (one aperture over time or wavelength, or several receivers) in Piggott et al. 2025. The edit states the one-receiver assumption and the 0.34 µJ four-receiver case without it."
+  },
+  {
+   "finding": "report #3 (Bianconi definition)",
+   "kind": "needs_source",
+   "location": "§C7a subsection 2(f), 'SiN self-injection-locked lasers (42 kHz, 0.65% nonlinearity)'",
+   "detail": "State once whether Bianconi et al. 2025 define 'nonlinearity' as peak or rms frequency deviation over the sweep, or as a chirp-rate error; the edit gives both readings."
+  },
+  {
+   "finding": "report #24; report #25 (commercial-status tags)",
+   "kind": "needs_source",
+   "location": "§C7 Commercial status: SiLC 'Honda has invested in it'; Aeva 'automated line at the contract manufacturer Jabil with a capacity of about 100k units per year' and 'Daimler launch is planned for 2027'; LightIC 'made by the foundry Tower Semiconductor'; LuminWave 'Raptor' and the July 2025 nomination",
+   "detail": "No source or tag for these in the report (§D7 and §E-section mentions are untagged); give the source so each can be tagged."
+  },
+  {
+   "finding": "report #25 (DFB linewidth)",
+   "kind": "needs_source",
+   "location": "§C7a subsection 2(f), 'Commercial distributed-feedback lasers (DFBs) reach tens of kHz.'",
+   "detail": "Needs a datasheet or survey source and tag."
+  },
+  {
+   "finding": "report #25 (line-count race)",
+   "kind": "needs_source",
+   "location": "§C7a subsection 2(e), 'the Chinese race went 192 → 520 → 896 → 2,160 → 4,320 lines in five years'",
+   "detail": "The line counts are tagged in §C5/§C6 ([P/T]); the five-year span needs a dated source for the 192-line start."
+  },
+  {
+   "finding": "report #39 (tags)",
+   "kind": "needs_source",
+   "location": "§C7 Commercial status, Aurora, 'Aurora had about 25 driverless trucks in mid-2026' and 'for about \\$80 M annualized revenue'",
+   "detail": "Source for the 25-truck count (elsewhere the report says 20–25, with 20 from a trade report) and for the \\$80 M annualized-revenue target."
+  }
+ ]
+}

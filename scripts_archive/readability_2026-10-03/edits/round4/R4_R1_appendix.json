@@ -1,0 +1,41 @@
+{
+ "block": "R4_R1_appendix",
+ "edits": [
+  {
+   "id": "R4_R1_appendix-001",
+   "finding": "Round 4 source research, R1 Appendix 2 (Thermal night vision)",
+   "old": "- USGS germanium 2026: https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-germanium.pdf",
+   "new": "- USGS germanium 2026: https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-germanium.pdf\n- NHTSA, Traffic Safety Facts: Pedestrians, 2024 Data (DOT HS 813 818; 7,080 deaths, 76% in the dark): https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813818\n- NHTSA FARS 2024 national data files (pedestrian deaths by light condition, area and road type): https://static.nhtsa.gov/nhtsa/downloads/FARS/2024/National/FARS2024NationalCSV.zip\n- New Atlas, BMW Night Vision with thermal imaging (about US\\$2,500 option, 23 Aug 2006): https://newatlas.com/bmw-incorporates-thermal-imaging-into-newly-available-night-vision-driver-assistance-system/6044/\n- D.C. Circuit, *Alliance for Automotive Innovation v. DOT*, No. 25-1026 (FMVSS 127 petition; abeyance orders), RECAP docket: https://www.courtlistener.com/docket/69556046/alliance-for-automotive-innovation-v-dot/\n- Raytron, company milestones (8 µm 1920×1080 detector, 2021; 6 µm 640×512 detector, 2024): https://en.raytrontek.com/about/about-us.htm\n- Guide Infrared, CIOE 2024 products (FLEXB608, 640×512 at 8 µm): https://www.guide-infrared.com/companynews/217.html\n- LightPath BlackDiamond BD6 datasheet ($\\mathrm{As_{40}Se_{60}}$, germanium-free) and BD-2 datasheet (28% Ge): https://refractiveindex.info/download/data/2023/50415_Lightpath_BD6_Datasheet.pdf ; https://refractiveindex.info/download/data/2013/BD-2.pdf",
+   "why": "Sources read by the R1 research agent (sources/R1_partA_E2-E5_findings.md), placed by section."
+  },
+  {
+   "id": "R4_R1_appendix-002",
+   "finding": "Round 4 source research, R1 Appendix 2 (Headlights (§A6))",
+   "old": "- IIHS on headlight glare and crashes (2025): https://www.repairerdrivennews.com/2025/10/20/iihs-study-says-crashes-havent-increased-due-to-headlight-glare/",
+   "new": "- IIHS on headlight glare and crashes (2025): https://www.repairerdrivennews.com/2025/10/20/iihs-study-says-crashes-havent-increased-due-to-headlight-glare/\n- FMVSS 108 codified text, S3 and S9.4.1.6.4.5 (ADB transition zone at most 1.0°): https://www.govinfo.gov/link/cfr/49/571?link-type=pdf&sectionnum=108&year=mostrecent\n- UN R112, 2014 official text, §6.2.4 passing-beam table (B50L at most 350 cd; 50R and 75R at least 10,100 cd for class B): https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=uriserv:OJ.L_.2014.250.01.0067.01.ENG\n- Audi, Matrix LED headlights (A8, end of 2013; 25 high-beam LEDs per lamp; 1 Jul 2013): https://www.automotiveworld.com/news/leading-the-way-in-lighting-technology-the-new-audi-matrix-led-headlights/\n- Autocar Professional, Mercedes Multibeam LED headlamps on the CLS (17 Jun 2014): https://www.autocarpro.in/news-international/mercedes-benz-debuts-multi-beam-led-headlamp-tech-cls-5835",
+   "why": "Sources read by the R1 research agent (sources/R1_partA_E2-E5_findings.md), placed by section."
+  },
+  {
+   "id": "R4_R1_appendix-003",
+   "finding": "Round 4 source research, R1 Appendix 2 (Robotaxi and trucks)",
+   "old": "- CNBC, Aurora driverless ride and fleet of 20 trucks (22 Sep 2026): https://www.cnbc.com/2026/09/22/aurora-autonomous-semi-ride.html",
+   "new": "- CNBC, Aurora driverless ride and fleet of 20 trucks (22 Sep 2026): https://www.cnbc.com/2026/09/22/aurora-autonomous-semi-ride.html\n- Cruise Part 573 Safety Recall Report 23E-029 (articulated-bus collision, 23 Mar 2023): https://static.nhtsa.gov/odi/rcl/2023/RCLRPT-23E029-4270.PDF\n- Cummings, \"What Self-Driving Cars Tell Us About AI Risks\", *IEEE Spectrum* (30 Jul 2023): https://spectrum.ieee.org/self-driving-cars-2662494269\n- NHTSA Standing General Order crash reports, ADS incidents (current file and 2021–2025 archive): https://static.nhtsa.gov/odi/ffdd/sgo-2021-01/SGO-2021-01_Incident_Reports_ADS.csv ; https://static.nhtsa.gov/odi/ffdd/sgo-2021-01/Archive-2021-2025/SGO-2021-01_Incident_Reports_ADS.csv",
+   "why": "Sources read by the R1 research agent (sources/R1_partA_E2-E5_findings.md), placed by section."
+  },
+  {
+   "id": "R4_R1_appendix-004",
+   "finding": "Round 4 source research, R1 Appendix 2 (Camera-only vs multimodal)",
+   "old": "- The Robot Report, John Deere acquires Light's perception patents and team (19 May 2022): https://www.therobotreport.com/john-deere-acquires-light-camera-based-perception-platform/",
+   "new": "- The Robot Report, John Deere acquires Light's perception patents and team (19 May 2022): https://www.therobotreport.com/john-deere-acquires-light-camera-based-perception-platform/\n- ResearchInChina, Automotive 4D Radar Industry Research Report 2025, summary (basic-imaging-radar prices, installations): http://www.researchinchina.com/Htmls/Report/2025/78124.html\n- Zhang *et al.*, Dual Radar dataset, *Sci. Data* 12, 439 (2025), Tables 2 and 4 (open access): https://pmc.ncbi.nlm.nih.gov/articles/PMC11907064/\n- RoboSense RS-Ruby Lite users' manual, Table 1 (80 channels, 0.2° at 10 Hz, 1.44 M points/s): https://cdn.robotshop.com/media/u/utr/rb-utr-07/pdf/robosense-rs-rubylite-laser-rangefinder-230-m-user-guide.pdf",
+   "why": "Sources read by the R1 research agent (sources/R1_partA_E2-E5_findings.md), placed by section."
+  },
+  {
+   "id": "R4_R1_appendix-005",
+   "finding": "Round 4 source research, R1 item 15 (Wood line label)",
+   "old": "- Pedestrian visibility at night (clothing, driver age, beam setting): https://www.researchgate.net/publication/228414781_Pedestrian_visibility_at_night_Effects_of_pedestrian_clothing_driver_age_and_headlamp_beam_setting",
+   "new": "- Wood, Tyrrell & Carberry 2003, \"Pedestrian visibility at night: effects of pedestrian clothing, driver age, and headlamp beam setting\", TRB 82nd Annual Meeting (author copy): https://www.researchgate.net/publication/228414781_Pedestrian_visibility_at_night_Effects_of_pedestrian_clothing_driver_age_and_headlamp_beam_setting",
+   "why": "Names the study the text cites as Wood, Tyrrell & Carberry 2003."
+  }
+ ],
+ "skipped": []
+}

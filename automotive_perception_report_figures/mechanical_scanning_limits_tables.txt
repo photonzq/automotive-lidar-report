@@ -1,0 +1,28 @@
+ISO 16750-3:2012 Test IV PSD, (m/s^2)^2/Hz
+     20 Hz: 11.701
+     50 Hz: 3.371
+    100 Hz: 1.315
+    136 Hz: 0.866
+    200 Hz: 0.513
+    300 Hz: 0.296
+    400 Hz: 0.200
+   1000 Hz: 0.200
+  rms = 27.1 m/s^2; share of mean square below 400 Hz = 84%
+Walk-off 2 R omega / c (deg)
+  360° spin, 10 Hz (3,600 deg/s): 150 m: 0.0036, 200 m: 0.0048, 250 m: 0.0060
+  AT128 mirror, 200 rpm (2,400 deg/s): 150 m: 0.0024, 200 m: 0.0032, 250 m: 0.0040
+  Polygon, Falcon K1 (5 facets, 4 beams) (54,720 deg/s): 150 m: 0.0548, 200 m: 0.0730, 250 m: 0.0913
+  Resonant MEMS, 1 kHz, ±30° (188,496 deg/s): 150 m: 0.1886, 200 m: 0.2515, 250 m: 0.3144
+  Resonant 1D MEMS, 1.5 kHz, 180° (848,230 deg/s): 150 m: 0.8488, 200 m: 1.1318, 250 m: 1.4147
+Brosens deformation (nm), theta_mech = 0.26 rad, silicon
+  D = 2 mm: 1.0 kHz/100 um: 2, 1.0 kHz/250 um: 0, 1.5 kHz/100 um: 6, 1.5 kHz/250 um: 1
+  D = 3 mm: 1.0 kHz/100 um: 19, 1.0 kHz/250 um: 3, 1.5 kHz/100 um: 43, 1.5 kHz/250 um: 7
+  D = 5 mm: 1.0 kHz/100 um: 243, 1.0 kHz/250 um: 39, 1.5 kHz/100 um: 547, 1.5 kHz/250 um: 88
+  D = 10 mm: 1.0 kHz/100 um: 7779, 1.0 kHz/250 um: 1245, 1.5 kHz/100 um: 17502, 1.5 kHz/250 um: 2800
+Required fast-axis sweeps per second S = N_lines * F / N_parallel
+  HDL-64E: 64 x 10 / 64 = 10
+  AT128: 128 x 10 / 128 = 10
+  ATX: 256 x 10 / 256 = 10
+  Falcon K1 (4 beams, teardown): 152 x 10 / 4 = 380
+  M1 (1 beam per module, teardown): 125 x 10 / 1 = 1250
+  InnovizOne 256 lines (4 lasers, company statement): 256 x 10 / 4 = 640

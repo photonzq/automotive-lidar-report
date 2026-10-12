@@ -1,0 +1,275 @@
+{
+ "block": "R2B_C4-C6",
+ "edits": [
+  {
+   "id": "R2B_C4-C6-001",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°); round1 cross_section [03_C0_part10] follow-up flag h",
+   "old": "for a SPAD in sunlight the effective PDE also carries the dead-time live fraction (0.784 in the bright sun of §C0 subsection 10.3).",
+   "new": "for a SPAD in sunlight the effective PDE also carries the dead-time live fraction, $e^{-r\\tau_d}=e^{-0.122}=0.885$ in the bright sun of §C0 subsection 10.3, where $r=1.83\\times10^{8}/9\\ {\\rm s^{-1}}$ is the background rate of each of the nine SPADs of a 0.05° × 0.05° macro-pixel and $\\tau_d=6$ ns their dead time (§C6(d)).",
+   "why": "Live fraction at the halved central background (r tau_d = 0.122), with its substitution."
+  },
+  {
+   "id": "R2B_C4-C6-002",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°)",
+   "old": "by ≈700× with a 1 µs hold-off and by ≈7,000× with the 10 µs that keeps afterpulsing below 3% (§C4c subsection 3) [I/E].",
+   "new": "by ≈340× with a 1 µs hold-off and by ≈3,400× with the 10 µs that keeps afterpulsing below 3% (§C4c subsection 3) [I/E].",
+   "why": "The 1,550 nm pixel background halves to 3.4e8/s (§C4c subsection 3), so the ratios halve."
+  },
+  {
+   "id": "R2B_C4-C6-003",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°); round1 cross_section [06_C5_C5a_C6] report §3 flag 6",
+   "old": "[E: in the brightest §C6(d) case, $2.2\\times10^{9}$ s⁻¹ spread over $N_c=1{,}000$ cells is $2.2\\times10^{6}$ s⁻¹ per cell; with an assumed microcell recovery time of 30 ns, a cell is dead $1-e^{-2.2\\times10^{6}\\times3\\times10^{-8}}=1-e^{-0.066}\\approx6\\%$ of the time by Eq. (65) below, against 77% for each SPAD of a 3×3 macro-pixel]",
+   "new": "[E: in the 905 nm case of §C6(d) behind a 20 nm filter, $1.1\\times10^{9}$ s⁻¹ spread over $N_c=1{,}000$ cells is $1.1\\times10^{6}$ s⁻¹ per cell; with an assumed microcell recovery time of 30 ns, a cell is dead $1-e^{-1.1\\times10^{6}\\times3\\times10^{-8}}=1-e^{-0.033}\\approx3\\%$ of the time by Eq. (65) below, against 52% for each SPAD of a 3×3 macro-pixel]",
+   "why": "SiPM comparison recomputed for the same case at the halved rate; names the case instead of 'brightest'."
+  },
+  {
+   "id": "R2B_C4-C6-004",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°)",
+   "old": "can be dead **8–77% of the time** in bright sun (§C6(d) and (d′)), and pile-up distorts its histogram.",
+   "new": "can be dead **4–52% of the time** in bright sun behind 10–20 nm filters, and 77% behind the 40 nm filter of an edge-emitting laser (§C6(d) and (d′)); pile-up also distorts its histogram.",
+   "why": "Dead-fraction range recomputed from the halved (d) and (d′) rates."
+  },
+  {
+   "id": "R2B_C4-C6-005",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°)",
+   "old": "those cases run from $r=1.32\\times10^{8}/9=1.46\\times10^{7}\\ {\\rm s^{-1}}$ (940 nm, 20 nm filter, 10% scene), giving $1-e^{-0.088}\\approx8\\%$, to $r=2.2\\times10^{9}/9\\approx2.4\\times10^{8}\\ {\\rm s^{-1}}$ (905 nm, 20 nm filter, 90% scene), giving $1-e^{-1.47}\\approx77\\%$ by Eq. (65). An actively recharged, non-paralyzable SPAD would be dead $r\\tau_d/(1+r\\tau_d)$ of the time, 8–59% (§C6(d) and (d′)).",
+   "new": "those cases run from $r=6.59\\times10^{7}/9=7.32\\times10^{6}\\ {\\rm s^{-1}}$ (940 nm, 20 nm filter, 10% scene), giving $1-e^{-0.044}\\approx4\\%$, to $r=1.1\\times10^{9}/9\\approx1.22\\times10^{8}\\ {\\rm s^{-1}}$ (905 nm, 20 nm filter, 90% scene), giving $1-e^{-0.73}\\approx52\\%$ by Eq. (65); a 40 nm filter doubles $r$ and gives $1-e^{-1.46}\\approx77\\%$. An actively recharged, non-paralyzable SPAD would be dead $r\\tau_d/(1+r\\tau_d)$ of the time, 4–42% behind 10–20 nm filters and 59% behind 40 nm (§C6(d) and (d′)).",
+   "why": "Per-SPAD rates and Eq. (65) substitutions at the halved backgrounds."
+  },
+  {
+   "id": "R2B_C4-C6-006",
+   "finding": "round2 decision 1 (FMCW dwell, ungated central case)",
+   "old": "At 200 m, eye safety therefore binds FMCW point rate only near 25 Mpts/s: the §C7a model's FMCW needs 3.0 W of useful light at 10 Mpts/s and 7.6 W at 25 Mpts/s, within the 9.1 W allowance, but an ungated transmitter, which also emits during the round trips, sends 8.6–9.6 W at 25 Mpts/s and reaches it (§C7a(b); §C7b subsection 2(i)). Below that, heat and wall-plug efficiency (optical output power per unit of electrical input power) bind first (§C7a). At 300 m and 25 Mpts/s, however, the model's 11 W would exceed the allowance for this field (§C7b subsection 2(i)).",
+   "new": "At 200 m, eye safety therefore binds FMCW point rate only near 25 Mpts/s. The §C7a model's FMCW needs 3.0 W of useful light at 10 Mpts/s and 7.6 W at 25 Mpts/s. Its central case is ungated, so the laser also emits during the round trips: $T_{\\rm dwell}/T_{\\rm int}=12.67\\ \\mu{\\rm s}/10\\ \\mu{\\rm s}=1.27$ times as much, where $T_{\\rm int}$ is the useful up- plus down-chirp ($2\\times5\\ \\mu{\\rm s}$) and $T_{\\rm dwell}=T_{\\rm int}+2\\tau$ adds two round trips of $\\tau=2R/c=1.33$ µs (§C7b Eq. (107)). That is ≈3.8 W at 10 Mpts/s, within the 9.1 W allowance, and ≈9.6 W at 25 Mpts/s, just above it; a transmitter gated during the round trips would emit only the 7.6 W of useful light and stay within it (§C7a(b); §C7b subsection 2(i)). Below 25 Mpts/s, heat and wall-plug efficiency (optical output power per unit of electrical input power) bind first (§C7a). At 300 m and 25 Mpts/s even the useful light, the model's 11 W, would exceed the allowance for this field (§C7b subsection 2(i)).",
+   "why": "The §C7a central case is ungated (T_dwell = T_int + 2 tau): emitted power 3.84 / 9.61 W at 10 / 25 Mpts/s."
+  },
+  {
+   "id": "R2B_C4-C6-007",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°); round2 decision 4 (sunlight convention); round1 needs_decision [04_C4_C4b_C4c] consistency flag (solar background)",
+   "old": "a pixel field of view of 0.1° × 0.05°, and a sunlit scene of reflectance $\\rho=0.9$ [E]. Each row assumes a detection efficiency (the fraction of arriving photons that are counted) and an optical-filter width for that band.\n\n| Case | Background counts/s |\n|---|---|\n| 905 nm, 24% efficiency, 20 nm filter | ≈1.6×10⁹ |\n| 905 nm, 24%, 40 nm filter (edge-emitting laser over −40 to +105 °C) | ≈3.2×10⁹ |\n| 940 nm, 37%, 10 nm filter | **≈5.7×10⁸** |\n| 1,550 nm, 30%, 10 nm filter | ≈6.8×10⁸ |",
+   "new": "a pixel field of view of 0.05° × 0.05° (one macro-pixel of the IMX479 grid, 120°/2,400 columns by 26°/520 lines, §C5a), and a sunlit scene of reflectance $\\rho=0.9$ [E]. The irradiance is the ASTM G173 ±10 nm band average of the table above. Each row assumes a detection efficiency (the fraction of arriving photons that are counted) and an optical-filter width for that band.\n\n| Case | Background counts/s (±10 nm band average) |\n|---|---|\n| 905 nm, 24% efficiency, 20 nm filter | ≈8.1×10⁸ |\n| 905 nm, 24%, 40 nm filter (edge-emitting laser over −40 to +105 °C) | ≈1.6×10⁹ |\n| 940 nm, 37%, 10 nm filter | **≈2.8×10⁸** |\n| 1,550 nm, 30%, 10 nm filter | ≈3.4×10⁸ |",
+   "why": "Pixel field 0.05° × 0.05° with its basis; per-pixel rates halve (tables file); the band-average basis is labelled."
+  },
+  {
+   "id": "R2B_C4-C6-008",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°); round2 decision 4 (sunlight convention)",
+   "old": "$\\Omega_{\\rm pix}=(0.1°\\times\\pi/180)\\times(0.05°\\times\\pi/180)=1.745\\times10^{-3}\\times8.73\\times10^{-4}=1.52\\times10^{-6}$ sr.\n- **Worked example, 940 nm.** $L=0.9\\times1.43\\times10^{18}/\\pi=4.11\\times10^{17}\\ {\\rm s^{-1}\\,m^{-2}\\,sr^{-1}\\,nm^{-1}}$, so Eq. (67) gives $r_{\\rm bg}=4.11\\times10^{17}\\times10\\times4.91\\times10^{-4}\\times1.52\\times10^{-6}\\times0.5\\times0.37=5.7\\times10^{8}$ counts/s. The 905 nm rows use $3.16\\times10^{18}$ and 0.24, with a 20 nm filter ($1.6\\times10^{9}$) or a 40 nm filter ($3.2\\times10^{9}$, taking the same ±10 nm average irradiance); the 1,550 nm row uses $2.1\\times10^{18}$, 10 nm and 0.30 ($6.8\\times10^{8}$). The 20 nm row assumes a temperature-stabilised source or a 905 nm VCSEL; an edge-emitting laser needs ≈40 nm over −40 to +105 °C (§C4 item 4), which doubles the count.",
+   "new": "$\\Omega_{\\rm pix}=(0.05°\\times\\pi/180)^2=(8.73\\times10^{-4})^2=7.62\\times10^{-7}$ sr.\n- **Worked example, 940 nm.** $L=0.9\\times1.43\\times10^{18}/\\pi=4.11\\times10^{17}\\ {\\rm s^{-1}\\,m^{-2}\\,sr^{-1}\\,nm^{-1}}$, so Eq. (67) gives $r_{\\rm bg}=4.11\\times10^{17}\\times10\\times4.91\\times10^{-4}\\times7.62\\times10^{-7}\\times0.5\\times0.37=2.8\\times10^{8}$ counts/s. The 905 nm rows use $3.16\\times10^{18}$ and 0.24, with a 20 nm filter ($8.1\\times10^{8}$) or a 40 nm filter ($1.6\\times10^{9}$, taking the same ±10 nm average irradiance); the 1,550 nm row uses $2.1\\times10^{18}$, 10 nm and 0.30 ($3.4\\times10^{8}$). The 20 nm row assumes a temperature-stabilised source or a 905 nm VCSEL; an edge-emitting laser needs ≈40 nm over −40 to +105 °C (§C4 item 4), which doubles the count.\n- **Basis against §C6(d).** A band average is what a filter integrates, and at 940 nm the ±10 nm average used here, 0.303 W m⁻² nm⁻¹, is $0.472/0.303=1.56$ times below the exact-wavelength value and $0.39/0.303=1.29$ times below the 0.39 that §C6(d) and the §C7a ToF model take (the midpoint of the two; at 905 nm $0.75/0.693=1.08$), so the model's 940 nm background is about 1.3× this table's and the model is conservative for 940 nm ToF.",
+   "why": "Omega_pix and Eq. (67) substitutions at 0.05° × 0.05°; one sentence links the band-average and model bases (decision 4), with the factor computed."
+  },
+  {
+   "id": "R2B_C4-C6-009",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°)",
+   "old": "A 1,550 nm pixel receives ≈7×10⁸ background counts/s in bright sun (subsection 2 table above), about **700× the ≈10⁶ counts/s an InGaAs SPAD can sustain** with a 1 µs hold-off, which still leaves ≈8% afterpulsing [E: $6.8\\times10^{8}/10^{6}\\approx700$]. The 10 µs hold-off needed for <3% afterpulsing lowers the ceiling to ≈10⁵ counts/s, ≈7,000× below the sunlight rate [E: $6.8\\times10^{8}/10^{5}\\approx7{,}000$]. A silicon 3×3 macro-pixel (nine SPADs whose counts are pooled into one ranging pixel) at 940 nm sits at ≈1.0–1.35× its ceiling [E: nine SPADs at 60 Mcps each sustain $5.4\\times10^{8}$ counts/s; $5.7\\times10^{8}/(5.4\\times10^{8})=1.05$ with this subsection's band-averaged irradiance, and $7.31\\times10^{8}/(5.4\\times10^{8})=1.35$ with the higher irradiance of §C6(d)].",
+   "new": "A 1,550 nm pixel receives ≈3.4×10⁸ background counts/s in bright sun (subsection 2 table above), about **340× the ≈10⁶ counts/s an InGaAs SPAD can sustain** with a 1 µs hold-off, which still leaves ≈8% afterpulsing [E: $3.4\\times10^{8}/10^{6}\\approx340$]. The 10 µs hold-off needed for <3% afterpulsing lowers the ceiling to ≈10⁵ counts/s, ≈3,400× below the sunlight rate [E: $3.4\\times10^{8}/10^{5}\\approx3{,}400$]. A silicon 3×3 macro-pixel (nine SPADs whose counts are pooled into one ranging pixel) at 940 nm stays below its ceiling, at about half to two-thirds of it [E: nine SPADs at 60 Mcps each sustain $5.4\\times10^{8}$ counts/s; $2.84\\times10^{8}/(5.4\\times10^{8})=0.53$ with this subsection's band-averaged irradiance, and $3.66\\times10^{8}/(5.4\\times10^{8})=0.68$ with the higher irradiance of §C6(d), at the same PDE of 0.37].",
+   "why": "Headroom recomputed at 0.05° × 0.05°: InGaAs ≈340× / ≈3,400×; the Si macro-pixel falls below its ceiling (0.53–0.68), a changed conclusion stated plainly."
+  },
+  {
+   "id": "R2B_C4-C6-010",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°)",
+   "old": "because InGaAs SPAD arrays are ≈700–7,000× over their count-rate ceiling in sunlight (subsection 3)",
+   "new": "because InGaAs SPAD arrays are ≈340–3,400× over their count-rate ceiling in sunlight (subsection 3)",
+   "why": "Follows subsection 3."
+  },
+  {
+   "id": "R2B_C4-C6-011",
+   "finding": "round2 FMCW/ToF energy ratio (§C7a model)",
+   "old": "electrical energy per point ≈8× that of SPAD ToF (§C7a)",
+   "new": "electrical energy per point ≈12× that of SPAD ToF in the §C7a central 2026 case ($4.90\\ \\mu{\\rm J}/0.415\\ \\mu{\\rm J}\\approx11.8$) [E]",
+   "why": "Model totals 4,899 nJ (FMCW, ungated 12.67 µs dwell) and 415 nJ (ToF) give 11.8×."
+  },
+  {
+   "id": "R2B_C4-C6-012",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°)",
+   "old": "Bright sunlight adds thousands of background counts per point (≈5,970 in the central case of §C7b subsection 1, built from the rates of §C6(d)), which dwarfs them.",
+   "new": "Bright sunlight adds thousands of background counts per point (≈3,370 in the model's central case: $1.83\\times10^{8}\\ {\\rm s^{-1}}\\times20.8\\ \\mu{\\rm s}\\times0.885$, the background rate per macro-pixel of §C6(d) times the listening time and the live fraction; §C7b subsection 1), which dwarfs them.",
+   "why": "Background events per point at the halved central rate, with the substitution."
+  },
+  {
+   "id": "R2B_C4-C6-013",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°)",
+   "old": "Its ≈6 ns dead time also leaves each SPAD blind for about a third of the time in bright sun at 940 nm behind a 10 nm filter (29–33%, §C6(d)).",
+   "new": "Its ≈6 ns dead time also leaves each SPAD blind for about a sixth of the time in full sun at 940 nm behind a 10 nm filter (17–18%, §C6(d)).",
+   "why": "§C6(d) 940 nm row recomputed: 16.5–17.9% (non-paralyzable to paralyzable)."
+  },
+  {
+   "id": "R2B_C4-C6-014",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°); round1 needs_decision [06_C5_C5a_C6] report #10; round1 cross_section [10_C10_part2] follow-up #4",
+   "old": "- a 25 mm receive aperture, a 0.1°×0.05° field per macro-pixel, PDE 0.3, about 6 ns dead time, and a 3×3 macro-pixel of nine SPADs;",
+   "new": "- a 25 mm receive aperture, a 0.05°×0.05° field per macro-pixel (one cell of the IMX479 grid, 120°/2,400 columns by 26°/520 lines, §C5a), PDE 0.3, about 6 ns dead time, and a 3×3 macro-pixel of nine SPADs;",
+   "why": "States the macro-pixel field and its basis (decision 2)."
+  },
+  {
+   "id": "R2B_C4-C6-015",
+   "finding": "round2 decision 4 (sunlight convention)",
+   "old": "The calculation takes about 0.75 at 905 nm and about 0.39 at 940 nm, the midpoints of the exact and averaged values.",
+   "new": "The calculation takes about 0.75 at 905 nm and about 0.39 at 940 nm, the midpoints of the exact and averaged values; these are the irradiances of the §C7a ToF model, while §C4c's per-pixel table uses the ±10 nm band averages (compared in §C4c subsection 2).",
+   "why": "Labels the model's irradiance basis against §C4c's."
+  },
+  {
+   "id": "R2B_C4-C6-016",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°)",
+   "old": "| Case | Counts/s per macro-pixel | Fraction of time dead |\n|---|---|---|\n| 905 nm, 20 nm filter (VCSEL-type), ρ = 0.9 scene | about 2.2×10⁹ | **77%** |\n| 905 nm, 40 nm filter (EEL-type) | about 4.4×10⁹ | 95% |\n| 940 nm, 10 nm filter (VCSEL-type) | about 6×10⁸ | 33% |",
+   "new": "| Case | Counts/s per 0.05° × 0.05° macro-pixel | Fraction of time dead (paralyzable) |\n|---|---|---|\n| 905 nm, 20 nm filter (VCSEL-type), ρ = 0.9 scene | about 1.1×10⁹ | **52%** |\n| 905 nm, 40 nm filter (EEL-type) | about 2.2×10⁹ | 77% |\n| 940 nm, 10 nm filter (VCSEL-type) | about 3×10⁸ | 18% |",
+   "why": "Each row recomputed from Eqs. (81)-(82) at 0.05° × 0.05°."
+  },
+  {
+   "id": "R2B_C4-C6-017",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°)",
+   "old": "$\\Omega_{\\rm pix}=(0.1\\times\\pi/180)\\times(0.05\\times\\pi/180)=1.52\\times10^{-6}$ sr",
+   "new": "$\\Omega_{\\rm pix}=(0.05\\times\\pi/180)^2=(8.73\\times10^{-4})^2=7.62\\times10^{-7}$ sr (the 0.05° × 0.05° macro-pixel)",
+   "why": "Solid angle of the 0.05° × 0.05° macro-pixel."
+  },
+  {
+   "id": "R2B_C4-C6-018",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°); round2 decision 4 (sunlight convention)",
+   "old": "$r_{\\rm bg}=3.4\\times10^{18}\\times20\\times(0.9/\\pi)\\times1.52\\times10^{-6}\\times4.91\\times10^{-4}\\times0.5\\times0.3\\approx2.2\\times10^{9}$ s⁻¹. A 40 nm filter doubles this to $4.4\\times10^{9}$ s⁻¹, and the 940 nm, 10 nm case gives $5.93\\times10^{8}$ s⁻¹. With the ±10 nm averages alone (0.69 and 0.30 W m⁻² nm⁻¹) the counts would be about 8% and 22% lower.",
+   "new": "$r_{\\rm bg}=3.4\\times10^{18}\\times20\\times(0.9/\\pi)\\times7.62\\times10^{-7}\\times4.91\\times10^{-4}\\times0.5\\times0.3\\approx1.1\\times10^{9}$ s⁻¹. A 40 nm filter doubles this to $2.2\\times10^{9}$ s⁻¹. At 940 nm, $0.39/(2.113\\times10^{-19}\\ {\\rm J})=1.846\\times10^{18}$ photons s⁻¹ m⁻² nm⁻¹, and the 10 nm case gives $r_{\\rm bg}=1.846\\times10^{18}\\times10\\times(0.9/\\pi)\\times7.615\\times10^{-7}\\times4.909\\times10^{-4}\\times0.5\\times0.3=2.965\\times10^{8}$ s⁻¹, the value the §C7a model uses. With the ±10 nm averages alone (0.69 and 0.30 W m⁻² nm⁻¹), the basis of §C4c's per-pixel table, the counts would be about 8% and 22% lower.",
+   "why": "Eq. (81) substitutions at 0.05° × 0.05°, including the 940 nm case; labels the band-average basis."
+  },
+  {
+   "id": "R2B_C4-C6-019",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°)",
+   "old": "For 905 nm, 20 nm: $r=2.2\\times10^{9}/9=2.4\\times10^{8}$ s⁻¹, $r\\tau_d=1.47$ and $1-e^{-1.47}=77\\%$. The 40 nm case gives $r\\tau_d=2.9$ and 95%; the 940 nm case gives $r\\tau_d=0.40$ and 33%. Non-paralyzable SPADs would be dead 59%, 75% and 29% of the time.",
+   "new": "For 905 nm, 20 nm: $r=1.1\\times10^{9}/9=1.22\\times10^{8}$ s⁻¹, $r\\tau_d=0.73$ and $1-e^{-0.73}=52\\%$. The 40 nm case gives $r\\tau_d=1.46$ and 77%; the 940 nm case gives $r=2.965\\times10^{8}/9=3.29\\times10^{7}$ s⁻¹, $r\\tau_d=0.20$ and $1-e^{-0.20}=18\\%$. Non-paralyzable SPADs would be dead 42%, 59% and 17% of the time ($0.73/1.73$, $1.46/2.46$ and $0.20/1.20$).",
+   "why": "Eq. (82) substitutions for each row."
+  },
+  {
+   "id": "R2B_C4-C6-020",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°)",
+   "old": "The 940 nm, 10 nm case then gives $7.31\\times10^{8}$ s⁻¹ and a 39% dead fraction for the fully sunlit $\\rho_{\\rm scene}=0.9$ scene ($r\\tau_d=0.49$), and $3.66\\times10^{8}$ s⁻¹ and 22% for the model's central case of half that background (a sunlit scene of reflectance ≈0.45, or a pixel only half filled by bright surfaces; §C0 subsection 10.3). The same live fraction multiplies the signal, because a SPAD that is dead when the echo arrives misses it; the §C7a model therefore uses a signal efficiency of $0.5\\times0.37\\times0.784=0.145$ in bright sun.",
+   "new": "The 940 nm, 10 nm case then gives $2.965\\times10^{8}\\times0.37/0.3=3.66\\times10^{8}$ s⁻¹ and a 22% dead fraction for the fully sunlit $\\rho_{\\rm scene}=0.9$ scene ($r\\tau_d=(3.66\\times10^{8}/9)\\times6\\ {\\rm ns}=0.244$), and $1.83\\times10^{8}$ s⁻¹ and 11.5% for the model's central case of half that background ($r\\tau_d=0.122$, so a live fraction $e^{-0.122}=0.885$; a sunlit scene of reflectance ≈0.45, or a pixel only half filled by bright surfaces; §C0 subsection 10.3). The same live fraction multiplies the signal, because a SPAD that is dead when the echo arrives misses it; the §C7a model therefore uses a signal efficiency of $0.5\\times0.37\\times0.885=0.164$ in bright sun.",
+   "why": "Model background, dead and live fractions and signal efficiency at 0.05° × 0.05° (spec: 3.66e8 / 1.83e8, 21.6% / 11.5%, 0.885, 0.164)."
+  },
+  {
+   "id": "R2B_C4-C6-021",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°)",
+   "old": "**Dead time and pile-up** are: they skew histograms and cut effective PDE by 29–33% at 940 nm behind a 10 nm filter and by 59–95% at 905 nm behind 20–40 nm filters (the ranges span the non-paralyzable and paralyzable forms of Eq. (82)), because a SPAD that is dead, or has already fired on a background photon, cannot count the return.",
+   "new": "**Dead time and pile-up** are: they skew histograms and cut effective PDE, because a SPAD that is dead, or has already fired on a background photon, cannot count the return. For the 0.05° × 0.05° macro-pixel the cut is modest at 940 nm behind a 10 nm filter, 17–18%, but 42–77% at 905 nm behind 20–40 nm filters (the ranges span the non-paralyzable and paralyzable forms of Eq. (82)).",
+   "why": "Ranges from the recomputed table; says plainly that the 940 nm loss becomes modest."
+  },
+  {
+   "id": "R2B_C4-C6-022",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°)",
+   "old": "| 940 nm, 20 nm filter, ρ = 0.1 ($1.32\\times10^8$/s) | $1.46\\times10^7$/s | $1.32\\times10^8$ | $1.5\\times10^7$ | $7.8\\times10^5$ (**≈170×** lower) | $2.3\\times10^4$ |\n| 940 nm, 10 nm filter, ρ = 0.9 ($5.93\\times10^8$/s) | $6.59\\times10^7$/s | $5.93\\times10^8$ | $3.1\\times10^8$ | $7.2\\times10^7$ (8×) | $9.5\\times10^6$ (62×) |\n| 905 nm, 20 nm filter, ρ = 0.9 ($2.2\\times10^9$/s) | $2.4\\times10^8$/s | $2.2\\times10^9$ | no gain | no gain | no gain |",
+   "new": "| 940 nm, 20 nm filter, ρ = 0.1 ($6.59\\times10^7$/s) | $7.32\\times10^6$/s | $6.59\\times10^7$ | $3.9\\times10^6$ | $9.9\\times10^4$ (**≈670×** lower) | $1.4\\times10^3$ |\n| 940 nm, 10 nm filter, ρ = 0.9 ($2.965\\times10^8$/s) | $3.29\\times10^7$/s | $2.965\\times10^8$ | $7.8\\times10^7$ | $9.0\\times10^6$ (33×) | $5.9\\times10^5$ (500×) |\n| 905 nm, 20 nm filter, ρ = 0.9 ($1.1\\times10^9$/s) | $1.22\\times10^8$/s | $1.1\\times10^9$ | $1.1\\times10^9$ (no gain) | $4.6\\times10^8$ (≈2×, rough) | $1.1\\times10^8$ (≈10×, rough) |",
+   "why": "Each coincidence row recomputed from Eq. (84) at the halved backgrounds."
+  },
+  {
+   "id": "R2B_C4-C6-023",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°)",
+   "old": "for example $1.32\\times10^{8}/9=1.46\\times10^{7}$ s⁻¹. The first row's background is the 940 nm, 10 nm, ρ = 0.9 value of (d), $5.93\\times10^{8}$ s⁻¹, scaled by twice the filter width and one ninth of the reflectance: $5.93\\times10^{8}\\times2\\times(0.1/0.9)=1.32\\times10^{8}$ s⁻¹.",
+   "new": "for example $6.59\\times10^{7}/9=7.32\\times10^{6}$ s⁻¹. The first row's background is the 940 nm, 10 nm, ρ = 0.9 value of (d), $2.965\\times10^{8}$ s⁻¹, scaled by twice the filter width and one ninth of the reflectance: $2.965\\times10^{8}\\times2\\times(0.1/0.9)=6.59\\times10^{7}$ s⁻¹.",
+   "why": "Per-SPAD rate substitutions for the table."
+  },
+  {
+   "id": "R2B_C4-C6-024",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°)",
+   "old": "First row: 2-fold $36\\times2\\times(1.46\\times10^{7})^2\\times10^{-9}=1.5\\times10^{7}$; 3-fold $84\\times3\\times(1.46\\times10^{7})^3\\times10^{-18}=7.8\\times10^{5}$, which is $1.32\\times10^{8}/(7.8\\times10^{5})\\approx170$ times below the singles; 4-fold $126\\times4\\times(1.46\\times10^{7})^4\\times10^{-27}=2.3\\times10^{4}$. The second row, with $r=5.93\\times10^{8}/9=6.59\\times10^{7}$ s⁻¹, gives $3.1\\times10^{8}$, $7.2\\times10^{7}$ (a factor $5.93\\times10^{8}/(7.2\\times10^{7})\\approx8$ below the singles) and $9.5\\times10^{6}$ (a factor $5.93\\times10^{8}/(9.5\\times10^{6})\\approx62$).\n- **No gain** in the third row: $r\\tau_c=2.4\\times10^{8}\\times10^{-9}=0.24$ is not small, so the formula no longer applies (it would give more 2-fold than single events) and coincidence rejects little.",
+   "new": "First row: 2-fold $36\\times2\\times(7.32\\times10^{6})^2\\times10^{-9}=3.9\\times10^{6}$; 3-fold $84\\times3\\times(7.32\\times10^{6})^3\\times10^{-18}=9.9\\times10^{4}$, which is $6.59\\times10^{7}/(9.9\\times10^{4})\\approx670$ times below the singles; 4-fold $126\\times4\\times(7.32\\times10^{6})^4\\times10^{-27}=1.4\\times10^{3}$. The second row, with $r=2.965\\times10^{8}/9=3.29\\times10^{7}$ s⁻¹, gives $7.8\\times10^{7}$, $9.0\\times10^{6}$ (a factor $2.965\\times10^{8}/(9.0\\times10^{6})\\approx33$ below the singles) and $5.9\\times10^{5}$ (a factor $2.965\\times10^{8}/(5.9\\times10^{5})\\approx500$).\n- **Little gain** in the third row: $r\\tau_c=1.22\\times10^{8}\\times10^{-9}=0.12$ is not small, so Eq. (84) is only a rough guide there. It gives 2-fold accidentals of $72\\times(1.22\\times10^{8})^2\\times10^{-9}=1.1\\times10^{9}$, about the singles rate, so a 2-fold rule rejects almost nothing; 3- and 4-fold rules give $252\\times(1.22\\times10^{8})^3\\times10^{-18}=4.6\\times10^{8}$ and $504\\times(1.22\\times10^{8})^4\\times10^{-27}=1.1\\times10^{8}$, only ≈2× and ≈10× below the singles.",
+   "why": "Eq. (84) substitutions; at r tau_c = 0.12 the third row gives small gains rather than none, stated as rough."
+  },
+  {
+   "id": "R2B_C4-C6-025",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°)",
+   "old": "In the brightest case ($r\\tau_c\\approx0.24$) it does almost nothing, so Layer 1 has to come first.",
+   "new": "In the brightest case ($r\\tau_c\\approx0.12$) a 2-fold rule does nothing and even a 4-fold rule gains only ≈10×, against ≈500× at 940 nm behind a 10 nm filter ($r\\tau_c\\approx0.033$), so Layer 1 has to come first.",
+   "why": "Lesson 1 restated on the recomputed rows; its conclusion holds."
+  },
+  {
+   "id": "R2B_C4-C6-026",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°)",
+   "old": "In the bright 940 nm/10 nm case ($r=5.93\\times10^{8}/9=6.59\\times10^{7}$ s⁻¹ per SPAD, so $r\\tau_d=0.40$ at 6 ns) a passively recharged SPAD with Sony's 6 ns is dead $1-e^{-0.40}=33\\%$ of the time, as in (d). With active recharge it is dead 29% at 6 ns ($0.40/1.40$), 17% at 3 ns ($0.20/1.20$) and 57% at 20 ns ($r\\tau_d=1.32$, and $1.32/2.32=0.57$).",
+   "new": "In the bright 940 nm/10 nm case ($r=2.965\\times10^{8}/9=3.29\\times10^{7}$ s⁻¹ per SPAD, so $r\\tau_d=0.20$ at 6 ns) a passively recharged SPAD with Sony's 6 ns is dead $1-e^{-0.20}=18\\%$ of the time, as in (d). With active recharge it is dead 17% at 6 ns ($0.20/1.20$), 9% at 3 ns ($0.099/1.099$) and 40% at 20 ns ($r\\tau_d=0.66$, and $0.66/1.66=0.40$).",
+   "why": "Eq. (82) at 3, 6 and 20 ns for the halved per-SPAD rate."
+  },
+  {
+   "id": "R2B_C4-C6-027",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°)",
+   "old": "In sunlight a scanned column dissipates about 0.2–0.5 W;",
+   "new": "In sunlight a scanned column dissipates about 0.13–0.33 W in the model's central case (0.24–0.58 W in full sun);",
+   "why": "Column avalanche power on the recomputed recorded rates."
+  },
+  {
+   "id": "R2B_C4-C6-028",
+   "finding": "round2 decision 2 (ToF macro-pixel 0.05° × 0.05°)",
+   "old": "The column figure assumes about $2.5\\times10^{8}$ avalanches/s in each of 520 macro-pixels, near the $3.66\\times10^{8}\\times0.784=2.9\\times10^{8}$ s⁻¹ recorded in the model's central case of (d) [E]: $520\\times2.5\\times10^{8}\\ {\\rm s^{-1}}\\times1.6\\ {\\rm pJ}=0.21$ W, and 0.51 W at 3.9 pJ.",
+   "new": "The column figure takes the $1.83\\times10^{8}\\times0.885=1.62\\times10^{8}$ avalanches/s recorded in each of 520 macro-pixels in the model's central case of (d) [E]: $520\\times1.62\\times10^{8}\\ {\\rm s^{-1}}\\times1.6\\ {\\rm pJ}=0.13$ W, and 0.33 W at 3.9 pJ. In full sun the recorded rate is $3.66\\times10^{8}\\times0.784=2.87\\times10^{8}$ s⁻¹, which gives 0.24 W and 0.58 W.",
+   "why": "Avalanche-power basis: recorded rate = r_bg x live fraction at 0.05° × 0.05°."
+  }
+ ],
+ "skipped": [
+  {
+   "finding": "round1 needs_decision [06_C5_C5a_C6] report #18 (VGA part)",
+   "kind": "needs_decision",
+   "location": "§C6(f): \"The VGA figure corresponds to about $10^{7}$ avalanches/s in each of $640\\times480=3.1\\times10^{5}$ pixels\"",
+   "detail": "Not settled by decision 2: the staring VGA pixel's background is set by its own pitch and f-number (etendue pi p^2/(4N^2)), not by the 0.05° scanned macro-pixel. For a 10 µm single-SPAD pixel at f/1.2 the etendue is 5.45e-11 m^2 sr, 0.146 of the 0.05° macro-pixel's 3.74e-10, giving 2.965e8 x 0.146 = 4.3e7 s^-1 incident and 4.3e7 x e^-0.26 = 3.3e7 s^-1 recorded (940 nm, 10 nm, rho 0.9, PDE 0.3, 6 ns, paralyzable), about 3x the 1e7 used. The author still has to choose the staring pixel's pitch, f-number, filter and field [E]. The column figure and its basis are recomputed by edits R2B_C4-C6-027 and -028."
+  },
+  {
+   "finding": "round2 decision 4 (factor in the linking sentence)",
+   "kind": "needs_decision",
+   "location": "§C4c subsection 2, 'How the numbers are derived', added bullet '**Basis against §C6(d).**'",
+   "detail": "Decision 4 says the band average is 'about 1.5x lower at 940 nm than the near-point value the model uses'. Computed: the model (§C6(d) and build/figures/fmcw_tof_system_budget.py, BG_PER_PDE = 2.965e8/0.3) takes 0.39 W m^-2 nm^-1 at 940 nm, the midpoint of the exact 0.472 and the +-10 nm 0.303, so the model is 0.39/0.303 = 1.29x the band average; the 1.5x is the exact-wavelength ratio 0.472/0.303 = 1.56. Edit R2B_C4-C6-008 states both and concludes 'about 1.3x ... conservative for 940 nm ToF'. If the author wants only one factor, keep 1.3x (the model's)."
+  },
+  {
+   "finding": "round2 numbers changed in sections C3b-C6",
+   "kind": "cross_section",
+   "location": "§0 executive summary, detectors bullet",
+   "detail": "Exact text: «InGaAs SPADs would run ≈700× over their count-rate ceiling in sunlight, i.e. background photons would saturate them.» Proposed: «InGaAs SPADs would run ≈340× over their count-rate ceiling in sunlight (§C4c subsection 3), i.e. background photons would saturate them.» Reason: The 1,550 nm pixel background at 0.05° × 0.05° is 3.4e8/s (§C4c), 3.4e8/1e6 = 340. Agent R2C_C7-C7a's section."
+  },
+  {
+   "finding": "round2 numbers changed in sections C3b-C6",
+   "kind": "cross_section",
+   "location": "§C3a company table, Princeton Lightwave row (no Round 2 agent)",
+   "detail": "Exact text: «InGaAs SPADs would run ≈700× over their count-rate ceiling in sunlight (§C4c)» Proposed: «InGaAs SPADs would run ≈340× over their count-rate ceiling in sunlight (§C4c)» Reason: Follows §C4c subsection 3 (3.4e8/1e6 = 340)."
+  },
+  {
+   "finding": "round2 numbers changed in sections C3b-C6",
+   "kind": "cross_section",
+   "location": "§C0 subsection 5, Eq. (24) example [E, inputs of §C6(d)]",
+   "detail": "Exact text: «a 0.1° × 0.05° pixel ($\\Omega_{\\rm pix}=1.52\\times10^{-6}$ sr), a 25 mm aperture ($A_{\\rm rx}=4.91\\times10^{-4}$ m²), $\\eta_{\\rm opt}=0.5$ and PDE 0.3, $r_{\\rm bg}=3.4\\times10^{18}\\times20\\times(0.9/\\pi)\\times1.52\\times10^{-6}\\times4.91\\times10^{-4}\\times0.5\\times0.3\\approx2.2\\times10^9$ counts/s.» Proposed: «a 0.05° × 0.05° pixel ($\\Omega_{\\rm pix}=7.62\\times10^{-7}$ sr), a 25 mm aperture ($A_{\\rm rx}=4.91\\times10^{-4}$ m²), $\\eta_{\\rm opt}=0.5$ and PDE 0.3, $r_{\\rm bg}=3.4\\times10^{18}\\times20\\times(0.9/\\pi)\\times7.62\\times10^{-7}\\times4.91\\times10^{-4}\\times0.5\\times0.3\\approx1.1\\times10^9$ counts/s.» Reason: Same inputs as §C6(d) after edits R2B_C4-C6-017 and -018. Agent R2A_C0's section."
+  },
+  {
+   "finding": "round2 numbers changed in sections C3b-C6",
+   "kind": "cross_section",
+   "location": "§C0 subsection 10.3, 'Where b=2.87 comes from', first bullet",
+   "detail": "Exact text: «Eq. (81) gives $r_{\\rm bg}=5.93\\times10^{8}$ counts per second per macro-pixel for a fully sunlit scene of reflectance 0.9, at 940 nm behind a 10 nm filter and at PDE 0.3. The same SPADs count background and signal, so at the model's PDE of 0.37 the rate is $5.93\\times10^{8}\\times0.37/0.3=7.31\\times10^{8}$ s⁻¹.» Proposed: «Eq. (81) gives $r_{\\rm bg}=2.965\\times10^{8}$ counts per second per 0.05° × 0.05° macro-pixel for a fully sunlit scene of reflectance 0.9, at 940 nm behind a 10 nm filter and at PDE 0.3. The same SPADs count background and signal, so at the model's PDE of 0.37 the rate is $2.965\\times10^{8}\\times0.37/0.3=3.66\\times10^{8}$ s⁻¹.» Reason: Quotes §C6(d)'s Eq. (81) value (edit R2B_C4-C6-018); the central case that follows becomes 1.83e8 per the spec. Agent R2A_C0's section."
+  },
+  {
+   "finding": "round2 numbers changed in sections C3b-C6",
+   "kind": "cross_section",
+   "location": "§C0 subsection 10.8, 'Sony's lens'",
+   "detail": "Exact text: «With $\\eta=$ 0.5–0.7 (optics) × 0.22 (PDE) × 0.784 (live fraction, §C6), that is a lens of 12–14 mm.» Proposed: «With $\\eta=$ 0.5–0.7 (optics) × 0.22 (PDE) × 0.885 (live fraction, §C6), that is a lens of 11–13 mm.» Reason: Live fraction of §C6(d) at the halved central background. At the line's n_req = 25, eta A = 1.36e-5 m^2 and eta = 0.0974-0.136 give D = 2 sqrt(A/pi) = 13.3-11.3 mm; if the line also takes n_req = 21.7 (decision 3), eta A = 1.18e-5 m^2 and D = 12.4-10.5 mm. Agent R2A_C0's section."
+  },
+  {
+   "finding": "round2 numbers changed in sections C3b-C6",
+   "kind": "cross_section",
+   "location": "§C7a subsection 2(c), event-count inputs",
+   "detail": "Exact text: «the background count rate $r_{\\rm bg}=3.66\\times10^{8}$ s⁻¹ per macro-pixel, half the fully sunlit 940 nm case of §C6(d) (Eq. (81)) evaluated at the model's PDE of 0.37» Proposed: «the background count rate $r_{\\rm bg}=1.83\\times10^{8}$ s⁻¹ per 0.05° × 0.05° macro-pixel, half the fully sunlit 940 nm case of §C6(d) (Eq. (81), $2.965\\times10^{8}\\times0.37/0.3=3.66\\times10^{8}$ s⁻¹) evaluated at the model's PDE of 0.37» Reason: Follows §C6(d) (edit R2B_C4-C6-020). Agent R2C_C7-C7a's section."
+  },
+  {
+   "finding": "round2 numbers changed in sections C3b-C6",
+   "kind": "cross_section",
+   "location": "§C7b subsection 1, 'In the §C7a model'",
+   "detail": "Exact text: «in bright sun counts $r_{\\rm bg}=3.66\\times10^{8}$ s⁻¹, half the fully sunlit case of §C6(d) at the model's photon detection efficiency (PDE) of 0.37. It listens for the 20.8 µs column time per point (≈10 shots of ≈2 µs, §C6). It is dead (unable to count) for 21.6% of that time (Eq. (82), paralyzable form), so it is live for a fraction 0.784 of it. That gives $3.66\\times10^{8}\\times20.8\\times10^{-6}\\times0.784\\approx5{,}960$ background events per point. (§C7a(c) counts ≈5,990 because it adds the 25 signal counts.)» Proposed: «in bright sun counts $r_{\\rm bg}=1.83\\times10^{8}$ s⁻¹, half the fully sunlit case of §C6(d) at the model's photon detection efficiency (PDE) of 0.37. It listens for the 20.8 µs column time per point (≈10 shots of ≈2 µs, §C6). It is dead (unable to count) for 11.5% of that time (Eq. (82), paralyzable form), so it is live for a fraction 0.885 of it. That gives $1.83\\times10^{8}\\times20.8\\times10^{-6}\\times0.885\\approx3{,}370$ background events per point. (§C7a(c) counts ≈3,390 because it adds the 21.7 signal counts.)» Reason: Follows §C6(d) and §C5a (edits R2B_C4-C6-012, -020). Agent R2D_C7b's section."
+  },
+  {
+   "finding": "round2 numbers changed in sections C3b-C6",
+   "kind": "cross_section",
+   "location": "§C10.3 inputs, sunlight bullet",
+   "detail": "Exact text: «a fully sunlit scene of reflectance 0.9 raises the ideal requirement only to ≈20 (§C0 subsection 10.3; background model in §C6(d))» Proposed: «a fully sunlit scene of reflectance 0.9 raises the ideal requirement only to ≈17 (§C0 subsection 10.3; background model in §C6(d))» Reason: Full sun at 0.05° × 0.05°: r_bg 3.66e8, live 0.784, b = 3.66e8 x 1e-9 x 10 x 0.784 = 2.87, threshold 15, ideal 17.3 counts. Agent R2E_C10's section."
+  },
+  {
+   "finding": "round2 numbers changed in sections C3b-C6",
+   "kind": "cross_section",
+   "location": "§C10.3a, 'Sunlight can favour coherent detection'",
+   "detail": "Exact text: «In a fully sunlit scene this cuts the effective PDE by about a third at 940 nm behind a 10 nm filter, and by three-quarters or more at 905 nm behind 20–40 nm filters (§C6(d); §C7a's central case uses a live fraction of 0.784)» Proposed: «In a fully sunlit scene this cuts the effective PDE by about a sixth (17–18%) at 940 nm behind a 10 nm filter, and by 42–77% at 905 nm behind 20–40 nm filters (§C6(d); §C7a's central case uses a live fraction of 0.885)» Reason: Follows the recomputed §C6(d) table (edits R2B_C4-C6-016, -019, -021). Agent R2E_C10's section."
+  },
+  {
+   "finding": "round2 numbers changed in sections C3b-C6",
+   "kind": "cross_section",
+   "location": "§0 executive summary, energy-per-point bullet",
+   "detail": "Exact text: «whose SPADs lose ≈22% of the signal to their 6 ns dead time in bright sun» Proposed: «whose SPADs lose ≈11.5% of the signal to their 6 ns dead time in bright sun» Reason: Central-case dead fraction at 0.05° × 0.05° (§C6(d), edit R2B_C4-C6-020). The same bullet's '≈8×, since 4.25/0.536' is R2C's model item (11.8× = 4.899/0.415). Agent R2C_C7-C7a's section."
+  }
+ ]
+}

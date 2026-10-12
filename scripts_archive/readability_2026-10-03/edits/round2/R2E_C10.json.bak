@@ -1,0 +1,446 @@
+{
+ "block": "R2E_C10",
+ "edits": [
+  {
+   "id": "R2E_C10-001",
+   "finding": "summary of verdicts; decisions 6-7",
+   "old": "Ideal full-coverage coherent power does not grow as $1/\\Omega_{\\rm cell}$ (§C10.3; §C10.3a, item 4).",
+   "new": "Ideal full-coverage coherent power does not grow as $1/\\Omega_{\\rm cell}$ (§C10.3; §C10.3a, item 4). The gap does not close at camera-like pitch, however: at the 0.0125° of \"2,000+ line\" claims, ideal full-coverage coherent detection still needs 4.2–13× ToF's power (§C10.3).",
+   "why": "States the conclusion the recomputed §C10.3 table supports (4.2-13x at 0.0125 deg)."
+  },
+  {
+   "id": "R2E_C10-002",
+   "finding": "round1 model_round2 [09_C10_part1] report #3; decision 6 (eta convention)",
+   "old": "$A_{\\rm mode}$ the mode-equivalent collecting area (the effective area with which a single-mode receiver collects light scattered by a diffuse target), $\\eta$ the detection efficiency and $\\eta_{\\rm OPA}$ the OPA's one-way power transmission.",
+   "new": "$A_{\\rm mode}$ the mode-equivalent collecting area (the effective area with which a single-mode receiver collects light scattered by a diffuse target, including its single-polarization and truncation factors), $\\eta$ the end-to-end efficiency of the rest of the chain (optics × detector × mixing, without polarization or mode shape, which sit in $A_{\\rm mode}$) and $\\eta_{\\rm OPA}$ the OPA's one-way power transmission.",
+   "why": "Defines eta on the report-wide convention."
+  },
+  {
+   "id": "R2E_C10-003",
+   "finding": "round1 model_round2 [09_C10_part1] report #3; decision 6 (eta convention)",
+   "old": "an ideal mode-equivalent collecting area $A_{\\rm mode}=\\lambda^2/\\Omega_{\\rm cell}=(1.55\\ \\mu{\\rm m})^2/(8.73\\times10^{-4}\\ {\\rm rad})^2\\approx3.2$ mm², where $\\Omega_{\\rm cell}$ is the solid angle of one 0.05° cell ($8.73\\times10^{-4}$ rad on a side); 1 W for 5 µs; and an efficiency $\\eta=0.4$ (polarization 0.5 × quantum efficiency 0.8). The polarization factor of 0.5 assumes",
+   "new": "that beam's mode-equivalent collecting area $A_{\\rm mode}=\\tfrac{t^2}{2}\\lambda^2/\\Omega_{\\rm cell}=0.419\\times(1.55\\ \\mu{\\rm m})^2/(8.73\\times10^{-4}\\ {\\rm rad})^2=0.419\\times3.15\\ {\\rm mm^2}=1.32$ mm², where $\\Omega_{\\rm cell}$ is the solid angle of one 0.05° cell ($8.73\\times10^{-4}$ rad on a side) and $t^2/2=0.419$ is the Gaussian model's round-trip truncation factor $t^2=0.838$ times the single-polarization factor ½ (§C10.3b, Result 2), with $t$ the fraction of a Gaussian beam's power that the finite aperture passes one way; 1 W for 5 µs; and $\\eta=0.25$, the coherent design efficiency of §C0 subsection 10.1 (optics × detector × mixing), with the OPA's own loss counted separately in $\\eta_{\\rm OPA}$. The polarization factor ½ assumes",
+   "why": "Polarization and truncation move into A_mode (t^2/2 = 0.419); eta = 0.25."
+  },
+  {
+   "id": "R2E_C10-004",
+   "finding": "round1 model_round2 [09_C10_part1] report #3; decision 6 (eta convention)",
+   "old": "and a Lambertian return delivers the fraction $\\rho A_{\\rm mode}/(\\pi R^2)=0.1\\times3.15\\ {\\rm mm^2}/(\\pi\\times(200\\ {\\rm m})^2)=2.5\\times10^{-12}$ of them to the mode. That gives about **98 photons at the mode before the 0.4 efficiency and optical losses**, and $98\\times0.4=39$ after the efficiency. §C10.3b's truncation factor ($t^2=0.915^2\\approx0.84$, where $t$ is the fraction of a Gaussian beam's power that the finite aperture passes one way, counted once on transmit and once on receive) would lower the results below by a further ≈16%.",
+   "new": "and a Lambertian return delivers the fraction $\\rho A_{\\rm mode}/(\\pi R^2)=0.1\\times1.32\\ {\\rm mm^2}/(\\pi\\times(200\\ {\\rm m})^2)=1.05\\times10^{-12}$ of them to the mode. That gives about **41 photons in the mode before the efficiency and the OPA's loss** ($3.9\\times10^{13}\\times1.05\\times10^{-12}=41$), and $41\\times0.25=10.3$ after the efficiency.",
+   "why": "Recomputed on A_mode = 1.32 mm^2 and eta = 0.25; the truncation note is now inside A_mode."
+  },
+  {
+   "id": "R2E_C10-005",
+   "finding": "round1 model_round2 [09_C10_part1] report #3; decision 6 (eta convention)",
+   "old": "After one-way OPA losses of 1, 3 and 7 dB, about **25, 10 and 1.6 photons** are detected. The monostatic path applies each loss twice, so the factors $\\eta_{\\rm OPA}^2$ are $10^{-0.2}$, $10^{-0.6}$ and $10^{-1.4}$: $39\\times0.63=25$, $39\\times0.25=9.8$ and $39\\times0.040=1.6$.",
+   "new": "After one-way OPA losses of 1, 3 and 7 dB, about **6.5, 2.6 and 0.41 photons** are detected. The monostatic path applies each loss twice, so the factors $\\eta_{\\rm OPA}^2$ are $10^{-0.2}$, $10^{-0.6}$ and $10^{-1.4}$: $10.3\\times0.631=6.5$, $10.3\\times0.251\\approx2.58$ and $10.3\\times0.0398=0.41$.",
+   "why": "Detected photons after OPA loss on the new convention."
+  },
+  {
+   "id": "R2E_C10-006",
+   "finding": "round1 model_round2 [09_C10_part1] report #3; decision 6 (eta convention)",
+   "old": "about 9–26 W per beam at 5 µs dwell and 3 dB one-way loss [E], if the looks share one receive mode (wavelength or time diversity): ≈9 W for four-look and ≈26 W for single-look detection, or ≈540–1,590 W for 60 beams at 12 Mpts/s. With polarization or spatial diversity each look adds a receive mode, which cuts the four-look figure about 4×, to ≈2.3 W per beam (≈135 W for 60 beams). At 3 dB one-way loss, 1 W for 5 µs yields 9.8 detected photons, so 88.5 photons need $88.5/9.8=9.0$ W and 259 need $259/9.8=26.4$ W; 12 Mpts/s at 5 µs dwell needs $12\\times10^{6}\\ {\\rm s^{-1}}\\times5\\ \\mu{\\rm s}=60$ beams, hence $60\\times9.0=540$ W to $60\\times26.4\\approx1{,}590$ W;",
+   "new": "about 34–100 W per beam at 5 µs dwell and 3 dB one-way loss [E], if the looks share one receive mode (wavelength or time diversity): ≈34 W for four-look and ≈100 W for single-look detection, or ≈2.1–6.0 kW for 60 beams at 12 Mpts/s. With polarization or spatial diversity each look adds a receive mode, which cuts the four-look figure about 4×, to ≈8.6 W per beam (≈515 W for 60 beams). At 3 dB one-way loss, 1 W for 5 µs yields 2.58 detected photons, so 88.5 photons need $88.5/2.58=34.3$ W and 259 need $259/2.58=100$ W; 12 Mpts/s at 5 µs dwell needs $12\\times10^{6}\\ {\\rm s^{-1}}\\times5\\ \\mu{\\rm s}=60$ beams, hence $60\\times34.3=2{,}060$ W to $60\\times100=6{,}000$ W, and $60\\times34.3/4=515$ W with one receive mode per look;",
+   "why": "Per-beam and full-field powers on eta = 0.25 with t^2/2 in A_mode: about 3.8x the earlier figures."
+  },
+  {
+   "id": "R2E_C10-007",
+   "finding": "decision 6 (eta convention) (power per beam)",
+   "old": "a waveguide platform that carries watts: Si trunks (the input waveguides that carry the full power before it is split among elements) are limited by two-photon absorption, a nonlinear loss that grows with intensity (§C8.2), whereas SiN handles watts;",
+   "new": "a waveguide platform that carries ≈9–100 W per beam: Si trunks (the input waveguides that carry the full power before it is split among elements) are limited by two-photon absorption, a nonlinear loss that grows with intensity (§C8.2), whereas SiN handles watts (the Si–SiN chip of §C10.2b takes 20 W in, against the 34–100 W per beam of single-mode looks);",
+   "why": "The per-beam power the platform must carry follows from the recomputed first bullet."
+  },
+  {
+   "id": "R2E_C10-008",
+   "finding": "decision 6 (eta convention) (full-field OPA power)",
+   "old": "In practical terms, full-field coverage by a long-range OPA would need 0.5–1.6 kW of optical power,",
+   "new": "In practical terms, full-field coverage by a long-range OPA would need about 2–6 kW of optical power at 3 dB one-way loss (≈0.5 kW if every look has its own receive mode),",
+   "why": "Conclusion restated from the recomputed 2,060-6,000 W."
+  },
+  {
+   "id": "R2E_C10-009",
+   "finding": "decision 6 (eta convention) (quotes §C10.2 item 5)",
+   "old": "That sits at the low end of the cell-filling link budget of §C10.2, item 5, Eq. (134): 45–132 µJ for 88.5–259 photons at 3 dB one-way loss (5 µJ yields 9.8 detected photons there, so $5\\ \\mu{\\rm J}\\times88.5/9.8=45\\ \\mu{\\rm J}$ and $5\\ \\mu{\\rm J}\\times259/9.8=132\\ \\mu{\\rm J}$).",
+   "new": "That is 3–11× below the cell-filling link budget of §C10.2, item 5, Eq. (134), which needs 172–502 µJ for 88.5–259 photons at 3 dB one-way loss (5 µJ yields 2.58 detected photons there, so $5\\ \\mu{\\rm J}\\times88.5/2.58=172\\ \\mu{\\rm J}$ and $5\\ \\mu{\\rm J}\\times259/2.58=502\\ \\mu{\\rm J}$; $172/56=3.1$ and $502/44=11$). The 8,192-element array's 0.01° × 0.039° beam is much narrower than a 0.05° cell, so each of its samples collects more photons than a cell-filling one would, at the price of sparse coverage (§C10.3a, item 4).",
+   "why": "The measured energies no longer sit at the low end of the recomputed cell-filling budget; says so and why."
+  },
+  {
+   "id": "R2E_C10-010",
+   "finding": "round1 model_round2 [09_C10_part1] follow-up section 4 (headline); decision 6 (eta convention); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "For a 10% target at 200 m and 10 Hz, gap-free single-mode coherent coverage of 120° × 25° needs 20–184 W at a non-fading threshold of 10–30 detected photons, and about 180–1,590 W once speckle fading is counted under the report's per-point rule (caveat 4; §C10.2, item 5); ToF needs 0.23–14.4 W at 0.1° to 0.0125° sampling. Coherent designs therefore sample sparsely with narrow beams; the gap closes only as ToF cells approach the diffraction limit.",
+   "new": "For a 10% target at 200 m and 10 Hz, gap-free single-mode coherent coverage of 120° × 25° needs 58.5–175.5 W at a non-fading threshold of 10–30 detected photons, and about 518–1,515 W once speckle fading is counted under the report's per-point rule, or ≈130 W if each of four looks has its own receive mode (caveat 4; §C10.2, item 5); ToF needs 0.215–13.8 W at 0.1° to 0.0125° sampling. Coherent designs therefore sample sparsely with narrow beams. The gap closes only as ToF cells approach the diffraction limit: at the 0.0125° pitch of \"2,000+ line\" claims, coherent coverage still needs 4.2–13× ToF's power.",
+   "why": "Headline on the recomputed Eq. (139) values, with the multi-mode speckle case."
+  },
+  {
+   "id": "R2E_C10-011",
+   "finding": "round1 model_round2 [09_C10_part1] report #3; decision 6 (eta convention)",
+   "old": "The values of $\\eta$ below are assumed to include whatever polarization loss applies.",
+   "new": "That factor ½ is not part of $\\eta$: with the round-trip truncation $t^2=0.838$ it forms the factor $t^2/2=0.419$ of the mode-equivalent area (Eq. (138) below), as in §C0 subsection 10.1 and §C10.3b.",
+   "why": "eta convention of §C0 subsection 10.1."
+  },
+  {
+   "id": "R2E_C10-012",
+   "finding": "round1 model_round2 [09_C10_part1] consistency flag (ToF model); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "- *Sunlight.* For ToF, $N_{\\rm req}=20$ already corresponds to bright sun (§C0 subsection 10.3: 17.3 counts for an ideal counter, 25 in the §C7a model); at night ≈5 counts suffice.",
+   "new": "- *Sunlight.* For ToF, $N_{\\rm req}=21.7$ already corresponds to bright sun: an ideal counter needs 15.0 counts there (§C0 subsection 10.3), and the §C7a model applies its ×1.45 implementation margin, $1.45\\times15.0\\approx21.7$. The dead time that sunlight causes is in $\\eta$, through the SPAD live fraction 0.885. At night ≈5 counts suffice.",
+   "why": "ToF requirement of the 940 nm model with the 0.05 x 0.05 deg background."
+  },
+  {
+   "id": "R2E_C10-013",
+   "finding": "decision 6 (eta convention)",
+   "old": "- $\\eta$, the end-to-end detection efficiency: the fraction of photons arriving at the aperture that are detected, including optics transmission and quantum efficiency;",
+   "new": "- $\\eta$, the end-to-end efficiency from photons arriving at the aperture to signal photoelectrons: optics × detector, and for the coherent receiver also × mixing (§C0 subsection 10.1). It excludes the coherent receiver's polarization and mode-shape factors, which sit in $A_{\\rm mode}$, and for SPAD ToF it includes the live fraction that sunlight-induced dead time leaves;",
+   "why": "Symbol definition on the report-wide convention."
+  },
+  {
+   "id": "R2E_C10-014",
+   "finding": "decision 6 (eta convention) (Eq. (138) rewritten in place)",
+   "old": "  $$n_{\\rm coh}=\\frac{\\eta\\rho E_{\\rm pt}}{E_{\\rm ph}}\\frac{A_{\\rm mode}}{\\pi R^2},\\qquad A_{\\rm mode}\\sim\\frac{\\lambda^2}{\\Omega_{\\rm cell}} \\tag{138}$$\n\n  If the received mode is widened to fill every angular cell, its best-order scaling is $A_{\\rm mode}\\sim\\lambda^2/\\Omega_{\\rm cell}$, and the two cell-angle factors (in $E_{\\rm pt}$ and in $A_{\\rm mode}$) cancel. That is the ideal full-coverage scaling used below, subject to polarization, beam shape, truncation and receive-mode overlap.",
+   "new": "  $$n_{\\rm coh}=\\frac{\\eta\\rho E_{\\rm pt}}{E_{\\rm ph}}\\frac{A_{\\rm mode}}{\\pi R^2},\\qquad A_{\\rm mode}\\simeq\\frac{t^2}{2}\\,\\frac{\\lambda^2}{\\Omega_{\\rm cell}} \\tag{138}$$\n\n  If the received mode is widened until its Gaussian 1/e² spot fills one angular cell, the Gaussian model of §C10.3b gives the second relation (its Eq. (147) with a footprint fraction of one), where $t^2/2=0.419$ is the round-trip truncation $t^2=0.838$ times the single-polarization factor ½; at 0.05° it is 1.32 mm². The two cell-angle factors (in $E_{\\rm pt}$ and in $A_{\\rm mode}$) then cancel. That is the ideal full-coverage scaling used below, subject to beam shape and receive-mode overlap at the cell corners.",
+   "why": "The cell-filling mode area carries t^2/2, as in §C10.3b; tag kept."
+  },
+  {
+   "id": "R2E_C10-015",
+   "finding": "decision 6 (eta convention) (Eq. (139) rewritten in place)",
+   "old": "\\Omega_{\\rm FOV}}{\\rho\\,\\lambda^2\\,\\eta},\\\\",
+   "new": "\\Omega_{\\rm FOV}}{\\rho\\,\\tfrac{t^2}{2}\\lambda^2\\,\\eta},\\\\",
+   "why": "P_coh with the single-polarization and truncation factor; tag kept."
+  },
+  {
+   "id": "R2E_C10-016",
+   "finding": "round1 model_round2 [09_C10_part1] consistency flag (ToF model) and [10_C10_part2] follow-up #3; decision 6 (eta convention); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "$N_{\\rm req}$ is the number of detected photons required per sample. The assumed inputs are, for ToF: 905 nm, 25 mm aperture, $N_{\\rm req}=20$ [E: close to the bright-sun requirement of §C0 subsection 10.3] and $\\eta=0.15$ [E: about the §C7a value, 0.145]. Single-mode coherent: 1550 nm ($N_{\\rm req}$ 10–30, $\\eta$ 0.3–0.1), needing **20–184 W** on every grid, because $\\Omega_{\\rm cell}$ does not appear in $P_{\\rm coh}$. Both powers grow as $R^2\\Omega_{\\rm FOV}$, which is why §C10.2b and the product comparison below rank by $R^2\\Omega$.",
+   "new": "$N_{\\rm req}$ is the number of detected photons (photoelectrons) required per sample, the $n_{\\rm req}$ of §C0 subsection 10.1. The ToF inputs are those of the 940 nm SPAD model of §C0 subsection 10.3 and §C7a: a 25 mm aperture, $N_{\\rm req}=21.7$ [E: the bright-sun requirement with the model's ×1.45 margin] and $\\eta=0.5\\times0.37\\times0.885=0.164$ [E: optics × PDE × the bright-sun live fraction]. They belong to the model's 0.05° × 0.05° macro-pixel and are held fixed across the grids below, although a coarser pixel collects more sunlight and a finer one less. Single-mode coherent: 1550 nm, $N_{\\rm req}$ 10–30 and $\\eta=0.25$, the design value of §C0 subsection 10.1, needing **58.5–175.5 W** on every grid, because $\\Omega_{\\rm cell}$ does not appear in $P_{\\rm coh}$; Waymo's measured chain efficiency of 0.112 (§C0 subsection 10.1) would raise this 2.23-fold. Both powers grow as $R^2\\Omega_{\\rm FOV}$, which is why §C10.2b and the product comparison below rank by $R^2\\Omega$.",
+   "why": "Inputs of decisions 6-7 replace 905 nm, N_req 20, eta 0.15 and eta 0.3-0.1."
+  },
+  {
+   "id": "R2E_C10-017",
+   "finding": "decision 6 (eta convention); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "and the ratio of the coherent power, which is 20–184 W on every grid, to it.",
+   "new": "and the ratio of the coherent power, which is 58.5–175.5 W on every grid, to it.",
+   "why": "Recomputed coherent power."
+  },
+  {
+   "id": "R2E_C10-018",
+   "finding": "round1 model_round2 [09_C10_part1] report #31 (0.1° row); decision 6 (eta convention); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "| 0.1° × 0.1° | 0.23 W | 87–800× |\n| 0.1° × 0.05° | 0.45 W | 45–410× |\n| 0.05° × 0.05° | 0.9 W | 23–200× |\n| 0.025° × 0.025° | 3.6 W | 6–51× |\n| 0.0125° × 0.0125° | 14.4 W | 1.4–13× |",
+   "new": "| 0.1° × 0.1° | 0.215 W | 272–816× |\n| 0.1° × 0.05° | 0.43 W | 136–408× |\n| 0.05° × 0.05° | 0.86 W | 68–204× |\n| 0.025° × 0.025° | 3.44 W | 17–51× |\n| 0.0125° × 0.0125° | 13.8 W | 4.2–13× |",
+   "why": "Table from Eq. (139) on the new inputs; every ratio from the unrounded P_ToF."
+  },
+  {
+   "id": "R2E_C10-019",
+   "finding": "decision 6 (eta convention); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "- Common inputs: $\\Omega_{\\rm FOV}=(120^\\circ\\times25^\\circ)(\\pi/180)^2=0.914$ sr (small-angle approximation: the product of the two field angles in radians), $R=200$ m, $f_{\\rm frame}=10$ Hz and $\\rho=0.1$, so $\\pi R^2f_{\\rm frame}\\,\\Omega_{\\rm FOV}/\\rho=1.15\\times10^{7}\\ {\\rm m^2\\,s^{-1}\\,sr}$.\n- Coherent: $E_{\\rm ph}=hc/\\lambda=1.28\\times10^{-19}$ J and $\\lambda^2=2.40\\times10^{-12}$ m² at 1550 nm. With $N_{\\rm req}=10$ and $\\eta=0.3$, $P_{\\rm coh}=10\\times1.28\\times10^{-19}\\times1.15\\times10^{7}/(2.40\\times10^{-12}\\times0.3)=20.4$ W; with $N_{\\rm req}=30$ and $\\eta=0.1$ it is nine times larger, 184 W.\n- ToF: $E_{\\rm ph}=2.19\\times10^{-19}$ J at 905 nm and $A_{\\rm rx}=\\pi(12.5\\ {\\rm mm})^2=4.91\\times10^{-4}$ m² for the 25 mm aperture. At 0.1° × 0.1°, $\\Omega_{\\rm cell}=(1.745\\times10^{-3})^2=3.05\\times10^{-6}$ sr, so $P_{\\rm ToF}=20\\times2.19\\times10^{-19}\\times1.15\\times10^{7}/(4.91\\times10^{-4}\\times3.05\\times10^{-6}\\times0.15)=0.225$ W. Halving one cell side doubles $P_{\\rm ToF}$, and halving both quadruples it.\n- Ratio: $P_{\\rm coh}/P_{\\rm ToF}$ falls in proportion to $\\Omega_{\\rm cell}$. At 0.05° × 0.05°, $20.4/0.90=23$ and $184/0.90=204\\approx200$.",
+   "new": "- Common inputs: $\\Omega_{\\rm FOV}=(120^\\circ\\times25^\\circ)(\\pi/180)^2=0.914$ sr (small-angle approximation: the product of the two field angles in radians), $R=200$ m, $f_{\\rm frame}=10$ Hz and $\\rho=0.1$, so $\\pi R^2f_{\\rm frame}\\,\\Omega_{\\rm FOV}/\\rho=1.148\\times10^{7}\\ {\\rm m^2\\,s^{-1}\\,sr}$.\n- Coherent: $E_{\\rm ph}=hc/\\lambda=1.282\\times10^{-19}$ J and $\\lambda^2=2.403\\times10^{-12}$ m² at 1550 nm, and $t^2/2=0.419$. With $N_{\\rm req}=10$ and $\\eta=0.25$, $P_{\\rm coh}=10\\times1.282\\times10^{-19}\\times1.148\\times10^{7}/(0.419\\times2.403\\times10^{-12}\\times0.25)=58.5$ W, i.e. 5.85 W per detected photon per sample; $N_{\\rm req}=30$ triples it, to 175.5 W. With the measured efficiency 0.112 instead of 0.25, both rise $0.25/0.112=2.23$-fold, to 131 and 392 W.\n- ToF: $E_{\\rm ph}=2.113\\times10^{-19}$ J at 940 nm and $A_{\\rm rx}=\\pi(12.5\\ {\\rm mm})^2=4.909\\times10^{-4}$ m² for the 25 mm aperture. At 0.1° × 0.1°, $\\Omega_{\\rm cell}=(1.745\\times10^{-3})^2=3.046\\times10^{-6}$ sr, so $P_{\\rm ToF}=21.7\\times2.113\\times10^{-19}\\times1.148\\times10^{7}/(4.909\\times10^{-4}\\times3.046\\times10^{-6}\\times0.164)=0.215$ W. Halving one cell side doubles $P_{\\rm ToF}$, and halving both quadruples it.\n- Ratio: $P_{\\rm coh}/P_{\\rm ToF}$ falls in proportion to $\\Omega_{\\rm cell}$. At 0.1° × 0.1°, $58.5/0.215=272$ and $175.5/0.215=816$; at 0.05° × 0.05°, $58.5/0.860=68$ and $175.5/0.860=204$.",
+   "why": "Substitutions for the recomputed table."
+  },
+  {
+   "id": "R2E_C10-020",
+   "finding": "round1 model_round2 [09_C10_part1] report #3; decision 6 (eta convention)",
+   "old": "- It assumes a realizable cell-filling single mode with $A_{\\rm mode}=\\lambda^2/\\Omega_{\\rm cell}$ and no polarization or mode-shape penalty beyond the stated $\\eta$.",
+   "new": "- It assumes a realizable cell-filling single mode with $A_{\\rm mode}=\\tfrac{t^2}{2}\\lambda^2/\\Omega_{\\rm cell}$ (1.32 mm² at 0.05°), which carries the single-polarization and truncation factors, and no further mode-shape penalty in $\\eta$.",
+   "why": "Caveat on the new convention."
+  },
+  {
+   "id": "R2E_C10-021",
+   "finding": "round1 model_round2 [09_C10_part1] report #3; decision 6 (eta convention)",
+   "old": "- The numerical Gaussian model in §C10.3b applies a further factor $t^2/2\\simeq0.42$ to the usable area when $\\eta$ excludes truncation and polarization. Here $t$ is the Gaussian aperture-truncation (power) factor, the fraction of a Gaussian beam's power that passes the finite aperture, and ½ is the single-polarization factor for a depolarizing target.",
+   "new": "- The factor $t^2/2=0.419$ in Eq. (139) is that of the numerical Gaussian model in §C10.3b, on the convention of §C0 subsection 10.1, in which $\\eta$ excludes truncation and polarization. Here $t=0.915$ is the Gaussian aperture-truncation (power) factor, the fraction of a Gaussian beam's power that passes the finite aperture, counted on transmit and on receive ($t^2=0.838$), and ½ is the single-polarization factor for a depolarizing target.",
+   "why": "The factor is applied in Eq. (139) rather than left as a further caveat."
+  },
+  {
+   "id": "R2E_C10-022",
+   "finding": "decision 6 (eta convention); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "to 200 m needs 20–184 W, even before speckle fading (caveat 4).**",
+   "new": "to 200 m needs 58.5–175.5 W, even before speckle fading (caveat 4).**",
+   "why": "Recomputed coherent power."
+  },
+  {
+   "id": "R2E_C10-023",
+   "finding": "round1 model_round2 [09_C10_part1] report #31 (item 2); decision 6 (eta convention); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "Power parity arrives only near **0.004–0.01°**, where a 25 mm ToF receiver itself approaches the diffraction limit ($A_{\\rm rx}\\Omega_{\\rm cell}\\to\\lambda^2$): its étendue per cell then shrinks to a single mode, the same as a coherent receiver's. Because the ratio scales as $\\theta_{\\rm cell}^2$, with $\\theta_{\\rm cell}$ the cell width, parity needs $\\theta_{\\rm cell}=0.1^\\circ/\\sqrt{87}=0.011^\\circ$ to $0.1^\\circ/\\sqrt{800}=0.0035^\\circ$; the diffraction limit itself is at $\\theta_{\\rm cell}=\\lambda/\\sqrt{A_{\\rm rx}}=0.905\\ \\mu{\\rm m}/22\\ {\\rm mm}=4.1\\times10^{-5}$ rad $=0.0023^\\circ$. That is beyond even \"camera-like\" resolution.",
+   "new": "Power parity arrives only near **0.0035–0.006°**, where a 25 mm ToF receiver itself approaches the diffraction limit ($A_{\\rm rx}\\Omega_{\\rm cell}\\to\\lambda^2$): its étendue per cell then shrinks to a single mode, the same as a coherent receiver's. Because the ratio scales as $\\theta_{\\rm cell}^2$, with $\\theta_{\\rm cell}$ the cell width, parity needs $\\theta_{\\rm cell}=0.1^\\circ/\\sqrt{272}=0.0061^\\circ$ to $0.1^\\circ/\\sqrt{816}=0.0035^\\circ$; the diffraction limit itself is at $\\theta_{\\rm cell}=\\lambda/\\sqrt{A_{\\rm rx}}=0.940\\ \\mu{\\rm m}/22.2\\ {\\rm mm}=4.2\\times10^{-5}$ rad $=0.0024^\\circ$. That is beyond even \"camera-like\" resolution, and finer than the 0.0125° of \"2,000+ line\" claims, at which full-coverage coherent detection still needs 4.2–13× ToF's power.",
+   "why": "Parity cells and diffraction limit at 940 nm; states that 0.0125 deg leaves a 4.2-13x gap."
+  },
+  {
+   "id": "R2E_C10-024",
+   "finding": "decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164) (full-sun case)",
+   "old": "Sunlight is already included in the ToF $N_{\\rm req}$, which corresponds to bright sun; a fully sunlit scene of reflectance 0.9 raises the ideal requirement only to ≈20 (§C0 subsection 10.3; background model in §C6(d)).",
+   "new": "Sunlight is already included in the ToF inputs: $N_{\\rm req}=21.7$ is the bright-sun requirement, and $\\eta=0.164$ contains the bright-sun live fraction 0.885. A fully sunlit scene of reflectance 0.9 doubles the background to $3.66\\times10^{8}$ counts/s per macro-pixel, which lowers the live fraction to $e^{-0.244}=0.784$ (each of the nine SPADs has $r\\tau_d=3.66\\times10^{8}/9\\times6\\ {\\rm ns}=0.244$) and raises the ideal requirement only to 17.3 counts ($b=3.66\\times10^{8}\\ {\\rm s^{-1}}\\times1\\ {\\rm ns}\\times10\\times0.784=2.87$ background counts per bin, threshold 15; §C0 subsection 10.3; background model in §C6(d)). $P_{\\rm ToF}$ then rises by $(17.3/15.0)\\times(0.885/0.784)=1.30$.",
+   "why": "Full-sun case on the 0.05 x 0.05 deg background (was 'only to ≈20')."
+  },
+  {
+   "id": "R2E_C10-025",
+   "finding": "round1 model_round2 [09_C10_part1] report #15; decision 6 (eta convention)",
+   "old": "   - The choices of $N_{\\rm req}$ and $\\eta$ move the numbers by a few times but do not change the scaling.\n   - **Speckle.** $N_{\\rm req}=10$–30 is at or below the non-fading requirement: ≈21 detected photons for $P_d=0.9$ at $P_{\\rm fa}=10^{-6}$ in one bin, and ≈39 under the report's per-point rule, which searches 0–300 m and needs the peak in both chirp ramps (§C0 subsection 10.3). A single-mode fading return needs about 88 photons in total with four-look diversity, or about 259 with one look, under that rule (§C10.2, item 5). If the looks share one mode's collection (wavelength or time diversity), that raises the coherent requirement to about **180–1,590 W** ($P_{\\rm coh}\\propto N_{\\rm req}/\\eta$ from Eq. (139): 88.5 photons at $\\eta=0.3$ give $20.4\\times88.5/10=181$ W, and 259 photons at $\\eta=0.1$ give $20.4\\times(259/10)\\times3=1{,}590$ W). Looks that each add a mode (polarization or spatial diversity, as in §C7a) collect four times as much, which brings the four-look case back to ≈45 W at $\\eta=0.3$.",
+   "new": "   - The choices of $N_{\\rm req}$ and $\\eta$ move the numbers but do not change the scaling with $\\Omega_{\\rm cell}$. The measured chain efficiency of 0.112 in place of the design value 0.25 raises the coherent powers 2.23×, and speckle raises the coherent $N_{\\rm req}$ to 88.5–259, 3–26× the 10–30 of the table (next bullet).\n   - **Speckle.** $N_{\\rm req}=10$–30 is at or below the non-fading requirement: ≈21 detected photons for $P_d=0.9$ at $P_{\\rm fa}=10^{-6}$ in one bin, and ≈39 under the report's per-point rule, which searches 0–300 m and needs the peak in both chirp ramps (§C0 subsection 10.3). A single-mode fading return needs about 88 photons in total with four-look diversity, or about 259 with one look, under that rule (§C10.2, item 5). If the looks share one mode's collection (wavelength or time diversity), that raises the coherent requirement to about **518–1,515 W**: at fixed $\\eta$, Eq. (139) gives $P_{\\rm coh}\\propto N_{\\rm req}$, 5.85 W per detected photon, so 88.5 photons need $58.5\\times88.5/10=518$ W and 259 need $58.5\\times259/10=1{,}515$ W, while the non-fading per-point 39.1 needs $58.5\\times3.91=229$ W. Looks that each add a mode (polarization or spatial diversity, as in §C7a) collect four times as much, which brings the four-look case back to ≈130 W ($518/4$).",
+   "why": "Speckle and fading cases recomputed from their own N_req at eta = 0.25."
+  },
+  {
+   "id": "R2E_C10-026",
+   "finding": "decision 6 (eta convention); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "The ideal full-coverage example (20–184 W)",
+   "new": "The ideal full-coverage example (58.5–175.5 W)",
+   "why": "Recomputed coherent power."
+  },
+  {
+   "id": "R2E_C10-027",
+   "finding": "round1 model_round2 [10_C10_part2] report #1 (one efficiency symbol); symbol scheme; decision 6 (eta convention)",
+   "old": "Per sample, the number of photoelectrons this yields after the shared efficiency $\\eta_{\\rm common}$ (defined below) is\n\n$$n_{\\rm aperture}=\\frac{\\eta_{\\rm common}\\,\\rho}{E_{\\rm ph}}",
+   "new": "Per sample, the number of photoelectrons this yields after the efficiency $\\eta$ (defined below) is\n\n$$n_{\\rm aperture}=\\frac{\\eta\\,\\rho}{E_{\\rm ph}}",
+   "why": "One shared-efficiency symbol, eta, as the symbol scheme sets; Eq. (142) rewritten in place."
+  },
+  {
+   "id": "R2E_C10-028",
+   "finding": "round1 model_round2 [10_C10_part2] report #1; decision 6 (eta convention)",
+   "old": "- $\\eta_{\\rm common}$ is the efficiency both receiver types share: common transmission and photoconversion losses. It excludes coherent mode selection and polarization loss, which are counted separately below.",
+   "new": "- $\\eta$ is the end-to-end efficiency of §C10.3 and §C0 subsection 10.1, from photons at the aperture to photoelectrons: optics × detector, and for the coherent receiver also × mixing. It excludes coherent mode selection and polarization loss, which are counted separately below, in $A_{\\rm mode}$.",
+   "why": "Same definition as §C10.3."
+  },
+  {
+   "id": "R2E_C10-029",
+   "finding": "round1 model_round2 [10_C10_part2] follow-up #3 (item 1 example); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "Example: 1 W, 1.2 M samples per frame, 10 Hz, 200 m, 10% reflectivity, $\\eta_{\\rm common}=0.1$. Each sample carries $E_{\\rm pt}=P/(f_{\\rm frame}N_{\\rm samp})=1\\ {\\rm W}/(10\\ {\\rm s^{-1}}\\times1.2\\times10^{6})=83$ nJ, and $\\pi R^2=1.26\\times10^{5}$ m².\n- A 20 mm coherent-system aperture at 1550 nm collects about **16 photoelectron equivalents** (photons at the aperture times $\\eta_{\\rm common}$), before projection into its selected mode [E: $83\\ {\\rm nJ}/1.28\\times10^{-19}\\ {\\rm J}=6.5\\times10^{11}$ photons, times $\\eta_{\\rm common}\\rho=0.01$, times $314\\ {\\rm mm^2}/1.26\\times10^{5}\\ {\\rm m^2}=2.5\\times10^{-9}$].\n- A 25 mm direct-detection ToF aperture at 905 nm has about **15** [E: $83\\ {\\rm nJ}/2.19\\times10^{-19}\\ {\\rm J}=3.8\\times10^{11}$ photons, times 0.01, times $491\\ {\\rm mm^2}/1.26\\times10^{5}\\ {\\rm m^2}=3.9\\times10^{-9}$]; a well-matched multimode pixel can use nearly all of these after the common losses.",
+   "new": "Example: 1 W, 1.2 M samples per frame, 10 Hz, 200 m, 10% reflectivity and an illustrative $\\eta=0.1$ for both receivers, so that only the apertures and wavelengths differ (§C10.3 uses the model values, 0.25 for coherent and 0.164 for ToF). Each sample carries $E_{\\rm pt}=P/(f_{\\rm frame}N_{\\rm samp})=1\\ {\\rm W}/(10\\ {\\rm s^{-1}}\\times1.2\\times10^{6})=83$ nJ, and $\\pi R^2=1.26\\times10^{5}$ m².\n- A 20 mm coherent-system aperture at 1550 nm collects about **16 photoelectron equivalents** (photons at the aperture times $\\eta$), before projection into its selected mode [E: $83\\ {\\rm nJ}/1.28\\times10^{-19}\\ {\\rm J}=6.5\\times10^{11}$ photons, times $\\eta\\rho=0.01$, times $314\\ {\\rm mm^2}/1.26\\times10^{5}\\ {\\rm m^2}=2.5\\times10^{-9}$].\n- A 25 mm direct-detection ToF aperture at 940 nm has about **15** [E: $83\\ {\\rm nJ}/2.11\\times10^{-19}\\ {\\rm J}=3.9\\times10^{11}$ photons, times 0.01, times $491\\ {\\rm mm^2}/1.26\\times10^{5}\\ {\\rm m^2}=3.9\\times10^{-9}$]; a well-matched multimode pixel can use nearly all of these after the common losses.",
+   "why": "ToF example at 940 nm; one efficiency symbol."
+  },
+  {
+   "id": "R2E_C10-030",
+   "finding": "round1 model_round2 [10_C10_part2] follow-up #3; decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "more photons per joule at 1550 nm ($1550/905=1.71$)",
+   "new": "more photons per joule at 1550 nm ($1550/940=1.65$)",
+   "why": "Photon-per-joule ratio against 940 nm."
+  },
+  {
+   "id": "R2E_C10-031",
+   "finding": "round1 model_round2 [10_C10_part2] report #1; symbol scheme",
+   "old": "under this example's shared $\\eta_{\\rm common}=0.1$",
+   "new": "under this example's common $\\eta=0.1$",
+   "why": "One efficiency symbol."
+  },
+  {
+   "id": "R2E_C10-032",
+   "finding": "round1 model_round2 [10_C10_part2] follow-up #3 (item 2 table); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "| ToF, 25 mm aperture, 0.05° cell, 905 nm | ≈22 cm | ≈1 mm | ≈460 (485) | All (incoherent sum) |",
+   "new": "| ToF, 25 mm aperture, 0.05° cell, 940 nm | ≈22 cm | ≈1.1 mm | ≈420 (451) | All (incoherent sum) |",
+   "why": "ToF speckle size and count at 940 nm (coherent_mode_coverage.py)."
+  },
+  {
+   "id": "R2E_C10-033",
+   "finding": "round1 model_round2 [10_C10_part2] follow-up #3; decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "$0.905\\ \\mu{\\rm m}\\times250\\ {\\rm m}/22\\ {\\rm cm}=1.0$ mm (ToF)",
+   "new": "$0.940\\ \\mu{\\rm m}\\times250\\ {\\rm m}/22\\ {\\rm cm}=1.1$ mm (ToF)",
+   "why": "940 nm."
+  },
+  {
+   "id": "R2E_C10-034",
+   "finding": "round1 model_round2 [10_C10_part2] follow-up #3; decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "ToF: $491\\ {\\rm mm^2}\\times(8.73\\times10^{-4})^2/(0.905\\ \\mu{\\rm m})^2=456\\approx460$, against 485 from Goodman's formula.",
+   "new": "ToF: $491\\ {\\rm mm^2}\\times(8.73\\times10^{-4})^2/(0.940\\ \\mu{\\rm m})^2=423\\approx420$, against 451 from Goodman's formula.",
+   "why": "940 nm mode counts."
+  },
+  {
+   "id": "R2E_C10-035",
+   "finding": "round1 model_round2 [10_C10_part2] report #1; decision 6 (eta convention) (Eq. (144) rewritten in place)",
+   "old": "\\;=\\; K \\;=\\; \\frac{\\eta\\,\\rho\\,P\\,\\lambda^2}{\\pi R^2\\,f_{\\rm frame}\\,\\Omega_{\\rm FOV}\\,E_{\\rm ph}} \\tag{144}$$",
+   "new": "\\;=\\; K \\;=\\; \\frac{t^2}{2}\\,\\frac{\\eta\\,\\rho\\,P\\,\\lambda^2}{\\pi R^2\\,f_{\\rm frame}\\,\\Omega_{\\rm FOV}\\,E_{\\rm ph}} \\tag{144}$$",
+   "why": "K carries t^2/2, consistent with Eq. (147); tag kept."
+  },
+  {
+   "id": "R2E_C10-036",
+   "finding": "round1 model_round2 [10_C10_part2] report #1; decision 6 (eta convention)",
+   "old": "- $\\eta$ is the end-to-end efficiency, playing the role of $\\eta_{\\rm common}$ in item 1 (it excludes truncation and polarization);",
+   "new": "- $\\eta$ is the end-to-end efficiency of Eq. (142), which excludes truncation and polarization; these enter through $t^2/2=0.419$, the round-trip truncation $t^2=0.838$ times the single-polarization factor ½ of the Gaussian model (§C10.3b);",
+   "why": "One efficiency symbol and the factor it excludes."
+  },
+  {
+   "id": "R2E_C10-037",
+   "finding": "round1 model_round2 [10_C10_part2] report #1; decision 6 (eta convention)",
+   "old": "combined with the antenna theorem for an ideal single mode, $A_{\\rm mode}\\,\\Omega_{\\rm footprint}\\approx\\lambda^2$.",
+   "new": "combined with the antenna theorem in the form the Gaussian model gives it, $A_{\\rm mode}\\,\\Omega_{\\rm footprint}=\\tfrac{t^2}{2}\\lambda^2$ (Eq. (147) of §C10.3b, since one sample's footprint fraction is $\\Omega_{\\rm footprint}/\\Omega_{\\rm cell}$); an ideal single mode without truncation or polarization loss would have $\\lambda^2$.",
+   "why": "Derivation of the t^2/2 in Eq. (144)."
+  },
+  {
+   "id": "R2E_C10-038",
+   "finding": "round1 model_round2 [10_C10_part2] report #1 (0.068 per-watt bullet); decision 6 (eta convention)",
+   "old": "For 200 m, 10% reflectivity, a 120° × 25° field ($\\Omega_{\\rm FOV}=0.914$ sr), 10 Hz and $\\eta=0.1$ at 1550 nm ($\\lambda^2=2.40\\times10^{-12}$ m²), the per-watt budget constant $K/P$ is about **0.16 photoelectrons per watt** [E: $K/P=0.1\\times0.1\\times2.40\\times10^{-12}\\ {\\rm m^2}/(1.26\\times10^{5}\\ {\\rm m^2}\\times10\\ {\\rm s^{-1}}\\times0.914\\ {\\rm sr}\\times1.28\\times10^{-19}\\ {\\rm J})=0.163\\ {\\rm W^{-1}}$].",
+   "new": "For 200 m, 10% reflectivity, a 120° × 25° field ($\\Omega_{\\rm FOV}=0.914$ sr), 10 Hz, the coherent design efficiency $\\eta=0.25$ of §C10.3 and $t^2/2=0.419$ at 1550 nm ($\\lambda^2=2.40\\times10^{-12}$ m²), the per-watt budget constant $K/P$ is about **0.17 photoelectrons per watt** [E: $K/P=0.419\\times0.25\\times0.1\\times2.40\\times10^{-12}\\ {\\rm m^2}/(1.26\\times10^{5}\\ {\\rm m^2}\\times10\\ {\\rm s^{-1}}\\times0.914\\ {\\rm sr}\\times1.28\\times10^{-19}\\ {\\rm J})=0.171\\ {\\rm W^{-1}}$].",
+   "why": "Budget constant on eta = 0.25 with t^2/2."
+  },
+  {
+   "id": "R2E_C10-039",
+   "finding": "decision 6 (eta convention)",
+   "old": "| 1 W | 0.5% | 0.06% |\n| 5 W | 2.7% | 0.3% |\n| 20 W | 11% | 1.3% |\n| 100 W | 54% | 6.3% |\n| ≈200 W | 100% | 13% |",
+   "new": "| 1 W | 0.6% | 0.07% |\n| 5 W | 2.8% | 0.3% |\n| 20 W | 11% | 1.3% |\n| 100 W | 57% | 6.6% |\n| ≈175 W | 100% | 12% |",
+   "why": "Bounds from K/P = 0.171 per watt (the 20 W row is unchanged)."
+  },
+  {
+   "id": "R2E_C10-040",
+   "finding": "decision 6 (eta convention)",
+   "old": "the bound is $f_{\\rm fp}=K/n_{\\rm mode}=(K/P)\\,P/n_{\\rm mode}$, capped at one, with $K/P=0.163$ W⁻¹ from above. For 20 W, $0.163\\times20/30=11\\%$ at 30 photoelectrons and $0.163\\times20/259=1.3\\%$ at 259. Full coverage at 30 photoelectrons needs $P=30/0.163=184$ W, the ≈200 W row, where 259 photoelectrons give $0.163\\times200/259=13\\%$.",
+   "new": "the bound is $f_{\\rm fp}=K/n_{\\rm mode}=(K/P)\\,P/n_{\\rm mode}$, capped at one, with $K/P=0.171$ W⁻¹ from above. For 20 W, $0.171\\times20/30=11\\%$ at 30 photoelectrons and $0.171\\times20/259=1.3\\%$ at 259. Full coverage at 30 photoelectrons needs $P=30/0.171=175$ W, the ≈175 W row, where 259 photoelectrons give $0.171\\times175/259=12\\%$. The 175 W is the $P_{\\rm coh}$ of Eq. (139) for $N_{\\rm req}=30$, as it must be, since both rest on the same cell-filling mode.",
+   "why": "Substitutions for the recomputed bounds; cross-check with Eq. (139)."
+  },
+  {
+   "id": "R2E_C10-041",
+   "finding": "round1 model_round2 [10_C10_part2] report #1 (0.068 per-watt bullet); decision 6 (eta convention)",
+   "old": "- The table is a bound for the stipulated $\\eta=0.1$ **before** the Gaussian model's single-polarization and truncation factor. With §C10.3b's $t^2/2\\simeq0.42$ (the round-trip truncation factor $t^2=0.84$ times the single-polarization factor ½), $K/P$ falls from about 0.16 to **0.068 photoelectrons per watt** ($0.163\\times0.419$) for the same definition of $\\eta$. For example, 100 W then yields about **23%** nominal footprint fraction at 30 photoelectrons ($0.068\\times100/30$), not 54%.",
+   "new": "- The table already contains the Gaussian model's single-polarization and truncation factor $t^2/2=0.419$ (the round-trip truncation factor $t^2=0.838$ times the single-polarization factor ½) and uses the design efficiency $\\eta=0.25$. With the measured chain efficiency of 0.112 (§C0 subsection 10.1), $K/P$ falls to **0.077 photoelectrons per watt** ($0.171\\times0.112/0.25$), and 100 W then yields about **26%** nominal footprint fraction at 30 photoelectrons ($0.077\\times100/30$), not 57%.",
+   "why": "The t^2/2 factor is inside K; the remaining sensitivity is the measured efficiency."
+  },
+  {
+   "id": "R2E_C10-042",
+   "finding": "decision 6 (eta convention)",
+   "old": "cover only 0.5–11% of the scene with its nominal footprints at 30 photoelectrons per mode.",
+   "new": "cover only 0.6–11% of the scene with its nominal footprints at 30 photoelectrons per mode.",
+   "why": "From the recomputed table."
+  },
+  {
+   "id": "R2E_C10-043",
+   "finding": "round1 model_round2 [10_C10_part2] follow-up #3 (item 4 ToF bullet); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "in this 0.05° example sums of order 460 spatial speckles per polarization in one intensity detector, i.e. $N_{\\rm mode}\\sim N_{\\rm spk}\\approx460$",
+   "new": "in this 0.05° example at 940 nm sums of order 420 spatial speckles per polarization in one intensity detector, i.e. $N_{\\rm mode}\\sim N_{\\rm spk}\\approx420$",
+   "why": "940 nm mode count."
+  },
+  {
+   "id": "R2E_C10-044",
+   "finding": "round1 model_round2 [10_C10_part2] follow-up #3 (item 5 table); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "| ToF: 25 mm aperture, 520 SPAD macro-pixels × ≈460 modes, 2,400 scan columns | 5.5×10⁸ | 5.7×10⁸ | ≈100% |",
+   "new": "| ToF at 940 nm: 25 mm aperture, 520 SPAD macro-pixels × ≈420 modes, 2,400 scan columns | 5.1×10⁸ | 5.3×10⁸ | ≈100% |",
+   "why": "Mode-time slots at 940 nm."
+  },
+  {
+   "id": "R2E_C10-045",
+   "finding": "round1 model_round2 [10_C10_part2] follow-up #3; decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "ToF $491\\ {\\rm mm^2}\\times0.914\\ {\\rm sr}/(0.905\\ \\mu{\\rm m})^2=5.5\\times10^{8}$",
+   "new": "ToF $491\\ {\\rm mm^2}\\times0.914\\ {\\rm sr}/(0.940\\ \\mu{\\rm m})^2=5.1\\times10^{8}$",
+   "why": "940 nm."
+  },
+  {
+   "id": "R2E_C10-046",
+   "finding": "round1 model_round2 [10_C10_part2] follow-up #3; decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "ToF $520\\times460\\times2{,}400=5.7\\times10^{8}$",
+   "new": "ToF $520\\times423\\times2{,}400=5.3\\times10^{8}$",
+   "why": "940 nm."
+  },
+  {
+   "id": "R2E_C10-047",
+   "finding": "round1 model_round2 [10_C10_part2] follow-up #1 and [03_C0_part10] follow-up flag a; decision 6 (eta convention); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "The *efficiency-weighted aperture* is the collecting area (the hard area for direct detection, $A_{\\rm mode}$ for a coherent receiver) multiplied by the optics transmission and detector efficiency. It is the area of a lossless, perfectly efficient detector that would yield the same signal photoelectrons. After realistic losses, a 25 mm scanned ToF receiver keeps about 2–6× the efficiency-weighted aperture of a mirror-scanned FMCW unit.",
+   "new": "The *efficiency-weighted aperture* is the collecting area (the hard area for direct detection, $A_{\\rm mode}$ for a coherent receiver) multiplied by the efficiency $\\eta$ of §C10.3 (optics × detector, × mixing for a coherent receiver, and for SPAD ToF also the bright-sun live fraction). It is the area of a lossless, perfectly efficient detector that would yield the same signal photoelectrons. On the report's efficiencies, 0.164 for ToF and 0.25 for coherent, a 25 mm scanned ToF receiver keeps about **4–11×** the efficiency-weighted aperture of one mirror-scanned FMCW receiver at 100–300 m. The four receivers per point of §C7a narrow the gap to about 1.3× at 200 m.",
+   "why": "Ratio on the report-wide efficiencies (4-11x per receiver, 1.3x with four)."
+  },
+  {
+   "id": "R2E_C10-048",
+   "finding": "round1 model_round2 [10_C10_part2] follow-up #1, report #6, report #7, follow-up #10; decision 6 (eta convention); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "| Long-range scanned ToF | ≈15–30 mm | Module height (25–30 mm behind glass), f/1.0–1.4 lens | ≈85 mm² for 25 mm (optics ≈0.5 × PDE ≈0.35) |\n| Mirror-scanned monostatic FMCW | ≈10–25 mm | Confocal optimum ($D_{\\rm opt}=\\sqrt{\\lambda R/\\pi}/0.45$, §C0 Eq. (35): ≈16 mm at 100 m, ≈25 mm at 250 m) | ≈15–40 mm² for 20 mm at 100–300 m, including §C10.3b's near-field, polarization and mode-shape losses, quantum efficiency (QE) ≈0.8 and ≈1 dB loss each way; a far-field-only estimate of ≈80 mm² is optimistic |\n| OPA or FPA coherent chip | ≈1–8 mm | Element or pixel count (bite b) | ≈25 mm² down to below 1 mm², with 3–10 dB on-chip loss each way |\n| Solid-state flash ToF | ≈3–5 mm | Staring étendue (bite c) | Small |",
+   "new": "| Long-range scanned ToF | ≈15–30 mm | Module height (25–30 mm behind glass), f/1.0–1.4 lens | ≈80 mm² for 25 mm ($\\eta=0.5\\times0.37\\times0.885=0.164$: optics × PDE × bright-sun live fraction) |\n| Mirror-scanned monostatic FMCW | ≈10–25 mm | Confocal optimum ($D_{\\rm opt}=\\sqrt{\\lambda R/\\pi}/0.45$, §C0 Eq. (35): ≈16 mm at 100 m, ≈25 mm at 250 m) | ≈7–21 mm² per receiver for 20 mm at 100–300 m: §C10.3b's mode-equivalent areas, which include its near-field, polarization and mode-shape losses, times $\\eta=0.25$; a far-field-only estimate of ≈27 mm² is optimistic |\n| OPA or FPA coherent chip | ≈1–8 mm | Element or pixel count (bite b) | ≈4 mm² (8 mm) down to ≈0.07 mm² (1 mm) before on-chip loss, and 4–100× less after 3–10 dB of it each way |\n| Solid-state flash ToF | ≈3–5 mm | Staring étendue (bite c) | ≈1–3 mm² |",
+   "why": "Efficiency-weighted apertures on eta 0.164 (ToF) and 0.25 (coherent)."
+  },
+  {
+   "id": "R2E_C10-049",
+   "finding": "round1 model_round2 [10_C10_part2] follow-up #1, report #6, report #7, follow-up #10; decision 6 (eta convention); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "- Long-range ToF: $\\pi(12.5\\ {\\rm mm})^2\\times0.5\\times0.35=491\\times0.175=86$ mm².\n- Mirror-scanned FMCW: the mode-equivalent areas of §C10.3b, Result 2 (28.8, 63.7 and 82.0 mm² at 100, 200 and 300 m), times QE 0.8, times $10^{-0.2}=0.63$ for 1 dB each way: $28.8\\times0.8\\times0.63=14.5$ mm² at 100 m, 32 mm² at 200 m and 41 mm² at 300 m. The far-field-only figure takes the hard area with the single-polarization factor and the same QE and losses, $314\\times0.5\\times0.8\\times0.63=79$ mm².\n- OPA or FPA chip: hard area times the single-polarization factor, before on-chip loss, $\\pi(8\\ {\\rm mm})^2/4\\times0.5=25$ mm² for 8 mm and 0.4 mm² for 1 mm.",
+   "new": "- Long-range ToF: $\\pi(12.5\\ {\\rm mm})^2\\times0.164=491\\times0.164=80$ mm². In a fully sunlit scene the live fraction falls to 0.784, and the area to $491\\times0.5\\times0.37\\times0.784=71$ mm².\n- Mirror-scanned FMCW, per receiver: the mode-equivalent areas of §C10.3b, Result 2 (28.8, 63.7 and 82.0 mm² at 100, 200 and 300 m), times $\\eta=0.25$ (optics × detector × mixing; polarization and mode shape are already in $A_{\\rm mode}$): $28.8\\times0.25=7.2$ mm² at 100 m, 15.9 mm² at 200 m and 20.5 mm² at 300 m. ToF's 80 mm² is $80/20.5=3.9$ to $80/7.2=11$ times larger; the four receivers per point of §C7a collect $4\\times15.9\\approx64$ mm² at 200 m, $80/64\\approx1.3$ times less than ToF. The far-field-only figure takes the far-field limit of item 2, $A_{\\rm mode}\\to t^2\\pi w_0^2/2=0.838\\times\\pi(9\\ {\\rm mm})^2/2=107$ mm² (the hard area divided by 2.9), times the same $\\eta$: $107\\times0.25=27$ mm².\n- OPA or FPA chip: the far-field $A_{\\rm mode}$ of the hard aperture (its area divided by 2.9, item 2) times $\\eta=0.25$, before on-chip loss: $\\pi(8\\ {\\rm mm})^2/4/2.9\\times0.25=4.3$ mm² for 8 mm and $0.785\\ {\\rm mm^2}/2.9\\times0.25=0.07$ mm² for 1 mm. An on-chip loss of 3–10 dB each way multiplies these by $10^{-0.6}=0.25$ to $10^{-2}=0.01$.\n- Solid-state flash ToF: a 3–5 mm staring aperture times the same $\\eta$, $\\pi(1.5\\ {\\rm mm})^2\\times0.164=1.2$ mm² to $\\pi(2.5\\ {\\rm mm})^2\\times0.164=3.2$ mm². IMX479 staring over 120° gets a ≈3.8 mm aperture, 1.8% of the 28.5 mm scanned column's area (item 5, bite (c)), i.e. $\\pi(1.9\\ {\\rm mm})^2\\times0.164=1.9$ mm².",
+   "why": "Substitutions for the item 7 table."
+  },
+  {
+   "id": "R2E_C10-050",
+   "finding": "decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "against ≈5 counts for SPAD ToF at night and ≈17 in bright sun (§C0 subsection 10.3)",
+   "new": "against ≈5 counts for SPAD ToF at night and ≈15 in bright sun (§C0 subsection 10.3)",
+   "why": "Bright-sun ideal requirement with the 0.05 x 0.05 deg background."
+  },
+  {
+   "id": "R2E_C10-051",
+   "finding": "decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164) (dead fractions at the 0.05° × 0.05° macro-pixel)",
+   "old": "In a fully sunlit scene this cuts the effective PDE by about a third at 940 nm behind a 10 nm filter, and by three-quarters or more at 905 nm behind 20–40 nm filters (§C6(d); §C7a's central case uses a live fraction of 0.784)",
+   "new": "In a fully sunlit scene of reflectance 0.9 this cuts the effective PDE by about a sixth at 940 nm behind a 10 nm filter, and by about a half to three-quarters at 905 nm behind 20–40 nm filters (§C6(d): at PDE 0.3 and the 0.05° × 0.05° macro-pixel, Eq. (82) with $r\\tau_d=2.97\\times10^{8}/9\\times6\\ {\\rm ns}=0.20$ gives a dead fraction of 16.5–18% at 940 nm, and 42–77% at 905 nm; §C7a's central case uses a live fraction of 0.885)",
+   "why": "Dead fractions halve with the background; live fraction of the model's central case."
+  },
+  {
+   "id": "R2E_C10-052",
+   "finding": "decision 6 (eta convention)",
+   "old": "0.5–11% for item 4's bounds at 1–20 W",
+   "new": "0.6–11% for item 4's bounds at 1–20 W",
+   "why": "From the recomputed item 4 table."
+  },
+  {
+   "id": "R2E_C10-053",
+   "finding": "round1 model_round2 [10_C10_part2] follow-up #3 (Result 1); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "- **ToF model:** a hard 25 mm aperture with a polarization-insensitive multimode pixel whose field of view equals one mesh cell.",
+   "new": "- **ToF model:** a hard 25 mm aperture at 940 nm, the wavelength of the SPAD model of §C0 subsection 10 and §C7a, with a polarization-insensitive multimode pixel whose field of view equals one mesh cell.",
+   "why": "States the ToF wavelength of the model."
+  },
+  {
+   "id": "R2E_C10-054",
+   "finding": "round1 model_round2 [10_C10_part2] follow-up #3 (Result 1); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "| ToF, 25 mm, 905 nm, 0.1° pixel | 1,888 | 1,826 |\n| ToF, 25 mm, 905 nm, 0.05° pixel | 485 | 456 |\n| ToF, 25 mm, 905 nm, 0.025° pixel | 127 | 114 |",
+   "new": "| ToF, 25 mm, 940 nm, 0.1° pixel | 1,752 | 1,692 |\n| ToF, 25 mm, 940 nm, 0.05° pixel | 451 | 423 |\n| ToF, 25 mm, 940 nm, 0.025° pixel | 118 | 106 |",
+   "why": "Goodman and simple counts at 940 nm (coherent_mode_coverage.py)."
+  },
+  {
+   "id": "R2E_C10-055",
+   "finding": "decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "e.g. $491\\ {\\rm mm^2}\\times(8.73\\times10^{-4})^2/(0.905\\ \\mu{\\rm m})^2=456$ at 0.05°",
+   "new": "e.g. $491\\ {\\rm mm^2}\\times(8.73\\times10^{-4})^2/(0.940\\ \\mu{\\rm m})^2=423$ at 0.05°",
+   "why": "940 nm."
+  },
+  {
+   "id": "R2E_C10-056",
+   "finding": "decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "The resolution race cuts ToF's mode count from about 1,900 to about 130, still far above one.",
+   "new": "The resolution race cuts ToF's mode count from about 1,750 to about 120, still far above one.",
+   "why": "From the 940 nm Result 1 rows."
+  },
+  {
+   "id": "R2E_C10-057",
+   "finding": "round1 model_round2 [10_C10_part2] report #18 and follow-up #1; decision 6 (eta convention); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "- A 20 mm monostatic aperture at 100–200 m sees about 3–6 speckles and keeps about 1/5 to 1/11 of the hard-aperture power; only in the far field does the loss approach the ≈3× of polarization and mode shape.\n- A mirror-scanned coherent system's efficiency-weighted aperture is therefore about **15–40 mm² at 100–300 m**, not the ≈80 mm² of the far-field formula alone (both are worked in §C10.3a, item 7). A 25 mm ToF unit's ≈85 mm² is about 2–6× larger ($86/41=2.1$ to $86/14.5=5.9$) before sunlight is considered; sunlight favours coherent detection.\n- With truncation and single polarization included, the *area-matched* coherent mode-equivalent collecting area at 0.05° is 1.3 mm². It is 1.6 mm² without the truncation factor $t^2=0.84$, and 3.2 mm² without the single-polarization factor ½ as well; that last value is the ideal $\\lambda^2/\\Omega_{\\rm cell}$ of §C10.2, item 5, where $\\Omega_{\\rm cell}=\\theta_{\\rm cell}^2$ is the solid angle of one mesh cell.",
+   "new": "- A mirror-scanned coherent receiver's efficiency-weighted aperture is about **7–21 mm² at 100–300 m** (Result 2's $A_{\\rm mode}$ times $\\eta=0.25$), not the ≈27 mm² of the far-field formula alone (both are worked in §C10.3a, item 7). A 25 mm ToF unit's ≈80 mm² is about 4–11× larger ($80/20.5=3.9$ to $80/7.2=11$), and the four receivers per point of §C7a narrow this to 1.3× at 200 m. ToF's $\\eta=0.164$ already contains the bright-sun live fraction (≈71 mm² in a fully sunlit scene); sunlight's other cost, a higher detection threshold, sits in the photon requirement (§C10.3a, item 7, caveats).\n- With truncation and single polarization included, the *area-matched* coherent mode-equivalent collecting area at 0.05° is 1.3 mm². It is 1.6 mm² without the truncation factor $t^2=0.84$, and 3.2 mm² without the single-polarization factor ½ as well; that last value is the ideal $\\lambda^2/\\Omega_{\\rm cell}$, where $\\Omega_{\\rm cell}=\\theta_{\\rm cell}^2$ is the solid angle of one mesh cell. The cell-filling estimates of §C10.2, item 5 and §C10.3 use the 1.3 mm².",
+   "why": "Repeated bullet 1 cut; efficiency-weighted apertures and ratio on the report-wide efficiencies."
+  },
+  {
+   "id": "R2E_C10-058",
+   "finding": "round1 model_round2 [10_C10_part2] report #1 (§C10.4 check); decision 6 (eta convention)",
+   "old": "(ideally 20–184 W at 200 m)",
+   "new": "(ideally 58.5–175.5 W at 200 m)",
+   "why": "Recomputed §C10.3 power."
+  },
+  {
+   "id": "R2E_C10-059",
+   "finding": "decision 6 (eta convention); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "coherent detection needs 1.4–800× the power of the ToF example",
+   "new": "coherent detection needs 4.2–816× the power of the ToF example",
+   "why": "From the recomputed §C10.3 table."
+  },
+  {
+   "id": "R2E_C10-060",
+   "finding": "decision 6 (eta convention); decision 7 (ToF at 940 nm, n_req 21.7, eta 0.164)",
+   "old": "| 0.1° | 87–800× |\n| 0.05° | 23–200× |\n| 0.025° | 6–51× |\n| 0.0125° | 1.4–13× |",
+   "new": "| 0.1° | 272–816× |\n| 0.05° | 68–204× |\n| 0.025° | 17–51× |\n| 0.0125° | 4.2–13× |",
+   "why": "Same ratios as the §C10.3 table."
+  },
+  {
+   "id": "R2E_C10-061",
+   "finding": "decision 6 (eta convention) (requirement 3 restates §C10.2 item 5)",
+   "old": "| 3 | At most about 3 dB one-way loss at watt-class power |",
+   "new": "| 3 | At most about 3 dB one-way loss while carrying ≈9–100 W per beam (§C10.2, item 5) |",
+   "why": "Power per beam from the recomputed §C10.2 item 5."
+  }
+ ],
+ "skipped": [
+  {
+   "finding": "decision 1 (FMCW dwell = T_int + 2 tau), not in this agent's brief",
+   "kind": "model_round2",
+   "location": "§C10.2 item 7: '**0.1–0.5 Mpts/s** at 2–10 µs dwell' and '**24–120 parallel coherent channels**'; §C10.3a item 5 table '128 channels × (0.1 s ÷ 10 µs)'; §C10.3a item 6 'a 10 µs dwell moves the beam about'",
+   "detail": "These treat the chirp as the whole dwell. If decision 1 applies here, item 7 would read: '...limited to about $1/T_{\\rm dwell}$, where $T_{\\rm dwell}=T_{\\rm int}+2\\tau$ is how long the beam stays on one point: the up- and down-chirp time $T_{\\rm int}$ plus the round trip $\\tau=2R/c$ of each ramp, $2\\tau=2.67$ µs at 200 m (§C7b Eq. (107)). At 2–10 µs of chirp that is $1/12.67\\ \\mu{\\rm s}=0.079$ to $1/4.67\\ \\mu{\\rm s}=0.21$ Mpts/s, and one sample per 0.05° cell over the full field (12 Mpts/s) needs $12\\times10^{6}\\times4.67\\ \\mu{\\rm s}=56$ to $12\\times10^{6}\\times12.67\\ \\mu{\\rm s}=152$ parallel channels.' The beat-frequency and sampling-rate numbers depend on the chirp alone and stand; items 5-6 of §C10.3a would scale the same way (10 µs of chirp -> 12.67 µs of dwell: 128 x 0.1 s / 12.67 µs = 1.01e6 slots, a 0.84% nominal footprint fraction)."
+  },
+  {
+   "finding": "decision 7 (ToF at 940 nm): companion tables file",
+   "kind": "cross_section",
+   "location": "automotive_perception_report_figures/coherent_mode_coverage_tables.txt (dated 27 Sep), cited in §C10.3b 'What was computed'",
+   "detail": "The file still prints the 905 nm ToF rows ('ToF 25 mm, 905 nm, pixel 0.1 deg: M_Goodman = 1888 (simple ... = 1826)', 485/456, 127/114), while §C10.3b Result 1 quotes the 940 nm output of the installed script (1,752/1,692, 451/423, 118/106). Regenerate it from build/figures/coherent_mode_coverage.py (its print_tables output); no report text outside §C10 quotes these numbers."
+  }
+ ]
+}

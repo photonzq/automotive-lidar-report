@@ -1,0 +1,13 @@
+{
+ "block": "R4x_mine",
+ "edits": [
+  {
+   "id": "R4x_mine-001",
+   "finding": "Round 4, R4_C7-C7b_F6 items 04/07 (1 ms against intrinsic linewidths): the sensitivity case of §C7b 3a(a)",
+   "old": "at 300 m a 10 kHz laser ($E'=0.51$ µJ) gives ≈73 W, a 42 kHz laser ($E'=0.76$ µJ) ≈95 W and a 100 kHz laser ($E'=1.58$ µJ) ≈160 W",
+   "new": "at 300 m a laser of 10 kHz Lorentzian linewidth ($E'=0.51$ µJ, Eq. (110)) gives ≈73 W, one of 42 kHz ($E'=0.76$ µJ) ≈95 W and one of 100 kHz ($E'=1.58$ µJ) ≈160 W",
+   "why": "These are Lorentzian widths; the 42 kHz is not the SiN self-injection-locked laser, whose 42 kHz is a 1 ms linewidth (§C7a(f))."
+  }
+ ],
+ "skipped": []
+}

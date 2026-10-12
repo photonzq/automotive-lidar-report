@@ -1,0 +1,52 @@
+[
+ {
+  "id": "appx1-fastree3d-pointer",
+  "old": "- **European funding and exits.** No EIC Fund investment in VoxelSensors or Hybrid Lidar is public (§C3a), but German stock-corporation shareholders are not published and VoxelSensors' 2026 financing is unannounced, so neither can be excluded. How much of Scantinel's €740,474 POV.OS grant was paid before its insolvency is unknown. For Fastree3D, Hesai's filings show a cash purchase booked wholly as patent rights, with no earn-out, later payment or goodwill (§C5); how the price was split among Fastree3D's shareholders (preferences, i.e. which investors are paid first) and whether individual engineers moved to Hesai in China are unknown. The last point matters for how much SPAD know-how Hesai acquired (§C5).",
+  "new": "- **European funding and exits.** No EIC Fund investment in VoxelSensors or Hybrid Lidar is public (§C3a), but German stock-corporation shareholders are not published and VoxelSensors' 2026 financing is unannounced, so neither can be excluded. How much of Scantinel's €740,474 POV.OS grant was paid before its insolvency is unknown. For Fastree3D, Hesai's filings show a cash purchase booked wholly as patent rights, with no earn-out, later payment or goodwill (§C3a subsection 2); how the price was split among Fastree3D's shareholders (preferences, i.e. which investors are paid first) and whether individual engineers moved to Hesai in China are unknown. The last point matters for how much SPAD know-how Hesai acquired (§C5)."
+ },
+ {
+  "id": "b8-vl53l5-macropixel",
+  "old": "In the receiver row, a *macro-pixel* is a group of SPADs whose counts are pooled and read out as one pixel (the VL53L5's 14 × 10), and \"40 nm\" or \"55 nm\" is the CMOS process node of the chip.",
+  "new": "In the receiver row, a *macro-pixel* is a group of SPADs whose counts are pooled and read out as one pixel (the VL53L5's 14 × 10 macro-pixels of 4 × 4 SPADs, of which an 8 × 8 block is read out as its zones [P, Rae and Mellot 2018]), and \"40 nm\" or \"55 nm\" is the CMOS process node of the chip."
+ },
+ {
+  "id": "appx1-wood",
+  "old": "- **Yole's technology split** (rotating mirror 66% and MEMS 32% of 2024E passenger-car volumes, where 2024E is Yole's estimate for 2024; 905/940 nm ≈90%) comes from search extracts of the page for Yole's *LiDAR for Automotive 2024*, not from the full report. The 2025 edition's free material gives direction (MEMS declining; one-axis rotating mirror and flash rising) but no percentages [S]. It is a reference point for the technology shares in §C2 and §F5.",
+  "new": "- **Yole's technology split** (rotating mirror 66% and MEMS 32% of 2024E passenger-car volumes, where 2024E is Yole's estimate for 2024; 905/940 nm ≈90%) comes from search extracts of the page for Yole's *LiDAR for Automotive 2024*, not from the full report. The 2025 edition's free material gives direction (MEMS declining; one-axis rotating mirror and flash rising) but no percentages [S]. It is a reference point for the technology shares in §C2 and §F5.\n- **Wood et al. headlight figures (§A6).** The 2005 *Human Factors* abstract confirms 5% recognition of black-clad pedestrians under low beams with glare and a mean recognition distance of 0.0 m for older drivers [I]. Unknown: whether the full texts of Wood, Tyrrell & Carberry (2003, 2005) contain the 40% recognition rate without glare, the 59 → 94 m gain from low to high beam and the 3.5× for dark clothing that §A6 cites [U]."
+ },
+ {
+  "id": "b1-header",
+  "old": "**China installations** [T]. *Penetration* here means the share of new passenger cars fitted with lidar. An NEV (new-energy vehicle) is China's category for battery-electric, plug-in hybrid and range-extended cars. A \"main\" lidar is the primary forward-looking unit, as opposed to auxiliary blind-spot units that cover the car's sides and corners. The ¥ sign denotes the Chinese yuan (RMB).",
+  "new": "**China installations** [MR/T]. *Penetration* here means the share of new passenger cars fitted with lidar. An NEV (new-energy vehicle) is China's category for battery-electric, plug-in hybrid and range-extended cars. A \"main\" lidar is the primary forward-looking unit, as opposed to auxiliary blind-spot units that cover the car's sides and corners. The ¥ sign denotes the Chinese yuan (RMB)."
+ },
+ {
+  "id": "b1-2024",
+  "old": "- In 2024 China installed 1.529 M lidars, a penetration of 6.0%.",
+  "new": "- In 2024 China installed 1.529 M lidars, a penetration of 6.0% [MR, [ResearchInChina](https://www.eefocus.com/article/1819136.html)]."
+ },
+ {
+  "id": "b1-2025",
+  "old": "- In 2025 installations reached **3.21 M** units in total, of which 2.756 M were main lidars. Lidar was fitted to about **21% of NEVs**. Measured against all new cars, penetration was 18.5% in Dec 2025 and 21.4% in May 2026.",
+  "new": "- In 2025 installations reached **3.21 M** units in total [MR, ResearchInChina]. Gasgoo, which counts main lidars separately, puts 2025 at 2.756 M main units, 1.143 M of them Hesai's [T, [Gasgoo, 21 May 2026](https://m.gasgoo.com/news/70458750.html)]. Lidar was fitted to about **21% of NEVs**. Measured against all new cars, penetration was 18.5% in Dec 2025 and 21.4% in May 2026."
+ },
+ {
+  "id": "b1-q1-2026",
+  "old": "- In Q1 2026 (the first quarter) 985k were installed. The supplier shares were Hesai 34.9%, Huawei 32.3%, Seyond 16.8% and RoboSense 11.0%.",
+  "new": "- In Q1 2026 (the first quarter) more than 985k lidars were installed, by Gasgoo's count, with Hesai at 34.9%, Huawei 32.3%, Seyond 16.8% and RoboSense 11.0% [T, Gasgoo]."
+ },
+ {
+  "id": "b4a-eq14-merge",
+  "old": "- **Stopping distance scales with speed squared.** A vehicle that reacts and then brakes at a constant rate stops in\n\n  $$d = v\\,t_{\\rm r} + \\frac{v^2}{2a_{\\rm b}} \\tag{14}$$\n\n  where $d$ is the stopping distance (m), $v$ the initial speed (m/s; km/h divided by 3.6), $t_{\\rm r}$ the reaction time before braking begins (s), and $a_{\\rm b}$ the braking deceleration (m/s²). The first term is the distance covered while reacting, the second the braking distance. The equation assumes a level road and constant deceleration. Here the reaction time is taken as 1 s and the deceleration as 5 m/s²; both are assumed round values.",
+  "new": "- **Stopping distance scales with speed squared.** A vehicle that reacts and then brakes at a constant rate stops within the distance of Eq. (11) (§A6.1), $d=v\\,t_{\\rm r}+v^2/(2a_{\\rm b})$, where $d$ is the stopping distance (m), $v$ the initial speed (m/s; km/h divided by 3.6), $t_{\\rm r}$ the reaction time before braking begins (s), and $a_{\\rm b}$ the braking deceleration (m/s²). The first term is the distance covered while reacting, the second the braking distance. The equation assumes a level road and constant deceleration. Here the reaction time is taken as 1 s and the deceleration as 5 m/s²; both are assumed round values."
+ },
+ {
+  "id": "b4a-eq14-ref1",
+  "old": "**The sensing need scales with speed squared.** The stopping distance of Eq. (14), $d=v\\,t_{\\rm r}+v^2/(2a_{\\rm b})$, sets how far ahead each kind of delivery vehicle must detect an obstacle. The reaction times and decelerations in the table are assumed round values for each vehicle class, not measurements:",
+  "new": "**The sensing need scales with speed squared.** The stopping distance of Eq. (11) (§A6.1), $d=v\\,t_{\\rm r}+v^2/(2a_{\\rm b})$, sets how far ahead each kind of delivery vehicle must detect an obstacle. The reaction times and decelerations in the table are assumed round values for each vehicle class, not measurements:"
+ },
+ {
+  "id": "b4a-eq14-ref2",
+  "old": "- **Stopping distance** is reaction distance plus braking distance, Eq. (14), with $v$ the speed, $t_{\\rm r}$ the reaction time and $a_{\\rm b}$ the deceleration; the speed is converted from km/h to m/s by dividing by 3.6.",
+  "new": "- **Stopping distance** is reaction distance plus braking distance, Eq. (11), with $v$ the speed, $t_{\\rm r}$ the reaction time and $a_{\\rm b}$ the deceleration; the speed is converted from km/h to m/s by dividing by 3.6."
+ }
+]

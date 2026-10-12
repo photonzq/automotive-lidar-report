@@ -1,0 +1,18 @@
+{
+ "block": "R4_R5_appendix",
+ "edits": [
+  {
+   "id": "R4_R5_appendix-001",
+   "finding": "Round 4 source research, R5 Appendix 2 (OPA devices, reviews and receive-side analysis)",
+   "old": "- Harris *et al.*, compact thermo-optic Si phase shifter (61.6 µm, 24.77 mW/π, 130 kHz), *Opt. Express* 22, 10487 (2014): https://doi.org/10.1364/OE.22.010487 (open access; arXiv: https://arxiv.org/abs/1410.3616)",
+   "new": "- Harris *et al.*, compact thermo-optic Si phase shifter (61.6 µm, 24.77 mW/π, 130 kHz), *Opt. Express* 22, 10487 (2014): https://doi.org/10.1364/OE.22.010487 (open access; arXiv: https://arxiv.org/abs/1410.3616)\n- Li Y. *et al.* (Jilin University), 128-channel SiN-on-SOI OPA, 140° field, 100 m FMCW ranging on a 90% scatter plate, *Photon. Res.* 9, 2511 (2021): https://opg.optica.org/prj/fulltext.cfm?uri=prj-9-12-2511\n- Zhang L. *et al.* (Jilin University and CIOMP), 64-channel SiN-on-SOI OPA, 109 m FMCW ranging on a 90% reflector with a lens in front of the chip, *Opt. Express* 30, 5008 (2022): https://opg.optica.org/oe/fulltext.cfm?uri=oe-30-4-5008\n- Prost *et al.* (imec), transparent peer review file (target material, 2026): https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-026-77490-4/MediaObjects/41467_2026_77490_MOESM2_ESM.pdf\n- Yang *et al.*, \"Phase coherence length in silicon photonic platform\", *Opt. Express* 23, 16890 (2015): https://opg.optica.org/oe/fulltext.cfm?uri=oe-23-13-16890\n- Rizzo *et al.*, fabrication-robust SOI devices (width sensitivity of Si strips), *Opt. Lett.* 48, 215 (2023), preprint: https://arxiv.org/abs/2205.11481\n- Fatemi, Khachaturian & Hajimiri, 128-element nonuniform sparse 2-D OPA, *IEEE JSSC* 54, 1200 (2019): https://ieeexplore.ieee.org/document/8649827\n- Wang Y. *et al.*, 160 × 160 MEMS 2D optical phased array, *Optica* 6, 557 (2019): https://opg.optica.org/optica/fulltext.cfm?uri=optica-6-5-557\n- Guglielmon *et al.* (Analog Photonics), \"Optical phased array super-cell beyond the reticle limit\", CLEO 2023, STh5C.5 (abstract): https://opg.optica.org/abstract.cfm?uri=CLEO_SI-2023-STh5C.5",
+   "why": "Sources read by the R5 research agent (sources/R5_C10_part1_findings.md), placed by section; Zhang et al. (2022) read for my amendment of item 04."
+  }
+ ],
+ "skipped": [
+  {
+   "id": "R5-08 appendix",
+   "why": "RAY-L1 datasheet: the report never cites RAY-L1"
+  }
+ ]
+}

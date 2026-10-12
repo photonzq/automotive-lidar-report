@@ -1,0 +1,7 @@
+Depth error (% of range) | match rate at 0.5 / 1 / 2 / 4 m | mean
+     0% | 1.00 / 1.00 / 1.00 / 1.00 | 1.00
+     2% | 0.65 / 0.89 / 0.99 / 1.00 | 0.88
+     4% | 0.41 / 0.67 / 0.89 / 0.99 | 0.74
+     6% | 0.29 / 0.52 / 0.77 / 0.95 | 0.64
+     8% | 0.23 / 0.43 / 0.67 / 0.90 | 0.56
+Observed camera/lidar mAP ratio 0.70 corresponds to a depth error of about 4.8% of range in this model

@@ -1,0 +1,34 @@
+{
+ "block": "X2_usaspending",
+ "edits": [
+  {
+   "id": "X2-01",
+   "finding": "user decision 2026-10-05: USAspending records are [P] (government award records)",
+   "old": "over 54 transactions (UEI EA5NMDFQBNF4) [I].",
+   "new": "over 54 transactions (UEI EA5NMDFQBNF4) [P].",
+   "why": "Pair supplied by the parallel editing pass; same tag as §D8."
+  },
+  {
+   "id": "X2-02",
+   "finding": "user decision 2026-10-05: USAspending records are [P]",
+   "old": "awarded in full and open competition [I];",
+   "new": "awarded in full and open competition [P];",
+   "why": "The DARPA award is one of the USAspending records listed under the bullet above."
+  },
+  {
+   "id": "X2-03",
+   "finding": "user decision 2026-10-05: USAspending records are [P]",
+   "old": "**\\$3.97 M**, 2023–26 [I];",
+   "new": "**\\$3.97 M**, 2023–26 [P];",
+   "why": "The ONR award is one of the USAspending records listed under the bullet above."
+  },
+  {
+   "id": "X2-04",
+   "finding": "user decision 2026-10-05: USAspending records are [P]",
+   "old": "[I, USAspending; E for the bounds]",
+   "new": "[P, USAspending; E for the bounds]",
+   "why": "Pair supplied by the parallel editing pass; same tag as §D8."
+  }
+ ],
+ "skipped": []
+}
