@@ -298,7 +298,7 @@ The decision lists and the generated pairs are not archived here: they quote the
 | `check_c0.py` | Checks the new §C0: unbalanced `$`, doubled spaces, untagged displays, the tag range and the heading list. | historical |
 | `c0_install.py` | Installs the working copy into the report (hash-guarded) and updates the files that refer to §C0. | historical |
 
-## Receive front ends (§C4b, 2026-10-26), `frontend_2026-10/`
+## Receive front ends and 1,550 nm SPADs (§C0 subsection 4.1, §C4b, §C4c subsection 3, 2026-10-26), `frontend_2026-10/`
 
 The §C4b subsection "Receive front ends: op-amp TIAs, TIA chips, in-house ASICs, or no amplifier" compares discrete op-amp TIAs, TIA chips, in-house ASICs, SPAD-SoCs and coherent receivers. Every derived number in it comes from `frontend_numbers.py`, which takes its inputs from the datasheets and documents the subsection cites.
 
@@ -307,3 +307,4 @@ The §C4b subsection "Receive front ends: op-amp TIAs, TIA chips, in-house ASICs
 | `frontend_numbers.py` | Power per channel and for 128 always-on channels; op-amp TIA bandwidth, feedback capacitance and noise gain; resistor noise; signal per photoelectron for APDs and SiPMs; overload ratio; input-capacitance noise; power per output of the Rogers et al. receiver chip; Hesai's samples per channel. | current |
 | `check_section_math.py` | Converts one report section with pandoc, after the same `{\rm ...}` preprocessing as `build/build_pdf.py`, and lists any formula pandoc cannot convert. | current |
 | `render_pages.py` | Renders selected PDF pages to PNG at 160 dpi, and lists the pages whose text contains given keywords. | current |
+| `spad_1550_numbers.py` | Why a SPAD is harder at 1,550 nm (§C0 subsection 4.1) and Argo AI's InGaAs/InP SPAD lidar (§C4c subsection 3): photon energy against band gaps, intrinsic carrier densities, dark counts per area, activation energy and temperature scaling, linear InGaAs APD noise against a TIA, Argo's pixel field of view and sampling. | current |
