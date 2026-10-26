@@ -32,6 +32,8 @@ for name in ("OPA855 (SBOS622D p7, 5 V)", "LMH32401 (SBOS965D p1, 3.3 V)",
     tot = 128 * per_ch[name]
     print(f"   {name}: {tot:.1f} W = {tot/13.5:.2f} x AT128 (13.5 W), "
           f"{tot/8:.2f} x ATX (8 W)")
+print(f"   16-channel linear APD lidar, MAX40660: {16 * per_ch['MAX40660 active (Rev 6 p4, 3.3 V)']:.2f} W; "
+      f"LMH32401: {16 * per_ch['LMH32401 (SBOS965D p1, 3.3 V)']:.2f} W")
 
 # --- 3. Op-amp TIA bandwidth for a Butterworth response ---
 # f_3dB ~ sqrt(GBW / (2 pi R_F C_T)); C_T = photodiode + common-mode + differential input C
