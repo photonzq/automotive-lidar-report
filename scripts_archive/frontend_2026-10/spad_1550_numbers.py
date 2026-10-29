@@ -166,3 +166,22 @@ phi = 2 * pi * f_m * tau
 print(f"   1 mm of range: delay {tau*1e12:.2f} ps; phase at {f_m/1e6:.0f} MHz {phi:.2e} rad = {phi*180/pi:.3f} deg; "
       f"IF shift at {f_if/1e3:.0f} kHz {phi/(2*pi*f_if)*1e6:.3f} us; stretch {f_m/f_if:.0e}")
 print(f"   OPT3101: c/(2 x 10 MHz) = {c/(2*10e6):.1f} m unambiguous range")
+
+# --- 9. Gated InGaAs/InP SPAD array (Yildirim et al., Opt. Express 34, 5064 (2026)) and ST VL53L9 ---
+c = 2.998e8
+a15 = pi * 7.5**2
+print("9. Yildirim et al.: median DCR 617 kcps (Table 1, 15 um active diameter, Vex = 2 V, room temperature)")
+print(f"   per area: 617e3 / {a15:.1f} um^2 = {617e3/a15:.0f} counts/s/um^2; vs Argo 320-450 -> x{617e3/a15/450:.1f}-{617e3/a15/320:.1f}")
+gate = 3e-9
+print(f"   3 ns gate covers c t/2 = {c*gate/2:.3f} m; gate period at 50 kHz = {1/50e3*1e6:.0f} us; duty {gate*50e3:.1e}")
+r_bg = 3.4e8
+print(f"   §C4c 1,550 nm model pixel: P(background count in a 3 ns gate) = {1-exp(-r_bg*gate):.0%}")
+print(f"   pixel field: 15 deg / 96 = {15/96:.3f} deg; 3 deg / 96 = {3/96:.4f} deg")
+win10 = 21 * 500e-12 * c / 2
+win3 = 60 * 250e-12 * c / 2
+print(f"   10 m scene: 21 x 500 ps = {win10:.3f} m in {21*2000/50e3:.2f} s; 3 m scene: 60 x 250 ps = {win3:.2f} m in {60*2000/50e3:.1f} s")
+n_pos = 200 / (c * gate / 2)
+print(f"   200 m in non-overlapping 3 ns gates: {n_pos:.0f} positions -> {n_pos*2000/50e3:.1f} s per depth image at 2,000 frames/position")
+print(f"   200 m at the 10 m scene's rate: {200/win10:.0f} windows x 0.84 s = {200/win10*0.84:.0f} s")
+print(f"   usable pixels 88 x 76 = {88*76} of {96*96} = {88*76/96/96:.1%}")
+print("   VL53L9 (DS14879 Rev 9): 54 x 42 zones =", 54 * 42, "; VD55H1 pixels / zones =", f"{672*804/(54*42):.0f}")

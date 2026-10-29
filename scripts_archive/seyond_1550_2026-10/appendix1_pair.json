@@ -1,0 +1,13 @@
+{
+ "block": "seyond_1550_2026-10",
+ "edits": [
+  {
+   "id": "S7-A1-receive-front-ends",
+   "finding": "Additions on Seyond's receiver and other 1,550 nm ToF makers",
+   "old": "Seyond Falcon and Aeva's sensors were not found,",
+   "new": "Seyond Falcon and Aeva's sensors were not found (for the Falcon, Innovusion's patents describe a fibre-fed APD receiver, §C4b, and TechInsights' paywalled teardown DDT-2208-806 of the Falcon Kinetic would name its parts),",
+   "why": "Facts not yet in the report, checked against the sources listed in build_edits.py (2026-10-29)."
+  }
+ ],
+ "skipped": []
+}

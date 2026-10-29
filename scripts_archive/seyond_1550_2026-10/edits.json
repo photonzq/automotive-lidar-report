@@ -1,0 +1,48 @@
+{
+ "block": "seyond_1550_2026-10",
+ "edits": [
+  {
+   "id": "S1-C3-seyond",
+   "finding": "Additions on Seyond's receiver and other 1,550 nm ToF makers",
+   "old": "| 250 m (K), 300 m (K2), 450 m (K3); Robin E1X 200 m; Robin W 70 m (notes) | Main customer NIO; moving to 9xx for cost |",
+   "new": "| 250 m (K1), 300 m (K2), 450 m (K3); Robin E1X 200 m; Robin W 70 m (notes) | Main customer NIO; moving to 9xx for cost; listed on the Hong Kong main board on 10 Dec 2025 (02665.HK) through a merger with the SPAC TechStar Acquisition [T] |",
+   "why": "Facts not yet in the report, checked against the sources listed in build_edits.py (2026-10-29)."
+  },
+  {
+   "id": "S2-C3-second-tier",
+   "finding": "Additions on Seyond's receiver and other 1,550 nm ToF makers",
+   "old": "mostly 905; LeiShen and Benewake 1550",
+   "new": "mostly 905; LeiShen (LS series) and Benewake (Horn-X2 Pro) 1550 (§C4)",
+   "why": "Facts not yet in the report, checked against the sources listed in build_edits.py (2026-10-29)."
+  },
+  {
+   "id": "S3-C4-survives",
+   "finding": "Additions on Seyond's receiver and other 1,550 nm ToF makers",
+   "old": "(AEye; MicroVision, which bought Luminar's lidar business, §C3a).",
+   "new": "(AEye; MicroVision, which bought Luminar's lidar business, §C3a). Two Chinese makers also sell 1,550 nm ToF units. Benewake's Horn-X2 Pro, built for roadside, railway, airport and shipping sensing rather than for vehicles, is a Class 1 unit specified at 300 m on a 10% target under 100 klx at 620 kpts/s, over 90° × 30° and at up to 35 W [P, datasheet BP-DS-62 A01, 2022]. LeiShen launched its LS series in August 2022 with an in-house fibre laser, claiming 250 m at 10% (500 m maximum) over 120° × 25° with 128 to 512 lines at 1.6–6.4 Mpts/s, for highway driver assistance at L3 and above; its release names no carmaker [P, company release].",
+   "why": "Facts not yet in the report, checked against the sources listed in build_edits.py (2026-10-29)."
+  },
+  {
+   "id": "S4-C4b-receiver",
+   "finding": "Additions on Seyond's receiver and other 1,550 nm ToF makers",
+   "old": "- **At 1,550 nm, all volume ToF lidars do.** InGaAs SPAD arrays would run 340–3,400 times above their count-rate ceiling in sunlight (§C4c subsection 3). Seyond's Falcon (about 195,000 units in 2025, §C2) and Luminar's Iris therefore use linear InGaAs APDs, and both have few channels: the Falcon splits its fibre source into four beams, and the Iris has two fibre tips (§C4d subsection 1). The one short-wave-infrared SPAD-array lidar that reached vehicles, Argo AI's, ran above 1,400 nm with its arrays held at 40 °C, and about 400 were built, roughly half for robotaxi test fleets (§C4c subsection 3).",
+   "new": "- **At 1,550 nm, all volume ToF lidars do.** InGaAs SPAD arrays would run 340–3,400 times above their count-rate ceiling in sunlight (§C4c subsection 3). Seyond's Falcon (about 195,000 units in 2025, §C2) and Luminar's Iris therefore use linear InGaAs APDs, and both have few channels: the Falcon splits its fibre source into four beams, and the Iris has two fibre tips (§C4d subsection 1). The one short-wave-infrared SPAD-array lidar that reached vehicles, Argo AI's, ran above 1,400 nm with its arrays held at 40 °C, and about 400 were built, roughly half for robotaxi test fleets (§C4c subsection 3).\n  - Innovusion, Seyond's name until 2024, patented a fibre-fed receiver that matches the Falcon's four-way fibre split (§C4d subsection 2(a)) [P, US 11,789,128 B2, priority 1 Mar 2021]. Four or more single-mode transmit fibres sit at a 100–400 µm pitch behind a collimating lens set into an opening of the collection lens, so the beams leave 0.5–2.5° apart through the aperture that also collects their returns (claims 1, 14, 17, 18 and 21). At the image of each beam a multimode receive fibre, with a core of 50–1,000 µm, carries the return to its own detector assembly, where one lens collimates it through a small narrowband filter and a second lens focuses it onto an APD (claims 5, 10 and 11; Figs. 13–17). The fibre core thus sets each channel's field of view and its acceptance angle rejects stray light, and the four detectors can sit apart, clear of each other's optical and electrical crosstalk; the patent contrasts this with four APDs packed side by side in one focal plane (Fig. 12).\n  - A second Innovusion patent keeps the APDs in linear mode [P, US 11,789,132 B2, priority 9 Apr 2018]. The bias stays below a temperature-dependent avalanche threshold, set as the measured breakdown voltage times a fitted constant, using a temperature sensor, a look-up table and calibration sweeps at start-up or at intervals (claims 1–3, 7 and 8). Within each pulse period the bias rises, so that near returns see less gain than far ones (claims 12 and 13): the lidar counterpart of the sensitivity-time control by which a radar lowers its gain for near echoes.\n  - The patents leave the detector material open, but Seyond's 1,550 nm route uses InGaAs (§C4). Which of these designs the Falcon ships, and its APD supplier and readout chip, are not public; TechInsights sells a deep-dive teardown of the Falcon Kinetic (DDT-2208-806) whose public page names no parts.",
+   "why": "Facts not yet in the report, checked against the sources listed in build_edits.py (2026-10-29)."
+  },
+  {
+   "id": "S5-A2-technology",
+   "finding": "Additions on Seyond's receiver and other 1,550 nm ToF makers",
+   "old": "- Hesai ATX product page (\"256 (Highest Supported Channels)\", 230 m, 3.84 Mpts/s, 8 W): https://www.hesaitech.com/product/atx/",
+   "new": "- Hesai ATX product page (\"256 (Highest Supported Channels)\", 230 m, 3.84 Mpts/s, 8 W): https://www.hesaitech.com/product/atx/\n- Innovusion (Seyond), US 11,789,128 B2, fibre-based transmitter and receiver channels (priority 1 Mar 2021; claims 1–26, Figs. 12–17): https://patents.google.com/patent/US11789128B2/en\n- Innovusion (Seyond), US 11,789,132 B2, bias compensation for lidar APD receivers (priority 9 Apr 2018; claims 1–25): https://patents.google.com/patent/US11789132B2/en\n- TechInsights, deep-dive teardown DDT-2208-806 of the Innovusion Falcon Kinetic (product page; the report is paywalled): https://www.techinsights.com/products/ddt-2208-806\n- Benewake, Horn-X2 Pro datasheet BP-DS-62 A01 (24 Jun 2022; 1,550 nm, 300 m at 10% under 100 klx): https://en.benewake.com/uploadfiles/2024/05/20240509111033695.pdf\n- LSLiDAR (LeiShen), LS series 1,550 nm launch release (PR Newswire, 23 Aug 2022; syndicated copy): https://technode.global/prnasia/lslidars-image-grade-1550nm-lidar-ls-series-is-now-available-for-automotive-oems-taking-vehicle-safety-to-a-new-height/",
+   "why": "Facts not yet in the report, checked against the sources listed in build_edits.py (2026-10-29)."
+  },
+  {
+   "id": "S6-A2-market",
+   "finding": "Additions on Seyond's receiver and other 1,550 nm ToF makers",
+   "old": "- Ministry of Public Security, vehicle fleet at end-2024, end-2025 and 30 Jun 2026 (via gov.cn and Xinhua): https://www.gov.cn/lianbo/bumen/202501/content_6999762.htm ; https://www.gov.cn/lianbo/202601/content_7056115.htm ; https://www.news.cn/politics/20260714/6dc71608fee14901a0b25a9351078267/c.html",
+   "new": "- Ministry of Public Security, vehicle fleet at end-2024, end-2025 and 30 Jun 2026 (via gov.cn and Xinhua): https://www.gov.cn/lianbo/bumen/202501/content_6999762.htm ; https://www.gov.cn/lianbo/202601/content_7056115.htm ; https://www.news.cn/politics/20260714/6dc71608fee14901a0b25a9351078267/c.html\n- Walkers, Seyond's listing on the Hong Kong main board through a de-SPAC merger with TechStar Acquisition (10 Dec 2025): https://www.walkersglobal.com/en/About-us/News/2025/12/Advising-Seyond-on-successful-HKEX-listing-through-de-SPAC-transaction-with-TechStar ; PEdaily (投资界), Seyond listed on 10 Dec 2025 as 02665.HK: https://news.pedaily.cn/20251210/119920.shtml",
+   "why": "Facts not yet in the report, checked against the sources listed in build_edits.py (2026-10-29)."
+  }
+ ],
+ "skipped": []
+}
