@@ -2,9 +2,10 @@
 
 Pipeline: Markdown -> HTML with MathML (pandoc) -> PDF (headless Chrome) -> post-processing (PyMuPDF).
 
-- Equation numbers: display equations carry \\tag{N} in the Markdown. pandoc's MathML writer drops
-  \\tag, so it is swapped for a marker before pandoc and turned into a right-aligned "(N)" with an
-  anchor (#eq-N) afterwards.
+- Equation numbers: each display equation carries \\label{eq:name} in the Markdown, and the text cites it
+  as Eq. \\eqref{eq:name}. eqlabels.py (next to this file) numbers the labels in document order and turns
+  them into \\tag{N} and "(N)". pandoc's MathML writer drops \\tag, so it is swapped for a marker before
+  pandoc and turned into a right-aligned "(N)" with an anchor (#eq-N) afterwards.
 - Cross-references: "Eq. (N)" and section references such as "§C10.3a", "§C0 subsection 10" or
   "§C0 subsection 10.3" become internal links.
 - Source links: bare URLs in the Markdown become links (pandoc's autolink_bare_uris), so the sources can be
@@ -30,6 +31,9 @@ import time
 from pathlib import Path
 
 from bs4 import BeautifulSoup, NavigableString
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import eqlabels  # noqa: E402  (equation labels, next to this file)
 
 HERE = Path(__file__).resolve().parent
 REPORT_DIR = HERE.parent
@@ -84,6 +88,8 @@ src = src_md
 # pandoc's TeX-to-MathML converter does not accept the old {\rm ...} font switch
 src = re.sub(r"\{\\rm\s*((?:[^{}]|\{[^{}]*\})*?)\}", r"{\\mathrm{\1}}", src)  # one level of nested braces, e.g. {\rm s^{-1}}
 assert "{\\rm" not in src, "unconverted {\\rm ...} left"
+# equation labels: \label{eq:name} -> \tag{N} and \eqref{eq:name} -> (N), numbered in document order
+src = eqlabels.resolve(src)
 # equation numbers: \tag{N} -> a marker that survives pandoc's MathML writer
 src = re.sub(r"\\tag\{(\d+)\}", lambda m: r"\qquad\text{" + EQ_MARK + m.group(1) + "}", src)
 md_copy.write_text(src, encoding="utf-8")

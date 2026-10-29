@@ -11,7 +11,9 @@ from pathlib import Path
 
 report, start, stop = Path(sys.argv[1]), sys.argv[2], sys.argv[3]
 pandoc = sys.argv[4] if len(sys.argv) > 4 else "pandoc"
-lines = report.read_text(encoding="utf-8").splitlines()
+sys.path.insert(0, str(report.resolve().parent / "build"))
+import eqlabels  # noqa: E402  (the report's equation labels, resolved as build/build_pdf.py does)
+lines = eqlabels.resolve(report.read_text(encoding="utf-8")).splitlines()
 i0 = lines.index(start)
 i1 = lines.index(stop, i0 + 1)
 src = "\n".join(lines[i0:i1]) + "\n"

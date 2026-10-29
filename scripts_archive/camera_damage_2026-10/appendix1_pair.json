@@ -1,0 +1,13 @@
+{
+ "block": "camera_damage_2026-10",
+ "edits": [
+  {
+   "id": "K3-A1-camera-damage",
+   "finding": "Lidar damage to cameras: cases, mechanism and likelihood",
+   "old": "- **IEC 60825-1 (the laser eye-safety standard):** the $C_4$ wavelength coefficient and the conditional long-exposure comparison are checked; the AM1.5G values (the standard solar spectrum, used for sunlight background) match the official ASTM G173-03 file, and the silicon absorption values follow Green 2008. A nanosecond-pulse comparison that mixed editions of the standard is not used. Product-specific Class 1 calculations cannot be made from public documents: the Hesai ATX S01 and Seyond Falcon K1 manuals state the class but not the pulse energy, pulse duration, repetition rate or exit-beam size. All [E] calculations are order-of-magnitude, with stated assumptions.",
+   "new": "- **IEC 60825-1 (the laser eye-safety standard):** the $C_4$ wavelength coefficient and the conditional long-exposure comparison are checked; the AM1.5G values (the standard solar spectrum, used for sunlight background) match the official ASTM G173-03 file, and the silicon absorption values follow Green 2008. A nanosecond-pulse comparison that mixed editions of the standard is not used. Product-specific Class 1 calculations cannot be made from public documents: the Hesai ATX S01 and Seyond Falcon K1 manuals state the class but not the pulse energy, pulse duration, repetition rate or exit-beam size. All [E] calculations are order-of-magnitude, with stated assumptions.\n- **Camera damage by lidar (§C4c subsection 1).** No laboratory analysis of the cameras in the reported cases was published. At 1,550 nm only cumulative thresholds have been measured (Bi et al., 2,500 to $2\\times10^6$ pulses per site); the single-pulse threshold, which governs handheld and moving cameras, is unknown. The pulse energies of Seyond's Falcon and Luminar's Iris are not public, and whether phone infrared-cut filters and car windshields attenuate 1,550 nm light is undocumented. The estimate's 2 µJ per pulse is therefore an assumption, and the single-shot regime can only be bounded, not given a range; together these set the distances within which a camera is at risk.",
+   "why": "Lidar damage to cameras, checked against the sources listed in build_edits.py (2026-10-29)."
+  }
+ ],
+ "skipped": []
+}

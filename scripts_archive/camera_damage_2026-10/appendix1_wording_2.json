@@ -1,0 +1,13 @@
+{
+ "block": "camera_damage_2026-10/shutter",
+ "edits": [
+  {
+   "id": "S5-A1-camera-damage-wording",
+   "finding": "Exposure means time facing the lidar; shutters do not protect",
+   "old": "the single-pulse threshold, which governs handheld and moving cameras, is unknown",
+   "new": "the single-pulse threshold, which governs moving cameras, is unknown",
+   "why": "Most cameras keep no closed mechanical shutter in front of the sensor (2026-10-29)."
+  }
+ ],
+ "skipped": []
+}

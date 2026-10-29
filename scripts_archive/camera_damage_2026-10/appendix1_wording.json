@@ -1,0 +1,13 @@
+{
+ "block": "camera_damage_2026-10",
+ "edits": [
+  {
+   "id": "K4-A1-camera-damage-wording",
+   "finding": "Lidar damage to cameras: cases, mechanism and likelihood",
+   "old": "- **Camera damage by lidar (§C4c subsection 1).** No laboratory analysis of the cameras in the reported cases was published. At 1,550 nm only cumulative thresholds have been measured (Bi et al., 2,500 to $2\\times10^6$ pulses per site); the single-pulse threshold, which governs handheld and moving cameras, is unknown. The pulse energies of Seyond's Falcon and Luminar's Iris are not public, and whether phone infrared-cut filters and car windshields attenuate 1,550 nm light is undocumented. The estimate's 2 µJ per pulse is therefore an assumption, and the single-shot regime can only be bounded, not given a range; together these set the distances within which a camera is at risk.",
+   "new": "- **Camera damage by lidar (§C4c subsection 1).** No laboratory analysis of the cameras in the reported cases was published. At 1,550 nm only cumulative thresholds have been measured (Bi et al., 2,500 to $2\\times10^6$ pulses per site); the single-pulse threshold, which governs handheld and moving cameras, is unknown. The pulse energies of Seyond's Falcon and Luminar's Iris are not public, the 1,550 nm transmission of the damaged phones' infrared-cut filters was not reported, and the estimate ignores any attenuation by the windshield in front of a car camera. The estimate's 2 µJ per pulse is therefore an assumption, and for the single-shot regime it can state only the threshold factor at which damage would begin at each distance, not a damage distance.",
+   "why": "Lidar damage to cameras, checked against the sources listed in build_edits.py (2026-10-29)."
+  }
+ ],
+ "skipped": []
+}

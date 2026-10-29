@@ -1,0 +1,13 @@
+{
+ "block": "trieye_2026-10/pointer",
+ "edits": [
+  {
+   "id": "P1-C4c-trieye-pointer",
+   "finding": "Pointer from the Ge direct-detection paragraph to §A7.5",
+   "old": "- Sony's IEDM 2025 (International Electron Devices Meeting) 10 µm Ge-on-Si SPAD reports 23.3% PDE at 1,550 nm; its dark count rate (DCR) and operating temperature were not read (§C5a) [I].",
+   "new": "- Sony's IEDM 2025 (International Electron Devices Meeting) 10 µm Ge-on-Si SPAD reports 23.3% PDE at 1,550 nm; its dark count rate (DCR) and operating temperature were not read (§C5a) [I].\n- **Linear-mode Ge photodiodes do serve gated imaging.** TriEye's SWIR image sensor lives with a dark current of ≈200 µA cm⁻² by integrating only during short gates synchronised to its own laser pulses and by subtracting the dark current inside each pixel (§A7.5).",
+   "why": "A pointer from §C4c subsection 4 to the TriEye material (2026-10-29)."
+  }
+ ],
+ "skipped": []
+}

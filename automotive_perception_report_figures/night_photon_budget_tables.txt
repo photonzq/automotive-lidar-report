@@ -85,7 +85,7 @@
   full moon, chip 60 C: Rose (SNR_M >= 5) CMOS 427 m, photon counting 518 m;  per-pixel SNR >= 1: CMOS 60 m, photon counting 76 m
   thermal: Johnson detection ceiling 0.92/(1.5 IFOV) = 937 m; per-pixel SNR dT/NETD = 20-100 for dT = 1-5 K
 
-== SPAD in daylight: count ceiling and avalanche power, Eq. (20)
+== SPAD in daylight: count ceiling and avalanche power, Eq. (21)
   100 klux, rho 0.2: image plane 1562 lux; a 6.39 um pixel would detect 4.38e+08 photons/s
   dead time 4.3 ns: paralyzable ceiling 1/(e tau_d) = 8.555e+07 /s
   dead time 6.0 ns: paralyzable ceiling 1/(e tau_d) = 6.131e+07 /s

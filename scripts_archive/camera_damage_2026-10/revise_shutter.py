@@ -1,0 +1,51 @@
+"""Revision of 2026-10-29 to the camera-damage block (§C4c subsection 1) and its Appendix 1 item: the time that counts
+is how long the lens faces the lidar, not the photographic exposure; most cameras have no closed mechanical shutter in
+front of the sensor (Bi et al., p. 4716: the same damage sites with the sensor powered or not); a steady hand keeps the
+lidar's image on about one spot, so steady handheld framing counts as fixed.
+Writes edits_shutter.json (§C4c) and appendix1_wording_2.json (one phrase of the Appendix 1 item). The report is only
+read. Usage: python revise_shutter.py [--force]
+"""
+import json
+import sys
+from pathlib import Path
+
+sys.stdout.reconfigure(encoding="utf-8")
+HERE = Path(__file__).resolve().parent
+REPORT = HERE.parent.parent / "automotive_perception_report_2026-09-27.md"
+T = REPORT.read_text(encoding="utf-8")
+WHY = "Most cameras keep no closed mechanical shutter in front of the sensor (2026-10-29)."
+
+
+def edit(eid, old, new):
+    assert T.count(old) == 1, (eid, T.count(old), old[:70])
+    return {"id": eid, "finding": "Exposure means time facing the lidar; shutters do not protect", "old": old,
+            "new": new, "why": WHY}
+
+
+edits = [
+    edit("S1-C4c-intro",
+         r"possible for a camera held in front of one for many minutes out to tens of metres",
+         r"possible for a camera that faces one without moving for many minutes, out to tens of metres"),
+    edit("S2-C4c-regimes",
+         r"  - Two regimes follow. A camera that holds the lidar's image on one spot for minutes, such as a fixed camera or a phone on a tripod, is in the cumulative regime, and $F\ge26$ mJ cm⁻² marks possible damage. A handheld or moving camera spreads the pulses over its sensor and gives each spot only one or a few bursts. That is the single-shot regime, whose threshold is higher by the unmeasured factor.",
+         r"  - What counts is how long the lens faces the lidar, not the photographic exposure time. Phones, car cameras, dashcams and security cameras have no mechanical shutter, and mirrorless cameras keep theirs open in live view, so every pulse that enters the lens reaches the colour filter and the wiring whether the camera is recording, idle or switched off; Bi et al. found the same damage sites with the sensor powered or unpowered (p. 4716). An electronic shutter only sets when the pixels collect charge. A closed mechanical shutter, as in a DSLR between photos, is the exception, since it limits the pulses to the exposure time."
+         "\n"
+         r"  - Two regimes follow. A camera that keeps the lidar's image on one spot for minutes, such as a dashcam, a security camera, a parked car's camera or a phone on a mount or tripod, is in the cumulative regime, and $F\ge26$ mJ cm⁻² marks possible damage. A steady hand moves the image little: turning the telephoto camera below by 0.1° shifts it by $f\Delta\theta=14\ {\rm mm}\times1.7\ {\rm mrad}=24\ \mu{\rm m}$, about one spot, and optical image stabilisation, where fitted, cancels such tremor, so steady handheld framing counts as fixed for as long as it lasts. A camera that is panned, carried or driven past spreads the pulses over its sensor and gives each spot only one or a few bursts. That is the single-shot regime, whose threshold is higher by the unmeasured factor."),
+    edit("S3-C4c-single-shot",
+         r"A handheld camera at 10 m is therefore at risk only if one pulse damages the sensor at less than 4.3 times the cumulative threshold, and at 20 m only if it does so at less than 1.3 times; neither factor has been measured.",
+         r"A camera that moves while it faces the lidar is therefore at risk at 10 m only if one pulse damages the sensor at less than 4.3 times the cumulative threshold, and at 20 m only if it does so at less than 1.3 times; neither factor has been measured."),
+    edit("S4-C4c-verdict",
+         r"It then needs either a short distance or a long, fixed exposure. Within a few metres of the lidar every pulse is an order of magnitude above the cumulative threshold and a short video collects hundreds of pulses. Farther out, damage needs the cumulative regime: a camera held in front of the lidar for minutes to tens of minutes, out to",
+         r"It then needs either a short distance or a camera that faces the lidar without moving for minutes; a shutter does not help, because most cameras keep none closed in front of the sensor. Within a few metres of the lidar every pulse is an order of magnitude above the cumulative threshold and a short video collects hundreds of pulses. Farther out, damage needs the cumulative regime: a camera, such as a dashcam or a security camera, that faces the lidar without moving for minutes to tens of minutes, out to"),
+]
+appendix1 = [edit("S5-A1-camera-damage-wording",
+                  "the single-pulse threshold, which governs handheld and moving cameras, is unknown",
+                  "the single-pulse threshold, which governs moving cameras, is unknown")]
+
+for name, lst in (("edits_shutter.json", edits), ("appendix1_wording_2.json", appendix1)):
+    out = HERE / name
+    assert not out.exists() or "--force" in sys.argv, f"{name} exists; pass --force"
+    data = json.dumps({"block": "camera_damage_2026-10/shutter", "edits": lst, "skipped": []}, ensure_ascii=False,
+                      indent=1)
+    out.write_bytes((data + "\n").encode("utf-8"))
+    print(name, len(lst), "edits")

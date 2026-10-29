@@ -366,7 +366,7 @@ def tables() -> str:
     w("  thermal: Johnson detection ceiling 0.92/(1.5 IFOV) = "
       f"{0.92 / (1.5 * IFOV_TH):.0f} m; per-pixel SNR dT/NETD = {1.0 / NETD:.0f}-{5.0 / NETD:.0f} for dT = 1-5 K")
     w("")
-    w("== SPAD in daylight: count ceiling and avalanche power, Eq. (20)")
+    w("== SPAD in daylight: count ceiling and avalanche power, Eq. (21)")
     e_day, rho_day = 1.0e5, 0.2
     rate = S_V_SPAD * e_img(e_day, rho_day) * (P_SPAD * 1e6) ** 2
     w(f"  100 klux, rho 0.2: image plane {e_img(e_day, rho_day):.0f} lux; a 6.39 um pixel would detect"

@@ -1,0 +1,13 @@
+{
+ "block": "trieye_2026-10",
+ "edits": [
+  {
+   "id": "T3-A1-trieye",
+   "finding": "How TriEye's germanium SWIR sensor and SEDAR work",
+   "old": "- **Gated and SWIR imaging.** BrightWay names no carmaker for its claimed serial production, no TriEye series programme is public, and whether coated windshields pass 1,375 nm light is not documented (§A7.5).",
+   "new": "- **Gated and SWIR imaging.** BrightWay names no carmaker for its claimed serial production, no TriEye series programme is public, and whether coated windshields pass 1,375 nm light is not documented (§A7.5).\n- **TriEye's sensor and illuminator (§A7.5).** Unknown: which patented pixel route the TES200 uses (Tower's description, back-illuminated diodes joined pixel by pixel in a wafer stack, fits the bonded germanium-on-insulator route); its read noise, which sets how many gates a frame can accumulate before the dark-current noise exceeds it; the pulse energy, duration and repetition rate of its UltraBlaze illuminator; how much water vapour absorbs 1,375 nm light over a 100–200 m path; SEDAR's depth accuracy; and any funding after the Nov 2021 round or any series programme, automotive or military.",
+   "why": "How TriEye's sensor and SEDAR work, and the company's status (2026-10-29)."
+  }
+ ],
+ "skipped": []
+}

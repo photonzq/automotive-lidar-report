@@ -6,10 +6,11 @@ This folder holds everything needed to rebuild the report's PDF and every figure
 
 | Path (relative to the report folder) | What it is |
 |---|---|
-| `automotive_perception_report_2026-09-27.md` | The report source: Markdown with LaTeX math. Display equations carry `\tag{N}`. |
+| `automotive_perception_report_2026-09-27.md` | The report source: Markdown with LaTeX math. Each display equation carries a label such as `\label{eq:sunlit-range}`, and the text cites it as `Eq. \eqref{eq:sunlit-range}`; the numbers are assigned at build time. |
 | `automotive_perception_report_2026-09-27.pdf` | The built PDF. It embeds the figure scripts and `lidar_equity_prices_weekly.csv` as attachments. |
 | `automotive_perception_report_figures/` | Figure outputs only: a PNG (used by the report) and a vector PDF for each figure, and a `…_tables.txt` file with the numbers each script prints. |
 | `build/build_pdf.py` | Builds the PDF (see "How the PDF is built"). |
+| `build/eqlabels.py` | Numbers the equation labels; `build_pdf.py` imports it, and it also checks the labels from the command line (see "Equation labels"). |
 | `build/check_pdf.py` | Sanity checks on the built PDF. |
 | `build/report.css` | Print stylesheet (A4, Arial). |
 | `build/figures/` | One Python script per figure, plus `lidar_equity_prices_weekly.csv`, the input data of `lidar_equity_hype_cycle.py`. |
@@ -51,15 +52,28 @@ python build/check_pdf.py                      # check the result
 ## How the PDF is built
 
 `build_pdf.py` does the following:
-1. It converts the Markdown to HTML with pandoc, rendering math as MathML and turning bare URLs into links.
-2. It post-processes the HTML:
+1. It numbers the equations: `eqlabels.py` gives the labels the numbers 1, 2, 3, … in document order, replacing each `\label{eq:name}` by `\tag{N}` and each `\eqref{eq:name}` by "(N)". It stops with a message if a label is missing, used twice or malformed, or if the source still holds a numbered `\tag{N}` or "Eq. (N)".
+2. It converts the Markdown to HTML with pandoc, rendering math as MathML and turning bare URLs into links.
+3. It post-processes the HTML:
    - it turns each `\tag{N}` into a right-aligned equation number with an anchor;
    - it turns every "Eq. (N)" and every section reference ("§C7b", "§C0 subsection 4", "§C0 subsection 4.3") into an internal link;
    - it moves the table of contents after the title.
-3. It prints the HTML to PDF with headless Chrome.
-4. With PyMuPDF, it fixes the outline title and sets the metadata. It then embeds the figure scripts and the equity CSV as attachments, and adds a paperclip in the left margin beside each figure, holding the script that draws that figure.
+4. It prints the HTML to PDF with headless Chrome.
+5. With PyMuPDF, it fixes the outline title and sets the metadata. It then embeds the figure scripts and the equity CSV as attachments, and adds a paperclip in the left margin beside each figure, holding the script that draws that figure.
 
 Environment variables `REPORT_MD` and `REPORT_PDF` override the input and output paths for test builds. `KEEP_HTML=1` keeps the print HTML next to the PDF.
+
+## Equation labels
+
+To add an equation, give the display a new label, as in `$$R=\dots \tag{N}$$` written instead as `$$R=\dots \label{eq:new-name}$$`, and cite it as `Eq. \eqref{eq:new-name}`, or `Eqs. \eqref{eq:a}–\eqref{eq:b}` for several. A label is `eq:` followed by lower-case letters, digits and hyphens, and each display equation holds exactly one. No number is written anywhere in the source, so inserting, deleting or moving an equation renumbers all of them at the next build.
+
+```
+python build/eqlabels.py automotive_perception_report_2026-09-27.md                          # check labels and references
+python build/eqlabels.py automotive_perception_report_2026-09-27.md --resolved numbered.md   # also write the numbered Markdown
+python build/eqlabels.py automotive_perception_report_2026-09-27.md --figures build/figures  # list "Eq. (N)" quoted in figure scripts
+```
+
+The figure scripts quote equation numbers by hand in comments and printed table headings, so these numbers do not follow a renumbering by themselves. The `--figures` listing prints each quoted number with the label it now belongs to, which shows at a glance whether a quotation still points at the intended equation.
 
 ## Opening the attachments
 

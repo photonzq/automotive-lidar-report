@@ -35,7 +35,7 @@ Model (see the note for the reasoning and for what each parameter stands for):
      analog power (TIA, LO/bias, drivers) x T_dwell.  N_s is set by the
      time-bandwidth product ~ 5 R_max / dR (2.5 x the beat frequency over the up and
      down chirps), independent of how many photons return.
-   - FMCW dwell (report section C7b, Eq. (111)): T_dwell = T_int + 2 tau, where
+   - FMCW dwell (report section C7b, Eq. (115)): T_dwell = T_int + 2 tau, where
      tau = 2 R / c is the round trip at the 200 m design range.  Each ramp starts
      with tau of discarded beat, so a channel stays on a point 2 tau longer than it
      integrates.  The central case is ungated: the laser keeps emitting during the
@@ -276,7 +276,7 @@ def fmcw_digitization(s: dict) -> dict:
     f_s = 1.25 * 2 * (f_beat + f_dopp)  # real sampling with 25 % margin
     t_int = 2 * s["t_chirp"]  # useful integration: up + down chirp
     tau = 2 * R_TARGET / C  # round trip at the design range, discarded at the start of each ramp
-    t_dwell = t_int + 2 * tau  # section C7b, Eq. (111)
+    t_dwell = t_int + 2 * tau  # section C7b, Eq. (115)
     n_samples = f_s * t_int  # only the useful windows are digitized
     return dict(f_beat=f_beat, f_dopp=f_dopp, f_s=f_s, t_dwell=t_dwell, t_int=t_int, tau=tau,
                 n_samples=n_samples, range_res=C / (2 * s["bandwidth"]),
