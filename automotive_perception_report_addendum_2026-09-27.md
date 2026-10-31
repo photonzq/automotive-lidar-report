@@ -1,6 +1,8 @@
 # Addendum: Primary Source Verification of Open Items in Automotive Perception Report
 ## Source checks, citations and findings (as of 27 September 2026)
 
+> **Disclaimer.** This addendum was prepared with significant AI assistance. It may contain errors, so check the cited sources before relying on a figure.
+
 ---
 
 ### Method and Sources

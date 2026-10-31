@@ -9,6 +9,7 @@ This folder holds everything needed to rebuild the report's PDF and every figure
 | `automotive_perception_report_2026-09-27.md` | The report source: Markdown with LaTeX math. Each display equation carries a label such as `\label{eq:sunlit-range}`, and the text cites it as `Eq. \eqref{eq:sunlit-range}`; the numbers are assigned at build time. |
 | `automotive_perception_report_2026-09-27.pdf` | The built PDF. It embeds the figure scripts and `lidar_equity_prices_weekly.csv` as attachments. |
 | `automotive_perception_report_figures/` | Figure outputs only: a PNG (used by the report) and a vector PDF for each figure, and a `…_tables.txt` file with the numbers each script prints. |
+| `swir_image_sensor_survey_2026-10-29.md` | The source of the SWIR side note, with the same equation labels. `build_pdf.py` builds it into `swir_image_sensor_survey_2026-10-29.pdf`, which has no figures and no attachments, and `scripts_archive/publish_2026-10/make_web_html.py` makes `swir_image_sensor_survey.html` from it. |
 | `build/build_pdf.py` | Builds the PDF (see "How the PDF is built"). |
 | `build/eqlabels.py` | Numbers the equation labels; `build_pdf.py` imports it, and it also checks the labels from the command line (see "Equation labels"). |
 | `build/check_pdf.py` | Sanity checks on the built PDF. |
@@ -43,7 +44,10 @@ Run from the report folder:
 python build/figures/link_budget_scaling.py    # redraw one figure; repeat for any other script
 python build/build_pdf.py                      # rebuild the PDF (about 2 minutes)
 python build/check_pdf.py                      # check the result
+python build/build_pdf.py swir_image_sensor_survey_2026-10-29.md   # rebuild the SWIR side note, after the report
 ```
+
+The side note's references to the report's sections ("main report §A7.5") link to the report's web page. The build reads their targets from the built `index.html`, so rebuild the report and its web page first.
 
 - **Where figure scripts write.** When a script sits in `build/figures/` inside the report folder, it writes its PNG, PDF and tables into `automotive_perception_report_figures/`. Anywhere else, for example after extraction from the PDF's attachments, it writes next to itself.
 - **Input data.** `lidar_equity_hype_cycle.py` reads `lidar_equity_prices_weekly.csv` from its own folder, so keep the two together.
@@ -56,12 +60,12 @@ python build/check_pdf.py                      # check the result
 2. It converts the Markdown to HTML with pandoc, rendering math as MathML and turning bare URLs into links.
 3. It post-processes the HTML:
    - it turns each `\tag{N}` into a right-aligned equation number with an anchor;
-   - it turns every "Eq. (N)" and every section reference ("§C7b", "§C0 subsection 4", "§C0 subsection 4.3") into an internal link;
+   - it turns every "Eq. (N)" and every section reference ("§C7b", "§C0 subsection 4", "§C0 subsection 4.3") into an internal link; in the side note its own sections ("§S2.3") link internally and the report's sections link to the report's web page;
    - it moves the table of contents after the title.
 4. It prints the HTML to PDF with headless Chrome.
-5. With PyMuPDF, it fixes the outline title and sets the metadata. It then embeds the figure scripts and the equity CSV as attachments, and adds a paperclip in the left margin beside each figure, holding the script that draws that figure.
+5. With PyMuPDF, it fixes the outline title and sets the metadata. For the report, it then embeds the figure scripts and the equity CSV as attachments, and adds a paperclip in the left margin beside each figure, holding the script that draws that figure.
 
-Environment variables `REPORT_MD` and `REPORT_PDF` override the input and output paths for test builds. `KEEP_HTML=1` keeps the print HTML next to the PDF.
+A Markdown file given as the argument is built instead of the report, into a PDF of the same name next to it; the title and subtitle come from its first two headings. Environment variables `REPORT_MD` and `REPORT_PDF` override the input and output paths for test builds. `KEEP_HTML=1` keeps the print HTML next to the PDF.
 
 ## Equation labels
 

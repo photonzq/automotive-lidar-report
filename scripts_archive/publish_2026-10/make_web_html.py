@@ -1,4 +1,4 @@
-"""Turn the print HTML that build/build_pdf.py keeps (KEEP_HTML=1) into index.html for GitHub Pages (10 Oct 2026).
+"""Turn the print HTML that build/build_pdf.py keeps (KEEP_HTML=1) into a web page for GitHub Pages (10 Oct 2026).
 
 - Figures: the print HTML embeds every PNG as a data URI; each is matched by content to its file in
   automotive_perception_report_figures/ and replaced by a relative link, so the page loads its images separately.
@@ -8,10 +8,13 @@
   so on screen the subsection headings came out no larger than the text.
 - A floating "Contents" link returns to the table of contents; it appears once the reader has scrolled past the
   contents and is hidden when printing.
-- A link to the PDF version is placed under the disclaimer on the title block.
+- A link to the PDF version is placed under the disclaimer on the title block, with a link between the report and
+  its SWIR side note.
 
-Usage (from the report folder, after `KEEP_HTML=1 python build/build_pdf.py`):
-    python make_web_html.py <report folder> [--remove-print-html]
+Usage (from the report folder, after `KEEP_HTML=1 python build/build_pdf.py [<document.md>]`):
+    python make_web_html.py <report folder> [<document.md>] [--remove-print-html]
+The report (the default) becomes index.html, and the SWIR side note (swir_image_sensor_survey_2026-10-29.md) becomes
+swir_image_sensor_survey.html.
 """
 import base64
 import hashlib
@@ -20,10 +23,21 @@ import sys
 from pathlib import Path
 
 REPORT = Path(sys.argv[1])
-SRC = REPORT / "automotive_perception_report_2026-09-27.html"
-OUT = REPORT / "index.html"
+NAMES = [a for a in sys.argv[2:] if not a.startswith("--")]
+STEM = Path(NAMES[0]).stem if NAMES else "automotive_perception_report_2026-09-27"
+# document -> (web page, what follows the PDF link on the title block)
+PAGES = {
+    "automotive_perception_report_2026-09-27": (
+        "index.html", ' (the figure scripts are attached inside the PDF)<br>Side note: '
+                      '<a href="swir_image_sensor_survey.html">Short-Wave Infrared Image Sensors</a>'),
+    "swir_image_sensor_survey_2026-10-29": (
+        "swir_image_sensor_survey.html", '<br>Main report: '
+                                         '<a href="index.html">Automotive Night Vision, Lidar and the Sensor Debate</a>'),
+}
+SRC = REPORT / f"{STEM}.html"
+OUT = REPORT / PAGES[STEM][0]
 FIGS = REPORT / "automotive_perception_report_figures"
-PDF_NAME = "automotive_perception_report_2026-09-27.pdf"
+PDF_NAME = f"{STEM}.pdf"
 
 SCREEN_CSS = """
 <style>
@@ -86,14 +100,14 @@ html = html.replace("</head>", SCREEN_CSS + "</head>", 1)
 html = re.sub(r"(<table\b[^>]*>.*?</table>)", r'<div class="table-scroll">\1</div>', html, flags=re.S)
 m = re.search(r'<div class="disclaimer">.*?</div>', html, re.S)
 assert m, "no disclaimer block found"
-link = f'\n<p class="pdf-link"><a href="{PDF_NAME}">PDF version</a> (the figure scripts are attached inside the PDF)</p>'
+link = f'\n<p class="pdf-link"><a href="{PDF_NAME}">PDF version</a>{PAGES[STEM][1]}</p>'
 html = html[:m.end()] + link + html[m.end():]
 assert 'id="TOC"' in html, "no table of contents to link back to"
 assert html.count("</body>") == 1
 html = html.replace("</body>", BACK_LINK + "</body>", 1)
 assert "data:image" not in html
 OUT.write_text(html, encoding="utf-8", newline="\n")
-print(f"{n_img} figures linked; index.html {OUT.stat().st_size / 1e6:.1f} MB")
+print(f"{n_img} figures linked; {OUT.name} {OUT.stat().st_size / 1e6:.1f} MB")
 if "--remove-print-html" in sys.argv:
     SRC.unlink()
     print("removed", SRC.name)

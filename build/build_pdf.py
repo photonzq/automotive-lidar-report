@@ -1,4 +1,4 @@
-"""Build the PDF of the automotive perception report.
+"""Build the PDF of the automotive perception report or of its SWIR side note.
 
 Pipeline: Markdown -> HTML with MathML (pandoc) -> PDF (headless Chrome) -> post-processing (PyMuPDF).
 
@@ -17,7 +17,13 @@ Pipeline: Markdown -> HTML with MathML (pandoc) -> PDF (headless Chrome) -> post
 - Title page: a fenced div `::: {.disclaimer}` after the subtitle is placed between the subtitle and the
   contents, styled by EXTRA_CSS.
 
+- Side note: the SWIR side note (swir_image_sensor_survey_2026-10-29.md) is built the same way. Its own section
+  references (§S1.3) link within it, and its references to the report (§A7.5) link to the report's web page, with
+  the anchors read from the built index.html, so build the report first.
+
 Layout: this file lives in <report>/build; the report is <report>/automotive_perception_report_2026-09-27.md.
+Usage: python build/build_pdf.py [<document.md>]; without an argument it builds the report. The PDF is written next
+to the Markdown under the same name, and the title and subtitle are read from the document's first two headings.
 Environment settings: PANDOC and CHROME name the two programs (default: `pandoc` and `chrome` on the PATH);
 REPORT_MD and REPORT_PDF override the input and output (for tests); KEEP_HTML=1 keeps the print HTML next to the PDF.
 """
@@ -39,11 +45,21 @@ HERE = Path(__file__).resolve().parent
 REPORT_DIR = HERE.parent
 FIG_OUT = REPORT_DIR / "automotive_perception_report_figures"  # figure outputs (PNG, PDF, tables)
 FIG_SRC = HERE / "figures"  # figure scripts and their input data
-MD = Path(os.environ.get("REPORT_MD", str(REPORT_DIR / "automotive_perception_report_2026-09-27.md")))
-OUT_PDF = Path(os.environ.get("REPORT_PDF", str(REPORT_DIR / "automotive_perception_report_2026-09-27.pdf")))
+MD = Path(os.environ.get("REPORT_MD", sys.argv[1] if len(sys.argv) > 1 else
+                         str(REPORT_DIR / "automotive_perception_report_2026-09-27.md"))).resolve()
+OUT_PDF = Path(os.environ.get("REPORT_PDF", str(MD.with_suffix(".pdf"))))
 PANDOC = os.environ.get("PANDOC", "pandoc")  # pandoc executable; on the PATH by default
 CHROME = os.environ.get("CHROME", "chrome")  # Chrome or Chromium executable; on the PATH by default
-TITLE = "Automotive Night Vision, Lidar and the Sensor Debate"
+# Per-document settings, keyed by the Markdown file's name: the PDF keywords, the heading depth of the contents and,
+# for the side note, the report's web page (built file, public address) that its references to the report link to
+DOCS = {
+    "automotive_perception_report_2026-09-27": {
+        "keywords": "lidar; thermal night vision; FMCW; SPAD; automotive perception", "toc_depth": 2},
+    "swir_image_sensor_survey_2026-10-29": {
+        "keywords": "SWIR image sensors; InGaAs; germanium on silicon; quantum dots; detectivity; automotive",
+        "toc_depth": 3, "xref": (REPORT_DIR / "index.html", "https://photonzq.github.io/automotive-lidar-report/")},
+}
+DOC = DOCS.get(MD.stem, {"keywords": "", "toc_depth": 2})
 EQ_MARK = "EQNOMARK"
 EXTRA_CSS = """
 .eqn { display: flex; align-items: center; width: 100%; margin: 0.35em 0; }
@@ -83,7 +99,9 @@ html_final = WORK / "report_print.html"
 pdf_tmp = WORK / "report_print.pdf"
 
 src_md = MD.read_text(encoding="utf-8")
-figure_links = re.findall(r"!\[[^\]]*\]\((automotive_perception_report_figures/[^)\s]+\.png)\)", src_md)
+TITLE = next(ln[2:].strip() for ln in src_md.split("\n") if ln.startswith("# "))
+SUBTITLE = next(ln[3:].strip() for ln in src_md.split("\n") if ln.startswith("## ")).replace("*", "")
+figure_links =re.findall(r"!\[[^\]]*\]\((automotive_perception_report_figures/[^)\s]+\.png)\)", src_md)
 src = src_md
 # pandoc's TeX-to-MathML converter does not accept the old {\rm ...} font switch
 src = re.sub(r"\{\\rm\s*((?:[^{}]|\{[^{}]*\})*?)\}", r"{\\mathrm{\1}}", src)  # one level of nested braces, e.g. {\rm s^{-1}}
@@ -98,7 +116,7 @@ cmd = [
     PANDOC, str(md_copy),
     "-f", "markdown-subscript-superscript-implicit_figures-raw_tex+lists_without_preceding_blankline+autolink_bare_uris",
     "-t", "html5", "--standalone", "--mathml",
-    "--toc", "--toc-depth=2", "--columns=100000",
+    "--toc", f"--toc-depth={DOC['toc_depth']}", "--columns=100000",
     "--embed-resources", f"--resource-path={REPORT_DIR}",
     f"--css={HERE / 'report.css'}",
     "--metadata", f"pagetitle={TITLE}",
@@ -128,7 +146,10 @@ if nav is not None:
         inner = first_li.find("ul")
         if inner is not None:
             for li in list(inner.find_all("li", recursive=False)):
-                if li.get_text().strip().startswith("Technology routes"):
+                if li.get_text(" ", strip=True).startswith(SUBTITLE[:20]):  # the subtitle: keep only its subsections
+                    sub_ul = li.find("ul")
+                    for sub_li in list(sub_ul.find_all("li", recursive=False)) if sub_ul is not None else []:
+                        first_li.insert_before(sub_li.extract())
                     continue
                 first_li.insert_before(li.extract())
         first_li.decompose()
@@ -177,47 +198,65 @@ left = [mt for mt in body.find_all("mtext") if EQ_MARK in mt.get_text()]
 assert not left, f"{len(left)} equation markers left in the HTML"
 log("numbered equations", n_eq)
 
-# ---- section anchors from headings
-anchors, cur = {}, None
-for h in body.find_all(["h1", "h2", "h3", "h4"]):
-    hid = h.get("id")
-    if not hid:
-        continue
-    t = h.get_text(" ", strip=True)
-    if h.name in ("h1", "h2"):
-        m = re.match(r"^([A-G]\d+[a-z]?|\d+)\.\s", t)
-        if m:
-            anchors.setdefault(m.group(1), hid)
-            cur = m.group(1)
-        m = re.match(r"^Appendix (\d+)", t)
-        if m:
-            anchors.setdefault(f"Appendix {m.group(1)}", hid)
-        m = re.match(r"^Part ([A-G])\b", t)
-        if m:
-            anchors.setdefault(f"Part {m.group(1)}", hid)
-    else:
-        m = re.match(r"^([A-G]\d+[a-z]?\.\d+[a-z]?)\b", t) or re.match(r"^([A-G]\d+[a-z]?)\.\s", t)
-        if m:
-            anchors.setdefault(m.group(1), hid)
-        m = re.match(r"^(\d+)\.\s", t) or re.match(r"^(\d+\.\d+)\s", t)  # "10. Link budget" or "10.2 How much light"
-        if m and cur:
-            anchors.setdefault(f"{cur} subsection {m.group(1)}", hid)
+# ---- section anchors from headings (report sections A1-G7, side-note sections S0-S5)
+def collect_anchors(root):
+    anchors, cur = {}, None
+    for h in root.find_all(["h1", "h2", "h3", "h4"]):
+        hid = h.get("id")
+        if not hid:
+            continue
+        t = h.get_text(" ", strip=True)
+        if h.name in ("h1", "h2"):
+            m = re.match(r"^([A-GS]\d+[a-z]?|\d+)\.\s", t)
+            if m:
+                anchors.setdefault(m.group(1), hid)
+                cur = m.group(1)
+            m = re.match(r"^Appendix (\d+)", t)
+            if m:
+                anchors.setdefault(f"Appendix {m.group(1)}", hid)
+            m = re.match(r"^Part ([A-G])\b", t)
+            if m:
+                anchors.setdefault(f"Part {m.group(1)}", hid)
+        else:
+            m = re.match(r"^([A-GS]\d+[a-z]?\.\d+[a-z]?)\b", t) or re.match(r"^([A-GS]\d+[a-z]?)\.\s", t)
+            if m:
+                anchors.setdefault(m.group(1), hid)
+            m = re.match(r"^(\d+)\.\s", t) or re.match(r"^(\d+\.\d+)\s", t)  # "10. Link budget" or "10.2 How much light"
+            if m and cur:
+                anchors.setdefault(f"{cur} subsection {m.group(1)}", hid)
+    return anchors
+
+
+anchors = collect_anchors(body)
+ext_anchors, ext_url = {}, ""
+if "xref" in DOC:  # references to the report link to its web page
+    ext_html, ext_url = DOC["xref"]
+    ext_anchors = collect_anchors(BeautifulSoup(ext_html.read_text(encoding="utf-8"), "html.parser").body)
+    log("report anchors for cross-links", len(ext_anchors))
 
 REF_RE = re.compile(
-    r"(?P<sec>§\s?(?P<code>[A-G]\d+[a-z]?(?:\.\d+[a-z]?)?|0)(?:\s+subsections?\s+(?P<sub>\d+(?:\.\d+)?))?)"
+    r"(?P<sec>§\s?(?P<code>[A-GS]\d+[a-z]?(?:\.\d+[a-z]?)?|0)(?:\s+subsections?\s+(?P<sub>\d+(?:\.\d+)?))?)"
     r"|(?P<eqs>\bEqs?\.\s*\(\d+\)(?:\s*(?:,|and|–|-|to|or)\s*\(\d+\))*)"
 )
 SKIP = {"a", "math", "code", "pre", "h1", "h2", "h3", "h4", "nav", "script", "style", "annotation", "title"}
-n_sec = n_eqref = 0
+n_sec = n_ext = n_eqref = 0
+
+
+def lookup(table, code, sub_no):
+    if sub_no and f"{code} subsection {sub_no}" in table:
+        return table[f"{code} subsection {sub_no}"]
+    if code in table:
+        return table[code]
+    base = re.match(r"^([A-GS]\d+[a-z]?)", code)
+    return table.get(base.group(1)) if base else None
 
 
 def target(code, sub_no):
-    if sub_no and f"{code} subsection {sub_no}" in anchors:
-        return anchors[f"{code} subsection {sub_no}"]
-    if code in anchors:
-        return anchors[code]
-    base = re.match(r"^([A-G]\d+[a-z]?)", code)
-    return anchors.get(base.group(1)) if base else None
+    tid = lookup(anchors, code, sub_no)
+    if tid:
+        return f"#{tid}"
+    tid = lookup(ext_anchors, code, sub_no)
+    return f"{ext_url}#{tid}" if tid else None
 
 
 for s in list(body.find_all(string=True)):
@@ -229,14 +268,15 @@ for s in list(body.find_all(string=True)):
     pieces, pos = [], 0
     for m in REF_RE.finditer(text):
         if m.group("sec"):
-            tid = target(m.group("code"), m.group("sub"))
-            if not tid:
+            href = target(m.group("code"), m.group("sub"))
+            if not href:
                 continue
             pieces.append(text[pos:m.start()])
-            a = soup.new_tag("a", href=f"#{tid}", attrs={"class": "xref"})
+            a = soup.new_tag("a", href=href, attrs={"class": "xref"})
             a.string = m.group(0)
             pieces.append(a)
             n_sec += 1
+            n_ext += not href.startswith("#")
         else:
             pieces.append(text[pos:m.start()])
             phrase, ppos = m.group(0), 0
@@ -262,7 +302,7 @@ for s in list(body.find_all(string=True)):
         else:
             last.insert_after(node)
             last = node
-log("section links", n_sec, "equation links", n_eqref, "anchors", len(anchors))
+log("section links", n_sec, "equation links", n_eqref, "anchors", len(anchors), "links to the report's web page", n_ext)
 
 style = soup.new_tag("style")
 style.string = EXTRA_CSS
@@ -288,8 +328,12 @@ import pymupdf  # noqa: E402
 
 doc = pymupdf.open(pdf_tmp)
 toc = doc.get_toc(simple=False)
-if toc and toc[0][1].replace(" ", "") == TITLE.replace(" ", ""):
-    toc[0][1] = TITLE  # Chrome drops the space at the title's line wrap
+fixed = False
+for entry in toc[:2]:  # Chrome drops the space at a line wrap of the title or the subtitle
+    for full in (TITLE, SUBTITLE):
+        if entry[1] != full and entry[1].replace(" ", "") == full.replace(" ", ""):
+            entry[1], fixed = full, True
+if fixed:
     doc.set_toc(toc)
 
 # ---- figure code in the PDF: attach the figure scripts and the one input data file they need
@@ -299,11 +343,12 @@ for png in figure_links:
     if sp is not None:
         drawn_by.setdefault(sp.name, []).append(Path(png).name)
 attachments = []
-for p in sorted(FIG_SRC.glob("*.py")):
-    what = ", ".join(drawn_by.get(p.name, [])) or "the §C4c eye-safety and sunlight tables (no figure)"
-    attachments.append((f"build/figures/{p.name}", p, f"Figure script: draws {what}"))
-for p in sorted(FIG_SRC.glob("*.csv")):
-    attachments.append((f"build/figures/{p.name}", p, "Input data for lidar_equity_hype_cycle.py (keep it in the same folder)"))
+if figure_links:  # only a document with figures (the report) carries the figure code
+    for p in sorted(FIG_SRC.glob("*.py")):
+        what = ", ".join(drawn_by.get(p.name, [])) or "the §C4c eye-safety and sunlight tables (no figure)"
+        attachments.append((f"build/figures/{p.name}", p, f"Figure script: draws {what}"))
+    for p in sorted(FIG_SRC.glob("*.csv")):
+        attachments.append((f"build/figures/{p.name}", p, "Input data for lidar_equity_hype_cycle.py (keep it in the same folder)"))
 for key, path, desc in attachments:
     doc.embfile_add(key, path.read_bytes(), filename=path.name, ufilename=path.name, desc=desc)
 log("attached files", doc.embfile_count())
@@ -336,9 +381,9 @@ log("figure paperclips", n_clip)
 
 doc.set_metadata({
     "title": TITLE,
-    "subject": "Technology routes, markets, supply chain, geopolitics and outlook",
+    "subject": SUBTITLE,
     "author": "",
-    "keywords": "lidar; thermal night vision; FMCW; SPAD; automotive perception",
+    "keywords": DOC["keywords"],
     "creator": "",
     "producer": "",
 })
