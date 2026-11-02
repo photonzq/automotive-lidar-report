@@ -1,8 +1,9 @@
 """Op-amp candidates for a 1 MOhm TIA reading the 1 mm^2 PbS diode of the SWIR side note (§S2.8).
 Criterion: the op amp's voltage-noise current e_n|Y| should not exceed the feedback resistor's Johnson noise, and its
 current noise should stay below a third of it; |Y| = |1/R0 + 1/Rf + j 2 pi f (Cs + Cf + Cin)|.
-Datasheet values (typical, 25 C): AD743 Rev. E p. 2; OPA828 SBOS671D p. 5; OPA827 SBOS376I p. 6 (10 and 100 Hz read by
-eye from Fig. 1, p. 8); OPA140 SBOS498F p. 7; OPA1656 SBOS901C p. 6. Usage: opamp_candidates.py"""
+Datasheet values (typical, 25 C): AD743 Rev. E p. 2; ADA4625-1 Rev. C pp. 3-4 (at +-18 V); OPA828 SBOS671D p. 5;
+OPA827 SBOS376I p. 6 (10 and 100 Hz read by eye from Fig. 1, p. 8); OPA140 SBOS498F p. 7; OPA1656 SBOS901C p. 6.
+Usage: opamp_candidates.py"""
 import math
 
 KB, T = 1.380649e-23, 298.0
@@ -10,16 +11,20 @@ FOURKT = 4 * KB * T
 R0, CS = 81.3e3, 3e-9             # chord bound on R0 and zero-bias capacitance of the 1 mm^2 diode (§S2.3, §S2.4)
 CF = 10e-12
 
-# name: (e_n by frequency [V/rtHz], i_n [A/rtHz], GBW [Hz], C_in [F], status)
+# name: (e_n by frequency [V/rtHz], i_n [A/rtHz], GBW [Hz], C_in [F], status); C_in is the larger of the datasheet's
+# differential and common-mode input capacitances, which next to 3 nF changes |Y| by well under 1%
 PARTS = {
     "AD743":   ({10: 5.5e-9, 100: 3.6e-9, 1e3: 3.2e-9}, 6.9e-15, 4.5e6, 20e-12, "not recommended for new designs"),
+    "ADA4625-1": ({10: 5.5e-9, 100: 3.6e-9, 1e3: 3.3e-9}, 4.5e-15, 18e6, 11.3e-12,
+                  "datasheet revised Oct. 2026, rail-to-rail output; GBW at G = 100"),
     "OPA828":  ({10: 7.5e-9, 100: 4.8e-9, 1e3: 4.0e-9}, 1.2e-15, 45e6, 9e-12, "active"),
     "OPA827":  ({10: 9e-9, 100: 5e-9, 1e3: 4.0e-9}, 2.2e-15, 22e6, 9e-12, "active (10, 100 Hz by eye)"),
     "OPA140":  ({10: 8.0e-9, 100: 5.8e-9, 1e3: 5.1e-9}, 0.8e-15, 11e6, 10e-12, "active, rail-to-rail output"),
     "OPA1656": ({100: 11.8e-9, 1e3: 4.3e-9}, 6e-15, 53e6, 9.1e-12, "active, CMOS input; GBW at G = 100"),
 }
 # the loop of a TIA with 3 nF at the input crosses near a noise gain of Cs/Cf ~ 300, so the gain-bandwidth product
-# quoted at high gain is the relevant one where a part lists two (OPA1656: 53 MHz at G = 100, 20 MHz at G = 1)
+# quoted at high gain is the relevant one where a part lists two (OPA1656: 53 MHz at G = 100, 20 MHz at G = 1;
+# ADA4625-1: 18 MHz at G = 100, 12.4 MHz unity-gain crossover)
 
 
 def y_in(f, rf, c_in):
