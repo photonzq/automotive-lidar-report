@@ -2,7 +2,7 @@
 ## A side note to *Automotive Night Vision, Lidar and the Sensor Debate*: technologies, a detectivity check, and the automotive case
 
 ::: {.disclaimer}
-**Disclaimer.** This side note was prepared with significant AI assistance. It may contain errors: each statement carries an evidence tag and, where possible, a source, so check those before relying on a figure.
+**Disclaimer.** This side note was prepared with significant AI assistance. It may contain errors: each statement carries an evidence tag and, where possible, a source, so check those before relying on a figure. It is dedicated to the public domain under CC0 1.0; no copyright is reserved.
 :::
 
 ---
