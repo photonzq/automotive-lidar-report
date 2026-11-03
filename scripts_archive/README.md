@@ -417,3 +417,5 @@ Two sub-bullets in §A3 item 6, next to the US controls. China's dual-use export
 | File | Purpose | Status |
 |---|---|---|
 | `china_thermal_controls_edit.py` | Applies the edit. Every anchor must match exactly once and the starting hash must match. Applied 2026-11-02, report sha256 before eb23c872f4bb, after cd8e0a253e6f. | historical (applied) |
+
+A correction made by hand the same day (report sha256 cd8e0a253e6f → 1b934622ae62) changed "controls infrared imaging equipment only as a drone payload" to "names", added that imaging sensors otherwise appear only as target-detection electronics in entry 6A108.d (p. 87), an entry related to the delivery vehicles of weapons of mass destruction by the list's general note 3, and extended the page references of the list's Appendix 2 entry.
