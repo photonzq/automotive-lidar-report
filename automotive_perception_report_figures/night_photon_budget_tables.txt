@@ -11,7 +11,7 @@
   clear / green = 1.85
   Gaussian green model (peak 0.70 at 530 nm, FWHM 94 nm), 400-700 nm: S_v = 2582 at 5500 K, 2193 at 3200 K (ratio 0.85)
 
-== Calibration checks of Eq. (14)
+== Calibration checks of Eq. (21)
   OmniVision 2.8 um pixel at 530 nm: 35258 photons per lx s on the pixel; measured 24,600 e- per lx s -> implied QE 0.70; per um^2: 3138 e- per lx s
   Sony SNR1s conditions (3200 K, 18% grey, F1.4, 1/60 s, no lens loss), 2.9 um G pixel, S_v scaled to 3200 K = 3158: at IMX585's 0.17 lx, n = 1.73 e-; SNR with sigma_r 0.6 = 1.20
   Canon 0.002 lux, f/1.2, 1/30 s, tau 0.9, rho 0.2: 0.58 detected photons per 6.39 um pixel per frame; at 0.0003 lux: 0.088
@@ -20,7 +20,7 @@
 == Table: photoelectrons per pixel per 30 ms frame, f/1.6, tau_o 0.8, rho = 0.05 (x10 for rho = 0.5)
   scene                                                       E_s (lux)    G 3um    C 3um  C 2.1um  SPAD 6.39
   Low-beam hotspot (IIHS 5 lux criterion, section A6.1)          5.0000   19.611   36.232   17.754    164.383
-  Glare-limited zone at 50 m, 350 cd (Eq. (8))                   0.1400    0.549    1.015    0.497      4.603
+  Glare-limited zone at 50 m, 350 cd (Eq. (15))                   0.1400    0.549    1.015    0.497      4.603
   Full moon, typical summer upper value                          0.1000    0.392    0.725    0.355      3.288
   Glare-limited zone at 100 m, 350 cd                            0.0350    0.137    0.254    0.124      1.151
   Half moon at zenith, maximum                                   0.0250    0.098    0.181    0.089      0.822
@@ -48,7 +48,7 @@
   checks: Panasonic 6 um VAPD 21 cps (room) -> 10,000 cps at 105 C chip (300 counts per 30 ms), i.e. a doubling every 9.0 K; ST 810 -> 6,923 cps from 60 to 80 C, every 6.5 K
   dark rate per um^2 at 60 C: CMOS 0.2-3.3 e-/s; SPADs: ST 10.17 um 7.8, Sony 10/6 um 2.2/8.3, Canon extrapolated 0.33-1.41 counts/s
 
-== Photon-counting gain G at equal pixel area (3 um) and sensitivity, Eq. (17)
+== Photon-counting gain G at equal pixel area (3 um) and sensitivity, Eq. (24)
    n per readout  no dark     25 C     60 C     85 C
             1.00     1.17     1.16     1.17     1.64
             0.36     1.41     1.40     1.35     1.82
@@ -59,7 +59,7 @@
   60 C: CMOS dark 0.270 e-, SPAD dark 0.185 (geometric mean of 12 K and 7 K); small-signal cap sqrt((sigma^2 + n_d)/n_dc) = 1.85
   85 C: CMOS dark 4.849 e-, SPAD dark 1.313 (geometric mean of 12 K and 7 K); small-signal cap sqrt((sigma^2 + n_d)/n_dc) = 1.99
 
-== Burst of K readouts with the same total signal N, Eq. (18), no dark
+== Burst of K readouts with the same total signal N, Eq. (25), no dark
   N =   0.1 e-: K=  1: G= 2.14  K= 10: G= 6.08  K= 30: G=10.44  K=100: G=19.00
   N =   1.0 e-: K=  1: G= 1.17  K= 10: G= 2.14  K= 30: G= 3.44  K=100: G= 6.08
   N =  10.0 e-: K=  1: G= 1.02  K= 10: G= 1.17  K= 30: G= 1.44  K=100: G= 2.14
@@ -85,7 +85,7 @@
   full moon, chip 60 C: Rose (SNR_M >= 5) CMOS 427 m, photon counting 518 m;  per-pixel SNR >= 1: CMOS 60 m, photon counting 76 m
   thermal: Johnson detection ceiling 0.92/(1.5 IFOV) = 937 m; per-pixel SNR dT/NETD = 20-100 for dT = 1-5 K
 
-== SPAD in daylight: count ceiling and avalanche power, Eq. (21)
+== SPAD in daylight: count ceiling and avalanche power, Eq. (28)
   100 klux, rho 0.2: image plane 1562 lux; a 6.39 um pixel would detect 4.38e+08 photons/s
   dead time 4.3 ns: paralyzable ceiling 1/(e tau_d) = 8.555e+07 /s
   dead time 6.0 ns: paralyzable ceiling 1/(e tau_d) = 6.131e+07 /s

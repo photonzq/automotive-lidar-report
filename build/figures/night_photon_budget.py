@@ -187,12 +187,12 @@ T2_SPAD = (12.0, 7.0)  # K per doubling: 12 K a slow case [E]; ST 7 K at high te
 
 
 def e_img(e_s, rho, tau=TAU_O, f_num=F_NUM):
-    """Eq. (13): image-plane illuminance (lux) of a Lambertian target of reflectance rho at scene illuminance e_s."""
+    """Eq. (20): image-plane illuminance (lux) of a Lambertian target of reflectance rho at scene illuminance e_s."""
     return tau * rho * e_s / (4.0 * f_num**2)
 
 
 def n_pe(e_s, rho, pitch, s_v, t=T_INT, tau=TAU_O, f_num=F_NUM):
-    """Eq. (14): photoelectrons (or detected photons) per pixel per readout."""
+    """Eq. (21): photoelectrons (or detected photons) per pixel per readout."""
     return s_v * e_img(e_s, rho, tau, f_num) * (pitch * 1e6) ** 2 * t
 
 
@@ -205,17 +205,17 @@ def snr_cnt(n, n_dc):
 
 
 def gain(n, n_d, n_dc, sig=SIGMA_R):
-    """Eq. (17)."""
+    """Eq. (24)."""
     return np.sqrt((n + n_d + sig**2) / (n + n_dc))
 
 
 def cmos_dark(temp, density60=DC60_MID, pitch=P_CMOS, t=T_INT):
-    """Dark electrons per readout of a CMOS pixel, Eq. (19) with 6 C doubling."""
+    """Dark electrons per readout of a CMOS pixel, Eq. (26) with 6 C doubling."""
     return density60 * (pitch * 1e6) ** 2 * 2 ** ((temp - 60.0) / T2_CMOS) * t
 
 
 def spad_dark(temp, t2, pitch=P_SPAD, t=T_INT):
-    """Dark counts per readout of a Canon-class SPAD pixel, scaled by area, Eq. (19)."""
+    """Dark counts per readout of a Canon-class SPAD pixel, scaled by area, Eq. (26)."""
     return DCR25_CANON * (pitch / P_SPAD) ** 2 * 2 ** ((temp - 25.0) / t2) * t
 
 
@@ -232,7 +232,7 @@ def n_required(snr, var_floor):
 # scenes: name, scene illuminance on the target (lux)
 SCENES = [
     ("Low-beam hotspot (IIHS 5 lux criterion, section A6.1)", 5.0),
-    ("Glare-limited zone at 50 m, 350 cd (Eq. (8))", 350.0 / 50.0**2),
+    ("Glare-limited zone at 50 m, 350 cd (Eq. (15))", 350.0 / 50.0**2),
     ("Full moon, typical summer upper value", 0.1),
     ("Glare-limited zone at 100 m, 350 cd", 350.0 / 100.0**2),
     ("Half moon at zenith, maximum", 0.025),
@@ -277,7 +277,7 @@ def tables() -> str:
     w(f"  Gaussian green model (peak 0.70 at 530 nm, FWHM 94 nm), 400-700 nm: S_v = {s_v_green_model(5500.0):.0f}"
       f" at 5500 K, {s_v_green_model(3200.0):.0f} at 3200 K (ratio {s_v_green_model(3200.0) / s_v_green_model(5500.0):.2f})")
     w("")
-    w("== Calibration checks of Eq. (14)")
+    w("== Calibration checks of Eq. (21)")
     ph = phi_lx_line(530.0) * (2.8e-6) ** 2
     w(f"  OmniVision 2.8 um pixel at 530 nm: {ph:.0f} photons per lx s on the pixel; measured 24,600 e- per lx s"
       f" -> implied QE {24600.0 / ph:.2f}; per um^2: {24600.0 / 2.8**2:.0f} e- per lx s")
@@ -326,7 +326,7 @@ def tables() -> str:
       f"{810.0 / 10.17**2:.1f}, Sony 10/6 um {220.0 / 100.0:.1f}/{300.0 / 36.0:.1f}, Canon extrapolated "
       f"{spad_dark(60.0, 12.0, t=1.0) / 6.39**2:.2f}-{spad_dark(60.0, 7.0, t=1.0) / 6.39**2:.2f} counts/s")
     w("")
-    w("== Photon-counting gain G at equal pixel area (3 um) and sensitivity, Eq. (17)")
+    w("== Photon-counting gain G at equal pixel area (3 um) and sensitivity, Eq. (24)")
     w(f"  {'n per readout':>14s} {'no dark':>8s} {'25 C':>8s} {'60 C':>8s} {'85 C':>8s}")
     for n in (1.0, 0.36, 0.1, 0.03, 0.01):
         row = [gain(n, 0.0, 0.0)] + [gain(n, cmos_dark(t), spad_dark_mid(t)) for t in (25.0, 60.0, 85.0)]
@@ -336,7 +336,7 @@ def tables() -> str:
         w(f"  {temp:.0f} C: CMOS dark {nd:.3f} e-, SPAD dark {ndc:.3f} (geometric mean of 12 K and 7 K);"
           f" small-signal cap sqrt((sigma^2 + n_d)/n_dc) = {np.sqrt((SIGMA_R**2 + nd) / ndc):.2f}")
     w("")
-    w("== Burst of K readouts with the same total signal N, Eq. (18), no dark")
+    w("== Burst of K readouts with the same total signal N, Eq. (25), no dark")
     for big_n in (0.1, 1.0, 10.0):
         w(f"  N = {big_n:5.1f} e-: " + "  ".join(
             f"K={k:3d}: G={np.sqrt((big_n + k * SIGMA_R**2) / big_n):5.2f}" for k in (1, 10, 30, 100)))
@@ -366,7 +366,7 @@ def tables() -> str:
     w("  thermal: Johnson detection ceiling 0.92/(1.5 IFOV) = "
       f"{0.92 / (1.5 * IFOV_TH):.0f} m; per-pixel SNR dT/NETD = {1.0 / NETD:.0f}-{5.0 / NETD:.0f} for dT = 1-5 K")
     w("")
-    w("== SPAD in daylight: count ceiling and avalanche power, Eq. (21)")
+    w("== SPAD in daylight: count ceiling and avalanche power, Eq. (28)")
     e_day, rho_day = 1.0e5, 0.2
     rate = S_V_SPAD * e_img(e_day, rho_day) * (P_SPAD * 1e6) ** 2
     w(f"  100 klux, rho 0.2: image plane {e_img(e_day, rho_day):.0f} lux; a 6.39 um pixel would detect"

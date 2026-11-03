@@ -107,7 +107,7 @@ def configure_plot_style() -> None:
 
 
 V = 105 / 3.6
-D_STOP = (166.0, 257.0)  # Eq. (11), section A6.1: 29.2 m/s, t_r = 1.5 s, a_b = 3.5 and 2.0 m/s^2 (section F6)
+D_STOP = (166.0, 257.0)  # Eq. (18), section A6.1: 29.2 m/s, t_r = 1.5 s, a_b = 3.5 and 2.0 m/s^2 (section F6)
 CAR_W, CAR_H = 1.8, 1.5
 LANE = 3.7
 

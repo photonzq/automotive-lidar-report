@@ -399,3 +399,21 @@ A passage in §A7.5 on what held back the near-infrared night-vision systems of 
 | File | Purpose | Status |
 |---|---|---|
 | `nir_night_vision_edit.py` | Applies the edit. Every replacement must match exactly once and the starting hash must match. Applied 2026-11-02, report sha256 before 420a84dce9f4, after 060d4463b086. | historical (applied) |
+
+## Thermistor materials and the NETD (§A4, Appendix 1, Appendix 2, 2026-11-02), `thermistor_2026-11/`
+
+A block in §A4, before the vacuum-packaging block, on where a microbolometer's NETD comes from, on VOx against a-Si (TCR, 1/f noise, smaller pixels, uniformity, deposition, licences and volume) and on why production thermistors avoid a phase transition. It adds seven numbered equations: the power a pixel absorbs per kelvin of scene temperature, the responsivity, the noise, the NETD, the thermal-fluctuation floor, the 1/f-limited NETD and the TCR of an activated film. It rests on Honeywell's US 6,322,670 B2 (cols. 1–4, Figs. 1–2), Tissot, *C. R. Physique* 4, 1083 (2003), Wang et al., *Nanomaterials* 15, 1316 (2025), Moreno et al. (*Bolometers*, InTech, 2012, Table 1), Lynred's SPIE DCS 2022 abstract, KIST and UNIST's US 10,371,571 B2 and Lee et al., *Science* 355, 371 (2017). The edit also restates the pixel-pitch block's sentence on 1/f noise and adds an Appendix 1 item and ten Appendix 2 sources. The new equations renumber Eqs. 4–187 as 11–194; the text follows through its labels, and the numbers that three figure scripts and `night_photon_budget_tables.txt` quote by hand were updated.
+
+| File | Purpose | Status |
+|---|---|---|
+| `thermistor_netd.py` | Integrates Planck's law for the 8–14 µm contrast $dM/dT$ at 295 and 300 K and prints the power a 12 µm pixel absorbs per kelvin of scene temperature behind an F/1 lens; the thermal-fluctuation NETD floor for $C=7\times10^{-11}$ J/K and time constants of 7–12 ms; the TCR from Honeywell's Arrhenius fit and from Moreno's activation energies; the TCR $1/T$ of a metal; the conductivity ratio of VOx and boron-doped a-Si at similar TCR; and the 1/f-limited NETD's scaling with pixel pitch. | current |
+| `thermistor_block_edit.py` | Applies the edit. Every anchor must match exactly once and the starting hash must match; the inserted text is normalised to the report's code points. Applied 2026-11-02, report sha256 before 060d4463b086, after eb23c872f4bb. | historical (applied) |
+| `renumber_figure_quotes.py` | Maps each "Eq. (N)" quoted by hand in `build/figures/night_photon_budget.py`, `fmcw_tof_system_budget.py`, `truck_long_range_sensing.py` and `automotive_perception_report_figures/night_photon_budget_tables.txt` to its label in the old report, and then to that label's number in the new one, using `build/eqlabels.py`. Applied 2026-11-02 to 18 quotes, for example 8 → 15, 11 → 18 and 115 → 122. | historical (applied) |
+
+## China's export controls on thermal imaging (§A3 item 6, Appendix 2, 2026-11-02), `export_controls_2026-11/`
+
+Two sub-bullets in §A3 item 6, next to the US controls. China's dual-use export control list (MOFCOM Announcement 2024 No. 51, consolidated text as republished in June 2026) has no counterpart of the Wassenaar sensor entries 6A002 and 6A003 and controls infrared imaging only as a drone payload (entry 9A012.c.1: 780–30,000 nm and an IFOV below 2.5 mrad, carried over from Announcement 2024 No. 31). It does control cooled-detector materials (entry 6C002), and the 2023 technology catalogue restricts the know-how for space-borne infrared imaging and for drone EO/IR payloads (items 70.4 and 71.4). The second sub-bullet records how US controls sent Chinese camera makers to French detectors in the 2000s (Dali's 2008 and Guide's 2010 prospectuses). Five Appendix 2 sources were added and the Dali entry extended.
+
+| File | Purpose | Status |
+|---|---|---|
+| `china_thermal_controls_edit.py` | Applies the edit. Every anchor must match exactly once and the starting hash must match. Applied 2026-11-02, report sha256 before eb23c872f4bb, after cd8e0a253e6f. | historical (applied) |
