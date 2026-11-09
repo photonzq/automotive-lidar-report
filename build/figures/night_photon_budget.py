@@ -5,15 +5,15 @@ Lambertian target imaged on axis. The script prints the numbers behind the secti
 to night_photon_budget_tables.txt and draws night_photon_budget.png / .pdf.
 
 Equations (numbered as in the report):
-  (13) image-plane illuminance          E_img = tau_o * rho * E_s / (4 F^2)
-  (14) photoelectrons per readout        n = S_v * E_img * A_pix * t,   S_v = eta * Phi_lx
-  (15) SNR per readout                   integrating: n / sqrt(n + n_d + sigma_r^2); counting: n / sqrt(n + n_dc)
-  (16) SNR over M readouts               SNR_M = sqrt(M) * SNR_1      (uniform target on a black background)
-  (17) photon-counting gain              G = sqrt((n + n_d + sigma_r^2) / (n + n_dc))
-  (18) burst of K readouts, total N      G_K = sqrt((N + K sigma_r^2) / N)      (no dark signal)
-  (19) dark rate versus temperature      D(T) = D(T0) * 2**((T - T0) / T_2)
-  (20) SPAD power at the count ceiling   P = N_px * Q (V_bd + V_ex) * r,   r <= 1 / (e tau_d)
-  (21) thermal SNR per pixel             SNR_th = dT / NETD
+  (20) image-plane illuminance          E_img = tau_o * rho * E_s / (4 F^2)
+  (21) photoelectrons per readout        n = S_v * E_img * A_pix * t,   S_v = eta * Phi_lx
+  (22) SNR per readout                   integrating: n / sqrt(n + n_d + sigma_r^2); counting: n / sqrt(n + n_dc)
+  (23) SNR over M readouts               SNR_M = sqrt(M) * SNR_1      (uniform target on a black background)
+  (24) photon-counting gain              G = sqrt((n + n_d + sigma_r^2) / (n + n_dc))
+  (25) burst of K readouts, total N      G_K = sqrt((N + K sigma_r^2) / N)      (no dark signal)
+  (26) dark rate versus temperature      D(T) = D(T0) * 2**((T - T0) / T_2)
+  (27) thermal SNR per pixel             SNR_th = dT / NETD
+  (28) SPAD power at the count ceiling   P = N_px * Q (V_bd + V_ex) * r,   r <= 1 / (e tau_d)
 
 S_v is a pixel's luminous sensitivity per unit area (photoelectrons per lux-second per um^2 at the sensor).
 The CMOS values are OmniVision's, computed from measured quantum efficiency for a 2.1 um automotive pixel

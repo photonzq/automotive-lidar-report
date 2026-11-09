@@ -1,0 +1,40 @@
+Range cost of colour channels on a SPAD lidar chip (section C5b, Figure C5b.1) [E]
+Inputs: colour band 100 nm, laser pass band 20 nm, kappa 1.00, x0 0.122
+Full sun: R/R0 = (a * live / m)^(1/4); night: R/R0 = a^(1/2)
+
+Layout                                                                 a      m   live    sun  night
+Separate ranging and colour channels, each with its own filter      1.00   1.00  1.000  1.000  1.000
+An added layer passing 90% at the laser line                        0.90   1.00  1.000  0.974  0.949
+Hybrid pixel, a quarter of the ranging area given to colour         0.75   1.00  1.000  0.931  0.866
+Hybrid pixel, half the ranging area given to colour                 0.50   1.00  1.000  0.841  0.707
+One SPAD ranging through a colour filter, mildest case              1.00   2.50  1.000  0.795  1.000
+The same, middle case                                               1.00   6.00  1.000  0.639  1.000
+The same, grey scene and visible-efficient SPAD                     1.00  11.00  1.000  0.549  1.000
+The middle case with the dead time of the C0 model                  1.00   6.00  0.543  0.549  1.000
+
+Checks (value, reference, error, tolerance):
+0.75^(1/4): value 0.930605, reference 0.9306, error +4.86e-06, tolerance 5e-05 -> pass
+0.75^(1/2): value 0.866025, reference 0.866, error +2.54e-05, tolerance 5e-05 -> pass
+6.0^(-1/4): value 0.638943, reference 0.6389, error +4.31e-05, tolerance 5e-05 -> pass
+m, mildest case: value 2.5, reference 2.5, error +0, tolerance 1e-09 -> pass
+m, middle case: value 6, reference 6, error +0, tolerance 1e-09 -> pass
+m, grey scene: value 11, reference 11, error +0, tolerance 1e-09 -> pass
+live fraction at x0 = 0.122 (C0 model 0.885): value 0.885148, reference 0.885, error +0.000148, tolerance 0.0005 -> pass
+live fraction at m = 6: value 0.480946, reference 0.481, error -5.39e-05, tolerance 0.0005 -> pass
+dead-time factor (l / l0)^(1/4), m = 6: value 0.858559, reference 0.8586, error -4.11e-05, tolerance 0.0005 -> pass
+Planck photon flux per nm, 550 nm over 865 nm, 5,800 K: value 1.129, reference 1.129, error -2.51e-06, tolerance 0.001 -> pass
+m = 6 range factor with kappa = 1.13 over kappa = 1: value 0.974797, reference 0.975, error -0.000203, tolerance 0.001 -> pass
+Si absorption coefficient at 865 nm (cm^-1): value 490.805, reference 491, error -0.195, tolerance 1 -> pass
+single-pass absorption, d = 3 um: value 0.136914, reference 0.137, error -8.56e-05, tolerance 0.001 -> pass
+single-pass absorption, d = 5 um: value 0.21761, reference 0.217, error +0.00061, tolerance 0.001 -> pass
+OS1 reflectance exponent ln(170/90) / ln 8: value 0.305846, reference 0.306, error -0.000154, tolerance 0.001 -> pass
+colour dynamic range 20 log10(2e6 / 3) (dB): value 116.478, reference 116.48, error -0.00183, tolerance 0.01 -> pass
+16-bit linear span 20 log10(2^16) (dB): value 96.3296, reference 96.33, error -0.000401, tolerance 0.01 -> pass
+column rate 1,024 x 40 Hz (1/s): value 40960, reference 40960, error +0, tolerance 0 -> pass
+dual-return point rate 128 x 40,960 x 2 (1/s): value 1.04858e+07, reference 1.04858e+07, error +0, tolerance 0 -> pass
+timing precision 2 sigma_R / c for 0.25 cm (ps): value 16.6782, reference 16.68, error -0.0018, tolerance 0.01 -> pass
+counts per sample at 2 Mlx, scaled from 10 at 3 lx: value 6.66667e+06, reference 6.67e+06, error -3.33e+03, tolerance 1e+04 -> pass
+count rate per channel at 2 Mlx, 97.7 us dwell (1/s): value 6.82667e+10, reference 6.83e+10, error -3.33e+07, tolerance 1e+08 -> pass
+colour count rate at 100 klx, 97.7 us dwell (1/s): value 3.41333e+09, reference 3.41e+09, error +3.33e+06, tolerance 1e+07 -> pass
+fill range of a 30 cm object in a 44/128 deg row (m): value 50.0036, reference 50, error +0.00359, tolerance 0.1 -> pass
+time offset of 5 column steps at 10,240 /s (ms): value 0.488281, reference 0.488, error +0.000281, tolerance 0.001 -> pass

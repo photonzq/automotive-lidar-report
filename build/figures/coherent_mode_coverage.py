@@ -122,7 +122,7 @@ def export_figure(fig: plt.Figure, stem: Path) -> None:
 
 # ---------------------------------------------------------------- physics
 LAM_COH = 1550e-9  # m
-LAM_TOF = 940e-9  # m: the 940 nm SPAD ToF model of sections C0 subsection 10 and C7a
+LAM_TOF = 940e-9  # m: the 940 nm SPAD ToF model of section C0 (subsections 4.2-5.1) and section C7a
 DEG = np.pi / 180
 W0_OVER_D = 0.45  # Gaussian waist / hard-aperture diameter
 TRUNC = 1 - np.exp(-2 * (0.5 / W0_OVER_D) ** 2)  # one-way truncation efficiency

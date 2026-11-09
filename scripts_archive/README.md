@@ -419,3 +419,29 @@ Two sub-bullets in §A3 item 6, next to the US controls. China's dual-use export
 | `china_thermal_controls_edit.py` | Applies the edit. Every anchor must match exactly once and the starting hash must match. Applied 2026-11-02, report sha256 before eb23c872f4bb, after cd8e0a253e6f. | historical (applied) |
 
 A correction made by hand the same day (report sha256 cd8e0a253e6f → 1b934622ae62) changed "controls infrared imaging equipment only as a drone payload" to "names", added that imaging sensors otherwise appear only as target-detection electronics in entry 6A108.d (p. 87), an entry related to the delivery vehicles of weapons of mass destruction by the list's general note 3, and extended the page references of the list's Appendix 2 entry.
+
+## Colour lidar on the SPAD chip and its cost in range (§C5b, Appendix 1, 2026-11-08), `colour_lidar_2026-11/`
+
+A new subsection §C5b between §C5a and §C6. It covers Ouster's SPAD chips from the first generation to the L4 (the L3 made by STMicroelectronics with a 10 µm pitch, hybrid bonding, deep trenches and a diffraction grating, per TechInsights), what "colour lidar" denotes, and the colour products of Ouster (Rev8 with Fujifilm filter materials; the row layout of US 10,739,189 B2), Hesai (Picasso), RoboSense (Active Camera) and Huawei (Limera). It also covers what the Rev8 OS1 datasheet's colour figures imply, and what colour channels cost in range. Two numbered equations give the range factor in full sun and at night and the background multiplier when one SPAD ranges through a colour filter; a table of layouts and Figure C5b.1 apply them. It rests on the OS1 Rev7 (v3.1) and Rev8 (v4.0) datasheets, Ouster's and Hesai's releases, TechInsights' L3 summaries, the patent, DxOMark's SMI glossary and Ingle, Velten and Gupta (CVPR 2019). The edit also points to §C5b from the scope list, the §C0 relation table, §C3, §C4b, §C5, §C10.6, §E10.4, §E11.2 and §F5, adds two Appendix 1 items, and lists the new figure script in `build/README.md`. The two new equations, (98) and (99), renumber those after them by two, and the one number quoted by hand in a figure script was updated (`fmcw_tof_system_budget.py`, Eq. (122) → (124)). The figure script is `build/figures/colour_lidar_range_cost.py`; it writes Figure C5b.1 and `colour_lidar_range_cost_tables.txt`, which includes 25 plain checks of the section's hand values.
+
+| File | Purpose | Status |
+|---|---|---|
+| `colour_lidar_edit.py` | Applies the edit to the report, `build/README.md` and `build/figures/fmcw_tof_system_budget.py`. Every report anchor must match exactly once, the figure script's quote exactly twice, and the starting hash must match; the inserted text is normalised to the report's code points. Applied 2026-11-08, report sha256 before 1b934622ae62, after 0ee10efd5421. | historical (applied) |
+| `c5b_parse_check.py` | Converts §C5b with the build's own math preprocessing and pandoc options (no PDF) and counts pandoc's warnings, the tables, the math elements and any MathML errors. Run 2026-11-08: no warnings, 3 tables, 111 math elements, no errors. | current |
+| `c5b_mean_bracket_fix.py` | Writes the mean colour error of the SMI bullet as $\langle\Delta E^*_{ab}\rangle$ instead of an overline, which the built PDF set over the E alone. Applied 2026-11-08, report sha256 before 0ee10efd5421, after c7e7b441a0bc. | historical (applied) |
+
+## Equation and §C0 subsection numbers quoted in the figure scripts (2026-11-08), `figure_refs_2026-11/`
+
+The figure scripts quote some equation and section numbers by hand, and `build/eqlabels.py --figures` checks only the "Eq. (N)" form. Two older kinds of quote had gone stale. The docstring of `night_photon_budget.py` still listed §A7's equations as (13)–(21), the numbers they had when §A7 was written. They are now (20)–(28), and the thermal SNR (27) comes before the SPAD power (28). Four files still cited §C0 subsections from before the restructure of 2026-10-12 ("subsection 10", "10.3", "10.4", "10.6" and "8"): `link_budget_scaling.py`, `fmcw_tof_system_budget.py`, `coherent_mode_coverage.py` and the header of `link_budget_scaling_tables.txt`. These were mapped by content with the old-to-new table of the restructure section above:
+- the bright-sun background and live fraction go to 4.2;
+- the detection statistics, the false-alarm rule and the 120 photoelectrons go to 4.3;
+- the 21.7-count detection level goes to 4.3 and 5.1;
+- the margin at short range goes to 5.4;
+- the rain extinction law goes to 3.3;
+- the link-budget model as a whole goes to 3.1–6.1.
+
+Only comments, docstrings and one printed header line changed, so no figure was redrawn.
+
+| File | Purpose | Status |
+|---|---|---|
+| `figure_refs_fix.py` | Applies the corrections. Each anchor must occur the stated number of times, and the docstring lines are renumbered by the equation they describe. Applied 2026-11-08. | historical (applied) |

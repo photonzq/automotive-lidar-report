@@ -24,6 +24,7 @@ This folder holds everything needed to rebuild the report's PDF and every figure
 | `lidar_equity_hype_cycle.py` (reads `lidar_equity_prices_weekly.csv`) | `lidar_equity_hype_cycle.png` | Figure C3a, §C3a subsection 5 |
 | `ge_coherent_receiver.py` | `ge_coherent_receiver.png` | Figure C4c, §C4c subsection 4 |
 | `mechanical_scanning_limits.py` | `mechanical_scanning_limits.png` | Figure C4d, §C4d subsection 5 |
+| `colour_lidar_range_cost.py` | `colour_lidar_range_cost.png` | Figure C5b.1, §C5b |
 | `fmcw_tof_system_budget.py` | `fmcw_tof_system_budget.png` | Figure C7a, §C7a |
 | `coherent_mode_coverage.py` | `coherent_mode_coverage_mesh.png`, `coherent_mode_coverage_scaling.png` | §C10.3b |
 | `nuscenes_matching_localization.py` | `nuscenes_matching_localization.png` | Figure E11.1, §E11.1 |

@@ -23,7 +23,7 @@ Model (see the note for the reasoning and for what each parameter stands for):
      (21.7 counts in 2026), with the low and high cases scaled alike.  FMCW (4 speckle
      looks, peak found in both the up- and the down-ramp, two-stage search) ideally
      needs 88.5 photoelectrons; a x1.36 margin gives 120, i.e. 30 per look (report
-     section C0 subsection 10.3).
+     section C0 subsection 4.3).
      The FMCW sample is sparse: its 1/e^2 footprint covers about 2 % of a 0.05 deg
      grid cell at 200 m.  The comparison is per *sample*, not per equal coverage.
 2. Laser electrical energy = E_opt / wall-plug efficiency (source + driver/SOA).
@@ -35,7 +35,7 @@ Model (see the note for the reasoning and for what each parameter stands for):
      analog power (TIA, LO/bias, drivers) x T_dwell.  N_s is set by the
      time-bandwidth product ~ 5 R_max / dR (2.5 x the beat frequency over the up and
      down chirps), independent of how many photons return.
-   - FMCW dwell (report section C7b, Eq. (122)): T_dwell = T_int + 2 tau, where
+   - FMCW dwell (report section C7b, Eq. (124)): T_dwell = T_int + 2 tau, where
      tau = 2 R / c is the round trip at the 200 m design range.  Each ramp starts
      with tau of discarded beat, so a channel stays on a point 2 tau longer than it
      integrates.  The central case is ungated: the laser keeps emitting during the
@@ -228,11 +228,11 @@ FMCW = {
 P_OVERHEAD = 3.0  # W: scanner motor, system SoC, heaters, power conversion (both types)
 BG_PER_PDE = 2.965e8 / 0.3  # counts/s per unit PDE, rho = 0.9 full-sun scene, 0.05 x 0.05 deg pixel, section C6(d)
 N_SPAD, TAU_DEAD = 9, 6e-9  # 3x3 macro-pixel and SPAD dead time (s), section C6(d)
-P_FA_BIN = 1e-3 / 2000  # section C0 subsection 10.3: 1e-3 false points per point over 2,000 bins of 1 ns
+P_FA_BIN = 1e-3 / 2000  # section C0 subsection 4.3: 1e-3 false points per point over 2,000 bins of 1 ns
 
 
 def n_ideal(b: float) -> float:
-    """Ideal photon-counting requirement (section C0 subsection 10.3): with Poisson background b per bin, the
+    """Ideal photon-counting requirement (section C0 subsection 4.3): with Poisson background b per bin, the
     threshold is the smallest count whose tail is at most P_FA_BIN, and 90 % detection fixes the signal."""
     n = 1
     while poisson.sf(n - 1, b) > P_FA_BIN:
@@ -276,7 +276,7 @@ def fmcw_digitization(s: dict) -> dict:
     f_s = 1.25 * 2 * (f_beat + f_dopp)  # real sampling with 25 % margin
     t_int = 2 * s["t_chirp"]  # useful integration: up + down chirp
     tau = 2 * R_TARGET / C  # round trip at the design range, discarded at the start of each ramp
-    t_dwell = t_int + 2 * tau  # section C7b, Eq. (122)
+    t_dwell = t_int + 2 * tau  # section C7b, Eq. (124)
     n_samples = f_s * t_int  # only the useful windows are digitized
     return dict(f_beat=f_beat, f_dopp=f_dopp, f_s=f_s, t_dwell=t_dwell, t_int=t_int, tau=tau,
                 n_samples=n_samples, range_res=C / (2 * s["bandwidth"]),

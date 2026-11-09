@@ -1,7 +1,7 @@
 """Link budget of automotive lidar: loss versus range, the detection level, detection
 statistics, and how maximum range scales with transmitted energy per point.
 
-Companion to section C0 subsection 10 of automotive_perception_report_2026-09-27.md.
+Companion to section C0 (subsections 3.1-6.1) of automotive_perception_report_2026-09-27.md.
 All outputs are engineering estimates [E] for an extended Lambertian target.
 
 Model
@@ -221,13 +221,13 @@ def loss_coh_alpha(R, D, lam, alpha, rho=RHO):
 # Receiver cases for the detection level L_det = n_req E_ph / (eta E_tx)
 CASES = {
     # SPAD: optics x PDE x the bright-sun live fraction 0.885 (1.83e8 counts/s over nine SPADs, 6 ns paralyzable dead
-    # time, 0.05 x 0.05 deg macro-pixel, section C0 subsection 10.3): a SPAD that is dead when the echo arrives misses
+    # time, 0.05 x 0.05 deg macro-pixel, section C0 subsection 4.2): a SPAD that is dead when the echo arrives misses
     # it, as it misses sunlight. n_req = 21.7 is the x1.45 margin over the ideal 15.0 counts at 1.62 counts per bin.
     "spad940": dict(label="SPAD dToF, 940 nm", lam=940e-9, n_req=21.7, eta=0.5 * 0.37 * np.exp(-1.83e8 / 9 * 6e-9),
                     e_tx=0.10e-6),
     "apd1550": dict(label="Linear APD ToF, 1,550 nm", lam=1550e-9, n_req=890.0, eta=0.5 * 0.8, e_tx=2.0e-6),
     # FMCW: four looks (two polarizations x two spatial modes), each collecting A_mode; the
-    # 120 photoelectrons a point needs (section C0 subsection 10.3) are 30 per look, so the
+    # 120 photoelectrons a point needs (section C0 subsection 4.3) are 30 per look, so the
     # detection level of one look, with n_req = 30, is that of the whole receiver.
     "fmcw1550": dict(label="FMCW, per look", lam=1550e-9, n_req=30.0, eta=0.25, e_tx=0.30e-6),
 }
@@ -258,7 +258,7 @@ N_BINS_TOF = 2000  # 1 ns histogram bins over 0-300 m
 N_B, N_W = 2450, 1800  # FMCW up-ramp search bins and down-ramp window bins (200 kHz bins)
 P_FA = P_FA_PT / N_BINS_TOF  # per-bin false-alarm probability of the ToF histogram
 P_RAMP = np.sqrt(P_FA_PT / (N_B * N_W))  # per-bin false-alarm probability in each FMCW ramp
-B_SUN = 1.62  # ToF bright-sun background per 1 ns bin (section C0 subsection 10.3): 1.83e8 /s x 1 ns x 10 shots x 0.885
+B_SUN = 1.62  # ToF bright-sun background per 1 ns bin (section C0 subsection 4.2): 1.83e8 /s x 1 ns x 10 shots x 0.885
 
 
 def pd_poisson(s, b, p_fa=P_FA):
@@ -404,7 +404,7 @@ def fig_detection(out_stem: Path, lines: list) -> None:
                      f"n(P_D=0.9) = {s_for_pd(fn, 0.9):.1f}, P_D(120) = {fn(120.0):.3f}")
     ax.axhline(0.9, color=COLORS["annotation"], lw=REF_LW, ls=DASH, zorder=0)
     ax.text(1.1, 0.915, "$P_D=0.9$", color=COLORS["annotation"], va="bottom")
-    n_tof = CASES["spad940"]["n_req"]  # the ToF model's count (21.7, section C0 subsection 10.4)
+    n_tof = CASES["spad940"]["n_req"]  # the ToF model's count (21.7, section C0 subsections 4.3 and 5.1)
     for n_mark in (n_tof, 120):  # stop below the P_D = 0.9 labels
         ax.axvline(n_mark, ymax=0.8, color=COLORS["annotation"], lw=REF_LW, ls=":", zorder=0)
     ax.text(n_tof * 1.04, 0.02, "ToF\nmodel", color=COLORS["annotation"], ha="left", va="bottom")
@@ -491,7 +491,7 @@ def fig_scaling(out_stem: Path, lines: list) -> None:
                      f"{e_env / e_s:.2f}; SPAD with the same D_opt {e_s_dopt * 1e9:.1f} nJ, ratio {e_env / e_s_dopt:.2f}")
 
 
-# ---------------------------------------------------------------- margin, fixed losses, fog and rain (C0 subsection 10.6)
+# ---------------------------------------------------------------- margin, fixed losses, fog and rain (C0 subsection 5.4)
 R_DESIGN = 200.0  # every design below reaches 200 m on a 10% target in clear air
 TOF_STYLE = dict(color=COLORS["warm_accent"], ls=DASH, zorder=4)  # ToF: the reference, warm and dashed, drawn on top
 MARGIN_DESIGNS = [
@@ -513,7 +513,7 @@ RAIN_FOR_FILM = 25.0  # mm/h ("heavy" rain) for panel (d)
 
 
 def rain_alpha(rate_mm_h: float) -> float:
-    """Rain extinction (1/m) from the Carbonneau free-space-optics law, 1.076 R^0.67 dB/km (subsection 8)."""
+    """Rain extinction (1/m) from the Carbonneau free-space-optics law, 1.076 R^0.67 dB/km (section C0 subsection 3.3)."""
     gamma_db_per_km = 1.076 * rate_mm_h**0.67
     return gamma_db_per_km / (10.0 * np.log10(np.e)) / 1e3
 
@@ -720,7 +720,7 @@ def main() -> None:
     configure_plot_style()
     here = OUT_DIR
     lines = [
-        "Link budget tables (companion to C0 subsection 10) [E]",
+        "Link budget tables (companion to C0 subsections 3.1-6.1) [E]",
         f"rho = {RHO}, w0 = {W0_OVER_D} D, truncation t = {T_TRUNC:.4f} (t^2 = {T_TRUNC ** 2:.4f}), {P_FA_PT:g} false points per point",
     ]
     for lam in (905e-9, 940e-9, 1310e-9, 1550e-9):

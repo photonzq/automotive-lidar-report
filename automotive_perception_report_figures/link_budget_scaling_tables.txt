@@ -1,4 +1,4 @@
-Link budget tables (companion to C0 subsection 10) [E]
+Link budget tables (companion to C0 subsections 3.1-6.1) [E]
 rho = 0.1, w0 = 0.45 D, truncation t = 0.9153 (t^2 = 0.8379), 0.001 false points per point
 clear air (V = 23 km) alpha(905 nm) = 0.0890 /km; two-way loss at 200 m = 0.155 dB, at 500 m = 0.387 dB; E_ph = 2.1950e-19 J
 clear air (V = 23 km) alpha(940 nm) = 0.0847 /km; two-way loss at 200 m = 0.147 dB, at 500 m = 0.368 dB; E_ph = 2.1132e-19 J
