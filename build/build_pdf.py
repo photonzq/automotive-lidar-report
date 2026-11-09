@@ -368,7 +368,8 @@ if len(placed) == len(figure_links):
         if sp is None:
             continue
         page = doc[pno]
-        pos = pymupdf.Point(max(4.0, rect.x0 - 24.0), rect.y0 + 2.0)
+        # in the left page margin (13 mm, report.css) at the figure's top, also for a centred or right-floating figure
+        pos = pymupdf.Point(max(4.0, min(rect.x0, 13 / 25.4 * 72) - 24.0), rect.y0 + 2.0)
         annot = page.add_file_annot(pos, sp.read_bytes(), sp.name, ufilename=sp.name,
                                     desc=f"Script that draws {Path(png).name} (build/figures/{sp.name})",
                                     icon="Paperclip")

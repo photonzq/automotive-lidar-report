@@ -707,12 +707,15 @@ The reference camera has $\tau_o=0.8$ (0.9 for the lens and 0.9 for the windshie
 
 **Canon's 0.002 lux in photons.** Canon's 3.2-megapixel SPAD sensor produced monochrome video at 0.002 lux with an f/1.2 lens and a 1/30 s exposure, and Canon describes subjects as identifiable at 0.0003 lux [P]. By Eqs. \eqref{eq:image-plane-illuminance}–\eqref{eq:night-photoelectrons-per-pixel}, with $\tau_o=0.9$, 0.002 lux on a scene of 20–50% reflectance gives 0.6–1.5 detected photons per pixel per frame, and 0.0003 lux gives 0.09–0.22 [E]. The image is usable at well under one photon per pixel because the sensor adds no read noise and a viewer averages over many pixels. The photons themselves come from the large pixel and the fast lens.
 
+::: narrow
 ![Photoelectrons per pixel per frame versus scene illuminance for a CMOS and a SPAD pixel, with noise floors and night illuminance levels](automotive_perception_report_figures/night_photon_budget.png)
 
 *Figure A7.1.* Photoelectrons per pixel per 30 ms frame (Eq. \eqref{eq:night-photoelectrons-per-pixel}) versus the scene illuminance on the target. The data curves are a 3 µm clear CMOS pixel on dark ($\rho=0.05$, solid blue) and light ($\rho=0.5$, dashed blue) clothing, and a 6.39 µm SPAD pixel of the same sensitivity on dark clothing (solid red), with $F_\#=1.6$ and $\tau_o=0.8$.
 - *Shaded bands:* a moonless rural sky (0.6–3 mlux) and a full moon (50–320 mlux) (Hänel et al. 2018). *Vertical dashed lines:* the low beam's glare-limited zone (350 cd) at 150 m and 50 m, and the 5 lux hotspot criterion (§A6.1).
 - *Horizontal lines:* the CMOS pixel's noise floor per readout at 60 °C, read-noise variance plus dark electrons (grey, dashed), and the SPAD pixel's dark counts per frame at 60 °C (red, dashed) and 25 °C (red, dash-dotted) (§A7.2).
 - Where a data curve lies below its sensor's noise floor, one frame of one pixel cannot show the target; a detector must then add up many pixels or frames (Eq. \eqref{eq:snr-summed-readouts}).
+
+:::
 
 *Code.* The numbers in §A7's tables and in Figure A7.1 are computed by `build/figures/night_photon_budget.py`, which also prints the calibration checks above and writes everything to `night_photon_budget_tables.txt`.
 
@@ -2474,11 +2477,14 @@ The table gives both receivers' requirements under this rule. In the FMCW rows, 
 - **Worked check, one look:** in Eq. \eqref{eq:fmcw-two-ramp-detection} the common fade dominates. Both ramps cross their thresholds roughly when the speckle gain exceeds $2x/\bar n$, which for one look happens with probability $e^{-2x/\bar n}$. Setting that to 0.9 gives $\bar n\approx2\times11.1/0.105=211$; the noise in each ramp raises the exact value to 259.
 - **More looks:** eight looks need 82.4 photoelectrons. The requirement approaches the steady target's 39.1 only slowly as the number of looks grows.
 
+::: side
 ![Detection probability versus mean signal photoelectrons for photon counting and coherent detection](automotive_perception_report_figures/link_budget_detection_statistics.png)
 
 *Figure C0.2.* Detection probability versus mean signal photoelectrons per point, with at most $10^{-3}$ false points per point over a 0–300 m search.
 - Solid: photon counting at night and in bright sun (2,000 bins, Eq. \eqref{eq:poisson-detection-probability}). Dashed: FMCW with the echo's peak found in both chirp ramps (Eq. \eqref{eq:fmcw-two-ramp-detection}), for a steady target, four summed looks and one look.
 - Dots and numbers mark $P_D=0.9$. The dotted verticals are the photoelectron counts used in the §C7a model: 21.7 for ToF (subsection 5.1) and 120 for FMCW (four looks).
+
+:::
 
 **Reading Figure C0.2** [E]:
 - **ToF:** the model's 21.7 counts keep a ×1.45 implementation margin over the 15.0 that an ideal counter needs in bright sun ($n_{\rm req}=1.45\times14.98=21.7$). The dead time is not part of this margin, because it is counted in the SPAD's efficiency (the live fraction of subsection 4.2, §C7a(a)). The margin covers a return spread over about two bins, which needs 18.1 counts summed over both (×1.21: the two bins hold $2b=3.24$ background counts, which raises the threshold to 16), and leaves ×1.20 for pile-up distortion (§C6) and other implementation losses. In the model's high case, a fully sunlit scene of reflectance 0.9 ($r_{\rm bg}=3.66\times10^{8}$ s⁻¹, live fraction 0.784, $b=2.87$, $n_{\rm th}=15$), the ideal counter needs 17.3.
@@ -3516,7 +3522,7 @@ This subsection asks how the same cycle played out in China, where lidar did rea
 
 This subsection asks how the boom and bust showed up in the share prices of the lidar companies that are still listed. A drawdown is the percentage fall of a share price from its highest earlier value (defined exactly below). The listed survivors fell 84–99.9% from their peaks at the worst point (the deepest drawdowns in the table below run from Hesai's −84% to AEye's −99.9%), and the chart still understates the bust. The first of three reasons given below is that the companies that failed outright are no longer listed and so have no price series.
 
-![Listed lidar companies: share price relative to listing, and drawdown from prior peak](automotive_perception_report_figures/lidar_equity_hype_cycle.png)
+![Listed lidar companies: share price relative to listing, and drawdown from prior peak](automotive_perception_report_figures/lidar_equity_hype_cycle.png){.tall}
 
 *Figure C3a.*
 - *(a)* Weekly split-adjusted share price relative to listing. Split-adjusted means past prices are rescaled by each later reverse-split ratio, so that they compare with today's shares. The reference is the pre-merger shell (≈\$10 trust value) for SPACs, and the first post-listing week for IPOs (initial public offerings, conventional first listings on an exchange); MicroVision is referenced to Jan 2020.
@@ -9262,6 +9268,7 @@ Sources: [Fusion4CA, arXiv 2603.05305 (Mar 2026)](https://arxiv.org/abs/2603.053
    - A standalone camera detector scores ≈42 mAP, so the zero reflects a structural dependency of the fused design, not the information content of the images.
 4. **The failure is out of distribution**, meaning the network meets an input unlike anything in its training data. An all-zero lidar feature map (the lidar branch's output grid) never occurs in training. Robust training and routing restore a 33–41 mAP fallback (findings 2–3).
 
+::: side
 ![nuScenes centre-distance matching: fraction of objects matched vs camera depth error](automotive_perception_report_figures/nuscenes_matching_localization.png)
 
 *Figure E11.1.*
@@ -9269,6 +9276,8 @@ Sources: [Fusion4CA, arXiv 2603.05305 (Mar 2026)](https://arxiv.org/abs/2603.053
 - *Assumptions:* objects uniform over 5–50 m, 0.15 m lateral error, 0.1 m error floor, otherwise perfect detection and classification.
 - *Dotted line:* the observed camera/lidar mAP ratio (BEVFormer / CenterPoint, BEVFusion Table I).
 - *Script:* `build/figures/nuscenes_matching_localization.py` [E].
+
+:::
 
 **The partial-lidar results expose the camera pathway directly.**
 - With lidar restricted to the front ±60°, the fused model scores **20.2 mAP**. That is ≈30% of its clean 66.9 ($20.2/66.9\approx0.30$), close to what the front third of objects alone would give (±60° is 120° of 360°). If objects were spread evenly in azimuth and those in the front third were detected at clean accuracy, the score would be about $66.9\times120/360\approx22.3$ mAP.
@@ -10899,3 +10908,14 @@ These gaps matter for two reasons. The Western pipeline in §F3 and the robotaxi
 - HiEV via 36Kr, further NIO phone-camera cases (17 Mar 2023): https://www.36kr.com/p/2175234507616520
 - The Drive, Volvo EX90 lidar and phone cameras, with Volvo's statements (12 May 2025): https://www.thedrive.com/news/volvo-ex90s-lidar-sensor-will-fry-your-phones-camera
 - Lumispot, 1550 nm pulse-mode fibre laser for lidar (1.4 kW, 3 ns, 500 kHz, 2 W): https://lumispot-tech.com/1550nm-pulsed-fiber-laser-product
+
+<style>
+img.tall { width: 60%; }
+div.side { float: right; width: 52%; margin: 0.15em 0 0.8em 1.4em; break-inside: avoid; }
+div.side img, div.half img, div.narrow img { width: 100%; margin: 0 0 0.3em 0; }
+div.side p, div.half p, div.narrow p { margin: 0.2em 0; }
+div.pair { display: flex; justify-content: space-between; align-items: flex-start; break-inside: avoid; }
+div.half { width: 48%; }
+div.narrow { width: 65%; margin: 0.6em auto; break-inside: avoid; }
+img, table, .eqn, h1, h2, h3, h4, div.pair, div.narrow { clear: both; }
+</style>
