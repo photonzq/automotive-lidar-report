@@ -446,6 +446,23 @@ Only comments, docstrings and one printed header line changed, so no figure was 
 |---|---|---|
 | `figure_refs_fix.py` | Applies the corrections. Each anchor must occur the stated number of times, and the docstring lines are renumbered by the equation they describe. Applied 2026-11-08. | historical (applied) |
 
+## Hesai's Q3 2026 results: colour-ETX status and design wins (§B2 note 5, §C3, §C5b, Appendix 1, Appendix 2, 2026-11-10), `hesai_q3_2026-11/`
+
+These are updates from Hesai's Q3 2026 results and earnings call (10 Nov 2026), read with its Q1 and Q2 2026 releases and the Great Wall nomination.
+- §C5b gets a passage on where the colour ETX stands. KargoBot gave it an exclusive design win in May. In August the Picasso SoC was ready for production, and the colour ETX was in customer validation, with requests for information and quotation. On the Q3 call it was still in customer validation. In November Hesai announced its colour-lidar partnership with JD.com.
+- The same passage notes that the car wins do not say whether colour is used: Great Wall's ETX nomination (July), and the five ET-series main-lidar wins with an order book above 1 million units (Q3).
+- Note 5 of §B2 records the call's statement that Mercedes development and validation follow Mercedes' timeline.
+- The §C3 route table adds the January–September 2026 shipments, the September share and the ET-series wins.
+- Appendix 1 updates the Picasso item, and adds Cadillac's ET-series win (market not named) to the GM item.
+- Appendix 2 lists the Q3 results and the call transcript.
+
+No display equations were added.
+
+| File | Purpose | Status |
+|---|---|---|
+| `hesai_q3_edit.py` | Applies the edit. Every anchor must match exactly once and the starting hash must match. Applied 2026-11-10, report sha256 before 02b561b856cb, after b1201f38bb43. | historical (applied) |
+| `full_parse_check.py` | Converts the whole report with the build's own math preprocessing and pandoc options (no PDF) and counts pandoc's warnings, the math elements and any MathML errors. Run 2026-11-10: no warnings, 7,262 math elements, no errors. | current |
+
 ## Figure layout of the PDF and web page (Figures A7.1, C0.2, C3a and E11.1), `figure_layout_2026-11/`
 
 Small single-panel figures are no longer stretched to the full text width, and the one tall figure no longer fills a page. Figure C3a, drawn 7.12 × 8.02 in, is shown at 60 % of the text width (class `tall` on its image line). Figures C0.2 and E11.1, single panels drawn 4.72 and 4.32 in wide with enough text after them, float to the right at 52 % of the text width together with their caption blocks (fenced div `side`). Figure A7.1, drawn 4.32 in wide with a heading 216 characters after it, is centred at 65 % (div `narrow`). The other ten figures, drawn 6.4–10.4 in wide and wider than tall, stay at full width. A style block at the end of the report defines the classes and keeps headings, tables, display equations and full-width figures clear of a float. `build/build_pdf.py` now puts every figure's paperclip in the left page margin, so that it does not land on the text beside a floating figure.
