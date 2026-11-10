@@ -446,7 +446,7 @@ Only comments, docstrings and one printed header line changed, so no figure was 
 |---|---|---|
 | `figure_refs_fix.py` | Applies the corrections. Each anchor must occur the stated number of times, and the docstring lines are renumbered by the equation they describe. Applied 2026-11-08. | historical (applied) |
 
-## Hesai's Q3 2026 results: colour-ETX status and design wins (§B2 note 5, §C3, §C5b, Appendix 1, Appendix 2, 2026-11-10), `hesai_q3_2026-11/`
+## Hesai's Q3 2026 results: colour-ETX status, design wins and revenue per unit (§B1, §B2 note 5, §B8, §C3, §C5b, §F2, Appendix 1, Appendix 2, 2026-11-10), `hesai_q3_2026-11/`
 
 These are updates from Hesai's Q3 2026 results and earnings call (10 Nov 2026), read with its Q1 and Q2 2026 releases and the Great Wall nomination.
 - §C5b gets a passage on where the colour ETX stands. KargoBot gave it an exclusive design win in May. In August the Picasso SoC was ready for production, and the colour ETX was in customer validation, with requests for information and quotation. On the Q3 call it was still in customer validation. In November Hesai announced its colour-lidar partnership with JD.com.
@@ -461,7 +461,20 @@ No display equations were added.
 | File | Purpose | Status |
 |---|---|---|
 | `hesai_q3_edit.py` | Applies the edit. Every anchor must match exactly once and the starting hash must match. Applied 2026-11-10, report sha256 before 02b561b856cb, after b1201f38bb43. | historical (applied) |
-| `full_parse_check.py` | Converts the whole report with the build's own math preprocessing and pandoc options (no PDF) and counts pandoc's warnings, the math elements and any MathML errors. Run 2026-11-10: no warnings, 7,262 math elements, no errors. | current |
+| `full_parse_check.py` | Converts the whole report with the build's own math preprocessing and pandoc options (no PDF) and counts pandoc's warnings, the math elements and any MathML errors. Run 2026-11-10: no warnings, 7,262 math elements, no errors; after the revenue edit 7,271, no errors. | current |
+
+A second edit the same day dealt with revenue.
+- **Revenue per unit.** §B1's revenue per unit now uses lidar revenue only, since Hesai has reported its actuators and Kosmo as a separate segment since Q2 2026. That gives RMB 977.8 M / 729,673 = RMB 1,340 in Q3, against 815.9 M / 628,275 = RMB 1,299 in Q2.
+- **Car and robot lidars apart.** On the Q3 call Hesai said that businesses other than car lidar brought in more than half of revenue, a statement confirmed in two transcripts. A new bullet uses it to bound car lidars below RMB 837 a unit and robotics lidars above RMB 4,840.
+- **Hesai's 2026 volume.** A second new bullet records the Q3 revenue shortfall against the August guidance. It also shows that the Q4 guidance implies about 2.5–2.6 M lidars for 2026, against the 3.0–3.5 M target, which Hesai did not restate.
+- **Elsewhere.** The §B1 table row, §B8's robotics table and §F2's "ASP path" take the Q3 figures, and Appendix 2 adds the Investing.com transcript.
+- **Follow-up fixes.** Two small fixes followed. Dollar amounts are converted at the report's RMB 7.1 per dollar, as §B1's table note states, rather than the release's 6.7045. Two rounded differences take an approximate sign.
+
+| File | Purpose | Status |
+|---|---|---|
+| `hesai_q3_revenue_edit.py` | Applies the revenue edit. Every anchor must match exactly once and the starting hash must match. Applied 2026-11-10, report sha256 before b1201f38bb43, after 81b778c54e0c. | historical (applied) |
+| `hesai_q3_dollar_fix.py` | Converts the new per-unit figures at RMB 7.1 per dollar (about \$190, \$120 and \$680) and says that the car-lidar bound covers main and blind-spot units together. Applied 2026-11-10, report sha256 before 81b778c54e0c, after 8b1a95078261. | historical (applied) |
+| `hesai_q3_rounding_fix.py` | Writes 1,100 − 164.6 and 1,150 − 64.6 with an approximate sign (935.4 and 1,085.4 are shown as 935 and 1,085). Applied 2026-11-10, report sha256 before 8b1a95078261, after 485f6678eaef. | historical (applied) |
 
 ## Figure layout of the PDF and web page (Figures A7.1, C0.2, C3a and E11.1), `figure_layout_2026-11/`
 
