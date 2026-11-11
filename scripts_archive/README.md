@@ -476,6 +476,28 @@ A second edit the same day dealt with revenue.
 | `hesai_q3_dollar_fix.py` | Converts the new per-unit figures at RMB 7.1 per dollar (about \$190, \$120 and \$680) and says that the car-lidar bound covers main and blind-spot units together. Applied 2026-11-10, report sha256 before 81b778c54e0c, after 8b1a95078261. | historical (applied) |
 | `hesai_q3_rounding_fix.py` | Writes 1,100 − 164.6 and 1,150 − 64.6 with an approximate sign (935.4 and 1,085.4 are shown as 935 and 1,085). Applied 2026-11-10, report sha256 before 8b1a95078261, after 485f6678eaef. | historical (applied) |
 
+## Q3 2026 SEC filings of Western lidar and autonomy companies (§0, §B2, §B3, §B4, §B8, §C3c, §C4, §C7, §C7a, §E1, Appendix 2, 2026-11-10), `q3_filings_2026-11/`
+
+This edit folds in the Q3 2026 filings of seven companies, filed between 21 October and 6 November: the 8-K exhibits, and Aurora's shareholder letter.
+- **Aurora.** The 200-truck milestone moved from year-end 2026 to the end of February 2027. More than 20 driverless trucks are built and entering the fleet, and Aurora passed 500,000 driverless miles in September. The edit adds a Charger Logistics memorandum for 500 trucks, the Q3 revenue, cost and cash, and the amended at-the-market agreement. These are updated in §0 (two places), §B2, §B4 (the count, the table and the near-term test), §C3c, §C4, §C7 and §C7a.
+- **Kodiak.** Atlas has 37 customer-owned driverless trucks. The edit adds DTL Transport's 75 trucks, IKEA Supply, International LT, and Kodiak's hours, loads, revenue and cash (§0, §B2, §B4).
+- **Tesla.** Its robotaxi service reached nearly 2 M cumulative unsupervised miles by 30 September. Cybercabs are now in the Austin fleet, and FSD (Supervised) is approved in nine EU countries (§0, §B2, §E1). The expected-fatality figure is recomputed for 2 M miles (0.024).
+- **Ouster, Aeva and MicroVision.** Their Q3 figures go into §B3's supplier table, Ouster's Q3 list into §B8 and Aeva's Q3 into §C7. A new §C7 bullet records the move of Aeva and of MicroVision's Scantinel into data-centre optics.
+- **Serve.** Its 2026 guidance rose to \$12 M, and it opened its first city outside the US (§B8).
+- **Appendix 2** lists the seven filings.
+
+Two follow-up fixes were made the same day.
+- The edit had added Volvo's truck figure to Aurora's row, but the §B4 table's Waabi / Volvo row already gives it, with its caveat; the duplicate was removed.
+- The first column of Aurora's row still showed Q2 targets; it now gives the Q3 letter's status.
+
+No display equations were added.
+
+| File | Purpose | Status |
+|---|---|---|
+| `q3_filings_edit.py` | Applies the edit (26 replacements). Every anchor must match exactly once and the starting hash must match. Applied 2026-11-10, report sha256 before 485f6678eaef, after a63fc57a14be. | historical (applied) |
+| `volvo_duplicate_fix.py` | Removes from Aurora's §B4 row and §C7 bullet the Volvo truck plan that the Waabi / Volvo row already gives with its caveat. Applied 2026-11-10, report sha256 before a63fc57a14be, after 83c7b4b552dd. | historical (applied) |
+| `aurora_row_fix.py` | Gives the Q3 letter's status in the "Driverless today" column of Aurora's §B4 row. Applied 2026-11-10, report sha256 before 83c7b4b552dd, after 14ec26a08746. | historical (applied) |
+
 ## Figure layout of the PDF and web page (Figures A7.1, C0.2, C3a and E11.1), `figure_layout_2026-11/`
 
 Small single-panel figures are no longer stretched to the full text width, and the one tall figure no longer fills a page. Figure C3a, drawn 7.12 × 8.02 in, is shown at 60 % of the text width (class `tall` on its image line). Figures C0.2 and E11.1, single panels drawn 4.72 and 4.32 in wide with enough text after them, float to the right at 52 % of the text width together with their caption blocks (fenced div `side`). Figure A7.1, drawn 4.32 in wide with a heading 216 characters after it, is centred at 65 % (div `narrow`). The other ten figures, drawn 6.4–10.4 in wide and wider than tall, stay at full width. A style block at the end of the report defines the classes and keeps headings, tables, display equations and full-width figures clear of a float. `build/build_pdf.py` now puts every figure's paperclip in the left page margin, so that it does not land on the text beside a floating figure.
