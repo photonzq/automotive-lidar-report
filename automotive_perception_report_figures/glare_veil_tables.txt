@@ -1,0 +1,70 @@
+Veil from glare scattered by windshield dirt (section E4.1, Figure E4.1) [E]
+L_v = E_perp f(theta); contrast kept L_b / (L_b + L_v); lidar background multiple 1 + pi f E_perp / (0.9 x 100 klx)
+
+Low sun at 10 deg: E_DN 38045 lx; sky on the shaded face 1830 lx; sky on the horizontal 4036 lx; horizontal total 10643 lx; shaded face 2362 lx (k = 0.062); road L_b 338.8 cd/m2; dark clothing L_t 37.6 cd/m2; contrast -0.889; f at which the veil halves the contrast 0.00890; f at which it equals the target 0.000988; lidar level 0.753
+Low sun at 20 deg: E_DN 69001 lx; sky on the shaded face 2766 lx; sky on the horizontal 7352 lx; horizontal total 30951 lx; shaded face 4314 lx (k = 0.063); road L_b 985.2 cd/m2; dark clothing L_t 68.7 cd/m2; contrast -0.930; f at which the veil halves the contrast 0.01428; f at which it equals the target 0.000995; lidar level 0.415
+
+Glass                                   half@10  kept@10  half@20  kept@20  =tgt@10  lidar@10  lidar@20
+New, clean windshield                       4.4    0.808      3.3    0.950     16.6       0.3       0.5
+Cleaned windshield in service               9.5    0.530      7.5    0.916     22.2       0.8       1.1
+Average windshield as found                21.6    0.118     18.1    0.566     50.4       2.6       3.7
+Dirty windshield (85th percentile)         26.3    0.075     22.0    0.439     61.4       3.5       4.9
+Driver's eye (Stiles-Holladay)             33.5    0.082     26.5    0.364    100.6       nan       nan
+
+Directly below the sun (theta = h): veil L_v (cd/m2) and L_v / (L_b - L_t); half-contrast zone across the horizon (+- deg of azimuth from the sun's); lidar background of the veil alone / full-sun scene
+  sun 10 deg, New, clean windshield                L_v     81; / (L_b - L_t)  0.27; across the horizon +-nan; lidar 0.0028
+  sun 10 deg, Cleaned windshield in service        L_v    300; / (L_b - L_t)  1.00; across the horizon +-nan; lidar 0.0105
+  sun 10 deg, Average windshield as found          L_v   2523; / (L_b - L_t)  8.38; across the horizon +-19.3; lidar 0.0881
+  sun 10 deg, Dirty windshield (85th percentile)   L_v   4205; / (L_b - L_t) 13.96; across the horizon +-24.5; lidar 0.1468
+  sun 10 deg, Driver's eye (Stiles-Holladay)       L_v   3805; / (L_b - L_t) 12.63; across the horizon +-32.2
+  sun 20 deg, New, clean windshield                L_v     52; / (L_b - L_t)  0.06; across the horizon +-nan; lidar 0.0018
+  sun 20 deg, Cleaned windshield in service        L_v     90; / (L_b - L_t)  0.10; across the horizon +-nan; lidar 0.0031
+  sun 20 deg, Average windshield as found          L_v    755; / (L_b - L_t)  0.82; across the horizon +-nan; lidar 0.0263
+  sun 20 deg, Dirty windshield (85th percentile)   L_v   1258; / (L_b - L_t)  1.37; across the horizon +-9.3; lidar 0.0439
+  sun 20 deg, Driver's eye (Stiles-Holladay)       L_v   1725; / (L_b - L_t)  1.88; across the horizon +-17.7
+
+Night: two oncoming high beams at 50 m, 3.43 deg off axis: 4.0-12.0 lx (two low beams 0.28 lx, ratio 14-43); dark pedestrian at 5 lx 0.0796 cd/m2, road 0.1592 cd/m2
+  New, clean windshield                f 0.0136; veil 0.054-0.163 cd/m2; veil / pedestrian 0.7-2.1; road contrast kept 0.745-0.494; photon-limited SNR / 1.21-1.54
+  Cleaned windshield in service        f 0.0558; veil 0.223-0.669 cd/m2; veil / pedestrian 2.8-8.4; road contrast kept 0.416-0.192; photon-limited SNR / 1.69-2.57
+  Average windshield as found          f 0.4686; veil 1.875-5.624 cd/m2; veil / pedestrian 23.6-70.7; road contrast kept 0.078-0.028; photon-limited SNR / 4.09-6.94
+  Dirty windshield (85th percentile)   f 0.7811; veil 3.124-9.373 cd/m2; veil / pedestrian 39.3-117.8; road contrast kept 0.048-0.017; photon-limited SNR / 5.21-8.92
+  Driver's eye (Stiles-Holladay)       f 0.8482; veil 3.393-10.178 cd/m2; veil / pedestrian 42.6-127.9; road contrast kept 0.045-0.015; photon-limited SNR / 5.42-9.29
+
+Lidar near a sun 10 deg high, dirty window (85th percentile), range / full-sun specification:
+  1 deg: veil / full-sun scene 8.76; range 0.581 (veil only) to 0.566 (with a full-sun scene); with dead time 0.362 to 0.331
+  2 deg: veil / full-sun scene 2.64; range 0.784 (veil only) to 0.724 (with a full-sun scene); with dead time 0.710 to 0.616
+  sun's disc 0.533 deg covers 89 pixels of 0.05 deg
+905 nm, if clear air's extinction coefficient is 0.06 (visible 0.21): a sun 10 deg high is x2.04 brighter, relative to a sun overhead, than photometry says (angles x1.51 below 9 deg); lidar zone new, clean 0.5 deg; cleaned in service 1.2 deg; average as found 3.9 deg; dirty 5.3 deg; road-level pixel below the sun new, clean 0.006; cleaned in service 0.021; average as found 0.180; dirty 0.300
+Halogen (3,200 K) at 940 nm: 2.668e-05 W m^-2 nm^-1 per lx
+  night case: b 0.01, threshold 3 counts, signal for P_D = 0.9: 5.31
+  Average windshield as found          veil / full-sun scene at 940 nm 4.48e-04-1.34e-03; counts per bin 1.3e-03-3.9e-03 (night case 0.01); at the upper end threshold 4, signal 6.67, night range x0.893
+  Dirty windshield (85th percentile)   veil / full-sun scene at 940 nm 7.46e-04-2.24e-03; counts per bin 2.1e-03-6.4e-03 (night case 0.01); at the upper end threshold 4, signal 6.66, night range x0.893
+
+Window average as found: scattered beyond 1 deg 0.0434 per pass; two-way loss 0.385 dB; ToF range x0.957; FMCW 25 mm 176.6 m of 200 m (x0.883)
+Window dirty (85th percentile): scattered beyond 1 deg 0.0712 per pass; two-way loss 0.642 dB; ToF range x0.929; FMCW 25 mm 160.5 m of 200 m (x0.802)
+Sun 0-20 deg high: 0.298 of daylight hours (Chiba); within +-25 deg of a random heading: 0.041 of daylight driving
+
+Checks (value, reference, error, tolerance):
+E_DN at 10 deg (lx): value 38045.2, reference 38000, error +45.2, tolerance 100 -> pass
+E_DN at 20 deg (lx): value 69000.8, reference 69000, error +0.755, tolerance 100 -> pass
+road luminance, sun 10 deg (cd/m2): value 338.775, reference 339, error -0.225, tolerance 1 -> pass
+dark clothing, sun 10 deg (cd/m2): value 37.5926, reference 37.6, error -0.00744, tolerance 0.2 -> pass
+shaded-face ratio k, sun 10 deg: value 0.0620843, reference 0.062, error +8.43e-05, tolerance 0.001 -> pass
+road luminance, sun 20 deg (cd/m2): value 985.213, reference 985, error +0.213, tolerance 2 -> pass
+dark clothing, sun 20 deg (cd/m2): value 68.6577, reference 68.8, error -0.142, tolerance 0.2 -> pass
+half-contrast level, sun 10 deg (sr^-1): value 0.00890455, reference 0.00895, error -4.54e-05, tolerance 5e-05 -> pass
+dirty windshield f(10 deg): value 0.110523, reference 0.1105, error +2.3e-05, tolerance 0.0002 -> pass
+dirty windshield f(40 deg) vs Table II 85th percentile 0.0032: value 0.00300675, reference 0.003, error +6.75e-06, tolerance 0.0001 -> pass
+new clean, both models meet at 9 deg: value 0.00256956, reference 0.00248148, error +8.81e-05, tolerance 0.0001 -> pass
+contrast halved within, average as found, sun 10 deg: value 21.6462, reference 21.6, error +0.0462, tolerance 0.1 -> pass
+contrast halved within, dirty, sun 10 deg: value 26.3456, reference 26.3, error +0.0456, tolerance 0.1 -> pass
+lidar level, sun 10 deg (sr^-1): value 0.752996, reference 0.754, error -0.001, tolerance 0.002 -> pass
+lidar zone, dirty, sun 10 deg: value 3.50706, reference 3.5, error +0.00706, tolerance 0.02 -> pass
+eye veil from two low beams (section A6.1: 0.24 cd/m2): value 0.237493, reference 0.24, error -0.00251, tolerance 0.005 -> pass
+glare angle of section A6.1 (deg): value 3.43363, reference 3.43, error +0.00363, tolerance 0.01 -> pass
+two-way loss, average window (dB): value 0.385392, reference 0.385, error +0.000392, tolerance 0.002 -> pass
+FMCW 25 mm range with 0.2 mm water film (section C0 5.4: 61 m): value 59.9266, reference 61, error -1.07, tolerance 1.5 -> pass
+FMCW 25 mm blind beyond (section C0 5.4: 2.1 dB): value 2.13284, reference 2.1, error +0.0328, tolerance 0.05 -> pass
+night threshold of section C0 4.3 (3 counts at b = 0.01): value 3, reference 3, error +0, tolerance 0 -> pass
+night signal for P_D = 0.9 (section C0 4.3 table: 5.3): value 5.31232, reference 5.3, error +0.0123, tolerance 0.05 -> pass
+daylight share of a sun 0-20 deg high (Chiba): value 0.298145, reference 0.298, error +0.000145, tolerance 0.001 -> pass

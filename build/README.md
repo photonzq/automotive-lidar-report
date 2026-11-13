@@ -27,6 +27,7 @@ This folder holds everything needed to rebuild the report's PDF and every figure
 | `colour_lidar_range_cost.py` | `colour_lidar_range_cost.png` | Figure C5b.1, §C5b |
 | `fmcw_tof_system_budget.py` | `fmcw_tof_system_budget.png` | Figure C7a, §C7a |
 | `coherent_mode_coverage.py` | `coherent_mode_coverage_mesh.png`, `coherent_mode_coverage_scaling.png` | §C10.3b |
+| `glare_veil.py` | `glare_veil.png` | Figure E4.1, §E4.1 |
 | `nuscenes_matching_localization.py` | `nuscenes_matching_localization.png` | Figure E11.1, §E11.1 |
 | `truck_long_range_sensing.py` | `truck_long_range_sensing.png` | Figure E12, §E12 subsection 3 |
 | `wavelength_eye_safety_background.py` | none (tables only) | the eye-safety and sunlight tables of §C4c |
