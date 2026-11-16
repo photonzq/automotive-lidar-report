@@ -490,6 +490,8 @@ Two follow-up fixes were made the same day.
 - The edit had added Volvo's truck figure to Aurora's row, but the §B4 table's Waabi / Volvo row already gives it, with its caveat; the duplicate was removed.
 - The first column of Aurora's row still showed Q2 targets; it now gives the Q3 letter's status.
 
+Innoviz reported later, in a release and an operating and financial review filed on 12 November, and a separate edit folds them in. Its Q3 revenue fell to \$12.1 M, its 2026 revenue target fell from \$67–73 M to \$44–46 M, and a realignment cuts about 20% of its staff. These go into §B3 (the table row, and note 2 with the July 2026 share sale, the liquidity and an estimate of the cash runway), §C3a, §C3c and Appendix 2. In §G2 Innoviz moves from the growing survivors to the companies under pressure, and its continuing VW and Daimler Truck programmes and first defense deliveries become a separate item.
+
 No display equations were added.
 
 | File | Purpose | Status |
@@ -497,6 +499,7 @@ No display equations were added.
 | `q3_filings_edit.py` | Applies the edit (26 replacements). Every anchor must match exactly once and the starting hash must match. Applied 2026-11-10, report sha256 before 485f6678eaef, after a63fc57a14be. | historical (applied) |
 | `volvo_duplicate_fix.py` | Removes from Aurora's §B4 row and §C7 bullet the Volvo truck plan that the Waabi / Volvo row already gives with its caveat. Applied 2026-11-10, report sha256 before a63fc57a14be, after 83c7b4b552dd. | historical (applied) |
 | `aurora_row_fix.py` | Gives the Q3 letter's status in the "Driverless today" column of Aurora's §B4 row. Applied 2026-11-10, report sha256 before 83c7b4b552dd, after 14ec26a08746. | historical (applied) |
+| `innoviz_q3_edit.py` | Folds in Innoviz's Q3 2026 release and operating and financial review (7 replacements in §B3, §C3a, §C3c, §G2 and Appendix 2). Every anchor must match exactly once and the starting hash must match. Report sha256 before ef5045c14411, after b38815fa36fd. | historical (applied) |
 
 ## Figure layout of the PDF and web page (Figures A7.1, C0.2, C3a and E11.1), `figure_layout_2026-11/`
 
