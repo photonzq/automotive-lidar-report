@@ -1,0 +1,14 @@
+[
+ {"url": "https://www.techinsights.com/node/52820", "keys": ["VCSEL", "avalanche", "32", "transmit", "ASIC", "driver"]},
+ {"url": "https://www.techinsights.com/node/57516", "keys": ["SPAD", "prism", "905", "emitter", "diode", "AlSi", "stainless", "field of view", "redesign"]},
+ {"url": "https://www.techinsights.com/node/54392", "keys": ["1064", "flash", "SPAD", "receiver", "optical element", "field"]},
+ {"url": "https://www.techinsights.com/blog/deep-dive-teardown-luminar-technologies-iris-lidar-70-0034-00102203a15650-automotive", "keys": ["fiber", "fibre", "1550", "ASIC", "mirror", "Volvo", "Ethernet", "Falcon"]},
+ {"url": "https://www.techinsights.com/products/ddt-2306-807", "keys": ["Black Forest", "ASIC", "Xilinx", "FPGA", "release", "Release"]},
+ {"url": "https://www.techinsights.com/products/ddt-2208-806", "keys": ["Falcon", "release", "Release", "Xilinx"]},
+ {"url": "https://www.techinsights.com/blog/summary-seyond-robin-e1x-lp-lidar080-ba-lidar-deep-dive-teardown", "keys": ["Robin", "VCSEL", "SPAD", "SiPM", "MEMS", "mirror", "905", "940", "laser", "receiver", "ASIC", "FPGA", "galvo", "polygon"]},
+ {"url": "https://www.techinsights.com/products/ddt-2104-835", "keys": ["Xilinx", "STMicro", "MEMS", "release", "Release"]},
+ {"url": "https://www.techinsights.com/products/ddt-2305-817", "keys": ["Lattice", "release", "Release", "Huawei"]},
+ {"url": "https://www.techinsights.com/products/ddt-2210-805", "keys": ["release", "Release", "H800"]},
+ {"url": "https://www.techinsights.com/products/ddt-2104-837", "keys": ["release", "Release", "Ouster"]},
+ {"url": "https://www.techinsights.com/products/ddt-2205-811", "keys": ["release", "Release", "Valeo", "design win"]}
+]

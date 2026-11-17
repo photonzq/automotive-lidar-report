@@ -1,0 +1,115 @@
+Where the cost sits in seven lidars: TechInsights' published component lists, grouped by function (section C3d, Figure C3d) [I/E]
+
+Per-function sums of the listed lines, US$ (share of the listed total)
+Lidar | laser | detector | mirrors | optics | processing | housing | other | total (US$)
+LeiShen fibre-laser unit | 373.99 (75.2%) | 0.00 (0.0%) | 0.00 (0.0%) | 55.41 (11.1%) | 14.76 (3.0%) | 26.05 (5.2%) | 26.96 (5.4%) | 497.17
+Continental HFL110 flash | 150.53 (56.6%) | 30.20 (11.4%) | 0.00 (0.0%) | 52.79 (19.8%) | 9.00 (3.4%) | 19.36 (7.3%) | 4.16 (1.6%) | 266.04
+Huawei 96-line | 0.00 (0.0%) | 0.00 (0.0%) | 76.36 (28.8%) | 66.79 (25.2%) | 43.07 (16.3%) | 67.55 (25.5%) | 10.98 (4.1%) | 264.75
+Valeo SCALA 2 | 0.00 (0.0%) | 11.92 (7.8%) | 0.00 (0.0%) | 21.07 (13.8%) | 68.95 (45.1%) | 19.33 (12.6%) | 31.54 (20.6%) | 152.81
+Velodyne Velarray H800 | 36.06 (33.5%) | 0.00 (0.0%) | 0.00 (0.0%) | 17.81 (16.5%) | 15.15 (14.1%) | 32.25 (29.9%) | 6.41 (6.0%) | 107.68
+Ouster OS1-64 | 10.46 (12.2%) | 7.23 (8.5%) | 0.00 (0.0%) | 12.98 (15.2%) | 29.99 (35.1%) | 17.22 (20.2%) | 7.53 (8.8%) | 85.41
+Hesai ATX | 9.72 (19.0%) | 0.00 (0.0%) | 7.36 (14.4%) | 8.24 (16.1%) | 8.90 (17.4%) | 12.30 (24.1%) | 4.62 (9.0%) | 51.14
+
+Lines and their assigned function:
+  LeiShen fibre-laser unit:
+      174.78  laser       Fiber optic cable
+      142.90  laser       Laser diode module (x2)
+       56.31  laser       Fiber coupled laser
+       34.48  optics      Main glass filter
+       26.96  other       Power box subsystem (LeiShen)
+       14.76  processing  Artix-7 FPGA (Xilinx)
+       13.37  housing     Bottom enclosure
+       12.68  housing     Top enclosure
+       10.55  optics      Lens 1
+       10.38  optics      Lens 3
+  Continental HFL110 flash:
+      150.53  laser       Laser module
+       36.19  optics      Glass filter (x2)
+       30.20  detector    SPAD 32 x 128 array
+       12.79  housing     Main enclosure
+        9.00  processing  Artix-7 FPGA (AMD)
+        6.57  housing     Bottom enclosure
+        6.21  optics      Lens 1
+        5.72  optics      Lens 4
+        4.67  optics      Lens 2
+        4.16  other       Connector external power
+  Huawei 96-line:
+       76.36  mirrors     Mirror (x4)
+       58.23  optics      IR glass filter with heater
+       35.71  housing     Bottom enclosure
+       30.46  processing  8K UHD mobile camera SoC (HiSilicon)
+       15.69  housing     Top enclosure
+       12.61  processing  FPGA (Lattice, x2)
+       10.98  other       14-layer conventional FR4/HF board
+        8.56  optics      Glass filter (x2)
+        8.12  housing     Main board internal cover
+        8.03  housing     Optics mount
+  Valeo SCALA 2:
+       52.73  processing  Zynq UltraScale+ SoC (Xilinx)
+       19.66  other       Convert box subsystem (Valeo)
+       19.33  housing     Mounting frame
+       16.22  processing  Multichip memory, 2 GB LPDDR4 (Micron, x2)
+       11.92  detector    Photosensor with front-end IC (Hamamatsu)
+       11.08  optics      Plastic filter with heater element
+        9.99  optics      Rx lens
+        5.96  other       6-layer rigid flex (Valeo)
+        5.92  other       Cable power DC
+  Velodyne Velarray H800:
+       26.15  laser       Small active laser (x8)
+       15.15  processing  Artix-7 FPGA (Xilinx)
+       13.03  housing     Middle enclosure
+        9.91  laser       GaN power FET (x4)
+        9.82  housing     Front enclosure
+        9.40  housing     Back enclosure
+        6.41  other       Small passive safety capacitor (x8)
+        6.14  optics      Lens #2
+        6.14  optics      Lens #2 (listed twice)
+        5.53  optics      Lens #1
+  Ouster OS1-64:
+       13.43  processing  Artix-7 FPGA (Xilinx)
+       10.93  housing     Mounting base
+       10.46  laser       Small active VCSEL array
+       10.13  processing  Dual-core Arm and programmable-logic SoC (Xilinx)
+        7.53  other       Peltier module
+        7.23  detector    SPAD array
+        6.51  optics      Lens #3 (x2)
+        6.47  optics      Lens #2 (x2)
+        6.43  processing  DDR3L SDRAM 512 MB (Micron, x2)
+        6.29  housing     Bottom enclosure
+  Hesai ATX:
+        9.72  laser       VCSEL array (maker unknown)
+        8.12  housing     Main frame
+        4.99  processing  32-bit microcontroller with memory (Infineon)
+        4.62  other       10-layer build-up FR4/HF board
+        4.43  optics      Lens #2
+        4.18  housing     Top cover
+        3.91  processing  FPGA Ti60 (Efinix)
+        3.81  optics      Lens #1
+        3.77  mirrors     Transmitter mirror
+        3.59  mirrors     Receiver mirror
+
+Falcon Kinetic manufacturing cost by category (not drawn): total 520.75
+      276.36  (53.1%)  Modules, discretes and connectors
+      129.61  (24.9%)  Non-electronic parts
+       84.90  (16.3%)  Integrated circuits
+       14.53  (2.8%)  Substrates
+        6.75  (1.3%)  Component insertion
+        5.64  (1.1%)  Final assembly and test
+        2.96  (0.6%)  Card test
+
+Checks (value, reference, error, tolerance):
+LeiShen listed total: value 497.17, reference 497.17, error +0, tolerance 0.005 -> pass
+HFL110 listed total: value 266.04, reference 266.04, error +0, tolerance 0.005 -> pass
+Huawei 96-line listed total: value 264.75, reference 264.75, error +0, tolerance 0.005 -> pass
+SCALA 2 listed total (nine lines): value 152.81, reference 152.81, error -2.84e-14, tolerance 0.005 -> pass
+H800 listed total: value 107.68, reference 107.68, error +0, tolerance 0.005 -> pass
+OS1-64 listed total: value 85.41, reference 85.41, error +0, tolerance 0.005 -> pass
+ATX listed total: value 51.14, reference 51.14, error +0, tolerance 0.005 -> pass
+LeiShen fibre-laser lines (US$): value 373.99, reference 373.99, error +0, tolerance 0.005 -> pass
+LeiShen fibre-laser share: value 0.752238, reference 0.752, error +0.000238, tolerance 0.0005 -> pass
+HFL110 laser-module share: value 0.565817, reference 0.566, error -0.000183, tolerance 0.0005 -> pass
+ATX VCSEL-array share: value 0.190066, reference 0.19, error +6.65e-05, tolerance 0.0005 -> pass
+Huawei mirrors + optics + housing share: value 0.795845, reference 0.796, error -0.000155, tolerance 0.0005 -> pass
+SCALA 2 processor and memory share: value 0.451214, reference 0.451, error +0.000214, tolerance 0.0005 -> pass
+Falcon Kinetic manufacturing cost (US$): value 520.75, reference 520.75, error +0, tolerance 0.005 -> pass
+Falcon Kinetic modules, discretes and connectors share: value 0.530696, reference 0.531, error -0.000304, tolerance 0.0005 -> pass

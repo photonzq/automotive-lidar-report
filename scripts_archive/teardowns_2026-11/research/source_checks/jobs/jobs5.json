@@ -1,0 +1,9 @@
+[
+ {"url": "https://aurora.tech/newsroom/inside-auroras-photonic-engine-engineering-lidar-for-automotive-scale", "keys": ["III-V", "III–V", "silicon-nitride", "silicon nitride", "photodiode", "micro-lens", "microlens", "fiber", "fibre", "amplif", "multi-chip", "1 km", "kilometer"]},
+ {"url": "https://www.baraja.com/en/blog/power-of-integration", "keys": ["SOA", "BOSA", "InP", "homodyne", "TIA", "fiber amplifier", "fibre amplifier", "50", "ASIC", "silica"]},
+ {"url": "https://www.eetimes.com/fmcw-lidar-empowers-4d-vision-in-robotics-and-autonomous-vehicles/", "keys": ["germanium", "linewidth", "amplifier", "3", "Eyeonic"]},
+ {"url": "https://www.mobileye.com/news/ces-2021-mobileye-avs-on-move/", "keys": ["184", "photonic", "New Mexico", "FMCW", "lidar SoC"]},
+ {"url": "https://www.robotics247.com/article/silc_releases_chip_integrated_eyeonic_lidar_sensor/manufacturing", "keys": ["1,550", "1550", "Japan", "vision core"]},
+ {"url": "https://voyantphotonics.com/products/", "keys": ["antenna", "lens", "mirror", "128", "beams", "977"]},
+ {"url": "https://aurora.tech/newsroom/the-power-of-fmcw-lidar-and-scale-acquiring", "keys": ["chip", "OURS", "beam"]}
+]

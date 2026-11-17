@@ -23,6 +23,7 @@ This folder holds everything needed to rebuild the report's PDF and every figure
 | `night_photon_budget.py` | `night_photon_budget.png` | Figure A7.1, §A7.1 |
 | `link_budget_scaling.py` | `link_budget_loss_vs_range.png`, `link_budget_detection_statistics.png`, `link_budget_range_scaling.png`, `link_budget_margin_weather.png` | Figures C0.1–C0.4: C0.1 in §C0 subsections 3.2 and 5.1, C0.2 in 4.3, C0.3 in 5.2 and C0.4 in 5.4 |
 | `lidar_equity_hype_cycle.py` (reads `lidar_equity_prices_weekly.csv`) | `lidar_equity_hype_cycle.png` | Figure C3a, §C3a subsection 5 |
+| `teardown_component_costs.py` | `teardown_component_costs.png` | Figure C3d, §C3d subsection 4 |
 | `ge_coherent_receiver.py` | `ge_coherent_receiver.png` | Figure C4c, §C4c subsection 4 |
 | `mechanical_scanning_limits.py` | `mechanical_scanning_limits.png` | Figure C4d, §C4d subsection 5 |
 | `colour_lidar_range_cost.py` | `colour_lidar_range_cost.png` | Figure C5b.1, §C5b |
