@@ -500,6 +500,7 @@ No display equations were added.
 | `volvo_duplicate_fix.py` | Removes from Aurora's §B4 row and §C7 bullet the Volvo truck plan that the Waabi / Volvo row already gives with its caveat. Applied 2026-11-10, report sha256 before a63fc57a14be, after 83c7b4b552dd. | historical (applied) |
 | `aurora_row_fix.py` | Gives the Q3 letter's status in the "Driverless today" column of Aurora's §B4 row. Applied 2026-11-10, report sha256 before 83c7b4b552dd, after 14ec26a08746. | historical (applied) |
 | `innoviz_q3_edit.py` | Folds in Innoviz's Q3 2026 release and operating and financial review (7 replacements in §B3, §C3a, §C3c, §G2 and Appendix 2). Every anchor must match exactly once and the starting hash must match. Report sha256 before ef5045c14411, after b38815fa36fd. | historical (applied) |
+| `pony_q3_edit.py` | Folds in Pony.ai's Q3 2026 results (6-K of 18 Nov 2026, Exhibit 99.1) and the driverless launch of its Toyota bZ4X robotaxi (16 Nov 2026): Zagreb, Manchester and London in §B4; the Gen-4 trucks, ports, light trucks and robotruck revenue in §B4a's Pony.ai row; in §G1 the robotaxi fleet (2,768 at 30 Sep, 3,500 targeted), all three seventh-generation models driverless, and about 1,000 planned bZ4X at four Hesai AT128 each (≈4,000 AT128 [E]); two Appendix 2 sources (5 replacements). Every anchor must match exactly once and the starting hash must match. Report sha256 before 0ca038f075dc, after de9ae550220b. | historical (applied) |
 
 ## Figure layout of the PDF and web page (Figures A7.1, C0.2, C3a and E11.1), `figure_layout_2026-11/`
 
