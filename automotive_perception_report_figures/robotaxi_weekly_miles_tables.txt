@@ -1,0 +1,58 @@
+Robotaxi miles against Waymo's: published totals and weekly rates (section F7, Figure F7.1) [E]
+
+Totals and rates behind the section F7 table (miles; weekly ratio = rate / Waymo's Q2 2026 rate; total ratio =
+driverless total / Waymo's 271.3 M rider-only miles to June 2026)
+Waymo: Q2 2026 rider-only miles 51.3 M over 13.00 weeks -> 3.946 M a week
+Baidu: driverless 149.1 M (Aug 2026), total ratio 0.550; all autonomous 242.3 M (Oct 2026); driverless Feb-Aug 31.07 M over 24.71 weeks -> 1.257 M a week, ratio 0.319 (all autonomous Feb-Aug 1.257 M a week); Q3 all autonomous 21.13 M -> 1.607 M a week, ratio 0.407, 83.59 M a year
+Pony.ai: driverless 24.85 M, total ratio 0.0916; all autonomous 62.14 M
+WeRide: all L4 products 34.18 M
+Zoox: 1 M over 20.14 weeks -> 0.04965 M a week, ratio 0.0126; total ratio 0.0111
+Motional: 2 M all autonomous; May Mobility: 1.1 M commercial autonomous rides
+Tesla: end-June 0.25 M; Q3 1.75 M -> 0.1332 M a week, ratio 0.0337, 6.924 M a year; September at most 0.2593 M a week, ratio 0.0657; total ratio 0.0074
+Cruise: 4 M driverless, total ratio 0.0147; pace 0.23 M a week, ratio 0.0583
+Aurora trucks: 0.5 M over 73 weeks -> 0.006849 M a week
+Lidar-based share against Tesla's September pace: Waymo + Zoox 0.939; with Baidu's driverless rate 0.953; with all of Baidu's Q3 kilometres 0.956
+
+Checks (value, reference, error, tolerance):
+Waymo Q2 2026 miles (M): value 51.3, reference 51.3, error +0, tolerance 0.05 -> pass
+Waymo miles a week (M): value 3.94615, reference 3.95, error -0.00385, tolerance 0.005 -> pass
+Baidu driverless total, Aug 2026 (M miles): value 149.129, reference 149, error +0.129, tolerance 0.5 -> pass
+Baidu driverless total against Waymo's: value 0.549683, reference 0.55, error -0.000317, tolerance 0.005 -> pass
+Baidu all-autonomous total, Oct 2026 (M miles): value 242.335, reference 242, error +0.335, tolerance 0.5 -> pass
+Baidu driverless growth, Feb-Aug (M miles): value 31.0686, reference 31.1, error -0.0314, tolerance 0.05 -> pass
+Baidu Feb-Aug weeks: value 24.7143, reference 24.7, error +0.0143, tolerance 0.05 -> pass
+Baidu driverless miles a week (M): value 1.25711, reference 1.26, error -0.00289, tolerance 0.005 -> pass
+Baidu driverless rate against Waymo: value 0.318566, reference 0.32, error -0.00143, tolerance 0.005 -> pass
+Baidu Q3 2026 miles (M): value 21.1266, reference 21.1, error +0.0266, tolerance 0.05 -> pass
+Q3 2026 weeks: value 13.1429, reference 13.1, error +0.0429, tolerance 0.05 -> pass
+Baidu all-autonomous miles a week, Q3 (M): value 1.60746, reference 1.61, error -0.00254, tolerance 0.005 -> pass
+Baidu all-autonomous rate against Waymo: value 0.407349, reference 0.41, error -0.00265, tolerance 0.005 -> pass
+Baidu miles a year at the Q3 rate (M): value 83.5879, reference 84, error -0.412, tolerance 0.5 -> pass
+Pony.ai driverless miles (M): value 24.8548, reference 24.9, error -0.0452, tolerance 0.05 -> pass
+Pony.ai all-autonomous miles (M): value 62.1371, reference 62.1, error +0.0371, tolerance 0.05 -> pass
+Pony.ai driverless total against Waymo's: value 0.0916139, reference 0.092, error -0.000386, tolerance 0.0005 -> pass
+WeRide all-product miles (M): value 34.1754, reference 34.2, error -0.0246, tolerance 0.05 -> pass
+Zoox weeks: value 20.1429, reference 20.1, error +0.0429, tolerance 0.05 -> pass
+Zoox miles a week (M): value 0.0496454, reference 0.05, error -0.000355, tolerance 0.0005 -> pass
+Zoox rate against Waymo: value 0.0125807, reference 0.013, error -0.000419, tolerance 0.0005 -> pass
+Zoox total against Waymo's: value 0.0110579, reference 0.011, error +5.79e-05, tolerance 0.0005 -> pass
+Tesla end-June total (M): value 0.25, reference 0.25, error +0, tolerance 0.0005 -> pass
+Tesla Q3 2026 miles (M): value 1.75, reference 1.75, error +0, tolerance 0.0005 -> pass
+Tesla Q3 miles a week (M): value 0.133152, reference 0.133, error +0.000152, tolerance 0.0005 -> pass
+Tesla Q3 rate against Waymo: value 0.0337423, reference 0.034, error -0.000258, tolerance 0.0005 -> pass
+Tesla Q3 miles a year (M): value 6.92391, reference 6.9, error +0.0239, tolerance 0.05 -> pass
+Tesla September weeks: value 3.85714, reference 3.86, error -0.00286, tolerance 0.005 -> pass
+Tesla September miles a week, upper bound (M): value 0.259259, reference 0.259, error +0.000259, tolerance 0.0005 -> pass
+Tesla September rate against Waymo: value 0.0656992, reference 0.066, error -0.000301, tolerance 0.0005 -> pass
+Tesla total against Waymo's: value 0.00737191, reference 0.0074, error -2.81e-05, tolerance 5e-05 -> pass
+Weeks in a month: value 4.34821, reference 4.35, error -0.00179, tolerance 0.005 -> pass
+Cruise miles a week, Aug 2023 (M): value 0.229979, reference 0.23, error -2.05e-05, tolerance 0.0005 -> pass
+Cruise rate against Waymo: value 0.0582794, reference 0.058, error +0.000279, tolerance 0.0005 -> pass
+Cruise total against Waymo's: value 0.0147438, reference 0.015, error -0.000256, tolerance 0.0005 -> pass
+Aurora miles a week (M): value 0.00684932, reference 0.007, error -0.000151, tolerance 0.0005 -> pass
+Aurora total against Waymo's: value 0.00184298, reference 0.0018, error +4.3e-05, tolerance 5e-05 -> pass
+Waymo + Zoox + Baidu driverless miles a week (M): value 5.25291, reference 5.26, error -0.00709, tolerance 0.01 -> pass
+Waymo + Zoox miles a week (M): value 3.9958, reference 4, error -0.0042, tolerance 0.005 -> pass
+Lidar-based share, Waymo + Zoox: value 0.93907, reference 0.94, error -0.00093, tolerance 0.005 -> pass
+Lidar-based share with Baidu's driverless rate: value 0.952966, reference 0.95, error +0.00297, tolerance 0.005 -> pass
+Lidar-based share with all of Baidu's Q3 kilometres: value 0.955777, reference 0.96, error -0.00422, tolerance 0.005 -> pass
