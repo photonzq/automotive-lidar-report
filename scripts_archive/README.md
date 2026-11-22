@@ -566,3 +566,15 @@ A new §C3d, placed before §C4, collects what public teardowns show inside comm
 | `research/source_checks/table_cells_check.py` | Converts one report section to HTML with pandoc and prints the cell count of every table row, so that a row with a stray or missing cell shows up. | current |
 | `research/tof_search/` | Helpers of the search for time-of-flight teardowns: page fetching and text extraction (`fetch_text.py`, `e360_body.py`, `ti_body.py`, `seq_text_img.py`), a Commons search (`commons_search.py`), PDF rendering (`render_pdf.py`), and two tools that tidied the research notes (`dequote.py`, `escape_currency.py`). | historical (research) |
 | `research/fmcw_search/` | Helpers of the search for FMCW teardowns and the makers' own disclosures: page fetching with an image list (`fget.py`), PDF text and rendering (`pdftool.py`), image previews (`preview.py`) and a Crossref query by affiliation (`crossref_aff.py`). | historical (research) |
+
+## Europe's robotaxis, shuttles and trucks and the rules behind them; China's heavy trucks updated (§0, §B4, §B4a, §B4b, Appendix 1, Appendix 2), `europe_2026-11/`
+
+A new §B4b, placed after §B4a, sets out how far driverless passenger and freight vehicles have got in Europe and which instruments govern them: the EU's type-approval acts (Regulation (EU) 2019/2144, Implementing Regulation (EU) 2022/1426, the small-series limits of Regulation (EU) 2018/858 and the automated-valet-parking acts of 2026), UN Regulation No 185 and the global technical regulation on automated driving systems, and the national laws of Germany, the UK, France, Switzerland, Spain, Croatia and Luxembourg. It then covers the passenger services and tests, freight, why Europe is later, and the lidars on its fleets. §B4a subsection 3 gains a lidar column; rows for Trunk Technology and for ports; the mining fleets' 2026 counts from CiDi's and EACON's filings; DeepWay; the transport ministry's safety-officer rule; and an estimate of the lidars on China's mining trucks. Every statement was checked at its source; the research records are kept outside the repository.
+
+No display equations were added.
+
+| File | Purpose | Status |
+|---|---|---|
+| `b4a_heavy_trucks_edit.py` | Applies the §B4a changes (6 line edits, 2 appended table cells and 8 substring edits, among them §0's heavy-truck sub-bullet, Appendix 1's heavy-truck item and six Appendix 2 entries). Every anchor must match exactly once and the starting hash must match. Report sha256 before 5dfd49c51e9f, after cc1e700b7bf3. | historical (applied) |
+| `europe_b4b_edit.py` | Inserts §B4b before §B5 and adds its cross-references in the reading guide, §0, §B4 (the Einride row names the KBA testing approval), Appendix 1 (two items) and Appendix 2 (a European group). Every anchor must match exactly once and the starting hash must match. Report sha256 before cc1e700b7bf3, after 0d3e95618afa. | historical (applied) |
+| `kba_testing_approvals_count.py` | Counts the KBA's testing approvals by level, validity and holder from its published list (dated 05.11.2026), and prints each count beside the figure quoted in §B4b; all 18 agree. | current |
