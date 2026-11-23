@@ -24,7 +24,8 @@ This folder holds everything needed to rebuild the report's PDF and every figure
 | `link_budget_scaling.py` | `link_budget_loss_vs_range.png`, `link_budget_detection_statistics.png`, `link_budget_range_scaling.png`, `link_budget_margin_weather.png` | Figures C0.1–C0.4: C0.1 in §C0 subsections 3.2 and 5.1, C0.2 in 4.3, C0.3 in 5.2 and C0.4 in 5.4 |
 | `lidar_equity_hype_cycle.py` (reads `lidar_equity_prices_weekly.csv`) | `lidar_equity_hype_cycle.png` | Figure C3a, §C3a subsection 5 |
 | `teardown_component_costs.py` | `teardown_component_costs.png` | Figure C3d, §C3d subsection 4 |
-| `ge_coherent_receiver.py` | `ge_coherent_receiver.png` | Figure C4c, §C4c subsection 4 |
+| `stall_time_to_limit.py` | `stall_time_to_limit.png` | Figure C4c.1, §C4c subsection 1a |
+| `ge_coherent_receiver.py` | `ge_coherent_receiver.png` | Figure C4c.2, §C4c subsection 4 |
 | `mechanical_scanning_limits.py` | `mechanical_scanning_limits.png` | Figure C4d, §C4d subsection 5 |
 | `colour_lidar_range_cost.py` | `colour_lidar_range_cost.png` | Figure C5b.1, §C5b |
 | `fmcw_tof_system_budget.py` | `fmcw_tof_system_budget.png` | Figure C7a, §C7a |
@@ -65,7 +66,7 @@ The side note's references to the report's sections ("main report §A7.5") link 
 2. It converts the Markdown to HTML with pandoc, rendering math as MathML and turning bare URLs into links.
 3. It post-processes the HTML:
    - it turns each `\tag{N}` into a right-aligned equation number with an anchor;
-   - it turns every "Eq. (N)" and every section reference ("§C7b", "§C0 subsection 4", "§C0 subsection 4.3") into an internal link; in the side note its own sections ("§S2.3") link internally and the report's sections link to the report's web page;
+   - it turns every "Eq. (N)" and every section reference ("§C7b", "§C0 subsection 4", "§C0 subsection 4.3", "§C4c subsection 1a") into an internal link; in the side note its own sections ("§S2.3") link internally and the report's sections link to the report's web page;
    - it moves the table of contents after the title.
 4. It prints the HTML to PDF with headless Chrome.
 5. With PyMuPDF, it fixes the outline title and sets the metadata. For the report, it then embeds the figure scripts and the equity CSV as attachments, and adds a paperclip in the left margin beside each figure, holding the script that draws that figure.

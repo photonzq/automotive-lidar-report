@@ -1,0 +1,54 @@
+Time for a stalled lidar beam to reach the Class 1 limit (section C4c subsection 1a, Figure C4c.1) [E]
+905 nm: t = (7e-4 C4 / P)^4 within 10 s; 1,550 nm: eta(D) P t = 1e4 J m^-2 x pi D^2 / 4, D = 1 mm below 0.35 s
+
+Time for a stalled beam to reach the Class 1 limit (no limit reached = never; at 905 nm, times below
+5 us fall outside the t^0.75 law and are governed by the single-pulse and pulse-train rules):
+   P (W)    905 nm, whole beam    1,550 nm, whole beam    1,550 nm, 3 mm beam
+   0.001                 never                   never                  never
+  0.0015                2.07 s                   never                  never
+   0.002                655 ms                   never                  never
+   0.005               16.8 ms                   never                  never
+    0.01               1.05 ms                  9.75 s                  never
+    0.02             0.0655 ms                  609 ms                 2.94 s
+    0.05            below 5 us                  157 ms                 879 ms
+     0.1            below 5 us                 78.5 ms                 400 ms
+     0.2            below 5 us                 39.3 ms                 197 ms
+     0.5            below 5 us                 15.7 ms                78.8 ms
+    0.64            below 5 us                 12.3 ms                61.6 ms
+       1            below 5 us                 7.85 ms                39.4 ms
+       2            below 5 us                 3.93 ms                19.7 ms
+     3.8            below 5 us                 2.07 ms                10.4 ms
+       5            below 5 us                 1.57 ms                7.88 ms
+      10            below 5 us                0.785 ms                3.94 ms
+
+905 nm pulse-train rule at 2 mW and 20 kHz: 100 nJ per pulse, limit after 9,207 pulses = 0.460 s
+Stationary limits: 905 nm 1.002 mW; 1,550 nm 9.62 mW (a 3 mm beam needs 10.30 mW)
+
+Checks (value, reference, error, tolerance):
+C4 at 905 nm: value 2.5704, reference 2.57, error +0.000396, tolerance 0.001 -> pass
+905 nm limit at 10 s as a power (mW; text 1.01): value 1.01181, reference 1.01, error +0.00181, tolerance 0.005 -> pass
+905 nm CW limit (mW; subsection 1: 1.00): value 1.00245, reference 1, error +0.00245, tolerance 0.005 -> pass
+1,550 nm limit through 1 mm (mJ; 7.85): value 7.85398, reference 7.85, error +0.00398, tolerance 0.005 -> pass
+1,550 nm CW limit (mW; 9.6): value 9.62113, reference 9.6, error +0.0211, tolerance 0.05 -> pass
+1,550 nm aperture at 0.35 s (mm; continuous with 1 mm): value 1.01185, reference 1, error +0.0119, tolerance 0.02 -> pass
+1,550 nm aperture at 10 s (mm; continuous with 3.5 mm): value 3.55706, reference 3.5, error +0.0571, tolerance 0.06 -> pass
+fraction of a 3 mm beam in 1 mm (0.20): value 0.199263, reference 0.2, error -0.000737, tolerance 0.005 -> pass
+pass time at 10 Hz, 100 mm (ms; 1.6): value 1.59155, reference 1.6, error -0.00845, tolerance 0.05 -> pass
+rotation rate over the 5 rad/s tracking rule (13): value 12.5664, reference 13, error -0.434, tolerance 0.5 -> pass
+time share in the aperture (%; 1.6): value 1.59155, reference 1.6, error -0.00845, tolerance 0.05 -> pass
+power share in the aperture (1/63): value 62.8319, reference 63, error -0.168, tolerance 0.5 -> pass
+Luminar example power (W; 0.64): value 0.64, reference 0.64, error +0, tolerance 1e-09 -> pass
+Luminar over the stationary limit (67): value 66.5203, reference 67, error -0.48, tolerance 1 -> pass
+FARO Focus3D X over the stationary limit (52): value 51.969, reference 52, error -0.031, tolerance 0.5 -> pass
+Velodyne over the stationary limit (2): value 1.9951, reference 2, error -0.0049, tolerance 0.05 -> pass
+Luminar, whole beam (ms; 12): value 12.2718, reference 12, error +0.272, tolerance 0.5 -> pass
+Luminar, 3 mm beam (ms; 61): value 61.5863, reference 61, error +0.586, tolerance 1 -> pass
+FARO, whole beam (ms; 16): value 15.708, reference 16, error -0.292, tolerance 0.5 -> pass
+FARO, 3 mm beam (ms; 79): value 78.8305, reference 79, error -0.17, tolerance 1 -> pass
+FMCW, whole beam (ms; 2.1): value 2.06684, reference 2.1, error -0.0332, tolerance 0.05 -> pass
+FMCW, 3 mm beam (ms; 10): value 10.3724, reference 10, error +0.372, tolerance 0.5 -> pass
+Velodyne, time-integrated rule (s; 0.65): value 0.655047, reference 0.65, error +0.00505, tolerance 0.01 -> pass
+Velodyne, pulse energy at 20 kHz (nJ; 100): value 100, reference 100, error +0, tolerance 0.5 -> pass
+Velodyne, pulse-train rule pulses (9,200): value 9206.92, reference 9200, error +6.92, tolerance 50 -> pass
+Velodyne, pulse-train rule time (s; 0.46): value 0.460346, reference 0.46, error +0.000346, tolerance 0.005 -> pass
+1,550 nm, a 3 mm beam never reaches the limit below (mW; about 10): value 10.298, reference 10, error +0.298, tolerance 0.5 -> pass

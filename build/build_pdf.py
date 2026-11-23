@@ -6,8 +6,8 @@ Pipeline: Markdown -> HTML with MathML (pandoc) -> PDF (headless Chrome) -> post
   as Eq. \\eqref{eq:name}. eqlabels.py (next to this file) numbers the labels in document order and turns
   them into \\tag{N} and "(N)". pandoc's MathML writer drops \\tag, so it is swapped for a marker before
   pandoc and turned into a right-aligned "(N)" with an anchor (#eq-N) afterwards.
-- Cross-references: "Eq. (N)" and section references such as "§C10.3a", "§C0 subsection 10" or
-  "§C0 subsection 10.3" become internal links.
+- Cross-references: "Eq. (N)" and section references such as "§C10.3a", "§C0 subsection 10",
+  "§C0 subsection 10.3" or "§C4c subsection 1a" become internal links.
 - Source links: bare URLs in the Markdown become links (pandoc's autolink_bare_uris), so the sources can be
   opened from the PDF and the web page.
 - Figure code in the PDF: the figure scripts in figures/ (and lidar_equity_prices_weekly.csv, the
@@ -221,7 +221,8 @@ def collect_anchors(root):
             m = re.match(r"^([A-GS]\d+[a-z]?\.\d+[a-z]?)\b", t) or re.match(r"^([A-GS]\d+[a-z]?)\.\s", t)
             if m:
                 anchors.setdefault(m.group(1), hid)
-            m = re.match(r"^(\d+)\.\s", t) or re.match(r"^(\d+\.\d+)\s", t)  # "10. Link budget" or "10.2 How much light"
+            # "10. Link budget", "1a. When the Class 1 rating depends on the scan" or "10.2 How much light"
+            m = re.match(r"^(\d+[a-z]?)\.\s", t) or re.match(r"^(\d+\.\d+)\s", t)
             if m and cur:
                 anchors.setdefault(f"{cur} subsection {m.group(1)}", hid)
     return anchors
@@ -235,7 +236,7 @@ if "xref" in DOC:  # references to the report link to its web page
     log("report anchors for cross-links", len(ext_anchors))
 
 REF_RE = re.compile(
-    r"(?P<sec>§\s?(?P<code>[A-GS]\d+[a-z]?(?:\.\d+[a-z]?)?|0)(?:\s+subsections?\s+(?P<sub>\d+(?:\.\d+)?))?)"
+    r"(?P<sec>§\s?(?P<code>[A-GS]\d+[a-z]?(?:\.\d+[a-z]?)?|0)(?:\s+subsections?\s+(?P<sub>\d+[a-z]?(?:\.\d+)?))?)"
     r"|(?P<eqs>\bEqs?\.\s*\(\d+\)(?:\s*(?:,|and|–|-|to|or)\s*\(\d+\))*)"
 )
 SKIP = {"a", "math", "code", "pre", "h1", "h2", "h3", "h4", "nav", "script", "style", "annotation", "title"}
